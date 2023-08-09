@@ -133,7 +133,7 @@ const Index = () => {
                                     <Link
                                       href={`/stryda/${item.url}${
                                         item.query ? "?" : ""
-                                      }${item.query}`}
+                                      }${item.query}${prototype.getURLparams()}`}
                                     >
                                       <a className="flex items-center gap-2">
                                         {item.tab === 2 && <>—</>}
@@ -159,7 +159,7 @@ const Index = () => {
                                     <Link
                                       href={`/stryda/${item.url}${
                                         item.query ? "?" : ""
-                                      }${item.query}`}
+                                      }${item.query}${prototype.getURLparams()}`}
                                     >
                                       <a className="button button-sm button-primary">
                                         <span>View</span>
@@ -168,7 +168,7 @@ const Index = () => {
                                     <Link
                                       href={`prototype/${item.url}?ads=true${
                                         item.query ? "&" : ""
-                                      }${item.query}`}
+                                      }${item.query}${prototype.getURLparams()}`}
                                     >
                                       <a className="button button-sm button-secondary">
                                         <span>View with ads</span>

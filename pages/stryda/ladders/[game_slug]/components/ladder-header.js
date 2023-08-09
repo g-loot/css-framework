@@ -43,7 +43,7 @@ export default function LadderHeader() {
       {selectedGame && (
         <>
           <section
-            className={`sm:rounded surface surface-dimmed flex flex-col md:flex-row gap-8 items-center mt-8 mb-4 p-4 ${
+            className={`flex flex-col md:flex-row gap-8 items-center mt-8 mb-4 pb-4 ${
               prototype.getLadderByID(game_slug, ladder_id)?.isPremium
                 ? "border-b-4 border-b-premium-500"
                 : ""
@@ -63,8 +63,8 @@ export default function LadderHeader() {
             </div>
             <div className="flex-1 relative">
               <div className="mb-4 flex items-center justify-between">
-                <div className="flex items-center gap-1">
-                  <h1 className="h4">
+                <div className="flex items-basline gap-1">
+                  <h1 className="text-5xl sm:text-6xl">
                     {prototype.getLadderByID(game_slug, ladder_id)?.name}
                   </h1>
                   {prototype.getLadderByID(game_slug, ladder_id)?.isPremium && (
@@ -94,7 +94,7 @@ export default function LadderHeader() {
                       <Link href="/stryda/premium">
                         <button
                           type="button"
-                          className="button button-ghost rounded-full"
+                          className="button button-ghost rounded-full translate-y-2"
                         >
                           <span className="icon icon-crown text-premium-500 text-2xl" />
                         </button>

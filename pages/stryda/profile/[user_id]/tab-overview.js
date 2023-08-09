@@ -167,7 +167,11 @@ export default function TabProfileOverview() {
                                 );
                               }}
                             >
-                              {selectedUser.socials?.riotLeagueofLegendsNickname}#
+                              {
+                                selectedUser.socials
+                                  ?.riotLeagueofLegendsNickname
+                              }
+                              #
                               {selectedUser.socials?.riotLeagueofLegendsHashtag}
                             </a>
                             <Tooltip
@@ -369,15 +373,6 @@ export default function TabProfileOverview() {
                     <h2 className="h6 text-ui-100">
                       Games ({selectedUser.games.length})
                     </h2>
-                    {/*
-                  <Link
-                    href={`${
-                      selectedUser.id
-                    }?tab=stats${prototype.getURLparams()}`}
-                  >
-                    <a className="link link-hover text-ui-300 text-sm leading-none">View</a>
-                  </Link>
-                  */}
                   </div>
                   <ul className="flex gap-4 p-4">
                     {selectedUser.games?.map((game, gameIndex) => (
@@ -396,9 +391,9 @@ export default function TabProfileOverview() {
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Stats</h2>
                   <Link
-                    href={`${
-                      selectedUser.id
-                    }?tab=stats${prototype.getURLparams()}`}
+                    href={`${selectedUser.id}?tab=stats${prototype.getURLparams(
+                      "&"
+                    )}`}
                   >
                     <a className="link link-hover text-ui-300 text-sm leading-none">
                       View
@@ -528,7 +523,7 @@ export default function TabProfileOverview() {
                   <Link
                     href={`${
                       selectedUser.id
-                    }?tab=achievements${prototype.getURLparams()}`}
+                    }?tab=achievements${prototype.getURLparams("&")}`}
                   >
                     <a className="link link-hover text-ui-300 text-sm leading-none">
                       View

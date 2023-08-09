@@ -83,12 +83,12 @@ export default function Missions() {
               <div className="header-content">
                 <div className="header-body">
                   <h1 className="mb-2">Missions</h1>
-                  <p className="text-ui-300 mb-4">
+                  <p className="text-ui-300">
                     Play Stryda Missions in {selectedGame.name}, gather XP, and
                     earn Mission Rewards. You can complete the Daily Missions in
                     any game.
                   </p>
-                  <div className="flex flex-col md:flex-row gap-2">
+                  <div className="flex hidden flex-col md:flex-row gap-2 mt-4">
                     {selectedGame.needsSteam && (
                       <Link
                         href={`/stryda/profile/settings${prototype.getURLparams()}`}
@@ -155,7 +155,7 @@ export default function Missions() {
               </div>
             </section>
             <nav>
-              <ul className="tabs border-b border-ui-500/50">
+              <ul className="tabs tabs-tertiary">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={itemIndex}>
                     <Link

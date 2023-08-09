@@ -102,7 +102,7 @@ export default function Home() {
           {selectedLadder.status === "ongoing" && <LadderPlacements />}
 
           <nav>
-            <ul className="tabs border-b border-ui-500/50">
+            <ul className="tabs tabs-tertiary">
               {selectedLadder.clan ? (
                 <>
                   {TabsItems.map((item, itemIndex) => (

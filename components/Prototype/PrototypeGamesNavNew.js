@@ -19,6 +19,7 @@ const SubMenuItem = [
     icon: "icon-ladder",
     label: "ladders",
   },
+  /*
   {
     onlygame: ["valorant"],
     slug: "scoreboards",
@@ -26,6 +27,7 @@ const SubMenuItem = [
     icon: "icon-stairs",
     label: "Scoreboards",
   },
+  */
   {
     onlygame: ["valorant"],
     slug: "clanevents",

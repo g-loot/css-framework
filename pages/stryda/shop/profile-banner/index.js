@@ -70,7 +70,7 @@ export default function Home() {
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li>
-                    <Link href={`/stryda/home`}>
+                    <Link href={`/stryda/home${prototype.getURLparams()}`}>
                       <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
@@ -78,7 +78,7 @@ export default function Home() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/stryda/shop`}>
+                    <Link href={`/stryda/shop${prototype.getURLparams()}`}>
                       <a href="#">
                         <span>Shop</span>
                       </a>

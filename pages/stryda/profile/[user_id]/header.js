@@ -114,7 +114,7 @@ export default function ProfileHeader(props) {
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li>
-                    <Link href={`/prototype/home`}>
+                    <Link href={`/prototype/home${prototype.getURLparams()}`}>
                       <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
@@ -122,7 +122,7 @@ export default function ProfileHeader(props) {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/prototype/profile/${selectedUser.id}`}>
+                    <Link href={`/prototype/profile/${selectedUser.id}${prototype.getURLparams()}`}>
                       <a href="#">
                         <span>{selectedUser.nickname}</span>
                       </a>
@@ -231,7 +231,7 @@ export default function ProfileHeader(props) {
                 </a>
               )}
               {!selectedUser.isYou && !selectedUser.isFriend && (
-                <Link href={`/prototype/profile/${selectedUser.id}?tab=followers`}>
+                <Link href={`/prototype/profile/${selectedUser.id}?tab=followers${prototype.getURLparams("&")}`}>
                   <a
                     type="button"
                     className="button button-sm button-primary w-full"

@@ -68,12 +68,12 @@ export default function Topbar() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-800/90 navbar h-12 flex items-center border-b border-ui-700">
+    <div className="sticky top-0 z-50 bg-ui-700/90 navbar h-12 flex items-center border-b border-ui-500">
       <div className="container relative">
         <div
-          className={`flex lg:gap-8 mx-auto px-2  ${hasAds ? "3xl:m-0" : ""}`}
+          className={`flex justify-between lg:gap-8 mx-auto`}
         >
-          <div className="flex-1 flex gap-2 items-center">
+          <div className="flex gap-2 items-center">
             <div className="hidden gap-2">
               <button
                 type="button"
@@ -127,7 +127,7 @@ export default function Topbar() {
               </label>
             </div>
           </div>
-          <div className="flex-2 flex justify-center items-center">
+          <div className="flex justify-center items-center">
             <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
               <li>
                 <Link href={`/stryda/home${prototype.getURLparams()}`}>
@@ -141,7 +141,7 @@ export default function Topbar() {
                   </button>
                 </Link>
               </li>
-              <li className="!hidden xl:!flex">
+              <li>
                 <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
                   <button
                     type="button"
@@ -153,7 +153,7 @@ export default function Topbar() {
                   </button>
                 </Link>
               </li>
-              <li className="!hidden xl:!flex">
+              <li>
                 <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                   <button
                     type="button"
@@ -165,7 +165,7 @@ export default function Topbar() {
                   </button>
                 </Link>
               </li>
-              <li className="!hidden xl:!flex">
+              <li>
                 <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                   <button
                     type="button"
@@ -196,6 +196,18 @@ export default function Topbar() {
                     </a>
                   </li>
                 </ul>
+              </li>
+              <li>
+                <Link href={`/stryda/clans${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    className={` ${
+                      router.pathname.includes("clans") ? "is-active" : ""
+                    }`}
+                  >
+                    <span className="text-sm uppercase">Clans</span>
+                  </button>
+                </Link>
               </li>
               <li>
                 <Link href={`/stryda/shop${prototype.getURLparams()}`}>
@@ -232,12 +244,11 @@ export default function Topbar() {
                   */}
             </ul>
           </div>
-          <div className="flex-1 flex justify-end items-center gap-1 sm:gap-2">
-
+          <div className="flex justify-end items-center gap-1 sm:gap-2">
             <div className="dropdown dropdown-end">
               <div
                 tabIndex="1"
-                className="flex items-center rounded-full bg-ui-700 interactive"
+                className="flex items-center rounded-full bg-ui-500 interactive"
               >
                 <button
                   type="button"
@@ -254,7 +265,7 @@ export default function Topbar() {
 
               <div
                 tabIndex="1"
-                className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+                className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
               >
                 {isEmpty && (
                   <div className="h-72 flex items-center justify-center text-center">
@@ -317,7 +328,7 @@ export default function Topbar() {
               </div>
             </div>
 
-            <div className="flex gap-x-3 items-stretch justify-center bg-ui-700 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
+            <div className="flex gap-x-3 items-stretch justify-center bg-ui-500 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
               <div className="inline-flex xl:hidden items-center">
                 <Tooltip
                   placement="bottom"
@@ -478,19 +489,13 @@ export default function Topbar() {
             <div className="dropdown dropdown-end">
               <div
                 tabIndex="1"
-                className="flex items-center rounded-full bg-ui-700 interactive"
+                className="flex items-center rounded-full bg-ui-500 interactive"
               >
                 <button
                   type="button"
-                  className="w-[34px] button button-ghost rounded-full"
+                  className="w-[34px] button button-ghost rounded-full overflow-hidden"
                 >
-                  <div className="pointer-events-none absolute -inset-1 !m-0 rounded-full">
-                    <i
-                      className="absolute inset-px rounded-full border border-main/40 animate-pulse"
-                      style={{ animationDuration: "4s" }}
-                    />
-                  </div>
-                  <div className="text-sm font-bold text-ui-200 text-center pl-px">
+                  <div className="text-sm font-bold text-main text-center pl-px">
                     <div className="infobanner is-active">
                       <div className="infobanner-front">
                         <span className="font-bold text-xs">
@@ -507,7 +512,7 @@ export default function Topbar() {
 
               <div
                 tabIndex="1"
-                className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
+                className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
               >
                 <h5 className="mx-2 mt-2">XP Boosts</h5>
                 <ul className="rounded-lg text-left text-sm p-2 leading-none">
@@ -530,7 +535,7 @@ export default function Topbar() {
                     <div className="flex-1">Clan boost</div>
                     <div className="text-right text-main">+10%</div>
                   </li>
-                  <li className="separator bg-ui-600" />
+                  <li className="separator bg-ui-500" />
                   <li className="flex gap-2 py-1 items-center">
                     <div className="icon icon-e-add text-main" />
                     <div className="flex-1 flex-col">
@@ -558,7 +563,7 @@ export default function Topbar() {
             <div className="dropdown dropdown-end">
               <div
                 tabIndex="1"
-                className="flex items-center rounded-full bg-ui-700 interactive"
+                className="flex items-center rounded-full bg-ui-500 interactive"
               >
                 <div className="avatar avatar-circle avatar-xs">
                   {prototype.getUserByID(1).shopItems.avatarFrame && (
@@ -581,11 +586,11 @@ export default function Topbar() {
                 <span className="icon icon-arrow-sm-down mx-2" />
               </div>
 
-              <div tabIndex="1" className="dropdown-content bg-ui-600 w-52 p-1">
+              <div tabIndex="1" className="dropdown-content bg-ui-500 w-52 p-1">
                 <ul className="menu menu-rounded menu-secondary">
                   <li>
                     <Link
-                      href={`/stryda/profile/1${hasAds ? "&ads=true" : ""}`}
+                      href={`/stryda/profile/1${prototype.getURLparams()}`}
                     >
                       <button type="button" tabIndex="1">
                         <span className="icon icon-circle-09" />
@@ -604,9 +609,7 @@ export default function Topbar() {
                   <li className="separator"></li>
                   <li>
                     <Link
-                      href={`/stryda/profile/settings${
-                        hasAds ? "&ads=true" : ""
-                      }`}
+                      href={`/stryda/profile/settings${prototype.getURLparams()}`}
                     >
                       <button type="button" tabIndex="1">
                         <span className="icon icon-cogwheel" />
@@ -616,7 +619,7 @@ export default function Topbar() {
                   </li>
                   <li>
                     <Link
-                      href={`/stryda/patch-notes${hasAds ? "&ads=true" : ""}`}
+                      href={`/stryda/patch-notes${prototype.getURLparams()}`}
                     >
                       <button type="button" tabIndex="1">
                         <span className="icon icon-notification" />
@@ -625,7 +628,7 @@ export default function Topbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/stryda/recruit-a-friend/`}>
+                    <Link href={`/stryda/recruit-a-friend/${prototype.getURLparams()}`}>
                       <button type="button">
                         <span className="icon icon-b-love" />
                         <span>Recruit a friend</span>
@@ -634,7 +637,7 @@ export default function Topbar() {
                   </li>
                   <li>
                     <Link
-                      href={`/stryda/how-it-works${hasAds ? "&ads=true" : ""}`}
+                      href={`/stryda/how-it-works${prototype.getURLparams()}`}
                     >
                       <button type="button" tabIndex="1">
                         <span className="icon icon-file-article" />
@@ -656,7 +659,7 @@ export default function Topbar() {
                   </li>
                   <li className="separator"></li>
                   <li>
-                    <Link href={`/`}>
+                    <Link href={`/${prototype.getURLparams()}`}>
                       <button type="button" tabIndex="1">
                         <span className="icon icon-leave" />
                         <span>Log out</span>

@@ -270,7 +270,7 @@ export default function PrototypeLeftMenuNew(props) {
               >
                 <button
                   type="button"
-                  className={`item px-6 item-interactive border-b border-ui-700 ${
+                  className={`item px-6 item-interactive border-b border-ui-700 hidden ${
                     router.pathname.includes("friends") ? "is-active" : ""
                   }`}
                 >
@@ -316,6 +316,61 @@ export default function PrototypeLeftMenuNew(props) {
               >
                 <span>Get tokens</span>
               </button>
+            </div>
+            <div className="px-2 pb-2">
+              <Link href="/prototype/valorant/clanevents/0">
+                <button type="button" className="block w-full rounded bg-ui-500 aspect-square overflow-hidden relative border border-ui-500 interative group">
+                  <div className="absolute inset-0 z-10 flex flex-col items-center justify-between p-4">
+                    <div className="flex-none flex flex-col items-center justify-center gap-3">
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1689235015/Stryda/logos/stryda-logo-ui-100.svg"
+                        width="110"
+                        height="auto"
+                        alt="Stryda"
+                        className="block mx-auto"
+                      />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1689166223/Stryda/marketing/campaigns/Nordic%20Clash/Stryda_Nordic_Clash_logo.svg"
+                        width="100%"
+                        height="auto"
+                        alt="Nordic Clash"
+                        className="block mx-auto"
+                      />
+                    </div>
+                    <div className="flex-none w-full">
+                      <button type="button" className="button button-primary w-full">
+                        <span>Learn more</span>
+                      </button>
+                    </div>
+                  </div>
+                  <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1689166178/Stryda/marketing/campaigns/Nordic%20Clash/Hero_agent_silhouette.png"
+                      className="absolute z-10 -bottom-2 h-40 w-auto max-w-[none] transition-transform duration-500 ease origin-top group-hover:scale-105"
+                      alt=""
+                    />
+                    <video
+                      autoPlay={true}
+                      playsInline
+                      loop
+                      muted
+                      preload
+                      width="100%"
+                      height="100%"
+                      className="scale-[4] md:scale-[3] lg:scale-[2] w-auto h-full lg:w-full lg:h-auto relative z-0"
+                    >
+                      <source
+                        src="https://res.cloudinary.com/gloot/video/upload/v1689166247/Stryda/marketing/campaigns/Nordic%20Clash/SNC_5s_VB_Loop_1.mp4"
+                        type="video/mp4"
+                      />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1689664216/Stryda/marketing/campaigns/Nordic%20Clash/SNC_5s_VB_Loop_1_fallback.jpg"
+                        title=""
+                      />
+                    </video>
+                  </div>
+                </button>
+              </Link>
             </div>
           </div>
         )}

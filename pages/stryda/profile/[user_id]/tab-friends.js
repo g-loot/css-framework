@@ -157,7 +157,7 @@ export default function TabProfileFriends() {
                     <tr>
                       <td className="!border-l-main">
                         <Link
-                          href={`/prototype/profile/1
+                          href={`/prototype/profile/1${prototype.getURLparams()}
                           `}
                         >
                           <button
@@ -234,7 +234,7 @@ export default function TabProfileFriends() {
                             >
                               <td>
                                 <Link
-                                  href={`/prototype/profile/${item.id}
+                                  href={`/prototype/profile/${item.id}${prototype.getURLparams()}
                           `}
                                 >
                                   <button

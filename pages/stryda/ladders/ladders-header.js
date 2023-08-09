@@ -39,7 +39,7 @@ export default function LaddersHeader(props) {
               <nav className="breadcrumbs" aria-label="Breadcrumb">
                 <ol>
                   <li>
-                    <Link href={`/stryda/home`}>
+                    <Link href={`/stryda/home${prototype.getURLparams()}`}>
                       <a href="#">
                         <span className="icon icon-20 icon-home-2" />
                         <span>Home</span>
@@ -47,7 +47,7 @@ export default function LaddersHeader(props) {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/stryda/ladders`}>
+                    <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                       <a href="#">
                         <span> {selectedGame.name} Ladders</span>
                       </a>
@@ -71,7 +71,7 @@ export default function LaddersHeader(props) {
                     Use your stats to climb the ladders and win prizes. No
                     waiting, no dedicated servers. Play on your own schedule!
                   </p>
-                  <p className="text-main mb-4">
+                  <p className="text-main">
                     <span className="font-bold">First time competing?</span>{" "}
                     Your entry ladder is on us! Simply pick any ladder you like
                     and claim your free ladder!
@@ -80,13 +80,13 @@ export default function LaddersHeader(props) {
               ) : (
                 <>
                   <h1 className="mb-2">Ladders</h1>
-                  <p className="text-ui-300 mb-4">
+                  <p className="text-ui-300">
                     Use your stats to climb the ladders and win prizes. No
                     waiting, no dedicated servers. Play on your own schedule!
                   </p>
                 </>
               )}
-              <div className="flex flex-col md:flex-row gap-2">
+              <div className="flex hidden flex-col md:flex-row gap-2 mt-4">
                 <button
                   type="button"
                   className="button button-primary button-play"

@@ -289,7 +289,7 @@ export default function Ladders() {
                       />
                       <button
                         type="button"
-                        className="button button-sm button-primary mx-4"
+                        className="button button-primary mx-4"
                         onClick={() => handleEnroll()}
                       >
                         <span>Enter with my Clan</span>

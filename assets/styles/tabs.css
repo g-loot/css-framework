@@ -32,9 +32,7 @@
       ;
     }
 
-    > a, 
-    > button,
-    > div {
+    > :where(a, button, .button, div) {
       @apply
       relative
       flex
@@ -221,6 +219,11 @@
     text-sm
     uppercase
     ;
+    &:not([class*="px-"]) {
+      @apply
+      px-5
+      ;
+    }
   }
 } 
 

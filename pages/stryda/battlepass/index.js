@@ -108,7 +108,7 @@ export default function BattlepassPage() {
         }>
           {selectedBattlepass && (
             <>
-              <section className="mb-8 p-4 relative sm:rounded overflow-hidden">
+              <section className="my-8 p-4 relative sm:rounded overflow-hidden">
                 <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between gap-4 lg:gap-8">
                   <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
                     <div

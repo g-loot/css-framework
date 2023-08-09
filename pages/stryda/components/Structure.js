@@ -22,7 +22,7 @@ export default function Structure({ children, title, gamePicker }) {
           href="https://res.cloudinary.com/gloot/image/upload/v1671441061/Stryda/favicons/stryda-favicon.png"
         />
       </Head>
-      <div className="drawer min-h-full">
+      <div className="drawer min-h-full" data-theme="light">
         <input id="drawer-1" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content">
           <Topbar />

@@ -77,7 +77,7 @@ export default function WidgetUser(props) {
                   selectedUser.clan
                 }${prototype.getURLparams()}`}
               >
-                <div className="p-2 rounded-1 bg-ui-700 interactive">
+                <div className="p-2 rounded bg-ui-600 interactive">
                   <div className="flex gap-2 items-center justify-center">
                     <div className="avatar avatar-tiny avatar-squircle">
                       <div>
@@ -87,7 +87,7 @@ export default function WidgetUser(props) {
                         />
                       </div>
                     </div>
-                    <div className="text-ui-100 truncate">
+                    <div className="text-ui-100 truncate text-sm">
                       &#91;
                       {prototype.getClanByID(selectedUser.clan).tag}
                       &#93; {prototype.getClanByID(selectedUser.clan).nickname}
@@ -96,7 +96,7 @@ export default function WidgetUser(props) {
                 </div>
               </Link>
             ) : (
-              <div className="p-2 rounded-1 bg-ui-700">
+              <div className="p-2 rounded bg-ui-700">
                 <div className="space-y-2">
                   <div className="text-center text-sm">
                     {selectedUser.nickname} is not part of a clan.

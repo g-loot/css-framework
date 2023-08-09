@@ -377,6 +377,7 @@
   duration-200
   ease-in-out
   opacity-0
+  text-sm
   ;
 
   &.is-active {

@@ -10,6 +10,9 @@ import Link from "next/link";
 import Tooltip from "../../../components/Tooltip/Tooltip";
 import Avatar from "../../../components/Avatar/Avatar";
 import Loader from "../components/Loader";
+import ModalGiftTokens from "../clans/modal-gift-tokens";
+import { DataFeedItems } from "../../../mock-data/data-feed";
+import FeedItem from "../components/FeedItem";
 
 export default function Home() {
   const router = useRouter();
@@ -27,6 +30,16 @@ export default function Home() {
       }, 700);
     }
   }, [loading]);
+
+  function openModalGiftTokens(selectedUser) {
+    uiContext.openModal(<ModalGiftTokens selectedUser={selectedUser} />);
+  }
+
+  const getFeedItemByID = (id) => {
+    return DataFeedItems.find((general) => {
+      return general.id === parseInt(id);
+    });
+  };
 
   return (
     <>
@@ -94,8 +107,13 @@ export default function Home() {
                               <button
                                 type="button"
                                 className="button button-tertiary rounded-full"
+                                onClick={() => {
+                                  openModalGiftTokens(
+                                    prototype.getUserByID(item.id).nickname
+                                  );
+                                }}
                               >
-                                <span className="icon icon-a-add" />
+                                <span className="icon icon-token" />
                               </button>
                             </Tooltip>
                           </div>
@@ -166,10 +184,13 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex-1">
-              <div className="surface h-12 rounded"></div>
+            <div className="flex-1 overflow-hidden">
+                {DataFeedItems.map((item, itemIndex) => (
+                  <FeedItem item={item} key={itemIndex} />
+                ))}
+              
             </div>
-            <div className="w-80 xl:w-96 max-w-xl:hidden">
+            <div className="w-80 2xl:w-96 hidden xl:block">
               <div className="surface h-12 rounded"></div>
             </div>
           </section>

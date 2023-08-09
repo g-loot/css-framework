@@ -246,7 +246,7 @@ export default function TabProfileStats() {
                         <Link
                           href={`/prototype/${
                             prototype.getGameByID(item).slug
-                          }/stats`}
+                          }/stats${prototype.getURLparams()}`}
                         >
                           <button
                             type="button"

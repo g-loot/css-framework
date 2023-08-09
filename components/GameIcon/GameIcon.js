@@ -6,14 +6,14 @@ import Tooltip from "../Tooltip/Tooltip";
 
 export default function GameIcon(props) {
   const prototype = usePrototypeData();
-  const iconSize = props.size || "text-xl";
+  const size = props.size || "text-xl";
   const className = props.className || "className";
   const game = props.game || 1;
 
   return (
     <div className={`p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/90 flex items-center justify-center ${className}`}>
       <span
-        className={`icon ${iconSize} ${
+        className={`icon ${size} ${
           prototype.getGameByID(game).slug ===
           "apexlegends"
             ? "icon-game-apexlegends-symbol text-game-apexlegends"
