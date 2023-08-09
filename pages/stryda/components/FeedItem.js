@@ -7,11 +7,27 @@ import GameIcon from "../../../components/GameIcon/GameIcon";
 export default function FeedItem(props) {
   const prototype = usePrototypeData();
   const item = props.item;
+  const autoPlay = props.autoPlay || false;
+  const [video, setVideo] = useState(null);
+
+  useEffect(() => {
+    setVideo(document.getElementById(`video_${item.id}`));
+  }, [item]);
+
+  useEffect(() => {
+    if(video) {
+      if (autoPlay) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  }, [video, autoPlay]);
 
   return (
     <>
       {item && (
-        <div className="surface rounded">
+        <div className="surface rounded video">
           <div className="p-4 flex items-center gap-4">
             <Avatar id={item.author} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">
@@ -117,7 +133,20 @@ export default function FeedItem(props) {
               </Link>
             </div>
           </div>
-          <div className="aspect-video bg-ui-400"></div>
+          {item.meta.media && (
+            <video
+              autoPlay={autoPlay}
+              controls
+              playsInline
+              loop
+              muted
+              width="100%"
+              height="auto"
+              className="w-full"
+              id={`video_${item.id}`}
+              src={item.meta.media.url}
+            />
+          )}
           <div className="p-6 flex gap-4 items-center justify-between text-sm text-ui-300">
             <div className="flex gap-2 items-center">
               <div className="avatar-group -space-x-2">

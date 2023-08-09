@@ -49,7 +49,7 @@ export default function WidgetUser(props) {
             )}
           </div>
           <div className="p-2">
-            <h2 className="text-xl leading-tight mt-4">
+            <h2 className="text-xl leading-tight mt-4 truncate">
               {" "}
               {selectedUser.clan && (
                 <>

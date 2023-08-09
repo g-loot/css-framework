@@ -108,7 +108,7 @@ export default function BattlepassPage() {
         }>
           {selectedBattlepass && (
             <>
-              <section className="my-8 p-4 relative sm:rounded overflow-hidden">
+              <section className="mt-4 mb-8 p-4 relative sm:rounded overflow-hidden">
                 <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between gap-4 lg:gap-8">
                   <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
                     <div
@@ -153,7 +153,7 @@ export default function BattlepassPage() {
                 <Battlepass id={selectedBattlepassID} />
               </section>
 
-              <div className="absolute w-full h-full opacity-25 inset-0 pointer-events-none">
+              <div className="absolute w-full h-full opacity-25 inset-0 pointer-events-none hidden">
                 <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
                 <img
                   src={

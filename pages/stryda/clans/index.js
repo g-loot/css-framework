@@ -8,7 +8,7 @@ import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
 import Slider from "../../../components/Slider/Slider";
-import CardClan from "../../../components/Card/CardClan";
+import CardClan from "../components/CardClan";
 
 export default function Clan() {
   const router = useRouter();
@@ -57,7 +57,7 @@ export default function Clan() {
             </div>
             <div className="header-bg">
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/v1672219552/Stryda/illustrations/Clans_bg.jpg"
+                src="https://res.cloudinary.com/gloot/image/upload/v1691590790/Stryda/illustrations/stryda_v2_pagebg_clan.jpg"
                 alt=""
               />
             </div>

@@ -15,7 +15,7 @@ export const dataGames = [
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
       heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1689686521/Stryda/illustrations/stryda_v2_pagebg_valorant.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1691590003/Stryda/illustrations/stryda_v2_pagebg_valorant.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
       heroLadder:
@@ -3132,12 +3132,10 @@ export const dataGames = [
         status: "ongoing",
         name: "Nordic Clash qualifiers",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_logo.png",
-        video:
-          null,
+        video: null,
         bg: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_bg.jpg",
         meta: {
-          objective:
-            "Have the most wins in a party composed of 5 clan members",
+          objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie",
         },
@@ -3318,8 +3316,7 @@ export const dataGames = [
         logo: "https://res.cloudinary.com/gloot/image/upload/Stryda/demo/easterbattle-logo.png",
         bg: "https://res.cloudinary.com/gloot/image/upload/v1681913805/Stryda/demo/easterbattle-bg.jpg",
         meta: {
-          objective:
-            "Have the most wins in a party composed of 5 clan members",
+          objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie",
         },
@@ -3507,8 +3504,7 @@ export const dataGames = [
         logo: "https://res.cloudinary.com/gloot/image/upload/v1686313273/Stryda/demo/wintermayhem-logo.png",
         bg: "https://res.cloudinary.com/gloot/image/upload/v1686313274/Stryda/demo/wintermayhem-bg.jpg",
         meta: {
-          objective:
-            "Have the most wins in a party composed of 5 clan members",
+          objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie",
         },
@@ -3698,8 +3694,7 @@ export const dataGames = [
         video:
           "https://res.cloudinary.com/gloot/video/upload/v1687351323/Stryda/videos/Stryda_ClanSeason_PhoenixClash.mp4",
         meta: {
-          objective:
-            "Have the most wins in a party composed of 5 clan members",
+          objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie",
         },
@@ -3885,12 +3880,10 @@ export const dataGames = [
         status: "ongoing",
         name: "Clan Rush",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1689151603/Stryda/demo/Spike_Clan_Rush_logo.png",
-        video:
-          null,
+        video: null,
         bg: "https://res.cloudinary.com/gloot/image/upload/v1689151404/Stryda/demo/Spike_Clan_Rush_bg.jpg",
         meta: {
-          objective:
-            "Have the most wins in a party composed of 5 clan members",
+          objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Spike Rush",
           tieBreaker: "Total number of kills decide a tie",
         },
@@ -4408,7 +4401,7 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1622103228/GNOG%20assets/Games/league_of_legends/cover.png",
-        heroV2:
+      heroV2:
         "https://res.cloudinary.com/gloot/image/upload/v1689937831/Stryda/illustrations/stryda_v2_pagebg_leagueoflegends.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-leagueoflegends-2.webp",
@@ -6075,8 +6068,8 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_PUBG_Battlegrounds.jpg",
-        heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1689686525/Stryda/illustrations/stryda_v2_pagebg_pubg.jpg",
+      heroV2:
+        "https://res.cloudinary.com/gloot/image/upload/v1691590003/Stryda/illustrations/stryda_v2_pagebg_pubg.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-pubg-1.webp",
       heroLadder:
@@ -6890,8 +6883,8 @@ export const dataGames = [
     assets: {
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
-        heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1689686521/Stryda/illustrations/stryda_v2_pagebg_valorant.jpg",
+      heroV2:
+        "https://res.cloudinary.com/gloot/image/upload/v1691590003/Stryda/illustrations/stryda_v2_pagebg_valorant.jpg",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
       heroLadder:

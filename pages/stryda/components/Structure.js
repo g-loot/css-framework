@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import Head from "next/head";
 import Topbar from "./Topbar";
 import Footer from "./Footer";
@@ -9,6 +9,13 @@ import ModalFavoriteGames from "../modal-favoritegames";
 export default function Structure({ children, title, gamePicker }) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
+
+  useEffect(() => {
+      if (typeof window !== 'undefined') {
+          document.body.setAttribute("data-theme", "lighter");
+      }
+  }, []);
+
   function openModalFavoriteGames() {
     uiContext.openModal(<ModalFavoriteGames />);
   }
@@ -22,37 +29,38 @@ export default function Structure({ children, title, gamePicker }) {
           href="https://res.cloudinary.com/gloot/image/upload/v1671441061/Stryda/favicons/stryda-favicon.png"
         />
       </Head>
-      <div className="drawer min-h-full" data-theme="light">
-        <input id="drawer-1" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          <Topbar />
+      <Topbar />
           {gamePicker && (
-            <div className="relative z-10 bg-gradient-to-b from-ui-900 to-ui-900/0 h-12 flex items-center">
-              <div className="container relative flex justify-start overflow-x-auto scrollbar-hidden py-2">
+            <div className="relative z-10 bg-gradient-to-b from-ui-900/70 to-ui-900/50 border-b border-ui-700 flex items-center">
+              <div className="container relative flex justify-start overflow-x-auto scrollbar-hidden">
                 <nav className="flex gap-2 items-center justify-center mx-auto">
-                  <ul className="tabs tabs-tertiary justify-center">
+                  <ul className="flex items-center justify-center">
                     {prototype.games
                       .filter((g) => g.isFavorite)
                       .map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <button
                             type="button"
-                            className={`${
+                            className={`relative flex gap-2 items-center px-4 py-3 overflow-hidden select-none transition duration-100 ease-in-out outline-offset-[-1px] focus-visible:rounded focus-visible:outline focus-visible:outline-1 focus-visible:outline-main ${
                               item.id === prototype.defaultGameID
-                                ? "is-active"
-                                : ""
-                            }`}
+                                ? `text-game-${item.slug} pointer-events-none`
+                                : "text-ui-300 hover:text-ui-100 hover:bg-ui-400/5 active:bg-ui-400/10"
+                            } `}
                             onClick={() =>
                               prototype.defineDefaultGameID(item.id)
                             }
                           >
                             <span
-                              className={`icon icon-game-${item.slug.replace(
+                              className={`relative z-10 text-xl icon icon-game-${item.slug.replace(
                                 /#|_/g,
                                 ""
                               )}-symbol`}
                             />
-                            <span>{item.name}</span>
+                            <span className="relative z-10 text-sm uppercase">{item.name}</span>
+                            <i className={`absolute bottom-0 inset-x-0 h-2`} />
+                            {/*
+                            <img src={item.assets.cover} alt="" className="absolute z-0 inset-0 object-cover object-center" />
+                              */}
                           </button>
                         </li>
                       ))}
@@ -70,6 +78,11 @@ export default function Structure({ children, title, gamePicker }) {
           )}
           <div className="min-h-screen container">{children}</div>
           <Footer />
+      {/*
+      <div className="drawer min-h-full">
+        <input id="drawer-1" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          
         </div>
         <div className="drawer-side">
           <label htmlFor="drawer-prototype" className="drawer-overlay"></label>
@@ -94,6 +107,7 @@ export default function Structure({ children, title, gamePicker }) {
           </div>
         </div>
       </div>
+  */}
     </>
   );
 }

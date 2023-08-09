@@ -68,7 +68,7 @@ export default function Topbar() {
   }
 
   return (
-    <div className="sticky top-0 z-50 bg-ui-700/90 navbar h-12 flex items-center border-b border-ui-500">
+    <div className="sticky top-0 z-10 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 drop-shadow">
       <div className="container relative">
         <div
           className={`flex justify-between lg:gap-8 mx-auto`}
@@ -493,7 +493,7 @@ export default function Topbar() {
               >
                 <button
                   type="button"
-                  className="w-[34px] button button-ghost rounded-full overflow-hidden"
+                  className="w-9 h-9 button button-ghost rounded-full overflow-hidden"
                 >
                   <div className="text-sm font-bold text-main text-center pl-px">
                     <div className="infobanner is-active">

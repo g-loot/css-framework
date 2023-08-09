@@ -179,6 +179,7 @@ export default function TabMissionsMissions() {
                       key={missionIndex}
                       mission={mission}
                       index={missionIndex}
+                      gameSlug={prototype.getGameByID(prototype.defaultGameID).slug}
                     />
                   ))}
                 </div>

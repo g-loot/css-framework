@@ -55,6 +55,18 @@ const PrototypePage = () => {
     inViewport("[class*=animate-]");
   }, []);
 
+
+const handleScroll = () => {
+  console.log("qsdqsdqsd SCROOOL");
+};
+
+useEffect(() => {
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+    window.removeEventListener('scroll', handleScroll);
+  };
+}, []);
+
   return (
     <>
       <TopbarMarketing />

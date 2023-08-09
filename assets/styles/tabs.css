@@ -41,7 +41,7 @@
       cursor-pointer
       select-none
       transition
-      duration-300
+      duration-100
       ease-in-out
       outline-offset-[-1px]
       focus-visible:rounded
@@ -80,14 +80,14 @@
         ;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         @apply
         text-mono-100
         ;
       }
 
-      &.is-active,
-      &:active {
+      &.is-active {
         @apply
         text-main
         ;

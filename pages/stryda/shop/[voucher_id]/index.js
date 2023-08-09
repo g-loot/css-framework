@@ -159,9 +159,9 @@ export default function Home() {
             {selectedVoucher.sections?.map((section, sectionIndex) => (
               <>
                 {section.id === selectedSection && (
-                  <section className="my-4 lg:my-8">
+                  <section className="my-4 lg:my-8 relative">
                     {section.countries && (
-                      <ul className="flex gap-x-3 items-center flex-wrap mt-2 text-ui-100">
+                      <ul className="flex gap-x-3 items-center flex-wrap mt-2 text-ui-300">
                         <li>
                           <span className="uppercase font-bold">Valid in:</span>
                         </li>

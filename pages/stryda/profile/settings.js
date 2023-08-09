@@ -1,8 +1,7 @@
 import { useContext, useState, useEffect } from "react";
 
-import Accordion from "../../../components/Accordion/Accordion";
 import Ad from "../../../components/Ad/Ad";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import Structure from "../components/Structure";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
@@ -22,7 +21,7 @@ export default function Home() {
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
   const [isValorantConnected, setIsValorantConnected] = useState(false);
   const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
-  useState(false);
+    useState(false);
   const [isLoLConnected, setIsLoLConnected] = useState(false);
   const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
   const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
@@ -31,7 +30,7 @@ export default function Home() {
     const selectLoLRegionTarget = e.target.value;
     setIsLoLRegionSelected(true);
   }
-  
+
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(1));
   }, []);
@@ -41,22 +40,6 @@ export default function Home() {
       setIsValorantConnected(true);
     }
   }, []);
-
-  function buttonFeedback1(message) {
-    setButtonFeedbackMessage1(message);
-    setTimeout(() => {
-      setButtonFeedbackMessage1("");
-    }, delay);
-    return;
-  }
-  function buttonFeedback2(message) {
-    setButtonFeedbackMessage2(message);
-    setTimeout(() => {
-      setButtonFeedbackMessage2("");
-    }, delay);
-    return;
-  }
-
 
   function addToastWithDelay(toast) {
     setSubmitting(true);
@@ -69,10 +52,10 @@ export default function Home() {
 
   return (
     <>
-      <PrototypeStructure title="Profile settings">
+      <Structure title="Profile settings">
         <Ad width="1005" height="124" />
 
-        <section>
+        <section className="mt-8">
           <div className="flex justify-center items-center gap-4 -mb-8 relative z-10">
             <div className="relative">
               <div className="avatar avatar-xl avatar-circle z-0">
@@ -380,38 +363,41 @@ export default function Home() {
                           </>
                         ) : (
                           <>
-                              <div className="form-group form-select mb-2">
-                                <select id="Leagueoflegends-region" onChange={(e) => selectLoLRegion(e)}>
-                                  <option disabled selected>Select your region</option>
-                                  <option>Brazil</option>
-                                  <option>Europe Nordic & East</option>
-                                  <option>Europe West</option>
-                                  <option>North America</option>
-                                  <option>Latin America North</option>
-                                  <option>Latin America South</option>
-                                  <option>Oceania</option>
-                                  <option>Russia</option>
-                                  <option>Turkey</option>
-                                  <option>Japan</option>
-                                  <option>Republic of Korea</option>
-                                  <option>The Philippines</option>
-                                  <option>Singapore, Malaysia, Indonesia</option>
-                                  <option>Taiwan, Hong Kong, Macao</option>
-                                  <option>Thailand</option>
-                                  <option>Vietnam</option>
-                                </select>
-                              </div>
-                              <button
-                                type="button"
-                                onClick={() =>
-                                  setIsLoLConnected(!isLoLConnected)
-                                }
-                                disabled={!isLoLRegionSelected}
-                                className="button button-primary w-full"
+                            <div className="form-group form-select mb-2">
+                              <select
+                                id="Leagueoflegends-region"
+                                onChange={(e) => selectLoLRegion(e)}
                               >
-                                <span className="icon icon-game-leagueoflegends-symbol" />
-                                <span>Connect my account</span>
-                              </button>
+                                <option disabled selected>
+                                  Select your region
+                                </option>
+                                <option>Brazil</option>
+                                <option>Europe Nordic & East</option>
+                                <option>Europe West</option>
+                                <option>North America</option>
+                                <option>Latin America North</option>
+                                <option>Latin America South</option>
+                                <option>Oceania</option>
+                                <option>Russia</option>
+                                <option>Turkey</option>
+                                <option>Japan</option>
+                                <option>Republic of Korea</option>
+                                <option>The Philippines</option>
+                                <option>Singapore, Malaysia, Indonesia</option>
+                                <option>Taiwan, Hong Kong, Macao</option>
+                                <option>Thailand</option>
+                                <option>Vietnam</option>
+                              </select>
+                            </div>
+                            <button
+                              type="button"
+                              onClick={() => setIsLoLConnected(!isLoLConnected)}
+                              disabled={!isLoLRegionSelected}
+                              className="button button-primary w-full"
+                            >
+                              <span className="icon icon-game-leagueoflegends-symbol" />
+                              <span>Connect my account</span>
+                            </button>
                             <p className="text-ui-300 text-sm mt-2 leading-tight">
                               By connecting my League of Legends account I
                               acknowledge making my profile public to all users.
@@ -446,169 +432,11 @@ export default function Home() {
                     <span>Cancel</span>
                   </button>
                 </Link>
-                {/*
-                <button
-                  type="button"
-                  className="button button-secondary"
-                  data-feedback-icon="success"
-                  data-feedback={buttonFeedbackMessage1}
-                  onClick={buttonFeedback1.bind(this, "Settings reset")}
-                >
-                  <span>Cancel</span>
-                </button>
-                */}
               </div>
             </div>
           </div>
-          <div className="accordion accordion-highlighted surface sm:rounded-lg hidden">
-            {/*
-            <Accordion
-              header={
-                <>
-                  <div className="item">
-                    <div className="item-body">
-                      <div className="py-1 px-2 item-title text-xl">
-                        Stryda &amp; game accounts
-                      </div>
-                    </div>
-                    <div className="item-actions">
-                      <div>
-                        <span className="icon icon-24 icon-arrow-sm-down" />
-                      </div>
-                    </div>
-                  </div>
-                </>
-              }
-            >
-              <div className="p-4 md:p-8">
-                <div className="max-w-lg mx-auto">
-                  <div className="space-y-4">
-                    <div className="flex gap-2">
-                      <h2 className="h5">Game ID&#39;s</h2>
-                      <button
-                        className="tooltip tooltip-bottom text-ui-300 text-0"
-                        data-tooltip="Your in-game nickname is necessary if you want to join Stryda tournaments"
-                      >
-                        <span className="icon icon-16 icon-c-info" />
-                      </button>
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-4 md:gap-16">
-                      <div className="form-group-1">
-                        <label htmlFor="game-apex">
-                          Apex Legends Nickname:
-                        </label>
-                        <input type="text" name="game-apex" id="game-apex" />
-                      </div>
-                      <div className="form-group-1">
-                        <label htmlFor="game-pubg">
-                          PUBG BATTLEGROUNDS Nickname:
-                        </label>
-                        <input type="text" name="game-pubg" id="game-pubg" />
-                      </div>
-                    </div>
-                  </div>
-                  <hr className="my-8 opacity-50" />
-                  <div className="flex justify-end gap-4">
-                    <button
-                      type="button"
-                      className={`button button-primary ${
-                        submitting ? "is-loading" : ""
-                      }`}
-                      onClick={addToastWithDelay.bind(this, {
-                        title: "Success",
-                        icon: "f-check",
-                        color: "green",
-                        text: "Settings saved successfully.",
-                        autoDelete: true,
-                        autoDeleteDelay: 5000,
-                      })}
-                    >
-                      <span>Save changes</span>
-                    </button>
-                    <button
-                      type="button"
-                      className="button button-secondary"
-                      data-feedback-icon="success"
-                      data-feedback={buttonFeedbackMessage2}
-                      onClick={buttonFeedback2.bind(this, "Settings reset")}
-                    >
-                      <span>Reset</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </Accordion>
-                    */}
-
-            {/* 
-            <Accordion
-              header={
-                <>
-                  <div className="item">
-                    <div className="item-body">
-                      <div className="py-1 px-2 item-title text-xl">
-                        Data Privacy
-                      </div>
-                    </div>
-                    <div className="item-actions">
-                      <div>
-                        <span className="icon icon-24 icon-arrow-sm-down" />
-                      </div>
-                    </div>
-                  </div>
-                </>
-              }
-            >
-              <div className="p-4 md:p-8">
-                <div className="max-w-lg mx-auto">
-                  <div className="grid xl:grid-cols-2 gap-16">
-                    <div className="space-y-4">
-                      <p className="leading-relaxed">
-                        To make Stryda better we collect information from you as
-                        visitor with help from cookies. We also conduct relevant
-                        marketing of Stryda&lsquo;s services within Meta,
-                        Google, Adroll, Snapchat and Bing&lsquo;s network. Read
-                        more in our{" "}
-                        <a href="#" className="link" target="_blank">
-                          Privacy Policy
-                        </a>
-                        . <br />
-                        Here you can consent to share your data with the
-                        following partners:
-                      </p>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="form-group">
-                        <label className="form-toggle">
-                          <input type="checkbox" name="data-meta" />
-                          <i className="form-icon" /> Meta
-                        </label>
-                        <label className="form-toggle">
-                          <input type="checkbox" name="data-google" />
-                          <i className="form-icon" /> Google
-                        </label>
-                        <label className="form-toggle">
-                          <input type="checkbox" name="data-adroll" />
-                          <i className="form-icon" /> Adroll
-                        </label>
-                        <label className="form-toggle">
-                          <input type="checkbox" name="data-bing" />
-                          <i className="form-icon" /> Bing
-                        </label>
-                        <label className="form-toggle">
-                          <input type="checkbox" name="data-quantcast" />
-                          <i className="form-icon" /> Quantcast
-                        </label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </Accordion>
-            */}
-          </div>
         </section>
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

@@ -133,17 +133,17 @@ body {
   --color-game-valorant: 255 70 85;
 }
 
-[data-theme='light'] {
-  --color-ui-100: 210 211 217;
-  --color-ui-200: 167 168 179;
-  --color-ui-300: 123 125 140;
-  --color-ui-400: 80 83 101;
-  --color-ui-500: 38 41 61;
-  --color-ui-600: 32 35 53;
-  --color-ui-700: 26 28 46;
-  --color-ui-800: 20 22 37;
-  --color-ui-850: 15 17 29;
-  --color-ui-900: 10 11 20;
+[data-theme='lighter'] {
+  --color-ui-100: 222 222 226;
+  --color-ui-200: 175 176 185;
+  --color-ui-300: 129 131 143;
+  --color-ui-400: 84 86 101;
+  --color-ui-500: 39 41 58;
+  --color-ui-600: 33 35 51;
+  --color-ui-700: 28 29 44;
+  --color-ui-800: 22 24 37;
+  --color-ui-850: 17 18 30;
+  --color-ui-900: 12 13 22;
 }
 
 body {
