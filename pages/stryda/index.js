@@ -6,8 +6,10 @@ import { FrameworkPages } from "../api/framework/pages";
 import Link from "next/link";
 import TopbarFramework from "../../components/Topbar/Topbar-framework";
 import { getLayout } from "../../components/SiteLayout";
+import { usePrototypeData } from "../../contexts/prototype";
 
 const Index = () => {
+  const prototype = usePrototypeData();
   const [filter, setFilter] = useState("");
   const [checked, setChecked] = useState(false);
   const [showDeprecated, setShowDeprecated] = useState(false);

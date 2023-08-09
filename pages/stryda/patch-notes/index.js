@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import Structure from "../components/Structure";
 import { dataPatchNotes } from "../../../mock-data/data-patchnotes";
+import { usePrototypeData } from "../../../contexts/prototype";
 import Link from "next/link";
 
 const inViewport = (elem) => {
@@ -22,6 +23,7 @@ const inViewport = (elem) => {
 };
 
 export default function PatchNotes() {
+  const prototype = usePrototypeData();
   useEffect(() => {
     inViewport("[class*=animate-]");
   }, []);
