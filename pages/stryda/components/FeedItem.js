@@ -160,38 +160,108 @@ export default function FeedItem(props) {
             />
           )}
           <div className="p-6 flex gap-4 items-center justify-between text-sm text-ui-300">
-            {item.social?.views && (
-              <div className="flex gap-2 items-center">
-                <div className="avatar-group -space-x-1">
-                  {item.social.views
-                    .slice(0, 3)
-                    .map((user, userIndex) => (
+            <div className="flex items-center gap-2">
+              {item.social?.views && (
+                <>
+                  <div className="avatar-group -space-x-1 mr-1">
+                    {item.social.views.slice(0, 3).map((user, userIndex) => (
                       <Avatar id={user} key={userIndex} size="avatar-tiny" />
                     ))}
-                </div>
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    <ul className="text-xs leading-snug">
-                      {item.social.views
-                        .slice(0, 5)
-                        .map((user, userIndex) => (
-                          <li key={userIndex}>{prototype.getUserByID(user).nickname}</li>
-                        ))}
-                      {item.social.views.length > 5 && (
-                        <li>+ {item.social.views.length - 5}</li>
-                      )}
-                    </ul>
-                  }
-                >
-                  <button type="button">
-                    {item.social.views.length} view
-                    {item.social.views.length > 1 && <>s</>}
-                  </button>
-                </Tooltip>
-              </div>
-            )}
+                  </div>
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      <ul className="text-xs leading-snug">
+                        {item.social.views
+                          .slice(0, 5)
+                          .map((user, userIndex) => (
+                            <li key={userIndex}>
+                              {prototype.getUserByID(user).nickname}
+                            </li>
+                          ))}
+                        {item.social.views.length > 5 && (
+                          <li>+ {item.social.views.length - 5}</li>
+                        )}
+                      </ul>
+                    }
+                  >
+                    <button type="button">
+                      {item.social.views.length} view
+                      {item.social.views.length > 1 && <>s</>}
+                    </button>
+                  </Tooltip>
+                </>
+              )}
+              {item.social?.likes && (
+                <>
+                  <i className="w-1 h-1 rounded-full bg-ui-300" />
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      <ul className="text-xs leading-snug">
+                        {item.social.likes.users
+                          .slice(0, 5)
+                          .map((user, userIndex) => (
+                            <li key={userIndex}>
+                              {prototype.getUserByID(user).nickname}
+                            </li>
+                          ))}
+                        {item.social.likes.users.length > 5 && (
+                          <li>+ {item.social.likes.users.length - 5}</li>
+                        )}
+                      </ul>
+                    }
+                  >
+                    <button type="button">
+                      {item.social.likes.users.length} like
+                      {item.social.likes.users.length > 1 && <>s</>}
+                    </button>
+                  </Tooltip>
+                </>
+              )}
+              {item.social?.comments && (
+                <>
+                  <i className="w-1 h-1 rounded-full bg-ui-300" />
+                  <span>
+                    {item.social.comments.length} comment
+                    {item.social.comments.length > 1 && <>s</>}
+                  </span>
+                </>
+              )}
+            </div>
           </div>
+          {item.social?.comments && (
+            <ul className="px-6 pt-2 pb-6 space-y-6">
+              {item.social.comments.map((comment, commentIndex) => (
+                <li key={commentIndex} className="flex items-start gap-3">
+                  <Avatar
+                    id={comment.author}
+                    size="avatar-xs"
+                    hasTooltip={true}
+                  />
+                  <div className="text-sm">
+                    <div className="truncate p-1">
+                      <Link
+                        href={`/stryda/profile/${
+                          comment.author
+                        }${prototype.getURLparams()}`}
+                      >
+                        <span className="interactive truncate font-bold">
+                          {prototype.getUserByID(comment.author)?.nickname}
+                        </span>
+                      </Link>
+                    </div>
+                    <p
+                      className="text-sm text-ui-300 px-1"
+                      dangerouslySetInnerHTML={{
+                        __html: comment.text,
+                      }}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
+          )}
         </div>
       )}
     </>

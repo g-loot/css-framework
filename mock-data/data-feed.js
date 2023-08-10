@@ -23,11 +23,13 @@ export const DataFeedItems = [
       comments: [
         {
           author: 2,
+          date: "1 min. ago",
           text: "Well done man!",
           likes: [2,5,6],
         },
         {
           author: 5,
+          date: "1 min. ago",
           text: "🔥🔥🔥",
           likes: [],
         },
@@ -100,13 +102,8 @@ export const DataFeedItems = [
       },
       comments: [
         {
-          author: 2,
-          text: "Well done man!",
-          likes: [2,5,6],
-        },
-        {
-          author: 5,
-          text: "🔥🔥🔥",
+          author: 1,
+          text: "Better luck next time",
           likes: [],
         },
       ],
@@ -176,18 +173,7 @@ export const DataFeedItems = [
         hasLiked: true,
         users: [1,2],
       },
-      comments: [
-        {
-          author: 2,
-          text: "Well done man!",
-          likes: [2,5,6],
-        },
-        {
-          author: 5,
-          text: "🔥🔥🔥",
-          likes: [],
-        },
-      ],
+      comments: false,
     },
     stats: {
       hasWon: false,

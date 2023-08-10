@@ -26,7 +26,6 @@
   }
 }
 
-
 .card-overlay {
   @apply 
   absolute
@@ -161,7 +160,8 @@
   flex-col
   items-stretch
   justify-between
-  transform-gpu;
+  transform-gpu
+  ;
   .card-decoration {
     @apply 
     z-20;
@@ -173,23 +173,27 @@
     flex
     flex-col
     items-start
-    space-y-3;
+    space-y-3
+    ;
     .progressbar {
       @apply 
       relative
-      -z-10;
+      -z-10
+      ;
     }
   }
   .card-title {
     @apply 
     leading-[1.1]
     text-ui-100
-    uppercase;
+    uppercase
+    ;
   }
   .card-meta {
     @apply 
     flex
-    w-full;
+    w-full
+    ;
   }
   .card-bg {
     &::before {
@@ -197,7 +201,8 @@
       content-['']
       absolute
       z-10
-      inset-0;
+      inset-0
+      ;
     }
   }
 }
@@ -207,14 +212,16 @@
 .card-tournament {
   @apply 
   aspect-square
-  relative;
+  relative
+  ;
 
   .card-decoration {
     @apply 
     flex
     justify-between
     items-start
-    p-2;
+    p-2
+    ;
     > img {
       @apply 
       justify-self-stretch
@@ -222,37 +229,43 @@
       max-w-[65%]
       mt-1
       ml-1
-      drop-shadow-lg;
+      drop-shadow-lg
+      ;
     }
   }
   .card-body {
     @apply 
-    p-4;
+    p-4
+    ;
   }
   .card-title {
     @apply 
     mt-4
-    text-2xl;
+    text-2xl
+    ;
   }
   .card-meta {
     @apply 
     flex
     justify-start
     items-stretch
-    mt-4;
+    mt-4
+    ;
 
     > div {
       @apply 
       flex
       flex-col
       items-start
-      justify-center;
+      justify-center
+      ;
       &:not(:last-child) {
         @apply 
         mr-4
         pr-4
         border-r
-        border-ui-300/25;
+        border-ui-300/25
+        ;
       }
     }
 
@@ -261,18 +274,21 @@
       text-sm
       text-ui-300
       leading-none
-      mb-2;
+      mb-2
+      ;
     }
     ul {
       @apply 
       p-0
       m-0
       text-sm
-      text-ui-200;
+      text-ui-200
+      ;
       > li {
         @apply 
         pl-4
-        relative;
+        relative
+        ;
         &::before {
           @apply 
           content-['']
@@ -285,7 +301,8 @@
           from-ui-300
           to-ui-400/75
           rounded-full
-          shadow-[0_0_0_2px_rgba(255,255,255,0.15)];
+          shadow-[0_0_0_2px_rgba(255,255,255,0.15)]
+          ;
         }
       }
     }
@@ -307,7 +324,8 @@
 
 .card-mission {
   @apply 
-  aspect-video;
+  aspect-video
+  ;
 
   .card-body {
     @apply 
@@ -319,11 +337,13 @@
     .card-title {
       @apply 
       text-lg
-      mt-1;
+      mt-1
+      ;
 
       + .card-meta {
         @apply 
-        mt-2.5;
+        mt-2.5
+        ;
       }
     }
     .card-meta {
@@ -332,12 +352,14 @@
       justify-between
       text-sm
       text-ui-200
-      mb-2.5;
+      mb-2.5
+      ;
 
       > * {
         &::last-child {
           @apply 
-          text-right;
+          text-right
+          ;
         }
       }
     }
@@ -346,7 +368,8 @@
   .card-bg {
     &::before {
       @apply 
-      hidden;
+      hidden
+      ;
     }
   }
 
@@ -367,13 +390,15 @@
       flex
       flex-1
       items-center
-      inset-0;
+      inset-0
+      ;
       > img {
         @apply 
         relative
         z-30
         h-auto
-        max-h-[50%];
+        max-h-[50%]
+        ;
       }
     }
   }
@@ -381,7 +406,8 @@
   &.card-unlocked {
     .card-decoration {
       @apply 
-      items-start;
+      items-start
+      ;
       &::after {
         @apply 
         font-icon
@@ -397,7 +423,8 @@
         from-ui-500
         to-ui-800
         text-premium-300
-        drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)];
+        drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+        ;
       }
     }
   }
@@ -405,16 +432,19 @@
   &.card-locked {
     @apply 
     transform-gpu
-    overflow-hidden;
+    overflow-hidden
+    ;
 
     .card-decoration {
       @apply 
-      drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)];
+      drop-shadow-[0_3px_1.5px_rgba(0,0,0,0.5)]
+      ;
       > img {
         @apply 
         w-auto
         mx-auto
-        translate-y-4;
+        translate-y-4
+        ;
       }
       &::before {
         @apply 
@@ -428,7 +458,8 @@
         bg-gradient-to-b
         from-premium-300
         to-premium-500
-        text-ui-800;
+        text-ui-800
+        ;
         clip-path: polygon(100% 0, 100% 70%, 50% 100%, 0 70%, 0 0);
       }
       &::after {
@@ -449,18 +480,21 @@
         text-premium-300
         shadow-[0_0_0_1px_rgb(var(--color-premium-300))]
         text-center
-        leading-[2];
+        leading-[2]
+        ;
       }
     }
     .card-bg {
       * {
         @apply 
-        grayscale;
+        grayscale
+        ;
       }
 
       &::before {
         @apply 
-        bg-ui-800/75;
+        bg-ui-800/75
+        ;
       }
     }
   }
@@ -545,7 +579,6 @@
     justify-end
     items-stretch
     p-4
-    rounded-r-3
     space-y-2
     ;
     .card-category {
@@ -593,7 +626,8 @@
     .card-overlay {
       @apply 
       bg-ui-800/90
-      backdrop-blur-sm;
+      backdrop-blur-sm
+      ;
     }
   }
   &.is-highlighted {
@@ -818,6 +852,61 @@
       ;
     }
   }
+
+  &.card-sm {
+    @apply
+    aspect-auto
+    ;
+    &::before {
+      @apply 
+      shadow-[inset_0_0_0_1px_rgb(var(--color-ui-600))]
+      ;
+    }
+    .card-body {
+      @apply
+      bg-ui-700
+      p-2
+      ;
+    }
+    &:not(.is-highlighted) {
+      .card-bg {
+        @apply
+        hidden
+        ;
+      }
+    }
+    .card-title {
+      @apply
+      text-base
+      normal-case
+      leading-none
+      ;
+    }
+    .card-category {
+      @apply
+      absolute
+      top-3.5
+      left-2
+      ;
+      .rarity {
+        > *:not(.icon) {
+          @apply
+          hidden
+          ;
+        }
+      }
+      + .card-title {
+        @apply
+        pl-7
+        ;
+      }
+    }
+    .progressbar {
+      @apply
+      bg-ui-500
+      ;
+    }
+  }
 }
 
 @media not all and (min-resolution:.001dpcm) { 
@@ -862,7 +951,8 @@
         origin-right
         transition-all
         duration-[.9s]
-        ease-in-out;
+        ease-in-out
+        ;
       }
       &::before {
         @apply
@@ -872,25 +962,37 @@
     }
     .card-body {
       > * {
-        @apply translate-y-6
+        @apply 
+        translate-y-6
         opacity-0
         transition-all
         duration-500
-        ease-[cubic-bezier(.8,0,.2,.8)];
+        ease-[cubic-bezier(.8,0,.2,.8)]
+        ;
         &:nth-child(1) {
-          @apply delay-[0.1s];
+          @apply 
+          delay-[0.1s]
+          ;
         }
         &:nth-child(2) {
-          @apply delay-[0.2s];
+          @apply 
+          delay-[0.2s]
+          ;
         }
         &:nth-child(3) {
-          @apply delay-[0.3s];
+          @apply 
+          delay-[0.3s]
+          ;
         }
         &:nth-child(4) {
-          @apply delay-[0.4s];
+          @apply 
+          delay-[0.4s]
+          ;
         }
         &:nth-child(5) {
-          @apply delay-[0.5s];
+          @apply 
+          delay-[0.5s]
+          ;
         }
       }
     }
@@ -906,14 +1008,18 @@
     .revealer-front {
       .card-overlay {
         > * {
-          @apply opacity-0;
+          @apply 
+          opacity-0
+          ;
         }
       }
     }
     .revealer-back {
       .card-bg {
         > span {
-          @apply scale-100;
+          @apply 
+          scale-100
+          ;
         }
         &::before {
           @apply
@@ -923,8 +1029,10 @@
       }
       .card-body {
         > * {
-          @apply translate-y-0
-          opacity-100;
+          @apply 
+          translate-y-0
+          opacity-100
+          ;
         }
       }
     }
@@ -941,30 +1049,39 @@
     bg-center
     inset-0
     bg-no-repeat
-    rounded;
+    rounded
+    ;
   }
 }
 
 .card-interactive {
-  @apply cursor-pointer;
+  @apply 
+  cursor-pointer
+  ;
   .card-bg {
     * {
-      @apply transition-all
+      @apply 
+      transition-all
       duration-500
-      ease-[cubic-bezier(0.7,0,0.3,1)];
+      ease-[cubic-bezier(0.7,0,0.3,1)]
+      ;
     }
   }
   &:hover {
     .card-bg {
       * {
-        @apply scale-110;
+        @apply 
+        scale-110
+        ;
       }
     }
   }
   &:active {
     &:hover,
     &:focus {
-      @apply opacity-75;
+      @apply 
+      opacity-75
+      ;
     }
   }
 }
@@ -1392,6 +1509,35 @@
       ;
     }
   }
+
+  &.card-sm {
+    .card-content {
+      @apply
+      bg-ui-700
+      ;
+      .card-meta {
+        @apply
+        border-ui-600
+        ;
+      }
+      :where(h2, h3, h4, h5) {
+        @apply
+        text-base
+        normal-case
+        ;
+      }
+      [class*=border-ui-700] {
+        @apply
+        border-ui-600
+        ;
+      }
+    }
+    &::after {
+      @apply 
+      border-ui-600
+      ;
+    }
+  }
 }
 
 /* responsive card ladder secondary stacked  */
@@ -1403,11 +1549,13 @@
       flex
       flex-row
       md:max-w-[809px]
-      min-h-10;
+      min-h-10
+      ;
       > .card-image {
         @apply 
         w-auto
-        order-2;
+        order-2
+        ;
       }
       > .card-content {
         @apply 
@@ -1421,15 +1569,18 @@
         @apply 
         w-auto
         rounded-r-3
-        rounded-l-none;
+        rounded-l-none
+        ;
         &::before {
           @apply 
-          hidden;
+          hidden
+          ;
         }
         > img {
           @apply 
           z-0
-          left-auto;
+          left-auto
+          ;
         }
       }
     }
@@ -1442,11 +1593,13 @@
       flex
       flex-row
       md:max-w-[809px]
-      min-h-10;
+      min-h-10
+      ;
       > .card-image {
         @apply 
         w-auto
-        order-2;
+        order-2
+        ;
       }
       > .card-content {
         @apply 
@@ -1460,15 +1613,18 @@
         @apply 
         w-auto
         rounded-r-3
-        rounded-l-none;
+        rounded-l-none
+        ;
         &::before {
           @apply 
-          hidden;
+          hidden
+          ;
         }
         > img {
           @apply 
           z-0
-          left-auto;
+          left-auto
+          ;
         }
       }
     }
@@ -1481,11 +1637,13 @@
       flex
       flex-row
       md:max-w-[809px]
-      min-h-10;
+      min-h-10
+      ;
       > .card-image {
         @apply 
         w-auto
-        order-2;
+        order-2
+        ;
       }
       > .card-content {
         @apply 
@@ -1502,12 +1660,14 @@
         rounded-l-none;
         &::before {
           @apply 
-          hidden;
+          hidden
+          ;
         }
         > img {
           @apply 
           z-0
-          left-auto;
+          left-auto
+          ;
         }
       }
     }
@@ -1520,11 +1680,13 @@
       flex
       flex-row
       md:max-w-[809px]
-      min-h-10;
+      min-h-10
+      ;
       > .card-image {
         @apply 
         w-auto
-        order-2;
+        order-2
+        ;
       }
       > .card-content {
         @apply 
@@ -1541,12 +1703,14 @@
         rounded-l-none;
         &::before {
           @apply 
-          hidden;
+          hidden
+          ;
         }
         > img {
           @apply 
           z-0
-          left-auto;
+          left-auto
+          ;
         }
       }
     }
@@ -1599,7 +1763,8 @@
   &.is-inactive {
     .card-title {
       @apply 
-      text-ui-300;
+      text-ui-300
+      ;
     }
     .card-category {
       > * {
@@ -1609,7 +1774,8 @@
     }
     .card-bg {
       @apply 
-      mix-blend-luminosity;
+      mix-blend-luminosity
+      ;
       > span {
         @apply 
         grayscale
@@ -1619,16 +1785,19 @@
     }
     .card-image-bg {
       @apply 
-      mix-blend-luminosity;
+      mix-blend-luminosity
+      ;
       > img {
         @apply 
         grayscale
-        opacity-50;
+        opacity-50
+        ;
       }
     }
     .card-status {
       @apply 
-      text-ui-300;
+      text-ui-300
+      ;
     }
   }
   &.is-loading {
@@ -1641,12 +1810,14 @@
     bg-[length:800px_100%]
     bg-[-200%_center]
     bg-no-repeat
-    animate-[card-loader_1s_linear_infinite];
+    animate-[card-loader_1s_linear_infinite]
+    ;
 
     &,
     [class*="text-"] {
       @apply 
-      text-ui-800/0;
+      text-ui-800/0
+      ;
     }
     background-image: linear-gradient(
       to right,
@@ -1658,7 +1829,8 @@
     :where(img, .card-decoration::before, .card-decoration::after, .chip
         > *, .card-bg, .card-meta > * > *, .avatar) {
       @apply 
-      opacity-0;
+      opacity-0
+      ;
     }
 
     *[class*="bg-"],
@@ -1667,21 +1839,24 @@
       bg-ui-800/0
       from-ui-800/0
       via-ui-800/0
-      to-ui-800/0;
+      to-ui-800/0
+      ;
     }
 
     *[class*="border-"] {
       @apply 
-      border-ui-800/0;
+      border-ui-800/0
+      ;
     }
 
     .card-meta > div:not(:last-child) {
       @apply 
-      border-ui-700;
+      border-ui-700
+      ;
     }
 
     .card-title,
-    .card-meta > *:not(.chip)  {
+    .card-meta > *:not(.chip) {
       @apply 
       relative
       text-ui-300/0
@@ -1702,7 +1877,8 @@
       &::after {
         @apply 
         w-2/3
-        h-6;
+        h-6
+        ;
       }
     }
     .card-meta > * {

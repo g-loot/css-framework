@@ -5,7 +5,7 @@ import Link from "next/link";
 import { UiContext } from "../../../contexts/ui";
 import { usePrototypeData } from "../../../contexts/prototype";
 import { useRouter } from "next/router";
-import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
+import CardMission from "../components/CardMission";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 import CardMissionTableTr from "../../../components/Card/CardMissionTableTr";
 import ButtonStatsUpdate from "../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
@@ -38,20 +38,11 @@ export default function TabMissionsMissions() {
     <>
       {selectedGame && (
         <>
-          {/*
-            <section
-              className="py-8 animate-slide-in-bottom animate-delay"
-              style={{ "--delay": "calc(1 * 0.05s)" }}
-            >
-              <ComponentRewardLadder />
-            </section>
-          */}
           <section
             className="py-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(2 * 0.05s)" }}
           >
             
-
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div className="max-w-md:pb-2 max-w-md:text-center">
                 Your latest match ended <b>Dec 13 / 8:12 PM</b>
@@ -122,7 +113,7 @@ export default function TabMissionsMissions() {
               <>
                 <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
                   {selectedGame?.missions.map((mission, missionIndex) => (
-                    <CardMissionSecondary
+                    <CardMission
                       key={missionIndex}
                       mission={mission}
                       index={missionIndex}

@@ -15,9 +15,7 @@ const ButtonSignUp = (props) => {
       }`}
     >
       <span
-        className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12 ${
-          props.isInverted ? "caca" : ""
-        }`}
+        className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12`}
       >
         Sign up
       </span>

@@ -246,7 +246,7 @@ export default function Ladders() {
                         {selectedClanLeaderboard.meta.eligibility.ranks && (
                           <p className="inline-flex items-center gap-2">
                             <span>
-                              All party members must of any of the following
+                              All party members must be of any of the following
                               ranks:
                             </span>
                             <div className="inline-flex items-center gap-0.5 pr-3">

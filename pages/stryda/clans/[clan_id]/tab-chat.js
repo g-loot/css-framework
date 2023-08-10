@@ -50,7 +50,7 @@ export default function TabClanChat() {
     <>
       {selectedClan && (
         <>
-          <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-159px-1rem)]">
+          <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-120px-1rem)]">
             <div className="w-full lg:w-80 flex flex-col gap-y-4">
               <section className="flex-1 flex flex-col surface md:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">

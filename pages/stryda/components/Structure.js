@@ -41,7 +41,7 @@ export default function Structure({ children, title, gamePicker }) {
                         <li key={itemIndex}>
                           <button
                             type="button"
-                            className={`relative flex gap-2 items-center px-4 py-3 overflow-hidden select-none transition duration-100 ease-in-out outline-offset-[-1px] focus-visible:rounded focus-visible:outline focus-visible:outline-1 focus-visible:outline-main ${
+                            className={`group relative flex gap-2 items-center px-4 py-3 overflow-hidden select-none transition duration-100 ease-in-out outline-offset-[-1px] focus-visible:rounded focus-visible:outline focus-visible:outline-1 focus-visible:outline-main ${
                               item.id === prototype.defaultGameID
                                 ? `text-game-${item.slug} pointer-events-none`
                                 : "text-ui-300 hover:text-ui-100 hover:bg-ui-400/5 active:bg-ui-400/10"
@@ -51,16 +51,12 @@ export default function Structure({ children, title, gamePicker }) {
                             }
                           >
                             <span
-                              className={`relative z-10 text-xl icon icon-game-${item.slug.replace(
+                              className={`relative z-10 block transition ease-linear duration-[0s] group-active:translate-y-0.5 text-xl icon icon-game-${item.slug.replace(
                                 /#|_/g,
                                 ""
                               )}-symbol`}
                             />
-                            <span className="relative z-10 text-sm uppercase">{item.name}</span>
-                            <i className={`absolute bottom-0 inset-x-0 h-2`} />
-                            {/*
-                            <img src={item.assets.cover} alt="" className="absolute z-0 inset-0 object-cover object-center" />
-                              */}
+                            <span className="relative z-10 block transition ease-linear duration-[0s] group-active:translate-y-0.5 text-sm uppercase">{item.name}</span>
                           </button>
                         </li>
                       ))}

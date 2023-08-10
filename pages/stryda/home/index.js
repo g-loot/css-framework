@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { Fragment, useContext, useEffect, useState } from "react";
 
 import { UiContext } from "../../../contexts/ui";
 import { useRouter } from "next/router";
@@ -13,6 +13,8 @@ import Loader from "../components/Loader";
 import ModalGiftTokens from "../clans/modal-gift-tokens";
 import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 import Feed from "../components/Feed";
+import CardMission from "../components/CardMission";
+import CardLadder from "../components/CardLadder";
 
 export default function Home() {
   const router = useRouter();
@@ -167,28 +169,38 @@ export default function Home() {
                   </ul>
                 </div>
               </div>
-              <div className="surface rounded p-4 text-center">
-                <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                  width="180"
-                  height="auto"
-                  className="mx-auto"
-                />
-                <p className="w-3/4 text-sm text-ui-300 mx-auto mt-3 mb-4">
-                  Increase your amount of XP you can earn each day with a{" "}
-                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                    <a className="link text-premium-500">
-                      Premium subscription
-                    </a>
-                  </Link>
-                  .
-                </p>
-                <div className="mx-auto mt-2">
-                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                    <a className="button button-sm button-premium is-shining">
-                      <span>Get Premium</span>
-                    </a>
-                  </Link>
+              <div
+                className="sticky space-y-4"
+                style={{ top: "calc(48px + 1rem)" }}
+              >
+                <div
+                  className="surface rounded p-4 text-center"
+                >
+                  <PremiumLogo
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                    width="180"
+                    height="auto"
+                    className="mx-auto"
+                  />
+                  <p className="w-3/4 text-sm text-ui-300 mx-auto mt-3 mb-4">
+                    Increase your amount of XP you can earn each day with a{" "}
+                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                      <a className="link text-premium-500">
+                        Premium subscription
+                      </a>
+                    </Link>
+                    .
+                  </p>
+                  <div className="mx-auto mt-2">
+                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                      <a className="button button-sm button-premium is-shining">
+                        <span>Get Premium</span>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="rounded bg-ui-600 aspect-square grid place-content-center text-center text-2xl text-ui-400">
+                  <span>AD</span>
                 </div>
               </div>
             </div>
@@ -205,18 +217,54 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className="max-h-48 overflow-y-auto scrollbar-desktop">
-                  <ul>
-                    {prototype.games.map((game, gameIndex) => 
-                    (
-                      <>
-                      {game.missions.map((item, itemIndex) => (
-                        <>
-                        </>
-                      ))}
-                      </>
+                <div className="max-h-96 p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
+                  <ul className="space-y-2">
+                    {prototype.games.filter((i) => i.isFavorite).map((game, gameIndex) => (
+                      <Fragment key={gameIndex}>
+                        {game.missions
+                          ?.filter((i) => i.isVisible)
+                          .map((mission, missionIndex) => (
+                            <CardMission
+                              key={missionIndex}
+                              size="card-sm"
+                              mission={mission}
+                              index={missionIndex}
+                              gameSlug={game.slug}
+                            />
+                          ))}
+                      </Fragment>
                     ))}
-
+                  </ul>
+                </div>
+              </div>
+              <div className="surface rounded">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                  <h2 className="h6 text-ui-100">Ladders</h2>
+                  <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
+                    <a className="link link-hover text-ui-300 text-sm leading-none">
+                      View all
+                    </a>
+                  </Link>
+                </div>
+                <div className="max-h-96 p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
+                  <ul className="space-y-2">
+                    {prototype.games.filter((i) => i.isFavorite).map((game, gameIndex) => (
+                      <Fragment key={gameIndex}>
+                        {game.ladders
+                          ?.filter((i) => i.status === "ongoing" && i.isEnrolled)
+                          .map((ladder, ladderIndex) => (
+                            <CardLadder
+                              key={ladderIndex}
+                              size="card-sm"
+                              ladder={ladder}
+                              isHorizontal={false}
+                              isGlobal={false}
+                              isFluid={true}
+                              gameID={game.id}
+                            />
+                          ))}
+                      </Fragment>
+                    ))}
                   </ul>
                 </div>
               </div>

@@ -143,6 +143,9 @@
   &.interactive {
     @apply
     -outline-offset-1
+    transition
+    duration-100
+    hover:border-ui-500
     ;
   }
 }

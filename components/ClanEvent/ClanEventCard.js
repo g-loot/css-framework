@@ -37,8 +37,6 @@ const ClanEventCard = (props) => {
           <button
             type="button"
             className="w-full surface sm:rounded overflow-hidden interactive animate-slide-in-bottom animate-delay"
-            //onMouseOver={handleVideoPause}
-            //onMouseOut={handleVideoPlay}
             style={{
               "--delay": "calc(" + itemIndex + " * 0.05s)",
             }}
@@ -226,12 +224,6 @@ const ClanEventCard = (props) => {
                             )}
                           </span>
                         </div>
-                        <button
-                          type="button"
-                          className="button button-sm button-primary"
-                        >
-                          <span>View event</span>
-                        </button>
                       </div>
                     )}
                   </div>

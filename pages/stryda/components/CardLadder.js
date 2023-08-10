@@ -26,7 +26,7 @@ export default function CardLadder(props) {
   const isClan = props.isClan || false;
   const clanID = props.clanID || 1;
   const ladder = props.ladder;
-  const game_slug = prototype.getGameByID(gameID).slug;
+  const size = props.size || "";
   const isGlobal = props.isGlobal || false;
   const className = props.className || "";
 
@@ -54,7 +54,7 @@ export default function CardLadder(props) {
           }/${ladder.id}${prototype.getURLparams()}`}
         >
           <div
-            className={`card-ladder card-secondary interactive rounded ${
+            className={`card-ladder card-secondary ${size} interactive rounded ${
               isHorizontal && !isFluid ? "lg:card-horizontal" : ""
             } ${isHorizontal && isFluid ? "lg:card-horizontal" : ""} ${
               isFluid ? "card-fluid" : ""
