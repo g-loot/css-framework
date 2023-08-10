@@ -217,48 +217,58 @@ export default function Ladders() {
               {!variablesContext.clanLeaderboardEnrolled &&
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
-                    <div className="flex-1 text-sm">
-                      <p>
-                        In order for your clan to be eligible for the event, at
-                        least 3 out of 5 party member have to be from the
-                        following nordic countries:{" "}
-                        <span className="whitespace-nowrap">
-                          <img
-                            src={`https://flagcdn.com/dk.svg`}
-                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
-                          />{" "}
-                          Denmark
-                        </span>{"  "}
-                        <span className="whitespace-nowrap">
-                          <img
-                            src={`https://flagcdn.com/fi.svg`}
-                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
-                          />{" "}
-                          Finland
-                        </span>{"  "}
-                        <span className="whitespace-nowrap">
-                          <img
-                            src={`https://flagcdn.com/is.svg`}
-                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
-                          />{" "}
-                          Iceland
-                        </span>{"  "}
-                        <span className="whitespace-nowrap">
-                          <img
-                            src={`https://flagcdn.com/no.svg`}
-                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
-                          />{" "}
-                          Norway
-                        </span>{"  "}
-                        <span className="whitespace-nowrap">
-                          <img
-                            src={`https://flagcdn.com/se.svg`}
-                            className="inline aspect-video rounded-sm max-w-[1.5rem]"
-                          />{" "}
-                          Sweden
-                        </span>
-                      </p>
-                    </div>
+                    {selectedClanLeaderboard.meta?.eligibility && (
+                      <div className="flex-1 text-sm">
+                        <div className="uppercase font-bold text-ui-400">
+                          Eligibility:
+                        </div>
+                        {selectedClanLeaderboard.meta.eligibility.countries && (
+                          <p>
+                            In order for your clan to be eligible for the event,
+                            at least 3 out of 5 party member have to be from the
+                            following nordic countries:{" "}
+                            {selectedClanLeaderboard.meta.eligibility.countries.map(
+                              (country, countryIndex) => (
+                                <span
+                                  key={countryIndex}
+                                  className="whitespace-nowrap pr-1"
+                                >
+                                  <img
+                                    src={`https://flagcdn.com/${country.flag}.svg`}
+                                    className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
+                                  />{" "}
+                                  {country.name}
+                                </span>
+                              )
+                            )}
+                          </p>
+                        )}
+                        {selectedClanLeaderboard.meta.eligibility.ranks && (
+                          <p className="inline-flex items-center gap-2">
+                            <span>
+                              All party members must of any of the following
+                              ranks:
+                            </span>
+                            <div className="inline-flex items-center gap-0.5 pr-3">
+                              {selectedClanLeaderboard.meta.eligibility.ranks?.map(
+                                (rank, rankIndex) => (
+                                  <Tooltip
+                                    key={rankIndex}
+                                    placement="top"
+                                    tooltip={rank.name}
+                                  >
+                                    <img
+                                      src={rank.image}
+                                      className="inline w-6 h-6 object-contain object-center"
+                                    />
+                                  </Tooltip>
+                                )
+                              )}
+                            </div>
+                          </p>
+                        )}
+                      </div>
+                    )}
                     <div className="flex-1 whitespace-nowrap flex items-center justify-center">
                       <span
                         className="icon icon-ctrl-right text-xl text-main/20 animate-slide-in-left animate-delay"
@@ -289,7 +299,7 @@ export default function Ladders() {
                       />
                       <button
                         type="button"
-                        className="button button-primary mx-4"
+                        className="button button-primary mx-4 px-8"
                         onClick={() => handleEnroll()}
                       >
                         <span>Enter with my Clan</span>

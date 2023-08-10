@@ -92,17 +92,14 @@ const sideScroll = (element, speed, distance, step) => {
 
 export default function TabLaddersSoloLeaderboards() {
   const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
-  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const [selectedLadder, setSelectedLadder] = useState(null);
-  const hasAds = query.ads === "true" ? true : false;
+  const { game_slug } = router.query;
   const { ladder_id } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
   const isPremium = prototype.isPremium;
 
   useEffect(() => {
-    setSelectedLadder(prototype.getLadderByID(game, ladder_id));
+    setSelectedLadder(prototype.getLadderByID(game_slug, ladder_id));
   }, [ladder_id]);
 
   const sliderRankWrapper = useRef(null);

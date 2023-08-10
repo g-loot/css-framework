@@ -3,6 +3,7 @@ import { usePrototypeData } from "../../../contexts/prototype";
 import Avatar from "../../../components/Avatar/Avatar";
 import Link from "next/link";
 import GameIcon from "../../../components/GameIcon/GameIcon";
+import Tooltip from "../../../components/Tooltip/Tooltip";
 
 export default function FeedItem(props) {
   const prototype = usePrototypeData();
@@ -15,7 +16,7 @@ export default function FeedItem(props) {
   }, [item]);
 
   useEffect(() => {
-    if(video) {
+    if (video) {
       if (autoPlay) {
         video.play();
       } else {
@@ -28,10 +29,10 @@ export default function FeedItem(props) {
     <>
       {item && (
         <div className="surface rounded video">
-          <div className="p-4 flex items-center gap-4">
+          <div className="p-4 flex items-center gap-3">
             <Avatar id={item.author} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">
-              <div className="truncate">
+              <div className="truncate p-1">
                 <Link
                   href={`/stryda/profile/${
                     item.author
@@ -42,7 +43,7 @@ export default function FeedItem(props) {
                   </span>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 text-sm text-ui-300">
+              <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
                 <GameIcon game={item.meta.game} size="text-lg" />
                 <span>{item.meta.gameMode}</span>
                 <i className="w-1 h-1 rounded-full bg-ui-300" />
@@ -68,8 +69,8 @@ export default function FeedItem(props) {
                       <>
                         <li>
                           <button type="button">
-                            <span className="icon icon-leave" />
-                            <span>Edit match</span>
+                            <span className="icon icon-pen-2" />
+                            <span>Edit post</span>
                           </button>
                         </li>
                       </>
@@ -87,31 +88,42 @@ export default function FeedItem(props) {
             </div>
           </div>
           <div className="px-6 pt-2">
-            <div className="flex flex-wrap items-center gap-4">
-              <p
-                className="text-lg text-ui-100"
-                dangerouslySetInnerHTML={{
-                  __html: item.meta.text,
-                }}
-              />
-              <div
-                className={`rounded px-2 py-1.5 text-sm leading-none flex gap-2 items-center ${
-                  item.stats.hasWon
-                    ? " bg-success-500/10 text-success-300"
-                    : "bg-error-500/10 text-error-300"
-                }`}
+            <Link
+              href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
+            >
+              <button
+                type="button"
+                className="flex flex-wrap items-center gap-4 interactive"
               >
-                <span>{item.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
-                <i
-                  className={`block h-4 w-px ${
-                    item.stats.hasWon ? " bg-success-300/25" : "bg-error-300/25"
+                {item.meta.text && (
+                  <p
+                    className="text-lg text-ui-100"
+                    dangerouslySetInnerHTML={{
+                      __html: item.meta.text,
+                    }}
+                  />
+                )}
+                <div
+                  className={`rounded px-2 py-1.5 text-sm leading-none flex gap-2 items-center ${
+                    item.stats.hasWon
+                      ? " bg-success-500/10 text-success-300"
+                      : "bg-error-500/10 text-error-300"
                   }`}
-                />{" "}
-                <span>
-                  {item.stats.scoreOwn} - {item.stats.scoreOpposite}
-                </span>
-              </div>
-            </div>
+                >
+                  <span>{item.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
+                  <i
+                    className={`block h-4 w-px ${
+                      item.stats.hasWon
+                        ? " bg-success-300/25"
+                        : "bg-error-300/25"
+                    }`}
+                  />{" "}
+                  <span>
+                    {item.stats.scoreOwn} - {item.stats.scoreOpposite}
+                  </span>
+                </div>
+              </button>
+            </Link>
           </div>
           <div className="p-4 overflow-x-auto scrollbar-hidden">
             <div className="flex justify-start">
@@ -148,26 +160,37 @@ export default function FeedItem(props) {
             />
           )}
           <div className="p-6 flex gap-4 items-center justify-between text-sm text-ui-300">
-            <div className="flex gap-2 items-center">
-              <div className="avatar-group -space-x-2">
-                <div className="avatar avatar-circle avatar-tiny">
-                  <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
-                  </div>
+            {item.social?.views && (
+              <div className="flex gap-2 items-center">
+                <div className="avatar-group -space-x-1">
+                  {item.social.views
+                    .slice(0, 3)
+                    .map((user, userIndex) => (
+                      <Avatar id={user} key={userIndex} size="avatar-tiny" />
+                    ))}
                 </div>
-                <div className="avatar avatar-circle avatar-tiny">
-                  <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
-                  </div>
-                </div>
-                <div className="avatar avatar-circle avatar-tiny">
-                  <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
-                  </div>
-                </div>
+                <Tooltip
+                  placement="top"
+                  tooltip={
+                    <ul className="text-xs leading-snug">
+                      {item.social.views
+                        .slice(0, 5)
+                        .map((user, userIndex) => (
+                          <li key={userIndex}>{prototype.getUserByID(user).nickname}</li>
+                        ))}
+                      {item.social.views.length > 5 && (
+                        <li>+ {item.social.views.length - 5}</li>
+                      )}
+                    </ul>
+                  }
+                >
+                  <button type="button">
+                    {item.social.views.length} view
+                    {item.social.views.length > 1 && <>s</>}
+                  </button>
+                </Tooltip>
               </div>
-              <div>143 viewers</div>
-            </div>
+            )}
           </div>
         </div>
       )}

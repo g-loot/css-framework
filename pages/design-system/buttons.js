@@ -561,6 +561,7 @@ const DSpage = () => {
           </div>
 
           {/* variant:claim */}
+          {/*
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-6 lg:mb-10">Claim</h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -617,6 +618,7 @@ const DSpage = () => {
               </div>
             </div>
           </div>
+          */}
 
           {/* variant:play */}
           <div className="">

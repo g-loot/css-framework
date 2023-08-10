@@ -3138,6 +3138,60 @@ export const dataGames = [
           objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Competitive",
           tieBreaker: "Total number of kills decide a tie",
+          eligibility: {
+            ranks: [
+              {
+                name: 'Ascendant 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_1.png',
+              },
+              {
+                name: 'Ascendant 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_2.png',
+              },
+              {
+                name: 'Ascendant 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_3.png',
+              },
+              {
+                name: 'Immortal 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_1.png',
+              },
+              {
+                name: 'Immortal 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_2.png',
+              },
+              {
+                name: 'Immortal 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_3.png',
+              },
+              {
+                name: 'Radiant',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_3.png',
+              },
+            ],
+            countries: [
+              {
+                name: "Denmark",
+                flag: "dk",
+              },
+              {
+                name: "Finland",
+                flag: "fi",
+              },
+              {
+                name: "Iceland",
+                flag: "is",
+              },
+              {
+                name: "Norway",
+                flag: "no",
+              },
+              {
+                name: "Sweden",
+                flag: "se",
+              },
+            ]
+          },
         },
         rewards: [
           {

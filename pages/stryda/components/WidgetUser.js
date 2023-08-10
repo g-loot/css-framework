@@ -49,26 +49,36 @@ export default function WidgetUser(props) {
             )}
           </div>
           <div className="p-2">
-            <h2 className="text-xl leading-tight mt-4 truncate">
-              {" "}
-              {selectedUser.clan && (
-                <>
-                  {" "}
-                  &#91;
-                  {prototype.getClanByID(selectedUser.clan)?.tag}
-                  &#93;
-                </>
-              )}{" "}
-              {selectedUser.nickname}
-            </h2>
-            <ul className="grid grid-cols-2 items-stretch divide-x-1 divide-ui-700 leading-tight my-4">
+            <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+              <h2 className="text-xl leading-tight mt-4 truncate interactive">
+                {" "}
+                {selectedUser.clan && (
+                  <>
+                    {" "}
+                    &#91;
+                    {prototype.getClanByID(selectedUser.clan)?.tag}
+                    &#93;
+                  </>
+                )}{" "}
+                {selectedUser.nickname}
+              </h2>
+            </Link>
+            <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4">
               <li>
-                <div className="text-lg text-ui-100">165</div>
-                <div className="text-sm text-ui-300">followers</div>
+                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                  <button type="button" className="interactive px-2">
+                    <div className="text-lg text-ui-100">165</div>
+                    <div className="text-sm text-ui-300">followers</div>
+                  </button>
+                </Link>
               </li>
               <li>
-                <div className="text-lg text-ui-100">165</div>
-                <div className="text-sm text-ui-300">following</div>
+                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                  <button type="button" className="interactive px-2">
+                    <div className="text-lg text-ui-100">165</div>
+                    <div className="text-sm text-ui-300">following</div>
+                  </button>
+                </Link>
               </li>
             </ul>
             {selectedUser.clan ? (
