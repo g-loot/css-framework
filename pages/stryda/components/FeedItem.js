@@ -4,6 +4,8 @@ import Avatar from "../../../components/Avatar/Avatar";
 import Link from "next/link";
 import GameIcon from "../../../components/GameIcon/GameIcon";
 import Tooltip from "../../../components/Tooltip/Tooltip";
+import { StatsValorantMaps } from "../../../mock-data/data-stats-valorant";
+import FeedItemComments from "./FeedItemComments";
 
 export default function FeedItem(props) {
   const prototype = usePrototypeData();
@@ -25,6 +27,12 @@ export default function FeedItem(props) {
     }
   }, [video, autoPlay]);
 
+  const getMapByID = (id) => {
+    return StatsValorantMaps.find((map) => {
+      return map.id === parseInt(id);
+    });
+  };
+
   return (
     <>
       {item && (
@@ -45,9 +53,11 @@ export default function FeedItem(props) {
               </div>
               <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
                 <GameIcon game={item.meta.game} size="text-lg" />
-                <span>{item.meta.gameMode}</span>
+                <span>{item.meta.mode}</span>
                 <i className="w-1 h-1 rounded-full bg-ui-300" />
-                <span>{item.meta.map}</span>
+                <span className="capitalize">
+                  {getMapByID(item.meta.map).name}
+                </span>
                 <i className="w-1 h-1 rounded-full bg-ui-300" />
                 <span>{item.meta.dateTimeEnded}</span>
               </div>
@@ -97,7 +107,7 @@ export default function FeedItem(props) {
               >
                 {item.meta.text && (
                   <p
-                    className="text-lg text-ui-100"
+                    className="text-lg md:text-xl font-bold text-ui-100"
                     dangerouslySetInnerHTML={{
                       __html: item.meta.text,
                     }}
@@ -119,30 +129,50 @@ export default function FeedItem(props) {
                     }`}
                   />{" "}
                   <span>
-                    {item.stats.scoreOwn} - {item.stats.scoreOpposite}
+                    {item.stats.score.team1} - {item.stats.score.team2}
                   </span>
                 </div>
               </button>
             </Link>
           </div>
           <div className="p-4 overflow-x-auto scrollbar-hidden">
-            <div className="flex justify-start">
-              <Link
-                href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
-              >
-                <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
-                  {item.stats.mainStats.map((mainStat, mainStatIndex) => (
-                    <li key={mainStatIndex} className="px-6 first:pl-2">
-                      <div className="text-sm text-ui-300">
-                        {mainStat.label}
-                      </div>
-                      <div className="text-xl text-ui-100">
-                        {mainStat.value}
-                      </div>
-                    </li>
-                  ))}
-                </ul>
-              </Link>
+            <div className="flex items-between justify-between">
+              <div className="flex justify-start gap-4">
+                <Link
+                  href={`/stryda/activity/${
+                    item.id
+                  }${prototype.getURLparams()}`}
+                >
+                  <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
+                    {item.stats.mainStats.map((mainStat, mainStatIndex) => (
+                      <li key={mainStatIndex} className="px-5 first:pl-2">
+                        <div className="text-sm text-ui-300">
+                          {mainStat.label}
+                        </div>
+                        <div className="text-lg text-ui-100">
+                          {mainStat.value}
+                        </div>
+                      </li>
+                    ))}
+                  </ul>
+                </Link>
+              </div>
+              {item.achievements && (
+                <Link
+                  href={`/stryda/activity/${
+                    item.id
+                  }${prototype.getURLparams()}`}
+                >
+                  <div className="interactive relative z-10 w-24 h-auto grid place-content-center text-center">
+                    <div className="text-2xl text-ui-100 pb-1">
+                      {item.achievements.length}
+                    </div>
+                    <div className="absolute z-0 inset-0 grid place-content-center">
+                      <span className="icon icon-laurel text-ui-400/50 text-7xl" />
+                    </div>
+                  </div>
+                </Link>
+              )}
             </div>
           </div>
           {item.meta.media && (
@@ -159,109 +189,7 @@ export default function FeedItem(props) {
               src={item.meta.media.url}
             />
           )}
-          <div className="p-6 flex gap-4 items-center justify-between text-sm text-ui-300">
-            <div className="flex items-center gap-2">
-              {item.social?.views && (
-                <>
-                  <div className="avatar-group -space-x-1 mr-1">
-                    {item.social.views.slice(0, 3).map((user, userIndex) => (
-                      <Avatar id={user} key={userIndex} size="avatar-tiny" />
-                    ))}
-                  </div>
-                  <Tooltip
-                    placement="top"
-                    tooltip={
-                      <ul className="text-xs leading-snug">
-                        {item.social.views
-                          .slice(0, 5)
-                          .map((user, userIndex) => (
-                            <li key={userIndex}>
-                              {prototype.getUserByID(user).nickname}
-                            </li>
-                          ))}
-                        {item.social.views.length > 5 && (
-                          <li>+ {item.social.views.length - 5}</li>
-                        )}
-                      </ul>
-                    }
-                  >
-                    <button type="button">
-                      {item.social.views.length} view
-                      {item.social.views.length > 1 && <>s</>}
-                    </button>
-                  </Tooltip>
-                </>
-              )}
-              {item.social?.likes && (
-                <>
-                  <i className="w-1 h-1 rounded-full bg-ui-300" />
-                  <Tooltip
-                    placement="top"
-                    tooltip={
-                      <ul className="text-xs leading-snug">
-                        {item.social.likes.users
-                          .slice(0, 5)
-                          .map((user, userIndex) => (
-                            <li key={userIndex}>
-                              {prototype.getUserByID(user).nickname}
-                            </li>
-                          ))}
-                        {item.social.likes.users.length > 5 && (
-                          <li>+ {item.social.likes.users.length - 5}</li>
-                        )}
-                      </ul>
-                    }
-                  >
-                    <button type="button">
-                      {item.social.likes.users.length} like
-                      {item.social.likes.users.length > 1 && <>s</>}
-                    </button>
-                  </Tooltip>
-                </>
-              )}
-              {item.social?.comments && (
-                <>
-                  <i className="w-1 h-1 rounded-full bg-ui-300" />
-                  <span>
-                    {item.social.comments.length} comment
-                    {item.social.comments.length > 1 && <>s</>}
-                  </span>
-                </>
-              )}
-            </div>
-          </div>
-          {item.social?.comments && (
-            <ul className="px-6 pt-2 pb-6 space-y-6">
-              {item.social.comments.map((comment, commentIndex) => (
-                <li key={commentIndex} className="flex items-start gap-3">
-                  <Avatar
-                    id={comment.author}
-                    size="avatar-xs"
-                    hasTooltip={true}
-                  />
-                  <div className="text-sm">
-                    <div className="truncate p-1">
-                      <Link
-                        href={`/stryda/profile/${
-                          comment.author
-                        }${prototype.getURLparams()}`}
-                      >
-                        <span className="interactive truncate font-bold">
-                          {prototype.getUserByID(comment.author)?.nickname}
-                        </span>
-                      </Link>
-                    </div>
-                    <p
-                      className="text-sm text-ui-300 px-1"
-                      dangerouslySetInnerHTML={{
-                        __html: comment.text,
-                      }}
-                    />
-                  </div>
-                </li>
-              ))}
-            </ul>
-          )}
+          <FeedItemComments item={item} />
         </div>
       )}
     </>

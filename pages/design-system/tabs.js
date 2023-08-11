@@ -436,6 +436,42 @@ const DSpage = () => {
           </div>
         </div>
       </div>
+
+      {/* Tab stretch */}
+      <div className="mb-12" id="tab-stretch">
+        <h2 className="h3 mb-3">Tab stretch</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div className="bg-ui-600 rounded overflow-hidden">
+                  <ul className="tabs tabs-stretch">
+                    <li>
+                      <button className="is-active">
+                        <span>Ladders</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button>
+                        <span>Missions</span>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/mwjz8kro/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

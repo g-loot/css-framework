@@ -11,13 +11,11 @@
   cursor-pointer
   ;
 
-  &,
   > * {
     @apply
     transition-all
     duration-300
     ease-[cubic-bezier(.7,0,.3,1)]
-    ease-in-out
     ;
   }
 
@@ -54,7 +52,7 @@
   }
 
   input:checked~.switch-off,
-  .switch-active .switch-off,
+  &.switch-active > .switch-off,
   input:indeterminate~.switch-off {
     @apply
     opacity-0
@@ -62,7 +60,7 @@
   }
   
   input:checked~.switch-on, 
-  .switch-active .switch-on, 
+  &.switch-active > .switch-on, 
   input:indeterminate~.switch-indeterminate {
     @apply
     opacity-100
@@ -79,7 +77,7 @@
     }
     
     input:checked~.switch-off,
-    .switch-active .switch-off,
+    &.switch-active > .switch-off,
     input:indeterminate~.switch-off {
       @apply
       rotate-45
@@ -87,10 +85,40 @@
     }
     
     input:checked~.switch-on, 
-    .switch-active .switch-on, 
+    &.switch-active > .switch-on, 
     input:indeterminate~.switch-indeterminate {
       @apply
       rotate-0
+      ;
+    }
+  }
+
+  &.switch-slot {
+    @apply
+    overflow-hidden
+    ;
+
+    .switch-on,
+    .switch-indeterminate, 
+    input:indeterminate~.switch-on {
+      @apply
+      translate-y-10
+      ;
+    }
+    
+    input:checked~.switch-off,
+    &.switch-active > .switch-off,
+    input:indeterminate~.switch-off {
+      @apply
+      -translate-y-10
+      ;
+    }
+    
+    input:checked~.switch-on, 
+    &.switch-active > .switch-on, 
+    input:indeterminate~.switch-indeterminate {
+      @apply
+      translate-y-0
       ;
     }
   }

@@ -76,6 +76,10 @@
         {
           "tags": "brand,gloot,stryda,mission,category,rarity,common,rare,epic,legendary",
           "name": "category-4"
+        },
+        {
+          "tags": "trophy,laurel,wreath,competition,podium,winner,achievement",
+          "name": "laurel"
         }
       ]
     },
@@ -794,6 +798,10 @@
           "name": "heart"
         },
         {
+          "tags": "day,award,favorite,favourite,healthcare,health,medical,love,romantic,like,heart,valentine,wishlist,dating,relationship,romance,outline",
+          "name": "heart-outline"
+        },
+        {
           "tags": "watch,view,search,visibility,eye,preview,look,observe,overview,see,sight,visible,vision",
           "name": "view"
         },
@@ -1084,6 +1092,10 @@
         {
           "tags": "day,award,favorite,favourite,love,romantic,like,heart,valentine,wishlist,dating,relationship,romance",
           "name": "favorite"
+        },
+        {
+          "tags": "day,award,favorite,favourite,love,romantic,like,heart,valentine,wishlist,dating,relationship,romance,outline",
+          "name": "favorite-outline"
         },
         {
           "tags": "business,finance,payment,money,hand,handout,holding,loan",

@@ -125,8 +125,7 @@ export default function ClanDetails() {
         {selectedClan && (
           <>
             {!selectedClan.isYou && <ClanHeader />}
-
-            <nav className="flex justify-center pt-6">
+            <nav className="flex justify-center">
               <ul className="tabs tabs-tertiary">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>
@@ -161,7 +160,7 @@ export default function ClanDetails() {
                     {!selectedClan.isYou && !item.isYou && (
                       <li key={item}>
                         <Link
-                          href={`/prototype/clans/${clan_id}?tab=${
+                          href={`/stryda/clans/${clan_id}?tab=${
                             item.url
                           }${prototype.getURLparams("&")}`}
                         >

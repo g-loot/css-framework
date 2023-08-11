@@ -381,8 +381,8 @@ export const dataUsers = [
     clan: 2,
     bio: "Do not disturb, I am Gaming.",
     socials: {
-      riotValorantNickname: "shikariGr",
-      riotValorantHashtag: 8573,
+      riotValorantNickname: "shikari",
+      riotValorantHashtag: 1901,
       discord: "@shikari",
       twitch: "@shikari",
     },

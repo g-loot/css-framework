@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'icons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1682596030/Stryda/icons/icons.woff') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1682596030/Stryda/icons/icons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1691745114/Stryda/icons/v104/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1691745114/Stryda/icons/v104/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -2216,7 +2216,7 @@
 }
 
 .icon-category-4::before {
-  content: "\ec25";
+  content: "\ec2c";
 }
 
 .icon-ctrl-double-right::before {
@@ -2227,4 +2227,14 @@
   content: "\ec2a";
 }
 
+.icon-laurel::before {
+  content: "\ec2d";
+}
 
+.icon-favorite-outline::before {
+  content: "\ec24";
+}
+
+.icon-heart-outline::before {
+  content: "\ec25";
+}

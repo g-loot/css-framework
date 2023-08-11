@@ -866,13 +866,35 @@
       @apply
       bg-ui-700
       p-2
+      space-y-1
       ;
+    }
+    .card-meta {
+      @apply
+      pb-0
+      ;
+      > div,
+      > div > .button {
+        @apply
+        w-full
+        ;
+      }
     }
     &:not(.is-highlighted) {
       .card-bg {
         @apply
-        hidden
+        aspect-auto
+        flex-none
+        absolute
+        z-20
+        pointer-events-none
         ;
+        &::before,
+        > span {
+          @apply
+          hidden
+          ;
+        }
       }
     }
     .card-title {
@@ -885,8 +907,8 @@
     .card-category {
       @apply
       absolute
-      top-3.5
-      left-2
+      top-2.5
+      left-10
       ;
       .rarity {
         > *:not(.icon) {
@@ -897,7 +919,7 @@
       }
       + .card-title {
         @apply
-        pl-7
+        pl-14
         ;
       }
     }

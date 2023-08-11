@@ -15,6 +15,7 @@ import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 import Feed from "../components/Feed";
 import CardMission from "../components/CardMission";
 import CardLadder from "../components/CardLadder";
+import ModalBuyTokens from "../wallet/modal-buytokens";
 
 export default function Home() {
   const router = useRouter();
@@ -27,19 +28,23 @@ export default function Home() {
     uiContext.openModal(<ModalGiftTokens selectedUser={selectedUser} />);
   }
 
+  function openModalBuyTokens() {
+    uiContext.openModal(<ModalBuyTokens />);
+  }
+
   return (
     <>
       <Structure title="Home">
         <Loader
           loader={
-            <section className="min-h-full container flex flex-col lg:flex-row gap-4 py-4">
+            <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
               <div className="w-80 2xl:w-96 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="w-80 2xl:w-96 hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
-          <section className="min-h-full container flex flex-col lg:flex-row gap-4 py-4">
+          <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
             <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
               <WidgetUser />
               <div className="surface rounded">
@@ -174,7 +179,7 @@ export default function Home() {
                 style={{ top: "calc(48px + 1rem)" }}
               >
                 <div
-                  className="surface rounded p-4 text-center"
+                  className="surface rounded px-4 py-6 text-center"
                 >
                   <PremiumLogo
                     src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
@@ -182,7 +187,7 @@ export default function Home() {
                     height="auto"
                     className="mx-auto"
                   />
-                  <p className="w-3/4 text-sm text-ui-300 mx-auto mt-3 mb-4">
+                  <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
                     Increase your amount of XP you can earn each day with a{" "}
                     <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                       <a className="link text-premium-500">
@@ -193,7 +198,7 @@ export default function Home() {
                   </p>
                   <div className="mx-auto mt-2">
                     <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                      <a className="button button-sm button-premium is-shining">
+                      <a className="button button-premium is-shining">
                         <span>Get Premium</span>
                       </a>
                     </Link>
@@ -246,7 +251,7 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className="max-h-96 p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
+                <div className="max-h-[600px] p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
                   <ul className="space-y-2">
                     {prototype.games.filter((i) => i.isFavorite).map((game, gameIndex) => (
                       <Fragment key={gameIndex}>
@@ -266,6 +271,23 @@ export default function Home() {
                       </Fragment>
                     ))}
                   </ul>
+                </div>
+              </div>
+              <div
+                className="sticky space-y-4"
+                style={{ top: "calc(48px + 1rem)" }}
+              >
+                <div className="surface surface-dimmed rounded text-center flex flex-col items-center px-4 pb-4">
+                  <img src="https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-10.png" alt="" className="h-36 w-auto -mt-8 -mb-4 drop-shadow-xl" />
+                    <h5>Need tokens?</h5>
+                    <p className="text-ui-300 mt-2 mb-3">Buy more tokens to compete in Ladders.</p>
+                    <button
+                      onClick={openModalBuyTokens}
+                      type="button"
+                      className="button button-primary px-4"
+                    >
+                      <span>Get tokens</span>
+                    </button>
                 </div>
               </div>
             </div>
