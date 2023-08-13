@@ -128,14 +128,7 @@ const rewardDistribClan = [
 export default function TabLaddersRewards() {
   const router = useRouter();
   const { query } = useRouter();
-  const hasAds = query.ads === "true" ? true : false;
-  const noShowdown = query.noshowdown === "true" ? true : false;
   const noClan = query.noclan === "true" ? true : false;
-  const { tab } = router.query;
-  const { game_slug } = router.query;
-  const { ladder_id } = router.query;
-  const prototype = usePrototypeData();
-
   function numberWithSpaces(x) {
     var parts = x.toString().split(".");
     parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, " ");

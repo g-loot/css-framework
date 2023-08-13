@@ -471,7 +471,7 @@ export default function TabLaddersSoloLeaderboards() {
                         <ResetsIn
                           label=" "
                           status={
-                            prototype.getLadderByID(game, ladder_id)?.status ===
+                            prototype.getLadderByID(game_slug, ladder_id)?.status ===
                             "upcoming"
                               ? 2
                               : 1
