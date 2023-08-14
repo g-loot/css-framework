@@ -16,6 +16,7 @@ import Feed from "../components/Feed";
 import CardMission from "../components/CardMission";
 import CardLadder from "../components/CardLadder";
 import ModalBuyTokens from "../wallet/modal-buytokens";
+import Battlepass from "../../../components/BattlePass/BattlePass";
 
 export default function Home() {
   const router = useRouter();
@@ -178,9 +179,7 @@ export default function Home() {
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
-                <div
-                  className="surface rounded px-4 py-6 text-center"
-                >
+                <div className="surface rounded px-4 py-6 text-center">
                   <PremiumLogo
                     src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
                     width="180"
@@ -215,6 +214,19 @@ export default function Home() {
             <div className="w-80 2xl:w-96 space-y-4 hidden xl:block">
               <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                  <h2 className="h6 text-ui-100">Battle pass</h2>
+                  <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
+                    <a className="link link-hover text-ui-300 text-sm leading-none">
+                      View all
+                    </a>
+                  </Link>
+                </div>
+                <div className="px-4 pb-4">
+                  <Battlepass id={1} size="battlepass-md" />
+                </div>
+              </div>
+              <div className="surface rounded">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">Missions</h2>
                   <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                     <a className="link link-hover text-ui-300 text-sm leading-none">
@@ -224,21 +236,23 @@ export default function Home() {
                 </div>
                 <div className="max-h-96 p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
                   <ul className="space-y-2">
-                    {prototype.games.filter((i) => i.isFavorite).map((game, gameIndex) => (
-                      <Fragment key={gameIndex}>
-                        {game.missions
-                          ?.filter((i) => i.isVisible)
-                          .map((mission, missionIndex) => (
-                            <CardMission
-                              key={missionIndex}
-                              size="card-sm"
-                              mission={mission}
-                              index={missionIndex}
-                              gameSlug={game.slug}
-                            />
-                          ))}
-                      </Fragment>
-                    ))}
+                    {prototype.games
+                      .filter((i) => i.isFavorite)
+                      .map((game, gameIndex) => (
+                        <Fragment key={gameIndex}>
+                          {game.missions
+                            ?.filter((i) => i.isVisible)
+                            .map((mission, missionIndex) => (
+                              <CardMission
+                                key={missionIndex}
+                                size="card-sm"
+                                mission={mission}
+                                index={missionIndex}
+                                gameSlug={game.slug}
+                              />
+                            ))}
+                        </Fragment>
+                      ))}
                   </ul>
                 </div>
               </div>
@@ -253,23 +267,27 @@ export default function Home() {
                 </div>
                 <div className="max-h-[600px] p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
                   <ul className="space-y-2">
-                    {prototype.games.filter((i) => i.isFavorite).map((game, gameIndex) => (
-                      <Fragment key={gameIndex}>
-                        {game.ladders
-                          ?.filter((i) => i.status === "ongoing" && i.isEnrolled)
-                          .map((ladder, ladderIndex) => (
-                            <CardLadder
-                              key={ladderIndex}
-                              size="card-sm"
-                              ladder={ladder}
-                              isHorizontal={false}
-                              isGlobal={false}
-                              isFluid={true}
-                              gameID={game.id}
-                            />
-                          ))}
-                      </Fragment>
-                    ))}
+                    {prototype.games
+                      .filter((i) => i.isFavorite)
+                      .map((game, gameIndex) => (
+                        <Fragment key={gameIndex}>
+                          {game.ladders
+                            ?.filter(
+                              (i) => i.status === "ongoing" && i.isEnrolled
+                            )
+                            .map((ladder, ladderIndex) => (
+                              <CardLadder
+                                key={ladderIndex}
+                                size="card-sm"
+                                ladder={ladder}
+                                isHorizontal={false}
+                                isGlobal={false}
+                                isFluid={true}
+                                gameID={game.id}
+                              />
+                            ))}
+                        </Fragment>
+                      ))}
                   </ul>
                 </div>
               </div>
@@ -278,16 +296,22 @@ export default function Home() {
                 style={{ top: "calc(48px + 1rem)" }}
               >
                 <div className="surface surface-dimmed rounded text-center flex flex-col items-center px-4 pb-4">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-10.png" alt="" className="h-36 w-auto -mt-8 -mb-4 drop-shadow-xl" />
-                    <h5>Need tokens?</h5>
-                    <p className="text-ui-300 mt-2 mb-3">Buy more tokens to compete in Ladders.</p>
-                    <button
-                      onClick={openModalBuyTokens}
-                      type="button"
-                      className="button button-primary px-4"
-                    >
-                      <span>Get tokens</span>
-                    </button>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-10.png"
+                    alt=""
+                    className="h-36 w-auto -mt-8 -mb-4 drop-shadow-xl"
+                  />
+                  <h5>Need tokens?</h5>
+                  <p className="text-ui-300 mt-2 mb-3">
+                    Buy more tokens to compete in Ladders.
+                  </p>
+                  <button
+                    onClick={openModalBuyTokens}
+                    type="button"
+                    className="button button-primary px-4"
+                  >
+                    <span>Get tokens</span>
+                  </button>
                 </div>
               </div>
             </div>

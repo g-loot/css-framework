@@ -4,7 +4,6 @@ import React, {
   useState,
   useRef,
   useCallback,
-  Fragment,
 } from "react";
 
 import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
@@ -22,26 +21,26 @@ import PremiumLogo from "../PremiumLogo/PremiumLogo";
 import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/modal-battlepass-completed-premium";
 
 export default function Battlepass(props) {
-  const { query } = useRouter();
   const prototype = usePrototypeData();
+  const uiContext = useContext(UiContext);
   const isPremium = prototype.isPremium;
   const size = props.size || "battlepass-lg";
   const isfinished = props.isFinished || false;
-  const hasSummary = props.hasSummary || false;
   const hasPremium = props.hasPremium || false;
-  const selectedBattlepass = props.id || 0;
+  const selectedBattlepassID = props.id || 0;
+  const [selectedBattlepass, setSelectedBattlepass] = useState(null);
   const [currentStep, setCurrentStep] = useState(1);
   const [activeStep, setActiveStep] = useState(1);
   const [originStep, setOriginStep] = useState(0);
   const [maxSteps, setmaxSteps] = useState(9);
   const [loading, setLoading] = useState(true);
   const [isFinished, setIsFinished] = useState(false);
-  const uiContext = useContext(UiContext);
   const [explosion1, setExplosion1] = useState(false);
   const [explosion2, setExplosion2] = useState(false);
   const [explosion3, setExplosion3] = useState(false);
   const [explosion4, setExplosion4] = useState(false);
   const [explosion5, setExplosion5] = useState(false);
+  const componentRef = useRef();
 
   useEffect(() => {
     const delay = 100;
@@ -64,10 +63,14 @@ export default function Battlepass(props) {
   }, []);
 
   useEffect(() => {
+    setSelectedBattlepass(getBattlepassByID(selectedBattlepassID));
+  }, [selectedBattlepass]);
+
+  useEffect(() => {
     if (isfinished) {
       setIsFinished(true);
     } else {
-      if (getBattlepassByID(selectedBattlepass).isFinished) {
+      if (getBattlepassByID(selectedBattlepassID).isFinished) {
         setIsFinished(true);
       } else {
         setIsFinished(false);
@@ -75,25 +78,17 @@ export default function Battlepass(props) {
     }
   }, [isfinished]);
 
-  useEffect(() => {
-    if (loading) {
-      setTimeout(() => {
-        setLoading(false);
-      }, 500);
-    }
-  }, [loading]);
-
-  const componentRef = useRef();
 
   const handleResize = useCallback(() => {
     setTimeout(() => {
       const divWidthResized = componentRef?.current?.offsetWidth;
       const maxStepsToDisplay = Math.floor(divWidthResized / 144);
       setmaxSteps(maxStepsToDisplay);
-    }, 100);
+    }, 500);
   }, [componentRef]);
 
   useEffect(() => {
+    handleResize();
     window.addEventListener("load", handleResize);
     window.addEventListener("resize", handleResize);
     return () => {
@@ -103,14 +98,24 @@ export default function Battlepass(props) {
   }, [componentRef, handleResize]);
 
   useEffect(() => {
-    setCurrentStep(getBattlepassByID(selectedBattlepass).currentStep);
-    setActiveStep(getBattlepassByID(selectedBattlepass).currentStep);
-    if (getBattlepassByID(selectedBattlepass).currentStep > maxSteps) {
-      setOriginStep(getBattlepassByID(selectedBattlepass).currentStep - 1);
-    } else {
-      setOriginStep(0);
+    if(selectedBattlepass) {
+      setCurrentStep(selectedBattlepass.currentStep);
+      setActiveStep(selectedBattlepass.currentStep);
+      if (selectedBattlepass.currentStep > maxSteps) {
+        setOriginStep(selectedBattlepass.currentStep - 1);
+      } else {
+        setOriginStep(0);
+      }
     }
-  }, [selectedBattlepass]);
+  }, [selectedBattlepass, maxSteps]);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 500);
+    }
+  }, [loading]);
 
   const getBattlepassByID = (id) => {
     return DataBattlepass.find((battlepasses) => {
@@ -119,7 +124,7 @@ export default function Battlepass(props) {
   };
 
   const getBattlepassStepByID = (id) => {
-    return getBattlepassByID(selectedBattlepass).steps.find((step) => {
+    return getBattlepassByID(selectedBattlepassID).steps.find((step) => {
       return step.id === parseInt(id);
     });
   };
@@ -131,13 +136,13 @@ export default function Battlepass(props) {
   };
 
   const getBattlepassBonusSteps = () => {
-    return getBattlepassByID(selectedBattlepass).steps.filter((step) => {
+    return getBattlepassByID(selectedBattlepassID).steps.filter((step) => {
       return step.isBonus === true;
     });
   };
 
   const getBattlepassPremiumSteps = () => {
-    return getBattlepassByID(selectedBattlepass).steps.filter((step) => {
+    return getBattlepassByID(selectedBattlepassID).steps.filter((step) => {
       return step.isPremium === true;
     });
   };
@@ -146,7 +151,7 @@ export default function Battlepass(props) {
     if (item.id < currentStep) {
       return 100;
     } else if (item.id === currentStep) {
-      return getBattlepassByID(selectedBattlepass).currentProgress;
+      return getBattlepassByID(selectedBattlepassID).currentProgress;
     } else {
       return 0;
     }
@@ -158,7 +163,7 @@ export default function Battlepass(props) {
     handlePrevBatch();
   }
 
-  function contentClick(step) {
+  function handleClick(step) {
     if (size === "battlepass-md" && step.id < currentStep && !step.hasClaimed) {
       if (step.isPremium && !isPremium) {
         window.location.href = `/prototype/premium`;
@@ -225,7 +230,7 @@ export default function Battlepass(props) {
     const previousTarget = 300 + 100 * (currentValue - 1);
     const currentMinusPrevious = Math.round(currentTarget - previousTarget);
     const currentProgress =
-      getBattlepassByID(selectedBattlepass).currentProgress;
+      getBattlepassByID(selectedBattlepassID).currentProgress;
     const percent = Math.round((currentProgress * currentMinusPrevious) / 100);
     return Math.round(previousTarget + percent);
   }
@@ -237,6 +242,7 @@ export default function Battlepass(props) {
 
   return (
     <>
+    {selectedBattlepass && (
       <div
         className={`battlepass-container ${loading ? "is-loading" : ""} ${
           size === "battlepass-md" ? "battlepass-md" : ""
@@ -678,7 +684,7 @@ export default function Battlepass(props) {
                           }`}
                         >
                           {calculPercent(
-                            getBattlepassByID(selectedBattlepass).currentStep
+                            getBattlepassByID(selectedBattlepassID).currentStep
                           )}
                         </span>{" "}
                         <span>
@@ -756,7 +762,7 @@ export default function Battlepass(props) {
                       <a className="text-premium-500 flex items-center gap-2 whitespace-nowrap rounded-full leading-none p-2 bg-ui-850/90">
                         <span className="icon icon-crown text-lg" />
                         <span className="link text-sm">
-                          {getBattlepassByID(selectedBattlepass).currentStep >
+                          {getBattlepassByID(selectedBattlepassID).currentStep >
                           1 ? (
                             <>Get Premium to claim 1 locked tier</>
                           ) : (
@@ -770,7 +776,7 @@ export default function Battlepass(props) {
               </div>
             </div>
             <ul className="battlepass">
-              {getBattlepassByID(selectedBattlepass)
+              {getBattlepassByID(selectedBattlepassID)
                 .steps.slice(originStep, originStep + maxSteps)
                 .map((item, itemIndex) => (
                   <li
@@ -783,7 +789,7 @@ export default function Battlepass(props) {
                       activeStep === item.id ? `is-active` : ""
                     }
                         ${
-                          getBattlepassByID(selectedBattlepass).currentStep ===
+                          getBattlepassByID(selectedBattlepassID).currentStep ===
                           item.id
                             ? `is-current`
                             : ""
@@ -793,7 +799,7 @@ export default function Battlepass(props) {
                     <div
                       className="battlepass-info"
                       data-tooltip={`${calculPercent(
-                        getBattlepassByID(selectedBattlepass).currentStep
+                        getBattlepassByID(selectedBattlepassID).currentStep
                       )} / ${300 + 100 * item.id} XP`}
                     >
                       <div
@@ -811,7 +817,7 @@ export default function Battlepass(props) {
                           ? getBattlepassRewardByID(item.reward).name
                           : ""
                       }
-                      onClick={contentClick.bind(this, item)}
+                      onClick={handleClick.bind(this, item)}
                     >
                       <div className="battlepass-decoration">
                         <span>{item.name}</span>
@@ -819,7 +825,7 @@ export default function Battlepass(props) {
                       <div className="battlepass-body">
                         {!item.hasClaimed &&
                           item.id <
-                            getBattlepassByID(selectedBattlepass)
+                            getBattlepassByID(selectedBattlepassID)
                               .currentStep && (
                             <>
                               {item.isPremium ? (
@@ -895,7 +901,7 @@ export default function Battlepass(props) {
                 <span>
                   {activeStep} /{" "}
                   {
-                    getBattlepassByID(selectedBattlepass).steps.filter(
+                    getBattlepassByID(selectedBattlepassID).steps.filter(
                       (value) => {
                         return value.isBonus !== true;
                       }
@@ -908,7 +914,7 @@ export default function Battlepass(props) {
                   onClick={() => handleNext()}
                   disabled={
                     activeStep ===
-                    getBattlepassByID(selectedBattlepass).steps.length
+                    getBattlepassByID(selectedBattlepassID).steps.length
                   }
                 >
                   <span className="icon icon-ctrl-right" />
@@ -920,7 +926,7 @@ export default function Battlepass(props) {
                 onClick={() => handleForward()}
                 disabled={
                   activeStep + maxSteps >
-                  getBattlepassByID(selectedBattlepass).steps.length
+                  getBattlepassByID(selectedBattlepassID).steps.length
                 }
               >
                 <span className="icon icon-ctrl-double-right" />
@@ -929,6 +935,7 @@ export default function Battlepass(props) {
           </>
         )}
       </div>
+    )}
     </>
   );
 }

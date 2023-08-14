@@ -15,16 +15,18 @@ const ButtonSignUp = (props) => {
       }`}
     >
       <span
-        className={`block ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12`}
+        className={`flex items-center justify-center gap-2 ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12`}
       >
-        Sign up
+        <span>Download to join</span>
+        <span className="icon text-xl icon-windows-symbol" />
       </span>
       <span
-        className={`ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex items-center justify-center transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0 ${
+        className={`ease-[cubic-bezier(1,0,.2,1)] duration-[.4s] group-hover:duration-300 absolute inset-0 flex items-center justify-center gap-2 transition-all -skew-x-12 -translate-x-[calc(100%+1rem)] group-hover:translate-x-0 group-hover:skew-x-0 ${
           props.isInverted ? "bg-ui-100 text-ui-900" : "bg-ui-900 text-ui-100"
         }`}
       >
-        <span>Sign up</span>
+        <span>Download to join</span>
+        <span className="icon text-xl icon-windows-symbol" />
       </span>
     </button>
   );
@@ -53,17 +55,16 @@ const PrototypePage = () => {
     inViewport("[class*=animate-]");
   }, []);
 
-
-const handleScroll = () => {
-  console.log("qsdqsdqsd SCROOOL");
-};
-
-useEffect(() => {
-  window.addEventListener('scroll', handleScroll);
-  return () => {
-    window.removeEventListener('scroll', handleScroll);
+  const handleScroll = () => {
+    console.log("qsdqsdqsd SCROOOL");
   };
-}, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>
@@ -223,6 +224,18 @@ useEffect(() => {
                 />
               </div>
             </div>
+            <div
+              className="animate-slide-in-bottom animate-paused animate-delay my-4 text-center"
+              style={{
+                "--delay": "calc(17 * 0.05s)",
+              }}
+            >
+              <Link href="/prototype/auth/login">
+                <a className="text-sm text-ui-100 link">
+                  Already a member? Log in
+                </a>
+              </Link>
+            </div>
           </div>
           <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
             <img
@@ -381,6 +394,18 @@ useEffect(() => {
               >
                 <ButtonSignUp />
               </div>
+              <div
+                className="animate-slide-in-bottom animate-paused animate-delay mt-4 text-center"
+                style={{
+                  "--delay": "calc(7 * 0.05s)",
+                }}
+              >
+                <Link href="/prototype/auth/login">
+                  <a className="text-sm text-ui-900 opacity-75 link">
+                    Already a member? Log in
+                  </a>
+                </Link>
+              </div>
             </div>
             <div
               className="flex-1 hidden lg:block animate-slide-in-right animate-paused animate-delay"
@@ -396,7 +421,7 @@ useEffect(() => {
             </div>
           </div>
         </section>
-       
+
         <section className="relative z-0 bg-ui-900 text-center lg:text-left">
           <div className="relative z-10 container px-6 flex flex-col lg:flex-row gap-8 items-center justify-center py-24">
             <div className="flex-3 lg:order-2">
@@ -483,6 +508,18 @@ useEffect(() => {
               >
                 <ButtonSignUp isInverted={true} />
               </div>
+              <div
+                className="animate-slide-in-bottom animate-paused animate-delay mt-4"
+                style={{
+                  "--delay": "calc(7 * 0.05s)",
+                }}
+              >
+                <Link href="/prototype/auth/login">
+                  <a className="text-sm text-ui-100 opacity-75 link">
+                    Already a member? Log in
+                  </a>
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -552,6 +589,18 @@ useEffect(() => {
                 }}
               >
                 <ButtonSignUp isInverted={true} />
+              </div>
+              <div
+                className="animate-slide-in-bottom animate-paused animate-delay mt-4"
+                style={{
+                  "--delay": "calc(7 * 0.05s)",
+                }}
+              >
+                <Link href="/prototype/auth/login">
+                  <a className="text-sm text-ui-100 opacity-75 link">
+                    Already a member? Log in
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -637,6 +686,18 @@ useEffect(() => {
             >
               <ButtonSignUp isInverted={true} />
             </div>
+            <div
+              className="animate-slide-in-bottom animate-paused animate-delay mt-4"
+              style={{
+                "--delay": "calc(8 * 0.05s)",
+              }}
+            >
+              <Link href="/prototype/auth/login">
+                <a className="text-sm text-ui-100 opacity-75 link">
+                  Already a member? Log in
+                </a>
+              </Link>
+            </div>
           </div>
           <i className="absolute z-10 h-36 inset-x-0 top-0 bg-gradient-to-t from-ui-900/0 via-ui-900/40 to-ui-900" />
           <i className="absolute z-10 h-36 inset-x-0 bottom-0 bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
@@ -705,6 +766,18 @@ useEffect(() => {
                 }}
               >
                 <ButtonSignUp />
+              </div>
+              <div
+                className="animate-slide-in-bottom animate-paused animate-delay mt-4 text-center"
+                style={{
+                  "--delay": "calc(7 * 0.05s)",
+                }}
+              >
+                <Link href="/prototype/auth/login">
+                  <a className="text-sm text-ui-900 opacity-75 link">
+                    Already a member? Log in
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

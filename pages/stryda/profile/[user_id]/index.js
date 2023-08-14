@@ -9,14 +9,16 @@ import { useRouter } from "next/router";
 import { UiContext } from "../../../../contexts/ui";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
-import ProfileHeader from "./header";
+import ModalRemoveFriend from "./modal-remove-friend";
 import TabProfileOverview from "./tab-overview";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
 import TabProfileFriends from "./tab-friends";
 import Loader from "../../components/Loader";
-
+import WidgetUser from "../../components/WidgetUser";
+import WidgetUserLeftPanel from "../../components/WidgetUserLeftPanel";
+import Avatar from "../../../../components/Avatar/Avatar";
 
 const achievementsList = [
   {
@@ -118,8 +120,8 @@ export default function Profile() {
   const [achievementLength, setAchievementLength] = useState(0);
 
   useEffect(() => {
-    if(selectedUser) {
-      setAchievementLength(selectedUser.achievements?.badges?.length)
+    if (selectedUser) {
+      setAchievementLength(selectedUser.achievements?.badges?.length);
     }
   }, [selectedUser]);
 
@@ -136,39 +138,40 @@ export default function Profile() {
   }, [modalAchievement]);
 
   function openModalAchievementReceived(item) {
-    uiContext.openModal(
-      <ModalAchievementReceived item={item} />
-    );
+    uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
 
+  function openModalRemoveFriends(id) {
+    uiContext.openModal(<ModalRemoveFriend id={id} />);
+  }
 
-const TabsItems = [
-  {
-    label: "Overview",
-    url: "overview",
-    component: TabProfileOverview,
-  },
-  {
-    label: "Activity",
-    url: "activity",
-    component: TabProfileActivity,
-  },
-  {
-    label: `Achievements (${achievementLength})`,
-    url: "achievements",
-    component: TabProfileAchievements,
-  },
-  {
-    label: "Stats",
-    url: "stats",
-    component: TabProfileStats,
-  },
-  {
-    label: "Followers (3)",
-    url: "followers",
-    component: TabProfileFriends,
-  },
-];
+  const TabsItems = [
+    {
+      label: "Overview",
+      url: "overview",
+      component: TabProfileOverview,
+    },
+    {
+      label: "Activity",
+      url: "activity",
+      component: TabProfileActivity,
+    },
+    {
+      label: `Achievements (${achievementLength})`,
+      url: "achievements",
+      component: TabProfileAchievements,
+    },
+    {
+      label: "Stats",
+      url: "stats",
+      component: TabProfileStats,
+    },
+    {
+      label: "Followers (3)",
+      url: "followers",
+      component: TabProfileFriends,
+    },
+  ];
 
   useEffect(() => {
     if (modalLeveLUp) {
@@ -191,57 +194,216 @@ const TabsItems = [
 
         <Loader
           loader={
-              <section className="min-h-full container mx-4 sm:mx-0 mt-8">
-                <div className="surface is-loading rounded aspect-banner w-full" />
-                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mt-4">
-                  <div className="surface is-loading rounded aspect-story w-full" />
-                  <div className="surface is-loading rounded aspect-story w-full" />
-                  <div className="surface is-loading rounded aspect-story w-full" />
-                </div>
-              </section>
+            <section className="min-h-full container mx-4 sm:mx-0 mt-8">
+              <div className="surface is-loading rounded aspect-banner w-full" />
+              <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mt-4">
+                <div className="surface is-loading rounded aspect-story w-full" />
+                <div className="surface is-loading rounded aspect-story w-full" />
+                <div className="surface is-loading rounded aspect-story w-full" />
+              </div>
+            </section>
           }
         >
-        {selectedUser && (
-          <>
-
-            <ProfileHeader />
-
-            <nav className="mt-4 flex justify-center">
-              <ul className="tabs tabs-tertiary">
-                {TabsItems.map((item, itemIndex) => (
-                  <li key={item}>
-                    <Link
-                      href={`/stryda/profile/${user_id}?tab=${
-                        item.url
-                      }${hasProfileBanner ? profileBanner : ''}${prototype.getURLparams("&")}`}
-                    >
-                      <button type="button"
-                        className={`${
-                          selectedTab === item.url ? "is-active" : ""
-                        }`}
+          {selectedUser && (
+            <>
+              <div className="relative z-0">
+                <div className="aspect-banner md:-mx-4 relative z-10">
+                  {selectedUser.shopItems?.profileBanner ? (
+                    <>
+                      <img
+                        src={
+                          prototype.getShopitemByID(
+                            2,
+                            selectedUser.shopItems?.profileBanner
+                          ).image
+                        }
+                        alt=""
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                        alt=""
+                        className="w-full h-full object-cover object-center"
+                      />
+                    </>
+                  )}
+                </div>
+                <div className="absolute z-0 inset-y-0 w-screen left-1/2 right-1/2 -mx-[50vw] overflow-hidden">
+                  {selectedUser.shopItems?.profileBanner ? (
+                    <>
+                      <img
+                        src={
+                          prototype.getShopitemByID(
+                            2,
+                            selectedUser.shopItems?.profileBanner
+                          ).image
+                        }
+                        alt=""
+                        className="absolute w-full h-full scale-125 object-cover object-center blur opacity-50"
+                      />
+                    </>
+                  ) : (
+                    <>
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                        alt=""
+                        className="absolute w-full h-full scale-125 object-cover object-center blur opacity-50"
+                      />
+                    </>
+                  )}
+                </div>
+              </div>
+              <div className="-mt-8 md:hidden px-4">
+                <div className="flex items-center justify-center">
+                  {selectedUser.isYou ? (
+                    <div className="relative">
+                      <Avatar
+                        size="avatar-lg"
+                        id={selectedUser.id}
+                        hasTooltip={true}
+                        hasTooltipXP={true}
+                        tooltipPlacement={"bottom"}
+                      />
+                      <button
+                        onClick={openModalAvatarEdit}
+                        type="button"
+                        className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
                       >
-                        <span>{item.label}</span>
+                        <span className="icon icon-pen-2" />
                       </button>
+                    </div>
+                  ) : (
+                    <Avatar size="avatar-lg" id={selectedUser.id} />
+                  )}
+                </div>
+                <div className="flex items-baseline justify-center gap-1 my-4">
+                  <h1
+                    className={`text-5xl leading-none -mb-2 ${
+                      selectedUser.isPremium ? "text-premium-500" : ""
+                    }`}
+                  >
+                    {selectedUser.clan && (
+                      <>
+                        {" "}
+                        &#91;
+                        {prototype.getClanByID(selectedUser.clan)?.tag}
+                        &#93;
+                      </>
+                    )}{" "}
+                    {selectedUser.nickname}
+                  </h1>
+                  <img
+                    src={`https://flagcdn.com/${selectedUser.countryFlag}.svg`}
+                    className="aspect-video rounded-sm max-w-[1.5rem]"
+                  />
+                </div>
+                <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
+              <li>
+                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                  <button type="button" className="interactive px-2">
+                    <div className="text-lg text-ui-100">165</div>
+                    <div className="text-sm text-ui-300">followers</div>
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                  <button type="button" className="interactive px-2">
+                    <div className="text-lg text-ui-100">165</div>
+                    <div className="text-sm text-ui-300">following</div>
+                  </button>
+                </Link>
+              </li>
+            </ul>
+                <div className="space-y-2">
+                  {selectedUser.isYou && (
+                    <Link href="settings">
+                      <a
+                        type="button"
+                        className="button button-sm button-secondary w-full"
+                      >
+                        <span className="icon icon-cogwheel" />
+                        <span>Profile settings</span>
+                      </a>
                     </Link>
-                  </li>
-                ))}
-              </ul>
-            </nav>
-
-            <section className="py-4">
-              {TabsItems.map((item, itemIndex) => {
-                if (item.url === selectedTab) {
-                  return React.createElement(item.component, {
-                    key: itemIndex,
-                  });
-                }
-              })}
-            </section>
-          </>
-        )}
-          </Loader>
-
-        
+                  )}
+                  {!selectedUser.isYou && selectedUser.isFriend && (
+                    <a
+                      type="button"
+                      className="button button-sm button-secondary w-full"
+                      onClick={openModalRemoveFriends.bind(
+                        this,
+                        selectedUser.id
+                      )}
+                    >
+                      <span className="icon icon-a-remove" />
+                      <span>Remove as friend</span>
+                    </a>
+                  )}
+                  {!selectedUser.isYou && !selectedUser.isFriend && (
+                    <Link
+                      href={`/prototype/profile/${
+                        selectedUser.id
+                      }?tab=followers${prototype.getURLparams("&")}`}
+                    >
+                      <a
+                        type="button"
+                        className="button button-sm button-primary w-full"
+                      >
+                        <span className="icon icon-add-27" />
+                        <span>Follow</span>
+                      </a>
+                    </Link>
+                  )}
+                </div>
+              </div>
+              <div className="relative z-10 min-h-full container flex flex-col md:flex-row gap-8 py-4">
+                <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
+                  <div className="-mt-28 xl:-mt-44 shadow-[0px_2.6px_2.2px_rgba(var(--color-ui-800)_/_0.07),0px_6.3px_5.3px_rgba(var(--color-ui-800)_/_0.101),0px_11.8px_10px_rgba(var(--color-ui-800)_/_0.125),0px_21px_17.9px_rgba(var(--color-ui-800)_/_0.149),0px_39.3px_33.4px_rgba(var(--color-ui-800)_/_0.18),0px_94px_80px_rgba(var(--color-ui-800)_/_0.25)]">
+                    <WidgetUser id={user_id} />
+                  </div>
+                  <WidgetUserLeftPanel id={user_id} />
+                </div>
+                <div className="flex-1 overflow-hidden">
+                  <nav className="mb-4 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
+                    <ul className="tabs tabs-tertiary">
+                      {TabsItems.map((item, itemIndex) => (
+                        <li key={item}>
+                          <Link
+                            href={`/stryda/profile/${user_id}?tab=${item.url}${
+                              hasProfileBanner ? profileBanner : ""
+                            }${prototype.getURLparams("&")}`}
+                          >
+                            <button
+                              type="button"
+                              className={`${
+                                selectedTab === item.url ? "is-active" : ""
+                              }`}
+                            >
+                              <span>{item.label}</span>
+                            </button>
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </nav>
+                  <div className="space-y-4">
+                    {TabsItems.map((item, itemIndex) => {
+                      if (item.url === selectedTab) {
+                        return React.createElement(item.component, {
+                          key: itemIndex,
+                        });
+                      }
+                    })}
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </Loader>
       </Structure>
     </>
   );

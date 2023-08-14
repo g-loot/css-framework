@@ -165,44 +165,6 @@ export default function ProfileHeader(props) {
                       />
                     </div>
                   </div>
-
-                  {/*
-
-                  <div className="flex items-center justify-start mt-4 gap-2">
-                    <div className="flex gap-1">
-                      {selectedUser.games?.map((game, gameIndex) => (
-                        <GameIcon key={gameIndex} game={game} />
-                      ))}
-                    </div>
-                    <hr className="m-0 separator separator-vertical h-7" />
-                    <div className="flex gap-1">
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link p-1 text-0"
-                      >
-                        <span className="icon icon-20 text-ui-300 icon-twitch" />
-                      </a>
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link p-1 text-0"
-                      >
-                        <span className="icon icon-20 text-ui-300 icon-logo-twitter" />
-                      </a>
-                      <a
-                        href="#"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link p-1 text-0"
-                      >
-                        <span className="icon icon-20 text-ui-300 icon-discord" />
-                      </a>
-                    </div>
-                  </div>
-                      */}
                 </div>
               </div>
             </div>

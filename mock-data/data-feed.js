@@ -319,7 +319,7 @@ export const DataFeedItems = [
       },
     },
     social: {
-      views: [1,2,3,4,5,6,7,8,9,10,11],
+      views: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       likes: {
         hasLiked: false,
         users: [],
@@ -483,13 +483,15 @@ export const DataFeedItems = [
         hasLiked: false,
         users: [],
       },
-      comments: [
-        
-      ],
+      comments: [],
     },
   },
   {
     id: 3,
+    type: "advertising",
+  },
+  {
+    id: 4,
     type: "match",
     author: 5,
     meta: {
@@ -632,7 +634,7 @@ export const DataFeedItems = [
       },
     },
     social: {
-      views: [7,8,9,10,11],
+      views: [7, 8, 9, 10, 11],
       likes: {
         hasLiked: false,
         users: [],
@@ -647,8 +649,9 @@ export const DataFeedItems = [
       ],
     },
   },
+
   {
-    id: 4,
+    id: 5,
     type: "match",
     author: 3,
     meta: {
@@ -791,7 +794,7 @@ export const DataFeedItems = [
       },
     },
     social: {
-      views: [7,8,9,10,11],
+      views: [7, 8, 9, 10, 11],
       likes: {
         hasLiked: false,
         users: [],
@@ -806,5 +809,4 @@ export const DataFeedItems = [
       ],
     },
   },
-  
 ];
