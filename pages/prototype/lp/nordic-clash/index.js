@@ -17,7 +17,7 @@ const ButtonSignUp = (props) => {
       <span
         className={`flex items-center justify-center gap-2 ease-[cubic-bezier(1,0,.2,1)] duration-300 group-hover:duration-[.4s] text-ui-900 group-hover:translate-x-[calc(100%+2rem)] group-hover:-skew-12`}
       >
-        <span>Download to join</span>
+        <span>Download Stryda to join</span>
         <span className="icon text-xl icon-windows-symbol" />
       </span>
       <span
@@ -25,7 +25,7 @@ const ButtonSignUp = (props) => {
           props.isInverted ? "bg-ui-100 text-ui-900" : "bg-ui-900 text-ui-100"
         }`}
       >
-        <span>Download to join</span>
+        <span>Download Stryda to join</span>
         <span className="icon text-xl icon-windows-symbol" />
       </span>
     </button>
@@ -230,11 +230,13 @@ const PrototypePage = () => {
                 "--delay": "calc(17 * 0.05s)",
               }}
             >
-              <Link href="/prototype/auth/login">
-                <a className="text-sm text-ui-100 link">
-                  Already a member? Log in
-                </a>
-              </Link>
+              <p className="text-sm text-ui-100 opacity-75 leading-tight">
+                <span>Already a member of Stryda?</span>
+                <br />
+                <Link href="/prototype/auth/login">
+                  <a className="link">Log in to learn more</a>
+                </Link>
+              </p>
             </div>
           </div>
           <div className="pointer-events-none absolute z-0 inset-0 flex items-center justify-center bg-ui-900/95 overflow-hidden">
@@ -400,11 +402,13 @@ const PrototypePage = () => {
                   "--delay": "calc(7 * 0.05s)",
                 }}
               >
-                <Link href="/prototype/auth/login">
-                  <a className="text-sm text-ui-900 opacity-75 link">
-                    Already a member? Log in
-                  </a>
-                </Link>
+                <p className="text-sm text-ui-900 opacity-75 leading-tight">
+                  <span>Already a member of Stryda?</span>
+                  <br />
+                  <Link href="/prototype/auth/login">
+                    <a className="link">Log in to learn more</a>
+                  </Link>
+                </p>
               </div>
             </div>
             <div
@@ -514,11 +518,13 @@ const PrototypePage = () => {
                   "--delay": "calc(7 * 0.05s)",
                 }}
               >
-                <Link href="/prototype/auth/login">
-                  <a className="text-sm text-ui-100 opacity-75 link">
-                    Already a member? Log in
-                  </a>
-                </Link>
+                <p className="text-sm text-ui-100 opacity-75 leading-tight">
+                  <span>Already a member of Stryda?</span>
+                  <br />
+                  <Link href="/prototype/auth/login">
+                    <a className="link">Log in to learn more</a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
@@ -596,11 +602,13 @@ const PrototypePage = () => {
                   "--delay": "calc(7 * 0.05s)",
                 }}
               >
-                <Link href="/prototype/auth/login">
-                  <a className="text-sm text-ui-100 opacity-75 link">
-                    Already a member? Log in
-                  </a>
-                </Link>
+                <p className="text-sm text-ui-100 opacity-75 leading-tight">
+                  <span>Already a member of Stryda?</span>
+                  <br />
+                  <Link href="/prototype/auth/login">
+                    <a className="link">Log in to learn more</a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>
@@ -692,11 +700,13 @@ const PrototypePage = () => {
                 "--delay": "calc(8 * 0.05s)",
               }}
             >
-              <Link href="/prototype/auth/login">
-                <a className="text-sm text-ui-100 opacity-75 link">
-                  Already a member? Log in
-                </a>
-              </Link>
+              <p className="text-sm text-ui-100 opacity-75 leading-tight">
+                <span>Already a member of Stryda?</span>
+                <br />
+                <Link href="/prototype/auth/login">
+                  <a className="link">Log in to learn more</a>
+                </Link>
+              </p>
             </div>
           </div>
           <i className="absolute z-10 h-36 inset-x-0 top-0 bg-gradient-to-t from-ui-900/0 via-ui-900/40 to-ui-900" />
@@ -773,11 +783,13 @@ const PrototypePage = () => {
                   "--delay": "calc(7 * 0.05s)",
                 }}
               >
-                <Link href="/prototype/auth/login">
-                  <a className="text-sm text-ui-900 opacity-75 link">
-                    Already a member? Log in
-                  </a>
-                </Link>
+                <p className="text-sm text-ui-900 opacity-75 leading-tight">
+                  <span>Already a member of Stryda?</span>
+                  <br />
+                  <Link href="/prototype/auth/login">
+                    <a className="link">Log in to learn more</a>
+                  </Link>
+                </p>
               </div>
             </div>
           </div>

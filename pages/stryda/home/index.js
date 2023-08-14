@@ -17,6 +17,7 @@ import CardMission from "../components/CardMission";
 import CardLadder from "../components/CardLadder";
 import ModalBuyTokens from "../wallet/modal-buytokens";
 import Battlepass from "../../../components/BattlePass/BattlePass";
+import ButtonFeedback from "../../../components/Button/ButtonFeedback";
 
 export default function Home() {
   const router = useRouter();
@@ -38,14 +39,14 @@ export default function Home() {
       <Structure title="Home">
         <Loader
           loader={
-            <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
+            <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-8">
               <div className="w-80 2xl:w-96 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="w-80 2xl:w-96 hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
-          <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
+          <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-8">
             <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
               <WidgetUser />
               <div className="surface rounded">
@@ -161,13 +162,12 @@ export default function Home() {
                             </Link>
                           </div>
                           <div className="item-actions">
-                            <Tooltip tooltip="Add as follower">
-                              <button
-                                type="button"
-                                className="button button-tertiary rounded-full"
-                              >
-                                <span className="icon icon-a-add" />
-                              </button>
+                            <Tooltip placement="left" tooltip="Add as follower">
+                              <ButtonFeedback
+                                variant="button-tertiary rounded-full"
+                                icon="icon-a-add"
+                                message="Player added to your followings"
+                              />
                             </Tooltip>
                           </div>
                         </li>
@@ -221,7 +221,7 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className="px-4 pb-4">
+                <div className="px-4 pb-4 bg-ui-850">
                   <Battlepass id={1} size="battlepass-md" />
                 </div>
               </div>

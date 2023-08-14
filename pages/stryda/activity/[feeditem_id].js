@@ -45,14 +45,14 @@ export default function Home() {
       <Structure title="Activity">
         <Loader
           loader={
-            <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
+            <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-4">
               <div className="w-80 2xl:w-96 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           {selectedFeedItem && (
-            <section className="min-h-full container flex flex-col md:flex-row gap-8 py-4">
+            <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-4">
               <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
                 <div
                   className="sticky space-y-4"

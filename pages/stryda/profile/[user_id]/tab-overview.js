@@ -15,6 +15,7 @@ import GameIcon from "../../../../components/GameIcon/GameIcon";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "./header";
+import Video from "../../components/Video";
 
 export default function TabProfileOverview() {
   const router = useRouter();
@@ -57,6 +58,54 @@ export default function TabProfileOverview() {
     <>
       {selectedUser && (
         <>
+          <section
+            className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+          >
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+              <h2 className="h6 text-ui-100">Highlights</h2>
+              <Link
+                href={`${
+                  selectedUser.id
+                }?tab=highlights${prototype.getURLparams("&")}`}
+              >
+                <a className="link link-hover text-ui-300 text-sm leading-none">
+                  View
+                </a>
+              </Link>
+            </div>
+            <div>
+              {!selectedUser.videos ? (
+                <div className="text-center p-4">
+                  <span className="icon icon-video text-6xl text-ui-500" />
+                  <p className="mt-2 text-ui-300">
+                    {selectedUser.isYou ? (
+                      <>You haven&#39;t any highlights yet</>
+                    ) : (
+                      <>{selectedUser.nickname} hasn&#39;t any highlights yet</>
+                    )}
+                  </p>
+                </div>
+              ) : (
+                <>
+                  <Slider
+                    itemWidth={397 + 16}
+                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                  >
+                    <div className="flex gap-4 px-4">
+                      {selectedUser.videos.map((item, itemIndex) => (
+                        <div
+                          key={itemIndex}
+                          className="w-[75dvw] md:w-96 aspect-video rounded overflow-hidden"
+                        >
+                          <Video item={item} />
+                        </div>
+                      ))}
+                    </div>
+                  </Slider>
+                </>
+              )}
+            </div>
+          </section>
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >

@@ -10,7 +10,9 @@ import { UiContext } from "../../../../contexts/ui";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import ModalRemoveFriend from "./modal-remove-friend";
+import ModalAvatarEdit from "./modal-avataredit";
 import TabProfileOverview from "./tab-overview";
+import TabProfileHighlights from "./tab-highlights";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
@@ -115,6 +117,7 @@ export default function Profile() {
   const selectedTab = tab ? tab : defaultTab;
   const modalAchievement = query.modalachievement === "true" ? true : false;
   const modalLeveLUp = query.modallevelup === "true" ? true : false;
+  const hasAvatarFrame = query.avatarframe || false;
   const hasProfileBanner = query.profilebanner || false;
   const [profileBanner, setProfileBanner] = useState(false);
   const [achievementLength, setAchievementLength] = useState(0);
@@ -145,11 +148,28 @@ export default function Profile() {
     uiContext.openModal(<ModalRemoveFriend id={id} />);
   }
 
+  function openModalAvatarEdit() {
+    if (hasAvatarFrame) {
+      uiContext.openModal(<ModalAvatarEdit id={hasAvatarFrame} />);
+    } else if (selectedUser.shopItems?.avatarFrame) {
+      uiContext.openModal(
+        <ModalAvatarEdit id={selectedUser.shopItems?.avatarFrame} />
+      );
+    } else {
+      uiContext.openModal(<ModalAvatarEdit id={1} />);
+    }
+  }
+
   const TabsItems = [
     {
       label: "Overview",
       url: "overview",
       component: TabProfileOverview,
+    },
+    {
+      label: "Highlights",
+      url: "highlights",
+      component: TabProfileHighlights,
     },
     {
       label: "Activity",
@@ -194,12 +214,11 @@ export default function Profile() {
 
         <Loader
           loader={
-            <section className="min-h-full container mx-4 sm:mx-0 mt-8">
-              <div className="surface is-loading rounded aspect-banner w-full" />
-              <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mt-4">
-                <div className="surface is-loading rounded aspect-story w-full" />
-                <div className="surface is-loading rounded aspect-story w-full" />
-                <div className="surface is-loading rounded aspect-story w-full" />
+            <section className="min-h-screen container flex flex-col mx-4 sm:mx-0 mt-8">
+              <div className="surface is-loading rounded w-full aspect-banner flex-none" />
+              <div className="container flex flex-col md:flex-row items-stretch gap-8 py-8 flex-1">
+                <div className="w-80 2xl:w-96 space-y-4 hidden md:block surface is-loading rounded" />
+                <div className="flex-1 surface is-loading rounded w-full" />
               </div>
             </section>
           }
@@ -207,7 +226,7 @@ export default function Profile() {
           {selectedUser && (
             <>
               <div className="relative z-0">
-                <div className="aspect-banner md:-mx-4 relative z-10">
+                <div className="aspect-banner md:-mx-8 relative z-10 shadow-2xl">
                   {selectedUser.shopItems?.profileBanner ? (
                     <>
                       <img
@@ -224,7 +243,7 @@ export default function Profile() {
                   ) : (
                     <>
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                         alt=""
                         className="w-full h-full object-cover object-center"
                       />
@@ -248,7 +267,7 @@ export default function Profile() {
                   ) : (
                     <>
                       <img
-                        src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                        src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                         alt=""
                         className="absolute w-full h-full scale-125 object-cover object-center blur opacity-50"
                       />
@@ -301,23 +320,23 @@ export default function Profile() {
                   />
                 </div>
                 <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
-              <li>
-                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
-                  <button type="button" className="interactive px-2">
-                    <div className="text-lg text-ui-100">165</div>
-                    <div className="text-sm text-ui-300">followers</div>
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
-                  <button type="button" className="interactive px-2">
-                    <div className="text-lg text-ui-100">165</div>
-                    <div className="text-sm text-ui-300">following</div>
-                  </button>
-                </Link>
-              </li>
-            </ul>
+                  <li>
+                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                      <button type="button" className="interactive px-2">
+                        <div className="text-lg text-ui-100">165</div>
+                        <div className="text-sm text-ui-300">followers</div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                      <button type="button" className="interactive px-2">
+                        <div className="text-lg text-ui-100">165</div>
+                        <div className="text-sm text-ui-300">following</div>
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
                 <div className="space-y-2">
                   {selectedUser.isYou && (
                     <Link href="settings">
@@ -360,15 +379,15 @@ export default function Profile() {
                   )}
                 </div>
               </div>
-              <div className="relative z-10 min-h-full container flex flex-col md:flex-row gap-8 py-4">
+              <div className="relative z-10 min-h-screen container flex flex-col md:flex-row gap-8 py-4">
                 <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
-                  <div className="-mt-28 xl:-mt-44 shadow-[0px_2.6px_2.2px_rgba(var(--color-ui-800)_/_0.07),0px_6.3px_5.3px_rgba(var(--color-ui-800)_/_0.101),0px_11.8px_10px_rgba(var(--color-ui-800)_/_0.125),0px_21px_17.9px_rgba(var(--color-ui-800)_/_0.149),0px_39.3px_33.4px_rgba(var(--color-ui-800)_/_0.18),0px_94px_80px_rgba(var(--color-ui-800)_/_0.25)]">
+                  <div className="-mt-28 xl:-mt-44 shadow-xl">
                     <WidgetUser id={user_id} />
                   </div>
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
                 <div className="flex-1 overflow-hidden">
-                  <nav className="mb-4 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
+                  <nav className="mt-4 pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
                     <ul className="tabs tabs-tertiary">
                       {TabsItems.map((item, itemIndex) => (
                         <li key={item}>

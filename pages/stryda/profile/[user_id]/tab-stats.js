@@ -48,7 +48,7 @@ export default function TabProfileStats() {
         <>
           {isEmpty && (
             <>
-              <div className="surface rounded-lg px-4 py-8 text-center">
+              <div className="surface sm:rounded px-4 py-8 text-center">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-smile text-6xl text-ui-500" />
                   <div className="mt-2 mb-6">
@@ -60,7 +60,7 @@ export default function TabProfileStats() {
                       your earnings.
                     </p>
                   </div>
-                  <Link href="/prototype/valorant/ladders">
+                  <Link href={`/stryda/ladders/valorant${prototype.getURLparams()}`}>
                     <a className="button button-main">
                       <span>Browse Ladders</span>
                     </a>
@@ -72,7 +72,7 @@ export default function TabProfileStats() {
           {!isEmpty && (
             <>
               <div
-                className="surface accordion accordion-highlighted mb-4 animate-slide-in-bottom animate-delay"
+                className="surface sm:rounded accordion accordion-highlighted mb-4 animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 0 * 0.05s)" }}
               >
                 <Accordion
@@ -172,7 +172,7 @@ export default function TabProfileStats() {
                 {selectedUser.games?.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
-                    className="surface rounded animate-slide-in-bottom animate-delay"
+                    className="surface sm:rounded animate-slide-in-bottom animate-delay"
                     style={{
                       "--delay":
                         "calc(" + Math.round(itemIndex + 1) + " * 0.05s)",
@@ -244,7 +244,7 @@ export default function TabProfileStats() {
                     {prototype.getGameByID(item).hasAPI ? (
                       <div className="border-t border-ui-700 text-center p-3 flex items-center justify-center">
                         <Link
-                          href={`/prototype/${
+                          href={`/stryda/${
                             prototype.getGameByID(item).slug
                           }/stats${prototype.getURLparams()}`}
                         >

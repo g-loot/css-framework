@@ -125,7 +125,7 @@ export default function ClanDetails() {
         {selectedClan && (
           <>
             {!selectedClan.isYou && <ClanHeader />}
-            <nav className="flex justify-center">
+            <nav className="flex justify-center mt-8">
               <ul className="tabs tabs-tertiary">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>

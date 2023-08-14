@@ -46,7 +46,7 @@ export default function WidgetUser(props) {
             ) : (
               <>
                 <img
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                  src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                   alt=""
                   className="rounded-t"
                 />
@@ -54,7 +54,11 @@ export default function WidgetUser(props) {
             )}
           </div>
           <div className="p-2">
-            <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+            <Link
+              href={`/stryda/profile/${
+                selectedUser.id
+              }${prototype.getURLparams()}`}
+            >
               <h2
                 className={`text-xl leading-tight mt-4 truncate interactive ${
                   selectedUser.isPremium ? "text-premium-500" : ""
@@ -74,7 +78,11 @@ export default function WidgetUser(props) {
             </Link>
             <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
               <li>
-                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                <Link
+                  href={`/stryda/profile/${
+                    selectedUser.id
+                  }?tab=followers${prototype.getURLparams("&")}`}
+                >
                   <button type="button" className="interactive px-2">
                     <div className="text-lg text-ui-100">165</div>
                     <div className="text-sm text-ui-300">followers</div>
@@ -82,7 +90,11 @@ export default function WidgetUser(props) {
                 </Link>
               </li>
               <li>
-                <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                <Link
+                  href={`/stryda/profile/${
+                    selectedUser.id
+                  }?tab=followers${prototype.getURLparams("&")}`}
+                >
                   <button type="button" className="interactive px-2">
                     <div className="text-lg text-ui-100">165</div>
                     <div className="text-sm text-ui-300">following</div>
@@ -90,6 +102,44 @@ export default function WidgetUser(props) {
                 </Link>
               </li>
             </ul>
+            <div className="space-y-2 mb-2">
+              {selectedUser.isYou && (
+                <Link href="settings">
+                  <a
+                    type="button"
+                    className="button button-sm button-tertiary w-full"
+                  >
+                    <span className="icon icon-cogwheel" />
+                    <span>Profile settings</span>
+                  </a>
+                </Link>
+              )}
+              {!selectedUser.isYou && selectedUser.isFriend && (
+                <a
+                  type="button"
+                  className="button button-sm button-tertiary w-full"
+                  onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
+                >
+                  <span className="icon icon-a-remove" />
+                  <span>Remove as friend</span>
+                </a>
+              )}
+              {!selectedUser.isYou && !selectedUser.isFriend && (
+                <Link
+                  href={`/prototype/profile/${
+                    selectedUser.id
+                  }?tab=followers${prototype.getURLparams("&")}`}
+                >
+                  <a
+                    type="button"
+                    className="button button-sm button-primary w-full"
+                  >
+                    <span className="icon icon-add-27" />
+                    <span>Follow</span>
+                  </a>
+                </Link>
+              )}
+            </div>
             {selectedUser.clan ? (
               <Link
                 href={`/stryda/clans/${
@@ -123,7 +173,7 @@ export default function WidgetUser(props) {
                   <Link href="#">
                     <button
                       type="button"
-                      className="button button-sm button-primary w-full"
+                      className="button button-sm button-secondary w-full"
                     >
                       <span>Recruit to your clan</span>
                     </button>
@@ -131,44 +181,7 @@ export default function WidgetUser(props) {
                 </div>
               </div>
             )}
-            <div className="space-y-2 mt-2">
-              {selectedUser.isYou && (
-                <Link href="settings">
-                  <a
-                    type="button"
-                    className="button button-sm button-secondary w-full"
-                  >
-                    <span className="icon icon-cogwheel" />
-                    <span>Profile settings</span>
-                  </a>
-                </Link>
-              )}
-              {!selectedUser.isYou && selectedUser.isFriend && (
-                <a
-                  type="button"
-                  className="button button-sm button-secondary w-full"
-                  onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
-                >
-                  <span className="icon icon-a-remove" />
-                  <span>Remove as friend</span>
-                </a>
-              )}
-              {!selectedUser.isYou && !selectedUser.isFriend && (
-                <Link
-                  href={`/prototype/profile/${
-                    selectedUser.id
-                  }?tab=followers${prototype.getURLparams("&")}`}
-                >
-                  <a
-                    type="button"
-                    className="button button-sm button-primary w-full"
-                  >
-                    <span className="icon icon-add-27" />
-                    <span>Follow</span>
-                  </a>
-                </Link>
-              )}
-            </div>
+            
           </div>
         </div>
       )}

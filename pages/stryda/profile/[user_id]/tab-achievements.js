@@ -18,6 +18,15 @@ export default function TabProfileAchievements() {
   const [favoriteItem, setFavoriteItem] = useState(2);
   const { user_id } = router.query;
   const isEmpty = query.empty === "true" ? true : false;
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 1200);
+    }
+  }, [loading]);
 
   const modalAchievement = query.modalachievement === "true" ? true : false;
 
@@ -76,7 +85,7 @@ export default function TabProfileAchievements() {
                         key={itemIndex}
                         className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${
                           item.level === 0 ? "pointer-events-none" : ""
-                        }`}
+                        } ${loading ? "is-loading" : ""}`}
                         style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                       >
                         <div className={`w-36 h-36 achievement`}>
@@ -101,7 +110,10 @@ export default function TabProfileAchievements() {
                         </div>
                         <div className="flex-1">
                           <h3 className="h5">
-                            {prototype.getAchievementitemByID(1, item.item).name}
+                            {
+                              prototype.getAchievementitemByID(1, item.item)
+                                .name
+                            }
                           </h3>
                           <p className="text-ui-300 mt-2 mb-3">
                             {
@@ -131,8 +143,8 @@ export default function TabProfileAchievements() {
               ) : (
                 <div className="surface rounded-lg px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
-                    <span className="icon icon-brawl text-6xl text-ui-500" />
-                    <div className="mt-2 mb-6">
+                    <span className="icon icon-ladder text-6xl text-ui-500" />
+                    <div className="mt-2">
                       <p className="text-lg text-ui-300">
                         {selectedUser.nickname} hasn&#39;t unlocked any
                         achievements.
@@ -149,6 +161,8 @@ export default function TabProfileAchievements() {
                   key={itemIndex}
                   className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${
                     item.level === 0 ? "pointer-events-none" : ""
+                  } ${
+                    loading ? "is-loading" : ""
                   }`}
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >

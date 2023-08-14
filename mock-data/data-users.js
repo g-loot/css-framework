@@ -27,7 +27,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 3,
-      profileBanner: 33,
+      profileBanner: 34,
     },
     stats: {
       xp: 10000,
@@ -234,6 +234,36 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+      },
+    ],
   },
   {
     id: 2,
@@ -388,7 +418,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 5,
-      profileBanner: 34,
+      profileBanner: 33,
     },
     stats: {
       xp: 18970,

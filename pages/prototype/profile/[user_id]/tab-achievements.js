@@ -131,7 +131,7 @@ export default function TabProfileAchievements() {
               ) : (
                 <div className="surface rounded-lg px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
-                    <span className="icon icon-brawl text-6xl text-ui-500" />
+                    <span className="icon icon-ladder text-6xl text-ui-500" />
                     <div className="mt-2 mb-6">
                       <p className="text-lg text-ui-300">
                         {selectedUser.nickname} hasn&#39;t unlocked any

@@ -138,7 +138,7 @@ export default function Home() {
                 ) : (
                   <>
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672241804/Stryda/illustrations/Generic_bg.png"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                       alt=""
                     />
                   </>

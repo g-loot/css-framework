@@ -9,6 +9,7 @@ import ButtonFeedback from "../../../components/Button/ButtonFeedback";
 import ReadMore from "../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../components/GameIcon/GameIcon";
 import ModalFavoriteGames from "../modal-favoritegames";
+import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
 
 export default function WidgetUserLeftPanel(props) {
   const router = useRouter();
@@ -222,7 +223,7 @@ export default function WidgetUserLeftPanel(props) {
                   onClick={openModalFavoriteGames}
                   className="link link-hover text-ui-300 text-sm leading-none"
                 >
-                  View all
+                  Edit
                 </button>
               )}
             </div>
@@ -233,6 +234,36 @@ export default function WidgetUserLeftPanel(props) {
                 </li>
               ))}
             </ul>
+          </div>
+          <div
+            className="sticky space-y-4"
+            style={{ top: "calc(48px + 1rem)" }}
+          >
+            <div className="surface rounded px-4 py-6 text-center">
+              <PremiumLogo
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                width="180"
+                height="auto"
+                className="mx-auto"
+              />
+              <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
+                Increase your amount of XP you can earn each day with a{" "}
+                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                  <a className="link text-premium-500">Premium subscription</a>
+                </Link>
+                .
+              </p>
+              <div className="mx-auto mt-2">
+                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                  <a className="button button-premium is-shining">
+                    <span>Get Premium</span>
+                  </a>
+                </Link>
+              </div>
+            </div>
+            <div className="rounded bg-ui-600 aspect-square grid place-content-center text-center text-2xl text-ui-400">
+              <span>AD</span>
+            </div>
           </div>
         </>
       )}
