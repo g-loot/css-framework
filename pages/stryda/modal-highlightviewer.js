@@ -13,32 +13,30 @@ export default function ModalHighlightViewer(props) {
   return (
     <>
       {item && (
-        <div className="relative z-10">
-          <div className="modal max-w-xl w-full">
-            <button
-              type="button"
-              className="button button-secondary button-close"
-              onClick={uiContext.closeModal}
-            >
-              <span className="icon icon-e-remove" />
-            </button>
-            <div className="modal-content p-0">
-              <div className="modal-body relative">
-                <div className="absolute z-10 inset-0 p-4">
-                  <Avatar id={1} size="avatar-sm" />
-                </div>
-                <video
-                  autoPlay={true}
-                  playsInline
-                  loop
-                  muted
-                  preload
-                  width="100%"
-                  height="100%"
-                  className="relative z-0 w-full"
-                  src={item.media?.url}
-                ></video>
+        <div className="modal max-w-xl">
+          <button
+            type="button"
+            className="button button-tertiary button-close"
+            onClick={uiContext.closeModal}
+          >
+            <span className="icon icon-e-remove" />
+          </button>
+          <div className="modal-content p-0">
+            <div className="modal-body relative">
+              <div className="absolute z-10 inset-0 p-4">
+                <Avatar id={1} size="avatar-sm" />
               </div>
+              <video
+                autoPlay={true}
+                playsInline
+                loop
+                muted
+                preload
+                width="100%"
+                height="100%"
+                className="relative z-0 w-full"
+                src={item.media?.url}
+              ></video>
             </div>
           </div>
         </div>

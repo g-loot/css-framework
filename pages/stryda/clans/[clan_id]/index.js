@@ -25,7 +25,7 @@ const TabsItemsOwn = [
     component: TabClanAbout,
   },
   {
-    label: "Applications (3)",
+    label: "Applications",
     url: "applications",
     component: TabClanApplications,
     isYou: true,
@@ -124,8 +124,78 @@ export default function ClanDetails() {
 
         {selectedClan && (
           <>
-            {!selectedClan.isYou && <ClanHeader />}
-            <nav className="flex justify-center mt-8">
+            {!selectedClan.isYou && (
+              <>
+                <div className="relative z-0">
+                  <div className="aspect-banner md:-mx-8 relative z-10 shadow-2xl">
+                    {selectedClan.shopItems?.profileBanner ? (
+                      <>
+                        <img
+                          src={
+                            prototype.getShopitemByID(
+                              2,
+                              selectedClan.shopItems?.profileBanner
+                            ).image
+                          }
+                          alt=""
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
+                          alt=""
+                          className="w-full h-full object-cover object-center"
+                        />
+                      </>
+                    )}
+                  </div>
+                  <div className="relative md:absolute md:inset-0 md:flex md:flex-col items-center justify-center text-center gap-4">
+                    <div className="avatar avatar-2xl avatar-squircle">
+                      <div>
+                        <img src={selectedClan.avatar} alt="avatar" />
+                      </div>
+                    </div>
+                  </div>
+                  <div className="absolute z-0 inset-y-0 w-screen left-1/2 right-1/2 -mx-[50vw] overflow-hidden">
+                    {selectedClan.shopItems?.profileBanner ? (
+                      <>
+                        <img
+                          src={
+                            prototype.getShopitemByID(
+                              2,
+                              selectedClan.shopItems?.profileBanner
+                            ).image
+                          }
+                          alt=""
+                          className="absolute w-full h-full scale-125 object-cover object-center blur opacity-50"
+                        />
+                      </>
+                    ) : (
+                      <>
+                        <img
+                          src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
+                          alt=""
+                          className="absolute w-full h-full scale-125 object-cover object-center blur opacity-50"
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
+                <div className="relative z-10 mt-4">
+                  <h1 className="text-7xl leading-none text-center">
+                    &#91;
+                    {selectedClan.tag}
+                    &#93; {selectedClan.nickname}
+                  </h1>
+                </div>
+                {/*
+                <ClanHeader />
+                */}
+              </>
+            )}
+            <nav className="flex justify-center mt-4">
               <ul className="tabs tabs-tertiary">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>
@@ -145,10 +215,11 @@ export default function ClanDetails() {
                             }`}
                           >
                             <span>
-                              {item.label}{" "}
+                              {item.label}
+                              {/*{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
-                              )}
+                              )}*/}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />
                               )}
@@ -170,10 +241,11 @@ export default function ClanDetails() {
                             }`}
                           >
                             <span>
-                              {item.label}{" "}
+                              {item.label}
+                              {/*{" "}
                               {item.url === "members" && (
                                 <>({getClanMembers().length})</>
-                              )}
+                              )}*/}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />
                               )}

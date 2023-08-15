@@ -35,7 +35,7 @@ export default function FeedItemMatch(props) {
   return (
     <>
       {item && (
-        <div className="surface rounded video">
+        <div className="surface sm:rounded video">
           <div className="p-4 flex items-center gap-3">
             <Avatar id={item.author} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">
@@ -50,14 +50,14 @@ export default function FeedItemMatch(props) {
                   </span>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
-                <GameIcon game={item.meta.game} size="text-lg" />
+              <div className="flex items-center gap-2 text-xs sm:text-sm text-ui-300 px-1">
+                <GameIcon game={item.meta.game} size="sm:text-lg" />
                 <span>{item.meta.mode}</span>
-                <i className="w-1 h-1 rounded-full bg-ui-300" />
+                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                 <span className="capitalize">
                   {getMapByID(item.meta.map).name}
                 </span>
-                <i className="w-1 h-1 rounded-full bg-ui-300" />
+                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                 <span>{item.meta.dateTimeEnded}</span>
               </div>
             </div>
@@ -74,12 +74,24 @@ export default function FeedItemMatch(props) {
                   className="dropdown-content bg-ui-600 w-52 p-1"
                 >
                   <ul className="menu menu-rounded menu-secondary">
+                    <li>
+                      <button type="button">
+                        <span className="icon icon-network-communication-1" />
+                        <span>Share post</span>
+                      </button>
+                    </li>
                     {prototype.getUserByID(item.author).isYou ? (
                       <>
                         <li>
                           <button type="button">
                             <span className="icon icon-pen-2" />
                             <span>Edit post</span>
+                          </button>
+                        </li>
+                        <li>
+                          <button type="button">
+                            <span className="icon icon-trash" />
+                            <span>Delete post</span>
                           </button>
                         </li>
                       </>
@@ -96,7 +108,7 @@ export default function FeedItemMatch(props) {
               </div>
             </div>
           </div>
-          <div className="px-6 pt-2">
+          <div className="px-4 sm:px-6 pt-2">
             <Link
               href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
             >
@@ -113,7 +125,7 @@ export default function FeedItemMatch(props) {
                   />
                 )}
                 <div
-                  className={`rounded px-2 py-1.5 text-sm leading-none flex gap-2 items-center ${
+                  className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${
                     item.stats.hasWon
                       ? " bg-success-500/10 text-success-300"
                       : "bg-error-500/10 text-error-300"
@@ -134,8 +146,8 @@ export default function FeedItemMatch(props) {
               </button>
             </Link>
           </div>
-          <div className="p-4 overflow-x-auto scrollbar-hidden">
-            <div className="flex items-between justify-between">
+          <div className="p-2 sm:p-4 overflow-x-auto scrollbar-hidden">
+            <div className="flex items-between gap-4 justify-between">
               <div className="flex justify-start gap-4">
                 <Link
                   href={`/stryda/activity/${
@@ -145,7 +157,7 @@ export default function FeedItemMatch(props) {
                   <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
                     {item.stats.mainStats.map((mainStat, mainStatIndex) => (
                       <li key={mainStatIndex} className="px-5 first:pl-2">
-                        <div className="text-sm text-ui-300">
+                        <div className="text-xs sm:text-sm text-ui-300">
                           {mainStat.label}
                         </div>
                         <div className="text-lg text-ui-100">

@@ -177,7 +177,7 @@ export default function Profile() {
       component: TabProfileActivity,
     },
     {
-      label: `Achievements (${achievementLength})`,
+      label: `Achievements`, // (${achievementLength})`,
       url: "achievements",
       component: TabProfileAchievements,
     },
@@ -187,7 +187,7 @@ export default function Profile() {
       component: TabProfileStats,
     },
     {
-      label: "Followers (3)",
+      label: "Followers",
       url: "followers",
       component: TabProfileFriends,
     },
@@ -386,7 +386,7 @@ export default function Profile() {
                   </div>
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
-                <div className="flex-1 overflow-hidden">
+                <div className="flex-1 overflow-auto">
                   <nav className="mt-4 pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
                     <ul className="tabs tabs-tertiary">
                       {TabsItems.map((item, itemIndex) => (

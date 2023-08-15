@@ -208,7 +208,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <div className="flex-1 overflow-hidden space-y-4">
+            <div className="flex-1 overflow-auto space-y-4">
               <Feed />
             </div>
             <div className="w-80 2xl:w-96 space-y-4 hidden xl:block">

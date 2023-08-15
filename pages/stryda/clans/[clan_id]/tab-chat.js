@@ -74,7 +74,7 @@ export default function TabClanChat() {
                         {selectedClan.ladders?.map((ladder, ladderIndex) => (
                           <Link
                             key={ladderIndex}
-                            href={`/prototype/${
+                            href={`/stryda/${
                               prototype.getGameBySlug(ladder.gameSlug).slug
                             }/ladders/${
                               ladder.id
@@ -234,7 +234,7 @@ export default function TabClanChat() {
                         <li key={itemIndex} className="item">
                           <div className="item-image ml-2">
                             <Link
-                              href={`/prototype/profile/${
+                              href={`/stryda/profile/${
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >
@@ -243,7 +243,7 @@ export default function TabClanChat() {
                           </div>
                           <div className="item-body">
                             <Link
-                              href={`/prototype/profile/${
+                              href={`/stryda/profile/${
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >

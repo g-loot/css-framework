@@ -47,42 +47,38 @@ export default function TabProfileHighlights() {
     <>
       {selectedUser && (
         <section>
-          <div>
-            {!selectedUser.videos ? (
-              <div className="surface rounded-lg px-4 py-8 text-center">
-                <div className="max-w-xs mx-auto">
-                  <span className="icon icon-video text-6xl text-ui-500" />
-                  <div className="mt-2">
-                    <p className="text-lg text-ui-300">
-                      {selectedUser.isYou ? (
-                        <>You haven&#39;t any highlights yet</>
-                      ) : (
-                        <>
-                          {selectedUser.nickname} hasn&#39;t any highlights yet
-                        </>
-                      )}
-                    </p>
-                  </div>
+          {!selectedUser.videos ? (
+            <div className="surface rounded-lg px-4 py-8 text-center">
+              <div className="max-w-xs mx-auto">
+                <span className="icon icon-video text-6xl text-ui-500" />
+                <div className="mt-2">
+                  <p className="text-lg text-ui-300">
+                    {selectedUser.isYou ? (
+                      <>You haven&#39;t any highlights yet</>
+                    ) : (
+                      <>{selectedUser.nickname} hasn&#39;t any highlights yet</>
+                    )}
+                  </p>
                 </div>
               </div>
-            ) : (
-              <>
-                <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
-                  {selectedUser.videos.map((item, itemIndex) => (
-                    <div
-                      key={itemIndex}
-                      className={`surface w-full aspect-video rounded overflow-hidden animate-slide-in-bottom animate-delay ${
-                        loading ? "is-loading" : ""
-                      }`}
-                      style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
-                    >
-                      <Video item={item} />
-                    </div>
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
+            </div>
+          ) : (
+            <>
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
+                {selectedUser.videos.map((item, itemIndex) => (
+                  <div
+                    key={itemIndex}
+                    className={`w-full animate-slide-in-bottom animate-delay ${
+                      loading ? "is-loading" : ""
+                    }`}
+                    style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                  >
+                    <Video item={item} hasMeta={true} />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </section>
       )}
     </>

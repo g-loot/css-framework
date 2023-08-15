@@ -22,7 +22,7 @@ const FeedItemComment = (props) => {
       <li className="flex items-start gap-3">
         <Avatar id={comment.author} size="avatar-xs" hasTooltip={true} />
         <div className="flex-1 text-sm">
-          <div className="flex flex-col sm:flex-row gap-2 items-start sm:items-baseline sm:justify-between">
+          <div className="flex flex-col sm:flex-row sm:gap-2 items-start sm:items-baseline sm:justify-between">
             <div className="truncate p-1">
               <Link
                 href={`/stryda/profile/${
@@ -74,7 +74,7 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-          <div className="p-6 flex gap-4 items-center justify-between text-sm text-ui-300">
+          <div className="p-4 sm:p-6 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-xs sm:text-sm text-ui-300">
             <div className="flex items-center gap-2">
               {item.social?.views && (
                 <>
@@ -109,7 +109,7 @@ export default function FeedItemComments(props) {
               )}
               {item.social?.likes.users && (
                 <>
-                  <i className="w-1 h-1 rounded-full bg-ui-300" />
+                  <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                   <Tooltip
                     placement="top"
                     tooltip={
@@ -136,7 +136,7 @@ export default function FeedItemComments(props) {
               )}
               {item.social?.comments && (
                 <>
-                  <i className="w-1 h-1 rounded-full bg-ui-300" />
+                  <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                   <span>
                     {item.social.comments.length} comment
                     {item.social.comments.length > 1 && <>s</>}
@@ -144,10 +144,10 @@ export default function FeedItemComments(props) {
                 </>
               )}
             </div>
-            <div className="flex gap-1 items-center">
+            <div className="flex gap-1 items-stretch sm:items-center">
               <button
                 type="button"
-                className={`switch switch-slot button button-tertiary rounded ${
+                className={`flex-1 sm:flex-none switch switch-slot button button-tertiary rounded ${
                   likeOn ? "switch-active" : ""
                 }`}
                 onClick={() => {
@@ -159,7 +159,7 @@ export default function FeedItemComments(props) {
               </button>
               <button
                 type="button"
-                className={`switch button button-tertiary rounded ${
+                className={`flex-1 sm:flex-none switch button button-tertiary rounded ${
                   commentOn ? "switch-active" : ""
                 }`}
                 onClick={() => {
@@ -172,14 +172,14 @@ export default function FeedItemComments(props) {
             </div>
           </div>
           {item.social.comments.length > 0 && (
-            <ul className="px-6 pt-2 pb-6 space-y-6">
+            <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2">
               {item.social.comments.map((comment, commentIndex) => (
                 <FeedItemComment key={commentIndex} comment={comment} />
               ))}
             </ul>
           )}
           {commentOn && (
-            <div className="flex items-start gap-3 px-6 pb-6">
+            <div className="flex items-start gap-3 px-4 pb-4 sm:px-6 sm:pb-6">
               <div className="w-9">
                 <Avatar id={1} hasLevel={false} />
               </div>

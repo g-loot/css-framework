@@ -100,7 +100,7 @@ export default function FeedItemDetails(props) {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
                   <span>{item.meta.dateTimeEnded}</span>
-                  <i className="w-1 h-1 rounded-full bg-ui-300" />
+                  <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                   <span>{item.meta.duration}</span>
                 </div>
               </div>
@@ -155,7 +155,7 @@ export default function FeedItemDetails(props) {
                 <span className="text-sm text-ui-300 capitalize">
                   {item.meta.mode}
                 </span>
-                <i className="w-1 h-1 rounded-full bg-ui-300" />
+                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
                 <span className="text-sm text-ui-300 capitalize">
                   {getMapByID(item.meta.map).name}
                 </span>

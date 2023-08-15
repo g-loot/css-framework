@@ -1,10 +1,12 @@
 import React, { useEffect, useState, useContext } from "react";
 import { UiContext } from "../../../contexts/ui";
 import ModalHighlightViewer from "../modal-highlightviewer";
+import GameIcon from "../../../components/GameIcon/GameIcon";
 
 export default function Video(props) {
   const uiContext = useContext(UiContext);
   const item = props.item;
+  const hasMeta = props.hasMeta || false;
   const autoPlay = props.autoPlay || false;
   const id = RandomNumber(1000, 100000);
   const [video, setVideo] = useState(null);
@@ -52,18 +54,31 @@ export default function Video(props) {
           onMouseOut={handleVideoPause}
           onClick={() => openModalHighlightViewer(item)}
         >
-          <video
-            autoPlay={false}
-            playsInline
-            loop
-            muted
-            preload
-            width="100%"
-            height="100%"
-            id={`video_${id}`}
-            className="w-full"
-            src={`${item.media?.url}#t=1`}
-          ></video>
+          <div className="relative aspect-video rounded overflow-hidden bg-ui-800">
+            <video
+              autoPlay={false}
+              playsInline
+              loop
+              muted
+              preload
+              width="100%"
+              height="100%"
+              id={`video_${id}`}
+              className="relative z-10 w-full"
+              src={`${item.media?.url}#t=1`}
+            ></video>
+            <div className="absolute z-0 inset-0 grid place-content-center">
+              <span className="icon icon-video text-ui-400 text-xl" />
+            </div>
+          </div>
+          {hasMeta && (
+            <div className="flex items-center gap-2 text-xs sm:text-sm text-ui-300 mt-2">
+              <GameIcon game={item.game} size="sm:text-lg" />
+              <span>{item.stats?.views} views</span>
+              <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+              <span>{item.date}</span>
+            </div>
+          )}
         </button>
       )}
     </>

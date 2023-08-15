@@ -3141,28 +3141,12 @@ export const dataGames = [
           eligibility: {
             ranks: [
               {
-                name: 'Ascendant 1',
+                name: 'Ascendant',
                 image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_1.png',
               },
               {
-                name: 'Ascendant 2',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_2.png',
-              },
-              {
-                name: 'Ascendant 3',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_3.png',
-              },
-              {
-                name: 'Immortal 1',
+                name: 'Immortal',
                 image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_1.png',
-              },
-              {
-                name: 'Immortal 2',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_2.png',
-              },
-              {
-                name: 'Immortal 3',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_3.png',
               },
               {
                 name: 'Radiant',
@@ -3171,12 +3155,24 @@ export const dataGames = [
             ],
             countries: [
               {
+                name: "Åland Islands",
+                flag: "ax",
+              },
+              {
                 name: "Denmark",
                 flag: "dk",
               },
               {
+                name: "Faroe Islands",
+                flag: "fo",
+              },
+              {
                 name: "Finland",
                 flag: "fi",
+              },
+              {
+                name: "Greenland",
+                flag: "gl",
               },
               {
                 name: "Iceland",

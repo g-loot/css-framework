@@ -226,21 +226,34 @@ export default function Ladders() {
                           <p>
                             In order for your clan to be eligible for the event,
                             at least 3 out of 5 party member have to be from the
-                            following nordic countries:{" "}
-                            {selectedClanLeaderboard.meta.eligibility.countries.map(
-                              (country, countryIndex) => (
-                                <span
-                                  key={countryIndex}
-                                  className="whitespace-nowrap pr-1"
-                                >
-                                  <img
-                                    src={`https://flagcdn.com/${country.flag}.svg`}
-                                    className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
-                                  />{" "}
-                                  {country.name}
-                                </span>
-                              )
-                            )}
+                            following{" "}
+                            <Tooltip
+                              tooltip={
+                                <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                                  {selectedClanLeaderboard.meta.eligibility.countries.map(
+                                    (country, countryIndex) => (
+                                      <li
+                                        key={countryIndex}
+                                        className="whitespace-nowrap pr-1 flex items-center gap-2"
+                                      >
+                                        <img
+                                          src={`https://flagcdn.com/${country.flag}.svg`}
+                                          className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
+                                        />{" "}
+                                        <span>{country.name}</span>
+                                      </li>
+                                    )
+                                  )}
+                                </ul>
+                              }
+                            >
+                              <span className="interactive">
+                                <span className="underline">Nordic countries</span>{" "}
+                                <button className="text-ui-300 text-0 translate-y-0.5">
+                                  <span className="icon icon-16 icon-c-info" />
+                                </button>
+                              </span>
+                            </Tooltip>
                           </p>
                         )}
                         {selectedClanLeaderboard.meta.eligibility.ranks && (
