@@ -51,10 +51,10 @@
   inset-0
   bg-ui-900/95
   backdrop-blur
-  z-[998]
   animate-fade-in
   ;
   animation-duration: 75ms;
+  z-index: 998;
 }
 
 .modal {

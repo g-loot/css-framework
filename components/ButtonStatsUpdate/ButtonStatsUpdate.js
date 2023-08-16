@@ -6,6 +6,9 @@ import { useRouter } from "next/router";
 export default function ButtonStatsUpdate(props) {
   const { query } = useRouter();
   const uiContext = useContext(UiContext);
+  const direction = props.direction || "md:tooltip-left";
+  const additionalClassNames = props.additionalClassNames || "button-xs";
+  const hasTooltip = props.hasTooltip || true;
   const prototype = usePrototypeData();
   const [submitting, setSubmitting] = useState(false);
   const [isMoreProminent, setIsMoreProminent] = useState(false);
@@ -33,20 +36,32 @@ export default function ButtonStatsUpdate(props) {
 
   return (
     <>
-      <div
-        className={`md:tooltip-left ${
-          isMoreProminent && !submitting ? "tooltip tooltip-attention" : ""
-        }`}
-        data-tooltip={`${
-          isMoreProminent ? "Missing progress? Click here!" : ""
-        }${
-          submitting
-            ? "This might take up to 15 minutes. Make sure the match you’re trying to fetch is 100% completed."
-            : ""
-        }`}
-      >
+      {hasTooltip ? (
+        <div
+          className={`${direction} tooltip ${
+            isMoreProminent && !submitting ? "tooltip-attention" : ""
+          }`}
+          data-tooltip={isMoreProminent ? "Missing progress? Click here!" : ""}
+        >
+          <button
+            className={`button ${additionalClassNames} ${
+              isMoreProminent ? "button-primary" : "button-secondary"
+            } ${submitting ? "is-loading" : undefined}`}
+            onClick={addToastWithDelay.bind(this, {
+              icon: "f-check",
+              color: "green",
+              text: "Your stats have been updated.",
+              autoDelete: true,
+              autoDeleteDelay: 2500,
+            })}
+          >
+            <span className="icon icon-16 icon-refresh-02" />
+            <span>Update my stats</span>
+          </button>
+        </div>
+      ) : (
         <button
-          className={`w-full button button-xs ${
+          className={`button ${additionalClassNames} ${
             isMoreProminent ? "button-primary" : "button-secondary"
           } ${submitting ? "is-loading" : undefined}`}
           onClick={addToastWithDelay.bind(this, {
@@ -60,7 +75,7 @@ export default function ButtonStatsUpdate(props) {
           <span className="icon icon-16 icon-refresh-02" />
           <span>Update my stats</span>
         </button>
-      </div>
+      )}
     </>
   );
 }

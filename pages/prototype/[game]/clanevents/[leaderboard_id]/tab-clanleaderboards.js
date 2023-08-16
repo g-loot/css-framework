@@ -17,6 +17,7 @@ import ModalClanEventOnboarding from "../modal-claneventonboarding";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import Rewards from "../../../../../components/Reward/Rewards";
 import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
+import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 const rewardDistribClan = [
   {
@@ -420,6 +421,13 @@ export default function TabClanLeaderboardsLeaderboards() {
                             </div>
                           </div>
 
+                          <ButtonFeedback
+                            variant="button-sm button-secondary w-full my-2"
+                            icon="icon-refresh-02"
+                            message="Stats updated"
+                            label="Update my stats"
+                          />
+
                           {selectedClanLeaderboard.status === "finished" && (
                             <button
                               type="button"
@@ -691,26 +699,6 @@ export default function TabClanLeaderboardsLeaderboards() {
                     </div>
                   )}
                   <div className="mt-4 overflow-x-auto scrollbar-desktop">
-                    <div className="lg:hidden">
-                      {variablesContext.clanLeaderboardEnrolled ? (
-                        <></>
-                      ) : (
-                        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                          <button
-                            type="button"
-                            className="button button-sm button-primary"
-                            onClick={() => handleEnroll()}
-                          >
-                            <span>Enroll my Clan</span>
-                          </button>
-                          <p className="text-ui-300 mt-4 mb-5 md:border-l md:border-ui-600 md:pl-4">
-                            Enroll your Clan and play matches with party
-                            composed of 5 Clan members to be placed on the
-                            leaderboard.
-                          </p>
-                        </div>
-                      )}
-                    </div>
                     <div className="min-w-md px-2 md:px-0">
                       <div className="flex gap-2 items-center text-center text-sm text-ui-300 uppercase mb-2 relative z-10 h-6">
                         <div

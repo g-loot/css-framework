@@ -12,6 +12,7 @@
   relative
   h-24
   w-24
+  aspect-square
   ;
 
   > img {
