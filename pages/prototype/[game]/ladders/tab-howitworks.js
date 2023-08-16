@@ -5,8 +5,8 @@ import FAQ from "../../../../components/FAQ/FAQ";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import ModalContainer from "../../../../components/Modal/ModalContainer";
-import { usePrototypeData } from "../../../../contexts/prototype";
-import { UiContext } from "../../../../contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
 const HowitworksTabs = [

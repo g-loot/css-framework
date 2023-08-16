@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
-import Footer from "../../components/Footer/Footer";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Footer from "@/components/Footer/Footer";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [randomNum1, setRandomNum1] = useState(1);

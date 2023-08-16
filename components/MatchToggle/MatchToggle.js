@@ -1,6 +1,6 @@
 import React, { useContext, useState, useRef, useEffect } from "react";
-import ModalInfoBeforeYouPlay from "../../pages/prototype/[game]/ladders/modal-info-beforeyouplay";
-import { UiContext } from "../../contexts/ui";
+import ModalInfoBeforeYouPlay from "@/pages/prototype/[game]/ladders/modal-info-beforeyouplay";
+import { UiContext } from "@/contexts/ui";
 
 const Options = [
   {

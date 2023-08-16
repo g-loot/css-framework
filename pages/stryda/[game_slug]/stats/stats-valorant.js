@@ -1,19 +1,19 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
-import { UiContext } from "../../../../contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 import Accordion from "../../../../components/Accordion/Accordion";
-import { StatsValorantAgents } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantMaps } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantRanks } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantWeapons } from "../../../../mock-data/data-stats-valorant";
-import { StatsValorantDemoFavoriteAgents } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoGeneral } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoLatestMatches } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoWeapons } from "../../../../mock-data/data-stats-demo-valorant";
-import { StatsValorantDemoMaps } from "../../../../mock-data/data-stats-demo-valorant";
+import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
+import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
+import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
+import { StatsValorantWeapons } from "@/mock-data/data-stats-valorant";
+import { StatsValorantDemoFavoriteAgents } from "@/mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoGeneral } from "@/mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoLatestMatches } from "@/mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoWeapons } from "@/mock-data/data-stats-demo-valorant";
+import { StatsValorantDemoMaps } from "@/mock-data/data-stats-demo-valorant";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
 import LoadMoreContainer from "../../../../components/LoadMore/LoadMoreContainer";
 
@@ -25,7 +25,7 @@ export default function StatsValorant() {
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedGeneralStat, setSelectedGeneralStat] = useState(0);
   const [selectedStat, setSelectedStat] = useState(null);
-  const { game } = router.query;
+  const { game_slug } = router.query;
   const variant = query.variant ? query.variant : 21;
   const [loading, setLoading] = useState(true);
   const [maxMap, setMaxMap] = useState(3);
@@ -52,8 +52,8 @@ export default function StatsValorant() {
   }, [isPremium]);
 
   useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
+    setSelectedGame(prototype.getGameBySlug(game_slug));
+  }, [game_slug, prototype]);
 
   useEffect(() => {
     setSelectedGeneralStat(variant);

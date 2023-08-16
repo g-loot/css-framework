@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import ModalJoinClan from "./modal-joinclan";
 
 export default function TabSearchClan() {

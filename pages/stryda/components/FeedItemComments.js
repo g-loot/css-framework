@@ -1,9 +1,9 @@
 import { useEffect, useState, useContext } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../contexts/ui";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { UiContext } from "@/contexts/ui";
 
 const FeedItemComment = (props) => {
   const prototype = usePrototypeData();

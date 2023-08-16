@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
-import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
+import PrototypeAuth from "@/components/Prototype/PrototypeAuth";
 
 export default function Login() {
   const [nicknameStr, setNicknameStr] = useState(0);

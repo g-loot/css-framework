@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import Structure from "../../components/Structure";
-import { dataPatchNotes } from "../../../../mock-data/data-patchnotes";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import Structure from "@/pages/stryda/components/Structure";
+import { dataPatchNotes } from "@/mock-data/data-patchnotes";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 

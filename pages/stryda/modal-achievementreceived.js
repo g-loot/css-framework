@@ -1,15 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosionLvl1 from "../../assets/animations/explosion_stryda_5.json";
-import LottieExplosionLvl2 from "../../assets/animations/explosion_stryda_6.json";
-import LottieExplosionLvl3 from "../../assets/animations/explosion_stryda_7.json";
-import LottieExplosionLvl4 from "../../assets/animations/explosion_stryda_8.json";
-import LottieExplosionLvl5 from "../../assets/animations/explosion_stryda_9.json";
-import { UiContext } from "../../contexts/ui.js";
-import { usePrototypeData } from "../../contexts/prototype";
-import AchievementFrame from "../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../components/Achievements/AchievementIcon";
+import LottieExplosionLvl1 from "@/assets/animations/explosion_stryda_5.json";
+import LottieExplosionLvl2 from "@/assets/animations/explosion_stryda_6.json";
+import LottieExplosionLvl3 from "@/assets/animations/explosion_stryda_7.json";
+import LottieExplosionLvl4 from "@/assets/animations/explosion_stryda_8.json";
+import LottieExplosionLvl5 from "@/assets/animations/explosion_stryda_9.json";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
 
 export default function ModalAchievementReceived(props) {
   const uiContext = useContext(UiContext);

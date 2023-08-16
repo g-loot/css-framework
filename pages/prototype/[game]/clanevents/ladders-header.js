@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function LaddersHeader(props) {

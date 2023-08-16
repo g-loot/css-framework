@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import ModalClanCreate from "./modal-clan-create";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import Slider from "../../../components/Slider/Slider";
-import CardClan from "../../../components/Card/CardClan";
+import Slider from "@/components/Slider/Slider";
+import CardClan from "@/components/Card/CardClan";
 
 export default function Clan() {
   const router = useRouter();

@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../../contexts/ui.js";
+import { UiContext } from "@/contexts/ui.js";
 
 export default function ModalLadderHowitworksVideo(props) {
   const uiContext = useContext(UiContext);

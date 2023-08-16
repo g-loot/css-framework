@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
-import { UiContext } from "../../../../contexts/ui.js";
-import { usePrototypeData } from "../../../../contexts/prototype.js";
-import { dataVouchers } from "../../../../mock-data/data-vouchers.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
+import { dataVouchers } from "@/mock-data/data-vouchers.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../assets/animations/explosion_stryda_10.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_10.json";
 
 export default function ModalPurchaseCompleted(props) {
   const uiContext = useContext(UiContext);

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function Loader(props) {
   const prototype = usePrototypeData();

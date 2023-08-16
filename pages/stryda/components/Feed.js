@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import FeedItem from "../components/FeedItem";
-import { DataFeedItems } from "../../../mock-data/data-feed";
+import FeedItem from "@/pages/stryda/components/FeedItem";
+import { DataFeedItems } from "@/mock-data/data-feed";
 
 export default function Feed() {
 

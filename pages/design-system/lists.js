@@ -1,6 +1,6 @@
 import React from "react";
-import TextareaExpandable from "../../components/Textarea/TextareaExpandable";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   return (

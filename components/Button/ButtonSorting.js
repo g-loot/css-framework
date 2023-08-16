@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import { UiContext } from "../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 
 export default function ButtonSorting({ children, ...props }) {
   const uiContext = useContext(UiContext);

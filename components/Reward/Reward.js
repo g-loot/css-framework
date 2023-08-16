@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 
 function numberWithSpaces(x) {

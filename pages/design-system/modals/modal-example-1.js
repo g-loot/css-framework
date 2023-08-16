@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
+import { UiContext } from "@/contexts/ui.js";
 
 const Modal1 = (props) => {
   const uiContext = useContext(UiContext);

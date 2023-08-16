@@ -7,9 +7,9 @@ import ModalContainer from "../../../../components/Modal/ModalContainer";
 import Reward from "../../../../components/Reward/Reward";
 import SectionTournamentsLeaderboarBrackers from "./section-leaderboard-brackets";
 import SectionTournamentsLeaderboardTable from "./section-leaderboard-table";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import moment from "moment";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function TabTournamentsLeaderboard() {

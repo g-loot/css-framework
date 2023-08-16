@@ -1,12 +1,12 @@
-import "../assets/styles/globals.css";
+import "@/assets/styles/globals.css";
 
 import React from "react";
 import App from "next/app";
-import ModalToastProvider from "../components/ModalToastProvider";
-import { PrototypeProvider } from "../contexts/prototype";
-import SiteLayout from "../components/SiteLayout";
-import UiContextProvider from "../contexts/ui.js";
-import VariablesContextProvider from "../contexts/variables";
+import ModalToastProvider from "@/components/ModalToastProvider";
+import { PrototypeProvider } from "@/contexts/prototype";
+import SiteLayout from "@/components/SiteLayout";
+import UiContextProvider from "@/contexts/ui.js";
+import VariablesContextProvider from "@/contexts/variables";
 
 class MyApp extends App {
 

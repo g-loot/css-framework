@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Reward from "../../../../../components/Reward/Reward";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
-import { usePrototypeData } from "../../../../../contexts/prototype";
-import { VariablesContext } from "../../../../../contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
+import { VariablesContext } from "@/contexts/variables";
 import ModalClanEventResults from "../modal-claneventresults";
-import { UiContext } from "../../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";

@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import FAQ from "../../../components/FAQ/FAQ";
+import FAQ from "@/components/FAQ/FAQ";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
 const HowitworksTabs = [

@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
 import ModalRemoveFriend from "../profile/[user_id]/modal-remove-friend";
 
@@ -104,7 +104,7 @@ export default function WidgetUser(props) {
             </ul>
             <div className="space-y-2 mb-2">
               {selectedUser.isYou && (
-                <Link href="settings">
+                <Link href={`/stryda/profile/settings${prototype.getURLparams("&")}`}>
                   <a
                     type="button"
                     className="button button-sm button-tertiary w-full"

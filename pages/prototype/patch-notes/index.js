@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { dataPatchNotes } from "../../../mock-data/data-patchnotes";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { dataPatchNotes } from "@/mock-data/data-patchnotes";
 import Link from "next/link";
 
 const inViewport = (elem) => {

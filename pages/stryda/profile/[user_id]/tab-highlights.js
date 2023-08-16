@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
-import Video from "../../components/Video";
+import Video from "@/pages/stryda/components/Video";
 
 export default function TabProfileHighlights() {
   const router = useRouter();

@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import Ad from "../../../../../components/Ad/Ad";
 import Link from "next/link";
 import PrototypeStructure from "../../../../../components/Prototype/PrototypeStructure";
-import { UiContext } from "../../../../../contexts/ui";
-import { usePrototypeData } from "../../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalInfoClanEventEnroll from "../modal-info-claneventenroll";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
@@ -13,7 +13,7 @@ import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
 import TabClanLeaderboardsHistory from "./tab-history";
 import TabClanLeaderboardsRewards from "./tab-rewards";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
-import { VariablesContext } from "../../../../../contexts/variables";
+import { VariablesContext } from "@/contexts/variables";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
 
 const TabsItems = [

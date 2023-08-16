@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ScoreboardFilter from "./scoreboardFilter";

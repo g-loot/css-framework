@@ -1,12 +1,12 @@
 import { useContext, useEffect, useState } from "react";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ModalReferSendInvite from "./modal-sendinvite";
 import ModalClaimBattlepassReward from "../home/modal-claim-battlepassrewards";
 import ButtonReminder from "./components/ButtonReminder";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
 
 const referralsItems = [

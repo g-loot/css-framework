@@ -4,14 +4,14 @@ import Accordion from "../Accordion/Accordion";
 import Ad from "../Ad/Ad";
 import Button from "../Button/Button";
 import Link from "next/link";
-import ModalFavoriteGames from "../../pages/prototype/modal-favoritegames";
-import ModalSelectYourGame from "../../pages/prototype/modal-selectyourgame";
-import ModalWelcome from "../../pages/prototype/modal-welcome";
-import ModalTournamentSchedule from "../../pages/prototype/modal-tournamentschedule";
-import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
+import ModalFavoriteGames from "@/pages/prototype/modal-favoritegames";
+import ModalSelectYourGame from "@/pages/prototype/modal-selectyourgame";
+import ModalWelcome from "@/pages/prototype/modal-welcome";
+import ModalTournamentSchedule from "@/pages/prototype/modal-tournamentschedule";
+import ModalBuyTokens from "@/pages/prototype/wallet/modal-buytokens";
 import PrototypeGamesNavNew from "./PrototypeGamesNavNew";
-import { UiContext } from "../../contexts/ui";
-import { usePrototypeData } from "../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function PrototypeLeftMenuNew(props) {

@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Structure from "../components/Structure";
-import Battlepass from "../../../components/BattlePass/BattlePass";
-import { DataBattlepass } from "../../../mock-data/data-battlepass";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import ResetsIn from "../../../components/Countdown/ResetsIn";
+import { usePrototypeData } from "@/contexts/prototype";
+import Structure from "@/pages/stryda/components/Structure";
+import Battlepass from "@/components/BattlePass/BattlePass";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ResetsIn from "@/components/Countdown/ResetsIn";
 import ModalBattlepassCompletedBonusSteps from "./modal-battlepass-completed-bonus";
 import ModalBattlepassCompletedClaim from "./modal-battlepass-completed-claim";
 import ModalBattlepassCompletedSummary from "./modal-battlepass-completed-summary";
 import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium";
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import Loader from "../components/Loader";
+import Loader from "@/pages/stryda/components/Loader";
 
 export default function BattlepassPage() {
   const uiContext = useContext(UiContext);

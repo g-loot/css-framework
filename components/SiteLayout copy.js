@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
-import { PrototypeProvider } from "../contexts/prototype";
+import { PrototypeProvider } from "@/contexts/prototype";
 import ToastContainer from "./Toast/ToastContainer";
-import { UiContext } from "../contexts/ui.js";
-import UiContextProvider from "../contexts/ui.js";
-import VariablesContextProvider from "../contexts/variables";
+import { UiContext } from "@/contexts/ui.js";
+import UiContextProvider from "@/contexts/ui.js";
+import VariablesContextProvider from "@/contexts/variables";
 import { useRouter } from "next/router";
 
 const SiteLayout = ({ children }) => {

@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import Structure from "../components/Structure";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
+import Structure from "@/pages/stryda/components/Structure";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
-import { DataScoreboards } from "../../../mock-data/data-scoreboards";
+import { DataScoreboards } from "@/mock-data/data-scoreboards";
 import TabScoreboardsOverview from "./tab-overview";
 import TabScoreboard from "./[game_slug]/[scoreboard_id]/tab-scoreboard";
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [randomNum0, setRandomNum0] = useState(1);

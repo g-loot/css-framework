@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ModalHighlightViewer from "../modal-highlightviewer";
-import GameIcon from "../../../components/GameIcon/GameIcon";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 export default function Video(props) {
   const uiContext = useContext(UiContext);
@@ -49,12 +49,12 @@ export default function Video(props) {
       {item && (
         <button
           type="button"
-          className="interactive active:opacity-50"
+          className="interactive active:opacity-50 w-full"
           onMouseOver={handleVideoPlay}
           onMouseOut={handleVideoPause}
           onClick={() => openModalHighlightViewer(item)}
         >
-          <div className="relative aspect-video rounded overflow-hidden bg-ui-800">
+          <div className="relative aspect-video w-full rounded overflow-hidden bg-ui-700">
             <video
               autoPlay={false}
               playsInline
@@ -68,7 +68,7 @@ export default function Video(props) {
               src={`${item.media?.url}#t=1`}
             ></video>
             <div className="absolute z-0 inset-0 grid place-content-center">
-              <span className="icon icon-video text-ui-400 text-xl" />
+              <span className="icon icon-video text-ui-400 text-2xl" />
             </div>
           </div>
           {hasMeta && (

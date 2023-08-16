@@ -1,15 +1,15 @@
 import React from "react";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import { UiContext } from "../../../contexts/ui";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import { UiContext } from "@/contexts/ui";
 import { useContext } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import ModalLadderResults from "../../../pages/stryda/ladders/modal-ladderresults";
+import { usePrototypeData } from "@/contexts/prototype";
+import ModalLadderResults from "@/pages/stryda/ladders/modal-ladderresults";
 import Link from "next/link";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import Avatar from "../../../components/Avatar/Avatar";
-import ResetsIn from "../../../components/Countdown/ResetsIn";
-import GameIcon from "../../../components/GameIcon/GameIcon";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import Avatar from "@/components/Avatar/Avatar";
+import ResetsIn from "@/components/Countdown/ResetsIn";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
 const NOW_IN_MS = new Date().getTime();

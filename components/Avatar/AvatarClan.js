@@ -6,7 +6,7 @@ import React, {
   useState,
 } from "react";
 import { useRouter } from "next/router";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";

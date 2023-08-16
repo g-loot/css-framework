@@ -7,7 +7,7 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import TabTournamentsActive from "../tournaments/tab-active";
 import TabTournamentsFinished from "../tournaments/tab-finished";
 import TabTournamentsHowItWorks from "../tournaments/tab-howitworks";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

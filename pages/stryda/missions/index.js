@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
 import TabMissionsHistory from "./tab-history";
 import TabMissionsLeaderboard from "./tab-leaderboard";
 import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import Structure from "../components/Structure";
-import Loader from "../components/Loader";
+import Structure from "@/pages/stryda/components/Structure";
+import Loader from "@/pages/stryda/components/Loader";
 
 const TabsItems = [
   {
@@ -151,7 +151,7 @@ export default function Missions() {
                 </div>
               </div>
               <div className="header-bg">
-                <img src={selectedGame.assets.heroV2} />
+                <img src={selectedGame.assets.heroV2} alt="" />
               </div>
             </section>
             <nav>

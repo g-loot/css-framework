@@ -1,9 +1,9 @@
 import { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
-import Avatar from "../../components/Avatar/Avatar";
-import { UiContext } from "../../contexts/ui.js";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import Avatar from "@/components/Avatar/Avatar";
+import { UiContext } from "@/contexts/ui.js";
 
 export default function ModalLevelUp(props) {
   const uiContext = useContext(UiContext);

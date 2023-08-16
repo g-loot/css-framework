@@ -1,7 +1,7 @@
-import Ad from "../../../components/Ad/Ad";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import Ad from "@/components/Ad/Ad";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const Teams = [

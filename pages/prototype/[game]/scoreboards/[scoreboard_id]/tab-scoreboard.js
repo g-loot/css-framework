@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
-import { UiContext } from "../../../../../contexts/ui";
-import { usePrototypeData } from "../../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
-import { DataScoreboards } from "../../../../../mock-data/data-scoreboards";
+import { DataScoreboards } from "@/mock-data/data-scoreboards";
 import ScoreboardFilterSelect from "../components/scoreboardFilterSelect";
 import Link from "next/link";
 import Avatar from "../../../../../components/Avatar/Avatar";

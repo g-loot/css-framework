@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function LaddersHeader(props) {
@@ -151,7 +151,7 @@ export default function LaddersHeader(props) {
             </div>
           </div>
           <div className="header-bg">
-            <img src={selectedGame.assets.heroV2} />
+            <img src={selectedGame.assets.heroV2} alt="" />
           </div>
         </section>
       )}

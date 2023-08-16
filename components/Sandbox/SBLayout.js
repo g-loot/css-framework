@@ -5,7 +5,7 @@ import Link from "next/link";
 import SBHead from "./SBHead";
 import SBMainNav from "./SBMainNav";
 import SBTopBar from "./SBTopBar";
-import { SBpages } from "../../pages/api/sandbox/pages";
+import { SBpages } from "@/pages/api/sandbox/pages";
 import { getLayout as getSiteLayout } from "../SiteLayout";
 import { useRouter } from "next/router";
 

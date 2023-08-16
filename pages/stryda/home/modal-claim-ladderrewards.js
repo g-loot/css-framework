@@ -1,9 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import { UiContext } from "../../../contexts/ui.js";
-import { VariablesContext } from "../../../contexts/variables";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
 
 export default function ModalClaimLadderRewards(props) {
   const uiContext = useContext(UiContext);

@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
 
-import { UiContext } from "../../../../contexts/ui.js";
-import { usePrototypeData } from "../../../../contexts/prototype.js";
-import { VariablesContext } from "../../../../contexts/variables.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
+import { VariablesContext } from "@/contexts/variables.js";
 import { useRouter } from "next/router";
 import ResetsIn from "../../../../components/Countdown/ResetsIn.js";
 import Tooltip from "../../../../components/Tooltip/Tooltip.js";

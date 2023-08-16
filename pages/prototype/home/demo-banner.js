@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { UiContext } from "../../../contexts/ui";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
 export default function Home() {

@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'icons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1691745114/Stryda/icons/v104/icons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1691745114/Stryda/icons/v104/icons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1692107620/Stryda/icons/v104/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1692107620/Stryda/icons/v104/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -220,7 +220,7 @@
 }
 
 .icon-logo-twitter::before {
-  content: "\ea24";
+  content: "\ec2e"; /* \ea24 */
 }
 
 .icon-logo-paypal::before {
@@ -2237,4 +2237,8 @@
 
 .icon-heart-outline::before {
   content: "\ec25";
+}
+
+.icon-logo-x::before {
+  content: "\ec2e";
 }

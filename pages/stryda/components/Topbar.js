@@ -3,18 +3,18 @@ import { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import Lottie from "lottie-react";
 import { useRouter } from "next/router";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import ModalDownloadStarted from "../../../pages/stryda/modal-downloadstarted";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Notification from "../../../components/Notification/Notification";
-import { VariablesContext } from "../../../contexts/variables";
-import TopBarClaim from "../../../components/TopBarClaim/TopBarClaim";
-import ModalBuyTokens from "../../../pages/stryda/wallet/modal-buytokens";
-import Countdown from "../../../components/Countdown/Countdown";
-import Avatar from "../../../components/Avatar/Avatar";
-import { dataNotifications } from "../../../mock-data/data-notifications";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import ModalDownloadStarted from "@/pages/stryda/modal-downloadstarted";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import Notification from "@/components/Notification/Notification";
+import { VariablesContext } from "@/contexts/variables";
+import TopBarClaim from "@/components/TopBarClaim/TopBarClaim";
+import ModalBuyTokens from "@/pages/stryda/wallet/modal-buytokens";
+import Countdown from "@/components/Countdown/Countdown";
+import Avatar from "@/components/Avatar/Avatar";
+import { dataNotifications } from "@/mock-data/data-notifications";
 
 export default function Topbar() {
   const router = useRouter();
@@ -70,9 +70,7 @@ export default function Topbar() {
   return (
     <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
       <div className="container relative">
-        <div
-          className={`flex justify-between lg:gap-8 mx-auto`}
-        >
+        <div className="flex justify-between lg:gap-8 mx-auto">
           <div className="flex gap-2 items-center">
             <div className="hidden gap-2">
               <button
@@ -113,10 +111,10 @@ export default function Topbar() {
               }
             >
               <Link href={`/stryda/search${prototype.getURLparams()}`}>
-                  <a className="button button-ghost rounded-full">
-                    <span className="icon icon-zoom text-ui-200" />
-                  </a>
-                </Link>
+                <a className="button button-ghost rounded-full">
+                  <span className="icon icon-zoom text-ui-200" />
+                </a>
+              </Link>
             </Tooltip>
             <div className="md:hidden">
               <label
@@ -186,14 +184,13 @@ export default function Topbar() {
                     </Link>
                   </li>
                   <li>
-                    <a>
-                      <span>Scoreboards</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a>
-                      <span>Clan events</span>
-                    </a>
+                    <Link
+                      href={`/stryda/clanevents${prototype.getURLparams()}`}
+                    >
+                      <a>
+                        <span>Clan events</span>
+                      </a>
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -589,9 +586,7 @@ export default function Topbar() {
               <div tabIndex="1" className="dropdown-content bg-ui-500 w-52 p-1">
                 <ul className="menu menu-rounded menu-secondary">
                   <li>
-                    <Link
-                      href={`/stryda/profile/1${prototype.getURLparams()}`}
-                    >
+                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
                       <button type="button" tabIndex="1">
                         <span className="icon icon-circle-09" />
                         <span>Profile</span>
@@ -628,7 +623,9 @@ export default function Topbar() {
                     </Link>
                   </li>
                   <li>
-                    <Link href={`/stryda/recruit-a-friend/${prototype.getURLparams()}`}>
+                    <Link
+                      href={`/stryda/recruit-a-friend/${prototype.getURLparams()}`}
+                    >
                       <button type="button">
                         <span className="icon icon-b-love" />
                         <span>Recruit a friend</span>

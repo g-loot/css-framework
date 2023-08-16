@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import GameIcon from "../../../components/GameIcon/GameIcon";
-import { StatsValorantMaps } from "../../../mock-data/data-stats-valorant";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
 
 export default function FeedItemMatch(props) {

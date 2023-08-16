@@ -5,9 +5,9 @@ import ModalAddDiscord from "./modal-add-discord";
 import ModalContainer from "../../../../components/Modal/ModalContainer";
 import ModalLeaveParty from "./modal-leave-party";
 import Reward from "../../../../components/Reward/Reward";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import moment from "moment";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function TabTournamentsOverview() {

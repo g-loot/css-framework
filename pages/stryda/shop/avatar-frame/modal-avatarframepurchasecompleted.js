@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
-import { UiContext } from "../../../../contexts/ui.js";
-import { VariablesContext } from "../../../../contexts/variables.js";
-import { usePrototypeData } from "../../../../contexts/prototype.js";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../assets/animations/explosion_stryda_10.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_10.json";
 
 export default function ModalAvatarFramePurchaseCompleted(props) {
   const uiContext = useContext(UiContext);

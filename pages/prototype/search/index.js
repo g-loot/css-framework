@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import TabSearchPlayer from "./tab-searchplayer";
 import TabSearchClan from "./tab-searchclan";

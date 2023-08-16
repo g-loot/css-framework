@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../contexts/ui.js";
-import { VariablesContext } from "../../contexts/variables.js";
-import { usePrototypeData } from "../../contexts/prototype.js";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 import ModalSelectYourGame from "./modal-selectyourgame.js";
 
 export default function ModalWelcome(props) {

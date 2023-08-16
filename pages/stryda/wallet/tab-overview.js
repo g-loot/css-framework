@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
 
-import Accordion from "../../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import Link from "next/link";
 import ModalBuyTokens from "./modal-buytokens";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const WalletItems = [

@@ -4,14 +4,14 @@ import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import RewardLadder from "../../../../components/RewardLadder/RewardLadder";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Slider from "../../../../components/Slider/Slider";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards";
 import Battlepass from "../../../../components/BattlePass/BattlePass";
 import ResetsIn from "../../../../components/Countdown/ResetsIn";
-import { DataBattlepass } from "../../../../mock-data/data-battlepass";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
 
 export default function ComponentRewardLadder() {
   const router = useRouter();

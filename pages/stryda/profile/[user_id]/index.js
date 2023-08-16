@@ -3,10 +3,10 @@ import React, { useEffect, useState, useContext } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import Structure from "../../components/Structure";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import Structure from "@/pages/stryda/components/Structure";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import ModalRemoveFriend from "./modal-remove-friend";
@@ -17,9 +17,9 @@ import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
 import TabProfileFriends from "./tab-friends";
-import Loader from "../../components/Loader";
-import WidgetUser from "../../components/WidgetUser";
-import WidgetUserLeftPanel from "../../components/WidgetUserLeftPanel";
+import Loader from "@/pages/stryda/components/Loader";
+import WidgetUser from "@/pages/stryda/components/WidgetUser";
+import WidgetUserLeftPanel from "@/pages/stryda/components/WidgetUserLeftPanel";
 import Avatar from "../../../../components/Avatar/Avatar";
 
 const achievementsList = [

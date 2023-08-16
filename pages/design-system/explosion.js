@@ -1,18 +1,18 @@
 import React, { useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../assets/animations/explosion_stryda_1.json";
-import LottieExplosion10 from "../../assets/animations/explosion-10.json";
-import LottieExplosion11 from "../../assets/animations/explosion-11.json";
-import LottieExplosion2 from "../../assets/animations/explosion_stryda_2.json";
-import LottieExplosion3 from "../../assets/animations/explosion_stryda_3.json";
-import LottieExplosion4 from "../../assets/animations/explosion_stryda_4.json";
-import LottieExplosion5 from "../../assets/animations/explosion_stryda_5.json";
-import LottieExplosion6 from "../../assets/animations/explosion_stryda_6.json";
-import LottieExplosion7 from "../../assets/animations/explosion_stryda_7.json";
-import LottieExplosion8 from "../../assets/animations/explosion_stryda_8.json";
-import LottieExplosion9 from "../../assets/animations/explosion_stryda_9.json";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import LottieExplosion1 from "@/assets/animations/explosion_stryda_1.json";
+import LottieExplosion10 from "@/assets/animations/explosion-10.json";
+import LottieExplosion11 from "@/assets/animations/explosion-11.json";
+import LottieExplosion2 from "@/assets/animations/explosion_stryda_2.json";
+import LottieExplosion3 from "@/assets/animations/explosion_stryda_3.json";
+import LottieExplosion4 from "@/assets/animations/explosion_stryda_4.json";
+import LottieExplosion5 from "@/assets/animations/explosion_stryda_5.json";
+import LottieExplosion6 from "@/assets/animations/explosion_stryda_6.json";
+import LottieExplosion7 from "@/assets/animations/explosion_stryda_7.json";
+import LottieExplosion8 from "@/assets/animations/explosion_stryda_8.json";
+import LottieExplosion9 from "@/assets/animations/explosion_stryda_9.json";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [StartAnim1, setStartAnim1] = useState(false);

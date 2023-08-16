@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useState } from "react";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function LaddersHeader(props) {

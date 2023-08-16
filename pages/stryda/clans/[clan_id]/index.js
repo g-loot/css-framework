@@ -2,14 +2,14 @@ import React, { useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import Structure from "../../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 import TabClanMembers from "./tab-members";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
 import TabClanApplications from "./tab-applications";
 import TabClanStats from "./tab-stats";
 import TabClanAbout from "./tab-about";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
 

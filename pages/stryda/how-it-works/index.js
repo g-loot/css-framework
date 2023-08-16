@@ -1,7 +1,7 @@
-import Structure from "../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import FAQ from "../../../components/FAQ/FAQ";
+import FAQ from "@/components/FAQ/FAQ";
 
 const TabsItems = [
   {

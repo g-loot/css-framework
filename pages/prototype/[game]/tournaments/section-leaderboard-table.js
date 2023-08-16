@@ -3,8 +3,8 @@ import React, { useContext, useEffect, useRef, useState } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
 import ModalContainer from "../../../../components/Modal/ModalContainer";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import LeaderboardWings from "../../../../components/LeaderboardWings/LeaderboardWings";
 

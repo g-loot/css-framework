@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useContext } from "react";
 
 import ModalToastProvider from "./ModalToastProvider";
-import { PrototypeProvider } from "../contexts/prototype";
-import UiContextProvider from "../contexts/ui.js";
-import VariablesContextProvider from "../contexts/variables";
+import { PrototypeProvider } from "@/contexts/prototype";
+import UiContextProvider from "@/contexts/ui.js";
+import VariablesContextProvider from "@/contexts/variables";
 import { useRouter } from "next/router";
 
 const SiteLayout = ({ children }) => {

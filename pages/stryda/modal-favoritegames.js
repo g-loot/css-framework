@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../contexts/ui.js";
-import { VariablesContext } from "../../contexts/variables";
-import { usePrototypeData } from "../../contexts/prototype";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function ModalFavoriteGames(props) {
   const uiContext = useContext(UiContext);

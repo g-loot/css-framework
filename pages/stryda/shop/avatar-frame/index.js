@@ -2,12 +2,12 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ModalAvatarFramePurchaseConfirmation from "./modal-avatarframepurchaseconfirmation";
 import ModalAvatarFramePurchaseCompleted from "./modal-avatarframepurchasecompleted";
-import Structure from "../../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 
 export default function Home() {
   const router = useRouter();

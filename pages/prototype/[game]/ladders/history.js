@@ -4,8 +4,8 @@ import Ad from "../../../../components/Ad/Ad";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabLaddersHistory from "./tab-history";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
 

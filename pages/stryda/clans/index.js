@@ -1,14 +1,14 @@
 import React, { useContext, useEffect } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import ModalClanCreate from "./modal-clan-create";
-import Structure from "../components/Structure";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import Structure from "@/pages/stryda/components/Structure";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import Slider from "../../../components/Slider/Slider";
-import CardClan from "../components/CardClan";
+import Slider from "@/components/Slider/Slider";
+import CardClan from "@/pages/stryda/components/CardClan";
 
 export default function Clan() {
   const router = useRouter();

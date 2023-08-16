@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import FAQ from "../../../../components/FAQ/FAQ";
 

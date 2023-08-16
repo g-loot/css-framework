@@ -1,15 +1,15 @@
 import React, { useContext, useEffect, useState } from "react";
 
 import { useRouter } from "next/router";
-import LadderCardSecondary from "../../../components/Ladder/LadderCardSecondary";
-import Slider from "../../../components/Slider/Slider";
-import { UiContext } from "../../../contexts/ui";
-import { VariablesContext } from "../../../contexts/variables";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Tooltip from "../../../components/Tooltip/Tooltip";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import Slider from "@/components/Slider/Slider";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import Link from "next/link";
-import CardMissionSecondary from "../../../components/Card/CardMissionSecondary";
-import ButtonStatsUpdate from "../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
+import CardMissionSecondary from "@/components/Card/CardMissionSecondary";
+import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 export default function HomeLadderMissions(props) {
   const { query } = useRouter();

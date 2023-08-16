@@ -3,7 +3,7 @@ import React, { useContext } from "react";
 import ModalContainer from "./Modal/ModalContainer";
 import ToastContainer from "./Toast/ToastContainer";
 import AlertContainer from "./Alert/AlertContainer";
-import { UiContext } from "../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 
 const ModalToastProvider = ({ children }) => {
   const uiContext = useContext(UiContext);

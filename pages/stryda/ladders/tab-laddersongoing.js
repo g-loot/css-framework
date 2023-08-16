@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import CardLadder from "../components/CardLadder";
-import Slider from "../../../components/Slider/Slider";
-import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
+import CardLadder from "@/pages/stryda/components/CardLadder";
+import Slider from "@/components/Slider/Slider";
+import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber";
 
 export default function TabLaddersOngoing() {
   const router = useRouter();

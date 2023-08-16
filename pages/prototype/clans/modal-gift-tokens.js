@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import InputNumber from "../../../components/InputNumber/InputNumber.js";
-import { UiContext } from "../../../contexts/ui.js";
-import { usePrototypeData } from "../../../contexts/prototype.js";
+import InputNumber from "@/components/InputNumber/InputNumber.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 
 export default function ModalGiftTokens(props) {
   const uiContext = useContext(UiContext);

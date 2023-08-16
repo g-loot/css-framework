@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
-import { usePrototypeData } from "../../../../../contexts/prototype";
-import LottieExplosion1 from "../../../../../assets/animations/explosion_stryda_9.json";
-import LottieExplosion2 from "../../../../../assets/animations/explosion_stryda_1.json";
-import { VariablesContext } from "../../../../../contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
+import LottieExplosion1 from "@/assets/animations/explosion_stryda_9.json";
+import LottieExplosion2 from "@/assets/animations/explosion_stryda_1.json";
+import { VariablesContext } from "@/contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import XPBoostList from "../../../../../components/XPBoostList/XPBoostList";
 

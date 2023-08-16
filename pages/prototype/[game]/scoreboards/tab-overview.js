@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useRouter } from "next/router";
 
-import { DataScoreboards } from "../../../../mock-data/data-scoreboards";
+import { DataScoreboards } from "@/mock-data/data-scoreboards";
 import ScoreboardOverview from "./components/scoreboardOverview";
 
 export default function TabScoreboardsOverview() {

@@ -4,7 +4,7 @@ import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
 import Reward from "../../../../components/Reward/Reward";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ResetsIn from "../../../../components/Countdown/ResetsIn";

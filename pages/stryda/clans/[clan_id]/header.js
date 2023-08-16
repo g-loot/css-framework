@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ReadMore from "../../../../components/ReadMore/ReadMore";
 import GameIcon from "../../../../components/GameIcon/GameIcon";
 

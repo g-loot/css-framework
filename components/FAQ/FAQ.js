@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Accordion from "../Accordion/Accordion";
 import Link from "next/link";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function FAQ(props) {
   const prototype = usePrototypeData(); 

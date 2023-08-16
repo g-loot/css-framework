@@ -1,8 +1,8 @@
 import Link from "next/link";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-1.json";
+import LottieExplosion from "@/assets/animations/explosion-1.json";
 import Tooltip from "../Tooltip/Tooltip";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function CardMission(props) {

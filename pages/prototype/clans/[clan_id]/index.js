@@ -9,7 +9,7 @@ import TabClanChat from "./tab-chat";
 import TabClanApplications from "./tab-applications";
 import TabClanStats from "./tab-stats";
 import TabClanAbout from "./tab-about";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
 

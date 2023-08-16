@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useId, useRef, useState } from "react";
 
-import { PrototypeContext } from "../../contexts/prototype";
+import { PrototypeContext } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function PrototypeGamesNavItem(props) {

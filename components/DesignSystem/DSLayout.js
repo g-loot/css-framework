@@ -3,7 +3,7 @@ import React, { useContext, useRef, useState } from "react";
 import DSHead from "./DSHead";
 import DSMainNav from "./DSMainNav";
 import DSTopBar from "./DSTopBar";
-import { DSpages } from "../../pages/api/designsystem/pages";
+import { DSpages } from "@/pages/api/designsystem/pages";
 import Footer from "../Footer/Footer";
 import Link from "next/link";
 import { getLayout as getSiteLayout } from "../SiteLayout";

@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 
-import ListItemTournament from "../../components/ListItem/ListItemTournament";
+import ListItemTournament from "@/components/ListItem/ListItemTournament";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-2.json";
-import { UiContext } from "../../contexts/ui.js";
-import { usePrototypeData } from "../../contexts/prototype";
+import LottieExplosion from "@/assets/animations/explosion-2.json";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function ModalDownloadStarted(props) {
   const uiContext = useContext(UiContext);

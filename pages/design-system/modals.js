@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
 import Modal1 from "./modals/modal-example-1";
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);

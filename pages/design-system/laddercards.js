@@ -1,8 +1,8 @@
-import Countdown from "../../components/Countdown/Countdown";
+import Countdown from "@/components/Countdown/Countdown";
 import React, { useContext } from "react";
-import Tooltip from "../../components/Tooltip/Tooltip";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
-import { UiContext } from "../../contexts/ui";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
+import { UiContext } from "@/contexts/ui";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();

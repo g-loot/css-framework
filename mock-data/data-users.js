@@ -298,8 +298,7 @@ export const dataUsers = [
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg",
     email: "kes@gmail.com",
     clan: null,
-    socials: {
-    },
+    socials: {},
     shopItems: {
       avatarFrame: false,
       profileBanner: false,
@@ -407,6 +406,52 @@ export const dataUsers = [
       badges: [],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 4,
@@ -517,6 +562,52 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 5,
@@ -634,6 +725,52 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 6,
@@ -726,6 +863,52 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 7,
@@ -822,6 +1005,52 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 8,
@@ -917,6 +1146,52 @@ export const dataUsers = [
       ],
     },
     friends: [4, 8, 11],
+    videos: [
+      {
+        id: 0,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/ED08E6E4D05877E81_0_3.final.mp4",
+        },
+        date: "1 day ago",
+        stats: {
+          views: "1.4k",
+        },
+      },
+      {
+        id: 1,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/E5988314326A00D41_0_3.final.mp4",
+        },
+        date: "2 days ago",
+        stats: {
+          views: "1.1k",
+        },
+      },
+      {
+        id: 2,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1692013194/Stryda/demo/game%20footage/C9BF9C6456592A001_0_3.final.mp4",
+        },
+        date: "1 week ago",
+        stats: {
+          views: "0.8k",
+        },
+      },
+      {
+        id: 3,
+        game: 1,
+        media: {
+          url: "https://res.cloudinary.com/gloot/video/upload/v1691649725/Stryda/demo/game%20footage/4BFBEDE4D6EB046B1_0_3.final.mp4",
+        },
+        date: "1 month ago",
+        stats: {
+          views: "3.4k",
+        },
+      },
+    ],
   },
   {
     id: 9,

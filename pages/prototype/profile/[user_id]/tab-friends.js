@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";

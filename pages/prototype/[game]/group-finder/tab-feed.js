@@ -3,11 +3,11 @@ import { useContext, useEffect, useState } from "react";
 import Accordion from "../../../../components/Accordion/Accordion";
 import Link from "next/link";
 import ModalBuyTokens from "./modal-buytokens";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
-import { DataGroupFinderPosts } from "../../../../mock-data/data-groupfinder";
+import { DataGroupFinderPosts } from "@/mock-data/data-groupfinder";
 import Avatar from "../../../../components/Avatar/Avatar";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 

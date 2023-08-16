@@ -1,17 +1,17 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
-import { usePrototypeData } from "../../../contexts/prototype.js";
-import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
-import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
+import { DataBattlepass } from "@/mock-data/data-battlepass.js";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/Battlepass_Behind_1500ms.json";
-import LottieExplosion2 from "../../../assets/animations/Battlepass_Front_1500ms.json";
+import LottieExplosion from "@/assets/animations/Battlepass_Behind_1500ms.json";
+import LottieExplosion2 from "@/assets/animations/Battlepass_Front_1500ms.json";
 import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium.js";
-import ResetsIn from "../../../components/Countdown/ResetsIn.js";
-import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo.js";
-import Slider from "../../../components/Slider/Slider.js";
+import ResetsIn from "@/components/Countdown/ResetsIn.js";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo.js";
+import Slider from "@/components/Slider/Slider.js";
 
 export default function ModalBattlepassCompletedBonusSteps(props) {
   const uiContext = useContext(UiContext);

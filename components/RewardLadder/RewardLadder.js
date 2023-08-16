@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import ModalClaimLadderRewards from "../../pages/prototype/home/modal-claim-ladderrewards";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
-import { usePrototypeData } from "../../contexts/prototype";
+import ModalClaimLadderRewards from "@/pages/prototype/home/modal-claim-ladderrewards";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Avatar from "../Avatar/Avatar";
 

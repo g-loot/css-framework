@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 
 import Link from "next/link";
-import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
-import Tooltip from "../../../components/Tooltip/Tooltip";
+import PrototypeAuth from "@/components/Prototype/PrototypeAuth";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function AuthLogin() {
   const [emailStr, setEmailStr] = useState(0);

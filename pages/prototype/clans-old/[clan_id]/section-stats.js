@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function SectionClanStats() {

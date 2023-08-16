@@ -1,15 +1,15 @@
 import React, { useEffect, useState, useContext } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import Battlepass from "../../../components/BattlePass/BattlePass";
-import { DataBattlepass } from "../../../mock-data/data-battlepass";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import ResetsIn from "../../../components/Countdown/ResetsIn";
+import { usePrototypeData } from "@/contexts/prototype";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import Battlepass from "@/components/BattlePass/BattlePass";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ResetsIn from "@/components/Countdown/ResetsIn";
 import ModalBattlepassCompletedBonusSteps from "./modal-battlepass-completed-bonus";
 import ModalBattlepassCompletedClaim from "./modal-battlepass-completed-claim";
 import ModalBattlepassCompletedSummary from "./modal-battlepass-completed-summary";
 import ModalBattlepassCompletedPremium from "./modal-battlepass-completed-premium";
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
 export default function BattlepassPage() {

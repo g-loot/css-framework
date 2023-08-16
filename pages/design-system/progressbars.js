@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 function RandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;

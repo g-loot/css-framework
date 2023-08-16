@@ -1,19 +1,19 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-1.json";
-import LottieExplosionLvl from "../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
-import LottieExplosionLvl1 from "../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
-import LottieExplosionLvl2 from "../../assets/animations/Mission_Reveal_Lvl_2_1600ms.json";
-import LottieExplosionLvl3 from "../../assets/animations/Mission_Reveal_Lvl_3_1900ms.json";
-import LottieExplosionLvl4 from "../../assets/animations/Mission_Reveal_Lvl_4_2900ms.json";
+import LottieExplosion from "@/assets/animations/explosion-1.json";
+import LottieExplosionLvl from "@/assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl1 from "@/assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl2 from "@/assets/animations/Mission_Reveal_Lvl_2_1600ms.json";
+import LottieExplosionLvl3 from "@/assets/animations/Mission_Reveal_Lvl_3_1900ms.json";
+import LottieExplosionLvl4 from "@/assets/animations/Mission_Reveal_Lvl_4_2900ms.json";
 import Tooltip from "../Tooltip/Tooltip";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { VariablesContext } from "../../contexts/variables";
+import { VariablesContext } from "@/contexts/variables";
 import Countdown from "../Countdown/Countdown";
-import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
-import ModalDiscardMission from "../../pages/prototype/home/modal-discard-mission";
-import { UiContext } from "../../contexts/ui";
+import ModalClaimMission from "@/pages/prototype/home/modal-claim-mission";
+import ModalDiscardMission from "@/pages/prototype/home/modal-discard-mission";
+import { UiContext } from "@/contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 
 export default function CardMissionSecondary(props) {

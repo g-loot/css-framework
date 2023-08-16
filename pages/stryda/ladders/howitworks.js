@@ -1,11 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import Structure from "../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 import TabLaddersHowItWorks from "./tab-howitworks";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
 

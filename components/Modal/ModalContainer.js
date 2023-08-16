@@ -1,7 +1,7 @@
 import React, { Fragment, useContext } from "react";
 
 import ReactDOM from "react-dom";
-import { UiContext } from "../../contexts/ui.js";
+import { UiContext } from "@/contexts/ui.js";
 
 function overlayClickHandler() {
   

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
-import ToastContainer from "../../components/Toast/ToastContainer";
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import ToastContainer from "@/components/Toast/ToastContainer";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);

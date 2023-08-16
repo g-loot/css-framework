@@ -1,23 +1,23 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
-import { usePrototypeData } from "../../../contexts/prototype";
-import WidgetUser from "../components/WidgetUser";
-import Structure from "../components/Structure";
+import { usePrototypeData } from "@/contexts/prototype";
+import WidgetUser from "@/pages/stryda/components/WidgetUser";
+import Structure from "@/pages/stryda/components/Structure";
 import Link from "next/link";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import Avatar from "../../../components/Avatar/Avatar";
-import Loader from "../components/Loader";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import Avatar from "@/components/Avatar/Avatar";
+import Loader from "@/pages/stryda/components/Loader";
 import ModalGiftTokens from "../clans/modal-gift-tokens";
-import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
-import Feed from "../components/Feed";
-import CardMission from "../components/CardMission";
-import CardLadder from "../components/CardLadder";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
+import Feed from "@/pages/stryda/components/Feed";
+import CardMission from "@/pages/stryda/components/CardMission";
+import CardLadder from "@/pages/stryda/components/CardLadder";
 import ModalBuyTokens from "../wallet/modal-buytokens";
-import Battlepass from "../../../components/BattlePass/BattlePass";
-import ButtonFeedback from "../../../components/Button/ButtonFeedback";
+import Battlepass from "@/components/BattlePass/BattlePass";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
 export default function Home() {
   const router = useRouter();

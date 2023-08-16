@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
-import PrototypeAuth from "../../../components/Prototype/PrototypeAuth";
-import { UiContext } from "../../../contexts/ui";
+import PrototypeAuth from "@/components/Prototype/PrototypeAuth";
+import { UiContext } from "@/contexts/ui";
 
 export default function AuthStep3() {
   const uiContext = useContext(UiContext);

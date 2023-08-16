@@ -1,20 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../components/Ad/Ad";
-import Carousel from "../../../components/Carousel/Carousel";
-import Countdown from "../../../components/Countdown/Countdown";
-import DailyReward from "../../../components/DailyReward/DailyReward";
+import Ad from "@/components/Ad/Ad";
+import Carousel from "@/components/Carousel/Carousel";
+import Countdown from "@/components/Countdown/Countdown";
+import DailyReward from "@/components/DailyReward/DailyReward";
 import Link from "next/link";
-import ListItemLadder from "../../../components/ListItem/ListItemLadder";
+import ListItemLadder from "@/components/ListItem/ListItemLadder";
 import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../contexts/ui";
-import { VariablesContext } from "../../../contexts/variables";
-import { usePrototypeData } from "../../../contexts/prototype";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import RewardLadder from "@/components/RewardLadder/RewardLadder";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function Home() {

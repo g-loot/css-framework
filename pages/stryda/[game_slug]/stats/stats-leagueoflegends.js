@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
-import { UiContext } from "../../../../contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 import Accordion from "../../../../components/Accordion/Accordion";
-import { StatsLeagueOfLegendsChampions } from "../../../../mock-data/data-stats-leagueoflegends";
-import { StatsLeagueOfLegendsRanks } from "../../../../mock-data/data-stats-leagueoflegends";
-import { StatsLeagueOfLegendsSpells } from "../../../../mock-data/data-stats-leagueoflegends";
-import { StatsLeagueOfLegendsItems } from "../../../../mock-data/data-stats-leagueoflegends";
-import { StatsLeagueOfLegendsDemoFavoriteChampions } from "../../../../mock-data/data-stats-demo-leagueoflegends";
-import { StatsLeagueOfLegendsDemoGeneral } from "../../../../mock-data/data-stats-demo-leagueoflegends";
-import { StatsLeagueOfLegendsDemoLatestMatches } from "../../../../mock-data/data-stats-demo-leagueoflegends";
+import { StatsLeagueOfLegendsChampions } from "@/mock-data/data-stats-leagueoflegends";
+import { StatsLeagueOfLegendsRanks } from "@/mock-data/data-stats-leagueoflegends";
+import { StatsLeagueOfLegendsSpells } from "@/mock-data/data-stats-leagueoflegends";
+import { StatsLeagueOfLegendsItems } from "@/mock-data/data-stats-leagueoflegends";
+import { StatsLeagueOfLegendsDemoFavoriteChampions } from "@/mock-data/data-stats-demo-leagueoflegends";
+import { StatsLeagueOfLegendsDemoGeneral } from "@/mock-data/data-stats-demo-leagueoflegends";
+import { StatsLeagueOfLegendsDemoLatestMatches } from "@/mock-data/data-stats-demo-leagueoflegends";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
 import LoadMoreContainer from "../../../../components/LoadMore/LoadMoreContainer";
 import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
@@ -24,7 +24,7 @@ export default function StatsLeagueOfLegends() {
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedGeneralStat, setSelectedGeneralStat] = useState(0);
   const [selectedStat, setSelectedStat] = useState(null);
-  const { game } = router.query;
+  const { game_slug } = router.query;
   const variant = query.variant ? query.variant : 0;
   const [loading, setLoading] = useState(true);
   const [maxMap, setMaxMap] = useState(3);
@@ -50,8 +50,8 @@ export default function StatsLeagueOfLegends() {
   }, [isPremium]);
 
   useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
+    setSelectedGame(prototype.getGameBySlug(game_slug));
+  }, [game_slug, prototype]);
 
   useEffect(() => {
     setSelectedGeneralStat(variant);

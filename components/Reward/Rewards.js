@@ -1,4 +1,4 @@
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 import Reward from "./Reward";
 

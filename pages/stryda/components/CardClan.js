@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
-import GameIcon from "../../../components/GameIcon/GameIcon";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 export default function CardClan(props) {
   const uiContext = useContext(UiContext);

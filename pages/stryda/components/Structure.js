@@ -2,8 +2,8 @@ import React, { useContext, useEffect } from "react";
 import Head from "next/head";
 import Topbar from "./Topbar";
 import Footer from "./Footer";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import ModalFavoriteGames from "../modal-favoritegames";
 
 export default function Structure({ children, title, gamePicker }) {

@@ -1,10 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import { UiContext } from "../../../contexts/ui.js";
-import { VariablesContext } from "../../../contexts/variables";
-import { DataBattlepassRewards } from "../../../mock-data/data-battlepass";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
 import ModalProfileBannerPurchaseCompleted from "../shop/profile-banner/modal-profilebannerpurchasecompleted";
 import ModalAvatarFramePurchaseCompleted from "../shop/avatar-frame/modal-avatarframepurchasecompleted";
 

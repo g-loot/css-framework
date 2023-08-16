@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
 import DScolors from "../api/designsystem/colors.json";
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 function isMultipleOfThree(number) {
   if (number % 3 == 0) {

@@ -4,9 +4,9 @@ import Footer from "../../../../../components/Footer/Footer";
 import TopbarMarketing from "../../../../../components/TopBarMarketing/TopbarMarketing";
 import { getLayout } from "../../../../../components/Prototype/PrototypeLayout";
 import { useRouter } from "next/router";
-import { dataValorantGuideRoles } from "../../../../../mock-data/data-valorant-guide";
+import { dataValorantGuideRoles } from "@/mock-data/data-valorant-guide";
 import ModalValorantGuideVideo from "../modal-video";
-import { UiContext } from "../../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import Link from "next/link";
 
 const inViewport = (elem) => {

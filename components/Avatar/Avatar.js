@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import { useRouter } from "next/router";
-import { usePrototypeData } from "../../contexts/prototype";
-import { UiContext } from "../../contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import Tooltip from "../Tooltip/Tooltip";
 import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";
 import AchievementFrame from "../Achievements/AchievementFrame";
 import AchievementIcon from "../Achievements/AchievementIcon";
-import ModalGiftTokens from "../../pages/prototype/clans/modal-gift-tokens";
+import ModalGiftTokens from "@/pages/prototype/clans/modal-gift-tokens";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();

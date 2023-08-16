@@ -5,10 +5,10 @@ import PrototypeHead from "./PrototypeHead";
 import PrototypeLeftMenu from "./PrototypeLeftMenu";
 import PrototypeLeftMenuNew from "./PrototypeLeftMenuNew";
 import Topbar from "../Topbar/Topbar";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { VariablesContext } from "../../contexts/variables";
-import { UiContext } from "../../contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { UiContext } from "@/contexts/ui";
 import React, { useContext } from "react";
 
 export default function PrototypeStructure({ children, title }) {

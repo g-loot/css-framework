@@ -1,9 +1,9 @@
-import Accordion from "../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import React from "react";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 import Link from "next/link";
-import Notification from "../../components/Notification/Notification";
-import { dataNotifications } from "../../mock-data/data-notifications";
+import Notification from "@/components/Notification/Notification";
+import { dataNotifications } from "@/mock-data/data-notifications";
 
 const DSpage = () => {
   return (

@@ -3,8 +3,8 @@ import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";
 import ResetsIn from "../Countdown/ResetsIn";
 import AvatarClan from "../Avatar/AvatarClan";
-import { VariablesContext } from "../../contexts/variables";
-import { usePrototypeData } from "../../contexts/prototype";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 
 const ClanEventCard = (props) => {

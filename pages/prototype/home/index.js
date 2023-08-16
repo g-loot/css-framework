@@ -1,20 +1,20 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../components/Ad/Ad";
-import Carousel from "../../../components/Carousel/Carousel";
+import Ad from "@/components/Ad/Ad";
+import Carousel from "@/components/Carousel/Carousel";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "../[game]/ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import RewardLadder from "../../../components/RewardLadder/RewardLadder";
-import { UiContext } from "../../../contexts/ui";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import RewardLadder from "@/components/RewardLadder/RewardLadder";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 import HomeLaddersSolo from "./component-ladders-solo";
 import HomeLaddersClan from "./component-ladders-clan";
 import HomeLadderMissions from "./component-ladders-missions";
 import ComponentRewardLadder from "../[game]/missions/component-rewardladder";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function Home() {
   const { query } = useRouter();

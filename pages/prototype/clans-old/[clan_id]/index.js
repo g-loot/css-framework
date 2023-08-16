@@ -7,7 +7,7 @@ import PrototypeStructure from "../../../../components/Prototype/PrototypeStruct
 import SectionClanActivity from "./section-activity";
 import TabClanActivity from "./tab-activity";
 import TabClanChat from "./tab-chat";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ClanHeader from "./header";
 

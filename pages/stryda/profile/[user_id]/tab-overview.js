@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ReadMore from "../../../../components/ReadMore/ReadMore";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
@@ -15,7 +15,7 @@ import GameIcon from "../../../../components/GameIcon/GameIcon";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "./header";
-import Video from "../../components/Video";
+import Video from "@/pages/stryda/components/Video";
 
 export default function TabProfileOverview() {
   const router = useRouter();
@@ -93,11 +93,8 @@ export default function TabProfileOverview() {
                   >
                     <div className="flex gap-4 px-4">
                       {selectedUser.videos.map((item, itemIndex) => (
-                        <div
-                          key={itemIndex}
-                          className="w-[75dvw] md:w-96 aspect-video rounded overflow-hidden"
-                        >
-                          <Video item={item} />
+                        <div key={itemIndex} className="w-[75dvw] md:w-96">
+                          <Video item={item} hasMeta={true} />
                         </div>
                       ))}
                     </div>

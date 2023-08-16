@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef, useState } from "react";
 
-import { UiContext } from "../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 
 export default function Toast(props) {
   const uiContext = useContext(UiContext);

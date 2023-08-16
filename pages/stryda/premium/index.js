@@ -1,10 +1,10 @@
 import { useContext, useEffect, useState } from "react";
-import Structure from "../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import ModalBuyPremium from "./modal-buypremium";
-import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
-import { usePrototypeData } from "../../../contexts/prototype";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
+import { usePrototypeData } from "@/contexts/prototype";
 
 const PremiumBenefits = [
   {

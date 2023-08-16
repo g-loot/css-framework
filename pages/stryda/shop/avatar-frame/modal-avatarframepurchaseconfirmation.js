@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
-import { UiContext } from "../../../../contexts/ui.js";
-import { VariablesContext } from "../../../../contexts/variables.js";
-import { usePrototypeData } from "../../../../contexts/prototype.js";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 import ModalAvatarFramePurchaseCompleted from "./modal-avatarframepurchasecompleted.js";
 
 export default function ModalAvatarFramePurchaseConfirmation(props) {

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Chat from "../../components/Chat/Chat";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Chat from "@/components/Chat/Chat";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const conversationSingleOthers = [
   {

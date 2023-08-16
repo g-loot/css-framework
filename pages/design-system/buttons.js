@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import Button from "../../components/Button/Button";
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Button from "@/components/Button/Button";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");

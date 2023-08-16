@@ -1,8 +1,8 @@
 import React from "react";
-import { UiContext } from "../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useContext } from "react";
-import { usePrototypeData } from "../../contexts/prototype";
-import ModalFavoriteGames from "../../pages/prototype-new/modal-favoritegames";
+import { usePrototypeData } from "@/contexts/prototype";
+import ModalFavoriteGames from "@/pages/prototype-new/modal-favoritegames";
 
 export default function FilterGame(props) {
   const prototype = usePrototypeData();

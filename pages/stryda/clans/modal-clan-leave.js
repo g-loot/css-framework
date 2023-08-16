@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
-import { usePrototypeData } from "../../../contexts/prototype.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 
 export default function ModalClanLeave(props) {
   const uiContext = useContext(UiContext);

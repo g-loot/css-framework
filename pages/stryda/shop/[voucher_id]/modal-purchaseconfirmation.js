@@ -1,8 +1,8 @@
 import React, { useContext, useState, useEffect } from "react";
-import { UiContext } from "../../../../contexts/ui.js";
-import { usePrototypeData } from "../../../../contexts/prototype.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 import ModalPurchaseCompleted from "./modal-purchasecompleted.js";
-import { dataVouchers } from "../../../../mock-data/data-vouchers.js";
+import { dataVouchers } from "@/mock-data/data-vouchers.js";
 
 export default function ModalPurchaseConfirmation(props) {
   const uiContext = useContext(UiContext);

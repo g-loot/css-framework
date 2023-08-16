@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 
-import Footer from "../../components/Footer/Footer";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
-import MatchToggle from "../../components/MatchToggle/MatchToggle";
+import Footer from "@/components/Footer/Footer";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
+import MatchToggle from "@/components/MatchToggle/MatchToggle";
 
 const DSpage = () => {
   const [randomNum1, setRandomNum1] = useState(1);

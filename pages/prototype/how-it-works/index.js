@@ -1,8 +1,8 @@
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import useFetch from "../../../hooks/use-fetch";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import FAQ from "../../../components/FAQ/FAQ";
+import FAQ from "@/components/FAQ/FAQ";
 
 const TabsItems = [
   {

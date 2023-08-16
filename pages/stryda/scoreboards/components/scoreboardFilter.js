@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { DataScoreboardFilters } from "../../../../mock-data/data-scoreboards";
+import { DataScoreboardFilters } from "@/mock-data/data-scoreboards";
 
 export default function ScoreboardFilter({item}) {
 

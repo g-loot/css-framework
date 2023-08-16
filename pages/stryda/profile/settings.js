@@ -1,14 +1,14 @@
 import { useContext, useState, useEffect } from "react";
 
-import Ad from "../../../components/Ad/Ad";
-import Structure from "../components/Structure";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
+import Ad from "@/components/Ad/Ad";
+import Structure from "@/pages/stryda/components/Structure";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import TextareaExpandable from "../../../components/Textarea/TextareaExpandable";
-import Tooltip from "../../../components/Tooltip/Tooltip";
+import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import Link from "next/link";
-import Avatar from "../../../components/Avatar/Avatar";
+import Avatar from "@/components/Avatar/Avatar";
 import ModalAvatarEdit from "./[user_id]/modal-avataredit";
 import ModalBannerEdit from "./[user_id]/modal-banneredit";
 

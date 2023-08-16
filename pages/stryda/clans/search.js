@@ -1,12 +1,12 @@
 import React, { useContext, useEffect } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import ModalClanCreate from "./modal-clan-create";
-import ModalContainer from "../../../components/Modal/ModalContainer";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import ModalContainer from "@/components/Modal/ModalContainer";
+import Structure from "../components/Structure";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function ClanSearch() {
@@ -28,7 +28,7 @@ export default function ClanSearch() {
 
   return (
     <>
-      <PrototypeStructure title="Clans">
+      <Structure title="Clans">
         <Ad width="1005" height="124" />
         <h1 className="mt-2 mb-4 px-4 sm:px-0">Find clans</h1>
         <section className="surface surface-dimmed sm:rounded-lg p-4 mb-4">
@@ -249,7 +249,7 @@ export default function ClanSearch() {
             </ul>
           </div>
         </section>
-      </PrototypeStructure>
+      </Structure>
     </>
   );
 }

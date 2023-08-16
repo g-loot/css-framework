@@ -1,11 +1,11 @@
 import { useContext } from "react";
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import ModalBuyTokens from "../wallet/modal-buytokens";
-import dataShopitems from "../../../mock-data/data-shopitems";
+import dataShopitems from "@/mock-data/data-shopitems";
 
 export default function Home() {
   const prototype = usePrototypeData();

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Carousel from "../../components/Carousel/Carousel";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Carousel from "@/components/Carousel/Carousel";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const slides = [

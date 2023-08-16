@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
 import { useRouter } from "next/router";
 
 export default function Slider(props) {

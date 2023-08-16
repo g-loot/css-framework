@@ -1,16 +1,16 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import ModalRemoveFriend from "./modal-remove-friend";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import Avatar from "../../../components/Avatar/Avatar";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import GameIcon from "../../../components/GameIcon/GameIcon";
-import ButtonSorting from "../../../components/Button/ButtonSorting";
+import { UiContext } from "@/contexts/ui";
+import Avatar from "@/components/Avatar/Avatar";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import ButtonSorting from "@/components/Button/ButtonSorting";
 
 export default function Friends() {
   const router = useRouter();

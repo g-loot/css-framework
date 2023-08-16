@@ -2,8 +2,8 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import Link from "next/link";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";

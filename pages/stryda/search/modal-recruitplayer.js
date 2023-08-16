@@ -1,9 +1,9 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
-import { VariablesContext } from "../../../contexts/variables";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
 import { useRouter } from "next/router";
-import { usePrototypeData } from "../../../contexts/prototype.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 
 export default function ModalRecruitPlayer(props) {
   const router = useRouter();

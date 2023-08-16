@@ -1,20 +1,18 @@
 import React, { Fragment, useContext, useEffect, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 
-import { usePrototypeData } from "../../../contexts/prototype";
-import WidgetUser from "../components/WidgetUser";
-import Structure from "../components/Structure";
+import { usePrototypeData } from "@/contexts/prototype";
+import WidgetUser from "@/pages/stryda/components/WidgetUser";
+import Structure from "@/pages/stryda/components/Structure";
 import Link from "next/link";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import Avatar from "../../../components/Avatar/Avatar";
-import Loader from "../components/Loader";
+import Loader from "@/pages/stryda/components/Loader";
 import ModalGiftTokens from "../clans/modal-gift-tokens";
-import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import ModalBuyTokens from "../wallet/modal-buytokens";
-import { DataFeedItems } from "../../../mock-data/data-feed";
-import FeedItemDetails from "../components/FeedItemDetails";
+import { DataFeedItems } from "@/mock-data/data-feed";
+import FeedItemDetails from "@/pages/stryda/components/FeedItemDetails";
 
 export default function Home() {
   const router = useRouter();

@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
-import ModalClaimDailyRewards from "../../pages/prototype/home/modal-claim-dailyrewards";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
+import ModalClaimDailyRewards from "@/pages/prototype/home/modal-claim-dailyrewards";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
 
 const DailyRewards = [
   {

@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
-import { usePrototypeData } from "../../../contexts/prototype.js";
-import { DataBattlepass } from "../../../mock-data/data-battlepass.js";
-import { DataBattlepassRewards } from "../../../mock-data/data-battlepass.js";
+import { UiContext } from "@/contexts/ui.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
+import { DataBattlepass } from "@/mock-data/data-battlepass.js";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass.js";
 import { useRouter } from "next/router.js";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_1.json";
-import Battlepass from "../../../components/BattlePass/BattlePass.js";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import Battlepass from "@/components/BattlePass/BattlePass.js";
 
 export default function ModalBattlepassCompletedSummary(props) {
   const uiContext = useContext(UiContext);

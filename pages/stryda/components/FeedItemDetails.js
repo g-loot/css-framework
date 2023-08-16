@@ -1,14 +1,14 @@
 import { useEffect, useState, useContext } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import GameIcon from "../../../components/GameIcon/GameIcon";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../contexts/ui";
-import { StatsValorantAgents } from "../../../mock-data/data-stats-valorant";
-import { StatsValorantRanks } from "../../../mock-data/data-stats-valorant";
-import { StatsValorantWeapons } from "../../../mock-data/data-stats-valorant";
-import { StatsValorantMaps } from "../../../mock-data/data-stats-valorant";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { UiContext } from "@/contexts/ui";
+import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
+import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
+import { StatsValorantWeapons } from "@/mock-data/data-stats-valorant";
+import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
 
 export default function FeedItemDetails(props) {
@@ -139,7 +139,7 @@ export default function FeedItemDetails(props) {
                 </div>
               </div>
             </div>
-            <div className="relative z-10 p-6 flex flex-col lg:flex-row items-start gap-4 lg:gap-6 ">
+            <div className="relative z-10 p-4 sm:p-6 flex flex-col lg:flex-row items-start gap-4 lg:gap-6 ">
               {item.meta.text && (
                 <div className="flex-1 order-2 lg:order-1">
                   <p
@@ -180,7 +180,7 @@ export default function FeedItemDetails(props) {
                 </div>
               </div>
             </div>
-            <div className="relative z-10 px-6 overflow-x-auto scrollbar-hidden">
+            <div className="relative z-10 px-4 sm:px-6 overflow-x-auto scrollbar-hidden">
               <div className="flex flex-col items-start justify-center rounded border border-ui-700 bg-ui-850/80 backdrop-blur overflow-hidden">
                 <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-hidden flex justify-start p-4">
                   <ul className="flex gap-x-8 gap-y-4 items-center mx-auto text-center divide-x divide-ui-600 leading-tight">

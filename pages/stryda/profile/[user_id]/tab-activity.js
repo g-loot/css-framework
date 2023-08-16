@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 
 import Link from "next/link";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";

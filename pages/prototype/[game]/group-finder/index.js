@@ -5,7 +5,7 @@ import Link from "next/link";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
 import TabGroupFinderFeed from "./tab-feed";
 import TabGroupFinderMyDashboard from "./tab-mydashboard";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

@@ -11,7 +11,7 @@ import TabTournamentsOverview from "./tab-overview";
 import TabTournamentsParticipants from "./tab-participants";
 import TabTournamentsRules from "./tab-rules";
 import moment from "moment";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

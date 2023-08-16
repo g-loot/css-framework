@@ -6,12 +6,12 @@ import React, {
   useCallback,
 } from "react";
 
-import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
-import { DataBattlepass } from "../../mock-data/data-battlepass";
-import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
-import { usePrototypeData } from "../../contexts/prototype";
+import ModalClaimBattlepassReward from "@/pages/prototype/home/modal-claim-battlepassrewards";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../Avatar/Avatar";

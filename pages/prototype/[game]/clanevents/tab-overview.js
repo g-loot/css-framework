@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { VariablesContext } from "../../../../contexts/variables";
+import { VariablesContext } from "@/contexts/variables";
 import ClanEventCard from "../../../../components/ClanEvent/ClanEventCard";
 
 export default function TabClanEventLeaderboardOverview() {

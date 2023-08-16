@@ -1,7 +1,7 @@
 import { useContext, useEffect, useState } from "react";
-import Structure from "../components/Structure";
-import { dataPatchNotes } from "../../../mock-data/data-patchnotes";
-import { usePrototypeData } from "../../../contexts/prototype";
+import Structure from "@/pages/stryda/components/Structure";
+import { dataPatchNotes } from "@/mock-data/data-patchnotes";
+import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
 
 const inViewport = (elem) => {
@@ -65,10 +65,10 @@ export default function PatchNotes() {
                 }}
               >
                 <div className="p-4 border-b border-ui-700 flex items-center gap-4 group">
-                  <Link href={`/prototype/patch-notes/${item.slug}${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/patch-notes/${item.slug}${prototype.getURLparams()}`}>
                     <h2 className="interactive">{item.name}</h2>
                   </Link>
-                  <Link href={`/prototype/patch-notes/${item.slug}${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/patch-notes/${item.slug}${prototype.getURLparams()}`}>
                     <a class="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
                       <span class="icon icon-url" />
                     </a>

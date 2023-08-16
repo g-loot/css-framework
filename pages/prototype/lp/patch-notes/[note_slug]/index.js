@@ -4,7 +4,7 @@ import Footer from "../../../../../components/Footer/Footer";
 import TopbarMarketing from "../../../../../components/TopBarMarketing/TopbarMarketing";
 import { getLayout } from "../../../../../components/Prototype/PrototypeLayout";
 import { useRouter } from "next/router";
-import { dataPatchNotes } from "../../../../../mock-data/data-patchnotes";
+import { dataPatchNotes } from "@/mock-data/data-patchnotes";
 import Link from "next/link";
 
 const inViewport = (elem) => {

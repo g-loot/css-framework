@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ReadMore from "../../../../components/ReadMore/ReadMore";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";

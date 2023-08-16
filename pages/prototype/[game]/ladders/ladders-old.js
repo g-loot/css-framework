@@ -9,8 +9,8 @@ import TabLaddersHistory from "./tab-history";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersOngoing from "./tab-laddersongoing";
 import TabLaddersRules from "./tab-glootrules";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

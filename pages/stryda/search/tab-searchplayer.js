@@ -2,10 +2,10 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import ModalRecruitPlayer from "./modal-recruitplayer";
-import ButtonSorting from "../../../components/Button/ButtonSorting";
+import ButtonSorting from "@/components/Button/ButtonSorting";
 
 export default function TabSearchPlayer() {
   const { query } = useRouter();

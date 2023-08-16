@@ -1,14 +1,14 @@
 import React, { useContext, useState, useEffect } from "react";
 
 import ModalClaimLadderRewards from "../prototype/home/modal-claim-dailyrewards";
-import ModalContainer from "../../components/Modal/ModalContainer";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import ModalContainer from "@/components/Modal/ModalContainer";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
-import { DataBattlepass } from "../../mock-data/data-battlepass";
-import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
-import Battlepass from "../../components/BattlePass/BattlePass";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
+import Battlepass from "@/components/BattlePass/BattlePass";
 
 const DSpage = () => {
   const [currentStep, setcurrentStep] = useState(1);

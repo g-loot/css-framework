@@ -1,13 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import Tooltip from "../Tooltip/Tooltip";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import { VariablesContext } from "../../contexts/variables";
+import { VariablesContext } from "@/contexts/variables";
 import Countdown from "../Countdown/Countdown";
-import ModalClaimMission from "../../pages/prototype/home/modal-claim-mission";
-import { UiContext } from "../../contexts/ui";
+import ModalClaimMission from "@/pages/prototype/home/modal-claim-mission";
+import { UiContext } from "@/contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 
 export default function CardMissionTableTr(props) {

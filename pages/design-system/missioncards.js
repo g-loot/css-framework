@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
-import Tooltip from "../../components/Tooltip/Tooltip";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion-1.json";
-import GameIcon from "../../components/GameIcon/GameIcon";
+import LottieExplosion from "@/assets/animations/explosion-1.json";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 const DSpage = () => {
   const [StartAnim1, setStartAnim1] = useState(false);

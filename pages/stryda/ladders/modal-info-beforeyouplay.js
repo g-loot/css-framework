@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../../contexts/ui.js";
-import { VariablesContext } from "../../../contexts/variables";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
 import { useRouter } from "next/router";
 
 export default function ModalInfoBeforeYouPlay(props) {

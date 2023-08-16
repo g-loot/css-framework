@@ -1,11 +1,11 @@
 import React, { useState, useContext } from "react";
 
-import Footer from "../../components/Footer/Footer";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
-import AchievementFrame from "../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../components/Achievements/AchievementIcon";
-import { UiContext } from "../../contexts/ui";
-import { usePrototypeData } from "../../contexts/prototype";
+import Footer from "@/components/Footer/Footer";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import ModalAchievementReceived from "../prototype/modal-achievementreceived";
 
 const DSpage = () => {

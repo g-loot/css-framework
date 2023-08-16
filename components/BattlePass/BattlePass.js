@@ -6,19 +6,19 @@ import React, {
   useCallback,
 } from "react";
 
-import ModalClaimBattlepassReward from "../../pages/prototype/home/modal-claim-battlepassrewards";
-import { UiContext } from "../../contexts/ui";
-import { DataBattlepass } from "../../mock-data/data-battlepass";
-import { DataBattlepassRewards } from "../../mock-data/data-battlepass";
-import { usePrototypeData } from "../../contexts/prototype";
+import ModalClaimBattlepassReward from "@/pages/prototype/home/modal-claim-battlepassrewards";
+import { UiContext } from "@/contexts/ui";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
+import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Avatar from "../Avatar/Avatar";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import PremiumLogo from "../PremiumLogo/PremiumLogo";
-import ModalBattlepassCompletedPremium from "../../pages/prototype/battlepass/modal-battlepass-completed-premium";
+import ModalBattlepassCompletedPremium from "@/pages/prototype/battlepass/modal-battlepass-completed-premium";
 
 export default function Battlepass(props) {
   const prototype = usePrototypeData();

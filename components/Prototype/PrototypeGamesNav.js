@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import Link from "next/link";
 import PrototypeGamesNavItem from "./PrototypeGamesNavItem";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const SubMenuItem = [

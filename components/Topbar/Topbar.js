@@ -2,19 +2,19 @@ import { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_1.json";
-import ModalDownloadStarted from "../../pages/prototype/modal-downloadstarted";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import ModalDownloadStarted from "@/pages/prototype/modal-downloadstarted";
 import Tooltip from "../Tooltip/Tooltip";
-import { UiContext } from "../../contexts/ui";
-import { usePrototypeData } from "../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Notification from "../Notification/Notification";
-import { VariablesContext } from "../../contexts/variables";
+import { VariablesContext } from "@/contexts/variables";
 import TopBarClaim from "../TopBarClaim/TopBarClaim";
-import ModalBuyTokens from "../../pages/prototype/wallet/modal-buytokens";
+import ModalBuyTokens from "@/pages/prototype/wallet/modal-buytokens";
 import Countdown from "../Countdown/Countdown";
 import Avatar from "../Avatar/Avatar";
-import { dataNotifications } from "../../mock-data/data-notifications";
+import { dataNotifications } from "@/mock-data/data-notifications";
 
 export default function Topbar() {
   const router = useRouter();

@@ -1,10 +1,10 @@
 import react from "react";
 
 import { useRouter } from "next/router";
-import LadderCardSecondary from "../../../components/Ladder/LadderCardSecondary";
-import Slider from "../../../components/Slider/Slider";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import Slider from "@/components/Slider/Slider";
 import Link from "next/link";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 
 const ClanLaddersNew = [
   {

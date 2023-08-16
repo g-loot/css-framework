@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { usePrototypeData } from "../../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import Link from "next/link";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 

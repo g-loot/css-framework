@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import { UiContext } from "../../../../../contexts/ui";
-import { VariablesContext } from "../../../../../contexts/variables";
-import { usePrototypeData } from "../../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalInfoBeforeYouPlay from "../modal-info-beforeyouplay";
 import LadderPlacementItem from "./ladder-placementitem";
@@ -10,7 +10,7 @@ import ModalBuyTokens from "../../../wallet/modal-buytokens";
 import Link from "next/link";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 
 const enrollSteps = [
   {

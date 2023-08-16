@@ -1,20 +1,20 @@
 import React, { useState, useContext, useEffect } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion-1.json";
-import LottieExplosionLvl from "../../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
-import LottieExplosionLvl1 from "../../../assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
-import LottieExplosionLvl2 from "../../../assets/animations/Mission_Reveal_Lvl_2_1600ms.json";
-import LottieExplosionLvl3 from "../../../assets/animations/Mission_Reveal_Lvl_3_1900ms.json";
-import LottieExplosionLvl4 from "../../../assets/animations/Mission_Reveal_Lvl_4_2900ms.json";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { VariablesContext } from "../../../contexts/variables";
-import Countdown from "../../../components/Countdown/Countdown";
+import LottieExplosion from "@/assets/animations/explosion-1.json";
+import LottieExplosionLvl from "@/assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl1 from "@/assets/animations/Mission_Reveal_Lvl_1_1100ms.json";
+import LottieExplosionLvl2 from "@/assets/animations/Mission_Reveal_Lvl_2_1600ms.json";
+import LottieExplosionLvl3 from "@/assets/animations/Mission_Reveal_Lvl_3_1900ms.json";
+import LottieExplosionLvl4 from "@/assets/animations/Mission_Reveal_Lvl_4_2900ms.json";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { usePrototypeData } from "@/contexts/prototype";
+import { VariablesContext } from "@/contexts/variables";
+import Countdown from "@/components/Countdown/Countdown";
 import ModalClaimMission from "../home/modal-claim-mission";
 import ModalDiscardMission from "../home/modal-discard-mission";
-import { UiContext } from "../../../contexts/ui";
-import XPBoostList from "../../../components/XPBoostList/XPBoostList";
+import { UiContext } from "@/contexts/ui";
+import XPBoostList from "@/components/XPBoostList/XPBoostList";
 
 export default function CardMission(props) {
   const prototype = usePrototypeData();

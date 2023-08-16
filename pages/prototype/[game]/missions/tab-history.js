@@ -5,15 +5,15 @@ import Countdown from "../../../../components/Countdown/Countdown";
 import Link from "next/link";
 import RewardLadder from "../../../../components/RewardLadder/RewardLadder";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
 import ComponentRewardLadder from "./component-rewardladder";
 import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
 import XPBoostList from "../../../../components/XPBoostList/XPBoostList";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../../assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
 
 export default function TabMissionsHistory() {

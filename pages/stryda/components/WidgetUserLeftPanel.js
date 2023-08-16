@@ -1,15 +1,15 @@
 import React, { useContext, useState, useEffect } from "react";
 import { useRouter } from "next/router";
-import { UiContext } from "../../../contexts/ui";
-import { usePrototypeData } from "../../../contexts/prototype";
-import Avatar from "../../../components/Avatar/Avatar";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
+import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import ButtonFeedback from "../../../components/Button/ButtonFeedback";
-import ReadMore from "../../../components/ReadMore/ReadMore";
-import GameIcon from "../../../components/GameIcon/GameIcon";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
+import ReadMore from "@/components/ReadMore/ReadMore";
+import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalFavoriteGames from "../modal-favoritegames";
-import PremiumLogo from "../../../components/PremiumLogo/PremiumLogo";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
 export default function WidgetUserLeftPanel(props) {
   const router = useRouter();

@@ -1,12 +1,12 @@
 import React, { useContext, useState } from "react";
 
-import Countdown from "../../components/Countdown/Countdown";
+import Countdown from "@/components/Countdown/Countdown";
 import Link from "next/link";
 import ModalClaimLadderRewards from "../prototype/home/modal-claim-dailyrewards";
-import ModalContainer from "../../components/Modal/ModalContainer";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import ModalContainer from "@/components/Modal/ModalContainer";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [randomNum1, setRandomNum1] = useState(1);

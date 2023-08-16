@@ -1,4 +1,4 @@
-import { getLayout } from "../../components/Sandbox/SBLayout";
+import { getLayout } from "@/components/Sandbox/SBLayout";
 
 const SBpage = () => (
   <div>

@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext } from "react";
 
 import Ad from "../../../../components/Ad/Ad";
 import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import StatsValorant from "./stats-valorant";
 import StatsLeagueOfLegends from "./stats-leagueoflegends";

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import Ad from "../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import Structure from "../components/Structure";
+import Structure from "@/pages/stryda/components/Structure";
 import TabWalletHistory from "./tab-history";
 import TabWalletOverview from "./tab-overview";
 import TabWalletVoucher from "./tab-vouchers";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

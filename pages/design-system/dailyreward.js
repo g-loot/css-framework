@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 
-import DailyReward from "../../components/DailyReward/DailyReward";
+import DailyReward from "@/components/DailyReward/DailyReward";
 import ModalClaimDailyRewards from "../prototype/home/modal-claim-dailyrewards";
-import ModalContainer from "../../components/Modal/ModalContainer";
-import { UiContext } from "../../contexts/ui";
-import { VariablesContext } from "../../contexts/variables";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import ModalContainer from "@/components/Modal/ModalContainer";
+import { UiContext } from "@/contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DailyRewards = [
   {

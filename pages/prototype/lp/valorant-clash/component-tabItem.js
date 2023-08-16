@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import Link from "next/link";
 import Lottie from "lottie-react";
-import LottieExplosion1 from "../../../../assets/animations/explosion-4.json";
+import LottieExplosion1 from "@/assets/animations/explosion-4.json";
 
 export default function ValorantClashTabItem(props) {
   const [StartAnim1, setStartAnim1] = useState(false);

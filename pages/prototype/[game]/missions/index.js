@@ -8,8 +8,8 @@ import TabMissionsMissions from "./tab-missions";
 import TabMissionsHistory from "./tab-history";
 import TabMissionsLeaderboard from "./tab-leaderboard";
 import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
-import { UiContext } from "../../../../contexts/ui";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 const TabsItems = [

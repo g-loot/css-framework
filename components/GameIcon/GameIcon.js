@@ -1,7 +1,7 @@
 import React from "react";
-import { UiContext } from "../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 import { useContext } from "react";
-import { usePrototypeData } from "../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "../Tooltip/Tooltip";
 
 export default function GameIcon(props) {

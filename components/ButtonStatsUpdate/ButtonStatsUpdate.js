@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
-import { UiContext } from "../../contexts/ui";
-import { usePrototypeData } from "../../contexts/prototype";
+import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function ButtonStatsUpdate(props) {

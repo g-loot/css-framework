@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react";
 
-import { UiContext } from "../../contexts/ui.js";
-import { VariablesContext } from "../../contexts/variables.js";
-import { usePrototypeData } from "../../contexts/prototype.js";
-import Tooltip from "../../components/Tooltip/Tooltip.js";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables.js";
+import { usePrototypeData } from "@/contexts/prototype.js";
 
 export default function ModalConnectIDLeagueOfLegends(props) {
   const uiContext = useContext(UiContext);

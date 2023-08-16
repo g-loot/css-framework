@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useRef, useContext } from "react";
 import DailyReward from "../DailyReward/DailyReward";
-import { VariablesContext } from "../../contexts/variables";
-import { UiContext } from "../../contexts/ui";
+import { VariablesContext } from "@/contexts/variables";
+import { UiContext } from "@/contexts/ui";
 import Lottie from "lottie-react";
-import LottieExplosion from "../../assets/animations/explosion_stryda_4.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_4.json";
 
 export default function TopBarClaim(props) {
   const uiContext = useContext(UiContext);

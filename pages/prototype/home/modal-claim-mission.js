@@ -1,13 +1,13 @@
 import React, { useContext, useState } from "react";
 
 import Lottie from "lottie-react";
-import LottieExplosion from "../../../assets/animations/explosion_stryda_3.json";
-import { UiContext } from "../../../contexts/ui.js";
-import { VariablesContext } from "../../../contexts/variables";
-import AnimatedNumber from "../../../components/AnimatedNumber/AnimatedNumber";
+import LottieExplosion from "@/assets/animations/explosion_stryda_3.json";
+import { UiContext } from "@/contexts/ui.js";
+import { VariablesContext } from "@/contexts/variables";
+import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber";
 import { useRouter } from "next/router";
-import XPBoostList from "../../../components/XPBoostList/XPBoostList";
-import { usePrototypeData } from "../../../contexts/prototype";
+import XPBoostList from "@/components/XPBoostList/XPBoostList";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function ModalClaimMission(props) {
   const uiContext = useContext(UiContext);

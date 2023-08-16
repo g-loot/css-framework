@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ButtonSorting from "../../../../components/Button/ButtonSorting";
 import Avatar from "../../../../components/Avatar/Avatar";
 import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
 import Tooltip from "../../../../components/Tooltip/Tooltip";
 import ModalClanInvite from "../modal-clan-invite";
-import { UiContext } from "../../../../contexts/ui";
+import { UiContext } from "@/contexts/ui";
 
 const PlayerApplications = [
   {

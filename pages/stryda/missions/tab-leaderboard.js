@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
-import { usePrototypeData } from "../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 
 import Link from "next/link";
 import Select, { components } from "react-select";
-import Avatar from "../../../components/Avatar/Avatar";
-import LeaderboardWings from "../../../components/LeaderboardWings/LeaderboardWings";
-import MissionsCompletedList from "../../../components/MissionsCompletedList/MissionsCompletedList";
-import Tooltip from "../../../components/Tooltip/Tooltip";
-import { DataBattlepass } from "../../../mock-data/data-battlepass";
+import Avatar from "@/components/Avatar/Avatar";
+import LeaderboardWings from "@/components/LeaderboardWings/LeaderboardWings";
+import MissionsCompletedList from "@/components/MissionsCompletedList/MissionsCompletedList";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
 
 export default function TabMissionsLeaderboard(props) {
   const prototype = usePrototypeData();

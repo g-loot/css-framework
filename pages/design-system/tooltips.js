@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
-import Tooltip from "../../components/Tooltip/Tooltip";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);

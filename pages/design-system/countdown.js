@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import Countdown from "../../components/Countdown/Countdown";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Countdown from "@/components/Countdown/Countdown";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();

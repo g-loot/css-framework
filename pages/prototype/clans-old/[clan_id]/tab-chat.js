@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Chat from "../../../../components/Chat/Chat";
-import { usePrototypeData } from "../../../../contexts/prototype";
+import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 
 export default function TabClanChat() {

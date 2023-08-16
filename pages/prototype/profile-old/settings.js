@@ -1,12 +1,12 @@
 import { useContext, useState, useEffect } from "react";
 
-import Accordion from "../../../components/Accordion/Accordion";
-import Ad from "../../../components/Ad/Ad";
-import PrototypeStructure from "../../../components/Prototype/PrototypeStructure";
-import { usePrototypeData } from "../../../contexts/prototype";
-import { UiContext } from "../../../contexts/ui";
+import Accordion from "@/components/Accordion/Accordion";
+import Ad from "@/components/Ad/Ad";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import TextareaExpandable from "../../../components/Textarea/TextareaExpandable";
+import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
 
 export default function Home() {
   const router = useRouter();

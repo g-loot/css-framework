@@ -4,7 +4,7 @@ import Footer from "../../../../components/Footer/Footer";
 import TopbarMarketing from "../../../../components/TopBarMarketing/TopbarMarketing";
 import { getLayout } from "../../../../components/Prototype/PrototypeLayout";
 import Link from "next/link";
-import { dataPatchNotes } from "../../../../mock-data/data-patchnotes";
+import { dataPatchNotes } from "@/mock-data/data-patchnotes";
 
 const inViewport = (elem) => {
   let allElements = document.querySelectorAll(elem);

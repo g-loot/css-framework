@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
 
 import DSicons from "../api/designsystem/icons.json";
-import { UiContext } from "../../contexts/ui";
-import { getLayout } from "../../components/DesignSystem/DSLayout";
+import { UiContext } from "@/contexts/ui";
+import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
   const [filter, setFilter] = useState("");
