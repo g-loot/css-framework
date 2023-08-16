@@ -162,7 +162,7 @@ export default function Home() {
                             </Link>
                           </div>
                           <div className="item-actions">
-                            <Tooltip placement="left" tooltip="Add as follower">
+                            <Tooltip placement="left" tooltip="Follow">
                               <ButtonFeedback
                                 variant="button-tertiary rounded-full"
                                 icon="icon-a-add"

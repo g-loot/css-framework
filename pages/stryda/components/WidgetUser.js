@@ -5,6 +5,7 @@ import { usePrototypeData } from "@/contexts/prototype";
 import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
 import ModalRemoveFriend from "../profile/[user_id]/modal-remove-friend";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
 export default function WidgetUser(props) {
   const router = useRouter();
@@ -104,7 +105,11 @@ export default function WidgetUser(props) {
             </ul>
             <div className="space-y-2 mb-2">
               {selectedUser.isYou && (
-                <Link href={`/stryda/profile/settings${prototype.getURLparams("&")}`}>
+                <Link
+                  href={`/stryda/profile/settings${prototype.getURLparams(
+                    "&"
+                  )}`}
+                >
                   <a
                     type="button"
                     className="button button-sm button-tertiary w-full"
@@ -125,19 +130,12 @@ export default function WidgetUser(props) {
                 </a>
               )}
               {!selectedUser.isYou && !selectedUser.isFriend && (
-                <Link
-                  href={`/prototype/profile/${
-                    selectedUser.id
-                  }?tab=followers${prototype.getURLparams("&")}`}
-                >
-                  <a
-                    type="button"
-                    className="button button-sm button-primary w-full"
-                  >
-                    <span className="icon icon-add-27" />
-                    <span>Follow</span>
-                  </a>
-                </Link>
+                <ButtonFeedback
+                  variant="button button-sm button-primary w-full"
+                  icon="icon-a-add"
+                  label="Follow"
+                  message="Player added to your followings"
+                />
               )}
             </div>
             {selectedUser.clan ? (
@@ -181,7 +179,6 @@ export default function WidgetUser(props) {
                 </div>
               </div>
             )}
-            
           </div>
         </div>
       )}

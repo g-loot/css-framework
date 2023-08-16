@@ -8,26 +8,16 @@ import ResetsIn from "@/components/Countdown/ResetsIn.js";
 import Tooltip from "@/components/Tooltip/Tooltip.js";
 
 export default function ModalClanEventOnboarding(props) {
-  const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
-  const hasAds = query.ads === "true" ? true : false;
-  const { tab } = router.query;
-  const [submitting, setSubmitting] = useState(false);
-  const [selectedGame, setSelectedGame] = useState(null);
+  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const leaderboard_id = props.id || 0;
   const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
-  const { game } = router.query;
-
-  useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
 
   useEffect(() => {
     setSelectedLeaderboard(
-      prototype.getClanLeaderboardByID(game, leaderboard_id)
+      prototype.getClanLeaderboardByID(selectedGame.slug, leaderboard_id)
     );
   }, [leaderboard_id]);
 

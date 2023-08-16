@@ -25,9 +25,9 @@ export default function ModalHighlightViewer(props) {
           <div className="modal-content p-0">
             <div className="modal-body relative">
               <div className="absolute z-10 inset-0 p-4">
-                <div className="absolute top-2 left-2 flex items-center p-2 rounded-r rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/75 backdrop-blur">
+                <div className="absolute top-1 left-1 flex items-center p-2 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur">
                   <Avatar id={1} size="avatar-sm" />
-                  <div className="pl-1 pr-2 flex gap-2 items-center text-xs sm:text-sm text-ui-300">
+                  <div className="pl-1 pr-2 flex gap-2 items-center text-xs sm:text-sm text-ui-200">
                     <span className="ml-0.5" />
                     <GameIcon game={item.game} size="sm:text-lg" />
                     <span>{item.stats?.views} views</span>

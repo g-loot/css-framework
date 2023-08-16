@@ -195,7 +195,7 @@ export default function ClanDetails() {
                 */}
               </>
             )}
-            <nav className="flex justify-center mt-4">
+            <nav className="flex justify-center mt-2">
               <ul className="tabs tabs-tertiary">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>

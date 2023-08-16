@@ -86,18 +86,22 @@ export default function FeedItemComments(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      <ul className="text-xs leading-snug">
-                        {item.social.views
-                          .slice(0, 5)
-                          .map((user, userIndex) => (
-                            <li key={userIndex}>
-                              {prototype.getUserByID(user).nickname}
-                            </li>
-                          ))}
-                        {item.social.views.length > 5 && (
-                          <li>+ {item.social.views.length - 5}</li>
-                        )}
-                      </ul>
+                      item.social.views.length > 0 ? (
+                        <ul className="text-xs leading-snug">
+                          {item.social.views
+                            .slice(0, 5)
+                            .map((user, userIndex) => (
+                              <li key={userIndex}>
+                                {prototype.getUserByID(user).nickname}
+                              </li>
+                            ))}
+                          {item.social.views.length > 5 && (
+                            <li>+ {item.social.views.length - 5}</li>
+                          )}
+                        </ul>
+                      ) : (
+                        <div className="text-xs">Be the first to view</div>
+                      )
                     }
                   >
                     <button type="button">
@@ -113,18 +117,22 @@ export default function FeedItemComments(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      <ul className="text-xs leading-snug">
-                        {item.social.likes.users
-                          .slice(0, 5)
-                          .map((user, userIndex) => (
-                            <li key={userIndex}>
-                              {prototype.getUserByID(user).nickname}
-                            </li>
-                          ))}
-                        {item.social.likes.users.length > 5 && (
-                          <li>+ {item.social.likes.users.length - 5}</li>
-                        )}
-                      </ul>
+                      item.social.likes.length > 0 ? (
+                        <ul className="text-xs leading-snug">
+                          {item.social.likes.users
+                            .slice(0, 5)
+                            .map((user, userIndex) => (
+                              <li key={userIndex}>
+                                {prototype.getUserByID(user).nickname}
+                              </li>
+                            ))}
+                          {item.social.likes.users.length > 5 && (
+                            <li>+ {item.social.likes.users.length - 5}</li>
+                          )}
+                        </ul>
+                      ) : (
+                        <div className="text-xs">Be the first to like</div>
+                      )
                     }
                   >
                     <button type="button">

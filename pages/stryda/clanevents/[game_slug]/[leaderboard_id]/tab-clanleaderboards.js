@@ -1,22 +1,21 @@
 import React, { useEffect, useRef, useState, useContext } from "react";
 
-import Accordion from "../../../../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import Link from "next/link";
-import Reward from "../../../../../components/Reward/Reward";
 import { UiContext } from "@/contexts/ui";
-import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import Avatar from "../../../../../components/Avatar/Avatar";
-import LeaderboardWings from "../../../../../components/LeaderboardWings/LeaderboardWings";
+import Avatar from "@/components/Avatar/Avatar";
+import LeaderboardWings from "@/components/LeaderboardWings/LeaderboardWings";
 import { VariablesContext } from "@/contexts/variables";
 import ModalInfoClanEventEnroll from "../../modal-info-claneventenroll";
-import AvatarClan from "../../../../../components/Avatar/AvatarClan";
+import AvatarClan from "@/components/Avatar/AvatarClan";
 import ModalClanEventResults from "../../modal-claneventresults";
 import ModalClanEventOnboarding from "../../modal-claneventonboarding";
-import ResetsIn from "../../../../../components/Countdown/ResetsIn";
-import Rewards from "../../../../../components/Reward/Rewards";
-import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
+import ResetsIn from "@/components/Countdown/ResetsIn";
+import Rewards from "@/components/Reward/Rewards";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
 const rewardDistribClan = [
   {
@@ -136,7 +135,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [hasRewards, setHasRewards] = useState(true);
   const [hasPlayersDetails, setHasPlayersDetails] = useState(false);
   const hasAds = query.ads === "true" ? true : false;
-  const { game } = router.query;
+  const { game_slug } = router.query;
   const { leaderboard_id } = router.query;
   const variablesContext = useContext(VariablesContext);
 
@@ -147,8 +146,8 @@ export default function TabClanLeaderboardsLeaderboards() {
   }
 
   useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
+    setSelectedGame(prototype.getGameBySlug(game_slug));
+  }, [game_slug, prototype]);
 
   useEffect(() => {
     if (modalenroll) {
@@ -172,7 +171,7 @@ export default function TabClanLeaderboardsLeaderboards() {
 
   useEffect(() => {
     setSelectedClanLeaderboard(
-      prototype.getClanLeaderboardByID(game, leaderboard_id)
+      prototype.getClanLeaderboardByID(game_slug, leaderboard_id)
     );
   }, [leaderboard_id]);
 
@@ -249,7 +248,7 @@ export default function TabClanLeaderboardsLeaderboards() {
     uiContext.openModal(
       <ModalClanEventResults
         item={prototype.getClanLeaderboardByID(
-          prototype.getGameBySlug(game).slug,
+          prototype.getGameBySlug(game_slug).slug,
           id
         )}
       />

@@ -32,13 +32,13 @@ export default function TabClanLeaderboardUpcoming() {
       {selectedGame && (
         <>
           <section className="pb-8">
-            {isEmpty && (
+            {isEmpty || !selectedGame.clanLeaderboards && (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There is no upcoming Clan Event.
+                      There is no upcoming Clan Event in {selectedGame.name}.
                     </div>
                   </div>
                 </div>
@@ -106,8 +106,7 @@ export default function TabClanLeaderboardUpcoming() {
                 ) : (
                   <>
                     <div className="items-spaced item-interactive space-y-2">
-                      {selectedGame.clanLeaderboards
-                        .filter((g) => g.status === "upcoming")
+                      {selectedGame.clanLeaderboards?.filter((g) => g.status === "upcoming")
                         .map((item, itemIndex) => (
                           <CardClanEvent
                             key={itemIndex}

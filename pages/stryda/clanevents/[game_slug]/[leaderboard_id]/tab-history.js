@@ -1,14 +1,12 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Reward from "../../../../../components/Reward/Reward";
-import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import { usePrototypeData } from "@/contexts/prototype";
 import { VariablesContext } from "@/contexts/variables";
 import ModalClanEventResults from "../../modal-claneventresults";
 import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import ResetsIn from "../../../../../components/Countdown/ResetsIn";
+import ResetsIn from "@/components/Countdown/ResetsIn";
 
 export default function TabClanLeaderboardsHistory() {
   const router = useRouter();
@@ -50,13 +48,13 @@ export default function TabClanLeaderboardsHistory() {
       {selectedGame && (
         <>
           <section className="pb-8">
-            {isEmpty && (
+            {isEmpty || !selectedGame.clanLeaderboards && (
               <>
               <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                   <div className="mt-2 text-ui-300">
-                    You haven&#39;t joined any Clan Events yet.
+                    You haven&#39;t joined any Clan Events in {selectedGame.name} yet.
                   </div>
                 </div>
               </div>
@@ -126,7 +124,7 @@ export default function TabClanLeaderboardsHistory() {
                     <div className="hidden overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
                       <table className="table table-rounded rounded-xl w-full">
                         <tbody>
-                          {selectedGame.clanLeaderboards.map(
+                          {selectedGame.clanLeaderboards?.map(
                             (item, itemIndex) => (
                               <>
                                 {item.status != "upcoming" && (
@@ -219,8 +217,7 @@ export default function TabClanLeaderboardsHistory() {
                       </table>
                     </div>
                     <ul className="items-spaced item-interactive space-y-2">
-                      {selectedGame.clanLeaderboards
-                        .filter((g) => g.status !== "upcoming" && g.status !== "ongoing")
+                      {selectedGame.clanLeaderboards?.filter((g) => g.status !== "upcoming" && g.status !== "ongoing")
                         .map((item, itemIndex) => (
                           <Link
                             key={itemIndex}

@@ -71,7 +71,7 @@ export default function WidgetUserLeftPanel(props) {
                     <li className="flex items-center gap-2 text-ui-300">
                       <span className="icon icon-20 icon-game-valorant-symbol" />
                       <a
-                        className="flex-1 link link-hover"
+                        className="flex-1 link link-hover flex flex-col leading-tight"
                         onClick={() => {
                           uiContext.openToastr({
                             size: "medium",
@@ -81,12 +81,15 @@ export default function WidgetUserLeftPanel(props) {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            `${selectedUser.socials?.riotValorantNickname}+#+${selectedUser.socials?.riotValorantHashtag}`
+                            `${selectedUser.socials?.riotValorantNickname}#${selectedUser.socials?.riotValorantHashtag}`
                           );
                         }}
                       >
-                        {selectedUser.socials?.riotValorantNickname}#
-                        {selectedUser.socials?.riotValorantHashtag}
+                        <span>
+                          {selectedUser.socials?.riotValorantNickname}#
+                          {selectedUser.socials?.riotValorantHashtag}
+                        </span>
+                        <span className="text-sm text-ui-400">EUNE</span>
                       </a>
                       <Tooltip
                         placement="left"
@@ -108,7 +111,7 @@ export default function WidgetUserLeftPanel(props) {
                     <li className="flex items-center gap-2 text-ui-300">
                       <span className="icon icon-20 icon-game-leagueoflegends-symbol" />
                       <a
-                        className="flex-1 link link-hover"
+                        className="flex-1 link link-hover flex flex-col leading-tight"
                         onClick={() => {
                           uiContext.openToastr({
                             size: "medium",
@@ -118,12 +121,15 @@ export default function WidgetUserLeftPanel(props) {
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            `${selectedUser.socials?.riotLeagueofLegendsNickname}+#+${selectedUser.socials?.riotLeagueofLegendsHashtag}`
+                            `${selectedUser.socials?.riotLeagueofLegendsNickname}#${selectedUser.socials?.riotLeagueofLegendsHashtag}`
                           );
                         }}
                       >
-                        {selectedUser.socials?.riotLeagueofLegendsNickname}#
-                        {selectedUser.socials?.riotLeagueofLegendsHashtag}
+                        <span>
+                          {selectedUser.socials?.riotLeagueofLegendsNickname}#
+                          {selectedUser.socials?.riotLeagueofLegendsHashtag}
+                        </span>
+                        <span className="text-sm text-ui-400">EUNE</span>
                       </a>
                       <Tooltip
                         placement="left"
@@ -145,7 +151,7 @@ export default function WidgetUserLeftPanel(props) {
                     <li className="flex items-center gap-2 text-ui-300">
                       <span className="icon icon-20 icon-steam" />
                       <a
-                        className="flex-1 link link-hover"
+                        className="flex-1 link link-hover flex flex-col leading-tight"
                         onClick={() => {
                           uiContext.openToastr({
                             size: "medium",

@@ -49,9 +49,9 @@ export default function CardLadder(props) {
     <>
       {ladder && prototype.getGameByID(gameID) && (
         <Link
-          href={`/stryda/ladders/${
-            prototype.getGameByID(gameID).slug
-          }/${ladder.id}${prototype.getURLparams()}`}
+          href={`/stryda/ladders/${prototype.getGameByID(gameID).slug}/${
+            ladder.id
+          }${prototype.getURLparams()}`}
         >
           <div
             className={`card-ladder card-secondary ${size} interactive rounded ${
@@ -153,9 +153,19 @@ export default function CardLadder(props) {
                     </span>
                   </div>
                   {ladder.status === "finished" ? (
-                    <div className="text-sm text-ui-300">Ended on April 12</div>
+                    <div
+                      className={`${
+                        size === "card-sm" ? "text-xs" : "text-sm"
+                      } text-ui-300`}
+                    >
+                      Ended on April 12
+                    </div>
                   ) : (
-                    <div className="flex text-sm text-ui-300 gap-1 items-center whitespace-nowrap">
+                    <div
+                      className={`flex ${
+                        size === "card-sm" ? "text-xs" : "text-sm"
+                      } text-ui-300 gap-1 items-center whitespace-nowrap`}
+                    >
                       <ResetsIn
                         label={ladder.status === "upcoming" ? "Starts" : "Ends"}
                         status={ladder.status === "upcoming" ? 2 : 1}
@@ -413,11 +423,16 @@ export default function CardLadder(props) {
 
                   {ladder.isEnrolled && (
                     <>
-                      {!isClan ? (
-                        <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
-                          <li>
-                            843 players
-                            {/*
+                      <ul
+                        className={`${
+                          size === "card-sm" ? "text-xs" : "text-sm"
+                        } border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center`}
+                      >
+                        {!isClan ? (
+                          <>
+                            <li>
+                              843 players
+                              {/*
                             {" "}
                             {ladder.status === "finished" ? (
                               <>have competed</>
@@ -425,23 +440,24 @@ export default function CardLadder(props) {
                               <>competing</>
                             )}
                             */}
-                          </li>
-                          <li>across 5 groups</li>
-                        </ul>
-                      ) : (
-                        <ul className="text-sm border-l border-ui-700 pl-4 text-ui-300 flex flex-col items-start justify-center">
-                          <li>
-                            143 clans
-                            {/*{" "}
+                            </li>
+                            <li>across 5 groups</li>
+                          </>
+                        ) : (
+                          <>
+                            <li>
+                              143 clans
+                              {/*{" "}
                             {ladder.status === "finished" ? (
                               <>have competed</>
                             ) : (
                               <>competing</>
-                            )}
+                              )}
                             */}
-                          </li>
-                        </ul>
-                      )}
+                            </li>
+                          </>
+                        )}
+                      </ul>
                     </>
                   )}
                 </div>

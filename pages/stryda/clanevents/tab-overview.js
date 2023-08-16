@@ -35,13 +35,13 @@ export default function TabClanEventLeaderboardOverview() {
       {selectedGame && (
         <>
           <section className="mb-8 space-y-4">
-            {isEmpty ? (
+            {isEmpty || !selectedGame.clanLeaderboards ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                     <div className="mt-2 text-ui-300">
-                      There is no ongoing Clan Event.
+                      There is no ongoing Clan Event in {selectedGame.name}.
                     </div>
                   </div>
                 </div>

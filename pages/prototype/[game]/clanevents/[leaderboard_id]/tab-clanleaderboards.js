@@ -457,7 +457,12 @@ export default function TabClanLeaderboardsLeaderboards() {
                               <tr>
                                 <td>
                                   <div className="text-sm uppercase">
-                                    Clan members
+                                    <span>Clan members</span>
+                                    <Tooltip tooltip="Showing eligible Clan members only">
+                                      <button className="text-ui-300 text-0 translate-y-0.5 ml-2">
+                                        <span className="icon icon-16 icon-c-info" />
+                                      </button>
+                                    </Tooltip>
                                   </div>
                                 </td>
                                 {selectedClanLeaderboard.status ===
@@ -486,7 +491,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               {getMyClanMembers().map((item, itemIndex) => (
                                 <tr key={itemIndex}>
                                   <td className="flex items-center gap-2 w-full">
-                                      <Avatar id={item.id} hasTooltip={true} />
+                                    <Avatar id={item.id} hasTooltip={true} />
                                     <Link
                                       href={`/prototype/profile/${
                                         prototype.getUserByID(item.id).id

@@ -9,6 +9,7 @@ export default function ButtonFeedback(props) {
       ? props.variant
       : "rounded-full button-secondary";
   const value = props.value || "";
+  const label = props.label;
   const message = props.message !== undefined ? props.message : "success";
   const type = props.type !== undefined ? props.type : "success";
   const icon =
@@ -38,6 +39,7 @@ export default function ButtonFeedback(props) {
       onClick={handleButtonFeedback.bind(this, message)}
     >
       <span className={`icon ${icon}`} />
+      {label && <span>{label}</span>}
     </button>
   );
 }

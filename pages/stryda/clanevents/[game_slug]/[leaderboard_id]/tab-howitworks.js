@@ -1,12 +1,7 @@
-import React, { useContext, useEffect, useState } from "react";
+import React from "react";
 
-import Accordion from "../../../../../components/Accordion/Accordion";
-import FAQ from "../../../../../components/FAQ/FAQ";
-import Link from "next/link";
-import ModalContainer from "../../../../../components/Modal/ModalContainer";
+import FAQ from "@/components/FAQ/FAQ";
 import { usePrototypeData } from "@/contexts/prototype";
-import { UiContext } from "@/contexts/ui";
-import { useRouter } from "next/router";
 
 const HowitworksTabs = [
   {
@@ -126,17 +121,8 @@ const HowitworksTabs = [
 ];
 
 export default function TabClanLeaderboardsHowItWorks() {
-  const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
-  const hasAds = query.ads === "true" ? true : false;
-  const uiContext = useContext(UiContext);
-  const [selectedGame, setSelectedGame] = useState(null);
-  const { game } = router.query;
-
-  useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game]);
+  const selectedGame = prototype.getGameByID(prototype.defaultGameID);
 
   return (
     <>

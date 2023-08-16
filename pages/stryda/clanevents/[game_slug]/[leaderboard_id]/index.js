@@ -1,20 +1,19 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../../components/Prototype/PrototypeStructure";
+import Structure from "@/pages/stryda/components/Structure";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalInfoClanEventEnroll from "../../modal-info-claneventenroll";
-import Tooltip from "../../../../../components/Tooltip/Tooltip";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import TabClanLeaderboardsLeaderboards from "./tab-clanleaderboards";
 import TabClanLeaderboardsHowItWorks from "./tab-howitworks";
-import TabClanLeaderboardsHistory from "./tab-history";
 import TabClanLeaderboardsRewards from "./tab-rewards";
-import ResetsIn from "../../../../../components/Countdown/ResetsIn";
+import ResetsIn from "@/components/Countdown/ResetsIn";
 import { VariablesContext } from "@/contexts/variables";
-import GameIcon from "../../../../../components/GameIcon/GameIcon";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 const TabsItems = [
   {
@@ -44,7 +43,7 @@ export default function Ladders() {
   const [isEnrolled, setIsEnrolled] = useState(false);
   const [laddersFinishedLength, setLaddersFinishedLength] = useState(null);
 
-  const { game } = router.query;
+  const { game_slug } = router.query;
   const { leaderboard_id } = router.query;
   const uiContext = useContext(UiContext);
   const { tab } = router.query;
@@ -52,12 +51,12 @@ export default function Ladders() {
   const selectedTab = tab ? tab : defaultTab;
 
   useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
+    setSelectedGame(prototype.getGameBySlug(game_slug));
+  }, [game_slug, prototype]);
 
   useEffect(() => {
     setSelectedClanLeaderboard(
-      prototype.getClanLeaderboardByID(game, leaderboard_id)
+      prototype.getClanLeaderboardByID(game_slug, leaderboard_id)
     );
   }, [leaderboard_id]);
 
@@ -69,7 +68,7 @@ export default function Ladders() {
         ).length
       );
     }
-  }, [game, prototype, selectedGame]);
+  }, [game_slug, prototype, selectedGame]);
 
   useEffect(() => {
     if (selectedGame != null) {
@@ -84,9 +83,9 @@ export default function Ladders() {
   return (
     <>
       {selectedGame && selectedClanLeaderboard && (
-        <PrototypeStructure title="Clan Events">
+        <Structure title="Clan Events">
           <Ad width="1005" height="300" />
-          <section className="surface sm:rounded overflow-hidden mb-4">
+          <section className="surface sm:rounded overflow-hidden mt-8 mb-4">
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
               <div className="absolute z-10 top-1 left-1">
                 <Tooltip tooltip={<div>{selectedGame.name}</div>}>
@@ -351,11 +350,11 @@ export default function Ladders() {
           </section>
 
           <nav>
-            <ul className="tabs border-b border-ui-700">
+            <ul className="tabs tabs-tertiary">
               {TabsItems.map((item, itemIndex) => (
                 <li key={itemIndex}>
                   <Link
-                    href={`/prototype/${game}/clanevents/${leaderboard_id}?tab=${
+                    href={`/stryda/clanevents/${game_slug}/${leaderboard_id}?tab=${
                       item.url
                     }${prototype.getURLparams("&")}`}
                   >
@@ -386,7 +385,7 @@ export default function Ladders() {
               }
             })}
           </section>
-        </PrototypeStructure>
+        </Structure>
       )}
     </>
   );

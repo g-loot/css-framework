@@ -1,14 +1,11 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Accordion from "../../../../../components/Accordion/Accordion";
-import FAQ from "../../../../../components/FAQ/FAQ";
 import Link from "next/link";
-import ModalContainer from "../../../../../components/Modal/ModalContainer";
 import { usePrototypeData } from "@/contexts/prototype";
 import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import Tooltip from "../../../../../components/Tooltip/Tooltip";
-import Reward from "../../../../../components/Reward/Reward";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import Reward from "@/components/Reward/Reward";
 
 const MissionsHowitworksTabs = [
   {
