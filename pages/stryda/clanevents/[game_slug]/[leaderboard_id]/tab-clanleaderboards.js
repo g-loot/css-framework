@@ -1053,15 +1053,11 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                 {prototype.getClanByID(
                                                   clan.clan
                                                 ).members?.length > 5 && (
-                                                  <div className="avatar avatar-circle avatar-xs">
-                                                    <div>
-                                                      <span>
-                                                        +
-                                                        {prototype.getClanByID(
-                                                          clan.clan
-                                                        ).members?.length - 5}
-                                                      </span>
-                                                    </div>
+                                                  <div className="flex-none text-sm text-ui-300 px-4">
+                                                    +
+                                                    {prototype.getClanByID(
+                                                      clan.clan
+                                                    ).members?.length - 5}
                                                   </div>
                                                 )}
                                               </div>

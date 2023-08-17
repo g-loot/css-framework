@@ -31,27 +31,23 @@ const HowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "To join the leaderboard, you or another member need to enter the season by registering the Clan (which is only needed once).",
+        text: "To join the leaderboard, you or another member need to enter the Event by registering your Clan.",
       },
       {
         type: "p",
-        text: "Several parties from the Clan can play at the same time.",
+        text: "Several parties from a Clan can play at the same time.",
       },
       {
         type: "p",
-        text: "The scores for each match played will be counted into the total of the Clan scoring.",
+        text: "The scores for each match played will be counted into the total for your Clan.",
       },
       {
         type: "p",
-        text: "You and your Clan members can play as many matches as you want...",
+        text: "You and your Clan members can play as many matches as you want.",
       },
       {
         type: "p",
-        text: "You and your Clan members can play as many matches as you want...",
-      },
-      {
-        type: "p",
-        text: "Start playing matches in-game with a full party of players from your Clan. Make sure the party consists of players from your Clan only. ",
+        text: "Start playing matches in-game with a full party of players from your Clan. Make sure the party consists of players from your Clan only.",
       },
     ],
   },
@@ -62,7 +58,7 @@ const HowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "If there is a tie, the tiebreaker in how many matches that have been played decides who wins.",
+        text: "If there is a tie, there is tiebreakers that determine which Clan places higher.",
       },
       {
         type: "p",
@@ -77,7 +73,7 @@ const HowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "If you leave a Clan in an ongoing season and have contributed to the Clan by playing matches, you will still get rewarded if that Clan wins any rewards when the Clan season ends.",
+        text: "If you leave a Clan in an ongoing Event and have contributed to the Clan by playing matches, you will still get rewarded if that Clan wins any rewards when the Clan Event ends.",
       },
       {
         type: "p",
@@ -96,7 +92,7 @@ const HowitworksTabs = [
       },
       {
         type: "p",
-        text: "Once the maintenance is over, the season will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the season will continue.",
+        text: "Once the maintenance is over, the Event will continue. If there is a bigger issue or if the maintenance lasts for several days, Stryda will decide if the Event will continue.",
       },
       {
         type: "p",
@@ -172,12 +168,10 @@ export default function TabClanLeaderboardsHowItWorks() {
                       while playing in the same party, in the game.
                     </li>
                     <li>
-                      The scores are based on the specific objective described
-                      for the season, e.g. wins minus losses.
+                      The scores are based on the specific objective described for the Event, e.g. wins minus losses.
                     </li>
                     <li>
-                      You or someone from your Clan need to setup the Clan for
-                      the season. This is only needed once.
+                      You or someone from your Clan need to setup the Clan for the Event. This is only needed once.
                     </li>
                     <li>You can play as many matches as you want.</li>
                   </ul>
@@ -246,8 +240,7 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <a href="#">
                     <i>6</i>
                     <div className="text-sm text-ui-300">
-                      Once the Clan season has ended, you can see the final
-                      results
+                      Once the Clan Event has ended, you can see the final results
                     </div>
                     <span />
                   </a>

@@ -531,6 +531,7 @@
 .avatar-group {
   @apply
   flex
+  items-center
   ;
   > * {
     @apply

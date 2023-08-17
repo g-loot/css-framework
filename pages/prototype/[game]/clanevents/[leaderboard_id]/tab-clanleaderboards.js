@@ -468,7 +468,10 @@ export default function TabClanLeaderboardsLeaderboards() {
                                     Clan members
                                   </div>
                                   <Tooltip tooltip="Showing eligible Clan members only">
-                                    <button type="button" className="text-ui-300">
+                                    <button
+                                      type="button"
+                                      className="text-ui-300"
+                                    >
                                       <span className="icon icon-16 icon-c-info" />
                                     </button>
                                   </Tooltip>
@@ -1028,18 +1031,13 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                       size="avatar-xs"
                                                     />
                                                   ))}
-                                                {prototype.getClanByID(
-                                                  clan.clan
-                                                ).members?.length > 5 && (
-                                                  <div className="avatar avatar-circle avatar-xs">
-                                                    <div>
-                                                      <span>
-                                                        +
-                                                        {prototype.getClanByID(
-                                                          clan.clan
-                                                        ).members?.length - 5}
-                                                      </span>
-                                                    </div>
+                                                {prototype.getClanByID(clan.clan)
+                                                  .members?.length > 5 && (
+                                                  <div className="flex-none text-sm text-ui-300 px-4">
+                                                    +
+                                                    {prototype.getClanByID(
+                                                      clan.clan
+                                                    ).members?.length - 5}
                                                   </div>
                                                 )}
                                               </div>

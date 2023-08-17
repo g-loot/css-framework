@@ -418,7 +418,10 @@ export default function TabLaddersSoloLeaderboards() {
                                           : "bg-ui-700"
                                       }`}
                                     >
-                                      <LeaderboardWings id={userIndex} value={user.name} />
+                                      <LeaderboardWings
+                                        id={userIndex}
+                                        value={user.name}
+                                      />
                                     </div>
                                     <div className="flex-1 flex items-center justify-center gap-4">
                                       {user.rewards?.map(
@@ -718,15 +721,11 @@ export default function TabLaddersSoloLeaderboards() {
                                                 ))}
                                               {prototype.getClanByID(user.clan)
                                                 .members?.length > 5 && (
-                                                <div className="avatar avatar-circle avatar-xs">
-                                                  <div>
-                                                    <span>
-                                                      +
-                                                      {prototype.getClanByID(
-                                                        user.clan
-                                                      ).members?.length - 5}
-                                                    </span>
-                                                  </div>
+                                                <div className="flex-none text-sm text-ui-300 px-4">
+                                                  +
+                                                  {prototype.getClanByID(
+                                                    user.clan
+                                                  ).members?.length - 5}
                                                 </div>
                                               )}
                                             </div>
@@ -975,7 +974,10 @@ export default function TabLaddersSoloLeaderboards() {
                                 itemIndex > 2 ? "bg-ui-700/25" : "bg-ui-700"
                               }`}
                             >
-                              <LeaderboardWings id={itemIndex} value={item.name} />
+                              <LeaderboardWings
+                                id={itemIndex}
+                                value={item.name}
+                              />
                             </div>
                             <div className="flex-1 flex items-center justify-center gap-4">
                               {item.rewards?.map((reward, rewardIndex) => (
