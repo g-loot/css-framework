@@ -3,11 +3,11 @@ import React, { useEffect, useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import Link from "next/link";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function TabProfileAchievements() {
   const router = useRouter();

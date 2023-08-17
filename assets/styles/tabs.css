@@ -63,7 +63,7 @@
       }
       &:not([class*="px-"]) {
         @apply
-        px-5
+        px-4
         ;
       }
   
@@ -222,7 +222,7 @@
     ;
     &:not([class*="px-"]) {
       @apply
-      px-5
+      px-4
       ;
     }
   }
@@ -675,7 +675,7 @@
   }
   &:not([class*="px-"]) {
     @apply
-    px-5
+    px-4
     ;
   }
   > span {

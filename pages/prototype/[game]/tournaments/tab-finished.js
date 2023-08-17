@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import Link from "next/link";
-import Reward from "../../../../components/Reward/Reward";
+import Reward from "@/components/Reward/Reward";
 import moment from "moment";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";

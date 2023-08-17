@@ -74,7 +74,7 @@ export default function Video(props) {
           {hasMeta && (
             <div className="flex items-center gap-2 text-xs sm:text-sm text-ui-300 mt-2">
               <GameIcon game={item.game} size="sm:text-lg" />
-              <span>{item.stats?.views} views</span>
+              <span>{item.social?.views} views</span>
               <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
               <span>{item.date}</span>
             </div>

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
+import Ad from "@/components/Ad/Ad";
+import Countdown from "@/components/Countdown/Countdown";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import TabLaddersHistory from "./tab-history";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersOngoing from "./tab-laddersongoing";

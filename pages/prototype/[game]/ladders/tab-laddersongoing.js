@@ -2,9 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
-import Slider from "../../../../components/Slider/Slider";
-import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import Slider from "@/components/Slider/Slider";
+import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber";
 
 export default function TabLaddersOngoing() {
   const router = useRouter();

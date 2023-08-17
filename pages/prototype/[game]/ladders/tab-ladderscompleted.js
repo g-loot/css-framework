@@ -2,13 +2,13 @@ import React, { useEffect, useState } from "react";
 
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
 import Lottie from "lottie-react";
 import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
-import Slider from "../../../../components/Slider/Slider";
+import Slider from "@/components/Slider/Slider";
 import Link from "next/link";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import ButtonSorting from "../../../../components/Button/ButtonSorting";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ButtonSorting from "@/components/Button/ButtonSorting";
 
 export default function TabLaddersCompleted() {
   const router = useRouter();

@@ -48,7 +48,7 @@ export default function FeedItemDetails(props) {
       {item && (
         <div className="surface rounded video">
           <div className="relative overflow-hidden rounded-t">
-            <div className="relative z-10 p-4 flex items-center gap-3">
+            <div className="relative z-10 p-2 sm:p-4 flex items-center gap-3">
               <Avatar id={item.author} size="avatar-md" hasTooltip={true} />
               <div className="flex-1 overflow-hidden">
                 <div className="truncate p-1 flex items-end gap-2">
@@ -224,7 +224,7 @@ export default function FeedItemDetails(props) {
                 )}
               </div>
             </div>
-            <div className="relative z-10 p-6">
+            <div className="relative z-10 p-4 sm:p-6">
               <ul className="surface-ui-600 rounded overflow-hidden tabs tabs-stretch shadow-md divide-x divide-ui-500">
                 <li>
                   <button

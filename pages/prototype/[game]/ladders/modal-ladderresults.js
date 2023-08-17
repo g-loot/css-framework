@@ -4,9 +4,9 @@ import { UiContext } from "@/contexts/ui.js";
 import { usePrototypeData } from "@/contexts/prototype.js";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards.js";
 import { useRouter } from "next/router";
-import Avatar from "../../../../components/Avatar/Avatar.js";
-import Slider from "../../../../components/Slider/Slider.js";
-import Reward from "../../../../components/Reward/Reward.js";
+import Avatar from "@/components/Avatar/Avatar.js";
+import Slider from "@/components/Slider/Slider.js";
+import Reward from "@/components/Reward/Reward.js";
 
 export default function ModalLadderResults(props) {
   const router = useRouter();

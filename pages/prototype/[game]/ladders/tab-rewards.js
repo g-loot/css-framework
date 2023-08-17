@@ -1,5 +1,5 @@
-import Reward from "../../../../components/Reward/Reward";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Reward from "@/components/Reward/Reward";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 

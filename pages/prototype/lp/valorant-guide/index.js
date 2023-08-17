@@ -1,8 +1,8 @@
 import React, { useEffect } from "react";
 
-import Footer from "../../../../components/Footer/Footer";
-import TopbarMarketing from "../../../../components/TopBarMarketing/TopbarMarketing";
-import { getLayout } from "../../../../components/Prototype/PrototypeLayout";
+import Footer from "@/components/Footer/Footer";
+import TopbarMarketing from "@/components/TopBarMarketing/TopbarMarketing";
+import { getLayout } from "@/components/Prototype/PrototypeLayout";
 import Link from "next/link";
 import { dataValorantGuideRoles } from "@/mock-data/data-valorant-guide";
 

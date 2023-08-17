@@ -3132,7 +3132,7 @@ export const dataGames = [
         status: "ongoing",
         name: "Nordic Clash qualifiers",
         logo: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_logo.png",
-        video: null,
+        video: "https://res.cloudinary.com/gloot/video/upload/v1689166247/Stryda/marketing/campaigns/Nordic%20Clash/SNC_5s_VB_Loop_1.mp4",
         bg: "https://res.cloudinary.com/gloot/image/upload/v1689149063/Stryda/demo/NordicClash_bg.jpg",
         meta: {
           objective: "Have the most wins in a party composed of 5 clan members",

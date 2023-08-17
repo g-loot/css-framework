@@ -1,22 +1,22 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
-import HowToLadder from "../../../../components/HowTo/HowToLadder";
+import Accordion from "@/components/Accordion/Accordion";
+import HowToLadder from "@/components/HowTo/HowToLadder";
 import { VariablesContext } from "@/contexts/variables";
 import Link from "next/link";
 import ModalClaimLadderRewards from "../../home/modal-claim-dailyrewards";
-import Reward from "../../../../components/Reward/Reward";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Reward from "@/components/Reward/Reward";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
-import Avatar from "../../../../components/Avatar/Avatar";
-import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
-import AvatarClan from "../../../../components/Avatar/AvatarClan";
-import ResetsIn from "../../../../components/Countdown/ResetsIn";
-import LeaderboardWings from "../../../../components/LeaderboardWings/LeaderboardWings";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
+import Avatar from "@/components/Avatar/Avatar";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
+import AvatarClan from "@/components/Avatar/AvatarClan";
+import ResetsIn from "@/components/Countdown/ResetsIn";
+import LeaderboardWings from "@/components/LeaderboardWings/LeaderboardWings";
 
 const Groups = [
   "A",

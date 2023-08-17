@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePrototypeData } from "@/contexts/prototype";
 import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import Accordion from "../../../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import { StatsLeagueOfLegendsChampions } from "@/mock-data/data-stats-leagueoflegends";
 import { StatsLeagueOfLegendsRanks } from "@/mock-data/data-stats-leagueoflegends";
 import { StatsLeagueOfLegendsSpells } from "@/mock-data/data-stats-leagueoflegends";
@@ -12,8 +12,8 @@ import { StatsLeagueOfLegendsItems } from "@/mock-data/data-stats-leagueoflegend
 import { StatsLeagueOfLegendsDemoFavoriteChampions } from "@/mock-data/data-stats-demo-leagueoflegends";
 import { StatsLeagueOfLegendsDemoGeneral } from "@/mock-data/data-stats-demo-leagueoflegends";
 import { StatsLeagueOfLegendsDemoLatestMatches } from "@/mock-data/data-stats-demo-leagueoflegends";
-import LoadMore from "../../../../components/LoadMore/LoadMore";
-import LoadMoreContainer from "../../../../components/LoadMore/LoadMoreContainer";
+import LoadMore from "@/components/LoadMore/LoadMore";
+import LoadMoreContainer from "@/components/LoadMore/LoadMoreContainer";
 import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
 
 export default function StatsLeagueOfLegends() {

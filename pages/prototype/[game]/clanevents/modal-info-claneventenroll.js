@@ -4,7 +4,7 @@ import { UiContext } from "@/contexts/ui.js";
 import { usePrototypeData } from "@/contexts/prototype.js";
 import { VariablesContext } from "@/contexts/variables.js";
 import { useRouter } from "next/router";
-import ResetsIn from "../../../../components/Countdown/ResetsIn.js";
+import ResetsIn from "@/components/Countdown/ResetsIn.js";
 
 export default function ModalInfoClanEventEnroll(props) {
   const router = useRouter();

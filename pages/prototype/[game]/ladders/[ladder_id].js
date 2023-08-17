@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import ModalLadderResults from "./modal-ladderresults";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "./tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";

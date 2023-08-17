@@ -1,13 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
-import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
+import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber";
 
 import TabClanEventLeaderboardOverview from "./tab-overview";
 import TabClanLeaderboardsRewards from "./[leaderboard_id]/tab-rewards";

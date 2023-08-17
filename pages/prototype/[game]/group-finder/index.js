@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import TabGroupFinderFeed from "./tab-feed";
 import TabGroupFinderMyDashboard from "./tab-mydashboard";
 import { usePrototypeData } from "@/contexts/prototype";

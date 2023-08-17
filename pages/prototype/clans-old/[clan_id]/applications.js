@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import ButtonSorting from "../../../../components/Button/ButtonSorting";
+import ButtonSorting from "@/components/Button/ButtonSorting";
 
 const PlayerApplications = [
   {

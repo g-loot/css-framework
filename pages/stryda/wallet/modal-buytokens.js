@@ -151,7 +151,7 @@ export default function ModalBuyTokens(props) {
         <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
           <div className="flex-1">
             <img
-              className="w-auto h-36 mx-auto -mb-4"
+              className="w-auto h-36 aspect-square mx-auto -mb-4"
               src={item.image}
               width="auto"
               height="auto"

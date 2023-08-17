@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import LaddersHeader from "./ladders-header";
-import AnimatedNumber from "../../../../components/AnimatedNumber/AnimatedNumber";
+import AnimatedNumber from "@/components/AnimatedNumber/AnimatedNumber";
 
 import TabLaddersOngoing from "./tab-laddersongoing";
 import TabLaddersUpcoming from "./tab-laddersupcoming";

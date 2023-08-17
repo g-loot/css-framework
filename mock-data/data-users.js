@@ -243,6 +243,15 @@ export const dataUsers = [
         },
         date: "1 day ago",
         stats: {
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
           views: "1.4k",
         },
       },
@@ -254,7 +263,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -265,7 +283,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -276,7 +303,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -426,7 +462,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -437,7 +482,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -448,7 +502,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -582,7 +645,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -593,7 +665,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -604,7 +685,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -745,7 +835,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -756,7 +855,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -767,7 +875,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -883,7 +1000,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -894,7 +1020,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -905,7 +1040,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -1025,7 +1169,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -1036,7 +1189,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -1047,7 +1209,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],
@@ -1166,7 +1337,16 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
-          views: "1.1k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "1.4k",
         },
       },
       {
@@ -1177,7 +1357,16 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
-          views: "0.8k",
+          hasWon: false,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 8,
+            team2: 12,
+          },
+        },
+        social: {
+          views: "1.1k",
         },
       },
       {
@@ -1188,7 +1377,16 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
-          views: "3.4k",
+          hasWon: true,
+          time: "08:10 PM",
+          duration: "24m 12s",
+          score: {
+            team1: 12,
+            team2: 9,
+          },
+        },
+        social: {
+          views: "0.5k",
         },
       },
     ],

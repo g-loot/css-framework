@@ -1,17 +1,17 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import { UiContext } from "@/contexts/ui";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ProfileHeader from "../header";
 import Link from "next/link";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
-import Accordion from "../../../../components/Accordion/Accordion";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Accordion from "@/components/Accordion/Accordion";
 
 export default function TabProfileStats() {
   const router = useRouter();

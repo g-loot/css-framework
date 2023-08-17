@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
-import Countdown from "../../../../components/Countdown/Countdown";
+import Ad from "@/components/Ad/Ad";
+import Countdown from "@/components/Countdown/Countdown";
 import Link from "next/link";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
-import Reward from "../../../../components/Reward/Reward";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
+import Reward from "@/components/Reward/Reward";
 import TabTournamentsHowToPlay from "./tab-howtoplay";
 import TabTournamentsLeaderboard from "./tab-leaderboard";
 import TabTournamentsOverview from "./tab-overview";

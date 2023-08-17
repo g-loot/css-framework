@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { dataPatchNotes } from "@/mock-data/data-patchnotes";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";

@@ -5,11 +5,11 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import ModalAchievementReceived from "../../modal-achievementreceived";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
-import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
-import Avatar from "../../../../components/Avatar/Avatar";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
+import CardMissionSecondary from "@/components/Card/CardMissionSecondary";
+import Avatar from "@/components/Avatar/Avatar";
 
 const ActivityFeed = [
   {

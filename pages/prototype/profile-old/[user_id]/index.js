@@ -1,22 +1,22 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
-import Ad from "../../../../components/Ad/Ad";
+import Accordion from "@/components/Accordion/Accordion";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
-import ListItemLadder from "../../../../components/ListItem/ListItemLadder";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import ListItemLadder from "@/components/ListItem/ListItemLadder";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
-import Slider from "../../../../components/Slider/Slider";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Slider from "@/components/Slider/Slider";
 import { UiContext } from "@/contexts/ui";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import ProfileHeader from "../header";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
 const achievementsList = [
   {

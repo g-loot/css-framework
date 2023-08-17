@@ -1,11 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Footer from "../../../../components/Footer/Footer";
+import Footer from "@/components/Footer/Footer";
 import ValorantClashTabFollow from "./tab-follow";
 import ValorantClashTabItem from "./component-tabItem";
 import ValorantClashTabLearnMore from "./tab-learnmore";
 import ValorantClashTabPartake from "./tab-partake";
-import { getLayout } from "../../../../components/Prototype/PrototypeLayout";
+import { getLayout } from "@/components/Prototype/PrototypeLayout";
 import { useRouter } from "next/router";
 
 const TabsItems = [

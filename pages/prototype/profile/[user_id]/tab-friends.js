@@ -1,20 +1,20 @@
 import React, { useEffect, useState, useContext } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import { UiContext } from "@/contexts/ui";
-import PrototypeStructure from "../../../../components/Prototype/PrototypeStructure";
+import PrototypeStructure from "@/components/Prototype/PrototypeStructure";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
-import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
+import AchievementFrame from "@/components/Achievements/AchievementFrame";
+import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import ProfileHeader from "../header";
 import Link from "next/link";
 import ModalRemoveFriend from "./modal-remove-friend";
-import Avatar from "../../../../components/Avatar/Avatar";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
-import ButtonSorting from "../../../../components/Button/ButtonSorting";
+import Avatar from "@/components/Avatar/Avatar";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import ButtonSorting from "@/components/Button/ButtonSorting";
 
 export default function TabProfileFriends() {
   const router = useRouter();

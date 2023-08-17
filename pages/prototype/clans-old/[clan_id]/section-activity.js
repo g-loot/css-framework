@@ -1,14 +1,14 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Countdown from "../../../../components/Countdown/Countdown";
+import Countdown from "@/components/Countdown/Countdown";
 import Link from "next/link";
-import ListItemLadder from "../../../../components/ListItem/ListItemLadder";
+import ListItemLadder from "@/components/ListItem/ListItemLadder";
 import ModalGiftTokens from "../modal-gift-tokens";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
-import Avatar from "../../../../components/Avatar/Avatar";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Avatar from "@/components/Avatar/Avatar";
 
 export default function SectionClanActivity() {
   const router = useRouter();

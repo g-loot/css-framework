@@ -11,11 +11,12 @@ export default function ButtonFeedback(props) {
       : "rounded-full button-secondary";
   const value = props.value || "";
   const label = props.label;
+  const delay = props.delay || 0;
   const message = props.message !== undefined ? props.message : "success";
   const type = props.type !== undefined ? props.type : "success";
   const icon =
     props.icon !== undefined ? props.icon : "icon-network-communication";
-  const delay = 4000;
+  const feedbackDelay = 4000;
 
   function handleButtonFeedback(message) {
     setSubmitting(true);
@@ -31,8 +32,8 @@ export default function ButtonFeedback(props) {
       setButtonFeedbackMessage(message);
       setTimeout(() => {
         setButtonFeedbackMessage("");
-      }, delay);
-    }, 2500);
+      }, feedbackDelay);
+    }, delay);
   }
 
   return (

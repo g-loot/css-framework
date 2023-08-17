@@ -1,4 +1,4 @@
-import Accordion from "../../../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import Link from "next/link";
 import Sticky from "react-stickynode";
 import { useRouter } from "next/router";

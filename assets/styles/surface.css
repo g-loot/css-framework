@@ -211,6 +211,19 @@
   }
 }
 
+.surface-ui-500 {
+  @apply
+  bg-ui-500
+  border
+  border-ui-400
+  ;
+  .progressbar {
+    @apply
+    bg-ui-300
+    ;
+  }
+}
+
 .surface-premium,
 .surface-unlocked {
   @apply

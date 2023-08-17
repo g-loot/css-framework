@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
-import Footer from "../../../../components/Footer/Footer";
-import TopbarMarketing from "../../../../components/TopBarMarketing/TopbarMarketing";
+import Accordion from "@/components/Accordion/Accordion";
+import Footer from "@/components/Footer/Footer";
+import TopbarMarketing from "@/components/TopBarMarketing/TopbarMarketing";
 import TournamentLeaderboard from "../../../api/pubg-season-6/data";
-import { getLayout } from "../../../../components/Prototype/PrototypeLayout";
+import { getLayout } from "@/components/Prototype/PrototypeLayout";
 
 function randomArrayShuffle(array) {
   var currentIndex = array.length,

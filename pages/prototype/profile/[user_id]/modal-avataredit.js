@@ -2,7 +2,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { UiContext } from "@/contexts/ui.js";
 import { VariablesContext } from "@/contexts/variables";
 import { usePrototypeData } from "@/contexts/prototype.js";
-import Slider from "../../../../components/Slider/Slider.js";
+import Slider from "@/components/Slider/Slider.js";
 import Link from "next/link.js";
 
 export default function ModalAvatarEdit(props) {

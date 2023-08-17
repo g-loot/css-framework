@@ -2,15 +2,15 @@ import React, { useEffect, useState, useContext } from "react";
 
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import ReadMore from "../../../../components/ReadMore/ReadMore";
+import ReadMore from "@/components/ReadMore/ReadMore";
 import Link from "next/link";
-import Slider from "../../../../components/Slider/Slider";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
-import Avatar from "../../../../components/Avatar/Avatar";
-import Chat from "../../../../components/Chat/Chat";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
+import Slider from "@/components/Slider/Slider";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import Avatar from "@/components/Avatar/Avatar";
+import Chat from "@/components/Chat/Chat";
+import GameIcon from "@/components/GameIcon/GameIcon";
 import { UiContext } from "@/contexts/ui";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import ModalClanLeave from "../modal-clan-leave";
 import ModalGiftTokens from "../modal-gift-tokens";
 

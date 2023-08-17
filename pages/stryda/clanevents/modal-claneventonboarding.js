@@ -4,7 +4,6 @@ import { UiContext } from "@/contexts/ui.js";
 import { usePrototypeData } from "@/contexts/prototype.js";
 import { VariablesContext } from "@/contexts/variables.js";
 import { useRouter } from "next/router";
-import ResetsIn from "@/components/Countdown/ResetsIn.js";
 import Tooltip from "@/components/Tooltip/Tooltip.js";
 
 export default function ModalClanEventOnboarding(props) {
@@ -39,6 +38,7 @@ export default function ModalClanEventOnboarding(props) {
     }, 1000);
   }
 
+
   return (
     <>
       {selectedLeaderboard && (
@@ -57,7 +57,7 @@ export default function ModalClanEventOnboarding(props) {
                 <p>Play with your Clan and compete against other Clans.</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-4 max-w-md mx-auto child:animate-delay">
                   <div className="flex-1 animate-fade-in">
-                    <div className="w-full rounded border border-ui-700 bg-ui-850 mb-2 relative">
+                    <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                       <img
                         src="https://res.cloudinary.com/gloot/image/upload/v1692100062/Stryda/illustrations/Clan_Season_onboarding_1.png"
                         alt=""
@@ -70,7 +70,7 @@ export default function ModalClanEventOnboarding(props) {
                   </div>
                   {selectedLeaderboard.meta.eligibility.countries && (
                     <div className="flex-1 animate-fade-in">
-                      <div className="w-full rounded border border-ui-700 bg-ui-850 mb-2 relative">
+                      <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                         <div className="absolute inset-0 grid place-content-center p-8">
                           <div className="inline-flex flex-wrap items-center justify-center gap-2">
                             {selectedLeaderboard.meta.eligibility.countries?.map(
@@ -131,7 +131,7 @@ export default function ModalClanEventOnboarding(props) {
                   )}
                   {selectedLeaderboard.meta.eligibility.ranks && (
                     <div className="flex-1 animate-fade-in">
-                      <div className="w-full rounded border border-ui-700 bg-ui-850 mb-2 relative">
+                      <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                         <div className="absolute inset-0 grid place-content-center p-8">
                           <div className="inline-flex flex-wrap items-center justify-center gap-2">
                             {selectedLeaderboard.meta.eligibility.ranks?.map(
@@ -193,7 +193,7 @@ export default function ModalClanEventOnboarding(props) {
                     </div>
                   )}
                   <div className="flex-1 animate-fade-in">
-                    <div className="w-full rounded border border-ui-700 bg-ui-850 mb-2 relative">
+                    <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                       <img
                         src="https://res.cloudinary.com/gloot/image/upload/v1692100062/Stryda/illustrations/Clan_Season_onboarding_4.png"
                         alt=""

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
 import Link from "next/link";
 
 export default function TabClanActivity() {

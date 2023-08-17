@@ -3,8 +3,8 @@ import Link from "next/link";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import { UiContext } from "@/contexts/ui";
-import ReadMore from "../../../../components/ReadMore/ReadMore";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
+import ReadMore from "@/components/ReadMore/ReadMore";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 export default function ClanHeader() {
   const router = useRouter();

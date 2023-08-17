@@ -1,16 +1,16 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Ad from "../../../../components/Ad/Ad";
+import Ad from "@/components/Ad/Ad";
 import Link from "next/link";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import CardMissionSecondary from "../../../../components/Card/CardMissionSecondary";
-import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
-import CardMissionTableTr from "../../../../components/Card/CardMissionTableTr";
-import ButtonStatsUpdate from "../../../../components/ButtonStatsUpdate/ButtonStatsUpdate";
-import LoadMore from "../../../../components/LoadMore/LoadMore";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
+import CardMissionSecondary from "@/components/Card/CardMissionSecondary";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
+import CardMissionTableTr from "@/components/Card/CardMissionTableTr";
+import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
+import LoadMore from "@/components/LoadMore/LoadMore";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function TabMissionsMissions() {
   const router = useRouter();

@@ -4,13 +4,13 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
-import Avatar from "../../../../components/Avatar/Avatar";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
+import Avatar from "@/components/Avatar/Avatar";
+import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalGiftTokens from "../modal-gift-tokens";
 import ModalClanInvite from "../modal-clan-invite";
-import ButtonSorting from "../../../../components/Button/ButtonSorting";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
+import ButtonSorting from "@/components/Button/ButtonSorting";
+import Tooltip from "@/components/Tooltip/Tooltip";
+import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
 export default function TabClanMembers() {
   const router = useRouter();

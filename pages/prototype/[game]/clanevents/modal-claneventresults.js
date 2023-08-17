@@ -4,8 +4,8 @@ import { UiContext } from "@/contexts/ui.js";
 import { usePrototypeData } from "@/contexts/prototype.js";
 import ModalClaimLadderRewards from "../../home/modal-claim-ladderrewards.js";
 import { useRouter } from "next/router";
-import AvatarClan from "../../../../components/Avatar/AvatarClan.js";
-import Slider from "../../../../components/Slider/Slider.js";
+import AvatarClan from "@/components/Avatar/AvatarClan.js";
+import Slider from "@/components/Slider/Slider.js";
 
 export default function ModalClanEventResults(props) {
   const router = useRouter();

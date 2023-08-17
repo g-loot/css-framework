@@ -17,7 +17,6 @@ import ModalClanEventOnboarding from "../modal-claneventonboarding";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import Rewards from "../../../../../components/Reward/Rewards";
 import ButtonFeedback from "../../../../../components/Button/ButtonFeedback";
-import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 const rewardDistribClan = [
   {
@@ -426,6 +425,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                             icon="icon-refresh-02"
                             message="Stats updated"
                             label="Update my stats"
+                            delay={3000}
                           />
 
                           {selectedClanLeaderboard.status === "finished" && (
@@ -463,15 +463,15 @@ export default function TabClanLeaderboardsLeaderboards() {
                           <table className="table table-compact w-full">
                             <tbody>
                               <tr>
-                                <td>
+                                <td className="flex items-center gap-2">
                                   <div className="text-sm uppercase">
-                                    <span>Clan members</span>
-                                    <Tooltip tooltip="Showing eligible Clan members only">
-                                      <button className="text-ui-300 text-0 translate-y-0.5 ml-2">
-                                        <span className="icon icon-16 icon-c-info" />
-                                      </button>
-                                    </Tooltip>
+                                    Clan members
                                   </div>
+                                  <Tooltip tooltip="Showing eligible Clan members only">
+                                    <button type="button" className="text-ui-300">
+                                      <span className="icon icon-16 icon-c-info" />
+                                    </button>
+                                  </Tooltip>
                                 </td>
                                 {selectedClanLeaderboard.status ===
                                   "finished" ||

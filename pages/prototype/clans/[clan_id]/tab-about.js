@@ -5,12 +5,12 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ModalGiftTokens from "../modal-gift-tokens";
-import ReadMore from "../../../../components/ReadMore/ReadMore";
-import Slider from "../../../../components/Slider/Slider";
+import ReadMore from "@/components/ReadMore/ReadMore";
+import Slider from "@/components/Slider/Slider";
 import ModalClanLeave from "../modal-clan-leave";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
-import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
-import Avatar from "../../../../components/Avatar/Avatar";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import LadderCardSecondary from "@/components/Ladder/LadderCardSecondary";
+import Avatar from "@/components/Avatar/Avatar";
 
 export default function TabClanAbout() {
   const router = useRouter();

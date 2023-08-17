@@ -419,6 +419,14 @@ export default function TabClanLeaderboardsLeaderboards() {
                             </div>
                           </div>
 
+                          <ButtonFeedback
+                            variant="button-sm button-secondary w-full my-2"
+                            icon="icon-refresh-02"
+                            message="Stats updated"
+                            delay={3000}
+                            label="Update my stats"
+                          />
+
                           {selectedClanLeaderboard.status === "finished" && (
                             <button
                               type="button"
@@ -454,10 +462,18 @@ export default function TabClanLeaderboardsLeaderboards() {
                           <table className="table table-compact w-full">
                             <tbody>
                               <tr>
-                                <td>
+                                <td className="flex items-center gap-2">
                                   <div className="text-sm uppercase">
                                     Clan members
                                   </div>
+                                  <Tooltip tooltip="Showing eligible Clan members only">
+                                    <button
+                                      type="button"
+                                      className="text-ui-300"
+                                    >
+                                      <span className="icon icon-16 icon-c-info" />
+                                    </button>
+                                  </Tooltip>
                                 </td>
                                 {selectedClanLeaderboard.status ===
                                   "finished" ||
@@ -485,7 +501,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                               {getMyClanMembers().map((item, itemIndex) => (
                                 <tr key={itemIndex}>
                                   <td className="flex items-center gap-2 w-full">
-                                      <Avatar id={item.id} hasTooltip={true} />
+                                    <Avatar id={item.id} hasTooltip={true} />
                                     <Link
                                       href={`/prototype/profile/${
                                         prototype.getUserByID(item.id).id

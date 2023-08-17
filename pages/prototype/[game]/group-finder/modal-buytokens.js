@@ -5,7 +5,7 @@ import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import PremiumLogo from "../../../../components/PremiumLogo/PremiumLogo";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
 const TokensLItems = [
   {

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import Accordion from "../../../../components/Accordion/Accordion";
+import Accordion from "@/components/Accordion/Accordion";
 import Link from "next/link";
 import ModalAddDiscord from "./modal-add-discord";
-import ModalContainer from "../../../../components/Modal/ModalContainer";
-import Reward from "../../../../components/Reward/Reward";
+import ModalContainer from "@/components/Modal/ModalContainer";
+import Reward from "@/components/Reward/Reward";
 import SectionTournamentsLeaderboarBrackers from "./section-leaderboard-brackets";
 import SectionTournamentsLeaderboardTable from "./section-leaderboard-table";
 import { UiContext } from "@/contexts/ui";
