@@ -56,7 +56,10 @@ export default function TopbarHighlightProcessing(props) {
           {!isEmpty && (
             <>
               <div className="flex items-center justify-between p-2">
-                <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
+                <div className="py-24 px-4 text-center">
+                  This is where the saved highlights are being displayed.
+                </div>
+                <div className="hidden max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
                   <ul>
                     <li
                       className={`surface-ui-600 rounded p-4 ${

@@ -154,10 +154,17 @@ export default function WidgetUser(props) {
                         />
                       </div>
                     </div>
-                    <div className="text-ui-100 truncate text-sm">
+                    <div className="truncate text-sm text-left">
                       &#91;
                       {prototype.getClanByID(selectedUser.clan).tag}
                       &#93; {prototype.getClanByID(selectedUser.clan).nickname}
+                    </div>
+                    <div
+                      className="relative px-3 ml-1 border-l border-ui-400/30 animate-slide-in-right"
+                      style={{ animationDelay: "1s" }}
+                    >
+                      <span className="badge bg-error-300 absolute -top-1 right-0" />
+                      <span className="icon icon-a-chat text-ui-300" />
                     </div>
                   </div>
                 </div>
