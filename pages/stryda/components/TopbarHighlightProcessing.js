@@ -11,13 +11,12 @@ export default function TopbarHighlightProcessing(props) {
   const [hasNewVideos, setHasNewVideos] = useState(false);
 
   useEffect(() => {
-    if(router.pathname.endsWith("home")) {
+    if (router.pathname.endsWith("home")) {
       setHasNewVideos(false);
       setTimeout(() => {
         setHasNewVideos(true);
       }, 3000);
     } else {
-
     }
   }, []);
 
@@ -34,9 +33,7 @@ export default function TopbarHighlightProcessing(props) {
             </span>
           </button>
           {hasNewVideos && (
-            <div
-              className="absolute inset-0 grid place-content-center"
-            >
+            <div className="absolute inset-0 grid place-content-center">
               <div role="loading" className="loader loader-sm" />
             </div>
           )}
@@ -61,9 +58,11 @@ export default function TopbarHighlightProcessing(props) {
               <div className="flex items-center justify-between p-2">
                 <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
                   <ul>
-                    <li className="surface-ui-500 rounded p-4">
-
-                    </li>
+                    <li
+                      className={`surface-ui-600 rounded p-4 ${
+                        loading ? "is-loading" : ""
+                      }`}
+                    ></li>
                   </ul>
                 </div>
               </div>

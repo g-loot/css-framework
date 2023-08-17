@@ -243,6 +243,8 @@ export const dataUsers = [
         },
         date: "1 day ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -263,6 +265,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -283,6 +287,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -303,6 +309,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -310,6 +318,7 @@ export const dataUsers = [
             team1: 12,
             team2: 9,
           },
+
         },
         social: {
           views: "0.5k",
@@ -462,6 +471,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -482,6 +493,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -502,6 +515,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -645,6 +660,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -665,6 +682,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -685,6 +704,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -835,6 +856,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -855,6 +878,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -875,6 +900,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1000,6 +1027,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1020,6 +1049,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1040,6 +1071,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1169,6 +1202,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1189,6 +1224,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1209,6 +1246,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1337,6 +1376,8 @@ export const dataUsers = [
         },
         date: "2 days ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1357,6 +1398,8 @@ export const dataUsers = [
         },
         date: "1 week ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: false,
           time: "08:10 PM",
           duration: "24m 12s",
@@ -1377,6 +1420,8 @@ export const dataUsers = [
         },
         date: "1 month ago",
         stats: {
+          agent: 3,
+          map: 12,
           hasWon: true,
           time: "08:10 PM",
           duration: "24m 12s",

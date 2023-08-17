@@ -4,6 +4,10 @@ import { usePrototypeData } from "@/contexts/prototype";
 import dataUsers from "@/mock-data/data-users.js";
 import Avatar from "@/components/Avatar/Avatar.js";
 import GameIcon from "@/components/GameIcon/GameIcon.js";
+import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
+import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
+import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
+import { StatsValorantWeapons } from "@/mock-data/data-stats-valorant";
 
 export default function ModalHighlightViewer(props) {
   const uiContext = useContext(UiContext);
@@ -11,10 +15,31 @@ export default function ModalHighlightViewer(props) {
   const item = props.item;
   const [selectedUser, setSelectedUser] = useState(null);
 
+  const getAgentByID = (id) => {
+    return StatsValorantAgents.find((agent) => {
+      return agent.id === parseInt(id);
+    });
+  };
+  const getRankByID = (id) => {
+    return StatsValorantRanks.find((rank) => {
+      return rank.id === parseInt(id);
+    });
+  };
+  const getMapByID = (id) => {
+    return StatsValorantMaps.find((map) => {
+      return map.id === parseInt(id);
+    });
+  };
+  const getWeaponByID = (id) => {
+    return StatsValorantWeapons.find((weapon) => {
+      return weapon.id === parseInt(id);
+    });
+  };
+
   return (
     <>
       {item && (
-        <div className="modal rounded-[1.75rem] max-w-xl">
+        <div className="modal rounded-7 max-w-xl">
           <button
             type="button"
             className="button button-tertiary button-close"
@@ -25,14 +50,40 @@ export default function ModalHighlightViewer(props) {
           <div className="modal-content p-0">
             <div className="modal-body relative">
               <div className="absolute z-10 inset-0 p-4">
-                <div className="absolute top-1 left-1 flex items-center p-2 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur">
+                <div className="absolute bottom-4 right-4 p-1 bg-ui-900/80 backdrop-blur rounded-2">
+                  <div
+                    className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${
+                      item.stats.hasWon
+                        ? " bg-success-500/10 text-success-300"
+                        : "bg-error-500/10 text-error-300"
+                    }`}
+                  >
+                    <span>{item.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
+                    <i
+                      className={`block h-4 w-px ${
+                        item.stats.hasWon
+                          ? " bg-success-300/25"
+                          : "bg-error-300/25"
+                      }`}
+                    />{" "}
+                    <span>
+                      {item.stats.score.team1} - {item.stats.score.team2}
+                    </span>
+                  </div>
+                </div>
+                <div className="absolute top-1 left-1 flex items-center gap-4 p-2 pr-4 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur max-w-xs">
                   <Avatar id={1} size="avatar-sm" />
-                  <div className="pl-1 pr-2 flex gap-2 items-center text-xs sm:text-sm text-ui-200">
-                    <span className="ml-0.5" />
-                    <GameIcon game={item.game} size="sm:text-lg" />
-                    <span>{item.stats?.views} views</span>
-                    <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
-                    <span>{item.date}</span>
+                  <div className="overflow-hidden">
+                    <div>
+                      <p className="text-ui-100 leading-tight truncate">
+                        AI generated text
+                      </p>
+                    </div>
+                    <div className="flex-1 flex items-center gap-2 text-xs text-ui-300">
+                      <span>{item.social?.views} views</span>
+                      <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                      <span>{item.date}</span>
+                    </div>
                   </div>
                 </div>
               </div>
