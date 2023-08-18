@@ -214,7 +214,7 @@ export default function Profile() {
 
         <Loader
           loader={
-            <section className="min-h-screen container flex flex-col mx-4 sm:mx-0 mt-8">
+            <section className="min-h-screen container sm:px-4 flex flex-col mx-4 sm:mx-0 mt-8">
               <div className="surface is-loading rounded w-full aspect-banner flex-none" />
               <div className="container flex flex-col md:flex-row items-stretch gap-8 py-8 flex-1">
                 <div className="w-80 2xl:w-96 space-y-4 hidden md:block surface is-loading rounded" />

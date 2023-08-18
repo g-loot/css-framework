@@ -105,8 +105,43 @@ export default function CardMission(props) {
                   <>
                     {!MissionRetrieved && (
                       <>
+                        <span
+                          className={`icon text-4xl mb-2 ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "apexlegends"
+                              ? "icon-game-apexlegends-symbol"
+                              : ""
+                          } ${
+                            prototype.getGameBySlug(gameSlug).slug === "csgo"
+                              ? "icon-game-csgo-symbol"
+                              : ""
+                          }  ${
+                            prototype.getGameBySlug(gameSlug).slug === "dota2"
+                              ? "icon-game-dota2-symbol"
+                              : ""
+                          }  ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "leagueoflegends"
+                              ? "icon-game-leagueoflegends-symbol"
+                              : ""
+                          }  ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "rocketleague"
+                              ? "icon-game-rocketleague-symbol"
+                              : ""
+                          } ${
+                            prototype.getGameBySlug(gameSlug).slug === "pubg"
+                              ? "icon-game-pubg-symbol"
+                              : ""
+                          }  ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "valorant"
+                              ? "icon-game-valorant-symbol"
+                              : ""
+                          }`}
+                        />
                         <h4>Reveal mission</h4>
-                        <div className="text-sm mt-2">
+                        <div className="text-sm mt-1">
                           {variablesContext.availableMissions} new available
                         </div>
                       </>

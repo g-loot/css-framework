@@ -1,15 +1,8 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import FeedItem from "@/pages/stryda/components/FeedItem";
-import { DataFeedItems } from "@/mock-data/data-feed";
-
+import { usePrototypeData } from "@/contexts/prototype";
 export default function Feed() {
-
-  const getFeedItemByID = (id) => {
-    return DataFeedItems.find((general) => {
-      return general.id === parseInt(id);
-    });
-  };
-
+  const prototype = usePrototypeData();
   const [playingIndex, setPlayingIndex] = useState(null);
 
   const handleScroll = () => {
@@ -41,7 +34,7 @@ export default function Feed() {
 
   return (
     <>
-      {DataFeedItems.map((item, itemIndex) => (
+      {prototype.feedItems.map((item, itemIndex) => (
         <FeedItem
           item={item}
           key={itemIndex}

@@ -1714,7 +1714,7 @@ export const dataUsers = [
       twitch: "@KooKoo",
     },
     shopItems: {
-      avatarFrame: 4,
+      avatarFrame: 160,
       profileBanner: 27,
     },
     stats: {

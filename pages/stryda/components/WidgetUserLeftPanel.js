@@ -10,6 +10,7 @@ import ReadMore from "@/components/ReadMore/ReadMore";
 import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalFavoriteGames from "../modal-favoritegames";
 import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
+import ModalLevelUp from "../modal-levelup";
 
 export default function WidgetUserLeftPanel(props) {
   const router = useRouter();
@@ -201,7 +202,7 @@ export default function WidgetUserLeftPanel(props) {
                 </button>
               </Tooltip>
             </div>
-            <div className="p-4 space-y-1">
+            <div className="p-4 space-y-1 cursor-pointer" onClick={() => uiContext.openModal(<ModalLevelUp />)}>
               <div className="flex items-center justify-center gap-2">
                 <span className="text-main text-center text-lg">10423</span>
                 <span className="icon icon-xp-symbol text-4xl text-main" />

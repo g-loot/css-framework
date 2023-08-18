@@ -72,7 +72,7 @@ export default function ModalHighlightViewer(props) {
                   </div>
                 </div>
                 <div className="absolute top-1 left-1 flex items-center gap-4 p-2 pr-4 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur max-w-xs">
-                  <Avatar id={1} size="avatar-sm" />
+                  <Avatar id={item.user} size="avatar-sm" />
                   <div className="overflow-hidden">
                     <div>
                       <p className="text-ui-100 leading-tight truncate">
@@ -80,9 +80,9 @@ export default function ModalHighlightViewer(props) {
                       </p>
                     </div>
                     <div className="flex-1 flex items-center gap-2 text-xs text-ui-300">
-                      <span>{item.social?.views} views</span>
+                      <span>0.5k views</span>
                       <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
-                      <span>{item.date}</span>
+                      <span>{item.meta.dateTimeEnded}</span>
                     </div>
                   </div>
                 </div>
@@ -96,7 +96,7 @@ export default function ModalHighlightViewer(props) {
                 width="100%"
                 height="100%"
                 className="relative z-0 w-full"
-                src={item.media?.url}
+                src={item.meta.media?.url}
               ></video>
             </div>
           </div>

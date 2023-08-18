@@ -10,16 +10,17 @@ export default function ResetsIn(props) {
   function incrementStatus() {
     console.log(status);
     setStatus(status+1);
-    if (status === 2) {
+    if (status === 3) {
       setStatus(0);
     }
   }
 
   return (
-    <span onClick={incrementStatus} className={`whitespace-nowrap ${status === 2 ? 'animate-text-attention' : ''}`}>
+    <span onClick={incrementStatus} className={`whitespace-nowrap ${status === 3 ? 'animate-text-attention' : ''}`}>
       {status === 0 && <>{label} on August 24</>}
       {status === 1 && <>{label} on Monday at 2pm CET</>}
-      {status === 2 && (
+      {status === 2 && <>{label} tomorrow at 2pm CET</>}
+      {status === 3 && (
         <>
           {label} in{" "}
           <Countdown

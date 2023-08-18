@@ -47,12 +47,38 @@ export default function TabProfileHighlights() {
     <>
       {selectedUser && (
         <section>
-          {!selectedUser.videos ? (
-            <div className="surface rounded-lg px-4 py-8 text-center">
+          {prototype
+            .getUserMatches(selectedUser.id)
+            .filter((m) => m.meta?.media).length > 0 ? (
+            <>
+              {selectedUser.isYou && (
+                <div className="surface sm:rounded mb-4 py-24 px-4 text-center">
+                  This is where the saved highlights are being displayed.
+                </div>
+              )}
+              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
+                {prototype
+                  .getUserMatches(selectedUser.id)
+                  .filter((m) => m.meta?.media)
+                  .map((item, itemIndex) => (
+                    <div
+                      key={itemIndex}
+                      className={`w-full animate-slide-in-bottom animate-delay ${
+                        loading ? "is-loading" : ""
+                      }`}
+                      style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                    >
+                      <Video item={item} hasMeta={true} />
+                    </div>
+                  ))}
+              </div>
+            </>
+          ) : (
+            <div className="surface rounded-lg px-4 py-16 text-center">
               <div className="max-w-xs mx-auto">
                 <span className="icon icon-video text-6xl text-ui-500" />
                 <div className="mt-2">
-                  <p className="text-lg text-ui-300">
+                  <p className="text-ui-300">
                     {selectedUser.isYou ? (
                       <>You haven&#39;t any highlights yet</>
                     ) : (
@@ -62,27 +88,6 @@ export default function TabProfileHighlights() {
                 </div>
               </div>
             </div>
-          ) : (
-            <>
-            {selectedUser.isYou && (
-              <div className="surface sm:rounded mb-4 py-24 px-4 text-center">
-                This is where the saved highlights are being displayed.
-              </div>
-            )}
-              <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
-                {selectedUser.videos.map((item, itemIndex) => (
-                  <div
-                    key={itemIndex}
-                    className={`w-full animate-slide-in-bottom animate-delay ${
-                      loading ? "is-loading" : ""
-                    }`}
-                    style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
-                  >
-                    <Video item={item} hasMeta={true} />
-                  </div>
-                ))}
-              </div>
-            </>
           )}
         </section>
       )}

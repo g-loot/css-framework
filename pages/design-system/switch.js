@@ -85,6 +85,31 @@ const DSpage = () => {
       </div>
     </div>
 
+    {/* With slot effect */}
+    <div className='mb-12' id='with-slot-effect'>
+
+      <h2 className='h3 mb-3'>
+        With slot effect
+      </h2>
+
+      <div className='surface rounded-lg p-4'>
+        <div className=''>
+          <div className='flex gap-4 flex-col lg:flex-row lg:items-center'>
+            <div className='flex-1 space-y-4 text-center'>
+              <label className='switch switch-slot'>
+                <input type='checkbox' />
+                <div className='switch-on icon icon-36 icon-heart text-main'></div>
+                <div className='switch-off icon icon-36 icon-heart'> </div>
+              </label>
+            </div>
+            <div className='flex-1'>
+              <iframe className='rounded' width='100%' height='200' src='//jsfiddle.net/augustin_hiebel/5m8ht0p1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094' ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
     {/* Hamburger button */}
     <div className='mb-12' id='hamburger-button'>

@@ -74,7 +74,25 @@ export default function TabProfileOverview() {
               </Link>
             </div>
             <div>
-              {!selectedUser.videos ? (
+              {prototype
+                .getUserMatches(selectedUser.id)
+                .filter((m) => m.meta?.media).length > 0 ? (
+                <Slider
+                  itemWidth={397 + 16}
+                  bgColor="from-ui-800 via-ui-800 to-ui-800/0"
+                >
+                  <div className="flex gap-4 px-4">
+                    {prototype
+                      .getUserMatches(selectedUser.id)
+                      .filter((m) => m.meta?.media)
+                      .map((item, itemIndex) => (
+                        <div key={itemIndex} className="w-[75dvw] md:w-96">
+                          <Video item={item} hasMeta={true} />
+                        </div>
+                      ))}
+                  </div>
+                </Slider>
+              ) : (
                 <div className="text-center p-4">
                   <span className="icon icon-video text-6xl text-ui-500" />
                   <p className="mt-2 text-ui-300">
@@ -85,21 +103,6 @@ export default function TabProfileOverview() {
                     )}
                   </p>
                 </div>
-              ) : (
-                <>
-                  <Slider
-                    itemWidth={397 + 16}
-                    bgColor="from-ui-800 via-ui-800 to-ui-800/0"
-                  >
-                    <div className="flex gap-4 px-4">
-                      {selectedUser.videos.map((item, itemIndex) => (
-                        <div key={itemIndex} className="w-[75dvw] md:w-96">
-                          <Video item={item} hasMeta={true} />
-                        </div>
-                      ))}
-                    </div>
-                  </Slider>
-                </>
               )}
             </div>
           </section>

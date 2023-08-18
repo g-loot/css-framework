@@ -39,19 +39,19 @@ export default function Home() {
       <Structure title="Home">
         <Loader
           loader={
-            <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-8">
+            <section className="min-h-screen container flex flex-col md:flex-row gap-8 lg:gap-16 py-8">
               <div className="w-80 2xl:w-96 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="w-80 2xl:w-96 hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
-          <section className="min-h-screen container flex flex-col md:flex-row gap-8 py-8">
+          <section className="min-h-screen container flex flex-col md:flex-row gap-8 lg:gap-16 py-8">
             <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
-              <WidgetUser />
+              <WidgetUser hasActions={false} />
               <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                  <h2 className="h6 text-ui-100">Online</h2>
+                  <h2 className="h6 text-ui-100">Followings</h2>
                   <Link
                     href={`/stryda/profile/settings${prototype.getURLparams()}`}
                   >
@@ -60,8 +60,9 @@ export default function Home() {
                     </a>
                   </Link>
                 </div>
-                <div className="max-h-48 overflow-y-auto scrollbar-desktop">
-                  <ul>
+                <div className="max-h-96 overflow-y-auto scrollbar-desktop">
+                  <h3 className="normal-case text-base font-base px-4 pt-2 pb-1">Online</h3>
+                  <ul className="divide-y-0">
                     {prototype.users
                       .filter((i) => i.isOnline)
                       .filter((i) => !i.isYou)
@@ -113,21 +114,8 @@ export default function Home() {
                         </li>
                       ))}
                   </ul>
-                </div>
-              </div>
-              <div className="surface rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                  <h2 className="h6 text-ui-100">Suggestions</h2>
-                  <Link
-                    href={`/stryda/profile/settings${prototype.getURLparams()}`}
-                  >
-                    <a className="link link-hover text-ui-300 text-sm leading-none">
-                      View all
-                    </a>
-                  </Link>
-                </div>
-                <div className="max-h-48 overflow-y-auto scrollbar-desktop">
-                  <ul>
+                  <h3 className="normal-case text-base font-base px-4 pt-2 pb-1 border-t border-t-ui-700">Suggestions</h3>
+                  <ul className="divide-y-0">
                     {prototype.users
                       .filter((i) => !i.isOnline)
                       .filter((i) => !i.isYou)

@@ -72,7 +72,7 @@ export default function Structure({ children, title, gamePicker }) {
               </div>
             </div>
           )}
-          <div className="min-h-screen container">{children}</div>
+          <div className="min-h-screen container sm:px-8">{children}</div>
           <Footer />
       {/*
       <div className="drawer min-h-full">

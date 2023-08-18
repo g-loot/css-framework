@@ -93,7 +93,7 @@ export default function Video(props) {
               height="100%"
               id={`video_${id}`}
               className="relative z-10 w-full"
-              src={`${item.media?.url}#t=1`}
+              src={`${item.meta?.media?.url}#t=1`}
             ></video>
             <div className="absolute z-0 inset-0 grid place-content-center">
               <span className="icon icon-video text-ui-400 text-2xl" />
@@ -101,11 +101,11 @@ export default function Video(props) {
           </div>
           {hasMeta && (
             <div className="flex gap-2 items-start mt-2">
-              {item.stats?.agent && (
+              {item.meta?.agent && (
                 <div className="avatar avatar-xs avatar-diamond ml-1">
                   <div>
                     <img
-                      src={getAgentByID(item.stats.agent).picturePath}
+                      src={getAgentByID(item.meta.agent).picturePath}
                       alt=""
                     />
                   </div>
@@ -137,9 +137,9 @@ export default function Video(props) {
                   </div>
                 </div>
                 <div className="flex-1 flex items-center gap-2 text-xs sm:text-sm text-ui-300">
-                  <span>{item.social?.views} views</span>
+                  <span>0.5k views</span>
                   <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
-                  <span>{item.date}</span>
+                  <span>{item.meta.dateTimeEnded}</span>
                 </div>
               </div>
             </div>

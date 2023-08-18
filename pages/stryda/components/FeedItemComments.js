@@ -63,6 +63,7 @@ const FeedItemComment = (props) => {
 export default function FeedItemComments(props) {
   const prototype = usePrototypeData();
   const item = props.item;
+  const isExpanded = props.isExpanded !== undefined ? props.isExpanded : true;
   const [commentOn, setCommentOn] = useState(false);
   const [likeOn, setLikeOn] = useState(false);
 
@@ -74,7 +75,7 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-          <div className="p-4 sm:p-6 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-xs sm:text-sm text-ui-300">
+          <div className="p-2 sm:p-4 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-xs sm:text-sm text-ui-300">
             <div className="flex items-center gap-2">
               {item.social?.views && (
                 <>
@@ -117,7 +118,7 @@ export default function FeedItemComments(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      item.social.likes.length > 0 ? (
+                      item.social.likes.users.length > 0 ? (
                         <ul className="text-xs leading-snug">
                           {item.social.likes.users
                             .slice(0, 5)
@@ -143,16 +144,22 @@ export default function FeedItemComments(props) {
                 </>
               )}
               {item.social?.comments && (
-                <>
-                  <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
-                  <span>
-                    {item.social.comments.length} comment
-                    {item.social.comments.length > 1 && <>s</>}
-                  </span>
-                </>
+                <Link
+                  href={`/stryda/activity/${
+                    item.id
+                  }#comments${prototype.getURLparams()}`}
+                >
+                  <a className="interactive">
+                    <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                    <span>
+                      {item.social.comments.length} comment
+                      {item.social.comments.length > 1 && <>s</>}
+                    </span>
+                  </a>
+                </Link>
               )}
             </div>
-            <div className="flex gap-1 items-stretch sm:items-center">
+            <div className="flex gap-2 items-stretch sm:items-center">
               <button
                 type="button"
                 className={`flex-1 sm:flex-none switch switch-slot button button-tertiary rounded ${
@@ -179,12 +186,16 @@ export default function FeedItemComments(props) {
               </button>
             </div>
           </div>
-          {item.social.comments.length > 0 && (
-            <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2">
-              {item.social.comments.map((comment, commentIndex) => (
-                <FeedItemComment key={commentIndex} comment={comment} />
-              ))}
-            </ul>
+          {isExpanded && (
+            <>
+              {item.social.comments.length > 0 && (
+                <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2">
+                  {item.social.comments.map((comment, commentIndex) => (
+                    <FeedItemComment key={commentIndex} comment={comment} />
+                  ))}
+                </ul>
+              )}
+            </>
           )}
           {commentOn && (
             <div className="flex items-start gap-3 px-4 pb-4 sm:px-6 sm:pb-6">

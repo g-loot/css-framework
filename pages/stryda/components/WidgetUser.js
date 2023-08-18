@@ -13,6 +13,7 @@ export default function WidgetUser(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const user_id = props.id || 1;
+  const hasActions = props.hasActions !== undefined ? props.hasActions : true;
   const [selectedUser, setSelectedUser] = useState(null);
 
   useEffect(() => {
@@ -103,48 +104,50 @@ export default function WidgetUser(props) {
                 </Link>
               </li>
             </ul>
-            <div className="space-y-2 mb-2">
-              {selectedUser.isYou && (
-                <Link
-                  href={`/stryda/profile/settings${prototype.getURLparams(
-                    "&"
-                  )}`}
-                >
+            {hasActions && (
+              <div className="space-y-2 mb-2">
+                {selectedUser.isYou && (
+                  <Link
+                    href={`/stryda/profile/settings${prototype.getURLparams(
+                      "&"
+                    )}`}
+                  >
+                    <a
+                      type="button"
+                      className="button button-sm button-tertiary w-full"
+                    >
+                      <span className="icon icon-cogwheel" />
+                      <span>Profile settings</span>
+                    </a>
+                  </Link>
+                )}
+                {!selectedUser.isYou && selectedUser.isFriend && (
                   <a
                     type="button"
                     className="button button-sm button-tertiary w-full"
+                    onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
                   >
-                    <span className="icon icon-cogwheel" />
-                    <span>Profile settings</span>
+                    <span className="icon icon-a-remove" />
+                    <span>Remove as friend</span>
                   </a>
-                </Link>
-              )}
-              {!selectedUser.isYou && selectedUser.isFriend && (
-                <a
-                  type="button"
-                  className="button button-sm button-tertiary w-full"
-                  onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
-                >
-                  <span className="icon icon-a-remove" />
-                  <span>Remove as friend</span>
-                </a>
-              )}
-              {!selectedUser.isYou && !selectedUser.isFriend && (
-                <ButtonFeedback
-                  variant="button button-sm button-primary w-full"
-                  icon="icon-a-add"
-                  label="Follow"
-                  message="Player added to your followings"
-                />
-              )}
-            </div>
+                )}
+                {!selectedUser.isYou && !selectedUser.isFriend && (
+                  <ButtonFeedback
+                    variant="button button-sm button-primary w-full"
+                    icon="icon-a-add"
+                    label="Follow"
+                    message="Player added to your followings"
+                  />
+                )}
+              </div>
+            )}
             {selectedUser.clan ? (
               <Link
                 href={`/stryda/clans/${
                   selectedUser.clan
                 }${prototype.getURLparams()}`}
               >
-                <div className="p-2 rounded bg-ui-600 interactive">
+                <div className="p-2 rounded bg-ui-600 interactive text-0">
                   <div className="flex gap-2 items-center justify-center">
                     <div className="avatar avatar-tiny avatar-squircle">
                       <div>
@@ -159,13 +162,17 @@ export default function WidgetUser(props) {
                       {prototype.getClanByID(selectedUser.clan).tag}
                       &#93; {prototype.getClanByID(selectedUser.clan).nickname}
                     </div>
-                    <div
-                      className="relative px-3 ml-1 border-l border-ui-400/30 animate-slide-in-right"
-                      style={{ animationDelay: "1s" }}
-                    >
-                      <span className="badge bg-error-300 absolute -top-1 right-0" />
-                      <span className="icon icon-a-chat text-ui-300" />
-                    </div>
+                    {selectedUser.isYou && (
+                      <div
+                        className="relative px-3 ml-1 border-l border-ui-400/30 animate-slide-in-right"
+                        style={{ animationDelay: "1s" }}
+                      >
+                        <span
+                          data-badge="1"
+                          className="icon icon-a-chat text-base text-ui-300 after:absolute after:top-1 after:bg-error-300"
+                        />
+                      </div>
+                    )}
                   </div>
                 </div>
               </Link>

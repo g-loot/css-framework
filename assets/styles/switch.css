@@ -14,8 +14,8 @@
   > * {
     @apply
     transition-all
-    duration-300
-    ease-[cubic-bezier(.7,0,.3,1)]
+    duration-200
+    ease-in-out
     ;
   }
 
@@ -68,6 +68,13 @@
   }
 
   &.switch-rotate {
+
+    > * {
+      @apply
+      duration-300
+      ease-[cubic-bezier(.7,0,.3,1)]
+      ;
+    }
     .switch-on,
     .switch-indeterminate, 
     input:indeterminate~.switch-on {
@@ -94,15 +101,20 @@
   }
 
   &.switch-slot {
-    @apply
-    overflow-hidden
-    ;
+
+    > * {
+      @apply
+      transition-all
+      ease-[cubic-bezier(0,0,.2,1)]
+      ;
+    }
 
     .switch-on,
     .switch-indeterminate, 
     input:indeterminate~.switch-on {
       @apply
-      translate-y-10
+      opacity-0
+      duration-0
       ;
     }
     
@@ -110,7 +122,10 @@
     &.switch-active > .switch-off,
     input:indeterminate~.switch-off {
       @apply
-      -translate-y-10
+      duration-500
+      -translate-y-1/2
+      opacity-0
+      brightness-200
       ;
     }
     
@@ -118,7 +133,7 @@
     &.switch-active > .switch-on, 
     input:indeterminate~.switch-indeterminate {
       @apply
-      translate-y-0
+      opacity-100
       ;
     }
   }

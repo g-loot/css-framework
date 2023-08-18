@@ -10,6 +10,7 @@
   items-center
   gap-2
   p-2
+  leading-tight
   ;
   &:not([class*='w-']) {
     @apply
@@ -191,6 +192,15 @@ ul.item-actions-hidden > .item,
       rounded
       ;
     }
+  }
+}
+
+.divide-y-0,
+.divide-0 {
+  > .item {
+    @apply
+    border-none
+    ;
   }
 }
 

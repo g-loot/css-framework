@@ -94,6 +94,82 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* With no divide */}
+      <div className="mb-12" id="with-no-divide">
+        <h2 className="h3 mb-3">With no divide</h2>
+
+        <div className="">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+              <div className="flex-1 surface rounded-xl overflow-hidden">
+                <ul className="divide-y-0">
+                  <li className="item">
+                    <div className="item-image">
+                      <div className="avatar avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_1.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item-body">
+                      <div className="item-title">Croc Esports</div>
+                      <div className="text-ui-300 text-xs">3 members</div>
+                    </div>
+                  </li>
+                  <li className="item">
+                    <div className="item-image">
+                      <div className="avatar avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_2.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item-body">
+                      <div className="item-title">Kingzz</div>
+                      <div className="text-ui-300 text-xs">3 members</div>
+                    </div>
+                  </li>
+                  <li className="item">
+                    <div className="item-image">
+                      <div className="avatar avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_3.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item-body">
+                      <div className="item-title">Angry Beavers</div>
+                      <div className="text-ui-300 text-xs">3 members</div>
+                    </div>
+                  </li>
+                  <li className="item">
+                    <div className="item-image">
+                      <div className="avatar avatar-xs">
+                        <div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_4.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="item-body">
+                      <div className="item-title">Bunny Hunger</div>
+                      <div className="text-ui-300 text-xs">3 members</div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/fwqt69r3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* With action */}
       <div className="mb-12" id="with-action">
         <h2 className="h3 mb-3">With action</h2>

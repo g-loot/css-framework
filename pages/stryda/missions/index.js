@@ -64,7 +64,7 @@ export default function Missions() {
         <Ad width="1005" height="300" />
         <Loader
           loader={
-              <section className="min-h-screen container grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 my-8">
+              <section className="min-h-screen container sm:px-4 grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 my-8">
                 <div className="surface is-loading rounded aspect-video w-full" />
                 <div className="surface is-loading rounded aspect-video w-full" />
                 <div className="surface is-loading rounded aspect-video w-full" />

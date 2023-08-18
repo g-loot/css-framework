@@ -4,12 +4,14 @@ import {
   useState
 } from 'react';
 
-import { dataClans } from '../mock-data/data-clans';
-import { dataGames } from '../mock-data/data-games';
-import { dataUsers } from '../mock-data/data-users';
-import { dataVouchers } from '../mock-data/data-vouchers';
-import { dataShopitems } from '../mock-data/data-shopitems';
-import { dataAchievements } from '../mock-data/data-achievements';
+import { dataClans } from '@/mock-data/data-clans';
+import { dataGames } from '@/mock-data/data-games';
+import { dataUsers } from '@/mock-data/data-users';
+import { dataVouchers } from '@/mock-data/data-vouchers';
+import { dataShopitems } from '@/mock-data/data-shopitems';
+import { dataAchievements } from '@/mock-data/data-achievements';
+import { dataMatches } from '@/mock-data/data-matches'; 
+import { dataFeedItems } from '@/mock-data/data-feed';
 import { useRouter } from "next/router";
 
 export const PrototypeContext = createContext(
@@ -25,6 +27,8 @@ export const PrototypeProvider = ({ children }) => {
   const vouchers = dataVouchers;
   const shopitems = dataShopitems;
   const achievements = dataAchievements;
+  const matches = dataMatches;
+  const feedItems = dataFeedItems;
   const [defaultGameID, setDefaultGameID] = useState(1);
   const [isPremium, setIsPremium] = useState(false);
   
@@ -122,6 +126,21 @@ export const PrototypeProvider = ({ children }) => {
     });
     return selectedItem;
   }
+  const getMatchByID = (id) => {
+    return matches.find(match => {
+      return match.id === parseInt(id);
+    })
+  }
+  const getFeedItemByID = (id) => {
+    return feedItems.find(feedItem => {
+      return feedItem.id === parseInt(id);
+    })
+  }
+  const getUserMatches = (id) => {
+    return matches.filter((match) => {
+      return match.user === parseInt(id);
+    });
+  }
   function getURLparams(prep) {
     const hasAds = query.ads === "true" ? true : false;
     const freeEntry = query.freeentry === "true" ? true : false;
@@ -157,6 +176,8 @@ export const PrototypeProvider = ({ children }) => {
         clans,
         vouchers,
         achievements,
+        matches,
+        feedItems,
         defaultGameID,
         isPremium,
         getGameByID,
@@ -177,7 +198,10 @@ export const PrototypeProvider = ({ children }) => {
         defineDefaultGameID,
         togglePremium,
         getClanLeaderboardByID,
-        getCurrentClanLeaderboard
+        getCurrentClanLeaderboard,
+        getMatchByID,
+        getFeedItemByID,
+        getUserMatches,
       }}
     >
       {children}

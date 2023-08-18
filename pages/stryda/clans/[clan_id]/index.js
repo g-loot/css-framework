@@ -183,7 +183,7 @@ export default function ClanDetails() {
                     )}
                   </div>
                 </div>
-                <div className="relative z-10 mt-4">
+                <div className="relative z-10 mt-4 -mb-2">
                   <h1 className="text-7xl leading-none text-center">
                     &#91;
                     {selectedClan.tag}
@@ -195,7 +195,7 @@ export default function ClanDetails() {
                 */}
               </>
             )}
-            <nav className="flex justify-center mt-2">
+            <nav className="flex justify-center mt-4">
               <ul className="tabs tabs-tertiary">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>
