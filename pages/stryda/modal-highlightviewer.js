@@ -36,6 +36,11 @@ export default function ModalHighlightViewer(props) {
     });
   };
 
+  const handleViewMatch = () => {
+    window.location.href = `/stryda/activity/${item.id}`;
+    uiContext.closeModal();
+  };
+
   return (
     <>
       {item && (
@@ -50,12 +55,12 @@ export default function ModalHighlightViewer(props) {
           <div className="modal-content p-0">
             <div className="modal-body relative">
               <div className="absolute z-10 inset-0 p-4">
-                <div className="absolute bottom-4 right-4 p-1 bg-ui-900/80 backdrop-blur rounded-2">
+                <div className="absolute bottom-4 right-4 p-1 bg-ui-900/80 backdrop-blur rounded-r-[2rem] rounded-l-2 flex gap-2 items-center">
                   <div
                     className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${
                       item.stats.hasWon
-                        ? " bg-success-500/10 text-success-300"
-                        : "bg-error-500/10 text-error-300"
+                        ? " bg-success-500/20 text-success-300"
+                        : "bg-error-500/20 text-error-300"
                     }`}
                   >
                     <span>{item.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
@@ -70,6 +75,9 @@ export default function ModalHighlightViewer(props) {
                       {item.stats.score.team1} - {item.stats.score.team2}
                     </span>
                   </div>
+                  <button type="button" onClick={() => handleViewMatch()} className="button button-primary button-sm">
+                    <span>View match details</span>
+                  </button>
                 </div>
                 <div className="absolute top-1 left-1 flex items-center gap-4 p-2 pr-4 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur max-w-xs">
                   <Avatar id={item.user} size="avatar-sm" />

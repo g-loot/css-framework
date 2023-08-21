@@ -11,7 +11,7 @@ export default function TopbarHighlightProcessing(props) {
   const [hasNewVideos, setHasNewVideos] = useState(false);
 
   useEffect(() => {
-    if (router.pathname.endsWith("home")) {
+    if (router.pathname.includes("profile")) {
       setHasNewVideos(false);
       setTimeout(() => {
         setHasNewVideos(true);

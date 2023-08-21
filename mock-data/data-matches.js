@@ -143,13 +143,26 @@ export const dataMatches = [
     },
     achievements: [
       {
-        text: "+35 score in <a class='font-bold interactive text-ui-100'>Valorant Competitive Ladder</a>",
+        type: "ladder",
+        game: 1,
+        ladderID: 1,
+        number: 300,
       },
       {
-        text: "<a class='font-bold interactive text-ui-100'>2 missions</a> completed",
+        type: "ladder",
+        game: 1,
+        ladderID: 2,
+        number: 300,
       },
       {
-        text: "<a class='font-bold interactive text-ui-100'>1 achievement</a> unlocked",
+        type: "mission",
+        game: 1,
+        number: 4,
+      },
+      {
+        type: "achievement",
+        achievementID: 4,
+        level: 2,
       },
     ],
   },
@@ -724,6 +737,24 @@ export const dataMatches = [
         ],
       },
     },
+    achievements: [
+      {
+        type: "ladder",
+        game: 1,
+        ladderID: 2,
+        number: 50,
+      },
+      {
+        type: "mission",
+        game: 1,
+        number: 1,
+      },
+      {
+        type: "achievement",
+        achievementID: 3,
+        level: 2,
+      },
+    ],
   },
   {
     id: 5,
@@ -866,10 +897,9 @@ export const dataMatches = [
     },
     achievements: [
       {
-        text: "+200 score in <a class='font-bold interactive text-ui-100'>Valorant Unrated Ladder</a>",
-      },
-      {
-        text: "<a class='font-bold interactive text-ui-100'>2 achievements</a> unlocked",
+        type: "achievement",
+        achievementID: 2,
+        level: 3,
       },
     ],
   },
@@ -1011,10 +1041,5 @@ export const dataMatches = [
         ],
       },
     },
-    achievements: [
-      {
-        text: "<a class='font-bold interactive text-ui-100'>1 achievement</a> unlocked",
-      },
-    ],
   },
 ];

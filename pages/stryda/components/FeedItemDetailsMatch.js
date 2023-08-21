@@ -12,6 +12,7 @@ import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
 import ModalShareActivity from "../modal-shareactivity";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
+import FeedItemAchievement from "./FeedItemAchievement";
 
 export default function FeedItemDetailsMatch(props) {
   const prototype = usePrototypeData();
@@ -61,7 +62,7 @@ export default function FeedItemDetailsMatch(props) {
       {item && match && (
         <div className="surface rounded video">
           <div className="relative overflow-hidden rounded-t">
-            <div className="relative z-10 p-2 sm:p-4 flex items-center gap-3">
+            <div className="relative z-10 p-2 lg:p-4 flex items-center gap-3">
               <Avatar id={match.user} size="avatar-sm" hasTooltip={true} />
               <div className="flex-1 overflow-hidden">
                 <div className="truncate p-1 flex items-end gap-2">
@@ -119,7 +120,7 @@ export default function FeedItemDetailsMatch(props) {
                 </div>
                 <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
                   <span>{match.meta.dateTimeEnded}</span>
-                  <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                  <i className="w-0.5 h-0.5 lg:w-1 lg:h-1 rounded-full bg-ui-300" />
                   <span>{match.meta.duration}</span>
                 </div>
               </div>
@@ -127,11 +128,11 @@ export default function FeedItemDetailsMatch(props) {
                 <FeedItemContextualMenu item={item} match={match} />
               </div>
             </div>
-            <div className="relative z-10 p-4 sm:p-6 flex flex-col lg:flex-row items-start gap-4 lg:gap-6 ">
+            <div className="relative z-10 p-4 lg:p-6 flex flex-col lg:flex-row items-start gap-4 lg:gap-6 ">
               {match.meta.text && (
                 <div className="flex-1 order-2 lg:order-1">
                   <p
-                    className="text-lg md:text-2xl font-bold text-ui-100"
+                    className="text-lg md:text-2xl font-bold text-ui-100 leading-tight"
                     dangerouslySetInnerHTML={{
                       __html: match.meta.text,
                     }}
@@ -143,7 +144,7 @@ export default function FeedItemDetailsMatch(props) {
                 <span className="text-sm text-ui-300 capitalize">
                   {match.meta.mode}
                 </span>
-                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                <i className="w-0.5 h-0.5 lg:w-1 lg:h-1 rounded-full bg-ui-300" />
                 <span className="text-sm text-ui-300 capitalize">
                   {getMapByID(match.meta.map).name}
                 </span>
@@ -168,7 +169,7 @@ export default function FeedItemDetailsMatch(props) {
                 </div>
               </div>
             </div>
-            <div className="relative z-10 px-4 sm:px-6 overflow-x-auto scrollbar-hidden">
+            <div className="relative z-10 px-4 lg:px-6 overflow-x-auto scrollbar-hidden">
               <div className="flex flex-col items-start justify-center rounded border border-ui-700 bg-ui-850/80 backdrop-blur overflow-hidden">
                 <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-hidden flex justify-start p-4">
                   <ul className="flex gap-x-8 gap-y-4 items-center mx-auto text-center divide-x divide-ui-600 leading-tight">
@@ -197,26 +198,25 @@ export default function FeedItemDetailsMatch(props) {
                   </ul>
                 </div>
                 {match.achievements && (
-                  <div className="flex self-stretch items-center gap-8 border-t border-ui-700 py-4 px-8">
-                    <div className="relative aspect-square grid place-content-center text-center">
-                      <span className="icon icon-laurel text-ui-400/50 text-8xl" />
-                      <div className="absolute z-0 inset-0 grid place-content-center">
-                        <div className="text-3xl text-ui-100 pb-1">
-                          {match.achievements.length}
+                  <div className="flex self-stretch items-center gap-4 lg:gap-8 border-t border-ui-700 py-4 px-4 lg:px-8">
+                    <div className="hidden lg:grid place-content-center relative aspect-square border-r border-ui-700 pr-4 lg:pr-8">
+                      <div className="relative grid place-content-center text-center">
+                        <span className="icon icon-laurel text-ui-400/50 text-8xl" />
+                        <div className="absolute z-0 inset-0 grid place-content-center">
+                          <div className="text-3xl text-ui-100 pb-1">
+                            {match.achievements.length}
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <ul>
+                    <ul className="space-y-1 text-sm lg:text-base leading-tight">
                       {match.achievements.map(
                         (achievement, achievementIndex) => (
-                          <li key={achievementIndex}>
-                            <p
-                              className=""
-                              dangerouslySetInnerHTML={{
-                                __html: achievement.text,
-                              }}
-                            />
-                          </li>
+                          <FeedItemAchievement
+                            key={achievementIndex}
+                            user={match.user}
+                            achievement={achievement}
+                          />
                         )
                       )}
                     </ul>
@@ -224,7 +224,7 @@ export default function FeedItemDetailsMatch(props) {
                 )}
               </div>
             </div>
-            <div className="relative z-10 p-4 sm:p-6">
+            <div className="relative z-10 p-4 lg:p-6">
               <ul className="surface-ui-600 rounded overflow-hidden tabs tabs-stretch shadow-md divide-x divide-ui-500">
                 {match.meta.media && (
                   <li>

@@ -10,6 +10,8 @@ import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
 import ModalShareActivity from "../modal-shareactivity";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
+import FeedItemAchievement from "./FeedItemAchievement";
+import ModalHighlightViewer from "../modal-highlightviewer";
 
 export default function FeedItemMatch(props) {
   const uiContext = useContext(UiContext);
@@ -51,6 +53,11 @@ export default function FeedItemMatch(props) {
 
   function openModalShareActivity(item) {
     uiContext.openModal(<ModalShareActivity item={item} />);
+  }
+
+  function openModalHighlightViewer(match) {
+    video.pause();
+    uiContext.openModal(<ModalHighlightViewer item={match} />);
   }
 
   return (
@@ -98,11 +105,11 @@ export default function FeedItemMatch(props) {
             >
               <button
                 type="button"
-                className="flex flex-wrap items-center gap-4 interactive"
+                className="flex flex-wrap items-start gap-4 interactive"
               >
                 {match.meta.text && (
                   <p
-                    className="text-lg md:text-xl font-bold text-ui-100"
+                    className="text-lg md:text-xl font-bold text-ui-100 leading-tight"
                     dangerouslySetInnerHTML={{
                       __html: match.meta.text,
                     }}
@@ -169,40 +176,31 @@ export default function FeedItemMatch(props) {
             </div>
           </div>
           {match.achievements && (
-            <div className="px-2 pb-4">
-              <Link
-                href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
-              >
-                <div className="interactive flex items-center gap-4">
-                  <div className="relative z-10 aspect-square h-auto grid place-content-center text-center">
-                    <span className="icon icon-laurel text-ui-400/50 text-6xl" />
-                    <div className="absolute z-0 inset-0 grid place-content-center">
-                      <div className="text-2xl text-ui-100 pb-1">
-                        {match.achievements.length}
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-xs sm:text-sm text-ui-300">
-                    {match.achievements.length} achievement
-                    {match.achievements.length > 1 && <>s</>}
-                  </div>
-                </div>
-              </Link>
-            </div>
+            <ul className="px-4 pb-4 text-xs sm:text-sm space-y-1 leading-tight">
+              {match.achievements.map((achievement, achievementIndex) => (
+                <FeedItemAchievement
+                  key={achievementIndex}
+                  user={match.user}
+                  achievement={achievement}
+                />
+              ))}
+            </ul>
           )}
           {match.meta.media ? (
-            <video
-              autoPlay={autoPlay}
-              controls
-              playsInline
-              loop
-              muted
-              width="100%"
-              height="auto"
-              className="w-full"
-              id={`video_${item.id}`}
-              src={match.meta.media.url}
-            />
+            <button type="button" onClick={() => openModalHighlightViewer(match)}>
+              <video
+                autoPlay={autoPlay}
+                controls
+                playsInline
+                loop
+                muted
+                width="100%"
+                height="auto"
+                className="w-full"
+                id={`video_${item.id}`}
+                src={match.meta.media.url}
+              />
+            </button>
           ) : (
             <>
               {match.meta.map && (

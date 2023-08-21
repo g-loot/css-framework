@@ -30,6 +30,7 @@
     font-normal
     text-sm
     text-ui-200
+    shadow-lg
   }
 
   &:not([data-tooltip]:not([data-tooltip=""])) {
@@ -378,6 +379,7 @@
   ease-in-out
   opacity-0
   text-sm
+  shadow-lg
   ;
 
   &.is-active {

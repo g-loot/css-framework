@@ -259,7 +259,7 @@ export default function Topbar() {
             </ul>
           </div>
           <div className="flex justify-end items-center gap-1 sm:gap-2">
-                  <TopbarHighlightProcessing />
+            <TopbarHighlightProcessing />
             <div className="dropdown dropdown-end">
               <div
                 tabIndex="1"

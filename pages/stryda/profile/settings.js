@@ -262,7 +262,7 @@ export default function Home() {
                           </div>
                         </div>
                         <div className="form-group">
-                          <label htmlFor="social-twitter">Twitter</label>
+                          <label htmlFor="social-twitter">X (Twitter)</label>
                           <div className="input-group">
                             <span className="icon icon-logo-twitter" />
                             <input

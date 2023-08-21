@@ -12,7 +12,90 @@
   pt-0.5
   ;
 
-  li {
+  :where(a, button, .button, div) {
+    @apply
+    relative
+    flex
+    justify-center
+    gap-2 
+    text-ui-300
+    cursor-pointer
+    select-none
+    transition
+    duration-100
+    ease-in-out
+    outline-offset-[-1px]
+    focus-visible:rounded
+    focus-visible:outline
+    focus-visible:outline-1
+    focus-visible:outline-main
+    ;
+    > span {
+      @apply
+      block
+      relative
+      z-10
+      ;
+    }
+    > span,
+    > div {
+      @apply
+      transition
+      ease-linear
+      duration-[0s]
+      ;
+    }
+    &::before,
+    &::after {
+      @apply
+      transition
+      duration-200
+      ease-[cubic-bezier(0.7,0,0.1,1)]
+      ;
+    }
+
+    &::after {
+      @apply
+      content-['']
+      absolute
+      z-0
+      block
+      h-1
+      w-full
+      bottom-0
+      inset-x-0
+      bg-main
+      opacity-0
+      scale-x-0
+      ;
+    }
+
+    &:hover,
+    &:active {
+      @apply
+      text-mono-100
+      ;
+    }
+
+    &.is-active {
+      @apply
+      text-main
+      ;
+    }
+
+    &.is-active,
+    &:active,
+    &:hover {
+      &::after {
+        @apply
+        opacity-100
+        scale-x-100
+        ;
+      }
+    }
+  }
+
+  > li {
     @apply
     flex
     justify-center
@@ -33,24 +116,6 @@
     }
 
     > :where(a, button, .button, div) {
-      @apply
-      relative
-      flex
-      justify-center
-      gap-2 
-      text-ui-300
-      cursor-pointer
-      select-none
-      transition
-      duration-100
-      ease-in-out
-      outline-offset-[-1px]
-      focus-visible:rounded
-      focus-visible:outline
-      focus-visible:outline-1
-      focus-visible:outline-main
-      ;
-  
       &:not([class*="pt-"]) {
         @apply
         pt-3
@@ -66,68 +131,6 @@
         px-4
         ;
       }
-  
-      > span {
-        @apply
-        block
-        ;
-      }
-      > span,
-      > div {
-        @apply
-        transition
-        ease-linear
-        duration-[0s]
-        ;
-      }
-
-      &:hover,
-      &:active {
-        @apply
-        text-mono-100
-        ;
-      }
-
-      &.is-active {
-        @apply
-        text-main
-        ;
-      }
-  
-      &.is-active,
-      &:active,
-      &:hover {
-        &::after {
-          @apply
-          opacity-100
-          scale-x-100
-          ;
-        }
-      }
-  
-      &::before,
-      &::after {
-        @apply
-        transition
-        duration-200
-        ease-[cubic-bezier(0.7,0,0.1,1)]
-        ;
-      }
-  
-      &::after {
-        @apply
-        content-['']
-        absolute
-        block
-        h-1
-        w-full
-        bottom-0
-        inset-x-0
-        bg-main
-        opacity-0
-        scale-x-0
-        ;
-      }
     }
 
     ul {
@@ -140,7 +143,13 @@
     > ul {
       @apply
       absolute
-      hidden
+      transition-all
+      duration-100
+      origin-top
+      ease-[cubic-bezier(.8,0,.3,1)]
+      pointer-events-none
+      scale-y-75
+      opacity-0
       w-full
       rounded-lg
       bg-ui-600
@@ -155,18 +164,59 @@
         w-full
         whitespace-nowrap
         ;
-        > * {
+        > :where(a, button, .button, div) {
           @apply
-          w-full
-          justify-center
+          px-4
+          py-3
           ;
+          &::after {
+            @apply
+            h-full
+            bg-ui-400/10
+            transition-all
+            duration-200
+            ease-[cubic-bezier(.7,0,.3,1)]
+            opacity-0
+            scale-x-100
+            scale-y-0
+            translate-y-2
+          }
+          &.is-active,
+          &:hover {
+            &::after {
+              @apply
+              opacity-100
+              scale-y-100
+              translate-y-0
+              duration-75
+            }
+          }
+          &.is-active {
+            @apply
+            pointer-events-none
+            ;
+          }
+          &:hover:not(.is-active),
+          &:active {
+            @apply
+            text-mono-100
+            ;
+          }
+          &.is-active {
+            &::after {
+              @apply
+              bg-ui-400/25
+            }
+          }
         }
       }
     }
     &:hover {
       > ul {
         @apply
-        block
+        pointer-events-auto
+        scale-y-100
+        opacity-100
         ;
       }
     }
