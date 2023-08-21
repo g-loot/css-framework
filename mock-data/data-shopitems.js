@@ -560,6 +560,90 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1674213697/Stryda/shop/avatarframes/Pride.svg",
       },
+      {
+        id: 164,
+        name: "Greek Crown",
+        price: 550011,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846279/Stryda/shop/avatarframes/Greek_crown_1.svg",
+      },
+      {
+        id: 165,
+        name: "Mad Frog",
+        price: 550012,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846279/Stryda/shop/avatarframes/Mad_frog.svg",
+      },
+      {
+        id: 166,
+        name: "Snowflake",
+        price: 550013,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846280/Stryda/shop/avatarframes/Snowflake.svg",
+      },
+      {
+        id: 167,
+        name: "Blue Crown Wings",
+        price: 550014,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846280/Stryda/shop/avatarframes/Blue_crown_wings.svg",
+      },
+      {
+        id: 168,
+        name: "Ivy",
+        price: 550015,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846280/Stryda/shop/avatarframes/Ivy.svg",
+      },
+      {
+        id: 169,
+        name: "The G Wings",
+        price: 550016,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846280/Stryda/shop/avatarframes/The_G_wings.svg",
+      },
+      {
+        id: 170,
+        name: "Target",
+        price: 550017,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846281/Stryda/shop/avatarframes/Target.svg",
+      },
+      {
+        id: 171,
+        name: "Skulls",
+        price: 550018,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846281/Stryda/shop/avatarframes/Skulls.svg",
+      },
+      {
+        id: 172,
+        name: "Hearts",
+        price: 550019,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846281/Stryda/shop/avatarframes/Hearts.svg",
+      },
+      {
+        id: 173,
+        name: "Wanted",
+        price: 550020,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846282/Stryda/shop/avatarframes/Wanted.svg",
+      },
+      {
+        id: 174,
+        name: "Wheat Wings",
+        price: 550021,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846282/Stryda/shop/avatarframes/Wheat_wings.svg",
+      },
+      {
+        id: 175,
+        name: "Hell horns and fire",
+        price: 550022,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689846282/Stryda/shop/avatarframes/Hell_horns_and_fire.svg",
+      },
     ],
   },
   {
@@ -844,6 +928,83 @@ export const dataShopitems = [
         price: 50010,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1677851088/Stryda/shop/profilebanners/Spider.jpg",
+      },
+      {
+        id: 40,
+        name: "Spike",
+        price: 50011,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689771256/Stryda/shop/profilebanners/shop_profilebanner_spike.jpg",
+      },
+      {
+        id: 41,
+        name: "Glitch",
+        price: 50012,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689838625/Stryda/shop/profilebanners/shop_profilebanner_glitch.jpg",
+      },
+      {
+        id: 42,
+        name: "Frozen glass",
+        price: 50013,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1692607968/Stryda/shop/profilebanners/Frozenglass.jpg",
+      },
+      {
+        id: 43,
+        name: "Reward Rust",
+        price: 50014,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1692607968/Stryda/shop/profilebanners/Rust.jpg",
+      },
+      {
+        id: 44,
+        name: "Saltmine",
+        price: 50015,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1692607968/Stryda/shop/profilebanners/Saltmine.jpg",
+      },
+      {
+        id: 45,
+        name: "Paint",
+        price: 50016,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1692607969/Stryda/shop/profilebanners/Paint.jpg",
+      },
+      {
+        id: 46,
+        name: "Dungeon Chain",
+        price: 50017,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689857766/Stryda/shop/profilebanners/shop_profilebanner_dungeonchain.jpg",
+      },
+      {
+        id: 47,
+        name: "Samurai Helmet",
+        price: 50018,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1689948513/Stryda/shop/profilebanners/shop_profilebanner_samuraihelmet.jpg",
+      },
+      {
+        id: 46,
+        name: "Flower Love",
+        price: 50019,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1690813850/Stryda/shop/profilebanners/shop_profilebanner_flowerlove.jpg",
+      },
+      {
+        id: 46,
+        name: "Damascus",
+        price: 50020,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1690895982/Stryda/shop/profilebanners/shop_profilebanner_damascus.jpg",
+      },
+      {
+        id: 46,
+        name: "King's Crown",
+        price: 50021,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1690977703/Stryda/shop/profilebanners/shop_profilebanner_kingscrown.jpg",
       },
     ],
   }

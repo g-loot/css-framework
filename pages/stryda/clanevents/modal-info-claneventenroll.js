@@ -18,15 +18,15 @@ export default function ModalInfoClanEventEnroll(props) {
   const [selectedGame, setSelectedGame] = useState(null);
   const leaderboard_id = props.id || 0;
   const [selectedLeaderboard, setSelectedLeaderboard] = useState(null);
-  const { game } = router.query;
+  const { game_slug } = router.query;
 
   useEffect(() => {
-    setSelectedGame(prototype.getGameBySlug(game));
-  }, [game, prototype]);
+    setSelectedGame(prototype.getGameBySlug(game_slug));
+  }, [game_slug, prototype]);
 
   useEffect(() => {
     setSelectedLeaderboard(
-      prototype.getClanLeaderboardByID(game, leaderboard_id)
+      prototype.getClanLeaderboardByID(game_slug, leaderboard_id)
     );
   }, [leaderboard_id]);
 

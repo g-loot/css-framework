@@ -80,7 +80,7 @@ export default function CardMission(props) {
     setMissionRetrieved(!MissionRetrieved);
     variablesContext.incrementAvailableMissions(-1);
     uiContext.openModal(
-      <ModalDiscardMission mission={mission}></ModalDiscardMission>
+      <ModalDiscardMission mission={mission} />
     );
   }
 

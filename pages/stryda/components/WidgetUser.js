@@ -61,22 +61,36 @@ export default function WidgetUser(props) {
                 selectedUser.id
               }${prototype.getURLparams()}`}
             >
-              <h2
-                className={`text-xl leading-tight mt-4 truncate interactive ${
-                  selectedUser.isPremium ? "text-premium-500" : ""
-                }`}
-              >
-                {" "}
-                {selectedUser.clan && (
-                  <>
-                    {" "}
-                    &#91;
-                    {prototype.getClanByID(selectedUser.clan)?.tag}
-                    &#93;
-                  </>
-                )}{" "}
-                {selectedUser.nickname}
-              </h2>
+              <div className="flex items-center justify-center gap-2 mt-4">
+                <h2
+                  className={`text-xl leading-tight truncate interactive ${
+                    selectedUser.isPremium ? "text-premium-500" : ""
+                  }`}
+                >
+                  {" "}
+                  {selectedUser.clan && (
+                    <>
+                      {" "}
+                      &#91;
+                      {prototype.getClanByID(selectedUser.clan)?.tag}
+                      &#93;
+                    </>
+                  )}{" "}
+                  {selectedUser.nickname}
+                </h2>
+
+                {selectedUser.country && (
+                  <div
+                    className="text-ui-300 text-center"
+                    data-tooltip={selectedUser.country}
+                  >
+                    <img
+                      src={`https://flagcdn.com/${selectedUser?.countryFlag}.svg`}
+                      className="aspect-video rounded-sm max-w-[1.5rem] mx-auto"
+                    />
+                  </div>
+                )}
+              </div>
             </Link>
             <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
               <li>

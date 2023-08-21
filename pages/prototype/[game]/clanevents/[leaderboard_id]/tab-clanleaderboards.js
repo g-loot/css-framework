@@ -133,6 +133,7 @@ export default function TabClanLeaderboardsLeaderboards() {
   const [hasRanks, setHasRanks] = useState(false);
   const [isInAClan, setIsInAClan] = useState(true);
   const [hasRiot, setHasRiot] = useState(true);
+  const [hasEligibleMembers, SetHasEligibleMembers] = useState(true);
   const [hasRewards, setHasRewards] = useState(true);
   const [hasPlayersDetails, setHasPlayersDetails] = useState(false);
   const hasAds = query.ads === "true" ? true : false;
@@ -420,13 +421,15 @@ export default function TabClanLeaderboardsLeaderboards() {
                             </div>
                           </div>
 
-                          <ButtonFeedback
-                            variant="button-sm button-secondary w-full my-2"
-                            icon="icon-refresh-02"
-                            message="Stats updated"
-                            label="Update my stats"
-                            delay={3000}
-                          />
+                          {selectedClanLeaderboard.status === "ongoing" && (
+                            <ButtonFeedback
+                              variant="button-sm button-secondary w-full my-2"
+                              icon="icon-refresh-02"
+                              message="Stats updated"
+                              label="Update my stats"
+                              delay={3000}
+                            />
+                          )}
 
                           {selectedClanLeaderboard.status === "finished" && (
                             <button
@@ -464,7 +467,12 @@ export default function TabClanLeaderboardsLeaderboards() {
                             <tbody>
                               <tr>
                                 <td className="flex items-center gap-2">
-                                  <div className="text-sm uppercase">
+                                  <div
+                                    className="text-sm uppercase"
+                                    onClick={() =>
+                                      SetHasEligibleMembers(!hasEligibleMembers)
+                                    }
+                                  >
                                     Clan members
                                   </div>
                                   <Tooltip tooltip="Showing eligible Clan members only">
@@ -497,70 +505,80 @@ export default function TabClanLeaderboardsLeaderboards() {
                           </table>
                         </div>
                         <div className="border-t border-ui-700 max-h-[250px] overflow-y-auto scrollbar-desktop">
-                          <table className="table table-compact w-full">
-                            <tbody>
-                              {getMyClanMembers().map((item, itemIndex) => (
-                                <tr key={itemIndex}>
-                                  <td className="flex items-center gap-2 w-full">
-                                    <Avatar id={item.id} hasTooltip={true} />
-                                    <Link
-                                      href={`/prototype/profile/${
-                                        prototype.getUserByID(item.id).id
-                                      }${prototype.getURLparams()}`}
-                                    >
-                                      <span
-                                        className={`text-sm interactive ${
-                                          prototype.getUserByID(item.id)
-                                            .isPremium
-                                            ? "text-premium-500"
-                                            : "text-ui-200"
-                                        }`}
+                          {hasEligibleMembers ? (
+                            <table className="table table-compact w-full">
+                              <tbody>
+                                {getMyClanMembers().map((item, itemIndex) => (
+                                  <tr key={itemIndex}>
+                                    <td className="flex items-center gap-2 w-full">
+                                      <Avatar id={item.id} hasTooltip={true} />
+                                      <Link
+                                        href={`/prototype/profile/${
+                                          prototype.getUserByID(item.id).id
+                                        }${prototype.getURLparams()}`}
                                       >
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            .nickname
-                                        }
-                                      </span>
-                                    </Link>
-                                  </td>
-
-                                  <td>
-                                    <Tooltip
-                                      placement="top"
-                                      tooltip={
-                                        <span className="text-sm">
-                                          Click to copy RIOT ID
+                                        <span
+                                          className={`text-sm interactive ${
+                                            prototype.getUserByID(item.id)
+                                              .isPremium
+                                              ? "text-premium-500"
+                                              : "text-ui-200"
+                                          }`}
+                                        >
+                                          {
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          }
                                         </span>
-                                      }
-                                    >
-                                      <ButtonFeedback
-                                        value={`${
-                                          prototype.getUserByID(item.id)
-                                            .nickname
-                                        } #1111`}
-                                        variant="button-ghost rounded-full"
-                                        icon="icon-document-copy"
-                                        message="RIOT ID copied to your clipboard"
-                                      />
-                                    </Tooltip>
-                                  </td>
-                                  {selectedClanLeaderboard.status ===
-                                    "finished" ||
-                                  (selectedClanLeaderboard.status ===
-                                    "ongoing" &&
-                                    variablesContext.clanLeaderboardEnrolled) ? (
-                                    <td>
-                                      <div className="text-sm font-bold">
-                                        {41 - itemIndex}
-                                      </div>
+                                      </Link>
                                     </td>
-                                  ) : (
-                                    <></>
-                                  )}
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
+
+                                    <td>
+                                      <Tooltip
+                                        placement="top"
+                                        tooltip={
+                                          <span className="text-sm">
+                                            Click to copy RIOT ID
+                                          </span>
+                                        }
+                                      >
+                                        <ButtonFeedback
+                                          value={`${
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          } #1111`}
+                                          variant="button-ghost rounded-full"
+                                          icon="icon-document-copy"
+                                          message="RIOT ID copied to your clipboard"
+                                        />
+                                      </Tooltip>
+                                    </td>
+                                    {selectedClanLeaderboard.status ===
+                                      "finished" ||
+                                    (selectedClanLeaderboard.status ===
+                                      "ongoing" &&
+                                      variablesContext.clanLeaderboardEnrolled) ? (
+                                      <td>
+                                        <div className="text-sm font-bold">
+                                          {41 - itemIndex}
+                                        </div>
+                                      </td>
+                                    ) : (
+                                      <></>
+                                    )}
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          ) : (
+                            <div className="text-center py-4 px-8">
+                              <span className="icon icon-multiple-11 text-6xl text-ui-500" />
+                              <p className="mt-2 text-ui-300 leading-tight">
+                                Your Clan has no eligible members for this
+                                Event.
+                              </p>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -1031,8 +1049,9 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                       size="avatar-xs"
                                                     />
                                                   ))}
-                                                {prototype.getClanByID(clan.clan)
-                                                  .members?.length > 5 && (
+                                                {prototype.getClanByID(
+                                                  clan.clan
+                                                ).members?.length > 5 && (
                                                   <div className="flex-none text-sm text-ui-300 px-4">
                                                     +
                                                     {prototype.getClanByID(
@@ -1228,6 +1247,9 @@ export default function TabClanLeaderboardsLeaderboards() {
         </a>
         <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
           Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
+        </a>
+        <a onClick={() => SetHasEligibleMembers(!hasEligibleMembers)}>
+          Toggle eligible members {hasEligibleMembers ? "ON" : "OFF"}
         </a>
         <a onClick={() => openmodalClanEventOnboarding()}>
           Open Modal Onboarding
