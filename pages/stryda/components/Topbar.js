@@ -550,7 +550,7 @@ export default function Topbar() {
                     <div className="flex-1">Clan boost</div>
                     <div className="text-right text-main">+10%</div>
                   </li>
-                  <li className="separator bg-ui-500" />
+                  <li className="separator mt-1 mb-0.5" />
                   <li className="flex gap-2 py-1 items-center">
                     <div className="icon icon-e-add text-main" />
                     <div className="flex-1 flex-col">

@@ -51,10 +51,6 @@ export default function FeedItemMatch(props) {
     });
   };
 
-  function openModalShareActivity(item) {
-    uiContext.openModal(<ModalShareActivity item={item} />);
-  }
-
   function openModalHighlightViewer(match) {
     video.pause();
     uiContext.openModal(<ModalHighlightViewer item={match} />);

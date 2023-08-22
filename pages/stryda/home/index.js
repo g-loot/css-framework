@@ -74,7 +74,7 @@ export default function Home() {
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >
-                              <Avatar id={item.id} size="avatar-tiny" />
+                              <Avatar id={item.id} size="avatar-tiny" hasTooltip={true} />
                             </Link>
                           </div>
                           <div className="item-body">

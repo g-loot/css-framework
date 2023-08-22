@@ -18,6 +18,8 @@
   > blockquote {
     @apply
     bg-ui-600/95
+    border
+    border-ui-400/20
     rounded
     transition
     duration-200
@@ -167,13 +169,15 @@
 
 .tooltip-container {
   @apply
-  rounded
+  rounded-2
   overflow-hidden
   bg-ui-600
   text-ui-200
-  !border-none
+  border
+  border-ui-400/20
   !p-0
   z-[99999]
+  shadow-lg
   ;
 
   > * {

@@ -17,7 +17,7 @@ export default function FeedItem(props) {
         <FeedItemAdvertising item={item} />
       )}
       {item && item.type === "live" && (
-        <FeedItemLive item={item} autoPlay={autoPlay} />
+        <FeedItemLive item={item} />
       )}
     </>
   );

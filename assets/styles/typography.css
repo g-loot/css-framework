@@ -113,30 +113,29 @@ hr,
   mx-auto
   block
   w-full
+  h-px
+  border-none
   ;
 
-  &.separator-gradient {
+  &:not([class*='bg-']) {
     @apply
-    h-px
-    border-none
-    bg-gradient-to-r
-    from-ui-600/0
-    via-ui-600
-    to-ui-600/0
+    bg-ui-700
     ;
   }
 
-  &:not(.separator-vertical) {
+  &.separator-gradient {
     @apply
-    h-px
-    border-t
+    bg-ui-700/0
+    bg-gradient-to-r
+    from-ui-500/0
+    via-ui-500
+    to-ui-500/0
     ;
   }
 
   &.separator-vertical {
     @apply
     w-px
-    border-l
     ;
     &:not([class*='h-']) {
       @apply
@@ -144,19 +143,12 @@ hr,
       ;
     }
   }
-
-  &:not([class*='border-']) {
-    @apply
-    border-ui-600
-    ;
-  }
 }
 
 .text-gradient {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 ul, ol {
   &.list-bullet {

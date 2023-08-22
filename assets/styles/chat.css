@@ -186,14 +186,6 @@
             }
           }
         }
-        &:last-child {
-          .chat-bubble {
-            &,
-            img {
-              
-            }
-          }
-        }
       }
     }
   } 

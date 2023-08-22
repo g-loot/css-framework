@@ -8,22 +8,6 @@ export default function FeedItemLive(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
-  const autoPlay = props.autoPlay || false;
-  const [video, setVideo] = useState(null);
-
-  useEffect(() => {
-    setVideo(document.getElementById(`video_${item.id}`));
-  }, [item]);
-
-  useEffect(() => {
-    if (video) {
-      if (autoPlay) {
-        video.play();
-      } else {
-        video.pause();
-      }
-    }
-  }, [video, autoPlay]);
 
   return (
     <>
@@ -70,7 +54,7 @@ export default function FeedItemLive(props) {
           </div>
           <button type="button">
             <video
-              autoPlay={autoPlay}
+              autoPlay={true}
               controls
               playsInline
               loop
@@ -78,7 +62,7 @@ export default function FeedItemLive(props) {
               width="100%"
               height="auto"
               className="w-full rounded-b"
-              id={`video_${item.id}`}
+              id={`video_live_${item.id}`}
               src={prototype.getUserByID(item.userID).isLive}
             />
           </button>

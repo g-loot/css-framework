@@ -19,6 +19,9 @@
     absolute
     z-50
     origin-top
+    rounded-2
+    border
+    border-ui-400/20
     ;
     .menu > li,
     > * {
@@ -26,16 +29,18 @@
       transform-gpu
       ;
     }
-
     .menu {
       :where(a, button) {
         @apply
         text-ui-200
         ;
       }
-      :where(li).separator {
+    }
+    hr,
+    .separator {
+      &:not([class*='bg-']) {
         @apply
-        bg-ui-400/25
+        bg-ui-400/20
         ;
       }
     }
@@ -207,7 +212,7 @@
   
   &:not([class*='shadow']) {
     @apply
-    shadow-xl
+    shadow-lg
     ;
   }
   &:not([class*='bg-']) {
