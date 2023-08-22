@@ -3,18 +3,13 @@ import React, { useEffect, useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import ReadMore from "../../../../components/ReadMore/ReadMore";
 import AchievementFrame from "../../../../components/Achievements/AchievementFrame";
 import AchievementIcon from "../../../../components/Achievements/AchievementIcon";
 import ModalAchievementReceived from "../../modal-achievementreceived";
 import Link from "next/link";
 import Slider from "../../../../components/Slider/Slider";
-import Tooltip from "../../../../components/Tooltip/Tooltip";
-import ButtonFeedback from "../../../../components/Button/ButtonFeedback";
-import GameIcon from "../../../../components/GameIcon/GameIcon";
 import LadderCardSecondary from "../../../../components/Ladder/LadderCardSecondary";
 import ModalLevelUp from "../../modal-levelup";
-import ProfileHeader from "./header";
 import Video from "@/pages/stryda/components/Video";
 
 export default function TabProfileOverview() {
@@ -58,6 +53,21 @@ export default function TabProfileOverview() {
     <>
       {selectedUser && (
         <>
+          {selectedUser.isLive && (
+            <section
+              className={`surface md:rounded ${loading ? "is-loading" : ""}`}
+            >
+              <div className="flex items-center gap-2 justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="bg-error-700 rounded text-sm text-mono-100 uppercase py-1 px-1.5 leading-none flex items-center gap-1.5">
+                  <span className="icon icon-video" />
+                  <span>Live</span>
+                </div>
+                <h2 className="flex-1 h6 text-ui-100">
+                  {selectedUser.nickname} is Live
+                </h2>
+              </div>
+            </section>
+          )}
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >

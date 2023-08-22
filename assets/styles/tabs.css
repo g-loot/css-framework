@@ -12,7 +12,7 @@
   pt-0.5
   ;
 
-  :where(a, button, .button, div) {
+  :where(a, button, .button) {
     @apply
     relative
     flex
@@ -115,7 +115,7 @@
       ;
     }
 
-    > :where(a, button, .button, div) {
+    > :where(a, button, .button) {
       &:not([class*="pt-"]) {
         @apply
         pt-3
@@ -164,7 +164,7 @@
         w-full
         whitespace-nowrap
         ;
-        > :where(a, button, .button, div) {
+        > :where(a, button, .button) {
           @apply
           px-4
           py-3
@@ -237,7 +237,7 @@
 
 /*
 .tabs:not(.tabs-secondary) {
-  :where(a, button, .button, div):not([class*=leading-]) {
+  :where(a, button, .button):not([class*=leading-]) {
     @apply
     leading-none
     ;
@@ -263,7 +263,7 @@
 } 
 
 .tabs.tabs-secondary {
-  :where(a, button, .button, div) {
+  :where(a, button, .button) {
     @apply
     font-body
     leading-none
@@ -852,7 +852,7 @@
     @apply
     flex-1
     ;
-    > :where(a, button, .button, div) {
+    > :where(a, button, .button) {
       @apply
       w-full
       ;

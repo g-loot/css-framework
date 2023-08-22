@@ -186,7 +186,6 @@
     @apply 
     leading-[1.1]
     text-ui-100
-    uppercase
     ;
   }
   .card-meta {
@@ -1461,14 +1460,14 @@
       @apply 
       order-1
       flex-1
-      rounded-l-3
+      rounded-l
       rounded-r-none
       ;
     }
     > .card-image-bg {
       @apply 
       w-auto
-      rounded-r-3
+      rounded-r
       rounded-l-none
       ;
       &::before {
@@ -1583,14 +1582,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l-3
+        rounded-l
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r-3
+        rounded-r
         rounded-l-none
         ;
         &::before {
@@ -1627,14 +1626,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l-3
+        rounded-l
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r-3
+        rounded-r
         rounded-l-none
         ;
         &::before {
@@ -1671,14 +1670,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l-3
+        rounded-l
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r-3
+        rounded-r
         rounded-l-none;
         &::before {
           @apply 
@@ -1714,14 +1713,14 @@
         @apply 
         order-1
         flex-1
-        rounded-l-3
+        rounded-l
         rounded-r-none
         ;
       }
       > .card-image-bg {
         @apply 
         w-auto
-        rounded-r-3
+        rounded-r
         rounded-l-none;
         &::before {
           @apply 

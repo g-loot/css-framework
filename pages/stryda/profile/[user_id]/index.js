@@ -386,7 +386,7 @@ export default function Profile() {
                   </div>
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
-                <div className="flex-1 overflow-auto">
+                <div className="flex-1 overflow-hidden">
                   <nav className="mt-4 pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
                     <ul className="tabs tabs-tertiary">
                       {TabsItems.map((item, itemIndex) => (

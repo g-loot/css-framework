@@ -149,12 +149,6 @@ export const dataMatches = [
         number: 300,
       },
       {
-        type: "ladder",
-        game: 1,
-        ladderID: 2,
-        number: 300,
-      },
-      {
         type: "mission",
         game: 1,
         number: 4,
@@ -896,6 +890,12 @@ export const dataMatches = [
       },
     },
     achievements: [
+      {
+        type: "ladder",
+        game: 1,
+        ladderID: 2,
+        number: 300,
+      },
       {
         type: "achievement",
         achievementID: 2,

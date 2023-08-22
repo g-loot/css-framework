@@ -28,7 +28,7 @@ export default function FeedItemContextualMenu(props) {
                   onClick={() => openModalShareActivity(item)}
                 >
                   <span className="icon icon-network-communication-1" />
-                  <span>Share post</span>
+                  <span>Share</span>
                 </button>
               </li>
               {prototype.getUserByID(match.user).isYou ? (
@@ -36,13 +36,13 @@ export default function FeedItemContextualMenu(props) {
                   <li>
                     <button type="button">
                       <span className="icon icon-pen-2" />
-                      <span>Edit post</span>
+                      <span>Edit</span>
                     </button>
                   </li>
                   <li>
                     <button type="button">
                       <span className="icon icon-trash" />
-                      <span>Delete post</span>
+                      <span>Delete</span>
                     </button>
                   </li>
                 </>

@@ -63,8 +63,8 @@ export default function FeedItemMatch(props) {
   return (
     <>
       {item && match && (
-        <div className="surface sm:rounded video">
-          <div className="p-4 flex items-center gap-3">
+        <div className="surface sm:rounded">
+          <div className="p-4 flex items-center gap-3 leading-tight">
             <Avatar id={match.user} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">
               <div className="truncate p-1">

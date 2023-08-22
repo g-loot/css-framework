@@ -17,9 +17,7 @@
     px-1
     py-0.5
     rounded-full
-    bg-main
     text-xs
-    text-ui-800
     not-italic
     leading-none
     font-body
@@ -28,6 +26,8 @@
     -translate-y-4
     min-w-[1rem]
     text-center
+    bg-error-700
+    text-mono-100
     ;
   }
 

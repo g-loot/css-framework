@@ -15,7 +15,7 @@ export default function TabClanLeaderboardsHistory() {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
-  const { game_slug } = router.query;
+  const game_slug = selectedGame.slug;
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
   const [loading, setLoading] = useState(true);

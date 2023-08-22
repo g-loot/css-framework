@@ -271,7 +271,7 @@ export default function Topbar() {
                 >
                   <span
                     data-badge={!isEmpty ? "12" : ""}
-                    className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300"
+                    className="leading-[0] after:absolute after:-right-3 after:top-1"
                   >
                     <span className="icon icon-alarm text-ui-200" />
                   </span>
@@ -619,7 +619,7 @@ export default function Topbar() {
                       </button>
                     </Link>
                   </li>
-                  <li className="separator"></li>
+                  <li className="separator" />
                   <li>
                     <Link
                       href={`/stryda/profile/settings${prototype.getURLparams()}`}
@@ -627,6 +627,16 @@ export default function Topbar() {
                       <button type="button" tabIndex="1">
                         <span className="icon icon-cogwheel" />
                         <span>Settings</span>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/premium${prototype.getURLparams()}`}
+                    >
+                      <button type="button" tabIndex="1">
+                        <span className="icon icon-crown" />
+                        <span>Get Premium</span>
                       </button>
                     </Link>
                   </li>
@@ -672,7 +682,7 @@ export default function Topbar() {
                       <span>Download tracker</span>
                     </button>
                   </li>
-                  <li className="separator"></li>
+                  <li className="separator" />
                   <li>
                     <Link href={`/${prototype.getURLparams()}`}>
                       <button type="button" tabIndex="1">

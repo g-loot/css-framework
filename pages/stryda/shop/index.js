@@ -70,7 +70,7 @@ export default function Home() {
                     height="auto"
                     alt="Tokens"
                   />
-                  <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                  <h3 className="flex flex-col gap-2 items-center leading-none">
                     <span>Tokens</span>
                   </h3>
                 </div>
@@ -103,7 +103,7 @@ export default function Home() {
                       height="auto"
                       alt="Avatar frames"
                     />
-                    <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                    <h3 className="flex flex-col gap-2 items-center leading-none">
                       <span>Avatar frames</span>
                     </h3>
                   </div>
@@ -140,7 +140,7 @@ export default function Home() {
                       height="auto"
                       alt="Player banners"
                     />
-                    <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                    <h3 className="flex flex-col gap-2 items-center leading-none">
                       <span>Player banners</span>
                     </h3>
                   </div>
@@ -192,12 +192,12 @@ export default function Home() {
                           height="auto"
                           alt="Gift card"
                         />
-                        <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                        <h3 className="flex flex-col gap-2 items-center leading-none">
                           <span>Gift cards</span>
-                          <small className="text-ui-300 text-2xl">
-                            {voucher.name}
-                          </small>
                         </h3>
+                        <div className="text-xl">
+                          {voucher.name}
+                        </div>
                         <div className="mt-2 h-12 flex items-center">
                           {voucher.exception && (
                             <>

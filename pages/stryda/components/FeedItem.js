@@ -1,4 +1,5 @@
 import FeedItemAdvertising from "./FeedItemAdvertising";
+import FeedItemLive from "./FeedItemLive";
 import FeedItemMatch from "./FeedItemMatch";
 import { usePrototypeData } from "@/contexts/prototype";
 
@@ -14,6 +15,9 @@ export default function FeedItem(props) {
       )}
       {item && item.type === "advertising" && (
         <FeedItemAdvertising item={item} />
+      )}
+      {item && item.type === "live" && (
+        <FeedItemLive item={item} autoPlay={autoPlay} />
       )}
     </>
   );

@@ -28,7 +28,7 @@ export default function TopbarHighlightProcessing(props) {
           className="flex items-center rounded-full bg-ui-500 interactive"
         >
           <button type="button" className="button button-ghost rounded-full">
-            <span className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300">
+            <span className="leading-[0] after:absolute after:-right-3 after:top-1">
               <span className="icon icon-video text-ui-200" />
             </span>
           </button>

@@ -103,7 +103,7 @@ export default function TabLaddersRules() {
               </span>
             </div>
             <div className="flex-1 border-l border-ui-700 pl-8">
-              <h3 className="text-2xl text-ui-200 mb-2 uppercase">Fair Play</h3>
+              <h3 className="h4 mb-2">Fair Play</h3>
               <div className="text-ui-300">
                 <p>We promote Fair Play by:</p>
                 <ul className="list-outside list-disc pl-4">
@@ -118,7 +118,7 @@ export default function TabLaddersRules() {
           </div>
           <div className="col-span-1 md:col-span-2 xl:col-span-1 surface sm:rounded-lg p-4 sm:p-8 flex items-center gap-8">
             <div className="flex-1">
-              <h3 className="text-2xl text-ui-200 mb-2 uppercase">
+              <h3 className="h4 mb-2">
                 Need more help?
               </h3>
               <div className="text-ui-300">
@@ -132,7 +132,7 @@ export default function TabLaddersRules() {
                     href="https://help.gloot.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button-sm button-primary"
+                    className="button button-primary"
                   >
                     <span className="icon icon-discord" />
                     <span>Join our Discord</span>
@@ -141,7 +141,7 @@ export default function TabLaddersRules() {
                     href="https://help.gloot.com/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="button button-sm button-secondary"
+                    className="button button-secondary"
                   >
                     <span>Contact support</span>
                     <span className="icon icon-box-arrow-top-right" />

@@ -64,7 +64,7 @@ export default function FeedItemDetailsMatch(props) {
           <div className="relative overflow-hidden rounded-t">
             <div className="relative z-10 p-2 lg:p-4 flex items-center gap-3">
               <Avatar id={match.user} size="avatar-sm" hasTooltip={true} />
-              <div className="flex-1 overflow-hidden">
+              <div className="flex-1 overflow-hidden leading-tight">
                 <div className="truncate p-1 flex items-end gap-2">
                   <Link
                     href={`/stryda/profile/${

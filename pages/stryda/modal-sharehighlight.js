@@ -4,7 +4,7 @@ import { UiContext } from "@/contexts/ui.js";
 import { usePrototypeData } from "@/contexts/prototype.js";
 import Slider from "@/components/Slider/Slider";
 
-export default function ModalShareActivity(props) {
+export default function ModalShareHighlight(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
@@ -44,26 +44,26 @@ export default function ModalShareActivity(props) {
             </button>
             <div className="modal-content">
               <div className="modal-body">
-                <h2 className="modal-title">Share post</h2>
+                <h2 className="modal-title">Share highlight</h2>
 
                 <div className="flex flex-wrap items-center justify-center gap-8 text-sm py-8">
                   <div>
                     <button
                       type="button"
-                      className="aspect-square rounded-full grid place-content-center bg-[#25D366] p-4 interactive"
+                      className="aspect-square rounded-full grid place-content-center bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-[#FEDA77] via-[#DD2A7B] to-[#515BD4] p-4 interactive"
                     >
-                      <span className="icon text-3xl icon-logo-whatsapp text-mono-100" />
+                      <span className="icon text-3xl icon-logo-instagram text-mono-100" />
                     </button>
-                    <div className="mt-2 truncate hidden">WhatsApp</div>
+                    <div className="mt-2 truncate hidden">Instagram</div>
                   </div>
                   <div>
                     <button
                       type="button"
-                      className="aspect-square rounded-full grid place-content-center bg-[#3B5998] p-4 interactive"
+                      className="aspect-square rounded-full grid place-content-center bg-mono-900 p-4 interactive"
                     >
-                      <span className="icon text-3xl icon-logo-fb-simple text-mono-100" />
+                      <span className="icon text-3xl icon-tiktok text-mono-100" />
                     </button>
-                    <div className="mt-2 truncate hidden">Facebook</div>
+                    <div className="mt-2 truncate hidden">Tik Tok</div>
                   </div>
                   <div>
                     <button

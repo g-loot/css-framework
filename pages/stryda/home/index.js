@@ -97,6 +97,15 @@ export default function Home() {
                             </Link>
                           </div>
                           <div className="item-actions">
+                            {prototype.getUserByID(item.id).isLive && (
+                              <Tooltip tooltip="Twitch">
+                                <div className="bg-error-700 rounded text-xs text-mono-100 uppercase p-1 leading-none">
+                                  Live
+                                </div>
+                              </Tooltip>
+                            )}
+                          </div>
+                          <div className="item-actions">
                             <Tooltip tooltip="Gift token">
                               <button
                                 type="button"
@@ -202,7 +211,7 @@ export default function Home() {
             <div className="w-80 2xl:w-96 space-y-4 hidden xl:block">
               <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
-                  <h2 className="h6 text-ui-100">Battle pass</h2>
+                  <h2 className="h6 text-ui-100">Battle Pass</h2>
                   <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
                     <a className="link link-hover text-ui-300 text-sm leading-none">
                       View all

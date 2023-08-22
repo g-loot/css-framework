@@ -264,6 +264,18 @@ export default function TabClanAbout() {
                       Games ({selectedClan.games.length})
                     </h2>
                   </div>
+                  {/*
+                  <div className="xl:flex-1 flex flex-wrap items-center justify-center gap-8 p-8">
+                    {selectedClan.games?.map((game, gameIndex) => (
+                      <img
+                        key={gameIndex}
+                        src={prototype.getGameByID(game).assets.cover}
+                        alt={prototype.getGameByID(game).name}
+                        className="h-36 xl:h-48 rounded aspect-story object-cover"
+                      />
+                    ))}
+                  </div>
+                 */}
                   <div className="xl:flex-1 xl:grid xl:place-content-stretch xl:content-center">
                     <Slider
                       itemWidth={138 + 16 + 16}

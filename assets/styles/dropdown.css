@@ -35,7 +35,7 @@
       }
       :where(li).separator {
         @apply
-        bg-ui-500
+        bg-ui-400/25
         ;
       }
     }

@@ -8,6 +8,7 @@ import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import { StatsValorantWeapons } from "@/mock-data/data-stats-valorant";
+import ModalShareHighlight from "./modal-sharehighlight";
 
 export default function ModalHighlightViewer(props) {
   const uiContext = useContext(UiContext);
@@ -41,6 +42,11 @@ export default function ModalHighlightViewer(props) {
     uiContext.closeModal();
   };
 
+  function openModalShareHighlight(item) {
+    uiContext.closeModal();
+    uiContext.openModal(<ModalShareHighlight item={item} />);
+  }
+
   return (
     <>
       {item && (
@@ -55,7 +61,10 @@ export default function ModalHighlightViewer(props) {
           <div className="modal-content p-0">
             <div className="modal-body relative">
               <div className="absolute z-10 inset-0 p-4">
-                <div className="absolute bottom-4 right-4 p-1 bg-ui-900/80 backdrop-blur rounded-r-[2rem] rounded-l-2 flex gap-2 items-center">
+                <div className="absolute top-2 right-14">
+                  
+                </div>
+                <div className="absolute bottom-2 right-2 p-1 bg-ui-900/80 backdrop-blur rounded-r-[2rem] rounded-l-2 flex gap-2 items-center">
                   <div
                     className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${
                       item.stats.hasWon
@@ -75,11 +84,18 @@ export default function ModalHighlightViewer(props) {
                       {item.stats.score.team1} - {item.stats.score.team2}
                     </span>
                   </div>
+                  <button
+                    type="button"
+                    onClick={() => openModalShareHighlight(item)}
+                    className="button button-primary button-sm rounded-full"
+                  >
+                    <span className="icon icon-network-communication" />
+                  </button>
                   <button type="button" onClick={() => handleViewMatch()} className="button button-primary button-sm">
                     <span>View match details</span>
                   </button>
                 </div>
-                <div className="absolute top-1 left-1 flex items-center gap-4 p-2 pr-4 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur max-w-xs">
+                <div className="absolute top-2 left-2 flex items-center gap-4 p-2 pr-4 rounded-r-[1rem] rounded-l-[5rem] bg-gradient-to-r from-ui-900/90 to-ui-900/50 backdrop-blur max-w-xs">
                   <Avatar id={item.user} size="avatar-sm" />
                   <div className="overflow-hidden">
                     <div>

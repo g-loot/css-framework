@@ -283,8 +283,8 @@
   @apply
   leading-none
   text-3xl
-  uppercase
   text-ui-100
+  font-bold
   ;
 }
 

@@ -226,8 +226,8 @@ export default function Battlepass(props) {
   }
 
   function calculPercent(currentValue) {
-    const currentTarget = 300 + 100 * currentValue;
-    const previousTarget = 300 + 100 * (currentValue - 1);
+    const currentTarget = 100 * currentValue;
+    const previousTarget = 100 * (currentValue - 1);
     const currentMinusPrevious = Math.round(currentTarget - previousTarget);
     const currentProgress =
       getBattlepassByID(selectedBattlepassID).currentProgress;
@@ -654,7 +654,7 @@ export default function Battlepass(props) {
                 )}
                 <p className="battlepass-reward-name">
                   {size === "battlepass-md" && (
-                    <span className="uppercase text-ui-300">
+                    <span className="text-ui-300">
                       {getBattlepassStepByID(activeStep).name}:{" "}
                     </span>
                   )}
@@ -800,7 +800,7 @@ export default function Battlepass(props) {
                       className="battlepass-info"
                       data-tooltip={`${calculPercent(
                         getBattlepassByID(selectedBattlepassID).currentStep
-                      )} / ${300 + 100 * item.id} XP`}
+                      )} / ${100 * item.id} XP`}
                     >
                       <div
                         className="progressbar progressbar-sm"

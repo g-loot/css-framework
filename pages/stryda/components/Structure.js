@@ -41,7 +41,7 @@ export default function Structure({ children, title, gamePicker }) {
                         <li key={itemIndex}>
                           <button
                             type="button"
-                            className={`group relative flex gap-2 items-center px-4 py-3 overflow-hidden select-none transition duration-100 ease-in-out outline-offset-[-1px] focus-visible:rounded focus-visible:outline focus-visible:outline-1 focus-visible:outline-main ${
+                            className={`group relative flex gap-2 items-center p-3 overflow-hidden select-none transition duration-100 ease-in-out outline-offset-[-1px] focus-visible:rounded focus-visible:outline focus-visible:outline-1 focus-visible:outline-main ${
                               item.id === prototype.defaultGameID
                                 ? `text-game-${item.slug} pointer-events-none`
                                 : "text-ui-300 hover:text-ui-100 hover:bg-ui-400/5 active:bg-ui-400/10"

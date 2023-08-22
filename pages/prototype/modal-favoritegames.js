@@ -81,8 +81,8 @@ export default function ModalFavoriteGames(props) {
                 disabled={selectedGamesCount === 0}>
                 <span>Save</span>
               </button>
-              <button className="button button-secondary w-32" onClick={clearSelectedGame}>
-                <span>Clear all</span>
+              <button className="button button-secondary w-32" onClick={() => uiContext.closeModal()}>
+                <span>Cancel</span>
               </button>
             </div>
           </div>

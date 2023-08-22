@@ -183,7 +183,7 @@ export default function WidgetUser(props) {
                       >
                         <span
                           data-badge="1"
-                          className="icon icon-a-chat text-base text-ui-300 after:absolute after:top-1 after:bg-error-300"
+                          className="icon icon-a-chat text-base text-ui-300 after:absolute after:top-1 after:bg-error-700 after:text-mono-100"
                         />
                       </div>
                     )}

@@ -183,7 +183,7 @@ export default function TabProfileStats() {
                         <GameIcon game={item} />
                       </div>
                       <div className="item-body">
-                        <div className="item-title text-xl text-ui-100 uppercase">
+                        <div className="item-title h6">
                           {prototype.getGameByID(item).name}
                         </div>
                       </div>
