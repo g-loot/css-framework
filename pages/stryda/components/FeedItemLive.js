@@ -8,6 +8,22 @@ export default function FeedItemLive(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
+  const autoPlay = props.autoPlay || false;
+  const [video, setVideo] = useState(null);
+
+  useEffect(() => {
+    setVideo(document.getElementById(`video_live_${item.id}`));
+  }, [item]);
+
+  useEffect(() => {
+    if (video) {
+      if (autoPlay) {
+        video.play();
+      } else {
+        video.pause();
+      }
+    }
+  }, [video, autoPlay]);
 
   return (
     <>
@@ -54,7 +70,7 @@ export default function FeedItemLive(props) {
           </div>
           <button type="button">
             <video
-              autoPlay={true}
+              autoPlay={autoPlay}
               controls
               playsInline
               loop

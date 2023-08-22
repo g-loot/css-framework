@@ -8,7 +8,6 @@ import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
-import ModalShareActivity from "../modal-shareactivity";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
 import FeedItemAchievement from "./FeedItemAchievement";
 import ModalHighlightViewer from "../modal-highlightviewer";
@@ -52,14 +51,13 @@ export default function FeedItemMatch(props) {
   };
 
   function openModalHighlightViewer(match) {
-    video.pause();
     uiContext.openModal(<ModalHighlightViewer item={match} />);
   }
 
   return (
     <>
       {item && match && (
-        <div className="surface sm:rounded">
+        <div className="surface sm:rounded video">
           <div className="p-4 flex items-center gap-3 leading-tight">
             <Avatar id={match.user} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">
