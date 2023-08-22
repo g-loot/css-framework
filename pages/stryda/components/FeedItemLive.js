@@ -37,7 +37,7 @@ export default function FeedItemLive(props) {
                   <a
                     href="https://www.twitch.tv/"
                     target="_blank"
-                    rel="nofollow"
+                    rel="noreferrer"
                     className="text-ui-100"
                   >
                     Twitch
