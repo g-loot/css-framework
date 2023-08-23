@@ -46,6 +46,14 @@ export const dataFeedItems = [
     },
   },
   {
+    id: 11,
+    type: "post",
+    title: "Calling all Valorant players",
+    text: "Introducing: Big Clan Battle for League of Legends! Compete with your fellow clan members in a month-long, clan-only Ladder. In Big Clan Battle, every clan can submit 20 individual results to decide their total Ladder score and take home the biggest prize pool yet!",
+    image: "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/64da3d6766c9ace9117ec1dc/e6cb6417609ca30f001a230ecf378f123867de18/original.png?1692024663",
+    url: "/stryda/clanevents/valorant/0",
+  },
+  {
     id: 2,
     type: "live",
     userID: 3,

@@ -28,7 +28,7 @@ export default function FeedItemLive(props) {
   return (
     <>
       {item && (
-        <div className="surface sm:rounded text-0">
+        <div className="surface sm:rounded text-0 video">
           <div className="p-4 flex items-center gap-3 text-base">
             <Avatar id={item.userID} size="avatar-sm" hasTooltip={true} />
             <div className="flex-1 overflow-hidden">

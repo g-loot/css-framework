@@ -328,12 +328,11 @@
       delay-[0ms]
       ;
     }
-
     &.rarity-category-1 {
       animation-delay: 900ms;
       & + .revealer-back {
         @apply
-        delay-[900ms]
+        delay-[800ms]
         ;
       }
     }
@@ -341,7 +340,7 @@
       animation-delay: 1300ms;
       & + .revealer-back {
         @apply
-        delay-[1300ms]
+        delay-[1100ms]
         ;
       }
     }
@@ -349,7 +348,7 @@
       animation-delay: 1600ms;
       & + .revealer-back {
         @apply
-        delay-[1600ms]
+        delay-[1400ms]
         ;
       }
     }
@@ -357,7 +356,7 @@
       animation-delay: 2600ms;
       & + .revealer-back {
         @apply
-        delay-[2600ms]
+        delay-[2400ms]
         ;
       }
     }
@@ -369,27 +368,28 @@
     pointer-events-none
     scale-125
     opacity-0
-    brightness-[1000%]
     ease-[cubic-bezier(1,0,.2,1)]
+    brightness-[2000%]
     ;
   }
   
   &.is-active {
     > .revealer-front {
       @apply
-      opacity-0
       pointer-events-none
       scale-0
+      opacity-0
       ease-[cubic-bezier(1,0,.2,1)]
+      brightness-50
       ;
     }
     > .revealer-back {
       @apply
-      opacity-100
       pointer-events-auto
       scale-100
-      brightness-100
+      opacity-100
       ease-[cubic-bezier(1,0,.2,1)]
+      brightness-100
       ;
     }
   }

@@ -676,15 +676,16 @@
     }
     .card-overlay {
       @apply
+      rounded-none
       bg-ui-900/0
       text-ui-900
       inset-1
       shadow-[inset_0_0_0_1px_rgb(var(--color-mono-100)_/_0.75)]
-      rounded
       ;
       &::before {
         @apply
         content-['']
+        rounded-none
         absolute
         z-50
         inset-1

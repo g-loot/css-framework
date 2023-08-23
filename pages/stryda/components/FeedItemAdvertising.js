@@ -4,7 +4,7 @@ export default function FeedItemAdvertising(props) {
   return (
     <>
       {item && (
-        <div className="rounded bg-ui-600 aspect-video grid place-content-center text-center text-2xl text-ui-400">
+        <div className="surface-ui-600 sm:rounded aspect-video grid place-content-center text-center text-2xl text-ui-400">
           <span>AD</span>
         </div>
       )}

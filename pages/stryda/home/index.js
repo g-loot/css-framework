@@ -200,7 +200,7 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-                <div className="rounded bg-ui-600 aspect-square grid place-content-center text-center text-2xl text-ui-400">
+                <div className="surface-ui-600 rounded aspect-square grid place-content-center text-center text-2xl text-ui-400">
                   <span>AD</span>
                 </div>
               </div>

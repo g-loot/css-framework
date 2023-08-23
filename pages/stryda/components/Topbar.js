@@ -100,7 +100,9 @@ export default function Topbar() {
                   height="auto"
                   src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
                   alt="Stryda logo"
+                  className="hidden md:block"
                 />
+                <span className="block md:hidden icon icon-stryda-symbol text-3xl text-main" />
               </a>
             </Link>
             <Tooltip
