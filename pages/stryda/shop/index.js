@@ -36,8 +36,8 @@ export default function Home() {
           <section className="header header-quaternary my-8">
             <div className="header-content">
               <div className="header-body">
-                <h1>Shop</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">
+                <h1 className="text-7xl mb-2">Shop</h1>
+                <p className="text-ui-300 max-w-[70ch]">
                   Turn your hard work and successes into rewards you can enjoy!
                   Will you invest in some new gaming gear or just treat yourself
                   to something you&#39;ve had your eye on? Earn more coins to

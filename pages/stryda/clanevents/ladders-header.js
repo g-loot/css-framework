@@ -16,8 +16,8 @@ export default function LaddersHeader(props) {
         <section className="header header-quaternary surface sm:rounded-lg mt-8 mb-4">
           <div className="header-content">
             <div className="header-body">
-              <h1>Clan Events</h1>
-              <p className="text-ui-300 max-w-[70ch] mt-4 mb-5">
+              <h1 className="text-7xl mb-2">Clan Events</h1>
+              <p className="text-ui-300 max-w-[70ch] mb-5">
                 Create a 5 people party with members from your Stryda Clan. Play
                 VALORANT together and start climbing the leaderboard!
               </p>

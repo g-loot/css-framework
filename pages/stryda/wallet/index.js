@@ -59,8 +59,8 @@ export default function Home() {
           <section className="header header-quaternary my-8">
             <div className="header-content">
               <div className="header-body">
-                <h1>Wallet</h1>
-                <p className="text-ui-300 max-w-[70ch] mt-4">
+                <h1 className="text-7xl mb-2">Wallet</h1>
+                <p className="text-ui-300 max-w-[70ch]">
                   Get to know the different currencies and rewards by clicking
                   on the icons and keep track of your earnings from Missions,
                   Weekly Ladders and Monthly Tournaments.

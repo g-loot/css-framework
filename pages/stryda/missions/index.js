@@ -82,7 +82,7 @@ export default function Missions() {
             <section className="header header-quaternary my-8">
               <div className="header-content">
                 <div className="header-body">
-                  <h1 className="mb-2">Missions</h1>
+                  <h1 className="text-7xl mb-2">Missions</h1>
                   <p className="text-ui-300">
                     Play Stryda Missions in {selectedGame.name}, gather XP, and
                     earn Mission Rewards. You can complete the Daily Missions in

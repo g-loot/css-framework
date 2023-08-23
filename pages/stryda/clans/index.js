@@ -50,10 +50,10 @@ export default function Clan() {
             <div className="header header-quaternary">
               <div className="header-content">
                 <div className="header-body">
-                  <h1 className="text-5xl sm:text-6xl">
+                  <h1 className="text-7xl mb-2">
                     Be stronger with Clans!
                   </h1>
-                  <ul className="leading-relaxed text-ui-300 mt-4 list-disc ml-4">
+                  <ul className="leading-relaxed text-ui-300 list-disc ml-4">
                     <li>
                       Work together in Clan Ladders to earn{" "}
                       <span className="text-ui-100 font-bold">extra Coins</span>

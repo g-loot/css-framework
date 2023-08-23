@@ -79,7 +79,7 @@ export default function LaddersHeader(props) {
                 </>
               ) : (
                 <>
-                  <h1 className="mb-2">Ladders</h1>
+                  <h1 className="text-7xl mb-2">Ladders</h1>
                   <p className="text-ui-300">
                     Use your stats to climb the ladders and win prizes. No
                     waiting, no dedicated servers. Play on your own schedule!

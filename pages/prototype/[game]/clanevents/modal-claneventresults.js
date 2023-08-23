@@ -114,7 +114,7 @@ export default function ModalClanEventResults(props) {
                 </div>
                 <div>
                   <h2 className="h6 text-ui-300 mb-6">Top 3</h2>
-                  <div className="flex items-center justify-center gap-2">
+                  <div className="flex items-stretch justify-center gap-2">
                     <div className="rounded surface-ui-700 text-center px-2 pt-0 pb-3 flex-1 flex flex-col items-center">
                       <div className="relative px-2 flex items-center justify-center mb-2 lg:-mt-6">
                         <span className="text-2xl text-gold-500">1</span>
@@ -133,14 +133,14 @@ export default function ModalClanEventResults(props) {
                         </div>
                       </div>
                       <AvatarClan id={5} size="avatar-sm" />
-                      <div className="leading-tight mt-4">
+                      <div className="leading-tight mt-4 flex-1">
                         <div className={`text-sm`}>
                           &#91;
                           {prototype.getClanByID(5)?.tag}
                           &#93; {prototype.getClanByID(5)?.nickname}
                         </div>
-                        <div className="text-ui-100 text-lg">12 points</div>
                       </div>
+                      <div className="text-ui-100 text-lg">12 points</div>
                     </div>
                     <div className="rounded surface-ui-700 text-center px-2 pt-0 pb-3 flex-1 flex flex-col items-center">
                       <div className="relative px-2 flex items-center justify-center mb-2 lg:-mt-6">
@@ -160,14 +160,14 @@ export default function ModalClanEventResults(props) {
                         </div>
                       </div>
                       <AvatarClan id={4} size="avatar-sm" />
-                      <div className="leading-tight mt-4">
+                      <div className="leading-tight mt-4 flex-1">
                         <div className={`text-sm`}>
                           &#91;
                           {prototype.getClanByID(4)?.tag}
                           &#93; {prototype.getClanByID(4)?.nickname}
                         </div>
-                        <div className="text-ui-100 text-lg">8 points</div>
                       </div>
+                      <div className="text-ui-100 text-lg">8 points</div>
                     </div>
                     <div className="rounded surface-ui-700 text-center px-2 pt-0 pb-3 flex-1 flex flex-col items-center">
                       <div className="relative px-2 flex items-center justify-center mb-2 lg:-mt-6">
@@ -187,14 +187,14 @@ export default function ModalClanEventResults(props) {
                         </div>
                       </div>
                       <AvatarClan id={7} size="avatar-sm" />
-                      <div className="leading-tight mt-4">
+                      <div className="leading-tight mt-4 flex-1">
                         <div className={`text-sm`}>
                           &#91;
                           {prototype.getClanByID(7)?.tag}
                           &#93; {prototype.getClanByID(7)?.nickname}
                         </div>
-                        <div className="text-ui-100 text-lg">7 points</div>
                       </div>
+                      <div className="text-ui-100 text-lg">7 points</div>
                     </div>
                   </div>
                 </div>
