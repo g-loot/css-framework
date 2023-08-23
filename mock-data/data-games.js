@@ -3928,10 +3928,10 @@ export const dataGames = [
         id: 5,
         isCurrent: true,
         status: "ongoing",
-        name: "Clan Rush",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1689151603/Stryda/demo/Spike_Clan_Rush_logo.png",
+        name: "5 Stack Frenzy",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1692794828/Stryda/clan%20events/5stackfrenzy-logo.svg",
         video: null,
-        bg: "https://res.cloudinary.com/gloot/image/upload/v1689151404/Stryda/demo/Spike_Clan_Rush_bg.jpg",
+        bg: "https://res.cloudinary.com/gloot/image/upload/v1692795104/Stryda/clan%20events/5stackfrenzy-bg.jpg",
         meta: {
           objective: "Have the most wins in a party composed of 5 clan members",
           gameMode: "Spike Rush",

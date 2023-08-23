@@ -209,8 +209,7 @@ export default function ModalClanEventOnboarding(props) {
                       />
                     </div>
                     <div className="px-4 leading-tight">
-                      <span className="text-ui-100">Win as many matches</span>{" "}
-                      to climb the leaderboard.
+                      For each win the Clan gets 1 point, for each loss the Clan loses 1 point. <span className="text-ui-100">May the best Clan win.</span>
                     </div>
                   </div>
                 </div>
