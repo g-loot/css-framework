@@ -622,13 +622,13 @@ export default function Chat(props) {
                                   href={`/prototype/valorant/clanevents/0${prototype.getURLparams()}`}
                                 >
                                   <div className="inline-flex flex-col 2xl:flex-row 2xl:items-center gap-4 justify-center text-left surface-ui-600 p-2 rounded interactive">
-                                    <div className="relative">
-                                      <div className="absolute top-1 left-1">
+                                    <div className="aspect-cover object-cover rounded w-full 2xl:w-96 relative overflow-hidden">
+                                      <div className="absolute z-20 top-1 left-1">
                                         <Tooltip tooltip="Valorant">
                                           <GameIcon game={1} />
                                         </Tooltip>
                                       </div>
-                                      <div className="absolute inset-0 flex items-center justify-center">
+                                      <div className="absolute z-10 inset-0 flex items-center justify-center">
                                         <img
                                           src={
                                             prototype.getClanLeaderboardByID(
@@ -647,7 +647,7 @@ export default function Chat(props) {
                                             0
                                           )?.bg
                                         }
-                                        className="aspect-cover object-cover rounded w-full 2xl:w-96"
+                                        className="absolute z-0 w-full h-full object-cover object-center !max-w-[none]"
                                         alt=""
                                       />
                                     </div>
