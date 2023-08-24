@@ -278,6 +278,7 @@ module.exports = {
         "9xl": "8rem",
       },
       animation: {
+        "load-page": "loadPage 10s linear",
         "slide-in-left": "slideInLeft 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
         "slide-in-right":
           "slideInRight 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
@@ -314,6 +315,23 @@ module.exports = {
           "blockRevealContent .66s cubic-bezier(1,0,.2,1) both",
       },
       keyframes: {
+        loadPage: {
+          "0%": {
+            transform: "translateX(-100%)",
+          },
+          "25%": {
+            transform: "translateX(-50%)",
+          },
+          "50%": {
+            transform: "translateX(-25%)",
+          },
+          "75%": {
+            transform: "translateX(-12%)",
+          },
+          "100%": {
+            transform: "translateX(0%)",
+          },
+        },
         blockReveal: {
           "0%": {
             opacity: "0",
