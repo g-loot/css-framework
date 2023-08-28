@@ -187,7 +187,7 @@ export const StatsValorantDemoLatestMatches = [
     matches: [
       {
         id: 0,
-        map: 1,
+        map: 12,
         mode: "Competitive",
         hasWon: true,
         placement: "5th",
@@ -1030,6 +1030,16 @@ export const StatsValorantDemoWeapons = [
 ];
 
 export const StatsValorantDemoMaps = [
+  {
+    id: 5,
+    map: 12,
+    winpercent: 51.2,
+    wins: 67,
+    losses: 29,
+    kd: 1.94,
+    adr: 185.4,
+    acs: 283.1,
+  },
   {
     id: 0,
     map: 11,

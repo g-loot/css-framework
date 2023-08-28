@@ -63,6 +63,11 @@ export const StatsValorantMaps = [
     name: 'kasbah',
     picturePath: getImageUrl('map-kasbah.jpg'),
   },
+  {
+    id: 12,
+    name: 'sunset',
+    picturePath: getImageUrl('map-sunset.jpg'),
+  },
 ];
 
 export const StatsValorantRanks = [
