@@ -4,7 +4,17 @@ import React, { useEffect, useRef, useState } from "react";
 const slides = [
   {
     subtitle: "Achievements",
-    title: "Achieve more with stryda!",
+    title: "The Stryda 5-stack Frenzy!",
+    description:
+      "Compete together with your Clan members in our first ever clan event, The Stryda 5-stack frenzy. Win competitive matches together to climb the leaderboard and show who's the best Clan on Stryda. Enroll, party up and collect those sweet wins!",
+    image:
+      "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/64e754daa5e2a106b98b7a7a/56ae49ef288842c151ef248763259aa208bec092/original.png?1692883109",
+    buttonLabel: "Let's go",
+    buttonURL: "/prototype/profile/1?tab=achievements",
+  },
+  {
+    subtitle: "Achievements",
+    title: "Achieve more with Stryda!",
     description:
       "Complete Missions, compete in Ladders and build your Stryda player legacy, once achievement at a time! Fresh off the press, our new achievements system will allow our players to track their progress and immortalize their competitive feats on Stryda.",
     image:
@@ -167,7 +177,7 @@ export default function Carousel(props) {
             }
           }}
         >
-          {slides.map((slide, slideIndex) => (
+          {slides.slice(0, 4).map((slide, slideIndex) => (
             <>
               <div
                 className={`carousel-slide ${

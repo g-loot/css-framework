@@ -17,7 +17,7 @@ const SubMenuItem = [
     slug: "ladders",
     url: "ladders",
     icon: "icon-ladder",
-    label: "ladders",
+    label: "Ladders",
   },
   /*
   {
@@ -138,7 +138,7 @@ export default function PrototypeGamesNavNew({ children }) {
                           <span
                             className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`}
                           />
-                          <span className="uppercase">
+                          <span>
                             <span>{subItem.label}</span>
                             {(item.slug === "valorant" || item.slug === "leagueoflegends") &&
                               (subItem.url === "missions" || subItem.url === "ladders") && (

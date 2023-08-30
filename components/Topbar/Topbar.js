@@ -103,7 +103,7 @@ export default function Topbar() {
                   <span className="icon icon-ctrl-right" />
                 </button>
               </div>
-              <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
+              <ul className="hidden lg:flex tabs overflow-visible">
                 <li>
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     <button
@@ -112,7 +112,7 @@ export default function Topbar() {
                         router.pathname.endsWith("prototype") ? "is-active" : ""
                       } ${router.pathname.includes("home") ? "is-active" : ""}`}
                     >
-                      <span className="text-sm uppercase">Home</span>
+                      <span>Home</span>
                     </button>
                   </Link>
                 </li>
@@ -128,7 +128,7 @@ export default function Topbar() {
                           : ""
                       }`}
                     >
-                      <span className="text-sm uppercase">Battle Pass</span>
+                      <span>Battle Pass</span>
                     </button>
                   </Link>
                 </li>
@@ -140,7 +140,7 @@ export default function Topbar() {
                         router.pathname.includes("premium") ? "is-active" : ""
                       }`}
                     >
-                      <span className="text-sm uppercase">Premium</span>
+                      <span>Premium</span>
                     </button>
                   </Link>
                 </li>
@@ -152,14 +152,14 @@ export default function Topbar() {
                         router.pathname.includes("shop") ? "is-active" : ""
                       }`}
                     >
-                      <span className="text-sm uppercase">Shop</span>
+                      <span>Shop</span>
                     </button>
                   </Link>
                 </li>
                 <button
                   onClick={openModalBuyTokens}
                   type="button"
-                  className="tab tab-secondary"
+                  className="tab"
                 >
                   <span>Get tokens</span>
                 </button>

@@ -215,7 +215,7 @@
   @apply
   bg-ui-500
   border
-  border-ui-400
+  border-ui-400/20
   ;
   .progressbar {
     @apply
@@ -311,6 +311,18 @@
       ;
     }
   }
+  .sm\:surface-ui-500 {
+    @apply
+    bg-ui-500
+    border
+    border-ui-400/20
+    ;
+    .progressbar {
+      @apply
+      bg-ui-300
+      ;
+    }
+  }
   .sm\:surface-premium,
   .sm\:surface-unlocked {
     @apply
@@ -391,6 +403,18 @@
     .progressbar {
       @apply
       bg-ui-400
+      ;
+    }
+  }
+  .md\:surface-ui-500 {
+    @apply
+    bg-ui-500
+    border
+    border-ui-400/20
+    ;
+    .progressbar {
+      @apply
+      bg-ui-300
       ;
     }
   }

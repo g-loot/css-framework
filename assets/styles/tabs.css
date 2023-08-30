@@ -268,7 +268,6 @@
     font-body
     leading-none
     text-sm
-    uppercase
     ;
     &:not([class*="px-"]) {
       @apply
@@ -796,7 +795,6 @@
   font-body
   leading-none
   text-sm
-  uppercase
   ;
 }
 

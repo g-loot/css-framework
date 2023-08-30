@@ -819,11 +819,9 @@ export default function TabLaddersSoloLeaderboards() {
                               <div className="item-body text-left">
                                 <span>Player</span>
                               </div>
-                              <div className="item-body flex justify-around items-center pr-4">
-                                <span className="w-10"></span>
-                                <span className="w-12"></span>
-                                <span className="w-12">points</span>
-                                <span className="w-10 text-center">Clan</span>
+                              <div className="item-body flex justify-around items-center pr-6">
+                                <div className="w-40 text-center">points</div>
+                                <div className="w-12 text-center">Clan</div>
                               </div>
                               <div className="item-actions flex items-center gap-2 opacity-0">
                                 <div>
@@ -992,7 +990,6 @@ export default function TabLaddersSoloLeaderboards() {
                                                               &#93;{" "}
                                                             </>
                                                           )}
-
                                                           {
                                                             prototype.getUserByID(
                                                               user.user
@@ -1044,38 +1041,27 @@ export default function TabLaddersSoloLeaderboards() {
                                                 </div>
 
                                                 <div className="item-body flex justify-around items-center">
-                                                  <Tooltip
-                                                    placement="left"
-                                                    tooltip={
-                                                      <div className="max-w-xs text-sm text-center leading-tight">
-                                                        Mission LVL 1
-                                                      </div>
-                                                    }
-                                                  >
-                                                    <div className="w-12 achievement-level-1">
-                                                      <AchievementFrame url="https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl1-animated.svg" />
-                                                      <AchievementIcon url="https://res.cloudinary.com/gloot/image/upload/v1674739347/Stryda/achievements/achivement-icon-mission.svg" />
-                                                    </div>
-                                                  </Tooltip>
-                                                  <span className="text-ui-300 leading-none">
-                                                    {user.stats.ladderPoints}
-                                                  </span>
-                                                  {prototype.getUserByID(
-                                                    user.user
-                                                  )?.clan ? (
-                                                    <AvatarClan
-                                                      id={
-                                                        prototype.getUserByID(
-                                                          user.user
-                                                        )?.clan
-                                                      }
-                                                      hasTooltip={true}
-                                                    />
-                                                  ) : (
-                                                    <div
-                                                      className={`avatar avatar-squircle avatar-xs interactive opacity-0`}
-                                                    />
-                                                  )}
+                                                  <div className="text-ui-300 leading-none w-40 text-center">
+                                                    {user.stats.ladderPoints}.24231
+                                                  </div>
+                                                  <div className="w-12 flex justify-center">
+                                                    {prototype.getUserByID(
+                                                      user.user
+                                                    )?.clan ? (
+                                                      <AvatarClan
+                                                        id={
+                                                          prototype.getUserByID(
+                                                            user.user
+                                                          )?.clan
+                                                        }
+                                                        hasTooltip={true}
+                                                      />
+                                                    ) : (
+                                                      <div
+                                                        className={`avatar avatar-squircle avatar-xs interactive opacity-0`}
+                                                      />
+                                                    )}
+                                                  </div>
                                                 </div>
                                               </div>
                                             </>

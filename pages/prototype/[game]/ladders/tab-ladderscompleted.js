@@ -106,10 +106,10 @@ export default function TabLaddersCompleted() {
                           <ButtonSorting>Name</ButtonSorting>
                         </th>
                         <th>
-                          <ButtonSorting>Position</ButtonSorting>
+                          <ButtonSorting>Solo position</ButtonSorting>
                         </th>
                         <th>
-                          <ButtonSorting>Points</ButtonSorting>
+                          <ButtonSorting>Clan position</ButtonSorting>
                         </th>
                         <th></th>
                       </tr>
@@ -177,12 +177,20 @@ export default function TabLaddersCompleted() {
                               </td>
                               <td>
                                 <span className="font-bold">
-                                  #{ladder.soloResults?.placement}
+                                  {ladder.solo && ladder.soloResults && (
+                                    <>
+                                    #{ladder.soloResults?.placement}
+                                    </>
+                                  )}
                                 </span>
                               </td>
                               <td>
                                 <span className="font-bold">
-                                  #{ladder.soloResults?.points}
+                                  {ladder.clan && ladder.clanResults && (
+                                    <>
+                                    #{ladder.clanResults?.placement}
+                                    </>
+                                  )}
                                 </span>
                               </td>
                               <td className="text-right">

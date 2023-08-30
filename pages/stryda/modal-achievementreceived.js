@@ -63,6 +63,7 @@ export default function ModalAchievementReceived(props) {
         <>
           <div className="relative z-10 max-w-sm w-full">
             <div className="modal modal-center">
+              {/*
               <button
                 type="button"
                 className="button button-secondary button-close"
@@ -70,12 +71,19 @@ export default function ModalAchievementReceived(props) {
               >
                 <span className="icon icon-e-remove" />
               </button>
+      */}
               <div className="modal-content">
                 <div className="modal-body text-center">
-                  <h2 className="h4 modal-title animate-slide-in-top">
+                  <h2
+                    className="h4 modal-title animate-slide-in-top"
+                    style={{ animationDelay: ".5s" }}
+                  >
                     Achievement unlocked!
                   </h2>
-                  <div className="animate-slide-in-bottom space-y-4 w-4/5 mx-auto">
+                  <div
+                    className="animate-slide-in-bottom space-y-4 w-full mt-2"
+                    style={{ animationDelay: ".7s" }}
+                  >
                     <div className="w-full achievement">
                       <i />
                       <i />

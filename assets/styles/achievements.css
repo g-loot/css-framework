@@ -9,7 +9,7 @@
   flex 
   flex-col
   items-center 
-  justify-center 
+  justify-between 
   relative
   drop-shadow
   select-none
@@ -21,9 +21,14 @@
   text-ui-300
   text-center
   leading-none
+  p-3
   ;
 
   > i {
+    @apply
+    absolute
+    inset-0
+    ;
     &::before,
     &::after {
       @apply
@@ -79,19 +84,19 @@
 
   &.is-completed {
     @apply
-    border-main
+    border-premium-500
     ;
 
     * {
       @apply
-      text-main
+      text-premium-500
       ;
     }
     > i {
       &::before,
       &::after {
         @apply
-        border-main
+        border-premium-500
         ;
       }
     }
@@ -102,6 +107,12 @@
       }
     }
     */
+  }
+
+  > span {
+    @apply
+    line-clamp-2
+    ;
   }
 }
 
@@ -147,22 +158,22 @@
 }
 
 .achievement-level-0 > * {
-  filter: brightness(0) saturate(100%) invert(14%) sepia(20%) saturate(985%) hue-rotate(194deg) brightness(91%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(2714%) hue-rotate(195deg) brightness(99%) contrast(91%);
 }
 .achievement-level-1 > * {
-  filter: brightness(0) saturate(100%) invert(53%) sepia(17%) saturate(565%) hue-rotate(339deg) brightness(94%) contrast(92%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(8%) saturate(1153%) hue-rotate(339deg) brightness(95%) contrast(88%);
 }
 .achievement-level-2 > * {
-  filter: brightness(0) saturate(100%) invert(57%) sepia(11%) saturate(1783%) hue-rotate(316deg) brightness(97%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(4%) hue-rotate(271deg) brightness(84%) contrast(85%);
 }
 .achievement-level-3 > * {
-  filter: brightness(0) saturate(100%) invert(80%) sepia(10%) saturate(107%) hue-rotate(178deg) brightness(96%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(92%) saturate(353%) hue-rotate(340deg) brightness(99%) contrast(93%);
 }
 .achievement-level-4 > * {
-  filter: brightness(0) saturate(100%) invert(69%) sepia(42%) saturate(649%) hue-rotate(4deg) brightness(89%) contrast(83%);
+  filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1819%) hue-rotate(68deg) brightness(101%) contrast(104%);
 }
 .achievement-level-5 > * {
-  filter: brightness(0) saturate(100%) invert(83%) sepia(100%) saturate(4522%) hue-rotate(317deg) brightness(100%) contrast(91%);
+  filter: brightness(0) saturate(100%) invert(47%) sepia(76%) saturate(2146%) hue-rotate(228deg) brightness(102%) contrast(103%);
 }
 
 .text-achievement-level-0 {
@@ -177,22 +188,22 @@
 }
 .text-achievement-level-2 {
   @apply
-  text-currency-2-700
+  text-silver-500
   ;
 }
 .text-achievement-level-3 {
   @apply
-  text-silver-300
+  text-gold-500
   ;
 }
 .text-achievement-level-4 {
   @apply
-  text-gold-700
+  text-success-300
   ;
 }
 .text-achievement-level-5 {
   @apply
-  text-gold-500
+  text-premium-500
   ;
 }
 
@@ -203,6 +214,7 @@
   justify-center
   relative
   w-3/4
+  flex-1
   ;
   &::before,
   &::after {

@@ -1383,6 +1383,7 @@
       @apply
       w-full
       aspect-cover
+      overflow-hidden
       ;
       > .card-image-content {
         @apply 
@@ -1577,6 +1578,7 @@
         @apply 
         w-auto
         order-2
+        rounded-r
         ;
       }
       > .card-content {
@@ -1621,6 +1623,7 @@
         @apply 
         w-auto
         order-2
+        rounded-r
         ;
       }
       > .card-content {
@@ -1665,6 +1668,7 @@
         @apply 
         w-auto
         order-2
+        rounded-r
         ;
       }
       > .card-content {
@@ -1708,6 +1712,7 @@
         @apply 
         w-auto
         order-2
+        rounded-r
         ;
       }
       > .card-content {

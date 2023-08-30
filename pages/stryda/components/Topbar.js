@@ -129,7 +129,7 @@ export default function Topbar() {
             </div>
           </div>
           <div className="flex justify-center items-center">
-            <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
+            <ul className="hidden lg:flex tabs overflow-visible">
               <li>
                 <Link href={`/stryda/home${prototype.getURLparams()}`}>
                   <button
@@ -141,7 +141,7 @@ export default function Topbar() {
                         : ""
                     }
                   >
-                    <span className="text-sm uppercase">Home</span>
+                    <span>Home</span>
                   </button>
                 </Link>
               </li>
@@ -153,7 +153,7 @@ export default function Topbar() {
                       router.pathname.includes("battlepass") ? "is-active" : ""
                     }
                   >
-                    <span className="text-sm uppercase">Battle Pass</span>
+                    <span>Battle Pass</span>
                   </button>
                 </Link>
               </li>
@@ -165,7 +165,7 @@ export default function Topbar() {
                       router.pathname.includes("missions") ? "is-active" : ""
                     }
                   >
-                    <span className="text-sm uppercase">Missions</span>
+                    <span>Missions</span>
                   </button>
                 </Link>
               </li>
@@ -180,7 +180,7 @@ export default function Topbar() {
                         : ""
                     }
                   >
-                    <span className="text-sm uppercase">Competitions</span>
+                    <span>Competitions</span>
                     <span className="icon icon-arrow-sm-down" />
                   </button>
                 </Link>
@@ -221,7 +221,7 @@ export default function Topbar() {
                       router.pathname.includes("clans") ? "is-active" : ""
                     }
                   >
-                    <span className="text-sm uppercase">Clans</span>
+                    <span>Clans</span>
                   </button>
                 </Link>
               </li>
@@ -233,7 +233,7 @@ export default function Topbar() {
                       router.pathname.includes("shop") ? "is-active" : ""
                     }
                   >
-                    <span className="text-sm uppercase">Shop</span>
+                    <span>Shop</span>
                   </button>
                 </Link>
               </li>
@@ -246,7 +246,7 @@ export default function Topbar() {
                       router.pathname.includes("premium") ? "is-active" : ""
                     }
                   >
-                    <span className="text-sm uppercase">Premium</span>
+                    <span>Premium</span>
                   </button>
                 </Link>
               </li>

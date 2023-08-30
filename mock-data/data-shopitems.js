@@ -1006,6 +1006,20 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1690977703/Stryda/shop/profilebanners/shop_profilebanner_kingscrown.jpg",
       },
+      {
+        id: 47,
+        name: "Nordic Clash",
+        price: 50022,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693233680/Stryda/shop/profilebanners/shop_profilebanner_nordicclash.jpg",
+      },
+      {
+        id: 48,
+        name: "Sapphire",
+        price: 50023,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693390337/Stryda/shop/profilebanners/shop_profilebanner_sapphire.jpg",
+      },
     ],
   }
 ];

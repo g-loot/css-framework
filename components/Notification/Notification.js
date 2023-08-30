@@ -25,8 +25,8 @@ export default function Notification(props) {
 
   return (
     <div
-      className={`rounded-lg relative surface shadow-md transition duration-100 ${
-        read ? "surface-ui-700 opacity-75" : "surface-ui-600"
+      className={`rounded-lg relative surface shadow-md transition duration-100 surface-ui-500 ${
+        read ? "opacity-75" : ""
       }`}
     >
       {!read && (

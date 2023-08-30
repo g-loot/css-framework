@@ -65,7 +65,7 @@ export default function ModalLevelUp(props) {
               >
                 You have reached{" "}
                 <span className="text-main inline-flex items-center justify-center gap-2">
-                  <span className="font-medium">15 000</span>
+                  <span>15 000</span>
                   <span className="icon icon-xp-symbol text-5xl text-main" />
                 </span>
               </h3>
