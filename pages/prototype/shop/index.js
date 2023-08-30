@@ -137,7 +137,7 @@ export default function Home() {
           <ul className="grid md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-4">
             <li
               onClick={openModalBuyTokens}
-              className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+              className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
               style={{ "--delay": `calc( 0 * 0.05s)` }}
             >
               <div className="flex-1 flex flex-col items-center gap-2">
@@ -152,7 +152,7 @@ export default function Home() {
                   height="auto"
                   alt="Tokens"
                 />
-                <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                <h3 className="flex flex-col gap-2 items-center leading-none">
                   <span>Tokens</span>
                 </h3>
               </div>
@@ -162,15 +162,13 @@ export default function Home() {
                   onClick={openModalBuyTokens}
                   className="button button-secondary w-full"
                 >
-                  <span>View tokens</span>
+                  <span>Get tokens</span>
                 </button>
               </div>
             </li>
-            <Link
-              href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
-            >
+            <Link href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}>
               <li
-                className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                 style={{ "--delay": `calc( 1 * 0.05s)` }}
               >
                 <div className="flex-1 flex flex-col items-center gap-2">
@@ -185,7 +183,7 @@ export default function Home() {
                     height="auto"
                     alt="Avatar frames"
                   />
-                  <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                  <h3 className="flex flex-col gap-2 items-center leading-none">
                     <span>Avatar frames</span>
                   </h3>
                 </div>
@@ -193,7 +191,10 @@ export default function Home() {
                   <Link
                     href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
                   >
-                    <button type="button" className="button button-secondary w-full">
+                    <button
+                      type="button"
+                      className="button button-secondary w-full"
+                    >
                       <span>View frames</span>
                     </button>
                   </Link>
@@ -204,7 +205,7 @@ export default function Home() {
               href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
             >
               <li
-                className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                 style={{ "--delay": `calc( 2 * 0.05s)` }}
               >
                 <div className="flex-1 flex flex-col items-center gap-2">
@@ -219,7 +220,7 @@ export default function Home() {
                     height="auto"
                     alt="Player banners"
                   />
-                  <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                  <h3 className="flex flex-col gap-2 items-center leading-none">
                     <span>Player banners</span>
                   </h3>
                 </div>
@@ -227,7 +228,10 @@ export default function Home() {
                   <Link
                     href={`/prototype/shop/profile-banner${prototype.getURLparams()}`}
                   >
-                    <button type="button" className="button button-secondary w-full">
+                    <button
+                      type="button"
+                      className="button button-secondary w-full"
+                    >
                       <span>View banners</span>
                     </button>
                   </Link>
@@ -237,14 +241,14 @@ export default function Home() {
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <Link
-                  href={`/prototype/shop/${
-                    voucher.id
-                  }${prototype.getURLparams()}`}
+                  href={`/prototype/shop/${voucher.id}${prototype.getURLparams()}`}
                 >
                   <li
                     key={voucher.id}
-                    className="interactive surface rounded-2xl w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
-                    style={{ "--delay": `calc( ${voucherIndex + 3} * 0.05s)` }}
+                    className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
+                    style={{
+                      "--delay": `calc( ${voucherIndex + 3} * 0.05s)`,
+                    }}
                   >
                     <div className="flex-1 flex flex-col items-center gap-2">
                       <div className="py-2 relative">
@@ -266,12 +270,10 @@ export default function Home() {
                         height="auto"
                         alt="Gift card"
                       />
-                      <h3 className="uppercase flex text-3xl flex-col gap-2 items-center leading-none">
+                      <h3 className="flex flex-col gap-2 items-center leading-none">
                         <span>Gift cards</span>
-                        <small className="text-ui-300 text-2xl">
-                          {voucher.name}
-                        </small>
                       </h3>
+                      <div className="text-xl">{voucher.name}</div>
                       <div className="mt-2 h-12 flex items-center">
                         {voucher.exception && (
                           <>

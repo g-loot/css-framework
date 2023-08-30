@@ -642,7 +642,7 @@ export const dataShopitems = [
         name: "Hell horns and fire",
         price: 550022,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1689846282/Stryda/shop/avatarframes/Hell_horns_and_fire.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1692791519/Stryda/shop/avatarframes/Hell_horns.svg",
       },
     ],
   },

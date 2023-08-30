@@ -144,7 +144,7 @@ export default function Home() {
                               />
                             </div>
                           </div>
-                          <div className="mb-3 text-ui-300 uppercase text-xl">
+                          <div className="mb-3 text-lg md:text-xl">
                             {item.name}
                           </div>
                         </div>

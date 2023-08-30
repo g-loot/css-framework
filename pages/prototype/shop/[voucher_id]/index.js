@@ -219,10 +219,10 @@ export default function Home() {
                                     height="auto"
                                     alt="Gift card"
                                   />
-                                  <h3 className="uppercase text-3xl leading-none">
+                                  <h3 className="text-2xl leading-none">
                                     Gift card {giftcard.amount}
                                   </h3>
-                                  <div className="mb-3 text-ui-300 uppercase text-xl">
+                                  <div className="mb-3 text-ui-300 text-lg">
                                     {selectedVoucher.name}
                                   </div>
                                 </div>

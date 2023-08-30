@@ -142,7 +142,7 @@ export default function Home() {
                           />
                         </div>
                         <div className="border-t border-ui-700 p-4 flex items-center justify-between leading-none">
-                          <div className="text-ui-300 uppercase md:text-xl">
+                          <div className="text-lg md:text-xl">
                             {item.name}
                           </div>
                           {!item.isOwned ? (
