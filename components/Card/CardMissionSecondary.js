@@ -139,7 +139,7 @@ export default function CardMissionSecondary(props) {
                             : ""
                         }`}
                       />
-                      <h4>Reveal mission</h4>
+                      <h4 className="uppercase font-normal">Reveal mission</h4>
                       <div className="text-sm mt-1">
                         {variablesContext.availableMissions} new available
                       </div>

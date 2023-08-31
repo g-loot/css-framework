@@ -139,7 +139,7 @@ export default function PrototypeGamesNavNew({ children }) {
                             className={`pl-3 pr-3 icon icon-20 ${subItem.icon}`}
                           />
                           <span>
-                            <span>{subItem.label}</span>
+                            <span className="uppercase">{subItem.label}</span>
                             {(item.slug === "valorant" || item.slug === "leagueoflegends") &&
                               (subItem.url === "missions" || subItem.url === "ladders") && (
                                 <span className="ml-2 icon icon-present animate-bounce" />

@@ -103,7 +103,7 @@ export default function Topbar() {
                   <span className="icon icon-ctrl-right" />
                 </button>
               </div>
-              <ul className="hidden lg:flex tabs overflow-visible">
+              <ul className="hidden lg:flex tabs tabs-secondary overflow-visible">
                 <li>
                   <Link href={`/prototype/home${prototype.getURLparams()}`}>
                     <button
@@ -159,7 +159,7 @@ export default function Topbar() {
                 <button
                   onClick={openModalBuyTokens}
                   type="button"
-                  className="tab"
+                  className="tab tab-secondary"
                 >
                   <span>Get tokens</span>
                 </button>
