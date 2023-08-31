@@ -568,13 +568,6 @@ export const dataShopitems = [
           "https://res.cloudinary.com/gloot/image/upload/v1689846279/Stryda/shop/avatarframes/Greek_crown_1.svg",
       },
       {
-        id: 165,
-        name: "Mad Frog",
-        price: 550012,
-        image:
-          "https://res.cloudinary.com/gloot/image/upload/v1689846279/Stryda/shop/avatarframes/Mad_frog.svg",
-      },
-      {
         id: 166,
         name: "Snowflake",
         price: 550013,
@@ -607,14 +600,14 @@ export const dataShopitems = [
         name: "Target",
         price: 550017,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1689846281/Stryda/shop/avatarframes/Target.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1693393573/Stryda/shop/avatarframes/Target.png",
       },
       {
         id: 171,
         name: "Skulls",
         price: 550018,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1689846281/Stryda/shop/avatarframes/Skulls.svg",
+          "https://res.cloudinary.com/gloot/image/upload/v1693491078/Stryda/shop/avatarframes/Skulls.svg",
       },
       {
         id: 172,
@@ -643,6 +636,27 @@ export const dataShopitems = [
         price: 550022,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1692791519/Stryda/shop/avatarframes/Hell_horns.svg",
+      },
+      {
+        id: 165,
+        name: "Nordic Clash Winner",
+        price: 550023,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693493637/Stryda/shop/avatarframes/shop_avatarframe_nordic_clash_winner.svg",
+      },
+      {
+        id: 176,
+        name: "Casino Red",
+        price: 550024,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693488293/Stryda/shop/avatarframes/shop_avatarframe_casinored.svg",
+      },
+      {
+        id: 176,
+        name: "Casino Black",
+        price: 550025,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693488293/Stryda/shop/avatarframes/shop_avatarframe_casinoblack.svg",
       },
     ],
   },
@@ -1019,6 +1033,13 @@ export const dataShopitems = [
         price: 50023,
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1693390337/Stryda/shop/profilebanners/shop_profilebanner_sapphire.jpg",
+      },
+      {
+        id: 49,
+        name: "Casino",
+        price: 50024,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1693486543/Stryda/shop/profilebanners/shop_profilebanner_casino.jpg",
       },
     ],
   }

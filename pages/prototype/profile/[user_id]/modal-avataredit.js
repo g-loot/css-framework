@@ -120,36 +120,32 @@ export default function ModalAvatarEdit(props) {
                     {selectedShopsection.items
                       ?.sort((itemA, itemB) => itemB.price - itemA.price)
                       .map((item, itemIndex) => (
-                        <>
-                          {item.isOwned && (
-                            <label
-                              className="form-checkbox form-image"
-                              key={item.id}
-                            >
-                              <input
-                                type="radio"
-                                name="avatarframe-radio"
-                                value={item.id}
-                                onChange={handlechange}
-                                defaultChecked={item.id === id}
-                              />
-                              <span className="sr-only">{item.name}</span>
-                              <div className="w-32 h-32 rounded-md flex items-center justify-center p-4 text-center">
+                        <label
+                          className="form-checkbox form-image"
+                          key={itemIndex}
+                        >
+                          <input
+                            type="radio"
+                            name="avatarframe-radio"
+                            value={item.id}
+                            onChange={handlechange}
+                            defaultChecked={item.id === id}
+                          />
+                          <span className="sr-only">{item.name}</span>
+                          <div className="w-32 h-32 rounded-md flex items-center justify-center p-4 text-center">
+                            <div>
+                              <div className="avatar avatar-circle avatar-sm my-3 mx-auto">
+                                <img src={item.image} alt="" />
                                 <div>
-                                  <div className="avatar avatar-circle avatar-sm my-3 mx-auto">
-                                    <img src={item.image} alt="" />
-                                    <div>
-                                      <img
-                                        src={prototype.getUserByID(1)?.avatar}
-                                        alt="avatar"
-                                      />
-                                    </div>
-                                  </div>
+                                  <img
+                                    src={prototype.getUserByID(1)?.avatar}
+                                    alt="avatar"
+                                  />
                                 </div>
                               </div>
-                            </label>
-                          )}
-                        </>
+                            </div>
+                          </div>
+                        </label>
                       ))}
                   </div>
                 </Slider>

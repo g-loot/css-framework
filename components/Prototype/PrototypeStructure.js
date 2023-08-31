@@ -106,7 +106,7 @@ export default function PrototypeStructure({ children, title }) {
             <div className="drawer-content scrollbar-hidden">
               <Topbar />
               <div className="container relative">
-                <div id="alerts" className="alert-container"></div>
+                
 
                 <div
                   className={`max-w-2xl flex lg:gap-8 mx-auto px-0 md:px-10 xl:px-20 ${
@@ -158,6 +158,7 @@ export default function PrototypeStructure({ children, title }) {
                   </div>
                 )}
               </div>
+              <div id="alerts" className="alert-container"></div>
               <Footer className="max-w-2xl mx-auto px-0 md:px-10 xl:px-20" />
             </div>
             <div className="drawer-side scrollbar-hidden">
