@@ -198,8 +198,8 @@ const TabsItems = [
 
             <ProfileHeader />
 
-            <nav className="mt-4 flex justify-center">
-              <ul className="tabs tabs-tertiary">
+            <nav className="mt-4 flex justify-start px-4 sm:px-0 overflow-auto scrollbar-hidden">
+              <ul className="tabs tabs-tertiary mx-auto">
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link

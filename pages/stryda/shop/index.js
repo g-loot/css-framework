@@ -66,11 +66,11 @@ export default function Home() {
                   <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_tokens.jpg"
-                    className="w-4/5 rounded-xl shadow-2xl my-3"
+                    className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
                     height="auto"
                     alt="Tokens"
                   />
-                  <h3 className="flex flex-col gap-2 items-center leading-none">
+                  <h3 className="flex flex-col gap-2 items-center leading-none mb-4">
                     <span>Tokens</span>
                   </h3>
                 </div>
@@ -99,11 +99,11 @@ export default function Home() {
                     <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                     <img
                       src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_avatarframes.jpg"
-                      className="w-4/5 rounded-xl shadow-2xl my-3"
+                      className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
                       height="auto"
                       alt="Avatar frames"
                     />
-                    <h3 className="flex flex-col gap-2 items-center leading-none">
+                    <h3 className="flex flex-col gap-2 items-center leading-none mb-4">
                       <span>Avatar frames</span>
                     </h3>
                   </div>
@@ -136,11 +136,11 @@ export default function Home() {
                     <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                     <img
                       src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
-                      className="w-4/5 rounded-xl shadow-2xl my-3"
+                      className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
                       height="auto"
                       alt="Player banners"
                     />
-                    <h3 className="flex flex-col gap-2 items-center leading-none">
+                    <h3 className="flex flex-col gap-2 items-center leading-none mb-4">
                       <span>Player banners</span>
                     </h3>
                   </div>
@@ -188,11 +188,11 @@ export default function Home() {
                         </div>
                         <img
                           src={voucher.image}
-                          className="w-4/5 rounded-xl shadow-2xl my-3"
+                          className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
                           height="auto"
                           alt="Gift card"
                         />
-                        <h3 className="flex flex-col gap-2 items-center leading-none">
+                        <h3 className="flex flex-col gap-2 items-center leading-none mb-4">
                           <span>Gift cards</span>
                         </h3>
                         <div className="text-xl">

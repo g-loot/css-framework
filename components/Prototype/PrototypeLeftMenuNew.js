@@ -317,6 +317,7 @@ export default function PrototypeLeftMenuNew(props) {
                 <span>Get tokens</span>
               </button>
             </div>
+            {/*
             <div className="px-2 pb-2">
               <Link href="/prototype/valorant/clanevents/0">
                 <button type="button" className="block w-full rounded bg-ui-500 aspect-square overflow-hidden relative border border-ui-500 interative group">
@@ -372,6 +373,7 @@ export default function PrototypeLeftMenuNew(props) {
                 </button>
               </Link>
             </div>
+                */}
           </div>
         )}
 

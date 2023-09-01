@@ -70,8 +70,7 @@
 
 .chat-feed {
   @apply
-  overflow-y-hidden
-  md:overflow-y-auto
+  overflow-y-auto
   overflow-x-hidden
   scrollbar-desktop
   ;

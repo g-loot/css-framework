@@ -50,9 +50,9 @@ export default function TabClanChat() {
     <>
       {selectedClan && (
         <>
-          <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-159px-1rem)]">
-            <div className="w-full lg:w-80 flex flex-col gap-y-4">
-              <section className="flex-1 flex flex-col surface md:rounded">
+          <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-113px-1rem)] lg:h-[calc(100dvh-138px-1rem)]">
+            <div className="w-full lg:w-80 hidden xl:flex flex-col gap-y-4">
+              <section className="flex-1 flex flex-col surface sm:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
                     Ladders ({selectedClan.ladders?.length})
@@ -193,7 +193,7 @@ export default function TabClanChat() {
                   </div>
                 </div>
               </section>
-              <section className="surface md:rounded">
+              <section className="surface sm:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2
                     className="h6 text-ui-100"
@@ -350,7 +350,7 @@ export default function TabClanChat() {
               </section>
               {/*
             {selectedClan.games && (
-              <section className="surface md:rounded">
+              <section className="surface sm:rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
                   <h2 className="h6 text-ui-100">
                     Games ({selectedClan.games.length})
@@ -376,7 +376,7 @@ export default function TabClanChat() {
             )}
             */}
             </div>
-            <div className="flex-1 surface md:rounded lg:overflow-hidden max-w-[100%] hidden lg:flex flex-col relative">
+            <div className="flex-1 surface sm:rounded lg:overflow-hidden max-w-[100%] flex flex-col relative">
               <div className="absolute inset-0 overflow-hidden">
                 <Chat
                   variant="secondary"

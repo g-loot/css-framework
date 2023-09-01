@@ -126,8 +126,8 @@ export default function Home() {
           <>
             {!selectedClan.isYou && <ClanHeader />}
 
-            <nav className="flex justify-center">
-              <ul className="tabs tabs-tertiary">
+            <nav className="flex justify-start px-4 sm:px-0 overflow-auto scrollbar-hidden">
+              <ul className="tabs tabs-tertiary mx-auto">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>
                     {selectedClan.isYou && (
