@@ -2,8 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
 import { usePrototypeData } from "@/contexts/prototype";
-import LottieExplosion1 from "@/assets/animations/explosion_stryda_9.json";
-import LottieExplosion2 from "@/assets/animations/explosion_stryda_1.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "@/contexts/variables";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import XPBoostList from "@/components/XPBoostList/XPBoostList";
@@ -146,7 +145,7 @@ export default function LadderPlacementItem(props) {
             {variablesContext.ladderStep >= props.item?.step && (
               <div className="absolute z-10 inset-0 pl-2 flex items-center justify-end lottie-blur">
                 <Lottie
-                  animationData={LottieExplosion2}
+                  animationData={LottieExplosion}
                   loop={false}
                   className="h-16 w-16 mr-2"
                 />
@@ -299,7 +298,7 @@ export default function LadderPlacementItem(props) {
                               <span className="icon icon-crown text-6xl text-premium-500" />
                               <div className="lottie-premium absolute -inset-1">
                                 <Lottie
-                                  animationData={LottieExplosion2}
+                                  animationData={LottieExplosion}
                                   loop={false}
                                   autoplay={true}
                                 />
