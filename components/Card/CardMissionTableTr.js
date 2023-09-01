@@ -88,18 +88,7 @@ export default function CardMissionTableTr(props) {
         <td>
           <>
             {isPremium ? (
-              <Tooltip
-                placement="top"
-                tooltip={
-                  <XPBoostList
-                    isCompleted={
-                      mission.target === mission.current ? true : false
-                    }
-                    size="sm"
-                    xp={mission.xp}
-                  />
-                }
-              >
+              <Tooltip placement="top" tooltip={<XPBoostList />}>
                 <button
                   type="button"
                   className={`chip chip-sm ${
@@ -114,18 +103,7 @@ export default function CardMissionTableTr(props) {
               </Tooltip>
             ) : (
               <div className="flex gap-1 items-center">
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    <XPBoostList
-                      isCompleted={
-                        mission.target === mission.current ? true : false
-                      }
-                      size="sm"
-                      xp={mission.xp}
-                    />
-                  }
-                >
+                <Tooltip placement="top" tooltip={<XPBoostList />}>
                   <button type="button" className={`chip chip-sm chip-xp`}>
                     <span>{mission.xp}</span>
                     <span className="icon icon-xp-symbol" />

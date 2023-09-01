@@ -15,6 +15,7 @@ import ModalBuyTokens from "@/pages/prototype/wallet/modal-buytokens";
 import Countdown from "../Countdown/Countdown";
 import Avatar from "../Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
+import ResetsIn from "../Countdown/ResetsIn";
 
 export default function Topbar() {
   const router = useRouter();
@@ -600,51 +601,64 @@ export default function Topbar() {
 
                 <div
                   tabIndex="1"
-                  className="dropdown-content bg-ui-700 w-[calc(100vw-100px)] sm:w-[300px] overflow-hidden rounded-xl shadow-xl"
+                  className="dropdown-content bg-ui-800 w-[calc(100vw-100px)] sm:w-[400px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <h5 className="mx-2 mt-2">XP Boosts</h5>
-                  <ul className="rounded-lg text-left text-sm p-2 leading-none">
-                    {isPremium ? (
-                      <li className="flex gap-2 py-1 items-center">
-                        <div className="icon icon-e-add text-premium-500" />
-                        <div className="flex-1">Premium boost</div>
-                        <div className="text-right text-premium-500">+50%</div>
+                  <div className="flex flex-col gap-3 py-4 pr-3 pl-4">
+                    <h5 className="text-white flex justify-between">
+                      <span>My XP Boosts</span>
+                      <span>{isPremium ? "90 %" : "40 %"}</span>
+                    </h5>
+                    <hr className="separator bg-ui-600" />
+                    <ul className="flex flex-col gap-1 rounded-lg text-left text-base leading-none">
+                      <li className="flex gap-2 py-1 items-center text-teal-500">
+                        <div className="icon icon-check" />
+                        <div className="flex-1">Welcome Boost</div>
+                        <div className="text-right">+30%</div>
                       </li>
-                    ) : (
-                      <li className="flex gap-2 py-1 items-center text-ui-400">
-                        <div className="icon icon-lock" />
-                        <div className="flex-1">Premium boost</div>
-                        <div className="icon icon-crown" />
-                        <div className="text-right">+50%</div>
-                      </li>
-                    )}
-                    <li className="flex gap-2 py-1 items-center">
-                      <div className="icon icon-e-add text-main" />
-                      <div className="flex-1">Clan boost</div>
-                      <div className="text-right text-main">+10%</div>
-                    </li>
-                    <li className="separator bg-ui-600" />
-                    <li className="flex gap-2 py-1 items-center">
-                      <div className="icon icon-e-add text-main" />
-                      <div className="flex-1 flex-col">
-                        <div>New user boost</div>
-                        <div>
-                          <Countdown
-                            separator={":"}
-                            hasDays={true}
-                            hasHours={true}
-                            hasMinutes={true}
-                            hasSeconds={true}
-                            hasLabels={false}
-                            labelsAbbr={false}
-                            labelClassName=""
-                            className="text-xs text-main"
-                          />
+                      <li className="flex gap-2 py-1 text-teal-500">
+                        <div className="icon icon-check" />
+                        <div className="flex-1 flex-col">
+                          <div>Weekly Boost</div>
+                          <div className="text-ui-300 text-sm">
+                            <ResetsIn label="Ends" />
+                          </div>
                         </div>
-                      </div>
-                      <div className="text-right text-main">+5%</div>
-                    </li>
-                  </ul>
+                        <div className="text-right">+10%</div>
+                      </li>
+                      {isPremium ? (
+                        <li className="flex gap-2 py-1 text-premium-500 items-start">
+                          <div className="icon icon-check" />
+                          <div className="flex-1">
+                            <div>Premium Boost</div>
+                          </div>
+                          <div className="text-right flex gap-2 items-center">
+                            <div className="icon icon-crown" />
+                            <span>+50%</span>
+                          </div>
+                        </li>
+                      ) : (
+                        <li className="flex flex-col gap-3 py-1 text-ui-300">
+                          <div className="flex gap-2">
+                            <div className="icon icon-lock" />
+                            <div className="flex-1 text-base">
+                              Premium boost
+                            </div>
+                            <div className="text-right text-base">+50%</div>
+                          </div>
+                          <div className="flex gap-2">
+                            <div className="icon icon-lock opacity-0" />
+                            <span className="text-xs text-ui-300 leading-4">
+                              Become a{" "}
+                              <a className="underline cursor-pointer text-premium-500">
+                                Premium subscriber
+                              </a>{" "}
+                              to earn 50% more XP.
+                            </span>
+                          </div>
+                        </li>
+                      )}
+                    </ul>
+                  </div>
                 </div>
               </div>
 

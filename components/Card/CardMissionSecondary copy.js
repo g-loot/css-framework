@@ -171,27 +171,31 @@ export default function CardMissionSecondary(props) {
               <div className="card-title">{mission.name}</div>
               <div className="card-meta">
                 {isPremium ? (
-                  <Tooltip
-                    placement="top"
-                    tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
-                  >
-                    <button type="button" className={`chip chip-sm ${mission.target === mission.current ? 'chip-xp chip-inverted' : 'chip-secondary'}`}>
+                  <Tooltip placement="top" tooltip={<XPBoostList />}>
+                    <button
+                      type="button"
+                      className={`chip chip-sm ${
+                        mission.target === mission.current
+                          ? "chip-xp chip-inverted"
+                          : "chip-secondary"
+                      }`}
+                    >
                       <span>{Math.round(mission.xp * 1.65)}</span>
                       <span className="icon icon-xp-symbol" />
                     </button>
                   </Tooltip>
                 ) : (
                   <div className="flex gap-1 items-center">
-                    { mission.target === mission.current ? (
-                      <Tooltip
-                      placement="top"
-                      tooltip={<XPBoostList isCompleted={mission.target === mission.current ? true : false} size="sm" xp={mission.xp} />}
-                    >
-                      <button type="button" className={`chip chip-sm chip-xp`}>
-                        <span>{mission.xp}</span>
-                        <span className="icon icon-xp-symbol" />
-                      </button>
-                    </Tooltip>
+                    {mission.target === mission.current ? (
+                      <Tooltip placement="top" tooltip={<XPBoostList />}>
+                        <button
+                          type="button"
+                          className={`chip chip-sm chip-xp`}
+                        >
+                          <span>{mission.xp}</span>
+                          <span className="icon icon-xp-symbol" />
+                        </button>
+                      </Tooltip>
                     ) : (
                       <div className="chip chip-ghost chip-sm">
                         <span>{mission.xp}</span>
@@ -220,7 +224,10 @@ export default function CardMissionSecondary(props) {
                         </div>
                       }
                     >
-                      <button type="button" className="chip chip-premium chip-sm">
+                      <button
+                        type="button"
+                        className="chip chip-premium chip-sm"
+                      >
                         <span>+{mission.xp / 2}</span>
                         <span className="icon icon-crown text-sm" />
                       </button>

@@ -1,75 +1,59 @@
-import React, { useState } from "react";
-import { useRouter } from "next/router";
 import { usePrototypeData } from "@/contexts/prototype";
+import ResetsIn from "../Countdown/ResetsIn";
 
 export default function XPBoostList(props) {
-  const isAnimated = props.isAnimated || false;
-  const { query } = useRouter();
   const prototype = usePrototypeData();
   const isPremium = prototype.isPremium;
-  const xp = props.xp || 50;
-  const size = props.size || "md";
-  const type = props.type || "Mission completed";
-  const isCompleted = props.isCompleted || true;
 
   return (
-    <ul className={`rounded-lg text-left ${size === "sm" ? 'text-sm' : ''}`}>
-      <li
-        className={`flex gap-3 py-1 items-center ${
-          isAnimated ? "animate-slide-in-bottom animate-delay" : ""
-        }`}
-        style={{ "--delay": "calc( 2 * 0.15s)" }}
-      >
-        <span className={`icon icon-check text-main`} />
-        <span className="flex-1">{type}</span>
-        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>{xp} XP</span>
+    <ul className="flex flex-col gap-1 rounded-lg text-left text-base leading-none">
+      <li className="flex gap-8 py-1 text-teal-500">
+        <div className="flex gap-2">
+          <div className="icon icon-check" />
+          <div className="flex-1">Welcome Boost</div>
+        </div>
+        <div className="flex-1">
+          <div className="text-right">+30%</div>
+        </div>
+      </li>
+      <li className="flex gap-8 py-1 text-teal-500">
+        <div className="flex gap-2">
+          <div className="icon icon-check" />
+          <div className="flex-1 flex-col">
+            <div>Weekly Boost</div>
+            <div className="text-ui-300 text-sm">
+              <ResetsIn label="Ends" />
+            </div>
+          </div>
+        </div>
+        <div className="flex-1">
+          <div className="text-right">+10%</div>
+        </div>
       </li>
       {isPremium ? (
-        <li
-          className={`flex gap-3 py-1 items-center ${
-            isAnimated ? "animate-slide-in-bottom animate-delay" : ""
-          }`}
-          style={{ "--delay": "calc( 3 * 0.15s)" }}
-        >
-          <span className={`icon ${isCompleted ? 'text-premium-500 icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
-          <span className="flex-1">Premium boost</span>
-          <span className={`text-right ${isCompleted ? 'text-premium-500' : 'text-ui-400'}`}>+{Math.round(xp * 0.5)}</span>
+        <li className="flex gap-8 py-1 text-premium-500">
+          <div className="flex gap-2">
+            <div className="icon icon-check" />
+            <div className="flex-1">
+              <div>Premium Boost</div>
+            </div>
+          </div>
+          <div className="text-right flex gap-2 items-center">
+            <div className="icon icon-crown" />
+            <span>+50%</span>
+          </div>
         </li>
       ) : (
-        <li
-          className={`flex gap-3 py-1 items-center ${
-            isAnimated ? "animate-slide-in-bottom animate-delay" : ""
-          }`}
-          style={{ "--delay": "calc( 3 * 0.15s)" }}
-        >
-          <span className="icon icon-lock text-ui-400" />
-          <span className="flex-1 text-ui-400">Premium boost</span>
-          <span className="icon icon-crown text-lg text-ui-400" />
-          <span className="text-ui-400 text-right">
-            +{Math.round(xp * 0.5)}
-          </span>
+        <li className="flex gap-8 py-1 text-ui-300">
+          <div className="flex gap-2">
+            <div className="icon icon-lock" />
+            <div className="flex-1 text-base">Premium boost</div>
+          </div>
+          <div className="flex-1">
+            <div className="text-right text-base">+50%</div>
+          </div>
         </li>
       )}
-      <li
-        className={`flex gap-3 py-1 items-center ${
-          isAnimated ? "animate-slide-in-bottom animate-delay" : ""
-        }`}
-        style={{ "--delay": "calc( 4 * 0.15s)" }}
-      >
-        <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
-        <span className="flex-1">Clan boost</span>
-        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.1)}</span>
-      </li>
-      <li
-        className={`flex gap-3 py-1 items-center ${
-          isAnimated ? "animate-slide-in-bottom animate-delay" : ""
-        }`}
-        style={{ "--delay": "calc( 5 * 0.15s)" }}
-      >
-        <span className={`icon ${isCompleted ? 'text-main icon-e-add' : 'text-ui-400 icon-e-remove'}`} />
-        <span className="flex-1">New user boost</span>
-        <span className={`text-right ${isCompleted ? 'text-main' : 'text-ui-400'}`}>+{Math.round(xp * 0.05)}</span>
-      </li>
     </ul>
   );
 }

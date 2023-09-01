@@ -79,9 +79,7 @@ export default function CardMission(props) {
   function openModalDiscardMission() {
     setMissionRetrieved(!MissionRetrieved);
     variablesContext.incrementAvailableMissions(-1);
-    uiContext.openModal(
-      <ModalDiscardMission mission={mission} />
-    );
+    uiContext.openModal(<ModalDiscardMission mission={mission} />);
   }
 
   return (
@@ -303,20 +301,7 @@ export default function CardMission(props) {
                   ) : (
                     <>
                       {isPremium ? (
-                        <Tooltip
-                          placement="top"
-                          tooltip={
-                            <XPBoostList
-                              isCompleted={
-                                mission.target === mission.current
-                                  ? true
-                                  : false
-                              }
-                              size="sm"
-                              xp={mission.xp}
-                            />
-                          }
-                        >
+                        <Tooltip placement="top" tooltip={<XPBoostList />}>
                           <button
                             type="button"
                             className={`chip chip-sm ${
@@ -332,20 +317,7 @@ export default function CardMission(props) {
                       ) : (
                         <div className="flex gap-1 items-center">
                           {mission.target === mission.current ? (
-                            <Tooltip
-                              placement="top"
-                              tooltip={
-                                <XPBoostList
-                                  isCompleted={
-                                    mission.target === mission.current
-                                      ? true
-                                      : false
-                                  }
-                                  size="sm"
-                                  xp={mission.xp}
-                                />
-                              }
-                            >
+                            <Tooltip placement="top" tooltip={<XPBoostList />}>
                               <button
                                 type="button"
                                 className={`chip chip-sm chip-xp`}
