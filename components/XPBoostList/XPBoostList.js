@@ -1,31 +1,39 @@
 import { usePrototypeData } from "@/contexts/prototype";
 import ResetsIn from "../Countdown/ResetsIn";
+import Link from "next/link";
 
 export default function XPBoostList(props) {
   const prototype = usePrototypeData();
   const isPremium = prototype.isPremium;
+  const size = props.size || "sm";
 
   return (
-    <ul className="flex flex-col gap-1 text-sm p-2">
-      <li className="flex gap-8 py-1 text-teal-500">
-        <div className="flex gap-2">
-          <div className="icon icon-check" />
-          <div className="flex-1 flex-col">
-            <div>Welcome Boost</div>
-          </div>
+    <ul
+      className={`flex flex-col p-2 text-left child:animate-slide-in-bottom child:animate-delay ${
+        size === "sm" ? "text-sm gap-3 child:gap-2" : "text-base gap-4 child:gap-3"
+      }`}
+    >
+      <li className="flex text-teal-500">
+        <span
+          className={`icon icon-check ${size === "sm" ? "mt-0.5" : "mt-1"}`}
+        />
+        <div className="flex-1 flex-col">
+          <div>Welcome Boost</div>
         </div>
         <div className="flex-1">
           <div className="text-right">+30%</div>
         </div>
       </li>
-      <li className="flex gap-8 py-1 text-teal-500">
-        <div className="flex gap-2">
-          <div className="icon icon-check" />
-          <div className="flex-1 flex-col">
-            <div>Weekly Boost</div>
-            <div className="text-ui-300 text-xs">
-              <ResetsIn label="Ends" />
-            </div>
+      <li className="flex text-teal-500">
+        <span
+          className={`icon icon-check ${size === "sm" ? "mt-0.5" : "mt-1"}`}
+        />
+        <div className="flex-1 flex-col">
+          <div>Weekly Boost</div>
+          <div
+            className={`text-ui-300 ${size === "sm" ? "text-xs" : "text-sm"}`}
+          >
+            <ResetsIn label="Ends" />
           </div>
         </div>
         <div className="flex-1">
@@ -33,27 +41,40 @@ export default function XPBoostList(props) {
         </div>
       </li>
       {isPremium ? (
-        <li className="flex gap-8 py-1 text-premium-500">
-          <div className="flex gap-2">
-            <div className="icon icon-check" />
-            <div className="flex-1">
-              <div>Premium Boost</div>
-            </div>
+        <li className="flex text-premium-500">
+          <span
+            className={`icon icon-check ${size === "sm" ? "mt-0.5" : "mt-1"}`}
+          />
+          <div className="flex-1">
+            <div>Premium Boost</div>
           </div>
-          <div className="text-right flex gap-2 items-center">
-            <div className="icon icon-crown" />
+          <div className="text-right flex gap-1 items-center">
+            <span
+              className={`icon icon-crown ${size === "sm" ? "mt-0.5" : "mt-1"}`}
+            />
             <span>+50%</span>
           </div>
         </li>
       ) : (
-        <li className="flex gap-8 py-1 text-ui-300">
-          <div className="flex gap-2">
-            <div className="icon icon-lock" />
-            <div className="flex-1">Premium boost</div>
-          </div>
+        <li className="flex text-ui-300">
+          <span
+            className={`icon icon-lock ${size === "sm" ? "mt-0.5" : "mt-1"}`}
+          />
           <div className="flex-1">
-            <div className="text-right">+50%</div>
+            <div>Premium Boost</div>
+            <div
+              className={`text-ui-300 leading-4 ${
+                size === "sm" ? "text-xs" : "text-sm"
+              }`}
+            >
+              Become a{" "}
+              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <a className="link link-premium">Premium subscriber</a>
+              </Link>{" "}
+              to earn 50% more XP.
+            </div>
           </div>
+          <div className="text-right">+50%</div>
         </li>
       )}
     </ul>

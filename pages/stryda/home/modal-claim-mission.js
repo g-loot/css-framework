@@ -50,13 +50,13 @@ export default function ModalClaimMission(props) {
         <div className="modal w-full">
           <div className="modal-content">
             <div className="modal-body text-center">
-              <h2 className="modal-title animate-slide-in-top mb-6">
+              <h2 className="modal-title animate-slide-in-top">
                 Congratulations
               </h2>
-              <hr className="my-6" />
-              <XPBoostList />
+              <hr className="my-4" />
+              <XPBoostList size="md" />
               <div
-                className=" animate-slide-in-bottom animate-delay"
+                className="animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 6 * 0.15s)" }}
               >
                 <div className="mt-1 flex items-end gap-4 leading-none">

@@ -16,6 +16,7 @@ import Countdown from "../Countdown/Countdown";
 import Avatar from "../Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
 import ResetsIn from "../Countdown/ResetsIn";
+import XPBoostList from "../XPBoostList/XPBoostList";
 
 export default function Topbar() {
   const router = useRouter();
@@ -608,57 +609,7 @@ export default function Topbar() {
                       <span>My XP Boosts</span>
                       <span>{isPremium ? "90 %" : "40 %"}</span>
                     </h5>
-                    <ul className="flex flex-col gap-1">
-                      <li className="flex gap-2 py-1 text-teal-500">
-                        <div className="icon mt-0.5 icon-check" />
-                        <div className="flex-1">
-                          <div>Welcome Boost</div>
-                        </div>
-                        <div className="text-right">+30%</div>
-                      </li>
-                      <li className="flex gap-2 py-1 text-teal-500">
-                        <div className="icon mt-1 icon-check" />
-                        <div className="flex-1">
-                          <div>Weekly Boost</div>
-                          <div className="text-ui-300 text-xs">
-                            <ResetsIn label="Ends" />
-                          </div>
-                        </div>
-                        <div className="text-right">+10%</div>
-                      </li>
-                      {isPremium ? (
-                        <li className="flex gap-2 py-1 text-premium-500">
-                          <div className="icon mt-0.5 icon-check" />
-                          <div className="flex-1">
-                            <div>Premium Boost</div>
-                          </div>
-                          <div className="text-right flex gap-2 items-center">
-                            <div className="icon icon-crown" />
-                            <span>+50%</span>
-                          </div>
-                        </li>
-                      ) : (
-                        <li className="flex flex-col gap-3 py-1 text-ui-300">
-                          <div className="flex gap-2">
-                            <div className="icon mt-0.5 icon-lock" />
-                            <div className="flex-1 text-base">
-                              Premium boost
-                            </div>
-                            <div className="text-right text-base">+50%</div>
-                          </div>
-                          <div className="flex gap-2">
-                            <div className="icon icon-lock opacity-0" />
-                            <span className="text-xs text-ui-300 leading-4">
-                              Become a{" "}
-                              <a className="link link-premium">
-                                Premium subscriber
-                              </a>{" "}
-                              to earn 50% more XP.
-                            </span>
-                          </div>
-                        </li>
-                      )}
-                    </ul>
+                    <XPBoostList size="sm" />
                   </div>
                 </div>
               </div>
