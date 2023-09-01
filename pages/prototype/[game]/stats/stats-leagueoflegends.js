@@ -15,6 +15,7 @@ import { StatsLeagueOfLegendsDemoLatestMatches } from "@/mock-data/data-stats-de
 import LoadMore from "@/components/LoadMore/LoadMore";
 import LoadMoreContainer from "@/components/LoadMore/LoadMoreContainer";
 import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
+import Avatar from "@/components/Avatar/Avatar";
 
 export default function StatsLeagueOfLegends() {
   const router = useRouter();
@@ -259,26 +260,13 @@ export default function StatsLeagueOfLegends() {
                       </div>
                     </div>
                     <div className="flex gap-4 items-center">
-                      <div
-                        className={`avatar avatar-sm avatar-circle ${
-                          prototype.getUserByID(1)?.avatar.isPremium
-                            ? "avatar-premium"
-                            : ""
-                        }`}
-                      >
-                        <div>
-                          <img
-                            src={prototype.getUserByID(1)?.avatar}
-                            alt="avatar"
-                          />
-                        </div>
-                      </div>
+                      <Avatar id={1} size="avatar-md" />
                       <div className="leading-tight">
                         <div className="h5">
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          jackjack
+                          {prototype.getUserByID(1)?.socials.riotLeagueofLegendsNickname}
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">

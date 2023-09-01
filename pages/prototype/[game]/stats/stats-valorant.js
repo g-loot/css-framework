@@ -16,6 +16,7 @@ import { StatsValorantDemoWeapons } from "@/mock-data/data-stats-demo-valorant";
 import { StatsValorantDemoMaps } from "@/mock-data/data-stats-demo-valorant";
 import LoadMore from "@/components/LoadMore/LoadMore";
 import LoadMoreContainer from "@/components/LoadMore/LoadMoreContainer";
+import Avatar from "@/components/Avatar/Avatar";
 
 export default function StatsValorant() {
   const router = useRouter();
@@ -399,26 +400,13 @@ export default function StatsValorant() {
                       </div>
                     </div>
                     <div className="flex gap-4 items-center">
-                      <div
-                        className={`avatar avatar-sm avatar-circle ${
-                          prototype.getUserByID(1)?.avatar.isPremium
-                            ? "avatar-premium"
-                            : ""
-                        }`}
-                      >
-                        <div>
-                          <img
-                            src={prototype.getUserByID(1)?.avatar}
-                            alt="avatar"
-                          />
-                        </div>
-                      </div>
+                      <Avatar id={1} size="avatar-md" />
                       <div className="leading-tight">
                         <div className="h5">
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          jackjack
+                          {prototype.getUserByID(1)?.socials.riotValorantNickname}
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">

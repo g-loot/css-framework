@@ -601,33 +601,34 @@ export default function Topbar() {
 
                 <div
                   tabIndex="1"
-                  className="dropdown-content bg-ui-800 w-[calc(100vw-100px)] sm:w-[400px] overflow-hidden rounded-xl shadow-xl"
+                  className="dropdown-content w-[calc(100vw-100px)] sm:w-[400px] overflow-hidden rounded-xl shadow-xl"
                 >
-                  <div className="flex flex-col gap-3 py-4 pr-3 pl-4">
-                    <h5 className="text-white flex justify-between">
+                  <div className="flex flex-col gap-2 p-3 leading-tight">
+                    <h5 className="text-white flex justify-between border-b border-ui-400/20 pb-3">
                       <span>My XP Boosts</span>
                       <span>{isPremium ? "90 %" : "40 %"}</span>
                     </h5>
-                    <hr className="separator bg-ui-600" />
-                    <ul className="flex flex-col gap-1 rounded-lg text-left text-base leading-none">
-                      <li className="flex gap-2 py-1 items-center text-teal-500">
-                        <div className="icon icon-check" />
-                        <div className="flex-1">Welcome Boost</div>
+                    <ul className="flex flex-col gap-1">
+                      <li className="flex gap-2 py-1 text-teal-500">
+                        <div className="icon mt-0.5 icon-check" />
+                        <div className="flex-1">
+                          <div>Welcome Boost</div>
+                        </div>
                         <div className="text-right">+30%</div>
                       </li>
                       <li className="flex gap-2 py-1 text-teal-500">
-                        <div className="icon icon-check" />
-                        <div className="flex-1 flex-col">
+                        <div className="icon mt-1 icon-check" />
+                        <div className="flex-1">
                           <div>Weekly Boost</div>
-                          <div className="text-ui-300 text-sm">
+                          <div className="text-ui-300 text-xs">
                             <ResetsIn label="Ends" />
                           </div>
                         </div>
                         <div className="text-right">+10%</div>
                       </li>
                       {isPremium ? (
-                        <li className="flex gap-2 py-1 text-premium-500 items-start">
-                          <div className="icon icon-check" />
+                        <li className="flex gap-2 py-1 text-premium-500">
+                          <div className="icon mt-0.5 icon-check" />
                           <div className="flex-1">
                             <div>Premium Boost</div>
                           </div>
@@ -639,7 +640,7 @@ export default function Topbar() {
                       ) : (
                         <li className="flex flex-col gap-3 py-1 text-ui-300">
                           <div className="flex gap-2">
-                            <div className="icon icon-lock" />
+                            <div className="icon mt-0.5 icon-lock" />
                             <div className="flex-1 text-base">
                               Premium boost
                             </div>
@@ -649,7 +650,7 @@ export default function Topbar() {
                             <div className="icon icon-lock opacity-0" />
                             <span className="text-xs text-ui-300 leading-4">
                               Become a{" "}
-                              <a className="underline cursor-pointer text-premium-500">
+                              <a className="link link-premium">
                                 Premium subscriber
                               </a>{" "}
                               to earn 50% more XP.

@@ -84,19 +84,15 @@
 
   &.is-completed {
     @apply
-    border-premium-500
+    border-ui-400/50
+    shadow-[inset_0_0_1.5rem_0_rgba(255,255,255,0.12)]
     ;
 
-    * {
-      @apply
-      text-premium-500
-      ;
-    }
     > i {
       &::before,
       &::after {
         @apply
-        border-premium-500
+        border-ui-400/50
         ;
       }
     }
@@ -161,16 +157,16 @@
   filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(2714%) hue-rotate(195deg) brightness(99%) contrast(91%);
 }
 .achievement-level-1 > * {
-  filter: brightness(0) saturate(100%) invert(53%) sepia(8%) saturate(1153%) hue-rotate(339deg) brightness(95%) contrast(88%);
+  filter: brightness(0) saturate(100%) invert(33%) sepia(15%) saturate(611%) hue-rotate(194deg) brightness(92%) contrast(86%);
 }
 .achievement-level-2 > * {
-  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(4%) hue-rotate(271deg) brightness(84%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(53%) sepia(37%) saturate(276%) hue-rotate(339deg) brightness(90%) contrast(89%);
 }
 .achievement-level-3 > * {
-  filter: brightness(0) saturate(100%) invert(75%) sepia(92%) saturate(353%) hue-rotate(340deg) brightness(99%) contrast(93%);
+  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(4%) hue-rotate(271deg) brightness(84%) contrast(85%);
 }
 .achievement-level-4 > * {
-  filter: brightness(0) saturate(100%) invert(88%) sepia(13%) saturate(1819%) hue-rotate(68deg) brightness(101%) contrast(104%);
+  filter: brightness(0) saturate(100%) invert(75%) sepia(92%) saturate(353%) hue-rotate(340deg) brightness(99%) contrast(93%);
 }
 .achievement-level-5 > * {
   filter: brightness(0) saturate(100%) invert(47%) sepia(76%) saturate(2146%) hue-rotate(228deg) brightness(102%) contrast(103%);
@@ -178,27 +174,27 @@
 
 .text-achievement-level-0 {
   @apply
-  text-ui-400
+  text-ui-500
   ;
 }
 .text-achievement-level-1 {
   @apply
-  text-bronze-500
+  text-ui-400
   ;
 }
 .text-achievement-level-2 {
   @apply
-  text-silver-500
+  text-bronze-500
   ;
 }
 .text-achievement-level-3 {
   @apply
-  text-gold-500
+  text-silver-500
   ;
 }
 .text-achievement-level-4 {
   @apply
-  text-success-300
+  text-gold-500
   ;
 }
 .text-achievement-level-5 {

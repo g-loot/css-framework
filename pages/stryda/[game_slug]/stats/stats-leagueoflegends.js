@@ -278,7 +278,7 @@ export default function StatsLeagueOfLegends() {
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          jackjack
+                          {prototype.getUserByID(1)?.socials.riotValorantNickname}
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">

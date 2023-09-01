@@ -148,7 +148,7 @@ export default function Home() {
                 <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_tokens.jpg"
-                  className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
+                  className="w-4/5 object-[16/10] object-contain rounded-xl shadow-2xl my-3"
                   height="auto"
                   alt="Tokens"
                 />
@@ -179,7 +179,7 @@ export default function Home() {
                   <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_avatarframes.jpg"
-                    className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
+                    className="w-4/5 object-[16/10] object-contain rounded-xl shadow-2xl my-3"
                     height="auto"
                     alt="Avatar frames"
                   />
@@ -216,7 +216,7 @@ export default function Home() {
                   <div className="text-ui-300 text-sm h-10 flex flex-col justify-center items-center" />
                   <img
                     src="https://res.cloudinary.com/gloot/image/upload/v1677840913/Stryda/shop/giftcards/store_stryda_profilebanners.jpg"
-                    className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
+                    className="w-4/5 object-[16/10] object-contain rounded-xl shadow-2xl my-3"
                     height="auto"
                     alt="Player banners"
                   />
@@ -266,7 +266,7 @@ export default function Home() {
                       </div>
                       <img
                         src={voucher.image}
-                        className="w-4/5 aspect-video object-[16/10] rounded-xl shadow-2xl my-3"
+                        className="w-4/5 object-[16/10] object-contain rounded-xl shadow-2xl my-3"
                         height="auto"
                         alt="Gift card"
                       />

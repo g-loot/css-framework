@@ -9,6 +9,7 @@ import { useRouter } from "next/router";
 import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import Link from "next/link";
+import Avatar from "@/components/Avatar/Avatar";
 
 export default function Home() {
   const router = useRouter();
@@ -75,12 +76,8 @@ export default function Home() {
         <section>
           <div className="flex justify-center items-center gap-4 -mb-8 relative z-10">
             <div className="relative">
-              <div className="avatar avatar-xl avatar-circle z-0">
-                <div>
-                  <img src={selectedUser.avatar} />
-                </div>
-              </div>
-              <div className="form-group absolute z-10 bottom-0 right-0">
+              <Avatar id={1} size="avatar-xl" />
+              <div className="form-group absolute z-50 bottom-0 right-0">
                 <label
                   htmlFor="file-button"
                   className="button button-sm button-tertiary rounded-full"

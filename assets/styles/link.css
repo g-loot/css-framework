@@ -30,6 +30,14 @@
     visited:text-interaction-700
     ;
   }
+
+  &.link-premium {
+    @apply
+    text-premium-500
+    hover:text-premium-300
+    visited:text-premium-700
+    ;
+  }
   
   &.link-hover {
     @apply

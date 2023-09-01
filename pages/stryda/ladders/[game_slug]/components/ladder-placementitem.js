@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import { useRouter } from "next/router";
 import Lottie from "lottie-react";
 import { usePrototypeData } from "@/contexts/prototype";
-import LottieExplosion1 from "@/assets/animations/explosion_stryda_9.json";
+import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import LottieExplosion2 from "@/assets/animations/explosion_stryda_1.json";
 import { VariablesContext } from "@/contexts/variables";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
@@ -188,12 +188,12 @@ export default function LadderPlacementItem(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      <div className="w-56 flex gap-4 text-sm">
+                      <div className="w-56 flex items-center gap-4 text-sm p-2">
                         <div className="relative -mt-3">
                           <span className="icon icon-crown text-6xl text-premium-500" />
                           <div className="lottie-premium absolute -inset-1">
                             <Lottie
-                              animationData={LottieExplosion2}
+                              animationData={LottieExplosion}
                               loop={false}
                               autoplay={true}
                             />
@@ -202,7 +202,7 @@ export default function LadderPlacementItem(props) {
                         <div className="flex-1">
                           Subscribe to Premium to earn an additional{" "}
                           <span className="text-premium-500">50% XP</span> on
-                          each completed mission.
+                          each registered match.
                         </div>
                       </div>
                     }
@@ -308,7 +308,7 @@ export default function LadderPlacementItem(props) {
                             <div className="flex-1">
                               Subscribe to Premium to earn an additional{" "}
                               <span className="text-premium-500">50% XP</span>{" "}
-                              on each completed mission.
+                              on each registered match.
                             </div>
                           </div>
                         }
