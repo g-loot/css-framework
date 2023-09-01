@@ -300,18 +300,7 @@ export default function CardMissionSecondary(props) {
                 ) : (
                   <>
                     {isPremium ? (
-                      <Tooltip
-                        placement="top"
-                        tooltip={
-                          <XPBoostList
-                            isCompleted={
-                              mission.target === mission.current ? true : false
-                            }
-                            size="sm"
-                            xp={mission.xp}
-                          />
-                        }
-                      >
+                      <Tooltip placement="top" tooltip={<XPBoostList />}>
                         <button
                           type="button"
                           className={`chip chip-sm ${
@@ -320,41 +309,21 @@ export default function CardMissionSecondary(props) {
                               : "chip-premium"
                           }`}
                         >
-                          <span>{Math.round(mission.xp * 1.65)}</span>
+                          <span>{Math.round(mission.xp * 1.9)}</span>
                           <span className="icon icon-xp-symbol" />
                         </button>
                       </Tooltip>
                     ) : (
                       <div className="flex gap-1 items-center">
-                        {mission.target === mission.current ? (
-                          <Tooltip
-                            placement="top"
-                            tooltip={
-                              <XPBoostList
-                                isCompleted={
-                                  mission.target === mission.current
-                                    ? true
-                                    : false
-                                }
-                                size="sm"
-                                xp={mission.xp}
-                              />
-                            }
+                        <Tooltip placement="top" tooltip={<XPBoostList />}>
+                          <button
+                            type="button"
+                            className={`chip chip-sm chip-xp`}
                           >
-                            <button
-                              type="button"
-                              className={`chip chip-sm chip-xp`}
-                            >
-                              <span>{mission.xp}</span>
-                              <span className="icon icon-xp-symbol" />
-                            </button>
-                          </Tooltip>
-                        ) : (
-                          <div className="chip chip-ghost chip-sm">
                             <span>{mission.xp}</span>
                             <span className="icon icon-xp-symbol" />
-                          </div>
-                        )}
+                          </button>
+                        </Tooltip>
                         <Tooltip
                           placement="top"
                           tooltip={

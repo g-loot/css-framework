@@ -85,12 +85,7 @@ export default function LadderPlacementItem(props) {
         className="perspective shrink-0 ml-4 my-4 last:mr-20 animate-slide-in-right animate-delay"
         tooltip={
           variablesContext.ladderStep >= props.item?.step ? (
-            <XPBoostList
-              isCompleted={false}
-              size="sm"
-              xp={300}
-              type="Ladder match"
-            />
+            <XPBoostList />
           ) : undefined
         }
         style={{
@@ -99,7 +94,9 @@ export default function LadderPlacementItem(props) {
       >
         <div
           className={`w-44 h-16 flip flip-vertical animate-delay ${
-            variablesContext.ladderStep >= props.item?.step ? "animate-flip" : ""
+            variablesContext.ladderStep >= props.item?.step
+              ? "animate-flip"
+              : ""
           }`}
           style={
             props.item?.step <= 3
@@ -120,13 +117,27 @@ export default function LadderPlacementItem(props) {
                 <div className="absolute z-20 inset-0 p-4 flex items-center justify-center overflow-hidden rounded-lg">
                   <button
                     type="button"
-                    className={`button button-sm button-currency w-full animate-slide-in-bottom ${selectedLadder?.isPowerPlay ? 'button-powertoken' : 'button-token'} ${selectedLadder?.isPremium ? 'button-premium' : 'button-secondary'}`}
+                    className={`button button-sm button-currency w-full animate-slide-in-bottom ${
+                      selectedLadder?.isPowerPlay
+                        ? "button-powertoken"
+                        : "button-token"
+                    } ${
+                      selectedLadder?.isPremium
+                        ? "button-premium"
+                        : "button-secondary"
+                    }`}
                   >
                     <div>
                       <span>Activate</span>
                     </div>
                     <div>
-                      <span className={`icon ${selectedLadder?.isPowerPlay ? 'icon-powertoken' : 'icon-token'}`} />
+                      <span
+                        className={`icon ${
+                          selectedLadder?.isPowerPlay
+                            ? "icon-powertoken"
+                            : "icon-token"
+                        }`}
+                      />
                       <span>50</span>
                     </div>
                   </button>
@@ -160,12 +171,7 @@ export default function LadderPlacementItem(props) {
               }`}
             >
               {isPremium ? (
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    undefined
-                  }
-                >
+                <Tooltip placement="top" tooltip={undefined}>
                   <div className="chip chip-sm chip-ghost">
                     <span>{Math.round(300 * 1.65)}</span>
                     <span className="icon icon-xp-symbol" />
@@ -199,7 +205,10 @@ export default function LadderPlacementItem(props) {
                       </div>
                     }
                   >
-                    <button type="button" className="chip chip-sm chip-premium chip-ghost">
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-premium chip-ghost"
+                    >
                       <span>+{300 / 2}</span>
                       <span className="icon icon-crown" />
                     </button>
@@ -268,12 +277,7 @@ export default function LadderPlacementItem(props) {
               {!resultsDone && (
                 <>
                   {isPremium ? (
-                    <Tooltip
-                      placement="top"
-                      tooltip={
-                        <XPBoostList isCompleted={false} size="sm" xp={300} />
-                      }
-                    >
+                    <Tooltip placement="top" tooltip={<XPBoostList />}>
                       <div className="chip chip-sm chip-xp chip-ghost">
                         <span>{Math.round(300 * 1.65)}</span>
                         <span className="icon icon-xp-symbol" />
@@ -307,7 +311,10 @@ export default function LadderPlacementItem(props) {
                           </div>
                         }
                       >
-                        <button type="button" className="chip chip-sm chip-premium chip-ghost">
+                        <button
+                          type="button"
+                          className="chip chip-sm chip-premium chip-ghost"
+                        >
                           <span>+{300 / 2}</span>
                           <span className="icon icon-crown" />
                         </button>

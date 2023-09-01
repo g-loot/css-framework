@@ -54,20 +54,19 @@ export default function ModalClaimMission(props) {
                 Congratulations
               </h2>
               <hr className="my-6" />
-              <XPBoostList isCompleted={false} isAnimated={true} />
+              <XPBoostList />
               <div
                 className=" animate-slide-in-bottom animate-delay"
                 style={{ "--delay": "calc( 6 * 0.15s)" }}
               >
-                
                 <div className="mt-1 flex items-end gap-4 leading-none">
                   <div className="flex-1">
-                  <div className="flex gap-2 justify-center items-center mx-auto">
-                    <div className="text-2xl text-gold-500 w-20 text-right">
-                      <AnimatedNumber number={xp * percent()} />
+                    <div className="flex gap-2 justify-center items-center mx-auto">
+                      <div className="text-2xl text-gold-500 w-20 text-right">
+                        <AnimatedNumber number={xp * percent()} />
+                      </div>
+                      <span className="icon icon-xp-symbol text-5xl text-gold-500" />
                     </div>
-                    <span className="icon icon-xp-symbol text-5xl text-gold-500" />
-                  </div>
                     <div
                       className="progressbar progressbar-secondary w-full"
                       style={{
@@ -81,20 +80,21 @@ export default function ModalClaimMission(props) {
                   </div>
                   <div className="flex-none w-24 text-ui-300 text-sm text-right">
                     <span>
-                      Total XP: <AnimatedNumber number={1200 + xp * percent()} />
+                      Total XP:{" "}
+                      <AnimatedNumber number={1200 + xp * percent()} />
                     </span>
                   </div>
                 </div>
                 <hr className="my-6" />
                 <button
-                    type="button"
-                    className={`button button-claim button-lg w-full ${
-                      submitting ? "is-loading" : ""
-                    }`}
-                    onClick={closeModalWithDelay}
-                  >
-                    <span>Claim rewards</span>
-                  </button>
+                  type="button"
+                  className={`button button-claim button-lg w-full ${
+                    submitting ? "is-loading" : ""
+                  }`}
+                  onClick={closeModalWithDelay}
+                >
+                  <span>Claim rewards</span>
+                </button>
               </div>
             </div>
           </div>
