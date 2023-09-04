@@ -581,125 +581,74 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         <Tooltip
                                           placement="top"
                                           tooltip={
-                                            <ul className="text-sm w-64 pl-2">
-                                              <li className="flex gap-2 items-center justify-center">
-                                                <span className="icon icon-stryda-symbol text-lg" />
-                                                <div className="flex-1">
-                                                  <div className="truncate">
-                                                    <a
-                                                      className="link"
-                                                      onClick={() => {
-                                                        uiContext.openToastr({
-                                                          size: "medium",
-                                                          text: "Stryda nickname name copied to your clipboard",
-                                                          color: "green",
-                                                          autoDelete: true,
-                                                          autoDeleteDelay: 2500,
-                                                        });
-                                                        navigator.clipboard.writeText(
-                                                          prototype.getUserByID(
-                                                            item.id
-                                                          ).nickname
-                                                        );
-                                                      }}
-                                                    >
-                                                      {
-                                                        prototype.getUserByID(
-                                                          item.id
-                                                        ).nickname
-                                                      }
-                                                    </a>
-                                                  </div>
-                                                </div>
-                                                <div>
-                                                  <Tooltip
-                                                    placement="top"
-                                                    tooltip={
-                                                      <span className="text-sm">
-                                                        Click to copy Stryda
-                                                        nickname
-                                                      </span>
-                                                    }
-                                                  >
-                                                    <ButtonFeedback
-                                                      value={`${
-                                                        prototype.getUserByID(
-                                                          item.id
-                                                        ).nickname
-                                                      }`}
-                                                      variant="button-ghost rounded-full"
-                                                      icon="icon-document-copy"
-                                                      message="Stryda nickname copied to your clipboard"
-                                                    />
-                                                  </Tooltip>
-                                                </div>
-                                              </li>
-                                              <li className="flex gap-2 items-center justify-center">
-                                                <span className="icon icon-game-valorant-symbol text-lg" />
-                                                <div className="flex-1">
-                                                  <div className="truncate">
-                                                    <a
-                                                      className="link"
-                                                      onClick={() => {
-                                                        uiContext.openToastr({
-                                                          size: "medium",
-                                                          text: "RIOT ID copied to your clipboard",
-                                                          color: "green",
-                                                          autoDelete: true,
-                                                          autoDeleteDelay: 2500,
-                                                        });
-                                                        navigator.clipboard.writeText(
-                                                          prototype.getUserByID(
-                                                            item.id
-                                                          ).socials
-                                                            ?.riotValorantNickname
-                                                        );
-                                                      }}
-                                                    >
-                                                      {
-                                                        prototype.getUserByID(
-                                                          item.id
-                                                        ).nickname
-                                                      }
-                                                      {" #"}
-                                                      {
-                                                        prototype.getUserByID(
-                                                          item.id
-                                                        ).socials
-                                                          ?.riotValorantHashtag
-                                                      }
-                                                    </a>
-                                                  </div>
-                                                </div>
-                                                <div>
-                                                  <Tooltip
-                                                    placement="top"
-                                                    tooltip={
-                                                      <span className="text-sm">
-                                                        Click to copy RIOT ID
-                                                      </span>
-                                                    }
-                                                  >
-                                                    <ButtonFeedback
-                                                      value={`${
+                                            <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
+                                              <span className="icon icon-riotgames-symbol text-lg hidden" />
+                                              <span className="uppercase text-ui-300">
+                                                Riot ID:
+                                              </span>
+                                              <div className="flex-1">
+                                                <div className="truncate">
+                                                  <a
+                                                    className="link"
+                                                    onClick={() => {
+                                                      uiContext.openToastr({
+                                                        size: "medium",
+                                                        text: "RIOT ID copied to your clipboard",
+                                                        color: "green",
+                                                        autoDelete: true,
+                                                        autoDeleteDelay: 2500,
+                                                      });
+                                                      navigator.clipboard.writeText(
                                                         prototype.getUserByID(
                                                           item.id
                                                         ).socials
                                                           ?.riotValorantNickname
-                                                      }{" #"}${
-                                                        prototype.getUserByID(
-                                                          item.id
-                                                        ).socials
-                                                          ?.riotValorantHashtag
-                                                      }`}
-                                                      variant="button-ghost rounded-full"
-                                                      icon="icon-document-copy"
-                                                      message="RIOT ID copied to your clipboard"
-                                                    />
-                                                  </Tooltip>
+                                                      );
+                                                    }}
+                                                  >
+                                                    {
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).nickname
+                                                    }
+                                                    {" #"}
+                                                    {
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).socials
+                                                        ?.riotValorantHashtag
+                                                    }
+                                                  </a>
                                                 </div>
-                                              </li>
-                                            </ul>
+                                              </div>
+                                              <div>
+                                                <Tooltip
+                                                  placement="top"
+                                                  tooltip={
+                                                    <span className="text-sm">
+                                                      Click to copy RIOT ID
+                                                    </span>
+                                                  }
+                                                >
+                                                  <ButtonFeedback
+                                                    value={`${
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).socials
+                                                        ?.riotValorantNickname
+                                                    }{" #"}${
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).socials
+                                                        ?.riotValorantHashtag
+                                                    }`}
+                                                    variant="button-ghost rounded-full"
+                                                    icon="icon-document-copy"
+                                                    message="RIOT ID copied to your clipboard"
+                                                  />
+                                                </Tooltip>
+                                              </div>
+                                            </div>
                                           }
                                         >
                                           <ButtonFeedback
