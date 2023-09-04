@@ -167,103 +167,49 @@ export default function Ladders() {
                   </div>
                 )}
               </div>
-              {selectedClanLeaderboard.status !== "finished" && (
-                <div className="border-t border-ui-700 mt-4 pt-4">
-                  <ul className="flex flex-col lg:flex-row gap-1 justify-between leading-tight">
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Objective</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-archery-target" />
-                        </button>
-                      </Tooltip>
-
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.objective}{" "}
-                      </p>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Game mode</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-handheld-console-2" />
-                        </button>
-                      </Tooltip>
-
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.gameMode}
-                      </p>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Tie Breaker</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-lightning" />
-                        </button>
-                      </Tooltip>
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.tieBreaker}
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              )}
               {!variablesContext.clanLeaderboardEnrolled &&
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
                       <div className="flex-1 text-sm">
-                        <div className="uppercase font-bold text-ui-400">
+                        <span className="uppercase font-bold text-ui-400">
                           Eligibility:
-                        </div>
-                        {selectedClanLeaderboard.meta.eligibility.countries && (
-                          <p>
-                            In order for your clan to be eligible for the event,
-                            at least 3 out of 5 party member have to be from the
-                            following{" "}
-                            <Tooltip
-                              tooltip={
-                                <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
-                                  {selectedClanLeaderboard.meta.eligibility.countries.map(
-                                    (country, countryIndex) => (
-                                      <li
-                                        key={countryIndex}
-                                        className="whitespace-nowrap pr-1 flex items-center gap-2"
-                                      >
-                                        <img
-                                          src={`https://flagcdn.com/${country.flag}.svg`}
-                                          className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
-                                        />{" "}
-                                        <span>{country.name}</span>
-                                      </li>
-                                    )
-                                  )}
-                                </ul>
-                              }
-                            >
-                              <span className="interactive">
-                                <span className="underline">Nordic countries</span>{" "}
-                                <button className="text-ui-300 text-0 translate-y-0.5">
-                                  <span className="icon icon-16 icon-c-info" />
-                                </button>
-                              </span>
-                            </Tooltip>
-                          </p>
-                        )}
-                        {selectedClanLeaderboard.meta.eligibility.ranks && (
-                          <p className="inline-flex items-center gap-2">
+                        </span>{" "}
+                        {selectedClanLeaderboard.meta?.eligibility ? (
+                          <>
                             <span>
-                              All party members must be of any of the following
-                              ranks:
+                              3 out of 5 party members have to be from the{" "}
+                              <Tooltip
+                                tooltip={
+                                  <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                                    {selectedClanLeaderboard.meta?.eligibility?.countries.map(
+                                      (country, countryIndex) => (
+                                        <li
+                                          key={countryIndex}
+                                          className="whitespace-nowrap pr-1 flex items-center gap-2"
+                                        >
+                                          <img
+                                            src={`https://flagcdn.com/${country.flag}.svg`}
+                                            className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
+                                          />{" "}
+                                          <span>{country.name}</span>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                }
+                              >
+                                <span className="interactive">
+                                  <span className="underline">
+                                    Nordic countries
+                                  </span>{" "}
+                                  <button className="text-ui-300 text-0 translate-y-0.5">
+                                    <span className="icon icon-16 icon-c-info" />
+                                  </button>
+                                </span>
+                              </Tooltip>
                             </span>
-                            <div className="inline-flex items-center gap-0.5 pr-3">
-                              {selectedClanLeaderboard.meta.eligibility.ranks?.map(
+                            {selectedClanLeaderboard.meta.eligibility.ranks && selectedClanLeaderboard.meta.eligibility.ranks?.map(
                                 (rank, rankIndex) => (
                                   <Tooltip
                                     key={rankIndex}
@@ -277,8 +223,9 @@ export default function Ladders() {
                                   </Tooltip>
                                 )
                               )}
-                            </div>
-                          </p>
+                          </>
+                        ) : (
+                          <span>Everyone</span>
                         )}
                       </div>
                     )}
@@ -347,6 +294,53 @@ export default function Ladders() {
                     </div>
                   </div>
                 )}
+              {selectedClanLeaderboard.status !== "finished" && (
+                <div className="border-t border-ui-700 mt-4 pt-4">
+                  <ul className="flex flex-col lg:flex-row gap-1 justify-between leading-tight">
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Objective</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-archery-target" />
+                        </button>
+                      </Tooltip>
+
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.objective}{" "}
+                      </p>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Game mode</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-handheld-console-2" />
+                        </button>
+                      </Tooltip>
+
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.gameMode}
+                      </p>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Tie Breaker</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-lightning" />
+                        </button>
+                      </Tooltip>
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.tieBreaker}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </section>
 

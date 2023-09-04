@@ -317,10 +317,13 @@ export default function PrototypeLeftMenuNew(props) {
                 <span>Get tokens</span>
               </button>
             </div>
-            {/*
+
             <div className="px-2 pb-2">
               <Link href="/prototype/valorant/clanevents/0">
-                <button type="button" className="block w-full rounded bg-ui-500 aspect-square overflow-hidden relative border border-ui-500 interative group">
+                <button
+                  type="button"
+                  className="block w-full rounded bg-ui-500 aspect-square overflow-hidden relative border border-ui-500 interative group"
+                >
                   <div className="absolute inset-0 z-10 flex flex-col items-center justify-between p-4">
                     <div className="flex-none flex flex-col items-center justify-center gap-3">
                       <img
@@ -339,7 +342,10 @@ export default function PrototypeLeftMenuNew(props) {
                       />
                     </div>
                     <div className="flex-none w-full">
-                      <button type="button" className="button button-primary w-full">
+                      <button
+                        type="button"
+                        className="button button-primary w-full"
+                      >
                         <span>Learn more</span>
                       </button>
                     </div>
@@ -373,7 +379,6 @@ export default function PrototypeLeftMenuNew(props) {
                 </button>
               </Link>
             </div>
-                */}
           </div>
         )}
 
