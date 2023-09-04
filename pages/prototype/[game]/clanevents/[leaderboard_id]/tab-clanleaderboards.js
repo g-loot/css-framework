@@ -556,7 +556,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                         >
                                           <img
                                             src={`https://flagcdn.com/${item.countryFlag}.svg`}
-                                            className="aspect-video rounded-sm w-6 mr-2"
+                                            className="aspect-video rounded-sm w-6 mr-3"
                                           />
                                         </Tooltip>
                                         <Tooltip
@@ -642,7 +642,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                         ?.riotValorantHashtag
                                                     }`}
                                                     variant="button-ghost rounded-full"
-                                                    icon="icon-riotgames-symbol"
+                                                    icon="icon-document-copy"
                                                     message="RIOT ID copied to your clipboard"
                                                   />
                                                 </Tooltip>
@@ -656,7 +656,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                 .nickname
                                             } #1111`}
                                             variant="button-ghost rounded-full"
-                                            icon="icon-c-info"
+                                            icon="icon-riotgames-symbol"
                                             message="RIOT ID copied to your clipboard"
                                           />
                                         </Tooltip>
