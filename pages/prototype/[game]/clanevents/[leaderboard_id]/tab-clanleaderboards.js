@@ -582,7 +582,6 @@ export default function TabClanLeaderboardsLeaderboards() {
                                           placement="top"
                                           tooltip={
                                             <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                              <span className="icon icon-riotgames-symbol text-lg hidden" />
                                               <span className="uppercase text-ui-300">
                                                 Riot ID:
                                               </span>
@@ -643,7 +642,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                         ?.riotValorantHashtag
                                                     }`}
                                                     variant="button-ghost rounded-full"
-                                                    icon="icon-document-copy"
+                                                    icon="icon-riotgames-symbol"
                                                     message="RIOT ID copied to your clipboard"
                                                   />
                                                 </Tooltip>
