@@ -529,7 +529,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                           }${prototype.getURLparams()}`}
                                         >
                                           <span
-                                            className={`text-sm interactive truncate w-20 ${
+                                            className={`text-sm interactive truncate w-28 ${
                                               prototype.getUserByID(item.id)
                                                 .isPremium
                                                 ? "text-premium-500"
