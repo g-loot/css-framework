@@ -87,10 +87,18 @@ export default function Ladders() {
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mt-8 mb-4">
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
-              <div className="absolute z-10 top-1 left-1">
-                <Tooltip tooltip={<div>{selectedGame.name}</div>}>
-                  <GameIcon game={selectedGame.id} />
-                </Tooltip>
+              <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                <GameIcon game={selectedGame.id} />
+                <span>{selectedClanLeaderboard.meta.gameMode}</span>
+                <span
+                  className={`capitalize ${
+                    selectedClanLeaderboard.status === "ongoing"
+                      ? "text-blue-500"
+                      : ""
+                  }`}
+                >
+                  {selectedClanLeaderboard.status}
+                </span>
               </div>
               <img
                 src={selectedClanLeaderboard.logo}
@@ -138,21 +146,14 @@ export default function Ladders() {
               <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h1 className="h4">{selectedClanLeaderboard.name}</h1>
-                  {selectedClanLeaderboard.status === "ongoing" && (
-                    <>
-                      {!variablesContext.clanLeaderboardEnrolled ? (
-                        <span className="chip chip-secondary">
-                          <span className="text-blue-500">Ongoing</span>
+                  {selectedClanLeaderboard.status === "ongoing" &&
+                    variablesContext.clanLeaderboardEnrolled && (
+                      <div className="chip chip-secondary">
+                        <span className="text-main animate-pulse">
+                          Enrolled
                         </span>
-                      ) : (
-                        <span className="chip chip-secondary">
-                          <span className="text-main animate-pulse">
-                            Enrolled
-                          </span>
-                        </span>
-                      )}
-                    </>
-                  )}
+                      </div>
+                    )}
                 </div>
                 {selectedClanLeaderboard.status === "upcoming" && (
                   <ResetsIn label="Starts" />
@@ -166,118 +167,71 @@ export default function Ladders() {
                   </div>
                 )}
               </div>
-              {selectedClanLeaderboard.status !== "finished" && (
-                <div className="border-t border-ui-700 mt-4 pt-4">
-                  <ul className="flex flex-col lg:flex-row gap-1 justify-between leading-tight">
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Objective</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-archery-target" />
-                        </button>
-                      </Tooltip>
-
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.objective}{" "}
-                      </p>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Game mode</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-handheld-console-2" />
-                        </button>
-                      </Tooltip>
-
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.gameMode}
-                      </p>
-                    </li>
-                    <li className="flex gap-2 items-center">
-                      <Tooltip
-                        className="tooltip-sm"
-                        tooltip={<span className="text-sm">Tie Breaker</span>}
-                      >
-                        <button className="text-ui-300 text-0">
-                          <span className="icon icon-20 icon-lightning" />
-                        </button>
-                      </Tooltip>
-                      <p className="text-sm">
-                        {selectedClanLeaderboard.meta.tieBreaker}
-                      </p>
-                    </li>
-                  </ul>
-                </div>
-              )}
               {!variablesContext.clanLeaderboardEnrolled &&
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
-                      <div className="flex-1 text-sm">
-                        <div className="uppercase font-bold text-ui-400">
+                      <div className="flex-1 flex flex-wrap gap-2 items-center text-sm">
+                        <span className="uppercase font-bold text-ui-400">
                           Eligibility:
-                        </div>
-                        {selectedClanLeaderboard.meta.eligibility.countries && (
-                          <p>
-                            In order for your clan to be eligible for the event,
-                            at least 3 out of 5 party member have to be from the
-                            following{" "}
-                            <Tooltip
-                              tooltip={
-                                <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
-                                  {selectedClanLeaderboard.meta.eligibility.countries.map(
-                                    (country, countryIndex) => (
-                                      <li
-                                        key={countryIndex}
-                                        className="whitespace-nowrap pr-1 flex items-center gap-2"
+                        </span>
+                        {selectedClanLeaderboard.meta?.eligibility ? (
+                          <>
+                            <span>
+                              3 out of 5 party members have to be from the{" "}
+                              <Tooltip
+                                tooltip={
+                                  <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                                    {selectedClanLeaderboard.meta?.eligibility?.countries.map(
+                                      (country, countryIndex) => (
+                                        <li
+                                          key={countryIndex}
+                                          className="whitespace-nowrap pr-1 flex items-center gap-2"
+                                        >
+                                          <img
+                                            src={`https://flagcdn.com/${country.flag}.svg`}
+                                            className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
+                                          />{" "}
+                                          <span>{country.name}</span>
+                                        </li>
+                                      )
+                                    )}
+                                  </ul>
+                                }
+                              >
+                                <span className="interactive">
+                                  <span className="underline">
+                                    Nordic countries
+                                  </span>{" "}
+                                  <button className="text-ui-300 text-0 translate-y-0.5">
+                                    <span className="icon icon-16 icon-c-info" />
+                                  </button>
+                                </span>
+                              </Tooltip>
+                            </span>
+                            {selectedClanLeaderboard.meta.eligibility.ranks && (
+                              <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                                {selectedClanLeaderboard.meta.eligibility
+                                  .ranks &&
+                                  selectedClanLeaderboard.meta.eligibility.ranks?.map(
+                                    (rank, rankIndex) => (
+                                      <Tooltip
+                                        key={rankIndex}
+                                        placement="top"
+                                        tooltip={rank.name}
                                       >
                                         <img
-                                          src={`https://flagcdn.com/${country.flag}.svg`}
-                                          className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
-                                        />{" "}
-                                        <span>{country.name}</span>
-                                      </li>
+                                          src={rank.image}
+                                          className="inline w-7 h-7 object-contain object-center"
+                                        />
+                                      </Tooltip>
                                     )
                                   )}
-                                </ul>
-                              }
-                            >
-                              <span className="interactive">
-                                <span className="underline">Nordic countries</span>{" "}
-                                <button className="text-ui-300 text-0 translate-y-0.5">
-                                  <span className="icon icon-16 icon-c-info" />
-                                </button>
-                              </span>
-                            </Tooltip>
-                          </p>
-                        )}
-                        {selectedClanLeaderboard.meta.eligibility.ranks && (
-                          <p className="inline-flex items-center gap-2">
-                            <span>
-                              All party members must be of any of the following
-                              ranks:
-                            </span>
-                            <div className="inline-flex items-center gap-0.5 pr-3">
-                              {selectedClanLeaderboard.meta.eligibility.ranks?.map(
-                                (rank, rankIndex) => (
-                                  <Tooltip
-                                    key={rankIndex}
-                                    placement="top"
-                                    tooltip={rank.name}
-                                  >
-                                    <img
-                                      src={rank.image}
-                                      className="inline w-6 h-6 object-contain object-center"
-                                    />
-                                  </Tooltip>
-                                )
-                              )}
-                            </div>
-                          </p>
+                              </div>
+                            )}
+                          </>
+                        ) : (
+                          <span>Everyone</span>
                         )}
                       </div>
                     )}
@@ -346,6 +300,53 @@ export default function Ladders() {
                     </div>
                   </div>
                 )}
+              {selectedClanLeaderboard.status !== "finished" && (
+                <div className="border-t border-ui-700 mt-4 pt-4">
+                  <ul className="flex flex-col lg:flex-row gap-1 justify-between leading-tight">
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Objective</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-archery-target" />
+                        </button>
+                      </Tooltip>
+
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.objective}{" "}
+                      </p>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Game mode</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-handheld-console-2" />
+                        </button>
+                      </Tooltip>
+
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.gameMode}
+                      </p>
+                    </li>
+                    <li className="flex gap-2 items-center">
+                      <Tooltip
+                        className="tooltip-sm"
+                        tooltip={<span className="text-sm">Tie Breaker</span>}
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon icon-20 icon-lightning" />
+                        </button>
+                      </Tooltip>
+                      <p className="text-sm">
+                        {selectedClanLeaderboard.meta.tieBreaker}
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </section>
 

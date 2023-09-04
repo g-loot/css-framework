@@ -88,10 +88,18 @@ export default function Ladders() {
           <Ad width="1005" height="300" />
           <section className="surface sm:rounded overflow-hidden mb-4">
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
-              <div className="absolute z-10 top-1 left-1">
-                <Tooltip tooltip={<div>{selectedGame.name}</div>}>
-                  <GameIcon game={selectedGame.id} />
-                </Tooltip>
+              <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                <GameIcon game={selectedGame.id} />
+                <span>{selectedClanLeaderboard.meta.gameMode}</span>
+                <span
+                  className={`capitalize ${
+                    selectedClanLeaderboard.status === "ongoing"
+                      ? "text-blue-500"
+                      : ""
+                  }`}
+                >
+                  {selectedClanLeaderboard.status}
+                </span>
               </div>
               <img
                 src={selectedClanLeaderboard.logo}
@@ -139,21 +147,14 @@ export default function Ladders() {
               <div className="flex flex-col md:flex-row gap-2 md:items-center justify-between">
                 <div className="flex items-center gap-2">
                   <h1 className="h4">{selectedClanLeaderboard.name}</h1>
-                  {selectedClanLeaderboard.status === "ongoing" && (
-                    <>
-                      {!variablesContext.clanLeaderboardEnrolled ? (
-                        <span className="chip chip-secondary">
-                          <span className="text-blue-500">Ongoing</span>
+                  {selectedClanLeaderboard.status === "ongoing" &&
+                    variablesContext.clanLeaderboardEnrolled && (
+                      <div className="chip chip-secondary">
+                        <span className="text-main animate-pulse">
+                          Enrolled
                         </span>
-                      ) : (
-                        <span className="chip chip-secondary">
-                          <span className="text-main animate-pulse">
-                            Enrolled
-                          </span>
-                        </span>
-                      )}
-                    </>
-                  )}
+                      </div>
+                    )}
                 </div>
                 {selectedClanLeaderboard.status === "upcoming" && (
                   <ResetsIn label="Starts" />
@@ -171,10 +172,10 @@ export default function Ladders() {
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
-                      <div className="flex-1 text-sm">
+                      <div className="flex-1 flex flex-wrap gap-2 items-center text-sm">
                         <span className="uppercase font-bold text-ui-400">
                           Eligibility:
-                        </span>{" "}
+                        </span>
                         {selectedClanLeaderboard.meta?.eligibility ? (
                           <>
                             <span>
@@ -209,20 +210,26 @@ export default function Ladders() {
                                 </span>
                               </Tooltip>
                             </span>
-                            {selectedClanLeaderboard.meta.eligibility.ranks && selectedClanLeaderboard.meta.eligibility.ranks?.map(
-                                (rank, rankIndex) => (
-                                  <Tooltip
-                                    key={rankIndex}
-                                    placement="top"
-                                    tooltip={rank.name}
-                                  >
-                                    <img
-                                      src={rank.image}
-                                      className="inline w-6 h-6 object-contain object-center"
-                                    />
-                                  </Tooltip>
-                                )
-                              )}
+                            {selectedClanLeaderboard.meta.eligibility.ranks && (
+                              <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                                {selectedClanLeaderboard.meta.eligibility
+                                  .ranks &&
+                                  selectedClanLeaderboard.meta.eligibility.ranks?.map(
+                                    (rank, rankIndex) => (
+                                      <Tooltip
+                                        key={rankIndex}
+                                        placement="top"
+                                        tooltip={rank.name}
+                                      >
+                                        <img
+                                          src={rank.image}
+                                          className="inline w-7 h-7 object-contain object-center"
+                                        />
+                                      </Tooltip>
+                                    )
+                                  )}
+                              </div>
+                            )}
                           </>
                         ) : (
                           <span>Everyone</span>

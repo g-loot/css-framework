@@ -7,7 +7,7 @@ import { VariablesContext } from "@/contexts/variables";
 import { usePrototypeData } from "@/contexts/prototype";
 import Tooltip from "@/components/Tooltip/Tooltip";
 
-const CardClanEvent = (props) => {
+const ClanEventCard = (props) => {
   const variablesContext = useContext(VariablesContext);
   const prototype = usePrototypeData();
   const item = props.item || undefined;
@@ -42,29 +42,16 @@ const CardClanEvent = (props) => {
             }}
           >
             <div className="h-44 relative w-full flex items-center justify-center overflow-hidden">
-              <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 flex gap-2 items-center text-sm text-ui-200">
-                <GameIcon game={1} />
-                {item.meta.eligibility?.ranks && (
-                  <>
-                    <span>
-                      <b>Group D: </b>ranks only
-                    </span>
-                    <div className="flex items-center gap-0.5 pr-3">
-                      {item.meta.eligibility.ranks?.map((rank, rankIndex) => (
-                        <Tooltip
-                          key={rankIndex}
-                          placement="top"
-                          tooltip={rank.name}
-                        >
-                          <img
-                            src={rank.image}
-                            className="inline w-6 h-6 object-contain object-center"
-                          />
-                        </Tooltip>
-                      ))}
-                    </div>
-                  </>
-                )}
+              <div className="absolute z-20 top-2 left-2 rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
+                <GameIcon game={prototype.defaultGameID} />
+                <span>{item.meta.gameMode}</span>
+                <span
+                  className={`capitalize ${
+                    item.status === "ongoing" ? "text-blue-500" : ""
+                  }`}
+                >
+                  {item.status}
+                </span>
               </div>
               <img
                 src={item.logo}
@@ -99,48 +86,68 @@ const CardClanEvent = (props) => {
             <div className="border-t border-ui-700 p-4">
               <div className="flex flex-wrap gap-2 items-center">
                 <h2 className="h4">{item.name}</h2>
-                <div className="chip chip-secondary">
-                  <span>{item.meta?.gameMode}</span>
-                  {item.status === "ongoing" && (
-                    <span className="text-info-500">Ongoing</span>
-                  )}
-                </div>
+                {item.status === "ongoing" && (
+                  <div className="chip chip-secondary">
+                    <span className="text-main animate-pulse">Enrolled</span>
+                  </div>
+                )}
               </div>
-              <div className="text-sm mt-3">
+              <div className="mt-3 flex flex-wrap gap-2 items-center text-sm">
                 <span className="uppercase font-bold text-ui-400">
                   Eligibility:
-                </span>{" "}
-                {item.meta.eligibility ? (
-                  <span>
-                    3 out of 5 party members have to be from the{" "}
-                    <Tooltip
-                      tooltip={
-                        <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
-                          {item.meta.eligibility.countries.map(
-                            (country, countryIndex) => (
-                              <li
-                                key={countryIndex}
-                                className="whitespace-nowrap pr-1 flex items-center gap-2"
+                </span>
+                {item.meta?.eligibility ? (
+                  <>
+                    <span>
+                      3 out of 5 party members have to be from the{" "}
+                      <Tooltip
+                        tooltip={
+                          <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
+                            {item.meta?.eligibility?.countries.map(
+                              (country, countryIndex) => (
+                                <li
+                                  key={countryIndex}
+                                  className="whitespace-nowrap pr-1 flex items-center gap-2"
+                                >
+                                  <img
+                                    src={`https://flagcdn.com/${country.flag}.svg`}
+                                    className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
+                                  />{" "}
+                                  <span>{country.name}</span>
+                                </li>
+                              )
+                            )}
+                          </ul>
+                        }
+                      >
+                        <span className="interactive">
+                          <span className="underline">Nordic countries</span>{" "}
+                          <button className="text-ui-300 text-0 translate-y-0.5">
+                            <span className="icon icon-16 icon-c-info" />
+                          </button>
+                        </span>
+                      </Tooltip>
+                    </span>
+                    {item.meta.eligibility.ranks && (
+                      <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                        {item.meta.eligibility.ranks &&
+                          item.meta.eligibility.ranks?.map(
+                            (rank, rankIndex) => (
+                              <Tooltip
+                                key={rankIndex}
+                                placement="top"
+                                tooltip={rank.name}
                               >
                                 <img
-                                  src={`https://flagcdn.com/${country.flag}.svg`}
-                                  className="inline rounded-[1px] h-3.5 w-auto mx-0.5 -translate-y-px"
-                                />{" "}
-                                <span>{country.name}</span>
-                              </li>
+                                  src={rank.image}
+                                  className="inline w-7 h-7 object-contain object-center"
+                                />
+                              </Tooltip>
                             )
                           )}
-                        </ul>
-                      }
-                    >
-                      <span className="interactive">
-                        <span className="underline">Nordic countries</span>{" "}
-                        <button className="text-ui-300 text-0 translate-y-0.5">
-                          <span className="icon icon-16 icon-c-info" />
-                        </button>
-                      </span>
-                    </Tooltip>
-                  </span>
+                      </div>
+                    )}
+                  </>
                 ) : (
                   <span>Everyone</span>
                 )}
@@ -251,4 +258,4 @@ const CardClanEvent = (props) => {
   );
 };
 
-export default CardClanEvent;
+export default ClanEventCard;
