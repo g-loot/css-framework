@@ -3929,7 +3929,7 @@ export const dataGames = [
         isCurrent: true,
         status: "ongoing",
         name: "5 Stack Frenzy",
-        logo: "https://res.cloudinary.com/gloot/image/upload/v1692794828/Stryda/clan%20events/5stackfrenzy-logo.svg",
+        logo: "https://res.cloudinary.com/gloot/image/upload/v1692878518/Stryda/clan%20events/5stackfrenzylogopng.png",
         video: null,
         bg: "https://res.cloudinary.com/gloot/image/upload/v1692795104/Stryda/clan%20events/5stackfrenzy-bg.jpg",
         meta: {

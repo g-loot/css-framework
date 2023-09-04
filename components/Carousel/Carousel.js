@@ -213,7 +213,7 @@ export default function Carousel(props) {
         </div>
         <div className="carousel-nav">
           <ul className="carousel-list">
-            {slides.map((item, itemIndex) => (
+            {slides.slice(0, 4).map((item, itemIndex) => (
               <>
                 <li
                   key={itemIndex}

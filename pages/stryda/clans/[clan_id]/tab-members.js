@@ -218,9 +218,7 @@ export default function TabClanMembers() {
                               >
                                 <td>
                                   <Link
-                                    href={`/prototype/profile/${
-                                      item.id
-                                    }${prototype.getURLparams()}
+                                    href={`/prototype/profile/${item.id}
                           `}
                                   >
                                     <button
@@ -229,21 +227,54 @@ export default function TabClanMembers() {
                                     >
                                       <Avatar
                                         id={item.id}
-                                        size="avatar-xs"
                                         hasTooltip={true}
+                                        size="avatar-sm"
                                       />
-                                      <div
-                                        className={`${
-                                          prototype.getUserByID(item.id)
-                                            ?.isPremium
-                                            ? "text-premium-500"
-                                            : ""
-                                        }`}
-                                      >
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            ?.nickname
-                                        }
+                                      <div className="space-y-0.5">
+                                        <div
+                                          className={`${
+                                            prototype.getUserByID(item.id)
+                                              ?.isPremium
+                                              ? "text-premium-500"
+                                              : ""
+                                          } ${
+                                            prototype.getUserByID(item.id)
+                                              ?.isYou
+                                              ? "text-main"
+                                              : ""
+                                          }`}
+                                        >
+                                          {prototype.getUserByID(item.id)
+                                            ?.clan && (
+                                            <>
+                                              &#91;
+                                              {
+                                                prototype.getClanByID(
+                                                  prototype.getUserByID(item.id)
+                                                    ?.clan
+                                                )?.tag
+                                              }
+                                              &#93;{" "}
+                                            </>
+                                          )}
+                                          {
+                                            prototype.getUserByID(item.id)
+                                              ?.nickname
+                                          }
+                                        </div>
+                                        <div className="flex gap-1">
+                                          <div className="flex gap-1">
+                                            {prototype
+                                              .getUserByID(item.id)
+                                              .games.map((game, gameIndex) => (
+                                                <GameIcon
+                                                  key={gameIndex}
+                                                  game={game}
+                                                  size="text-base"
+                                                />
+                                              ))}
+                                          </div>
+                                        </div>
                                       </div>
                                     </button>
                                   </Link>

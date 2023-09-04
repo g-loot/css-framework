@@ -35,10 +35,12 @@ export default function ModalRemoveFriend(props) {
         </button>
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Remove as friend?</h2>
+            <h2 className="modal-title">
+              Unfollow {prototype.getUserByID(props.id)?.nickname}?
+            </h2>
             <p>
               You are about to remove{" "}
-              {prototype.getUserByID(props.id)?.nickname} from your friends.
+              {prototype.getUserByID(props.id)?.nickname} from your followers.
               <br />
               Are you sure?
             </p>
@@ -51,7 +53,7 @@ export default function ModalRemoveFriend(props) {
               }`}
               onClick={closeModalWithDelay}
             >
-              <span>Remove as friend</span>
+              <span>Remove as follower</span>
             </button>
             <button
               type="button"
