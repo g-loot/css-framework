@@ -93,9 +93,6 @@ const ClanEventCard = (props) => {
                 )}
               </div>
               <div className="mt-3 flex flex-wrap gap-2 items-center text-sm">
-                <span className="uppercase font-bold text-ui-400">
-                  Eligibility:
-                </span>
                 {item.meta?.eligibility ? (
                   <>
                     <span>
@@ -129,7 +126,7 @@ const ClanEventCard = (props) => {
                       </Tooltip>
                     </span>
                     {item.meta.eligibility.ranks && (
-                      <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                      <div className="border-l border-ui-700 pl-1 flex flex-wrap gap-1 items-center">
                         {item.meta.eligibility.ranks &&
                           item.meta.eligibility.ranks?.map(
                             (rank, rankIndex) => (
@@ -149,7 +146,7 @@ const ClanEventCard = (props) => {
                     )}
                   </>
                 ) : (
-                  <span>Everyone</span>
+                  <span>Everyone can enter</span>
                 )}
               </div>
               <div className="flex flex-col xl:flex-row gap-2 xl:gap-4 xl:items-center xl:justify-between border-t border-ui-700 mt-4 pt-4">

@@ -173,9 +173,6 @@ export default function Ladders() {
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
                       <div className="flex-1 flex flex-wrap gap-2 items-center text-sm">
-                        <span className="uppercase font-bold text-ui-400">
-                          Eligibility:
-                        </span>
                         {selectedClanLeaderboard.meta?.eligibility ? (
                           <>
                             <span>
@@ -211,7 +208,7 @@ export default function Ladders() {
                               </Tooltip>
                             </span>
                             {selectedClanLeaderboard.meta.eligibility.ranks && (
-                              <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                              <div className="border-l border-ui-700 pl-1 flex flex-wrap gap-1 items-center">
                                 {selectedClanLeaderboard.meta.eligibility
                                   .ranks &&
                                   selectedClanLeaderboard.meta.eligibility.ranks?.map(
@@ -232,7 +229,7 @@ export default function Ladders() {
                             )}
                           </>
                         ) : (
-                          <span>Everyone</span>
+                          <span>Everyone can enter</span>
                         )}
                       </div>
                     )}

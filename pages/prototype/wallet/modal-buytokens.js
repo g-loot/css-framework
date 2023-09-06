@@ -33,6 +33,7 @@ const TokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-large.png",
     special: "bestvalue",
   },
+  /*
   {
     tokenNumber: 800,
     amount: "4.45 €",
@@ -42,6 +43,7 @@ const TokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
     special: "premiumoffer",
   },
+  */
 ];
 const PowerTokensLItems = [
   {
@@ -65,6 +67,7 @@ const PowerTokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-large.png",
     special: "bestvalue",
   },
+  /*
   {
     tokenNumber: 105,
     amount: "2.2 €",
@@ -74,6 +77,7 @@ const PowerTokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-medium.png",
     special: "premiumoffer",
   },
+  */
 ];
 
 /*
