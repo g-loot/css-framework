@@ -198,7 +198,6 @@ export default function Avatar(props) {
                                 className="aspect-video rounded-sm w-6"
                               />
                             </div>
-
                             {selectedUser?.isOnline ? (
                               <div className="flex justify-center mt-0.5 mb-1">
                                 <div className="chip chip-status chip-success chip-xs">
