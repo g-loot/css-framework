@@ -105,7 +105,7 @@ const PrototypePage = () => {
             <div className="w-full max-w-md mx-auto px-10 drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] grid grid-cols-1 md:grid-cols-3 text-center p-4 gap-4 leading-none relative mb-4">
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(10 * 0.05s)",
                   }}
@@ -123,7 +123,7 @@ const PrototypePage = () => {
               </div>
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(12 * 0.05s)",
                   }}
@@ -141,7 +141,7 @@ const PrototypePage = () => {
               </div>
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(14 * 0.05s)",
                   }}
@@ -293,7 +293,7 @@ const PrototypePage = () => {
               />
             </div>
             <div className="flex-1 md:flex-0 max-w-sm 2xl:max-w-[70ch] mx-auto py-28">
-              <h2 className="text-ui-900 font-headings font-bold leading-[0.93]">
+              <h2 className="text-ui-900 font-headings uppercase font-bold leading-[0.93]">
                 <span
                   className="text-5xl 2xl:text-6xl blockreveal before:!bg-ui-900 animate-paused animate-delay"
                   style={{
@@ -450,7 +450,7 @@ const PrototypePage = () => {
               </video>
             </div>
             <div className="flex-2">
-              <h2 className="text-ui-100 font-headings font-bold leading-[0.93] text-7xl md:text-8xl">
+              <h2 className="text-ui-100 font-headings uppercase font-bold leading-[0.93] text-7xl md:text-8xl">
                 <span
                   className="blockreveal animate-paused animate-delay"
                   style={{
@@ -539,7 +539,7 @@ const PrototypePage = () => {
               />
             </div>
             <div className="flex-2">
-              <h2 className="text-ui-100 font-headings font-bold leading-[0.93] text-7xl md:text-8xl">
+              <h2 className="text-ui-100 font-headings uppercase font-bold leading-[0.93] text-7xl md:text-8xl">
                 <span
                   className="blockreveal animate-paused animate-delay"
                   style={{
@@ -753,7 +753,7 @@ const PrototypePage = () => {
                   "--delay": "calc(2 * 0.05s)",
                 }}
               >
-                <h2 className="text-8xl md:text-9xl text-ui-900 font-headings font-bold leading-[0.93]">
+                <h2 className="text-8xl md:text-9xl text-ui-900 font-headings uppercase font-bold leading-[0.93]">
                   Sign up today
                 </h2>
               </div>

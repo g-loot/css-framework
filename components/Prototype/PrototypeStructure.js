@@ -159,7 +159,7 @@ export default function PrototypeStructure({ children, title }) {
                 )}
               </div>
               <div id="alerts" className="alert-container"></div>
-              <Footer className="max-w-2xl mx-auto px-0 md:px-10 xl:px-20" />
+              <Footer className="mx-auto px-0 md:px-10 xl:px-20" />
             </div>
             <div className="drawer-side scrollbar-hidden">
               <label
