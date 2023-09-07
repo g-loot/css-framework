@@ -50,7 +50,7 @@ export default function LadderCardSecondary(props) {
     <>
       {ladder && prototype.getGameByID(gameID) && (
         <Link
-          href={`/prototype/${
+          href={ladder.hasClaim && selectedUser.isYou ? "" : `/prototype/${
             prototype.getGameByID(gameID).slug
           }/ladders/${ladder.id}${prototype.getURLparams()}`}
         >

@@ -114,7 +114,7 @@ export default function BattlepassPage() {
                     />
                   </div>
                   <div className="flex-1 2xl:border-l 2xl:border-ui-100/10 2xl:pl-8 flex items-center">
-                    <p className="2xl:max-w-[50ch] text-ui-300">
+                    <p className="2xl:max-w-[50ch] text-ui-300" onClick={openModalBattlepassCompletedClaim}>
                       {
                         getBattlepassByID(selectedBattlepassID).meta
                           ?.description
