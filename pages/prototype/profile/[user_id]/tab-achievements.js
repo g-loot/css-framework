@@ -29,7 +29,7 @@ export default function TabProfileAchievements() {
     if (modalAchievement) {
       openModalAchievementReceived({
         id: 16,
-        item: 22,
+        item: 21,
         level: 5,
         percent: 80,
         progress: 20,

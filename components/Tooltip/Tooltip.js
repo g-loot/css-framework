@@ -42,7 +42,7 @@ const Tooltip = (props) => {
       <div
         ref={setTriggerRef}
         onMouseEnter={handleHover}
-        className={`inline-flex ${props.tooltip ? "cursor-pointer" : ""} ${
+        className={`inline-flex ${props.tooltip ? "cursor-pointer" : "cursor-default"} ${
           className
         }`}
       >

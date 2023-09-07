@@ -104,7 +104,7 @@ export default function Ladders() {
               <img
                 src={selectedClanLeaderboard.logo}
                 alt={selectedClanLeaderboard.name}
-                className="relative z-10 max-w-[280px] max-h-[150px] h-auto w-auto"
+                className="relative z-10 h-24 w-auto"
               />
               {selectedClanLeaderboard.video ? (
                 <div

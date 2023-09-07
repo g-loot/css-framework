@@ -132,12 +132,12 @@ export default function TabLaddersSoloLeaderboards() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const [selectedLadder, setSelectedLadder] = useState(null);
+  const [freeEntry, setFreeEntry] = useState(false);
   const { game } = router.query;
   const { ladder_id } = router.query;
   const hasClaim = query.hasclaim === "true" ? true : false;
   const isEmpty = query.empty === "true" ? true : false;
   const isPremium = prototype.isPremium;
-  const freeEntry = query.freeentry === "true" ? true : false;
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
 
@@ -1293,6 +1293,9 @@ export default function TabLaddersSoloLeaderboards() {
 
       {/* for demo purposes only */}
       <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+        <a onClick={() => setFreeEntry(!freeEntry)}>
+          Toggle Free entry state {freeEntry ? "ON" : "OFF"}
+        </a>
         <a onClick={() => prototype.togglePremium()}>
           Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
         </a>

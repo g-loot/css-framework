@@ -3,12 +3,11 @@ import React, { useEffect, useState, useContext } from "react";
 import Link from "next/link";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import ReadMore from "@/components/ReadMore/ReadMore";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import Avatar from "@/components/Avatar/Avatar";
 import ModalAvatarEdit from "./[user_id]/modal-avataredit";
 import ModalBannerEdit from "./[user_id]/modal-banneredit";
 import ModalRemoveFriend from "../friends/modal-remove-friend";
+import ModalLevelUp from "../modal-levelup";
 import { UiContext } from "@/contexts/ui";
 
 export default function ProfileHeader(props) {
@@ -86,6 +85,10 @@ export default function ProfileHeader(props) {
     uiContext.openModal(<ModalRemoveFriend id={id} />);
   }
 
+  function openmodalLeveLUp() {
+    uiContext.openModal(<ModalLevelUp />);
+  }
+
   useEffect(() => {
     if (hasProfileBanner) {
       setProfileBanner(prototype.getShopitemByID(2, hasProfileBanner));
@@ -144,6 +147,7 @@ export default function ProfileHeader(props) {
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
                     <div className="flex items-baseline gap-1">
                       <h1
+                        onClick={selectedUser.id === 1 && openmodalLeveLUp}
                         className={`text-7xl leading-none -mb-2 ${
                           selectedUser.isPremium ? "text-premium-500" : ""
                         }`}

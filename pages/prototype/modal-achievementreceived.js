@@ -89,7 +89,7 @@ export default function ModalAchievementReceived(props) {
                       </div>
                       <div>
                         <div className="h4">{selectedAchievement.name}</div>
-                        <div className="text-sm text-ui-300 uppercase font-bold">
+                        <div className="text-sm text-ui-300 uppercase font-bold mt-1">
                           Level {level}
                         </div>
                       </div>

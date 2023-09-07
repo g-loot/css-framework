@@ -26,7 +26,7 @@ export const dataUsers = [
       twitch: "@ctrlchamp",
     },
     shopItems: {
-      avatarFrame: 3,
+      avatarFrame: 176,
       profileBanner: 34,
     },
     stats: {

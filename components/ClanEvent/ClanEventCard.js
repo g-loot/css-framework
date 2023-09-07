@@ -56,7 +56,7 @@ const ClanEventCard = (props) => {
               <img
                 src={item.logo}
                 alt={item.name}
-                className="relative z-10 max-w-[280px] max-h-[150px] h-auto w-auto"
+                className="relative z-10 h-24 w-auto"
               />
               {item.video ? (
                 <div className="absolute z-0 inset-0 grid place-content-center bg-ui-900/95">
