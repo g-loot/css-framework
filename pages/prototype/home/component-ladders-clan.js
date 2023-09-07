@@ -48,7 +48,7 @@ export default function HomeLaddersClan(props) {
             </Link>
           </div>
           <img
-            className="absolute inset-0 h-full w-full object-cover object-right-top opacity-20 lg:opacity-100"
+            className="absolute inset-0 h-full w-full object-cover object-left opacity-20 lg:opacity-100"
             src="https://res.cloudinary.com/gloot/image/upload/v1694090426/Stryda/illustrations/home-laddernoclan.jpg"
             alt=""
           />
@@ -69,7 +69,7 @@ export default function HomeLaddersClan(props) {
           </Link>
         </div>
         <img
-          className="absolute inset-0 h-full w-full object-cover object-right-top opacity-20 lg:opacity-100"
+          className="absolute inset-0 h-full w-full object-cover object-left opacity-20 lg:opacity-100"
           src="https://res.cloudinary.com/gloot/image/upload/v1694090426/Stryda/illustrations/home-laddernoclan.jpg"
           alt=""
         />

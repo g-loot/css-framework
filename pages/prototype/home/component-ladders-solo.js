@@ -46,7 +46,7 @@ export default function HomeLaddersSolo(props) {
             </Link>
           </div>
           <img
-            className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
+            className="absolute inset-0 h-full w-full object-cover object-left opacity-20 lg:opacity-100"
             src="https://res.cloudinary.com/gloot/image/upload/v1694090425/Stryda/illustrations/home-ad-multipleladders.jpg"
             alt=""
           />
