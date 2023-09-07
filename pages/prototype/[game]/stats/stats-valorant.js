@@ -719,7 +719,7 @@ export default function StatsValorant() {
               </section>
               <section className="mb-4">
                 <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
-                <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                       loading ? "is-loading" : ""
@@ -867,7 +867,7 @@ export default function StatsValorant() {
               </section>
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Last 20 matches</h2>
-                <div className="overflow-x-auto scrollbar-desktop leading-tight pb-4">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop leading-tight pb-4">
                   {StatsValorantDemoLatestMatches.slice(0, maxMap - 1).map(
                     (item, itemIndex) => (
                       <div key={itemIndex} className="mb-2">
@@ -1468,7 +1468,7 @@ export default function StatsValorant() {
               </section>
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Weapons</h2>
-                <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                       loading ? "is-loading" : ""
@@ -1707,7 +1707,7 @@ export default function StatsValorant() {
               </section>
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Maps</h2>
-                <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                       loading ? "is-loading" : ""

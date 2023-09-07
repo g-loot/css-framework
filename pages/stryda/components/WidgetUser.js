@@ -142,7 +142,7 @@ export default function WidgetUser(props) {
                     onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
                   >
                     <span className="icon icon-a-remove" />
-                    <span>Remove as friend</span>
+                    <span>Unfollow</span>
                   </a>
                 )}
                 {!selectedUser.isYou && !selectedUser.isFriend && (
@@ -150,7 +150,7 @@ export default function WidgetUser(props) {
                     variant="button button-sm button-primary w-full"
                     icon="icon-a-add"
                     label="Follow"
-                    message="Player added to your followings"
+                    message="Player added to your following"
                   />
                 )}
               </div>

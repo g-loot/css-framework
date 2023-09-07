@@ -8,6 +8,7 @@ import Link from "next/link";
 import AchievementFrame from "../Achievements/AchievementFrame";
 import AchievementIcon from "../Achievements/AchievementIcon";
 import ModalGiftTokens from "@/pages/prototype/clans/modal-gift-tokens";
+import ButtonFeedback from "../Button/ButtonFeedback";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();
@@ -314,7 +315,7 @@ export default function Avatar(props) {
                         {selectedUser.clan === 1 && (
                           <button
                             type="button"
-                            className="button button-sm button-secondary rounded-full w-full mt-2"
+                            className="button button-sm button-secondary w-full mt-2"
                             onClick={() => {
                               openModalGiftTokens();
                             }}
@@ -322,6 +323,14 @@ export default function Avatar(props) {
                             <span className="icon icon-token" />
                             <span>Gift tokens</span>
                           </button>
+                        )}
+                        {!selectedUser.isYou && (
+                          <ButtonFeedback
+                            variant="button-sm button-secondary w-full mt-2"
+                            icon="icon-a-add"
+                            message="Player added in your following"
+                            label="Follow"
+                          />
                         )}
                       </div>
                     </div>

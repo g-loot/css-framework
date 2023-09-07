@@ -242,7 +242,7 @@ export default function ModalBuyTokens(props) {
                     Ladders.
                   </p>
                 </div>
-                <div className="overflow-x-auto scrollbar-desktop flex">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex">
                   <div className="flex flex-row gap-4 items-stretch justify-center mx-auto mb-8 xl:w-full">
                     {TokensLItems.map((item, itemIndex) => (
                       <>{Bundle(item, itemIndex)}</>
@@ -256,7 +256,7 @@ export default function ModalBuyTokens(props) {
                     Ladders, where the winner takes it all.
                   </p>
                 </div>
-                <div className="overflow-x-auto scrollbar-desktop flex">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex">
                   <div className="flex flex-row gap-4 items-stretch justify-center mx-auto mb-8 xl:w-full">
                     {PowerTokensLItems.map((item, itemIndex) => (
                       <>{Bundle(item, itemIndex)}</>

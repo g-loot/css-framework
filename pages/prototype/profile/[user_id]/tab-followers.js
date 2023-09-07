@@ -11,7 +11,7 @@ import GameIcon from "@/components/GameIcon/GameIcon";
 import ButtonSorting from "@/components/Button/ButtonSorting";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
-export default function TabProfileFriends() {
+export default function TabProfileFollowers() {
   const router = useRouter();
   const { query } = useRouter();
   const prototype = usePrototypeData();
@@ -161,18 +161,7 @@ export default function TabProfileFriends() {
               ) : (
                 <>
                   <section>
-                    <div className="flex flex-col md:flex-row md:justify-between md:items-center px-4 sm:px-0 mb-0.5">
-                      <Link
-                        href={`/prototype/search${prototype.getURLparams()}`}
-                      >
-                        <button
-                          type="button"
-                          className="button button-tertiary"
-                        >
-                          <span className="icon icon-a-add" />
-                          <span>Search for players</span>
-                        </button>
-                      </Link>
+                    <div className="flex flex-col md:flex-row justify-end md:items-center px-4 sm:px-0 mb-0.5">
                       <div className="form-group">
                         <div className="input-group">
                           <span className="icon icon-zoom"></span>
@@ -227,70 +216,59 @@ export default function TabProfileFriends() {
                                   }}
                                 >
                                   <td>
-                                    <Link
-                                      href={`/prototype/profile/${item.id}
-                   `}
-                                    >
-                                      <button
-                                        type="button"
-                                        className="flex gap-3 items-center self-center interactive"
-                                      >
-                                        <Avatar
-                                          id={item.id}
-                                          hasTooltip={true}
-                                          size="avatar-sm"
-                                        />
-                                        <div className="space-y-0.5">
-                                          <div
-                                            className={`${
-                                              prototype.getUserByID(item.id)
-                                                ?.isPremium
-                                                ? "text-premium-500"
-                                                : ""
-                                            } ${
-                                              prototype.getUserByID(item.id)
-                                                ?.isYou
-                                                ? "text-main"
-                                                : ""
-                                            }`}
-                                          >
-                                            {prototype.getUserByID(item.id)
-                                              ?.clan && (
-                                              <>
-                                                &#91;
-                                                {
-                                                  prototype.getClanByID(
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    )?.clan
-                                                  )?.tag
-                                                }
-                                                &#93;{" "}
-                                              </>
-                                            )}
-                                            {
-                                              prototype.getUserByID(item.id)
-                                                ?.nickname
-                                            }
-                                          </div>
+                                    <div className="flex gap-3 items-center self-center interactive">
+                                      <Avatar
+                                        id={item.id}
+                                        hasTooltip={true}
+                                        size="avatar-sm"
+                                      />
+                                      <div className="space-y-0.5">
+                                        <div
+                                          className={`${
+                                            prototype.getUserByID(item.id)
+                                              ?.isPremium
+                                              ? "text-premium-500"
+                                              : ""
+                                          } ${
+                                            prototype.getUserByID(item.id)
+                                              ?.isYou
+                                              ? "text-main"
+                                              : ""
+                                          }`}
+                                        >
+                                          {prototype.getUserByID(item.id)
+                                            ?.clan && (
+                                            <>
+                                              &#91;
+                                              {
+                                                prototype.getClanByID(
+                                                  prototype.getUserByID(item.id)
+                                                    ?.clan
+                                                )?.tag
+                                              }
+                                              &#93;{" "}
+                                            </>
+                                          )}
+                                          {
+                                            prototype.getUserByID(item.id)
+                                              ?.nickname
+                                          }
+                                        </div>
+                                        <div className="flex gap-1">
                                           <div className="flex gap-1">
-                                            <div className="flex gap-1">
-                                              {prototype
-                                                .getUserByID(item.id)
-                                                .games.map(
-                                                  (game, gameIndex) => (
-                                                    <GameIcon
-                                                      key={gameIndex}
-                                                      game={game}
-                                                      size="text-base"
-                                                    />
-                                                  )
-                                                )}
-                                            </div>
+                                            {prototype
+                                              .getUserByID(item.id)
+                                              .games.map((game, gameIndex) => (
+                                                <GameIcon
+                                                  key={gameIndex}
+                                                  game={game}
+                                                  size="text-base"
+                                                />
+                                              ))}
                                           </div>
                                         </div>
-                                      </button>
-                                    </Link>
+                                      </div>
+                                    </div>
                                   </td>
                                   <td className="max-xl:hidden">
                                     <div className="text-ui-300 text-left">
@@ -369,34 +347,14 @@ export default function TabProfileFriends() {
                                       #{RandomNumber(10, 300)}
                                     </div>
                                   </td>
-                                  <td className="w-14">
-                                    <div className="dropdown dropdown-left">
-                                      <label
-                                        tabIndex="0"
-                                        className="button button-ghost rounded-full"
-                                      >
-                                        <span className="icon icon-dots-vertical" />
-                                      </label>
-                                      <div
-                                        tabIndex="0"
-                                        className="dropdown-content bg-ui-600 w-52 p-1"
-                                      >
-                                        <ul className="menu menu-rounded menu-secondary">
-                                          <li>
-                                            <button
-                                              type="button"
-                                              onClick={openModalRemoveFriends.bind(
-                                                this,
-                                                item.id
-                                              )}
-                                            >
-                                              <span className="icon icon-a-remove" />
-                                              <span>Unfollow</span>
-                                            </button>
-                                          </li>
-                                        </ul>
-                                      </div>
-                                    </div>
+                                  <td className="text-right">
+                                    <Tooltip tooltip="Follow back">
+                                      <ButtonFeedback
+                                        variant="button-tertiary rounded-full"
+                                        icon="icon-a-sync"
+                                        message="Player added to your following"
+                                      />
+                                    </Tooltip>
                                   </td>
                                 </tr>
                               ))}

@@ -43,6 +43,7 @@ const slides = [
     buttonExternal: true,
     buttonURL: "#",
   },
+  /*
   {
     subtitle: "Power Play",
     title: "Earn more on this week's Power Play Ladders",
@@ -53,6 +54,7 @@ const slides = [
     buttonLabel: "Learn more",
     buttonURL: "#",
   },
+  */
 ];
 
 const modes = {
@@ -177,7 +179,7 @@ export default function Carousel(props) {
             }
           }}
         >
-          {slides.slice(0, 4).map((slide, slideIndex) => (
+          {slides.map((slide, slideIndex) => (
             <>
               <div
                 className={`carousel-slide ${
@@ -213,7 +215,7 @@ export default function Carousel(props) {
         </div>
         <div className="carousel-nav">
           <ul className="carousel-list">
-            {slides.slice(0, 4).map((item, itemIndex) => (
+            {slides.map((item, itemIndex) => (
               <>
                 <li
                   key={itemIndex}

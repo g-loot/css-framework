@@ -4,10 +4,10 @@ export const DataBattlepass = [
     currentStep: 5,
     currentProgress: 70,
     meta: {
-      name: "HyperX Battlepass",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
-      logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-hyperx.svg",
-      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_HyperX.jpg",
+      name: "Battlepass",
+      description: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward. Battlepass and XP reset each week so you will always have something new to work towards.",
+      logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-generic.svg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg",
     },
     steps: [
       {
@@ -149,10 +149,10 @@ export const DataBattlepass = [
     currentStep: 4,
     currentProgress: 75,
     meta: {
-      name: "Battlepass",
-      description: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward. Battlepass and XP reset each week so you will always have something new to work towards.",
-      logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-generic.svg",
-      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg",
+      name: "HyperX Battlepass",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vehicula ac diam sed interdum. Interdum et malesuada fames ac ante ipsum primis in faucibus.",
+      logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-hyperx.svg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_HyperX.jpg",
     },
     steps: [
       {
@@ -583,20 +583,20 @@ export const DataBattlepassRewards = [
   {
     id: 5,
     type: "image",
-    name: "30 coins",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-5.png",
+    name: "20 coins",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694012303/Stryda/currencies/battlepass-reward-coin-20.png",
   },
   {
     id: 6,
     type: "image",
-    name: "60 coins",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-6.png",
+    name: "30 coins",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694012303/Stryda/currencies/battlepass-reward-coin-30.png",
   },
   {
     id: 7,
     type: "image",
-    name: "120 coins",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-7.png",
+    name: "40 coins",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694012303/Stryda/currencies/battlepass-reward-coin-40.png",
   },
   {
     id: 8,

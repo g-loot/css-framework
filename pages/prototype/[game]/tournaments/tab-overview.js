@@ -182,7 +182,7 @@ export default function TabTournamentsOverview() {
           >
             <div className="flex-1 space-y-4 overflow-hidden">
               <div className="surface surface-dimmed sm:rounded-lg overflow-hidden">
-                <div className="overflow-x-auto scrollbar-desktop py-8">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop py-8">
                   <ul className="step step-label-bottom step-primary min-w-[1000px]">
                     <li className="is-active">
                       <a href="#">

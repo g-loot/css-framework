@@ -403,7 +403,7 @@ export default function StatsLeagueOfLegends() {
               </section>
               <section className="mb-4">
                 <h2 className="h5 mx-4 md:mx-0">Most played champions</h2>
-                <div className="overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
                   <table
                     className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
                       loading ? "is-loading" : ""
@@ -535,7 +535,7 @@ export default function StatsLeagueOfLegends() {
               </section>
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Last 20 matches</h2>
-                <div className="overflow-x-auto scrollbar-desktop leading-tight pb-4">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop leading-tight pb-4">
                   {StatsLeagueOfLegendsDemoLatestMatches.slice(
                     0,
                     maxMap - 1

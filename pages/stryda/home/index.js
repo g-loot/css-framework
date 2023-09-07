@@ -163,7 +163,7 @@ export default function Home() {
                               <ButtonFeedback
                                 variant="button-tertiary rounded-full"
                                 icon="icon-a-add"
-                                message="Player added to your followings"
+                                message="Player added to your following"
                               />
                             </Tooltip>
                           </div>

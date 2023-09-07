@@ -995,7 +995,7 @@ export const FrameworkPages = {
           tab: 0,
         },
         {
-          label: "Remove as friend",
+          label: "Unfollow",
           chip: "modal",
           url: "friends",
           query: "modalremovefriends=true",

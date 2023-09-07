@@ -19,7 +19,8 @@ import TabProfileOverview from "./tab-overview";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
-import TabProfileFriends from "./tab-friends";
+import TabProfileFollowing from "./tab-following";
+import TabProfileFollowers from "./tab-followers";
 
 
 const achievementsList = [
@@ -158,7 +159,7 @@ const TabsItems = [
     component: TabProfileActivity,
   },
   {
-    label: `Achievements (${achievementLength})`,
+    label: `Achievements`,
     url: "achievements",
     component: TabProfileAchievements,
   },
@@ -168,9 +169,14 @@ const TabsItems = [
     component: TabProfileStats,
   },
   {
-    label: "Followers (3)",
+    label: "Followers",
     url: "followers",
-    component: TabProfileFriends,
+    component: TabProfileFollowers,
+  },
+  {
+    label: "Following",
+    url: "following",
+    component: TabProfileFollowing,
   },
 ];
 

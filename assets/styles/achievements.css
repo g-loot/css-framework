@@ -169,7 +169,7 @@
   filter: brightness(0) saturate(100%) invert(75%) sepia(92%) saturate(353%) hue-rotate(340deg) brightness(99%) contrast(93%);
 }
 .achievement-level-5 > * {
-  filter: brightness(0) saturate(100%) invert(47%) sepia(76%) saturate(2146%) hue-rotate(228deg) brightness(102%) contrast(103%);
+  filter: brightness(0) saturate(100%) invert(52%) sepia(39%) saturate(1746%) hue-rotate(324deg) brightness(99%) contrast(103%);
 }
 
 .text-achievement-level-0 {
@@ -199,7 +199,7 @@
 }
 .text-achievement-level-5 {
   @apply
-  text-premium-500
+  text-error-300
   ;
 }
 

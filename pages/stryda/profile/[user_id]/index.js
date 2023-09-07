@@ -16,7 +16,8 @@ import TabProfileHighlights from "./tab-highlights";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
 import TabProfileStats from "./tab-stats";
-import TabProfileFriends from "./tab-friends";
+import TabProfileFollowing from "./tab-following";
+import TabProfileFollowers from "./tab-followers";
 import Loader from "@/pages/stryda/components/Loader";
 import WidgetUser from "@/pages/stryda/components/WidgetUser";
 import WidgetUserLeftPanel from "@/pages/stryda/components/WidgetUserLeftPanel";
@@ -189,7 +190,12 @@ export default function Profile() {
     {
       label: "Followers",
       url: "followers",
-      component: TabProfileFriends,
+      component: TabProfileFollowers,
+    },
+    {
+      label: "Following",
+      url: "following",
+      component: TabProfileFollowing,
     },
   ];
 
@@ -359,7 +365,7 @@ export default function Profile() {
                       )}
                     >
                       <span className="icon icon-a-remove" />
-                      <span>Remove as friend</span>
+                      <span>Unfollow</span>
                     </a>
                   )}
                   {!selectedUser.isYou && !selectedUser.isFriend && (

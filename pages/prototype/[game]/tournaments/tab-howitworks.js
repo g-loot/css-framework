@@ -168,7 +168,7 @@ export default function TabTournamentsHowItWorks() {
         <div className="px-4 sm:px-0">
           <h2 className="h4 mb-4">How Tournaments work</h2>
         </div>
-        <div className="overflow-x-auto scrollbar-desktop py-4">
+        <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop py-4">
           <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px]">
             <li>
               <a href="#">

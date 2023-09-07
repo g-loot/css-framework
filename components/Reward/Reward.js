@@ -58,13 +58,13 @@ export default function Reward(props) {
       )}
       {props.reward.type === "ticket" && (
         <div
-          className={`flex items-center whitespace-nowrap ${
+          className={`flex items-center whitespace-nowrap text-main ${
             props.gap ? props.gap : "gap-1"
           }`}
         >
-          <span className={`icon icon-ticket ${props.iconClassNames}`} />
-          <span className={`${props.textClassNames}`}>
-            {numberWithSpaces(Math.round(props.reward.value * xFactor))}
+          <span className={`icon icon-ticket text-xl`} />
+          <span>
+            {props.reward.value}
           </span>
         </div>
       )}

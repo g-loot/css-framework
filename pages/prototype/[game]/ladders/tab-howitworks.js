@@ -339,7 +339,7 @@ export default function TabLaddersHowItWorks() {
                 alt=""
               />
             </div>
-            <div className="overflow-x-auto scrollbar-desktop overflow-y-hidden pt-4">
+            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop overflow-y-hidden pt-4">
               <ul className="step step-label-bottom step-primary is-inactive min-w-[1000px] !pb-44">
                 <li>
                   <div>

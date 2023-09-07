@@ -105,6 +105,11 @@ export default function Rewards(props) {
                         <div>1 player banner</div>
                       </li>
                     )}
+                    {reward.type === "ticket" && (
+                      <li>
+                        Qualified to the Nordic Clash playoffs
+                      </li>
+                    )}
                   </>
                 ))}
               </ul>

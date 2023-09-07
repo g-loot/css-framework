@@ -289,7 +289,7 @@ export default function ProfileHeader(props) {
                       onClick={openModalRemoveFriends.bind(this, selectedUser.id)}
                     >
                       <span className="icon icon-a-remove" />
-                      <span>Remove as friend</span>
+                      <span>Unfollow</span>
                     </a>
                 </div>
               )}
