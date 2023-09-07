@@ -156,7 +156,7 @@ export default function Home() {
                 </button>
               </Link>
             ) : (
-              <Link href="/prototype/valorant/ladders/">
+              <Link href="/prototype/clans/1">
                 <button type="button" className="link text-ui-300 text-sm">
                   View your Clan
                 </button>

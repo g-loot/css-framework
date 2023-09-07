@@ -35,13 +35,13 @@ export default function HomeLaddersSolo(props) {
         <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
           <div className="relative z-10 px-8 lg:w-1/2">
             <h3 className="mb-6">
-              Compete in Ladders
+              Climb the leaderboards
               <br />
               and earn rewards
             </h3>
-            <Link href="/prototype/valorant/ladders">
+            <Link href={`/prototype/valorant/ladders${prototype.getURLparams()}`}>
               <button type="button" className="button button-primary">
-                <span>Discover Valorant Ladders</span>
+                <span>Discover Ladders</span>
               </button>
             </Link>
           </div>

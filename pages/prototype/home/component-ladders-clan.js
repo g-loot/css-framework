@@ -33,38 +33,15 @@ export default function HomeLaddersClan(props) {
 
   return (
     <div className="relative">
-      {hasNoClan && !hasNoLadders && (
-        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
-          <div className="relative z-10 px-8 lg:w-1/2">
-            <h3 className="mb-6">
-              Multiply your rewards
-              <br />
-              by competing with a Clan
-            </h3>
-            <Link href="/prototype/clans">
-              <button type="button" className="button button-primary">
-                <span>Discover Clans</span>
-              </button>
-            </Link>
-          </div>
-          <img
-            className="absolute inset-0 h-full w-full object-cover object-left opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1694090426/Stryda/illustrations/home-laddernoclan.jpg"
-            alt=""
-          />
-        </div>
-      )}
       {hasNoLadders && (
         <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
-        <div className="relative z-10 px-8 lg:w-1/2">
+        <div className="relative z-10 px-8 max-w-[50ch]">
           <h3 className="mb-6">
-            Compete with a Clan and 
-            <br />
-            get stronger together!
+            Play for fun or compete with a Clan to climb the leaderboards
           </h3>
-          <Link href="/prototype/valorant/ladders">
+          <Link href={`/prototype/clans${prototype.getURLparams()}`}>
             <button type="button" className="button button-primary">
-              <span>Discover Valorant Ladders</span>
+              <span>Search for Clans</span>
             </button>
           </Link>
         </div>
