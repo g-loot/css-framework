@@ -105,7 +105,7 @@ const PrototypePage = () => {
                 className="container max-w-2xl mt-24 mb-12 overflow-hidden"
               >
                 <div className="container max-w-xl relative z-0 flex flex-col lg:flex-row lg:items-center overflow-hidden">
-                  <div className="flex-3 py-8 px-6 xl:px-0 ">
+                  <div className="flex-3 py-8 px-6 xl:px-0">
                     <h3
                       className="h5 font-headings text-4xl sm:text-5xl leading-[0.85] text-ui-300 uppercase animate-slide-in-bottom animate-paused animate-delay"
                       style={{
@@ -234,6 +234,26 @@ const PrototypePage = () => {
                     </li>
                   ))}
                 </ul>
+                {agent.articles && (
+                  <div className="container max-w-xl px-6 xl:px-0 animate-slide-in-bottom animate-paused">
+                    <h2 className="h1 text-5xl text-ui-100 mt-12 mb-4">Related articles</h2>
+                    <div className="overflow-x-scroll py-1">
+                      <ul className="grid grid-flow-col auto-cols-auto gap-10 md:grid-cols-2 lg:grid-cols-4 hoverhighlight">
+                        {agent.articles.map((article, articleIndex) => (
+                          <Link key={articleIndex} href={article.url}>
+                            <li className="interactive hover:-translate-y-1">
+                              <img src={article.image} alt={article.title} className="aspect-video rounded object-cover" />
+                              <h3 className="h5 mt-4 mb-2">{article.title}</h3>
+                              <p className="text-ui-300">
+                                {article.excerpt.substring(0,100)}...
+                              </p>
+                            </li>
+                          </Link>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                )}
               </section>
             ))}
             <section className="container max-w-xl relative my-24">

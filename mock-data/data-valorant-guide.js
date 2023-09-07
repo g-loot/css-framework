@@ -54,6 +54,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a tactical map. FIRE to launch a lingering orbital strike laser at the selected location, dealing high damage-over-time to players caught in the selected area.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 2,
@@ -95,6 +134,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "EQUIP a chemical sprayer. FIRE to spray a chemical cloud in all directions around Viper, creating a large cloud that reduces the vision range and maximum health of players inside of it.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -140,6 +218,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a tactical map. FIRE to begin teleporting to the selected location. While teleporting, Omen will appear as a Shade that can be destroyed by an enemy to cancel his teleport.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 4,
@@ -183,6 +300,45 @@ export const dataValorantGuideRoles = [
               "ACTIVATE (X) to enter Astral Form where you can place Stars with PRIMARY FIRE. Stars can be reactivated later, transforming them into a Nova Pulse, Nebula, or Gravity Well. When Cosmic Divide is charged, use SECONDARY FIRE in Astral Form to begin aiming it, then PRIMARY FIRE to select two locations. An infinite Cosmic Divide connects the two points you select. Cosmic Divide blocks bullets and heavily dampens audio.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 5,
@@ -224,6 +380,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "EQUIP the full power of your Artifact. FIRE to summon a geyser pool on the ground. Enemy players in the area are targeted by successive geyser strikes. Players caught within a strike are CONCUSSED.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -284,6 +479,45 @@ export const dataValorantGuideRoles = [
               "INSTANTLY place a marker at Phoenix’s location. While this ability is active, dying or allowing the timer to expire will end this ability and bring Phoenix back to this location with full health.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 2,
@@ -327,6 +561,45 @@ export const dataValorantGuideRoles = [
               "INSTANTLY enter a frenzy, increasing firing speed, equip and reload speed dramatically. Scoring a kill renews the duration.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 3,
@@ -367,6 +640,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "EQUIP a set of highly accurate knives that recharge on killing an opponent. FIRE to throw a single knife at your target. ALTERNATE FIRE to throw all remaining daggers at your target.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -412,6 +724,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a rocket launcher. FIRE shoots a rocket that does massive area damage on contact with anything.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 5,
@@ -455,6 +806,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a mask that can see between dimensions. FIRE to drift into Yoru's dimension, unable to be affected or seen by enemies from the outside.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 6,
@@ -496,6 +886,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "Unleash Neon’s full power and speed for a short duration. FIRE to channel the power into a deadly lightning beam with high movement accuracy. The duration resets on each kill.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -556,6 +985,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a bow with three long-range wall-piercing energy blasts. FIRE to release an energy blast in a line in front of Sova, dealing damage and revealing the location of enemies caught in the line. This ability can be RE-USED up to two more times while the ability timer is active.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 2,
@@ -597,6 +1065,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "EQUIP a seismic charge. FIRE to send a cascading quake through all terrain in a large cone. The quake dazes and knocks up anyone caught in it.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -642,6 +1149,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a Seeker trinket. FIRE to send out three Seekers to track down the three closest enemies. If a Seeker reaches its target, it nearsights them.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 4,
@@ -683,6 +1229,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "INSTANTLY overload with polarized radianite energy that empowers KAY/O and causes large energy pulses to emit from his location. Enemies hit with these pulses are suppressed for a short duration.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -728,6 +1313,45 @@ export const dataValorantGuideRoles = [
               "EQUIP the power of Fear. FIRE to send out a wave of nightmare energy that can traverse through walls. The energy creates a trail to the opponent as well as deafens and decays them.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 6,
@@ -769,6 +1393,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "EQUIP Thrash FIRE to link with Thrash’s mind and steer her through enemy territory ACTIVATE to lunge forward and explode, detaining any enemies in a small radius. When Thrash expires she reverts into a dormant globule INTERACT to reclaim the globule and gain another Thrash charge after a short cooldown. Thrash can be reclaimed once.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -829,6 +1492,45 @@ export const dataValorantGuideRoles = [
               "EQUIP a resurrection ability. FIRE with your crosshairs placed over a dead ally to begin resurrecting them. After a brief channel, the ally will be brought back to life with full health.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 2,
@@ -870,6 +1572,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "INSTANTLY use on a dead enemy player in your crosshairs to reveal the location of all living enemy players.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
@@ -915,6 +1656,45 @@ export const dataValorantGuideRoles = [
               "EQUIP the Lockdown device. FIRE to deploy the device. After a long windup, the device Detains all enemies caught in the radius. The device can be destroyed by enemies.",
           },
         ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
+          },
+        ],
       },
       {
         id: 4,
@@ -956,6 +1736,45 @@ export const dataValorantGuideRoles = [
             defaultKey: "X",
             description:
               "ACTIVATE to summon a powerful, custom sniper rifle that will kill an enemy with any direct hit. Killing an enemy creates a lingering field that slows players caught inside of it.",
+          },
+        ],
+        articles: [
+          {
+            id: 1,
+            title: "Valorant kasbah map guide for winning on tdm",
+            image:
+              "https://www.datocms-assets.com/92583/1688642957-kasbah-map-in-valorant-team-deathmatch.jpg",
+            url: "https://stryda.gg/news/valorant-kasbah-map-guide-tdm",
+            excerpt:
+              "One of three maps added to VALORANT to kick off Episode 7, Kasbah is specially made for the new Team Deathmatch (TDM) game mode. This guide will tell you everything to know about Kasbah map, including callouts, orb locations, and the best Agents to play.",
+          },
+          {
+            id: 2,
+            title: "Who is new Valorant agent giraffe? all theories and leaks!",
+            image:
+              "https://www.datocms-assets.com/92583/1691677405-valorant-new-agent-codename-giraffe.png",
+            url: "https://stryda.gg/news/valorant-new-agent-codename-giraffe-theories-leaks",
+            excerpt:
+              "VALORANT is going to soon release yet another new agent, codename Giraffe! Discover who is Giraffe, their Class, and all info and leaks available about them including the recent audio files and our own theories.",
+          },
+          {
+            id: 3,
+            title:
+              "VALORANT Champions 2023: teams, format, and WINNER prevision",
+            image:
+              "https://www.datocms-assets.com/92583/1691493767-valorant-champions-2023.png",
+            url: "https://stryda.gg/news/valorant-champions-2023",
+            excerpt:
+              "VALORANT Champions 2023 has just started, and here you will find everything you need to know about dates, format, location, and more. Keep reading to see our previsions about the possible winning teams of this year’s Champions!",
+          },
+          {
+            id: 4,
+            title: "Stryda new VALORANT Agents guides index is online!",
+            image:
+              "https://www.datocms-assets.com/92583/1688567955-sentinels-agents-valorant.png",
+            url: "https://stryda.gg/news/stryda-valorant-agents-guides",
+            excerpt:
+              "Looking for a new main Agent or to step-up your game? Learn more about all the VALORANT Agents with our new index guide! Find all our Agents guides and pick the best class for your play-style with Stryda.",
           },
         ],
       },
