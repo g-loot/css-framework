@@ -236,7 +236,7 @@ export default function PrototypeLeftMenuNew(props) {
                   </div>
                   <div className="item-action">
                     <div className="relative px-3 mr-2">
-                      <span className="badge bg-error-300 absolute -top-1 right-0 animate-scale-in" />
+                      <span className="badge bg-error-700 absolute -top-1 right-0 animate-scale-in" />
                       <span className="icon icon-a-chat text-ui-200"></span>
                     </div>
                     {/*

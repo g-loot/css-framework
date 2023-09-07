@@ -62,7 +62,7 @@ const Tooltip = (props) => {
                 placement === "bottom" ? "tooltip-bottom" : ""
               } ${placement === "top" ? "tooltip-top" : ""} ${
                 placement === "left" ? "tooltip-left" : ""
-              } ${placement === "right" ? "tooltip-right" : ""}  ${
+              } ${placement === "right" ? "tooltip-right" : ""} ${
                 visible ? "is-active" : ""
               }`}
             >

@@ -220,7 +220,7 @@ export default function Topbar() {
                   >
                     <span
                       data-badge={!isEmpty ? "12" : ""}
-                      className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-300"
+                      className="leading-[0] after:absolute after:-right-3 after:top-1 after:bg-error-700"
                     >
                       <span className="icon icon-alarm text-ui-200" />
                     </span>

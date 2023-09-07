@@ -652,7 +652,7 @@ export const dataShopitems = [
           "https://res.cloudinary.com/gloot/image/upload/v1693488293/Stryda/shop/avatarframes/shop_avatarframe_casinored.svg",
       },
       {
-        id: 176,
+        id: 177,
         name: "Casino Black",
         price: 550025,
         image:

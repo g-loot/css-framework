@@ -3,6 +3,16 @@ import React, { useEffect, useRef, useState } from "react";
 
 const slides = [
   {
+    subtitle: "Nordic Clash",
+    title: "Calling all VALORANT players!",
+    description:
+      "We’re excited to announce that we will partner with Riot Games as part of the official VALORANT OFF//SEASON. The tournament will be open to players of all skill levels, so call up your Clan mates and get ready to compete for a slice of the $20.000 prize pool!",
+    image:
+      "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/64da3d6766c9ace9117ec1dc/e6cb6417609ca30f001a230ecf378f123867de18/original.png?1692024663",
+    buttonLabel: "Learn more",
+    buttonURL: "/prototype/profile/1?tab=achievements",
+  },
+  {
     subtitle: "Achievements",
     title: "The Stryda 5-stack Frenzy!",
     description:
@@ -32,6 +42,7 @@ const slides = [
     buttonLabel: "Compete now",
     buttonURL: "/prototype/valorant/ladders?freeentry=true",
   },
+  /*
   {
     subtitle: "Shop",
     title: "Apex Legends: Fade, the Phasing Punisher",
@@ -43,7 +54,6 @@ const slides = [
     buttonExternal: true,
     buttonURL: "#",
   },
-  /*
   {
     subtitle: "Power Play",
     title: "Earn more on this week's Power Play Ladders",
