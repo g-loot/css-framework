@@ -24,17 +24,17 @@ const SoloLadders = [
   }
 ]
 
-export default function HomeLaddersSolo() {
+export default function HomeLaddersSolo(props) {
   const { query } = useRouter();
-  const hasNoLadders = query.noladders === "true" ? true : false;
+  const hasNoLadders = props.hasNoLadders || false;
   const prototype = usePrototypeData();
 
   return (
     <div className="relative">
       {hasNoLadders ? (
-        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
           <div className="relative z-10 px-8 lg:w-1/2">
-            <h3 className="mb-4">
+            <h3 className="mb-6">
               Compete in Ladders
               <br />
               and earn rewards
@@ -47,7 +47,7 @@ export default function HomeLaddersSolo() {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1673862737/Stryda/illustrations/home-laddernoladders.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1694090425/Stryda/illustrations/home-ad-multipleladders.jpg"
             alt=""
           />
         </div>

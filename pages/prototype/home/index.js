@@ -144,7 +144,7 @@ export default function Home() {
               </Link>
             )}
           </div>
-          <HomeLaddersSolo />
+          <HomeLaddersSolo hasNoLadders={hasNoLadders} />
         </section>
         <section className="mb-8">
           <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">

@@ -28,15 +28,15 @@ const ClanLaddersNew = [
 export default function HomeLaddersClan(props) {
   const { query } = useRouter();
   const hasNoClan = props.hasNoClan;
-  const hasNoLadders = props.hasNoLadders;
+  const hasNoLadders = props.hasNoLadders || false;
   const prototype = usePrototypeData();
 
   return (
     <div className="relative">
       {hasNoClan && !hasNoLadders && (
-        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
           <div className="relative z-10 px-8 lg:w-1/2">
-            <h3 className="mb-4">
+            <h3 className="mb-6">
               Multiply your rewards
               <br />
               by competing with a Clan
@@ -49,15 +49,15 @@ export default function HomeLaddersClan(props) {
           </div>
           <img
             className="absolute inset-0 h-full w-full object-cover object-right-top opacity-20 lg:opacity-100"
-            src="https://res.cloudinary.com/gloot/image/upload/v1670324146/Marketing/2022_prototype/home-brawlnoclan.jpg"
+            src="https://res.cloudinary.com/gloot/image/upload/v1694090426/Stryda/illustrations/home-laddernoclan.jpg"
             alt=""
           />
         </div>
       )}
       {hasNoLadders && (
-        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-12 mt-4 flex items-center">
+        <div className="flex-none surface sm:rounded-lg overflow-hidden w-full px-4 py-24 mt-4 flex items-center">
         <div className="relative z-10 px-8 lg:w-1/2">
-          <h3 className="mb-4">
+          <h3 className="mb-6">
             Compete with a Clan and 
             <br />
             get stronger together!
@@ -70,7 +70,7 @@ export default function HomeLaddersClan(props) {
         </div>
         <img
           className="absolute inset-0 h-full w-full object-cover object-right-top opacity-20 lg:opacity-100"
-          src="https://res.cloudinary.com/gloot/image/upload/v1670324146/Marketing/2022_prototype/home-brawlnoclan.jpg"
+          src="https://res.cloudinary.com/gloot/image/upload/v1694090426/Stryda/illustrations/home-laddernoclan.jpg"
           alt=""
         />
       </div>
