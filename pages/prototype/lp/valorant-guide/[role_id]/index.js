@@ -236,7 +236,7 @@ const PrototypePage = () => {
                 </ul>
                 {agent.articles && (
                   <div className="container max-w-xl px-6 xl:px-0 animate-slide-in-bottom animate-paused">
-                    <h2 className="h1 text-5xl text-ui-100 mt-12 mb-4 text-main">Related articles</h2>
+                    <h2 className="h1 text-5xl mt-12 mb-4 text-main">Related articles</h2>
                     <div className="overflow-x-scroll py-1">
                       <ul className="grid grid-flow-col auto-cols-auto gap-10 md:grid-cols-2 lg:grid-cols-4 hoverhighlight">
                         {agent.articles.map((article, articleIndex) => (
