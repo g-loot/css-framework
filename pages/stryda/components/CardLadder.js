@@ -87,8 +87,15 @@ export default function CardLadder(props) {
             )}
             <div className="card-image">
               <div className="card-image-content">
-                <div className="rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-sm text-ui-200">
-                  <GameIcon game={gameID} />
+                <div
+                  className={`rounded bg-ui-800/90 p-0.5 pr-3 flex gap-2 items-center text-ui-200 ${
+                    size === "card-sm" ? "text-xs" : "text-sm"
+                  }`}
+                >
+                  <GameIcon
+                    game={gameID}
+                    size={size === "card-sm" ? "text-base" : ""}
+                  />
                   <span>{ladder.gameMode}</span>
                   {ladder.status !== "finished" ||
                     (ladder.hasClaim && selectedUser.isYou && (
@@ -146,9 +153,9 @@ export default function CardLadder(props) {
                     <span className="icon icon-coin text-currency-1-500" />
                     <span className="text-currency-1-500 text-sm">
                       {ladder.isPowerPlay ? (
-                        <>50 000 - 5 000 000</>
+                        <>50 000 - 500 000</>
                       ) : (
-                        <>5 000 - 30 000</>
+                        <>5 000 - 50 000</>
                       )}
                     </span>
                   </div>
@@ -270,7 +277,11 @@ export default function CardLadder(props) {
                                     <div className="text-sm">#7</div>
                                   </div>
                                 </div>
-                                <div className="infobanner-back absolute inset-0 flex items-center text-sm">
+                                <div
+                                  className={`infobanner-back absolute inset-0 flex items-center ${
+                                    size === "card-sm" ? "text-xs" : "text-sm"
+                                  }`}
+                                >
                                   <div className="animate-pulse text-ui-100">
                                     Waiting for your 3 matches...
                                   </div>

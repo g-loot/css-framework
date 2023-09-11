@@ -78,7 +78,6 @@ export default function Battlepass(props) {
     }
   }, [isfinished]);
 
-
   const handleResize = useCallback(() => {
     setTimeout(() => {
       const divWidthResized = componentRef?.current?.offsetWidth;
@@ -98,7 +97,7 @@ export default function Battlepass(props) {
   }, [componentRef, handleResize]);
 
   useEffect(() => {
-    if(selectedBattlepass) {
+    if (selectedBattlepass) {
       setCurrentStep(selectedBattlepass.currentStep);
       setActiveStep(selectedBattlepass.currentStep);
       if (selectedBattlepass.currentStep > maxSteps) {
@@ -242,21 +241,45 @@ export default function Battlepass(props) {
 
   return (
     <>
-    {selectedBattlepass && (
-      <div
-        className={`battlepass-container ${loading ? "is-loading" : ""} ${
-          size === "battlepass-md" ? "battlepass-md" : ""
-        }`}
-        ref={componentRef}
-      >
-        {isFinished ? (
-          <div className="battlepass-summary">
-            <div>
-              <ul>
-                {hasPremium && (
+      {selectedBattlepass && size !== "battlepass-sm" && (
+        <div
+          className={`battlepass-container ${loading ? "is-loading" : ""} ${
+            size === "battlepass-md" ? "battlepass-md" : ""
+          }`}
+          ref={componentRef}
+        >
+          {isFinished ? (
+            <div className="battlepass-summary">
+              <div>
+                <ul>
+                  {hasPremium && (
+                    <li>
+                      <div className="battlepass-reward-image">
+                        {explosion1 && (
+                          <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                            <Lottie
+                              animationData={LottieExplosion}
+                              loop={false}
+                              autoplay={true}
+                            />
+                          </div>
+                        )}
+                        <img
+                          src={`${getBattlepassRewardByID(41).image}`}
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </div>
+                      <div className="battlepass-reward-text">
+                        <span>Total XP</span>
+                        <span>2240</span>
+                      </div>
+                    </li>
+                  )}
                   <li>
                     <div className="battlepass-reward-image">
-                      {explosion1 && (
+                      {explosion2 && (
                         <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
                           <Lottie
                             animationData={LottieExplosion}
@@ -266,676 +289,721 @@ export default function Battlepass(props) {
                         </div>
                       )}
                       <img
-                        src={`${
-                          getBattlepassRewardByID(41).image
-                        }`}
+                        src={`${getBattlepassRewardByID(7).image}`}
                         width="100%"
                         height="auto"
                         alt=""
                       />
                     </div>
                     <div className="battlepass-reward-text">
-                      <span>Total XP</span>
-                      <span>2240</span>
+                      <span>Coins</span>
+                      <span>1411</span>
+                    </div>{" "}
+                  </li>
+                  <li>
+                    <div className="battlepass-reward-image">
+                      {explosion3 && (
+                        <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      )}
+                      <img
+                        src={`${getBattlepassRewardByID(10).image}`}
+                        width="100%"
+                        height="auto"
+                        alt=""
+                      />
+                    </div>
+                    <div className="battlepass-reward-text">
+                      <span>Tokens</span>
+                      <span>879</span>
+                    </div>{" "}
+                  </li>
+                  <li>
+                    <div className="battlepass-reward-image">
+                      {explosion4 && (
+                        <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      )}
+                      <CarouselSingle autoPlay={false}>
+                        {!hasPremium ? (
+                          <>
+                            <CarouselItem>
+                              <div className="battlepass-reward-image">
+                                <img
+                                  src={`${getBattlepassRewardByID(18).image}`}
+                                  width="100%"
+                                  height="auto"
+                                  alt=""
+                                />
+                                <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
+                                  Premium
+                                </span>
+                              </div>
+                            </CarouselItem>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(17).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(16).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(15).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                      </CarouselSingle>
+                    </div>
+                    <div className="battlepass-reward-text">
+                      <span>Avatar frames</span>
+                      <span>{!hasPremium ? <>4</> : <>3</>}</span>
+                    </div>{" "}
+                  </li>
+                  <li>
+                    <div className="battlepass-reward-image">
+                      {explosion5 && (
+                        <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
+                          <Lottie
+                            animationData={LottieExplosion}
+                            loop={false}
+                            autoplay={true}
+                          />
+                        </div>
+                      )}
+                      <CarouselSingle autoPlay={false}>
+                        {!hasPremium ? (
+                          <>
+                            <CarouselItem>
+                              <div className="battlepass-reward-image">
+                                <img
+                                  src={`${getBattlepassRewardByID(31).image}`}
+                                  width="100%"
+                                  height="auto"
+                                  alt=""
+                                />
+                                <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
+                                  Premium
+                                </span>
+                              </div>
+                            </CarouselItem>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(36).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(31).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(33).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                        <CarouselItem>
+                          <div className="battlepass-reward-image">
+                            <img
+                              src={`${getBattlepassRewardByID(35).image}`}
+                              width="100%"
+                              height="auto"
+                              alt=""
+                            />
+                          </div>
+                        </CarouselItem>
+                      </CarouselSingle>
+                    </div>
+                    <div className="battlepass-reward-text">
+                      <span>Player banners</span>
+                      <span>{!hasPremium ? <>5</> : <>4</>}</span>
                     </div>
                   </li>
-                )}
-                <li>
-                  <div className="battlepass-reward-image">
-                    {explosion2 && (
-                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    )}
-                    <img
-                      src={`${
-                        getBattlepassRewardByID(7).image
-                      }`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </div>
-                  <div className="battlepass-reward-text">
-                    <span>Coins</span>
-                    <span>1411</span>
-                  </div>{" "}
-                </li>
-                <li>
-                  <div className="battlepass-reward-image">
-                    {explosion3 && (
-                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    )}
-                    <img
-                      src={`${
-                        getBattlepassRewardByID(10).image
-                      }`}
-                      width="100%"
-                      height="auto"
-                      alt=""
-                    />
-                  </div>
-                  <div className="battlepass-reward-text">
-                    <span>Tokens</span>
-                    <span>879</span>
-                  </div>{" "}
-                </li>
-                <li>
-                  <div className="battlepass-reward-image">
-                    {explosion4 && (
-                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    )}
-                    <CarouselSingle autoPlay={false}>
-                      {!hasPremium ? (
-                        <>
-                          <CarouselItem>
-                            <div className="battlepass-reward-image">
-                              <img
-                                src={`${
-                                  getBattlepassRewardByID(18).image
-                                }`}
-                                width="100%"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
-                                Premium
-                              </span>
-                            </div>
-                          </CarouselItem>
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(17).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
+                </ul>
+                {hasPremium && (
+                  <>
+                    {!isPremium && (
+                      <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center overflow-hidden rounded-b relative">
+                        <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
+                        <div>
+                          <PremiumLogo
+                            src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
+                            width="auto"
+                            height="60"
+                            className="h-16"
                           />
                         </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(16).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
+                        <div className="flex-1 text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
+                          <p className="max-w-[30ch]">
+                            Unlock exclusive Premium rewards before the
+                            Battlepass ends.
+                          </p>
+                          <button
+                            type="button"
+                            className="button button-premium is-shining"
+                            onClick={buyPremium}
+                          >
+                            <span className="icon icon-crown" />
+                            <span>Get Premium</span>
+                          </button>
                         </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(15).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselSingle>
-                  </div>
-                  <div className="battlepass-reward-text">
-                    <span>Avatar frames</span>
-                    <span>{!hasPremium ? <>4</> : <>3</>}</span>
-                  </div>{" "}
-                </li>
-                <li>
-                  <div className="battlepass-reward-image">
-                    {explosion5 && (
-                      <div className="lottie-blur absolute z-50 -inset-6 pointer-events-none">
-                        <Lottie
-                          animationData={LottieExplosion}
-                          loop={false}
-                          autoplay={true}
-                        />
-                      </div>
-                    )}
-                    <CarouselSingle autoPlay={false}>
-                      {!hasPremium ? (
-                        <>
-                          <CarouselItem>
-                            <div className="battlepass-reward-image">
-                              <img
-                                src={`${
-                                  getBattlepassRewardByID(31).image
-                                }`}
-                                width="100%"
-                                height="auto"
-                                alt=""
-                              />
-                              <span className="absolute top-0.5 inset-x-0.5 text-sm uppercase text-center text-premium-500 rounded bg-ui-850/80">
-                                Premium
-                              </span>
-                            </div>
-                          </CarouselItem>
-                        </>
-                      ) : (
-                        <></>
-                      )}
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(36).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(31).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(33).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
-                        </div>
-                      </CarouselItem>
-                      <CarouselItem>
-                        <div className="battlepass-reward-image">
-                          <img
-                            src={`${
-                              getBattlepassRewardByID(35).image
-                            }`}
-                            width="100%"
-                            height="auto"
-                            alt=""
-                          />
-                        </div>
-                      </CarouselItem>
-                    </CarouselSingle>
-                  </div>
-                  <div className="battlepass-reward-text">
-                    <span>Player banners</span>
-                    <span>{!hasPremium ? <>5</> : <>4</>}</span>
-                  </div>
-                </li>
-              </ul>
-              {hasPremium && (
-                <>
-                  {!isPremium && (
-                    <div className="border-t border-ui-700 p-4 flex flex-col xl:flex-row gap-6 items-center overflow-hidden rounded-b relative">
-                      <i className="absolute -z-10 w-[500px] h-[500px] -rotate-45 -top-[280px] -right-[250px] bg-gradient-to-br from-ui-700/50 via-ui-700/10 to-ui-700/0" />
-                      <div>
-                        <PremiumLogo
-                          src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
-                          width="auto"
-                          height="60"
-                          className="h-16"
-                        />
-                      </div>
-                      <div className="flex-1 text-center xl:text-left space-y-2 xl:border-l xl:border-ui-700 xl:pl-6">
-                        <p className="max-w-[30ch]">
-                          Unlock exclusive Premium rewards before the Battlepass
-                          ends.
-                        </p>
-                        <button
-                          type="button"
-                          className="button button-premium is-shining"
-                          onClick={buyPremium}
-                        >
-                          <span className="icon icon-crown" />
-                          <span>Get Premium</span>
-                        </button>
-                      </div>
-                      <div className="w-52">
-                        <CarouselSingle autoPlay={false}>
-                          {getBattlepassPremiumSteps().map(
-                            (item, itemIndex) => (
-                              <CarouselItem key={itemIndex}>
-                                <div className="battlepass-step is-premium is-locked mt-5">
-                                  <div className="battlepass-content">
-                                    <div className="battlepass-decoration">
-                                      <span>
-                                        {
-                                          getBattlepassRewardByID(item.reward)
-                                            .name
-                                        }
-                                      </span>
-                                    </div>
-                                    <div className="battlepass-body">
-                                      <img
-                                        src={`${
-                                          getBattlepassRewardByID(item.reward)
-                                            .image
-                                        }`}
-                                        width="100%"
-                                        height="auto"
-                                        alt={
-                                          getBattlepassRewardByID(item.reward)
-                                            .name
-                                        }
-                                      />
+                        <div className="w-52">
+                          <CarouselSingle autoPlay={false}>
+                            {getBattlepassPremiumSteps().map(
+                              (item, itemIndex) => (
+                                <CarouselItem key={itemIndex}>
+                                  <div className="battlepass-step is-premium is-locked mt-5">
+                                    <div className="battlepass-content">
+                                      <div className="battlepass-decoration">
+                                        <span>
+                                          {
+                                            getBattlepassRewardByID(item.reward)
+                                              .name
+                                          }
+                                        </span>
+                                      </div>
+                                      <div className="battlepass-body">
+                                        <img
+                                          src={`${
+                                            getBattlepassRewardByID(item.reward)
+                                              .image
+                                          }`}
+                                          width="100%"
+                                          height="auto"
+                                          alt={
+                                            getBattlepassRewardByID(item.reward)
+                                              .name
+                                          }
+                                        />
+                                      </div>
                                     </div>
                                   </div>
-                                </div>
-                              </CarouselItem>
-                            )
-                          )}
-                        </CarouselSingle>
+                                </CarouselItem>
+                              )
+                            )}
+                          </CarouselSingle>
+                        </div>
+                      </div>
+                    )}
+                  </>
+                )}
+              </div>
+            </div>
+          ) : (
+            <>
+              <div
+                className={`battlepass-viewer ${
+                  size === "battlepass-md" ? "!hidden" : ""
+                }`}
+              >
+                <div className="battlepass-reward">
+                  {getBattlepassRewardByID(
+                    getBattlepassStepByID(activeStep).reward
+                  ).type === "profilebanner" && (
+                    <>
+                      <div className="battlepass-reward-profilebanner">
+                        <Avatar
+                          size="avatar-sm sm:avatar-lg lg:avatar-xl xl:avatar-2xl"
+                          id={1}
+                          hasLevel={false}
+                          hasTooltip={false}
+                          hasTooltipXP={false}
+                        />
+                        <img
+                          src={
+                            prototype.getShopitemByID(
+                              2,
+                              getBattlepassRewardByID(
+                                getBattlepassStepByID(activeStep).reward
+                              ).shopItemID
+                            ).image
+                          }
+                          width="100%"
+                          height="auto"
+                          alt={
+                            prototype.getShopitemByID(
+                              2,
+                              getBattlepassRewardByID(
+                                getBattlepassStepByID(activeStep).reward
+                              ).shopItemID
+                            ).name
+                          }
+                        />
+                      </div>
+                    </>
+                  )}
+                  {getBattlepassRewardByID(
+                    getBattlepassStepByID(activeStep).reward
+                  ).type === "avatarframe" && (
+                    <div className="battlepass-reward-image">
+                      <div className="avatar avatar-circle avatar-xl lg:avatar-2xl my-3">
+                        <img
+                          src={
+                            prototype.getShopitemByID(
+                              1,
+                              getBattlepassRewardByID(
+                                getBattlepassStepByID(activeStep).reward
+                              ).shopItemID
+                            ).image
+                          }
+                          alt=""
+                        />
+                        <div>
+                          <img
+                            src={prototype.getUserByID(1)?.avatar}
+                            alt="avatar"
+                          />
+                        </div>
                       </div>
                     </div>
                   )}
-                </>
-              )}
-            </div>
-          </div>
-        ) : (
-          <>
-            <div
-              className={`battlepass-viewer ${
-                size === "battlepass-md" ? "!hidden" : ""
-              }`}
-            >
-              <div className="battlepass-reward">
-                {getBattlepassRewardByID(
-                  getBattlepassStepByID(activeStep).reward
-                ).type === "profilebanner" && (
-                  <>
-                    <div className="battlepass-reward-profilebanner">
-                      <Avatar
-                        size="avatar-sm sm:avatar-lg lg:avatar-xl xl:avatar-2xl"
-                        id={1}
-                        hasLevel={false}
-                        hasTooltip={false}
-                        hasTooltipXP={false}
-                      />
+                  {getBattlepassRewardByID(
+                    getBattlepassStepByID(activeStep).reward
+                  ).type === "image" && (
+                    <div className="battlepass-reward-image">
                       <img
-                        src={
-                          prototype.getShopitemByID(
-                            2,
-                            getBattlepassRewardByID(
-                              getBattlepassStepByID(activeStep).reward
-                            ).shopItemID
+                        src={`${
+                          getBattlepassRewardByID(
+                            getBattlepassStepByID(activeStep).reward
                           ).image
-                        }
+                        }`}
                         width="100%"
                         height="auto"
                         alt={
-                          prototype.getShopitemByID(
-                            2,
-                            getBattlepassRewardByID(
-                              getBattlepassStepByID(activeStep).reward
-                            ).shopItemID
+                          getBattlepassRewardByID(
+                            getBattlepassStepByID(activeStep).reward
                           ).name
                         }
                       />
                     </div>
-                  </>
-                )}
-                {getBattlepassRewardByID(
-                  getBattlepassStepByID(activeStep).reward
-                ).type === "avatarframe" && (
-                  <div className="battlepass-reward-image">
-                    <div className="avatar avatar-circle avatar-xl lg:avatar-2xl my-3">
-                      <img
-                        src={
-                          prototype.getShopitemByID(
-                            1,
-                            getBattlepassRewardByID(
-                              getBattlepassStepByID(activeStep).reward
-                            ).shopItemID
-                          ).image
-                        }
-                        alt=""
+                  )}
+                  <p className="battlepass-reward-name">
+                    {size === "battlepass-md" && (
+                      <span className="text-ui-300">
+                        {getBattlepassStepByID(activeStep).name}:{" "}
+                      </span>
+                    )}
+                    {
+                      getBattlepassRewardByID(
+                        getBattlepassStepByID(activeStep).reward
+                      ).name
+                    }
+                  </p>
+                </div>
+                <div className="battlepass-reward-info">
+                  <Link
+                    href={`/prototype/profile/1${prototype.getURLparams()}`}
+                  >
+                    <div className="flex items-center gap-4 interactive">
+                      <Avatar
+                        id={1}
+                        hasTooltip={false}
+                        hasLevel={false}
+                        size="avatar-xs"
                       />
-                      <div>
-                        <img
-                          src={prototype.getUserByID(1)?.avatar}
-                          alt="avatar"
-                        />
+                      <div
+                        className={`rounded-full bg-ui-700 border border-ui-600 text-ui-100 -ml-10 h-8 pr-3 flex gap-2 items-center whitespace-nowrap`}
+                      >
+                        <span className="pl-8">
+                          <span
+                            className={` ${
+                              isPremium ? "text-premium-500" : "text-ui-300"
+                            }`}
+                          >
+                            {calculPercent(
+                              getBattlepassByID(selectedBattlepassID)
+                                .currentStep
+                            )}
+                          </span>{" "}
+                          <span>
+                            / {300 + 100 * getBattlepassStepByID(activeStep).id}
+                          </span>
+                        </span>
+                        <span className="icon icon-xp-symbol text-3xl" />
                       </div>
                     </div>
-                  </div>
-                )}
-                {getBattlepassRewardByID(
-                  getBattlepassStepByID(activeStep).reward
-                ).type === "image" && (
-                  <div className="battlepass-reward-image">
-                    <img
-                      src={`${
-                        getBattlepassRewardByID(
-                          getBattlepassStepByID(activeStep).reward
-                        ).image
-                      }`}
-                      width="100%"
-                      height="auto"
-                      alt={
-                        getBattlepassRewardByID(
-                          getBattlepassStepByID(activeStep).reward
-                        ).name
-                      }
-                    />
-                  </div>
-                )}
-                <p className="battlepass-reward-name">
-                  {size === "battlepass-md" && (
-                    <span className="text-ui-300">
-                      {getBattlepassStepByID(activeStep).name}:{" "}
-                    </span>
-                  )}
-                  {
-                    getBattlepassRewardByID(
-                      getBattlepassStepByID(activeStep).reward
-                    ).name
-                  }
-                </p>
-              </div>
-              <div className="battlepass-reward-info">
-                <Link href={`/prototype/profile/1${prototype.getURLparams()}`}>
-                  <div className="flex items-center gap-4 interactive">
-                    <Avatar
-                      id={1}
-                      hasTooltip={false}
-                      hasLevel={false}
-                      size="avatar-xs"
-                    />
-                    <div
-                      className={`rounded-full bg-ui-700 border border-ui-600 text-ui-100 -ml-10 h-8 pr-3 flex gap-2 items-center whitespace-nowrap`}
-                    >
-                      <span className="pl-8">
-                        <span
-                          className={` ${
-                            isPremium ? "text-premium-500" : "text-ui-300"
-                          }`}
-                        >
-                          {calculPercent(
-                            getBattlepassByID(selectedBattlepassID).currentStep
-                          )}
-                        </span>{" "}
-                        <span>
-                          / {300 + 100 * getBattlepassStepByID(activeStep).id}
-                        </span>
-                      </span>
-                      <span className="icon icon-xp-symbol text-3xl" />
-                    </div>
-                  </div>
-                </Link>
-              </div>
-              <div className="battlepass-reward-action">
-                {getBattlepassStepByID(activeStep).id < currentStep ? (
-                  <>
-                    {!getBattlepassStepByID(activeStep).hasClaimed && (
-                      <>
-                        {getBattlepassStepByID(activeStep).isPremium ? (
-                          <>
-                            {isPremium ? (
-                              <button
-                                type="button"
-                                className="button button-claim"
-                                onClick={openModalClaimBattlepassRewards.bind(
-                                  this,
-                                  getBattlepassStepByID(activeStep).reward
-                                )}
-                              >
-                                <span className="icon icon-present animate-bounce" />
-                                <span>Claim reward</span>
-                              </button>
-                            ) : (
-                              <Link
-                                href={`/prototype/premium${prototype.getURLparams()}`}
-                              >
+                  </Link>
+                </div>
+                <div className="battlepass-reward-action">
+                  {getBattlepassStepByID(activeStep).id < currentStep ? (
+                    <>
+                      {!getBattlepassStepByID(activeStep).hasClaimed && (
+                        <>
+                          {getBattlepassStepByID(activeStep).isPremium ? (
+                            <>
+                              {isPremium ? (
                                 <button
                                   type="button"
-                                  className="button button-premium animate-shake"
+                                  className="button button-claim"
+                                  onClick={openModalClaimBattlepassRewards.bind(
+                                    this,
+                                    getBattlepassStepByID(activeStep).reward
+                                  )}
                                 >
-                                  <span className="icon icon-crown" />
-                                  <span>Get Premium</span>
+                                  <span className="icon icon-present animate-bounce" />
+                                  <span>Claim reward</span>
                                 </button>
-                              </Link>
-                            )}
-                          </>
-                        ) : (
-                          <button
-                            type="button"
-                            className="button button-claim"
-                            onClick={openModalClaimBattlepassRewards.bind(
-                              this,
-                              getBattlepassStepByID(activeStep).reward
-                            )}
-                          >
-                            <span className="icon icon-present animate-bounce" />
-                            <span>Claim reward</span>
-                          </button>
-                        )}
-                      </>
-                    )}
-                  </>
-                ) : (
-                  <button
-                    type="button"
-                    className="button button-tertiary is-disabled"
-                  >
-                    <span className="icon icon-lock" />
-                    <span>Claim reward</span>
-                  </button>
-                )}
-                {!isPremium && (
-                  <div className="battlepass-premium">
-                    <Link
-                      href={`/prototype/premium${prototype.getURLparams()}`}
-                    >
-                      <a className="text-premium-500 flex items-center gap-2 whitespace-nowrap rounded-full leading-none p-2 bg-ui-850/90">
-                        <span className="icon icon-crown text-lg" />
-                        <span className="link text-sm">
-                          {getBattlepassByID(selectedBattlepassID).currentStep >
-                          1 ? (
-                            <>Get Premium to claim 1 locked tier</>
+                              ) : (
+                                <Link
+                                  href={`/prototype/premium${prototype.getURLparams()}`}
+                                >
+                                  <button
+                                    type="button"
+                                    className="button button-premium animate-shake"
+                                  >
+                                    <span className="icon icon-crown" />
+                                    <span>Get Premium</span>
+                                  </button>
+                                </Link>
+                              )}
+                            </>
                           ) : (
-                            <>Get premium to access exclusive rewards</>
+                            <button
+                              type="button"
+                              className="button button-claim"
+                              onClick={openModalClaimBattlepassRewards.bind(
+                                this,
+                                getBattlepassStepByID(activeStep).reward
+                              )}
+                            >
+                              <span className="icon icon-present animate-bounce" />
+                              <span>Claim reward</span>
+                            </button>
                           )}
-                        </span>
-                      </a>
-                    </Link>
-                  </div>
-                )}
+                        </>
+                      )}
+                    </>
+                  ) : (
+                    <button
+                      type="button"
+                      className="button button-tertiary is-disabled"
+                    >
+                      <span className="icon icon-lock" />
+                      <span>Claim reward</span>
+                    </button>
+                  )}
+                  {!isPremium && (
+                    <div className="battlepass-premium">
+                      <Link
+                        href={`/prototype/premium${prototype.getURLparams()}`}
+                      >
+                        <a className="text-premium-500 flex items-center gap-2 whitespace-nowrap rounded-full leading-none p-2 bg-ui-850/90">
+                          <span className="icon icon-crown text-lg" />
+                          <span className="link text-sm">
+                            {getBattlepassByID(selectedBattlepassID)
+                              .currentStep > 1 ? (
+                              <>Get Premium to claim 1 locked tier</>
+                            ) : (
+                              <>Get premium to access exclusive rewards</>
+                            )}
+                          </span>
+                        </a>
+                      </Link>
+                    </div>
+                  )}
+                </div>
               </div>
-            </div>
-            <ul className="battlepass">
-              {getBattlepassByID(selectedBattlepassID)
-                .steps.slice(originStep, originStep + maxSteps)
-                .map((item, itemIndex) => (
-                  <li
-                    key={itemIndex}
-                    className={`battlepass-step ${
-                      item.isPremium ? `is-premium` : ""
-                    } ${item.isPremium && !isPremium ? `is-locked` : ""} ${
-                      item.isBonus ? `is-bonus` : ""
-                    } ${item.isSeparator ? `is-separator` : ""} ${
-                      activeStep === item.id ? `is-active` : ""
-                    }
+              <ul className="battlepass">
+                {getBattlepassByID(selectedBattlepassID)
+                  .steps.slice(originStep, originStep + maxSteps)
+                  .map((item, itemIndex) => (
+                    <li
+                      key={itemIndex}
+                      className={`battlepass-step ${
+                        item.isPremium ? `is-premium` : ""
+                      } ${item.isPremium && !isPremium ? `is-locked` : ""} ${
+                        item.isBonus ? `is-bonus` : ""
+                      } ${item.isSeparator ? `is-separator` : ""} ${
+                        activeStep === item.id ? `is-active` : ""
+                      }
                         ${
-                          getBattlepassByID(selectedBattlepassID).currentStep ===
-                          item.id
+                          getBattlepassByID(selectedBattlepassID)
+                            .currentStep === item.id
                             ? `is-current`
                             : ""
                         }
                         `}
-                  >
-                    <div
-                      className="battlepass-info"
-                      data-tooltip={`${calculPercent(
-                        getBattlepassByID(selectedBattlepassID).currentStep
-                      )} / ${100 * item.id} XP`}
                     >
                       <div
-                        className="progressbar progressbar-sm"
-                        style={{ "--percent": handleProgress(item) }}
+                        className="battlepass-info"
+                        data-tooltip={`${calculPercent(
+                          getBattlepassByID(selectedBattlepassID).currentStep
+                        )} / ${100 * item.id} XP`}
                       >
-                        <div />
+                        <div
+                          className="progressbar progressbar-sm"
+                          style={{ "--percent": handleProgress(item) }}
+                        >
+                          <div />
+                        </div>
                       </div>
-                    </div>
-                    <button
-                      type="button"
-                      className="battlepass-content"
-                      data-tooltip={
-                        size === "battlepass-md"
-                          ? getBattlepassRewardByID(item.reward).name
-                          : ""
-                      }
-                      onClick={handleClick.bind(this, item)}
-                    >
-                      <div className="battlepass-decoration">
-                        <span>{item.name}</span>
-                      </div>
-                      <div className="battlepass-body">
-                        {!item.hasClaimed &&
-                          item.id <
-                            getBattlepassByID(selectedBattlepassID)
-                              .currentStep && (
-                            <>
-                              {item.isPremium ? (
-                                <>
-                                  {isPremium && (
-                                    <>
-                                      {size === "battlepass-md" ? (
-                                        <button
-                                          type="button"
-                                          className="button button-sm whitespace-nowrap button-claim"
-                                        >
-                                          <span className="icon icon-present animate-bounce" />
-                                          <span>Claim</span>
-                                        </button>
-                                      ) : (
-                                        <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
-                                          <span className="icon icon-present animate-bounce" />
-                                        </div>
-                                      )}
-                                    </>
-                                  )}
-                                </>
-                              ) : (
-                                <>
-                                  {size === "battlepass-md" ? (
-                                    <button
-                                      type="button"
-                                      className="button button-sm whitespace-nowrap button-claim"
-                                    >
-                                      <span className="icon icon-present animate-bounce" />
-                                      <span>Claim</span>
-                                    </button>
-                                  ) : (
-                                    <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
-                                      <span className="icon icon-present animate-bounce" />
-                                    </div>
-                                  )}
-                                </>
-                              )}
-                            </>
-                          )}
-                        <img
-                          src={`${
-                            getBattlepassRewardByID(item.reward).image
-                          }`}
-                          width="100%"
-                          height="auto"
-                          alt={getBattlepassRewardByID(item.reward).name}
-                        />
-                      </div>
-                    </button>
-                  </li>
-                ))}
-            </ul>
-            <div className="battlepass-nav-container">
-              <button
-                type="button"
-                className="button button-tertiary rounded-full button-sm"
-                onClick={() => handlePrev()}
-                disabled={activeStep === 1}
-              >
-                <span className="icon icon-ctrl-double-left" />
-              </button>
-              <div className="battlepass-nav">
+                      <button
+                        type="button"
+                        className="battlepass-content"
+                        data-tooltip={
+                          size === "battlepass-md"
+                            ? getBattlepassRewardByID(item.reward).name
+                            : ""
+                        }
+                        onClick={handleClick.bind(this, item)}
+                      >
+                        <div className="battlepass-decoration">
+                          <span>{item.name}</span>
+                        </div>
+                        <div className="battlepass-body">
+                          {!item.hasClaimed &&
+                            item.id <
+                              getBattlepassByID(selectedBattlepassID)
+                                .currentStep && (
+                              <>
+                                {item.isPremium ? (
+                                  <>
+                                    {isPremium && (
+                                      <>
+                                        {size === "battlepass-md" ? (
+                                          <button
+                                            type="button"
+                                            className="button button-sm whitespace-nowrap button-claim"
+                                          >
+                                            <span className="icon icon-present animate-bounce" />
+                                            <span>Claim</span>
+                                          </button>
+                                        ) : (
+                                          <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
+                                            <span className="icon icon-present animate-bounce" />
+                                          </div>
+                                        )}
+                                      </>
+                                    )}
+                                  </>
+                                ) : (
+                                  <>
+                                    {size === "battlepass-md" ? (
+                                      <button
+                                        type="button"
+                                        className="button button-sm whitespace-nowrap button-claim"
+                                      >
+                                        <span className="icon icon-present animate-bounce" />
+                                        <span>Claim</span>
+                                      </button>
+                                    ) : (
+                                      <div className="bg-main rounded-full w-12 h-12 grid place-content-center text-2xl text-ui-900">
+                                        <span className="icon icon-present animate-bounce" />
+                                      </div>
+                                    )}
+                                  </>
+                                )}
+                              </>
+                            )}
+                          <img
+                            src={`${
+                              getBattlepassRewardByID(item.reward).image
+                            }`}
+                            width="100%"
+                            height="auto"
+                            alt={getBattlepassRewardByID(item.reward).name}
+                          />
+                        </div>
+                      </button>
+                    </li>
+                  ))}
+              </ul>
+              <div className="battlepass-nav-container">
                 <button
                   type="button"
-                  className="button button-ghost rounded-full button-sm"
+                  className="button button-tertiary rounded-full button-sm"
                   onClick={() => handlePrev()}
                   disabled={activeStep === 1}
                 >
-                  <span className="icon icon-ctrl-left" />
+                  <span className="icon icon-ctrl-double-left" />
                 </button>
-                <span>
-                  {activeStep} /{" "}
-                  {
-                    getBattlepassByID(selectedBattlepassID).steps.filter(
-                      (value) => {
-                        return value.isBonus !== true;
-                      }
-                    ).length
-                  }
-                </span>
+                <div className="battlepass-nav">
+                  <button
+                    type="button"
+                    className="button button-ghost rounded-full button-sm"
+                    onClick={() => handlePrev()}
+                    disabled={activeStep === 1}
+                  >
+                    <span className="icon icon-ctrl-left" />
+                  </button>
+                  <span>
+                    {activeStep} /{" "}
+                    {
+                      getBattlepassByID(selectedBattlepassID).steps.filter(
+                        (value) => {
+                          return value.isBonus !== true;
+                        }
+                      ).length
+                    }
+                  </span>
+                  <button
+                    type="button"
+                    className="button button-ghost rounded-full button-sm"
+                    onClick={() => handleNext()}
+                    disabled={
+                      activeStep ===
+                      getBattlepassByID(selectedBattlepassID).steps.length
+                    }
+                  >
+                    <span className="icon icon-ctrl-right" />
+                  </button>
+                </div>
                 <button
                   type="button"
-                  className="button button-ghost rounded-full button-sm"
-                  onClick={() => handleNext()}
+                  className="button button-tertiary rounded-full button-sm"
+                  onClick={() => handleForward()}
                   disabled={
-                    activeStep ===
+                    activeStep + maxSteps >
                     getBattlepassByID(selectedBattlepassID).steps.length
                   }
                 >
-                  <span className="icon icon-ctrl-right" />
+                  <span className="icon icon-ctrl-double-right" />
                 </button>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+      {selectedBattlepass && size === "battlepass-sm" && (
+        <>
+          <div className="relative z-10 flex items-center justify-between">
+            <div className="battlepass-step is-active is-current !w-24">
+              <div
+                className="battlepass-info"
+                data-tooltip={`${calculPercent(
+                  getBattlepassByID(selectedBattlepassID)
+                                .currentStep
+                )} / ${100 * currentStep} XP`}
+              >
+                <div
+                  className="progressbar progressbar-sm"
+                  style={{
+                    "--percent": handleProgress(
+                      getBattlepassStepByID(currentStep)
+                    ),
+                  }}
+                >
+                  <div />
+                </div>
               </div>
               <button
                 type="button"
-                className="button button-tertiary rounded-full button-sm"
-                onClick={() => handleForward()}
-                disabled={
-                  activeStep + maxSteps >
-                  getBattlepassByID(selectedBattlepassID).steps.length
+                className="battlepass-content"
+                data-tooltip={
+                  getBattlepassRewardByID(
+                    getBattlepassStepByID(currentStep).reward
+                  ).name
                 }
               >
-                <span className="icon icon-ctrl-double-right" />
+                <div className="battlepass-decoration">
+                  <span>{getBattlepassStepByID(currentStep).name}</span>
+                </div>
+                <div className="battlepass-body">
+                  <img
+                    src={
+                      getBattlepassRewardByID(
+                        getBattlepassStepByID(currentStep).reward
+                      ).image
+                    }
+                    width="100%"
+                    height="auto"
+                    alt={
+                      getBattlepassRewardByID(
+                        getBattlepassStepByID(currentStep).reward
+                      ).name
+                    }
+                  />
+                </div>
               </button>
             </div>
-          </>
-        )}
-      </div>
-    )}
+            <div className="flex-1 flex items-center justify-center pl-2">
+              <div className="flex items-center gap-4 interactive">
+                <Avatar
+                  id={1}
+                  hasTooltip={false}
+                  hasLevel={false}
+                  size="avatar-xs"
+                />
+                <div
+                  className={`rounded-full bg-ui-700 border border-ui-600 text-ui-100 -ml-10 h-8 pr-3 flex gap-2 items-center whitespace-nowrap`}
+                >
+                  <span className="pl-8">
+                    <span
+                      className={` ${
+                        isPremium ? "text-premium-500" : "text-ui-300"
+                      }`}
+                    >
+                      {calculPercent(
+                        getBattlepassByID(selectedBattlepassID)
+                        .currentStep
+                      )}
+                    </span>{" "}
+                    <span>
+                      / {300 + 100 * getBattlepassStepByID(currentStep).id}
+                    </span>
+                  </span>
+                  <span className="icon icon-xp-symbol text-3xl" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <img
+            src={selectedBattlepass.meta?.backgroundImage}
+            alt=""
+            className="absolute z-0 w-full h-full inset-0 bg-blend-luminosity pointer-events-none object-cover object-center rounded-b"
+          />
+        </>
+      )}
     </>
   );
 }

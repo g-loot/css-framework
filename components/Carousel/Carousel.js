@@ -8,7 +8,7 @@ const slides = [
     description:
       "We’re excited to announce that we will partner with Riot Games as part of the official VALORANT OFF//SEASON. The tournament will be open to players of all skill levels, so call up your Clan mates and get ready to compete for a slice of the $20.000 prize pool!",
     image:
-      "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/64da3d6766c9ace9117ec1dc/e6cb6417609ca30f001a230ecf378f123867de18/original.png?1692024663",
+      "https://res.cloudinary.com/gloot/image/upload/v1694459768/Stryda/demo/nordic-clash-ad.webp",
     buttonLabel: "Learn more",
     buttonURL: "/prototype/profile/1?tab=achievements",
   },

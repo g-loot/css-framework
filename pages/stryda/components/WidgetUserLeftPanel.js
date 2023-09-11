@@ -188,7 +188,7 @@ export default function WidgetUserLeftPanel(props) {
               )}
           </div>
           <div className="surface rounded">
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">Level {selectedUser.level}</h2>
               <Tooltip
                 tooltip={
@@ -220,7 +220,7 @@ export default function WidgetUserLeftPanel(props) {
             </div>
           </div>
           <div className="surface rounded">
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">
                 Games ({selectedUser.games.length})
               </h2>

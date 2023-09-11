@@ -2,7 +2,7 @@
 /* LINK */
 /*----------------------------*/
 
-:where(.link, .interactive) {
+:where(.link, .interactive, .interactive-secondary) {
   @apply
   cursor-pointer
   hover:opacity-80
@@ -91,6 +91,15 @@
   @apply
   active:outline
   active:outline-offset-2
+  active:outline-1
+  outline-ui-400
+  ;
+}
+
+.interactive-secondary {
+  @apply
+  active:outline
+  active:-outline-offset-2
   active:outline-1
   outline-ui-400
   ;

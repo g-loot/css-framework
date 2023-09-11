@@ -118,9 +118,9 @@ export default function FeedItemDetailsMatch(props) {
                     </Tooltip>
                   )}
                 </div>
-                <div className="flex items-center gap-2 text-sm text-ui-300 px-1">
+                <div className="flex items-center gap-1 text-xs text-ui-300 px-1">
                   <span>{match.meta.dateTimeEnded}</span>
-                  <i className="w-0.5 h-0.5 lg:w-1 lg:h-1 rounded-full bg-ui-300" />
+                  <span>•</span>
                   <span>{match.meta.duration}</span>
                 </div>
               </div>
@@ -139,17 +139,17 @@ export default function FeedItemDetailsMatch(props) {
                   />
                 </div>
               )}
-              <div className="order-1 lg:order-2 flex gap-2 items-center surface surface-ui-700 rounded-2 p-1">
+              <div className="order-1 lg:order-2 flex gap-2 items-center surface surface-ui-700 rounded-2 text-sm p-1">
                 <GameIcon game={match.meta.game} size="text-lg" />
-                <span className="text-sm text-ui-300 capitalize">
+                <span className="text-ui-300 capitalize">
                   {match.meta.mode}
                 </span>
-                <i className="w-0.5 h-0.5 lg:w-1 lg:h-1 rounded-full bg-ui-300" />
-                <span className="text-sm text-ui-300 capitalize">
+                <span>•</span>
+                <span className="text-ui-300 capitalize">
                   {getMapByID(match.meta.map).name}
                 </span>
                 <div
-                  className={`rounded px-2 py-1.5 text-sm leading-none flex gap-2 items-center ${
+                  className={`rounded px-2 py-1.5 leading-none flex gap-2 items-center ${
                     match.stats.hasWon
                       ? " bg-success-500/10 text-success-300"
                       : "bg-error-500/10 text-error-300"
@@ -172,7 +172,7 @@ export default function FeedItemDetailsMatch(props) {
             <div className="relative z-10 px-4 lg:px-6 overflow-x-auto scrollbar-hidden">
               <div className="flex flex-col items-start justify-center rounded border border-ui-700 bg-ui-850/80 backdrop-blur overflow-hidden">
                 <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-hidden flex justify-start p-4">
-                  <ul className="flex gap-x-8 gap-y-4 items-center mx-auto text-center divide-x divide-ui-600 leading-tight">
+                  <ul className="flex gap-4 items-center mx-auto text-center divide-x divide-ui-600 leading-tight">
                     {match.meta?.agent && (
                       <li className="text-0">
                         <div className="avatar avatar-sm avatar-diamond">
@@ -186,7 +186,7 @@ export default function FeedItemDetailsMatch(props) {
                       </li>
                     )}
                     {match.stats.mainStats.map((mainStat, mainStatIndex) => (
-                      <li key={mainStatIndex} className="pl-8">
+                      <li key={mainStatIndex} className="pl-4">
                         <div className="text-sm text-ui-300">
                           {mainStat.label}
                         </div>
@@ -209,7 +209,7 @@ export default function FeedItemDetailsMatch(props) {
                         </div>
                       </div>
                     </div>
-                    <ul className="space-y-1 text-sm lg:text-base leading-tight">
+                    <ul className="space-y-1 space-y-1 text-sm leading-tight">
                       {match.achievements.map(
                         (achievement, achievementIndex) => (
                           <FeedItemAchievement

@@ -318,7 +318,9 @@ const PrototypePage = () => {
                   "--delay": "calc(4 * 0.05s)",
                 }}
               >
-                Join the Stryda Nordic Clash, part of the VALORANT Championship Tour OFF//SEASON 2023. Download Stryda and compete for the title of Champions in the North and a slice of the excitin{" "}
+                Join the Stryda Nordic Clash, part of the VALORANT Championship
+                Tour OFF//SEASON 2023. Compete for the title of Champions in the
+                North and a slice of the exciting{" "}
                 <b className="bg-game-valorant/50 px-1">$20,000</b> prize pool!
               </p>
               <ul
@@ -424,9 +426,9 @@ const PrototypePage = () => {
           </div>
         </section>
 
-        <section className="relative z-0 bg-ui-900 text-center">
-          <div className="relative z-10 container max-w-lg mx-auto px-6 flex flex-col items-center justify-center py-24">
-            <div className="flex-3">
+        <section className="relative z-0 bg-ui-900 text-center lg:text-left">
+          <div className="relative z-10 container px-6 flex flex-col lg:flex-row gap-8 items-center justify-center py-24">
+            <div className="flex-3 lg:order-2">
               <video
                 className="w-full h-auto"
                 autoPlay
@@ -447,7 +449,7 @@ const PrototypePage = () => {
                 />
               </video>
             </div>
-            <div className="flex-2 -mt-60">
+            <div className="flex-2">
               <h2 className="text-ui-100 font-headings uppercase font-bold leading-[0.93] text-7xl md:text-8xl">
                 <span
                   className="blockreveal animate-paused animate-delay"

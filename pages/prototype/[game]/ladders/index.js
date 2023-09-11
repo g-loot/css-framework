@@ -29,7 +29,7 @@ const TabsItems = [
     component: TabLaddersUpcoming,
   },
   {
-    label: "Completed",
+    label: "My completed",
     url: "completed",
     component: TabLaddersCompleted,
   },

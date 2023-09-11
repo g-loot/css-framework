@@ -7,7 +7,7 @@ export const dataFeedItems = [
       views: [2, 5, 6, 8, 9, 10, 11, 12, 13],
       likes: {
         hasLiked: false,
-        users: [1, 2],
+        users: [7, 2],
       },
       comments: [
         {
@@ -50,14 +50,37 @@ export const dataFeedItems = [
     type: "post",
     title: "Calling all Valorant players",
     text: "Introducing: Big Clan Battle for League of Legends! Compete with your fellow clan members in a month-long, clan-only Ladder. In Big Clan Battle, every clan can submit 20 individual results to decide their total Ladder score and take home the biggest prize pool yet!",
-    image: "https://cdn.braze.eu/appboy/communication/marketing/content_cards_message_variations/images/64da3d6766c9ace9117ec1dc/e6cb6417609ca30f001a230ecf378f123867de18/original.png?1692024663",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694459768/Stryda/demo/nordic-clash-ad.webp",
     url: "/stryda/clanevents/valorant/0",
+    social: {
+      views: [8],
+      likes: {
+        hasLiked: false,
+        users: [],
+      },
+      comments: [
+        {
+          author: 5,
+          date: "3 hours ago",
+          text: "Shock dart! Shock dart!",
+          likes: [],
+        },
+        {
+          author: 8,
+          date: "3 hours ago",
+          text: "My heart gets a Shock Bolt when you walk into site.",
+          likes: [],
+        },
+      ],
+    },
   },
+  /*
   {
     id: 2,
     type: "live",
     userID: 3,
   },
+  */
   {
     id: 3,
     type: "match",
@@ -87,6 +110,35 @@ export const dataFeedItems = [
   {
     id: 4,
     type: "advertising",
+    author: {
+      name: "HyperX",
+      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694459773/Stryda/demo/hyperX-logo.jpg",
+    },
+    title: "Cloud III Wireless",
+    text: "Cloud III Wireless brings you 120 hours of uninterrupted comfy gaming 😊",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/hyperX-ad-1.jpg",
+    url: "https://hyperx.com/",
+    social: {
+      views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
+      likes: {
+        hasLiked: false,
+        users: [7, 2, 5, 6, 8],
+      },
+      comments: [
+        {
+          author: 8,
+          date: "1 min. ago",
+          text: "I like this headset!",
+          likes: [1, 2, 5, 6],
+        },
+        {
+          author: 9,
+          date: "1 min. ago",
+          text: "Yeah me too",
+          likes: [],
+        },
+      ],
+    },
   },
   {
     id: 5,
@@ -96,7 +148,7 @@ export const dataFeedItems = [
       views: [7, 8, 9, 10, 11],
       likes: {
         hasLiked: false,
-        users: [1, 2, 3, 4, 5, 6],
+        users: [7, 2, 3, 4, 5, 6],
       },
       comments: [],
     },
@@ -124,6 +176,35 @@ export const dataFeedItems = [
   {
     id: 7,
     type: "advertising",
+    author: {
+      name: "Razer",
+      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/razer-logo.jpg",
+    },
+    title: "Razer Cobra Pro",
+    text: "Tap into a new level of wireless performance with the Razer Cobra Pro. Powered by Razer HyperSpeed Wireless, pair it with the Razer Mouse Dock Pro to unlock a true 4000 Hz polling rate for next-gen responsiveness.",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/razer-ad-1.jpg",
+    url: "https://razer.com/",
+    social: {
+      views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
+      likes: {
+        hasLiked: false,
+        users: [7, 2, 5, 6, 8],
+      },
+      comments: [
+        {
+          author: 8,
+          date: "1 min. ago",
+          text: "I like this headset!",
+          likes: [1, 2, 5, 6],
+        },
+        {
+          author: 9,
+          date: "1 min. ago",
+          text: "Yeah me too",
+          likes: [],
+        },
+      ],
+    },
   },
   {
     id: 8,
@@ -168,5 +249,28 @@ export const dataFeedItems = [
   {
     id: 10,
     type: "advertising",
+    author: {
+      name: "Logitech",
+      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/logitech-logo.jpg",
+    },
+    title: "PROX Superlight 2",
+    text: "Let's hear it. Which would you add to your setup 🖤 💗 🤍",
+    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/logitech-ad-1.jpg",
+    url: "https://www.logitechg.com/sv-se/products/gaming-mice/pro-x-superlight-wireless-mouse.html",
+    social: {
+      views: [5, 6, 7, 11, 2, 3, 3, 10],
+      likes: {
+        hasLiked: false,
+        users: [7, 2, 5, 6, 8],
+      },
+      comments: [
+        {
+          author: 9,
+          date: "1 min. ago",
+          text: "Not a big fan of these 🤮",
+          likes: [1, 2, 5, 6],
+        },
+      ],
+    },
   },
 ];

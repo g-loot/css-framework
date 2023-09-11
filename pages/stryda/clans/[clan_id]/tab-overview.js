@@ -51,7 +51,7 @@ export default function TabClanOverview() {
           <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
             <div className="w-full lg:w-80 space-y-4">
               <section className="surface md:rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <h2 className="h6 text-ui-100">
                     Ongoing Ladders ({selectedClan.ladders?.length})
                   </h2>
@@ -131,7 +131,7 @@ export default function TabClanOverview() {
                 </div>
               </section>
               <section className="surface md:rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <h2
                     className="h6 text-ui-100"
                     onClick={() =>
@@ -313,7 +313,7 @@ export default function TabClanOverview() {
         <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
           <div className="w-full lg:w-80 space-y-4">
             <section className="surface md:rounded">
-              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                 <h2 className="h6 text-ui-100">About</h2>
                 {selectedClan.isYou && (
                   <Link
@@ -481,7 +481,7 @@ export default function TabClanOverview() {
             </section>
             {selectedClan.games && (
               <section className="surface md:rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <h2 className="h6 text-ui-100">
                     Games ({selectedClan.games.length})
                   </h2>
@@ -507,7 +507,7 @@ export default function TabClanOverview() {
           </div>
           <div className="flex-1 space-y-4 lg:overflow-hidden max-w-[100%]">
             <section className="surface md:rounded">
-              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                 <h2 className="h6 text-ui-100">Stats</h2>
                 <Link
                   href={`${
@@ -545,7 +545,7 @@ export default function TabClanOverview() {
             </section>
 
             <section className="surface md:rounded">
-              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                 <h2 className="h6 text-ui-100">
                   Members ({getClanMembers().length})
                 </h2>
@@ -603,7 +603,7 @@ export default function TabClanOverview() {
             </section>
 
             <section className="surface md:rounded">
-              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+              <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                 <h2 className="h6 text-ui-100">
                   Ladders ({selectedClan.ladders?.length})
                 </h2>

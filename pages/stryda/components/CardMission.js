@@ -15,6 +15,7 @@ import ModalClaimMission from "../home/modal-claim-mission";
 import ModalDiscardMission from "../home/modal-discard-mission";
 import { UiContext } from "@/contexts/ui";
 import XPBoostList from "@/components/XPBoostList/XPBoostList";
+import GameIcon from "@/components/GameIcon/GameIcon";
 
 export default function CardMission(props) {
   const prototype = usePrototypeData();
@@ -84,7 +85,7 @@ export default function CardMission(props) {
 
   return (
     <>
-      {mission && (
+      {mission && size != "card-sm" && (
         <div
           className={`revealer ${MissionRetrieved === true ? "is-active" : ""}`}
           onClick={handleGetMission.bind(this)}
@@ -445,6 +446,34 @@ export default function CardMission(props) {
             </div>
           </div>
         </div>
+      )}
+      {mission && size === "card-sm" && (
+        <li className="p-1 flex items-center gap-1">
+          <GameIcon game={prototype.getGameBySlug(gameSlug).id} size="text-lg" />
+          <div className="card-category">
+            <div
+              className={`rarity ${
+                mission.category === 1 ? "rarity-category-1" : ""
+              } ${mission.category === 2 ? "rarity-category-2" : ""} ${
+                mission.category === 3 ? "rarity-category-3" : ""
+              } ${mission.category === 4 ? "rarity-category-4" : ""}`}
+            >
+              <span
+                className={`icon ${
+                  mission.category === 1 ? "icon-category-1" : ""
+                } ${mission.category === 2 ? "icon-category-2" : ""} ${
+                  mission.category === 3 ? "icon-category-3" : ""
+                } ${mission.category === 4 ? "icon-category-4" : ""}`}
+              />
+            </div>
+          </div>
+          <div className="flex-1 truncate text-sm">
+            <span>{mission.name}</span>
+          </div>
+          {!mission.hasClaimed && mission.target === mission.current && (
+            <span className="icon icon-present text-main mr-2" />
+          )}
+        </li>
       )}
     </>
   );

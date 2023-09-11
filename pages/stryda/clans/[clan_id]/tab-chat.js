@@ -53,7 +53,7 @@ export default function TabClanChat() {
           <div className="flex flex-col lg:flex-row items-stretch gap-y-4 lg:gap-x-4 animate-slide-in-bottom h-[calc(100dvh-129px-1rem)]">
             <div className="w-full lg:w-80 flex flex-col gap-y-4">
               <section className="flex-1 flex flex-col surface md:rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <h2 className="h6 text-ui-100">
                     Ladders ({selectedClan.ladders?.length})
                   </h2>
@@ -194,7 +194,7 @@ export default function TabClanChat() {
                 </div>
               </section>
               <section className="surface md:rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <h2
                     className="h6 text-ui-100"
                     onClick={() =>

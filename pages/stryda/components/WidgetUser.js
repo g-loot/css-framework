@@ -161,7 +161,7 @@ export default function WidgetUser(props) {
                   selectedUser.clan
                 }${prototype.getURLparams()}`}
               >
-                <div className="p-2 rounded bg-ui-600 interactive text-0">
+                <div className="px-2 py-1 rounded surface-ui-600 interactive text-0">
                   <div className="flex gap-2 items-center justify-center">
                     <div className="avatar avatar-tiny avatar-squircle">
                       <div>
@@ -171,22 +171,13 @@ export default function WidgetUser(props) {
                         />
                       </div>
                     </div>
-                    <div className="truncate text-sm text-left">
-                      &#91;
-                      {prototype.getClanByID(selectedUser.clan).tag}
-                      &#93; {prototype.getClanByID(selectedUser.clan).nickname}
+                    <div className="" data-badge="1">
+                      <span className="truncate text-sm text-left">
+                        &#91;
+                        {prototype.getClanByID(selectedUser.clan).tag}
+                        &#93; {prototype.getClanByID(selectedUser.clan).nickname}
+                      </span>
                     </div>
-                    {selectedUser.isYou && (
-                      <div
-                        className="relative px-3 ml-1 border-l border-ui-400/30 animate-slide-in-right"
-                        style={{ animationDelay: "1s" }}
-                      >
-                        <span
-                          data-badge="1"
-                          className="icon icon-a-chat text-base text-ui-300 after:absolute after:top-1 after:bg-error-700 after:text-mono-100"
-                        />
-                      </div>
-                    )}
                   </div>
                 </div>
               </Link>

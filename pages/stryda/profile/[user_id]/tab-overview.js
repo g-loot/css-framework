@@ -71,7 +71,7 @@ export default function TabProfileOverview() {
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">Highlights</h2>
               <Link
                 href={`${
@@ -119,7 +119,7 @@ export default function TabProfileOverview() {
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">Stats</h2>
               <Link
                 href={`${selectedUser.id}?tab=stats${prototype.getURLparams(
@@ -236,7 +236,7 @@ export default function TabProfileOverview() {
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">
                 Achievements{" "}
                 {!isEmpty && <>({selectedUser.achievements?.badges?.length})</>}
@@ -332,7 +332,7 @@ export default function TabProfileOverview() {
           <section
             className={`surface md:rounded ${loading ? "is-loading" : ""}`}
           >
-            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+            <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">Ladders</h2>
             </div>
             <div>

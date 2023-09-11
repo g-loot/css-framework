@@ -143,7 +143,7 @@ export default function TabClanAbout() {
 
               <div className="flex flex-col xl:flex-row items-stretch gap-y-4 xl:gap-x-4 animate-slide-in-bottom">
                 <section className="flex-3 surface md:rounded xl:flex xl:flex-col">
-                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                     <h2 className="h6 text-ui-100">About</h2>
                   </div>
                   <div className="xl:flex-1 xl:grid xl:place-content-stretch xl:content-center">
@@ -259,7 +259,7 @@ export default function TabClanAbout() {
                   </div>
                 </section>
                 <section className="flex-2 surface md:rounded xl:flex xl:flex-col">
-                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                     <h2 className="h6 text-ui-100">
                       Games ({selectedClan.games.length})
                     </h2>
@@ -308,7 +308,7 @@ export default function TabClanAbout() {
               <div className="flex flex-col lg:flex-row items-start gap-y-4 lg:gap-x-4 animate-slide-in-bottom">
                 <div className="w-full lg:w-80 space-y-4">
                   <section className="surface md:rounded">
-                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                       <h2 className="h6 text-ui-100">About</h2>
                       {selectedClan.isYou && (
                         <Link
@@ -480,7 +480,7 @@ export default function TabClanAbout() {
                   </section>
                   {selectedClan.games && (
                     <section className="surface md:rounded">
-                      <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                      <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                         <h2 className="h6 text-ui-100">
                           Games ({selectedClan.games.length})
                         </h2>
@@ -506,7 +506,7 @@ export default function TabClanAbout() {
                 </div>
                 <div className="flex-1 space-y-4 lg:overflow-hidden max-w-[100%]">
                   <section className="surface md:rounded">
-                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                       <h2 className="h6 text-ui-100">Stats</h2>
                       <Link
                         href={`${
@@ -574,7 +574,7 @@ export default function TabClanAbout() {
                   </section>
 
                   <section className="surface md:rounded">
-                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                       <h2 className="h6 text-ui-100">
                         Members ({getClanMembers().length})
                       </h2>
@@ -632,7 +632,7 @@ export default function TabClanAbout() {
                   </section>
 
                   <section className="surface md:rounded">
-                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-4 py-3">
+                    <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                       <h2 className="h6 text-ui-100">
                         Ladders (
                         {isEmpty ? <>0</> : selectedClan.ladders?.length})

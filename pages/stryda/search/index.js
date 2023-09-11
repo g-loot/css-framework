@@ -48,57 +48,62 @@ export default function Search() {
     <Structure title="Search">
       <Ad width="1005" height="300" />
 
-      <section className="mb-2 px-4 md:px-1">
-        <h1 className="mt-8">
+      <section className="mb-2 px-4 md:px-1 max-w-md mx-auto">
+        <h1 className="text-7xl mt-8">
           Search {filter && <>results for &#34;{filter}&#34;</>}
         </h1>
-        <div className="form-group mt-4">
-          <div className="input-group">
-            <span className="icon icon-zoom" />
-            <input
-              id="filter"
-              name="filter"
-              type="text"
-              value={filter}
-              placeholder="Search"
-              autoFocus
-              onChange={(event) => setFilter(event.target.value)}
-            />
+        <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
+          <div className="flex-1 form-group">
+            <div className="input-group">
+              <span className="icon icon-zoom" />
+              <input
+                id="filter"
+                name="filter"
+                type="text"
+                value={filter}
+                placeholder="Search"
+                autoFocus
+                onChange={(event) => setFilter(event.target.value)}
+              />
+            </div>
           </div>
+          <nav className="">
+            <ul className="tabs tabs-tertiary">
+              {TabsItems.map((item, itemIndex) => (
+                <li key={item}>
+                  <Link
+                    href={`/stryda/search/?tab=${
+                      item.url
+                    }${prototype.getURLparams("&")}`}
+                  >
+                    <a
+                      className={`${
+                        selectedTab === item.url ? "is-active" : ""
+                      }`}
+                    >
+                      <span>
+                        {item.label}{" "}
+                        {filter && (
+                          <>
+                            (
+                            {RandomNumber(
+                              100 - filter.length,
+                              1000 - filter.length
+                            )}
+                            )
+                          </>
+                        )}
+                      </span>
+                    </a>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
         </div>
       </section>
 
-      <nav>
-        <ul className="tabs border-b border-ui-700">
-          {TabsItems.map((item, itemIndex) => (
-            <li key={item}>
-              <Link
-                href={`/stryda/search/?tab=${item.url}${prototype.getURLparams(
-                  "&"
-                )}`}
-              >
-                <a className={`${selectedTab === item.url ? "is-active" : ""}`}>
-                  <span>
-                    {item.label}{" "}
-                    {filter && (
-                      <>
-                        (
-                        {RandomNumber(
-                          100 - filter.length,
-                          1000 - filter.length
-                        )}
-                        )
-                      </>
-                    )}
-                  </span>
-                </a>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      <section className="py-4">
+      <section className="py-4 max-w-md mx-auto">
         {filter || modalRecruitPlayer || modalJoinClan ? (
           <>
             {TabsItems.map((item, itemIndex) => {

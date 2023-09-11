@@ -19,6 +19,7 @@ export default function FeedItemMatch(props) {
   const match = props.match;
   const autoPlay = props.autoPlay || false;
   const [video, setVideo] = useState(null);
+  const [viewMore, setViewMore] = useState(false);
 
   useEffect(() => {
     setVideo(document.getElementById(`video_${item.id}`));
@@ -78,14 +79,14 @@ export default function FeedItemMatch(props) {
                   </span>
                 </Link>
               </div>
-              <div className="flex items-center gap-2 text-xs sm:text-sm text-ui-300 px-1">
-                <GameIcon game={match.meta.game} size="sm:text-lg" />
+              <div className="flex items-center gap-1 text-xs text-ui-300 px-1">
+                <GameIcon game={match.meta.game} />
                 <span>{match.meta.mode}</span>
-                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                <span>•</span>
                 <span className="capitalize">
                   {getMapByID(match.meta.map).name}
                 </span>
-                <i className="w-0.5 h-0.5 sm:w-1 sm:h-1 rounded-full bg-ui-300" />
+                <span>•</span>
                 <span>{match.meta.dateTimeEnded}</span>
               </div>
             </div>
@@ -93,13 +94,13 @@ export default function FeedItemMatch(props) {
               <FeedItemContextualMenu item={item} match={match} />
             </div>
           </div>
-          <div className="px-2 sm:px-4 pt-2">
+          <div className="pl-2 sm:pl-4 pr-1 sm:pr-3 pt-2 pb-4 flex items-end gap-2">
             <Link
               href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
             >
               <button
                 type="button"
-                className="flex flex-wrap items-start gap-4 interactive"
+                className="flex-1 flex flex-wrap items-start gap-1 interactive"
               >
                 {match.meta.text && (
                   <p
@@ -110,7 +111,7 @@ export default function FeedItemMatch(props) {
                   />
                 )}
                 <div
-                  className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${
+                  className={`rounded px-2 py-1 text-xs leading-none flex gap-2 items-center ${
                     match.stats.hasWon
                       ? " bg-success-500/10 text-success-300"
                       : "bg-error-500/10 text-error-300"
@@ -130,58 +131,73 @@ export default function FeedItemMatch(props) {
                 </div>
               </button>
             </Link>
-          </div>
-          <div className="p-2 overflow-x-auto scrollbar-hidden">
-            <div className="flex items-between gap-4 justify-between">
-              <div className="flex justify-start gap-4">
-                <Link
-                  href={`/stryda/activity/${
-                    item.id
-                  }${prototype.getURLparams()}`}
-                >
-                  <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
-                    {match.meta?.agent && (
-                      <li className="text-0">
-                        <div className="avatar avatar-xs avatar-diamond ml-2 mr-4">
-                          <div>
-                            <img
-                              src={getAgentByID(match.meta.agent).picturePath}
-                              alt=""
-                            />
-                          </div>
-                        </div>
-                      </li>
-                    )}
-                    {match.stats.mainStats
-                      .slice(0, 4)
-                      .map((mainStat, mainStatIndex) => (
-                        <li key={mainStatIndex} className="px-4">
-                          <div className="text-xs sm:text-sm text-ui-300">
-                            {mainStat.label}
-                          </div>
-                          <div className="text-lg text-ui-100">
-                            {mainStat.value}
-                          </div>
-                        </li>
-                      ))}
-                  </ul>
-                </Link>
-              </div>
+            <div className="flex-none">
+              <button type="button" class="button button-sm button-tertiary" onClick={() => setViewMore(!viewMore)}>
+                <span class={`icon ${viewMore ? 'icon-arrow-sm-up' : 'icon-arrow-sm-down'}`} />
+                <span>{viewMore ? <>Less</> : <>More</>} details</span>
+              </button>
             </div>
           </div>
-          {match.achievements && (
-            <ul className="px-4 pb-4 text-xs sm:text-sm space-y-1 leading-tight">
-              {match.achievements.map((achievement, achievementIndex) => (
-                <FeedItemAchievement
-                  key={achievementIndex}
-                  user={match.user}
-                  achievement={achievement}
-                />
-              ))}
-            </ul>
+          {viewMore && (
+            <>
+              <div className="p-2 pt-0 overflow-x-auto scrollbar-hidden">
+                <div className="flex items-between gap-4 justify-between">
+                  <div className="flex justify-start gap-4">
+                    <Link
+                      href={`/stryda/activity/${
+                        item.id
+                      }${prototype.getURLparams()}`}
+                    >
+                      <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
+                        {match.meta?.agent && (
+                          <li className="text-0">
+                            <div className="avatar avatar-xs avatar-diamond ml-2 mr-4">
+                              <div>
+                                <img
+                                  src={
+                                    getAgentByID(match.meta.agent).picturePath
+                                  }
+                                  alt=""
+                                />
+                              </div>
+                            </div>
+                          </li>
+                        )}
+                        {match.stats.mainStats
+                          .slice(0, 4)
+                          .map((mainStat, mainStatIndex) => (
+                            <li key={mainStatIndex} className="px-4">
+                              <div className="text-xs text-ui-300">
+                                {mainStat.label}
+                              </div>
+                              <div className="text-lg text-ui-100">
+                                {mainStat.value}
+                              </div>
+                            </li>
+                          ))}
+                      </ul>
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {match.achievements && (
+                <ul className="px-4 pb-4 text-sm space-y-1 leading-tight">
+                  {match.achievements.map((achievement, achievementIndex) => (
+                    <FeedItemAchievement
+                      key={achievementIndex}
+                      user={match.user}
+                      achievement={achievement}
+                    />
+                  ))}
+                </ul>
+              )}
+            </>
           )}
           {match.meta.media ? (
-            <button type="button" onClick={() => openModalHighlightViewer(match)}>
+            <button
+              type="button border-y border-ui-700"
+              onClick={() => openModalHighlightViewer(match)}
+            >
               <video
                 autoPlay={autoPlay}
                 controls
@@ -203,7 +219,7 @@ export default function FeedItemMatch(props) {
                     item.id
                   }${prototype.getURLparams()}`}
                 >
-                  <div className="aspect-video relative interactive grid place-content-center">
+                  <div className="aspect-landscape relative interactive grid place-content-center border-y border-ui-700">
                     <div
                       className={`relative z-10 p-4 rounded-2 bg-ui-900/70 backdrop-blur leading-none flex flex-col items-center text-center ${
                         match.stats.hasWon
