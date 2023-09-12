@@ -119,28 +119,31 @@ const Index = () => {
                       and alignment when designing for the end user.
                     </p>
                   </div>
-                  <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
-                    <div
+                  <ul className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+                    <li
                       className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(1 * 0.05s)" }}
                     >
                       <Link href="design-system/about">
                         <img
-                          className="flex-none object-cover object-center aspect-[10/5] interactive active:!-outline-offset-1 border-b border-ui-700"
+                          className="flex-none object-cover object-center aspect-landscape interactive-secondary border-b border-ui-700"
                           src="https://res.cloudinary.com/gloot/image/upload/v1672668758/Stryda/framework/cover-designsystem.jpg"
                           width="100%"
                           height="auto"
                           alt=""
                         />
                       </Link>
-                      <div className="flex-1 flex flex-col items-start justify-start p-4">
-                        <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="h4">Framework</h2>
+                      <Link href="design-system/about">
+                        <div className="flex-1 flex flex-col items-start justify-start p-4 interactive-secondary">
+                          <div className="flex items-baseline gap-2 mb-3">
+                            <h2 className="h4">Framework</h2>
+                          </div>
+                          <div className="text-ui-300 leading-tight">
+                            A centralized CSS framework for speed and
+                            consistency.
+                          </div>
                         </div>
-                        <div className="text-ui-300 leading-tight">
-                          A centralized CSS framework for speed and consistency.
-                        </div>
-                      </div>
+                      </Link>
                       <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
                         <Link href="design-system/about">
                           <button
@@ -159,29 +162,31 @@ const Index = () => {
                           </button>
                         </Link>
                       </div>
-                    </div>
-                    <div
+                    </li>
+                    <li
                       className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
                       <Link href="prototype/home">
                         <img
-                          className="flex-none object-cover object-center aspect-[10/5] interactive active:!-outline-offset-1 border-b border-ui-700"
+                          className="flex-none object-cover object-center aspect-landscape interactive-secondary border-b border-ui-700"
                           src="https://res.cloudinary.com/gloot/image/upload/v1672668758/Stryda/framework/cover-prototype.jpg"
                           width="100%"
                           height="auto"
                           alt=""
                         />
                       </Link>
-                      <div className="flex-1 flex flex-col items-start justify-start p-4">
-                        <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="h4">Prototype</h2>
+                      <Link href="prototype/home">
+                        <div className="flex-1 flex flex-col items-start justify-start p-4 interactive-secondary">
+                          <div className="flex items-baseline gap-2 mb-3">
+                            <h2 className="h4">Prototype</h2>
+                          </div>
+                          <div className="text-ui-300 leading-tight">
+                            A place for exploring and defining the design of our
+                            product.
+                          </div>
                         </div>
-                        <div className="text-ui-300 leading-tight">
-                          A place for exploring and defining the design of our
-                          product.
-                        </div>
-                      </div>
+                      </Link>
                       <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
                         <Link href="prototype/home">
                           <button
@@ -200,40 +205,50 @@ const Index = () => {
                           </button>
                         </Link>
                       </div>
-                    </div>
-                    <div
-                      className="hidden rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
-                      style={{ "--delay": "calc(3 * 0.05s)" }}
+                    </li>
+                    <li
+                      className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
+                      style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
-                      <div
-                        className="flex-none aspect-landscape bg-cover bg-center rounded border-b border-ui-700"
-                        style={{
-                          backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668756/Stryda/framework/cover-componentlibrary.jpg)`,
-                        }}
-                      ></div>
-                      <div className="flex-1 flex flex-col items-start justify-start p-4">
-                        <div className="flex items-baseline gap-2 mb-3">
-                          <h2 className="h4">Component library</h2>
+                      <Link href="stryda/home">
+                        <img
+                          className="flex-none object-cover object-center aspect-landscape interactive-secondary border-b border-ui-700"
+                          src="https://res.cloudinary.com/gloot/image/upload/v1694501070/Stryda/framework/cover-strydav2.jpg"
+                          width="100%"
+                          height="auto"
+                          alt=""
+                        />
+                      </Link>
+                      <Link href="stryda/home">
+                        <div className="flex-1 flex flex-col items-start justify-start p-4 interactive-secondary">
+                          <div className="flex items-baseline gap-2 mb-3">
+                            <h2 className="h4">Stryda v2</h2>
+                          </div>
+                          <div className="text-ui-300 leading-tight">
+                            Feed, AI video highlights, social interactions...
+                          </div>
                         </div>
-                        <div className="text-ui-300 leading-tight">
-                          Stryda react component library consuming the
-                          framework.
-                        </div>
-                      </div>
+                      </Link>
                       <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
-                        <Link href="https://developers.gloot.com/component-library/?path=/story/docs-getting-started-quick-start--page">
+                        <Link href="stryda/home">
                           <button
                             type="button"
                             className="button button-sm button-primary"
-                            target="_blank"
                           >
-                            <span>View components</span>
-                            <span className="icon icon-box-arrow-top-right" />
+                            <span>View prototype</span>
+                          </button>
+                        </Link>
+                        <Link href="stryda">
+                          <button
+                            type="button"
+                            className="button button-sm button-secondary"
+                          >
+                            <span>Page listing</span>
                           </button>
                         </Link>
                       </div>
-                    </div>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
 
                 <div className="hidden lg:hidden col-span-2 surface rounded-lg relative">

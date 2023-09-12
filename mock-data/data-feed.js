@@ -74,6 +74,29 @@ export const dataFeedItems = [
       ],
     },
   },
+  {
+    id: 2,
+    type: "ladders",
+    ladders: [
+    
+      {
+        game: "valorant",
+        id: 5,
+      },
+      {
+        game: "leagueoflegends",
+        id: 2,
+      },
+      {
+        game: "valorant",
+        id: 3,
+      },
+      {
+        game: "pubg",
+        id: 2,
+      },
+    ]
+  },
   /*
   {
     id: 2,

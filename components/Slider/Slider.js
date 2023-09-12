@@ -12,6 +12,7 @@ export default function Slider(props) {
   const [sliderItemWidth, setSliderItemWidth] = useState(0);
   const bgColor = props.bgColor || "from-ui-900 via-ui-900 to-ui-900/0";
   const isHover = props.isHover || false;
+  const paddingLeft = props.paddingLeft || "";
   const direction = props.direction || "center";
 
   const [slideLeft, setSlideLeft] = useState(0);
@@ -69,7 +70,7 @@ export default function Slider(props) {
 
       <div
         ref={sliderWrapper}
-        className="relative flex justify-start z-0 overflow-x-auto scrollbar-hidden scroll-smooth py-4"
+        className={`relative flex justify-start z-0 overflow-x-auto scrollbar-hidden scroll-smooth py-4 ${paddingLeft}`}
       >
         <div className={`w-full inline-flex gap-4 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective ${direction === 'center' ? 'mx-auto' : ''} ${isHover ? 'hoverhighlight' : ''}`} ref={sliderContainer}>
           {props.children}

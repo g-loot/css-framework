@@ -87,21 +87,23 @@
   }
 }
 
-.interactive {
+.interactive, .interactive-secondary {
   @apply
   active:outline
-  active:outline-offset-2
   active:outline-1
   outline-ui-400
   ;
 }
 
+.interactive {
+  @apply
+  active:outline-offset-2
+  ;
+}
+
 .interactive-secondary {
   @apply
-  active:outline
   active:-outline-offset-2
-  active:outline-1
-  outline-ui-400
   ;
 }
 

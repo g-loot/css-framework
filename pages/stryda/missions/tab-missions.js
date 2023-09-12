@@ -111,7 +111,7 @@ export default function TabMissionsMissions() {
               </div>
             ) : (
               <>
-                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0">
+                <div className="grid grid-cols-1 md:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 max-w-[100%] overflow-hidden">
                   {selectedGame?.missions.map((mission, missionIndex) => (
                     <CardMission
                       key={missionIndex}

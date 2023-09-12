@@ -79,7 +79,7 @@ export default function FeedItemMatch(props) {
                   </span>
                 </Link>
               </div>
-              <div className="flex items-center gap-1 text-xs text-ui-300 px-1">
+              <div className="flex flex-wrap items-center gap-1 text-xs text-ui-300 px-1 child:whitespace-nowrap">
                 <GameIcon game={match.meta.game} />
                 <span>{match.meta.mode}</span>
                 <span>•</span>
@@ -132,8 +132,8 @@ export default function FeedItemMatch(props) {
               </button>
             </Link>
             <div className="flex-none">
-              <button type="button" class="button button-sm button-tertiary" onClick={() => setViewMore(!viewMore)}>
-                <span class={`icon ${viewMore ? 'icon-arrow-sm-up' : 'icon-arrow-sm-down'}`} />
+              <button type="button" className="button button-sm button-ghost rounded" onClick={() => setViewMore(!viewMore)}>
+                <span className={`icon ${viewMore ? 'icon-arrow-sm-up' : 'icon-arrow-sm-down'}`} />
                 <span>{viewMore ? <>Less</> : <>More</>} details</span>
               </button>
             </div>

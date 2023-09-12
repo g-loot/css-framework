@@ -187,7 +187,7 @@ button {
   &.button-ghost {
     @apply 
     bg-ui-800/0
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0)]
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0)]
     text-ui-300
     ;
     &:not([disabled]),
@@ -197,7 +197,7 @@ button {
         @apply
         bg-ui-700
         text-ui-200
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/0%)]
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/7.5%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.015)]
       }
       &:focus-visible,
       &:active {
@@ -384,14 +384,8 @@ button {
     @apply
     py-3
     px-5
+    text-lg
     ;
-    > * {
-      &:not([class*="text-"]) {
-        @apply
-        text-lg
-        ;
-      }
-    }
     &[data-feedback]::before {
       @apply
       text-lg
@@ -418,14 +412,8 @@ button {
   &.button-sm {
     @apply
     py-2
+    text-sm
     ;
-    > * {
-      &:not([class*="text-"]) {
-        @apply
-        text-sm
-        ;
-      }
-    }
     &[data-feedback]::before {
       @apply
       text-sm
@@ -441,14 +429,8 @@ button {
   &.button-xs {
     @apply
     py-1.5
+    text-xs
     ;
-    > * {
-      &:not([class*="text-"]) {
-        @apply
-        text-xs
-        ;
-      }
-    }
     &[data-feedback]::before {
       @apply
       text-xs
@@ -1140,14 +1122,8 @@ button {
       @apply
       py-3
       px-5
+      text-lg
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-lg
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-lg
@@ -1174,14 +1150,8 @@ button {
     &.sm\:button-sm {
       @apply
       py-2
+      text-sm
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-sm
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-sm
@@ -1197,14 +1167,8 @@ button {
     &.sm\:button-xs {
       @apply
       py-1.5
+      text-xs
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-xs
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-xs
@@ -1225,14 +1189,8 @@ button {
       @apply
       py-3
       px-5
+      text-lg
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-lg
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-lg
@@ -1259,14 +1217,8 @@ button {
     &.md\:button-sm {
       @apply
       py-2
+      text-sm
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-sm
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-sm
@@ -1282,14 +1234,8 @@ button {
     &.md\:button-xs {
       @apply
       py-1.5
+      text-xs
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-xs
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-xs
@@ -1310,14 +1256,8 @@ button {
       @apply
       py-3
       px-5
+      text-lg
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-lg
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-lg
@@ -1344,14 +1284,8 @@ button {
     &.lg\:button-sm {
       @apply
       py-2
+      text-sm
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-sm
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-sm
@@ -1367,14 +1301,8 @@ button {
     &.lg\:button-xs {
       @apply
       py-1.5
+      text-xs
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-xs
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-xs
@@ -1395,14 +1323,8 @@ button {
       @apply
       py-3
       px-5
+      text-lg
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-lg
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-lg
@@ -1429,14 +1351,8 @@ button {
     &.xl\:button-sm {
       @apply
       py-2
+      text-sm
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-sm
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-sm
@@ -1452,14 +1368,8 @@ button {
     &.xl\:button-xs {
       @apply
       py-1.5
+      text-xs
       ;
-      > * {
-        &:not([class*="text-"]) {
-          @apply
-          text-xs
-          ;
-        }
-      }
       &[data-feedback]::before {
         @apply
         text-xs

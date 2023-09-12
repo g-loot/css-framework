@@ -182,7 +182,7 @@ export default function FeedItemComments(props) {
           <div className="p-2 flex items-stretch gap-2 justify-around">
             <button
               type="button"
-              className="flex-1 button button-tertiary button-sm"
+              className="flex-1 button button-ghost rounded button-sm"
               onClick={() => {
                 setLikeOn(!likeOn);
               }}
@@ -195,15 +195,16 @@ export default function FeedItemComments(props) {
                 <div className="switch-on icon icon-favorite text-main" />
                 <div className="switch-off icon icon-favorite text-ui-300" />
               </div>
-              <span>Like</span>
+              <span className={likeOn ? "text-main" : ""}>Like</span>
             </button>
             <button
               type="button"
-              className="flex-1 button button-tertiary button-sm"
+              className="flex-1 button button-ghost rounded button-sm"
               onClick={() => {
                 setCommentOn(!commentOn);
               }}
             >
+              {/*
               <div
                 className={`switch switch-slot ${
                   commentOn ? "switch-active" : ""
@@ -212,6 +213,8 @@ export default function FeedItemComments(props) {
                 <div className="switch-on icon icon-comment text-main" />
                 <div className="switch-off icon icon-comment text-ui-300" />
               </div>
+              */}
+              <span className="icon icon-comment text-base" />
               <span>Comment</span>
             </button>
             {item.type === "match" && (
@@ -220,30 +223,30 @@ export default function FeedItemComments(props) {
               >
                 <button
                   type="button"
-                  className="flex-1 button button-tertiary button-sm"
+                  className="flex-1 button button-ghost rounded button-sm"
                 >
                   <span className="icon icon-view text-base" />
                   <span>View</span>
                 </button>
               </Link>
             )}
-            {item.type === "post" && (
+            {item.type === "post" && item.url && (
               <Link href={item.url}>
                 <button
                   type="button"
-                  className="flex-1 button button-tertiary button-sm"
+                  className="flex-1 button button-ghost rounded button-sm"
                 >
                   <span className="icon icon-view text-base" />
                   <span>View</span>
                 </button>
               </Link>
             )}
-            {item.type === "advertising" && (
+            {item.type === "advertising" && item.url && (
               <a
                 href={item.url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex-1 button button-tertiary button-sm"
+                className="flex-1 button button-ghost rounded button-sm"
               >
                 <span className="icon icon-view text-base" />
                 <span>View</span>

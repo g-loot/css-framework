@@ -1,4 +1,5 @@
 import FeedItemAdvertising from "./FeedItemAdvertising";
+import FeedItemLadders from "./FeedItemLadders";
 import FeedItemLive from "./FeedItemLive";
 import FeedItemMatch from "./FeedItemMatch";
 import FeedItemPost from "./FeedItemPost";
@@ -20,6 +21,9 @@ export default function FeedItem(props) {
       )}
       {item && item.type === "advertising" && (
         <FeedItemAdvertising item={item} />
+      )}
+      {item && item.type === "ladders" && (
+        <FeedItemLadders item={item} />
       )}
       {item && item.type === "live" && (
         <FeedItemLive item={item} autoPlay={autoPlay} />

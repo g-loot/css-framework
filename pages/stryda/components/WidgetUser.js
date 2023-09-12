@@ -187,14 +187,12 @@ export default function WidgetUser(props) {
                   <div className="text-center text-sm">
                     {selectedUser.nickname} is not part of a clan.
                   </div>
-                  <Link href="#">
                     <button
                       type="button"
                       className="button button-sm button-secondary w-full"
                     >
                       <span>Recruit to your clan</span>
                     </button>
-                  </Link>
                 </div>
               </div>
             )}
