@@ -247,12 +247,12 @@ export default function TabProfileOverview() {
                 </div>
                 <div className="p-4 space-y-1">
                   <div className="flex items-center justify-center gap-2">
-                    <span className="text-main text-center text-lg">10423</span>
+                    <span className="text-main text-center text-lg">1500</span>
                     <span className="icon icon-xp-symbol text-4xl text-main" />
                   </div>
                   <div className="flex justify-between items-baseline text-sm mt-2 mb-1 text-ui-300">
-                    <span>13000</span>
-                    <span>15000 XP</span>
+                    <span>0</span>
+                    <span>2000 XP</span>
                   </div>
                   <div
                     className="progressbar progressbar-sm"
