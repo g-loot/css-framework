@@ -13,7 +13,7 @@ export const dataMatches = [
       averageRank: 4,
       text: "We won big time!",
       media: {
-        url: "https://res.cloudinary.com/gloot/video/upload/v1691649715/Stryda/demo/game%20footage/B1654A845109D7761_0_3.final.mp4",
+        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649715/Stryda/demo/game%20footage/B1654A845109D7761_0_3.final.mp4",
       },
     },
     stats: {
@@ -174,7 +174,7 @@ export const dataMatches = [
       averageRank: 4,
       text: "First time playing Yoru. I suck 😅",
       media: {
-        url: "https://res.cloudinary.com/gloot/video/upload/v1691602551/Stryda/demo/game%20footage/012854044DD9DD911_0_3.final.mp4",
+        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691602551/Stryda/demo/game%20footage/012854044DD9DD911_0_3.final.mp4",
       },
     },
     stats: {
@@ -317,7 +317,7 @@ export const dataMatches = [
       averageRank: 4,
       text: "😭😭😭😭",
       media: {
-        url: "https://res.cloudinary.com/gloot/video/upload/v1691649709/Stryda/demo/game%20footage/42E1C90460381BAD1_0_3.final.mp4",
+        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649709/Stryda/demo/game%20footage/42E1C90460381BAD1_0_3.final.mp4",
       },
     },
     stats: {
@@ -460,7 +460,7 @@ export const dataMatches = [
       averageRank: 4,
       text: "We won on Lotus",
       media: {
-        url: "https://res.cloudinary.com/gloot/video/upload/v1691649706/Stryda/demo/game%20footage/DA9DA6B4CC7894931_0_3.final.mp4",
+        imageUrl: "https://res.cloudinary.com/gloot/image/upload/v1694577193/Stryda/demo/game-valorant-endscreen-victory.jpg",
       },
     },
     stats: {
@@ -603,7 +603,7 @@ export const dataMatches = [
       averageRank: 4,
       text: "They got crushed",
       media: {
-        url: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
+        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
       },
     },
     stats: {

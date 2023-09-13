@@ -86,8 +86,50 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-          <div className="p-3 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-ui-300 text-base">
-            <div className="flex gap-0.5 items-center text-xs">
+          <div className="p-2 sm:px-4 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-xs text-ui-300">
+            <div className="flex items-center gap-1">
+              {item.social?.views && (
+                <>
+                  <div className="avatar-group -space-x-1 mr-1">
+                    {item.social.views?.slice(0, 3).map((user, userIndex) => (
+                      <Avatar
+                        id={user}
+                        key={userIndex}
+                        hasLevel={false}
+                        size="avatar-tiny"
+                      />
+                    ))}
+                  </div>
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      item.social.views.length > 0 ? (
+                        <ul className="text-xs leading-snug">
+                          {item.social.views
+                            .slice(0, 5)
+                            .map((user, userIndex) => (
+                              <li key={userIndex}>
+                                {prototype.getUserByID(user).nickname}
+                              </li>
+                            ))}
+                          {item.social.views.length > 5 && (
+                            <li>+ {item.social.views.length - 5}</li>
+                          )}
+                        </ul>
+                      ) : (
+                        <div className="text-xs">Be the first to view</div>
+                      )
+                    }
+                  >
+                    <button type="button">
+                      {item.social.views.length} view
+                      {item.social.views.length > 1 && <>s</>}
+                    </button>
+                  </Tooltip>
+                </>
+              )}
+            </div>
+            <div className="flex gap-2 items-stretch sm:items-center">
               {item.social?.likes.users && (
                 <>
                   <Tooltip
@@ -136,69 +178,7 @@ export default function FeedItemComments(props) {
                 </>
               )}
             </div>
-            <div className="flex items-stretch gap-2 justify-around">
-              <button
-                type="button"
-                className="button button-ghost rounded"
-                onClick={() => {
-                  setLikeOn(!likeOn);
-                }}
-              >
-                <div
-                  className={`switch switch-slot ${
-                    likeOn ? "switch-active" : ""
-                  }`}
-                >
-                  <div className="switch-on icon icon-favorite text-main" />
-                  <div className="switch-off icon icon-favorite text-ui-300" />
-                </div>
-              </button>
-              <button
-                type="button"
-                className="button button-ghost rounded"
-                onClick={() => {
-                  setCommentOn(!commentOn);
-                }}
-              >
-                <span className="icon icon-comment text-base" />
-              </button>
-              {item.type === "match" && (
-                <Link
-                  href={`/stryda/activity/${
-                    item.id
-                  }${prototype.getURLparams()}`}
-                >
-                  <button
-                    type="button"
-                    className="button button-ghost rounded"
-                  >
-                    <span className="icon icon-view text-base" />
-                  </button>
-                </Link>
-              )}
-              {item.type === "post" && item.url && (
-                <Link href={item.url}>
-                  <button
-                    type="button"
-                    className="button button-ghost rounded"
-                  >
-                    <span className="icon icon-view text-base" />
-                  </button>
-                </Link>
-              )}
-              {item.type === "advertising" && item.url && (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button-ghost rounded"
-                >
-                  <span className="icon icon-view text-base" />
-                </a>
-              )}
-            </div>
           </div>
-          {/*
           <div className="p-2 flex items-stretch gap-2 justify-around">
             <button
               type="button"
@@ -224,6 +204,16 @@ export default function FeedItemComments(props) {
                 setCommentOn(!commentOn);
               }}
             >
+              {/*
+              <div
+                className={`switch switch-slot ${
+                  commentOn ? "switch-active" : ""
+                }`}
+              >
+                <div className="switch-on icon icon-comment text-main" />
+                <div className="switch-off icon icon-comment text-ui-300" />
+              </div>
+              */}
               <span className="icon icon-comment text-base" />
               <span>Comment</span>
             </button>
@@ -263,11 +253,10 @@ export default function FeedItemComments(props) {
               </a>
             )}
           </div>
-            */}
           {isExpanded && (
             <>
               {item.social.comments.length > 0 && (
-                <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2 text-base">
+                <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2">
                   {item.social.comments.map((comment, commentIndex) => (
                     <FeedItemComment key={commentIndex} comment={comment} />
                   ))}
@@ -276,7 +265,7 @@ export default function FeedItemComments(props) {
             </>
           )}
           {commentOn && (
-            <div className="flex items-start gap-3 pr-2 pb-2 pl-3 text-base">
+            <div className="flex items-start gap-3 pr-2 pb-2 pl-3">
               <div className="w-9">
                 <Avatar id={1} hasLevel={false} />
               </div>

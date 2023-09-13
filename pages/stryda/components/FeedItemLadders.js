@@ -15,8 +15,8 @@ export default function FeedItemLadders(props) {
   return (
     <>
       {item && (
-        <div className="surface sm:rounded w-full">
-          <div className="p-4 flex items-center gap-3 leading-tight">
+        <div className="surface sm:rounded w-full text-0">
+          <div className="p-3 flex items-center gap-3 leading-tight text-base">
             <div className="avatar avatar-sm avatar-circle avatar-simple">
               <div>
                 <img
@@ -34,7 +34,7 @@ export default function FeedItemLadders(props) {
               </div>
             </div>
           </div>
-          <div className="px-4 pb-4 space-y-2">
+          <div className="px-4 pb-4 space-y-2 text-base">
             <p className="text-ui-300">
               We thought you might be interested in joining these Ladders 🏆
             </p>
@@ -52,6 +52,7 @@ export default function FeedItemLadders(props) {
                   game_slug={item.game_slug}
                   isHorizontal={false}
                   isClan={false}
+                  size="card-sm"
                 />
               ))}
             </Slider>

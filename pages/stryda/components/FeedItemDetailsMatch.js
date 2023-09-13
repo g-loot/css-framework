@@ -13,6 +13,7 @@ import FeedItemComments from "./FeedItemComments";
 import ModalShareActivity from "../modal-shareactivity";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
 import FeedItemAchievement from "./FeedItemAchievement";
+import MatchSneakPeak from "./MatchSneakPeak";
 
 export default function FeedItemDetailsMatch(props) {
   const prototype = usePrototypeData();
@@ -128,48 +129,20 @@ export default function FeedItemDetailsMatch(props) {
                 <FeedItemContextualMenu item={item} match={match} />
               </div>
             </div>
-            <div className="relative z-10 p-4 lg:p-6 flex flex-col lg:flex-row items-start gap-4 lg:gap-6 ">
+            <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start gap-4">
               {match.meta.text && (
                 <div className="flex-1 order-2 lg:order-1">
                   <p
-                    className="text-lg md:text-2xl font-bold text-ui-100 leading-tight"
+                    className="text-lg font-bold text-ui-100 leading-tight"
                     dangerouslySetInnerHTML={{
                       __html: match.meta.text,
                     }}
                   />
                 </div>
               )}
-              <div className="order-1 lg:order-2 flex gap-2 items-center surface surface-ui-700 rounded-2 text-sm p-1">
-                <GameIcon game={match.meta.game} size="text-lg" />
-                <span className="text-ui-300 capitalize">
-                  {match.meta.mode}
-                </span>
-                <span>•</span>
-                <span className="text-ui-300 capitalize">
-                  {getMapByID(match.meta.map).name}
-                </span>
-                <div
-                  className={`rounded px-2 py-1.5 leading-none flex gap-2 items-center ${
-                    match.stats.hasWon
-                      ? " bg-success-500/10 text-success-300"
-                      : "bg-error-500/10 text-error-300"
-                  }`}
-                >
-                  <span>{match.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
-                  <i
-                    className={`block h-4 w-px ${
-                      match.stats.hasWon
-                        ? " bg-success-300/25"
-                        : "bg-error-300/25"
-                    }`}
-                  />{" "}
-                  <span>
-                    {match.stats.score.team1} - {match.stats.score.team2}
-                  </span>
-                </div>
-              </div>
+              <MatchSneakPeak match={match} />
             </div>
-            <div className="relative z-10 px-4 lg:px-6 overflow-x-auto scrollbar-hidden">
+            <div className="relative z-10 px-4 overflow-x-auto scrollbar-hidden">
               <div className="flex flex-col items-start justify-center rounded border border-ui-700 bg-ui-850/80 backdrop-blur overflow-hidden">
                 <div className="w-full overflow-x-auto overflow-y-hidden scrollbar-hidden flex justify-start p-4">
                   <ul className="flex gap-4 items-center mx-auto text-center divide-x divide-ui-600 leading-tight">
@@ -224,7 +197,7 @@ export default function FeedItemDetailsMatch(props) {
                 )}
               </div>
             </div>
-            <div className="relative z-10 p-4 lg:p-6">
+            <div className="relative z-10 p-4">
               <ul className="surface-ui-600 rounded overflow-hidden tabs tabs-stretch shadow-md divide-x divide-ui-500">
                 {match.meta.media && (
                   <li>

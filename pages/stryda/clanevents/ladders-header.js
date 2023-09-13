@@ -16,17 +16,21 @@ export default function LaddersHeader(props) {
         <section className="header header-quaternary surface sm:rounded-lg mt-8 mb-4">
           <div className="header-content">
             <div className="header-body">
-              <h1 className="text-7xl mb-2">Clan Events</h1>
-              <p className="text-ui-300 max-w-[70ch] mb-5">
-                Create a 5 people party with members from your Stryda Clan. Play
-                VALORANT together and start climbing the leaderboard!
-              </p>
+              <div className="flex flex-col lg:flex-row lg:items-end gap-4">
+                <h1 className="text-7xl -mb-0.5">Clan Events</h1>
+                <p className="text-ui-300 max-w-[70ch]">
+                  Create a 5 people party with members from your Stryda Clan.
+                  Play VALORANT together and start climbing the leaderboard!
+                </p>
+              </div>
               <div className="hidden flex flex-col md:flex-row gap-2">
                 <Link
                   href={`/stryda/profile/settings${prototype.getURLparams()}`}
                 >
                   <button type="button" className="button button-primary">
-                    <span className={`icon icon-game-${selectedGame.slug}-symbol`} />
+                    <span
+                      className={`icon icon-game-${selectedGame.slug}-symbol`}
+                    />
                     <span>Connect my account</span>
                   </button>
                 </Link>

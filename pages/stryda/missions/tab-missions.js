@@ -38,11 +38,7 @@ export default function TabMissionsMissions() {
     <>
       {selectedGame && (
         <>
-          <section
-            className="py-8 animate-slide-in-bottom animate-delay"
-            style={{ "--delay": "calc(2 * 0.05s)" }}
-          >
-            
+          <section className="my-8 animate-slide-in-bottom">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div className="max-w-md:pb-2 max-w-md:text-center">
                 Your latest match ended <b>Dec 13 / 8:12 PM</b>

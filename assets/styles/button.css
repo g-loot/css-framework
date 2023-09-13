@@ -195,7 +195,6 @@ button {
       &:hover,
       &:focus-visible {
         @apply
-        bg-ui-700
         text-ui-200
         shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/7.5%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.015)]
       }

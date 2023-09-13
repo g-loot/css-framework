@@ -79,11 +79,13 @@ export default function LaddersHeader(props) {
                 </>
               ) : (
                 <>
-                  <h1 className="text-7xl mb-2">Ladders</h1>
+                <div className="flex flex-col lg:flex-row lg:items-end gap-4">
+                  <h1 className="text-7xl -mb-0.5">Ladders</h1>
                   <p className="text-ui-300">
                     Use your stats to climb the ladders and win prizes. No
                     waiting, no dedicated servers. Play on your own schedule!
                   </p>
+                </div>
                 </>
               )}
               <div className="flex hidden flex-col md:flex-row gap-2 mt-4">

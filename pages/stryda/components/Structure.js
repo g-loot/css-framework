@@ -6,7 +6,7 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalFavoriteGames from "../modal-favoritegames";
 
-export default function Structure({ children, title, gamePicker, hiddenUI }) {
+export default function Structure({ children, title, gamePicker, hiddenUI, fullWidth }) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
 
@@ -72,7 +72,7 @@ export default function Structure({ children, title, gamePicker, hiddenUI }) {
           </div>
         </div>
       )}
-      <div className="min-h-screen container sm:px-8">{children}</div>
+      <div className={`min-h-screen ${fullWidth ? '' : 'container sm:px-8'}`}>{children}</div>
       {!hiddenUI && <Footer />}
       {/*
       <div className="drawer min-h-full">

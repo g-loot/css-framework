@@ -27,63 +27,22 @@ export default function Home() {
   }
 
   useEffect(() => {
-    setSelectedFeedItem(prototype.getFeedItemByID(feeditem_id))
+    setSelectedFeedItem(prototype.getFeedItemByID(feeditem_id));
   }, [feeditem_id]);
-
-
 
   return (
     <>
       <Structure title="Activity">
         <Loader
           loader={
-            <section className="min-h-screen container max-w-lg flex flex-col md:flex-row gap-8 lg:gap-14 py-4">
-              <div className="w-80 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
-              <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
+            <section className="min-h-screen container max-w-md py-4 overflow-hidden space-y-4">
+              <div className="rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           {selectedFeedItem && (
-            <section className="min-h-screen container max-w-lg flex flex-col md:flex-row gap-8 lg:gap-14 py-4">
-              <div className="w-80 space-y-4 hidden md:block">
-                <div
-                  className="sticky space-y-4"
-                  style={{ top: "calc(48px + 1rem)" }}
-                >
-                  <div
-                    className="surface rounded px-4 py-6 text-center"
-                  >
-                    <PremiumLogo
-                      src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                      width="180"
-                      height="auto"
-                      className="mx-auto"
-                    />
-                    <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
-                      Increase your amount of XP you can earn each day with a{" "}
-                      <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                        <a className="link text-premium-500">
-                          Premium subscription
-                        </a>
-                      </Link>
-                      .
-                    </p>
-                    <div className="mx-auto mt-2">
-                      <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                        <a className="button button-premium is-shining">
-                          <span>Get Premium</span>
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                  <div className="rounded bg-ui-600 aspect-square grid place-content-center text-center text-2xl text-ui-400">
-                    <span>AD</span>
-                  </div>
-                </div>
-              </div>
-              <div className="flex-1 overflow-hidden space-y-4">
-                <FeedItemDetails item={selectedFeedItem} />
-              </div>
+            <section className="min-h-screen container max-w-md py-4 overflow-hidden space-y-4">
+              <FeedItemDetails item={selectedFeedItem} />
             </section>
           )}
         </Loader>

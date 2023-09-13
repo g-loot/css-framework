@@ -82,12 +82,14 @@ export default function Missions() {
             <section className="header header-quaternary my-8">
               <div className="header-content">
                 <div className="header-body">
-                  <h1 className="text-7xl mb-2">Missions</h1>
-                  <p className="text-ui-300">
-                    Play Stryda Missions in {selectedGame.name}, gather XP, and
-                    earn Mission Rewards. You can complete the Daily Missions in
-                    any game.
-                  </p>
+                  <div className="flex flex-col lg:flex-row lg:items-end gap-4">
+                    <h1 className="text-7xl -mb-0.5">Missions</h1>
+                    <p className="text-ui-300 text-sm">
+                      Play Stryda Missions in {selectedGame.name}, gather XP, and
+                      earn Mission Rewards. You can complete the Daily Missions in
+                      any game.
+                    </p>
+                  </div>
                   <div className="flex hidden flex-col md:flex-row gap-2 mt-4">
                     {selectedGame.needsSteam && (
                       <Link
@@ -176,7 +178,7 @@ export default function Missions() {
                 ))}
               </ul>
             </nav>
-            <section className="py-4">
+            <section className="mb-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
                   return React.createElement(item.component, {

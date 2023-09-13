@@ -123,7 +123,7 @@ export default function Ladders() {
                 ))}
               </ul>
             </nav>
-            <section className="py-4">
+            <section className="mb-4">
               {TabsItems.map((item, itemIndex) => {
                 if (item.url === selectedTab) {
                   return React.createElement(item.component, {

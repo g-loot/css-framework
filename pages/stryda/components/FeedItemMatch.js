@@ -58,10 +58,10 @@ export default function FeedItemMatch(props) {
   return (
     <>
       {item && match && (
-        <div className="surface sm:rounded video">
-          <div className="p-4 flex items-center gap-3 leading-tight">
+        <div className="surface sm:rounded video text-0">
+          <div className="p-3 flex items-center gap-3 leading-tight text-base">
             <Avatar id={match.user} size="avatar-sm" hasTooltip={true} />
-            <div className="flex-1 overflow-hidden">
+            <div className="flex-1 overflow-hidden leading-tight">
               <div className="truncate p-1">
                 <Link
                   href={`/stryda/profile/${
@@ -79,22 +79,16 @@ export default function FeedItemMatch(props) {
                   </span>
                 </Link>
               </div>
-              <div className="flex flex-wrap items-center gap-1 text-xs text-ui-300 px-1 child:whitespace-nowrap">
-                <GameIcon game={match.meta.game} />
-                <span>{match.meta.mode}</span>
-                <span>•</span>
-                <span className="capitalize">
-                  {getMapByID(match.meta.map).name}
-                </span>
-                <span>•</span>
-                <span>{match.meta.dateTimeEnded}</span>
+              <div className="text-xs text-ui-300 px-1 whitespace-nowrap">
+                {match.meta.dateTimeEnded} • {match.meta.mode}
+                {/* • {getMapByID(match.meta.map).name} */}
               </div>
             </div>
             <div className="flex-none self-start">
               <FeedItemContextualMenu item={item} match={match} />
             </div>
           </div>
-          <div className="pl-2 sm:pl-4 pr-1 sm:pr-3 pt-2 pb-4 flex items-end gap-2">
+          <div className="pl-2 sm:pl-3 pr-1 sm:pr-2 pt-1 pb-3 flex items-end gap-2">
             <Link
               href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
             >
@@ -104,7 +98,7 @@ export default function FeedItemMatch(props) {
               >
                 {match.meta.text && (
                   <p
-                    className="text-lg md:text-xl font-bold text-ui-100 leading-tight"
+                    className="text-base md:text-lg font-bold text-ui-100 leading-tight"
                     dangerouslySetInnerHTML={{
                       __html: match.meta.text,
                     }}
@@ -117,7 +111,8 @@ export default function FeedItemMatch(props) {
                       : "bg-error-500/10 text-error-300"
                   }`}
                 >
-                  <span>{match.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
+                  <span>{match.stats.hasWon ? "Victory" : "Defeat"}</span>
+                  {/* {" "}
                   <i
                     className={`block h-4 w-px ${
                       match.stats.hasWon
@@ -127,20 +122,28 @@ export default function FeedItemMatch(props) {
                   />{" "}
                   <span>
                     {match.stats.score.team1} - {match.stats.score.team2}
-                  </span>
+                  </span> */}
                 </div>
               </button>
             </Link>
             <div className="flex-none">
-              <button type="button" className="button button-sm button-ghost rounded" onClick={() => setViewMore(!viewMore)}>
-                <span className={`icon ${viewMore ? 'icon-arrow-sm-up' : 'icon-arrow-sm-down'}`} />
+              <button
+                type="button"
+                className="button button-sm button-ghost rounded"
+                onClick={() => setViewMore(!viewMore)}
+              >
+                <span
+                  className={`icon ${
+                    viewMore ? "icon-arrow-sm-up" : "icon-arrow-sm-down"
+                  }`}
+                />
                 <span>{viewMore ? <>Less</> : <>More</>} details</span>
               </button>
             </div>
           </div>
           {viewMore && (
             <>
-              <div className="p-2 pt-0 overflow-x-auto scrollbar-hidden">
+              <div className="p-2 pt-1 overflow-x-auto scrollbar-hidden">
                 <div className="flex items-between gap-4 justify-between">
                   <div className="flex justify-start gap-4">
                     <Link
@@ -194,23 +197,36 @@ export default function FeedItemMatch(props) {
             </>
           )}
           {match.meta.media ? (
-            <button
-              type="button border-y border-ui-700"
-              onClick={() => openModalHighlightViewer(match)}
-            >
-              <video
-                autoPlay={autoPlay}
-                controls
-                playsInline
-                loop
-                muted
-                width="100%"
-                height="auto"
-                className="w-full"
-                id={`video_${item.id}`}
-                src={match.meta.media.url}
-              />
-            </button>
+            <>
+              {match.meta.media.videoUrl && (
+                <button
+                  type="button border-y border-ui-700"
+                  onClick={() => openModalHighlightViewer(match)}
+                >
+                  <video
+                    autoPlay={autoPlay}
+                    controls
+                    playsInline
+                    loop
+                    muted
+                    width="100%"
+                    height="auto"
+                    className="w-full"
+                    id={`video_${item.id}`}
+                    src={match.meta.media.url}
+                  />
+                </button>
+              )}
+              {match.meta.media.imageUrl && (
+                <Link
+                  href={`/stryda/activity/${
+                    item.id
+                  }${prototype.getURLparams()}`}
+                >
+                  <img src={match.meta.media.imageUrl} alt="" />
+                </Link>
+              )}
+            </>
           ) : (
             <>
               {match.meta.map && (

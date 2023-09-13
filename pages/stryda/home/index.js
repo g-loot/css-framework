@@ -20,6 +20,10 @@ import ModalBuyTokens from "../wallet/modal-buytokens";
 import Battlepass from "@/components/BattlePass/BattlePass";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
 import GameIcon from "@/components/GameIcon/GameIcon";
+import WidgetCompetitions from "../components/WidgetCompetitions";
+import WidgetBattlepass from "../components/WidgetBattlepass";
+import WidgetMissions from "../components/WidgetMissions";
+import WidgetFollowings from "../components/WidgetFollowings";
 
 export default function Home() {
   const router = useRouter();
@@ -29,101 +33,39 @@ export default function Home() {
   const variablesContext = useContext(VariablesContext);
   const isEmpty = query.empty === "true" ? true : false;
 
-  function openModalGiftTokens(selectedUser) {
-    uiContext.openModal(<ModalGiftTokens selectedUser={selectedUser} />);
-  }
-
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens />);
   }
 
   return (
     <>
-      <Structure title="Home">
+      <Structure title="Home" fullWidth={true}>
         <Loader
           loader={
-            <section className="min-h-screen container max-w-xl flex flex-col md:flex-row gap-8 lg:gap-14 py-8">
+            <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
               <div className="w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
-              <div className="flex-1 rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-1 overflow-x-hidden">
+                <div className="max-w-sm mx-auto space-y-4">
+                  <div className="flex-1 rounded surface is-loading aspect-video" />
+                  <div className="flex-1 rounded surface is-loading aspect-video" />
+                  <div className="flex-1 rounded surface is-loading aspect-video" />
+                  <div className="flex-1 rounded surface is-loading aspect-video" />
+                </div>
+              </div>
               <div className="w-[21rem] hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
-          <section className="min-h-screen container max-w-xl flex flex-col md:flex-row gap-8 lg:gap-14 py-8">
+          <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
             <div className="w-[21rem] space-y-4 hidden md:block">
               <WidgetUser hasActions={false} />
-              <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
-                <div className="surface rounded interactive">
-                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
-                    <h2 className="h6 text-ui-100 interactive">Battle Pass</h2>
-                    {/*
-                  <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
-                    <a className="link link-hover text-ui-300 text-sm leading-none">
-                      View all rewards
-                    </a>
-                  </Link>
-        */}
-                  </div>
-                  <div className="py-4 pl-4 bg-ui-850 relative rounded-b">
-                    <Battlepass id={0} size="battlepass-sm" />
-                  </div>
-                </div>
-              </Link>
-
-              <div className="surface rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
-                  <Link href={`/stryda/missions${prototype.getURLparams()}`}>
-                    <h2 className="h6 text-ui-100 interactive">Missions</h2>
-                  </Link>
-                  {/*
-                  <Link href={`/stryda/missions${prototype.getURLparams()}`}>
-                    <a className="link link-hover text-ui-300 text-sm leading-none">
-                      View all
-                    </a>
-                  </Link>
-        */}
-                </div>
-                <div className="max-h-72 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
-                  <ul className="p-1">
-                    {prototype.games
-                      .filter((i) => i.isFavorite)
-                      .map((game, gameIndex) => (
-                        <Fragment key={gameIndex}>
-                          {game.missions
-                            ?.filter((i) => i.isVisible)
-                            .map((mission, missionIndex) => (
-                              <CardMission
-                                key={missionIndex}
-                                size="card-sm"
-                                mission={mission}
-                                index={missionIndex}
-                                gameSlug={game.slug}
-                              />
-                            ))}
-                        </Fragment>
-                      ))}
-                  </ul>
-                </div>
-                <div className="border-t border-t-ui-700 p-2 space-y-2 text-center">
-                  <div className="text-sm text-ui-300">
-                    {12 - variablesContext.availableMissions} / 12 missions
-                    revealed
-                  </div>
-                  <Link href={`/stryda/missions${prototype.getURLparams()}`}>
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary"
-                    >
-                      <span>Reveal more missions</span>
-                    </button>
-                  </Link>
-                </div>
-              </div>
-
+              
               <div
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
+                <WidgetBattlepass />
+                <WidgetMissions />
                 {/*
                 <div className="surface rounded px-4 py-6 text-center">
                   <PremiumLogo
@@ -149,290 +91,24 @@ export default function Home() {
                     </Link>
                   </div>
                 </div>
-                                */}
                 <div className="surface-ui-600 rounded aspect-square grid place-content-center text-center text-2xl text-ui-400">
                   <span>AD</span>
                 </div>
+                */}
               </div>
             </div>
-            <div className="flex-1 overflow-auto space-y-4">
-              <Feed />
+            <div className="flex-1 overflow-x-hidden">
+              <div className="max-w-sm mx-auto space-y-4">
+                <Feed />
+              </div>
             </div>
             <div className="w-[21rem] space-y-4 hidden xl:block">
-              <div className="surface rounded">
-                <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
-                  <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
-                    <h2 className="h6 text-ui-100 interactive">Competitions</h2>
-                  </Link>
-                  {/*
-                  <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
-                    <a className="link link-hover text-ui-300 text-sm leading-none">
-                      View all
-                    </a>
-                  </Link>
-                              */}
-                </div>
-                <div className="max-h-96 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
-                  <ul className="p-1">
-                    {prototype.games
-                      .filter((i) => i.isFavorite)
-                      .map((game, gameIndex) => (
-                        <Fragment key={gameIndex}>
-                          {game.clanLeaderboards
-                            ?.filter(
-                              (i) =>
-                                i.status === "ongoing" ||
-                                i.status === "finished"
-                            )
-                            .map((ladder, ladderIndex) => (
-                              <Link
-                                key={ladderIndex}
-                                href={`/stryda/clanevents/${game.slug}/${
-                                  ladder.id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <li className="p-1 flex items-center gap-1 interactive text-sm">
-                                  <GameIcon game={game.id} size="text-lg" />
-                                  <div className="flex-1 truncate">
-                                    <span>{ladder.name}</span>
-                                  </div>
-                                  {ladder.status === "ongoing" &&
-                                    !ladder.isEnrolled && (
-                                      <div className="text-info-500">
-                                        Ongoing
-                                      </div>
-                                    )}
-                                  {ladder.status === "ongoing" &&
-                                    ladder.isEnrolled && (
-                                      <div className="animate-pulse text-main">
-                                        Enrolled
-                                      </div>
-                                    )}
-                                  {ladder.status === "finished" &&
-                                    ladder.hasClaim && (
-                                      <span className="icon icon-present text-main mr-2" />
-                                    )}
-                                  {ladder.status === "finished" &&
-                                    !ladder.hasClaim && (
-                                      <div className="text-ui-400">Ended</div>
-                                    )}
-                                </li>
-                              </Link>
-                            ))}
-                          {game.ladders
-                            ?.filter(
-                              (i) =>
-                                i.status === "ongoing" ||
-                                i.status === "finished"
-                            )
-                            .map((ladder, ladderIndex) => (
-                              <Link
-                                key={ladderIndex}
-                                href={`/stryda/ladders/${game.slug}/${
-                                  ladder.id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <li className="p-1 flex items-center gap-1 interactive text-sm">
-                                  <GameIcon game={game.id} size="text-lg" />
-                                  <div className="flex-1 truncate">
-                                    <span>{ladder.name}</span>
-                                  </div>
-                                  {ladder.status === "ongoing" &&
-                                    !ladder.isEnrolled && (
-                                      <div className="text-info-500">
-                                        Ongoing
-                                      </div>
-                                    )}
-                                  {ladder.status === "ongoing" &&
-                                    ladder.isEnrolled && (
-                                      <div className="animate-pulse text-main">
-                                        Enrolled
-                                      </div>
-                                    )}
-                                  {ladder.status === "finished" &&
-                                    ladder.hasClaim && (
-                                      <span className="icon icon-present text-main mr-2" />
-                                    )}
-                                  {ladder.status === "finished" &&
-                                    !ladder.hasClaim && (
-                                      <div className="text-ui-400">Ended</div>
-                                    )}
-                                </li>
-                              </Link>
-                            ))}
-                        </Fragment>
-                      ))}
-                  </ul>
-                </div>
-                {/*
-                <div className="max-h-[600px] p-2 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
-                  <ul className="space-y-2">
-                    {prototype.games
-                      .filter((i) => i.isFavorite)
-                      .map((game, gameIndex) => (
-                        <Fragment key={gameIndex}>
-                          {game.ladders
-                            ?.filter(
-                              (i) => i.status === "ongoing" && i.isEnrolled
-                            )
-                            .map((ladder, ladderIndex) => (
-                              <CardLadder
-                                key={ladderIndex}
-                                size="card-sm"
-                                ladder={ladder}
-                                isHorizontal={false}
-                                isGlobal={false}
-                                isFluid={true}
-                                gameID={game.id}
-                              />
-                            ))}
-                        </Fragment>
-                      ))}
-                  </ul>
-                </div>
-                            */}
-              </div>
+              <WidgetCompetitions />
               <div
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
-                <div className="surface rounded">
-                  <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
-                    <Link
-                      href={`/stryda/profile/1?tab=following${prototype.getURLparams()}`}
-                    >
-                      <h2 className="h6 text-ui-100 interactive">Followings</h2>
-                    </Link>
-                    {/*
-                    <Link
-                      href={`/stryda/profile/1?tab=following${prototype.getURLparams()}`}
-                    >
-                      <a className="link link-hover text-ui-300 text-sm leading-none">
-                        View all
-                      </a>
-                    </Link>
-                              */}
-                  </div>
-                  <div className="max-h-96 overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-850">
-                    <h3 className="normal-case text-base font-base px-3 pt-2 pb-1">
-                      Online
-                    </h3>
-                    <ul className="divide-y-0">
-                      {prototype.users
-                        .filter((i) => i.isOnline)
-                        .filter((i) => !i.isYou)
-                        .map((item, itemIndex) => (
-                          <li key={itemIndex} className="item py-1">
-                            <div className="item-image">
-                              <Link
-                                href={`/stryda/profile/${
-                                  prototype.getUserByID(item.id).id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <Avatar
-                                  id={item.id}
-                                  size="avatar-tiny"
-                                  hasTooltip={true}
-                                />
-                              </Link>
-                            </div>
-                            <div className="item-body">
-                              <Link
-                                href={`/stryda/profile/${
-                                  prototype.getUserByID(item.id).id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <div className="item-title text-sm flex gap-2 items-center interactive">
-                                  <span
-                                    className={`${
-                                      prototype.getUserByID(item.id)?.isPremium
-                                        ? "text-premium-500"
-                                        : ""
-                                    }`}
-                                  >
-                                    {prototype.getUserByID(item.id).nickname}
-                                  </span>
-                                </div>
-                              </Link>
-                            </div>
-                            <div className="item-actions">
-                              {prototype.getUserByID(item.id).isLive && (
-                                <Tooltip tooltip="Twitch">
-                                  <div className="bg-error-700 rounded text-xs text-mono-100 uppercase p-1 leading-none">
-                                    Live
-                                  </div>
-                                </Tooltip>
-                              )}
-                            </div>
-                            <div className="item-actions">
-                              <Tooltip tooltip="Gift token">
-                                <button
-                                  type="button"
-                                  className="button button-tertiary rounded-full"
-                                  onClick={() => {
-                                    openModalGiftTokens(
-                                      prototype.getUserByID(item.id).nickname
-                                    );
-                                  }}
-                                >
-                                  <span className="icon icon-token" />
-                                </button>
-                              </Tooltip>
-                            </div>
-                          </li>
-                        ))}
-                    </ul>
-                    <h3 className="normal-case text-base font-base px-3 mt-2 pt-2 pb-1 border-t border-t-ui-700">
-                      Suggestions
-                    </h3>
-                    <ul className="divide-y-0">
-                      {prototype.users
-                        .filter((i) => !i.isOnline)
-                        .filter((i) => !i.isYou)
-                        .map((item, itemIndex) => (
-                          <li key={itemIndex} className="item py-1">
-                            <div className="item-image ml-2">
-                              <Link
-                                href={`/stryda/profile/${
-                                  prototype.getUserByID(item.id).id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <Avatar id={item.id} size="avatar-tiny" />
-                              </Link>
-                            </div>
-                            <div className="item-body">
-                              <Link
-                                href={`/stryda/profile/${
-                                  prototype.getUserByID(item.id).id
-                                }${prototype.getURLparams()}`}
-                              >
-                                <div className="item-title flex gap-2 items-center interactive">
-                                  <span
-                                    className={`${
-                                      prototype.getUserByID(item.id)?.isPremium
-                                        ? "text-premium-500"
-                                        : ""
-                                    }`}
-                                  >
-                                    {prototype.getUserByID(item.id).nickname}
-                                  </span>
-                                </div>
-                              </Link>
-                            </div>
-                            <div className="item-actions">
-                              <Tooltip placement="left" tooltip="Follow">
-                                <ButtonFeedback
-                                  variant="button-tertiary rounded-full"
-                                  icon="icon-a-add"
-                                  message="Player added to your following"
-                                />
-                              </Tooltip>
-                            </div>
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
-                </div>
+                <WidgetFollowings />
                 {/*
                 <div className="surface surface-dimmed rounded text-center flex flex-col items-center px-4 pb-4">
                   <img

@@ -7,14 +7,14 @@ export default function FeedItemAdvertising(props) {
   return (
     <>
       {item && (
-        <button type="button" className="surface sm:rounded w-full">
+        <button type="button" className="surface sm:rounded w-full text-0">
           <a
             href={item.url}
             target="_blank"
             rel="noopener noreferrer"
             className="interactive-secondary"
           >
-            <div className="p-4 flex items-center gap-3 leading-tight">
+            <div className="p-3 flex items-center gap-3 leading-tight text-base">
               <div className="avatar avatar-sm avatar-circle avatar-simple">
                 <div>
                   <img src={item.author.avatar} alt="avatar" />
@@ -31,19 +31,20 @@ export default function FeedItemAdvertising(props) {
                 </div>
               </div>
             </div>
+            {/*
             <div className="px-4 pb-4 space-y-2">
               <h4 className="text-lg md:text-xl font-bold text-ui-100">
                 {item.title}
               </h4>
               <p className="text-ui-300">{item.text}</p>
             </div>
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-auto aspect-video object-center object-cover border-y border-ui-700"
-            />
+          */}
+          <img
+            src={item.image}
+            alt={item.title}
+            className="w-full h-auto aspect-video object-center object-cover border-t border-ui-700 rounded-b"
+          />
           </a>
-          <FeedItemComments item={item} isExpanded={false} />
         </button>
       )}
     </>

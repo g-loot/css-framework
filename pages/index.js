@@ -105,7 +105,7 @@ const Index = () => {
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
                   <div className="flex-1 lg:border-l border-ui-500 lg:pl-8 mb-12">
                     <div>
-                      <div className="h4 text-ui-100 ">Welcome to the</div>
+                      <div className="h4 text-ui-300 font-normal">Welcome to the</div>
                       <h1 className="mb-8 lg:text-8xl mt-2">
                         <div>Stryda design system</div>
                       </h1>

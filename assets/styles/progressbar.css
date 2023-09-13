@@ -195,6 +195,21 @@
   }
 }
 
+/* with tick */
+
+.progressbar.progressbar-tick {
+  &::before {
+    @apply
+    content-['']
+    absolute
+    left-1/2
+    h-full
+    w-px
+    bg-ui-700
+    z-10
+    ;
+  }
+}
 
 /* radial */
 

@@ -199,6 +199,7 @@ export default function Avatar(props) {
                                 className="aspect-video rounded-sm w-6"
                               />
                             </div>
+                            {/*
                             {selectedUser?.isOnline ? (
                               <div className="flex justify-center mt-0.5 mb-1">
                                 <div className="chip chip-status chip-success chip-xs">
@@ -214,6 +215,7 @@ export default function Avatar(props) {
                                 </div>
                               </div>
                             )}
+                            */}
                             <div className="flex justify-center gap-1 mb-1">
                               {prototype
                                 .getUserByID(userId)
@@ -312,26 +314,28 @@ export default function Avatar(props) {
                             </div>
                           )}
                         </div>
-                        {selectedUser.clan === 1 && (
-                          <button
-                            type="button"
-                            className="button button-sm button-secondary w-full mt-2"
-                            onClick={() => {
-                              openModalGiftTokens();
-                            }}
-                          >
-                            <span className="icon icon-token" />
-                            <span>Gift tokens</span>
-                          </button>
-                        )}
-                        {!selectedUser.isYou && (
-                          <ButtonFeedback
-                            variant="button-sm button-secondary w-full mt-2"
-                            icon="icon-a-add"
-                            message="Player added in your following"
-                            label="Follow"
-                          />
-                        )}
+                        <div className="mt-2 flex items-stretch gap-2">
+                          {selectedUser.clan === 1 && (
+                            <button
+                              type="button"
+                              className="button button-sm button-secondary rounded flex-1"
+                              onClick={() => {
+                                openModalGiftTokens();
+                              }}
+                            >
+                              <span className="icon icon-token" />
+                              <span>Gift tokens</span>
+                            </button>
+                          )}
+                          {!selectedUser.isYou && (
+                            <ButtonFeedback
+                              variant="button-sm button-secondary rounded flex-1"
+                              icon="icon-a-add"
+                              message="Player added in your following"
+                              label="Follow"
+                            />
+                          )}
+                        </div>
                       </div>
                     </div>
                   }
