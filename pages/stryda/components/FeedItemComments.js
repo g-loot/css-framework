@@ -4,10 +4,10 @@ import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import { UiContext } from "@/contexts/ui";
+import ModalShareActivity from "../modal-shareactivity";
 
 const FeedItemComment = (props) => {
   const prototype = usePrototypeData();
-  const uiContext = useContext(UiContext);
   const comment = props.comment;
   const [likeOn, setLikeOn] = useState(false);
 
@@ -61,6 +61,7 @@ const FeedItemComment = (props) => {
 };
 
 export default function FeedItemComments(props) {
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
   const isExpanded = props.isExpanded !== undefined ? props.isExpanded : true;
@@ -81,6 +82,10 @@ export default function FeedItemComments(props) {
       setTotalLikes(item.social.likes.users.length);
     }
   }, [likeOn]);
+
+  function openModalShareActivity(item) {
+    uiContext.openModal(<ModalShareActivity item={item} />);
+  }
 
   return (
     <>
@@ -136,7 +141,7 @@ export default function FeedItemComments(props) {
                 </>
               )}
             </div>
-            <div className="flex items-stretch gap-2 justify-around">
+            <div className="flex items-stretch gap-2 sm:gap-0 justify-around">
               <button
                 type="button"
                 className="button button-ghost rounded"
@@ -161,6 +166,13 @@ export default function FeedItemComments(props) {
                 }}
               >
                 <span className="icon icon-comment text-base" />
+              </button>
+              <button
+                type="button"
+                className="button button-ghost rounded"
+                onClick={() => openModalShareActivity(item)}
+              >
+                <span className="icon icon-network-communication text-base" />
               </button>
               {item.type === "match" && (
                 <Link

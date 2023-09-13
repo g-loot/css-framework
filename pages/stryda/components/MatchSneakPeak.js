@@ -12,7 +12,7 @@ export default function FeedItemMatch(props) {
   return (
     <>
       {match && (
-        <div className="order-1 lg:order-2 flex gap-2 items-center surface-ui-600 rounded-2 text-xs p-1 text-ui-300">
+        <div className="flex gap-2 items-center surface-ui-600 rounded-2 text-xs p-1 text-ui-300">
           <GameIcon game={match.meta.game} size="text-base" />
           <span className="capitalize">
             {match.meta.mode} • {getMapByID(match.meta.map).name}

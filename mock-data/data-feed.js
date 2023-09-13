@@ -32,8 +32,8 @@ export const dataFeedItems = [
     social: {
       views: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
       likes: {
-        hasLiked: false,
-        users: [],
+        hasLiked: true,
+        users: [1],
       },
       comments: [
         {

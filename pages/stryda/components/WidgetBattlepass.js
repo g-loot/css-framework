@@ -34,7 +34,7 @@ export default function WidgetBattlepass(props) {
                   <span>/ 400</span>
                   <span className="icon icon-xp-symbol text-3xl" />
                 </div>
-                <div>Next reward</div>
+                <div>next reward</div>
               </div>
             </div>
             <div className="flex-none">
@@ -44,6 +44,11 @@ export default function WidgetBattlepass(props) {
                 alt=""
               />
             </div>
+          <img
+            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg"
+            alt=""
+            className="absolute z-0 w-full h-full inset-0 mix-blend-lighten pointer-events-none object-cover object-center rounded-b"
+          />
           </div>
         </div>
       </Link>

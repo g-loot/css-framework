@@ -3,7 +3,6 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";

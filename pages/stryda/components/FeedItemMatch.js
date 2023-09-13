@@ -3,7 +3,6 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
@@ -11,6 +10,7 @@ import FeedItemComments from "./FeedItemComments";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
 import FeedItemAchievement from "./FeedItemAchievement";
 import ModalHighlightViewer from "../modal-highlightviewer";
+import MatchSneakPeak from "./MatchSneakPeak";
 
 export default function FeedItemMatch(props) {
   const uiContext = useContext(UiContext);
@@ -88,14 +88,11 @@ export default function FeedItemMatch(props) {
               <FeedItemContextualMenu item={item} match={match} />
             </div>
           </div>
-          <div className="pl-2 sm:pl-3 pr-1 sm:pr-2 pt-1 pb-3 flex items-end gap-2">
+          <div className="pl-2 sm:pl-3 pr-1 sm:pr-2 pt-1 pb-3 flex items-center justify-between gap-2">
             <Link
               href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
             >
-              <button
-                type="button"
-                className="flex-1 flex flex-wrap items-start gap-1 interactive"
-              >
+              <button type="button" className="interactive">
                 {match.meta.text && (
                   <p
                     className="text-base md:text-lg font-bold text-ui-100 leading-tight"
@@ -104,87 +101,63 @@ export default function FeedItemMatch(props) {
                     }}
                   />
                 )}
-                <div
-                  className={`rounded px-2 py-1 text-xs leading-none flex gap-2 items-center ${
-                    match.stats.hasWon
-                      ? " bg-success-500/10 text-success-300"
-                      : "bg-error-500/10 text-error-300"
-                  }`}
-                >
-                  <span>{match.stats.hasWon ? "Victory" : "Defeat"}</span>
-                  {/* {" "}
-                  <i
-                    className={`block h-4 w-px ${
-                      match.stats.hasWon
-                        ? " bg-success-300/25"
-                        : "bg-error-300/25"
-                    }`}
-                  />{" "}
-                  <span>
-                    {match.stats.score.team1} - {match.stats.score.team2}
-                  </span> */}
-                </div>
               </button>
             </Link>
-            <div className="flex-none">
-              <button
-                type="button"
-                className="button button-sm button-ghost rounded"
-                onClick={() => setViewMore(!viewMore)}
-              >
-                <span
-                  className={`icon ${
-                    viewMore ? "icon-arrow-sm-up" : "icon-arrow-sm-down"
-                  }`}
-                />
-                <span>{viewMore ? <>Less</> : <>More</>} details</span>
-              </button>
-            </div>
+            <button
+              type="button"
+              className="button button-sm button-ghost rounded mt-0.5"
+              onClick={() => setViewMore(!viewMore)}
+            >
+              <span
+                className={`icon ${
+                  viewMore ? "icon-arrow-sm-up" : "icon-arrow-sm-down"
+                }`}
+              />
+              <span>{viewMore ? <>Less</> : <>More</>} details</span>
+            </button>
           </div>
           {viewMore && (
-            <>
-              <div className="p-2 pt-1 overflow-x-auto scrollbar-hidden">
-                <div className="flex items-between gap-4 justify-between">
-                  <div className="flex justify-start gap-4">
-                    <Link
-                      href={`/stryda/activity/${
-                        item.id
-                      }${prototype.getURLparams()}`}
-                    >
-                      <ul className="flex items-center divide-x divide-ui-500 leading-tight interactive py-2">
-                        {match.meta?.agent && (
-                          <li className="text-0">
-                            <div className="avatar avatar-xs avatar-diamond ml-2 mr-4">
-                              <div>
-                                <img
-                                  src={
-                                    getAgentByID(match.meta.agent).picturePath
-                                  }
-                                  alt=""
-                                />
-                              </div>
+            <div className="px-3 pb-5 space-y-3">
+              <Link
+                href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
+              >
+                <button
+                  type="button"
+                  className="flex flex-col items-start gap-3 interactive"
+                >
+                  <MatchSneakPeak match={match} />
+                  <div className="overflow-x-auto scrollbar-hidden">
+                    <ul className="flex items-center divide-x divide-ui-500 leading-tight">
+                      {match.meta?.agent && (
+                        <li className="text-0">
+                          <div className="avatar avatar-xs avatar-diamond mr-4">
+                            <div>
+                              <img
+                                src={getAgentByID(match.meta.agent).picturePath}
+                                alt=""
+                              />
+                            </div>
+                          </div>
+                        </li>
+                      )}
+                      {match.stats.mainStats
+                        .slice(0, 4)
+                        .map((mainStat, mainStatIndex) => (
+                          <li key={mainStatIndex} className="px-4">
+                            <div className="text-xs text-ui-300">
+                              {mainStat.label}
+                            </div>
+                            <div className="text-lg text-ui-100">
+                              {mainStat.value}
                             </div>
                           </li>
-                        )}
-                        {match.stats.mainStats
-                          .slice(0, 4)
-                          .map((mainStat, mainStatIndex) => (
-                            <li key={mainStatIndex} className="px-4">
-                              <div className="text-xs text-ui-300">
-                                {mainStat.label}
-                              </div>
-                              <div className="text-lg text-ui-100">
-                                {mainStat.value}
-                              </div>
-                            </li>
-                          ))}
-                      </ul>
-                    </Link>
+                        ))}
+                    </ul>
                   </div>
-                </div>
-              </div>
+                </button>
+              </Link>
               {match.achievements && (
-                <ul className="px-4 pb-4 text-sm space-y-1 leading-tight">
+                <ul className="text-sm space-y-1 leading-tight">
                   {match.achievements.map((achievement, achievementIndex) => (
                     <FeedItemAchievement
                       key={achievementIndex}
@@ -194,7 +167,7 @@ export default function FeedItemMatch(props) {
                   ))}
                 </ul>
               )}
-            </>
+            </div>
           )}
           {match.meta.media ? (
             <>

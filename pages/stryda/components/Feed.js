@@ -41,6 +41,9 @@ export default function Feed() {
           autoPlay={playingIndex === itemIndex}
         />
       ))}
+      <div role="loading" className="loader loader-sm mx-auto">
+        <span className="sr-only">Loading...</span>
+      </div>
     </>
   );
 }
