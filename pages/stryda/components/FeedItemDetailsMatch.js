@@ -244,7 +244,7 @@ export default function FeedItemDetailsMatch(props) {
                   height="auto"
                   className="w-full"
                   id={`video_${item.id}`}
-                  src={match.meta.media.url}
+                  src={match.meta.media.videoUrl}
                 />
               )}
             </>

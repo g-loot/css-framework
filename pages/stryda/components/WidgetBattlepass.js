@@ -22,7 +22,7 @@ export default function WidgetBattlepass(props) {
                   </Link>
         */}
           </div>
-          <div className="p-3 bg-ui-850 relative rounded-b flex gap-3 items-center justify-center">
+          <div className="p-3 bg-ui-850 relative rounded-b flex gap-5 items-center justify-center">
             {/* <Battlepass id={0} size="battlepass-sm" /> */}
             <div className="flex-1 flex flex-col -mb-1.5">
               <div className="progressbar progressbar-tick w-full" style={{ "--percent": 70 }}>
