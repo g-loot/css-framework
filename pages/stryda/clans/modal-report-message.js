@@ -6,12 +6,13 @@ import { usePrototypeData } from "@/contexts/prototype.js";
 export default function ModalReportMessage(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
+  const object = props.object || "message";
   const [submitting, setSubmitting] = useState(false);
   function closeModalWithDelay() {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "medium", text: "Message reported successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({size: "medium", text: `The ${object} has been reported successfully`, color: "green", autoDelete: true, autoDeleteDelay: 2500});
       uiContext.closeModal();
       setSubmitting(false);
     }, 3000);
@@ -29,9 +30,9 @@ export default function ModalReportMessage(props) {
         </button>
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Report message</h2>
+            <h2 className="modal-title">Report {object}</h2>
             <div className="form-group form-select mt-4">
-              <label htmlFor="rule-broken">What rule did that message break?</label>
+              <label htmlFor="rule-broken">What rule did that {object} break?</label>
               <select id="rule-broken">
                 <option disabled selected>Choose an option</option>
                 <option>Discrimination</option>

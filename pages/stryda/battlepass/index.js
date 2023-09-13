@@ -153,7 +153,7 @@ export default function BattlepassPage() {
                 <Battlepass id={selectedBattlepassID} />
               </section>
 
-              <div className="absolute w-full h-full opacity-25 inset-0 pointer-events-none">
+              <div className="absolute w-full h-full opacity-25 inset-0 pointer-events-none select-none">
                 <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
                 <img
                   src={

@@ -1,12 +1,14 @@
 import { useEffect, useState, useContext } from "react";
 import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
 import Tooltip from "@/components/Tooltip/Tooltip";
-import { UiContext } from "@/contexts/ui";
 import ModalShareActivity from "../modal-shareactivity";
+import ModalReportMessage from "../clans/modal-report-message";
 
 const FeedItemComment = (props) => {
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const comment = props.comment;
   const [likeOn, setLikeOn] = useState(false);
@@ -17,13 +19,17 @@ const FeedItemComment = (props) => {
     }
   }, [props]);
 
+  function openModalReportMessage() {
+    uiContext.openModal(<ModalReportMessage object="comment" />);
+  }
+
   return (
     <>
-      <li className="flex items-start gap-3">
+      <li className="flex items-start gap-3 group">
         <Avatar id={comment.author} size="avatar-xs" hasTooltip={true} />
         <div className="flex-1 text-sm">
           <div className="flex flex-col sm:flex-row sm:gap-2 items-start sm:items-baseline sm:justify-between">
-            <div className="truncate p-1">
+            <div className="flex-1 truncate p-1">
               <Link
                 href={`/stryda/profile/${
                   comment.author
@@ -34,7 +40,16 @@ const FeedItemComment = (props) => {
                 </span>
               </Link>
             </div>
-            <span className="text-ui-400">{comment.date}</span>
+            <div className="flex gap-4 items-baseline text-sm">
+              <span className="text-ui-400">{comment.date}</span>
+              <button
+                type="button"
+                className="hidden group-hover:block interactive"
+                onClick={() => openModalReportMessage()}
+              >
+                <span className="text-main">Report</span>
+              </button>
+            </div>
           </div>
           <p
             className="text-sm text-ui-300 px-1"
@@ -180,20 +195,14 @@ export default function FeedItemComments(props) {
                     item.id
                   }${prototype.getURLparams()}`}
                 >
-                  <button
-                    type="button"
-                    className="button button-ghost rounded"
-                  >
+                  <button type="button" className="button button-ghost rounded">
                     <span className="icon icon-view text-base" />
                   </button>
                 </Link>
               )}
               {item.type === "post" && item.url && (
                 <Link href={item.url}>
-                  <button
-                    type="button"
-                    className="button button-ghost rounded"
-                  >
+                  <button type="button" className="button button-ghost rounded">
                     <span className="icon icon-view text-base" />
                   </button>
                 </Link>
@@ -296,10 +305,18 @@ export default function FeedItemComments(props) {
                 <textarea
                   name="add-comment"
                   id="add-comment"
-                  className="resize-none"
-                  placeholder="Add a comment"
+                  className="resize-none text-sm"
+                  placeholder="Add a comment, @ to mention"
                   autoFocus
                 ></textarea>
+              </div>
+              <div>
+                <button
+                  type="button"
+                  className="button button-sm button-ghost rounded"
+                >
+                  <span>Post</span>
+                </button>
               </div>
             </div>
           )}

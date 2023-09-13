@@ -149,7 +149,7 @@ export default function BattlepassPage() {
                   getBattlepassByID(selectedBattlepassID).meta?.backgroundImage
                 }
                 alt=""
-                className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in"
+                className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in select-none"
               />
             </section>
 

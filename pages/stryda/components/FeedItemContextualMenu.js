@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalShareActivity from "../modal-shareactivity";
+import ModalReportMessage from "../clans/modal-report-message";
 
 export default function FeedItemContextualMenu(props) {
   const uiContext = useContext(UiContext);
@@ -11,6 +12,9 @@ export default function FeedItemContextualMenu(props) {
 
   function openModalShareActivity(item) {
     uiContext.openModal(<ModalShareActivity item={item} />);
+  }
+  function openModalReportMessage() {
+    uiContext.openModal(<ModalReportMessage object="post" />);
   }
 
   return (
@@ -48,7 +52,10 @@ export default function FeedItemContextualMenu(props) {
                 </>
               ) : (
                 <li>
-                  <button type="button">
+                  <button
+                    type="button"
+                    onClick={() => openModalReportMessage()}
+                  >
                     <span className="icon icon-c-warning" />
                     <span>Report abuse</span>
                   </button>

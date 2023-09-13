@@ -85,11 +85,11 @@ export const dataFeedItems = [
       },
       {
         game: "leagueoflegends",
-        id: 2,
+        id: 0,
       },
       {
         game: "valorant",
-        id: 3,
+        id: 0,
       },
       {
         game: "pubg",

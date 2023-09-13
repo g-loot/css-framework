@@ -97,7 +97,7 @@ export default function Home() {
                 */}
               </div>
             </div>
-            <div className="flex-1 overflow-x-hidden">
+            <div className="flex-1 overflow-hidden">
               <div className="max-w-sm mx-auto space-y-4">
                 <Feed />
               </div>

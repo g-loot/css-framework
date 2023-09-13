@@ -72,6 +72,13 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
           </div>
         </div>
       )}
+      {/* <div className="absolute bottom-2 left-2">
+        <button type="button" className="button button-main rounded-full">
+
+        </button>
+      </div> */}
+
+
       <div className={`min-h-screen ${fullWidth ? '' : 'container sm:px-8'}`}>{children}</div>
       {!hiddenUI && <Footer />}
       {/*

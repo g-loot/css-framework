@@ -130,7 +130,7 @@ export default function FeedItemDetailsMatch(props) {
             </div>
             <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start gap-4">
               {match.meta.text && (
-                <div className="flex-1 order-2 lg:order-1">
+                <div className="flex-1">
                   <p
                     className="text-lg font-bold text-ui-100 leading-tight"
                     dangerouslySetInnerHTML={{
