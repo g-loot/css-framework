@@ -216,11 +216,18 @@ export default function ClanDetails() {
                           >
                             <span>
                               {item.label}
+                              {item.url === "members" && (
+                                <>
+                                  {" "}
+                                  <span className="text-sm">
+                                    {getClanMembers().length}
+                                  </span>
+                                </>
+                              )}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />
                               )}
                             </span>
-                            {item.url === "members" && <span className="text-sm">{getClanMembers().length}</span>}
                           </a>
                         </Link>
                       </li>
@@ -239,10 +246,14 @@ export default function ClanDetails() {
                           >
                             <span>
                               {item.label}
-                              {/*{" "}
                               {item.url === "members" && (
-                                <>({getClanMembers().length})</>
-                              )}*/}
+                                <>
+                                  {" "}
+                                  <span className="text-sm">
+                                    {getClanMembers().length}
+                                  </span>
+                                </>
+                              )}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />
                               )}

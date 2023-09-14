@@ -57,7 +57,7 @@ export default function ModalClaimMission(props) {
               <XPBoostList size="md" />
               <div
                 className="animate-slide-in-bottom animate-delay"
-                style={{ "--delay": "calc( 6 * 0.15s)" }}
+                style={{ "--delay": "calc(3 * 0.15s)" }}
               >
                 <div className="mt-1 flex items-end gap-4 leading-none">
                   <div className="flex-1">

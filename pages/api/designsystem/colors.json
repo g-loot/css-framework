@@ -8,70 +8,70 @@
           "value": "bg-ui-100",
           "number": "100",
           "data": "",
-          "hex": "#E1E2E7"
+          "hex": "#DEDEE2"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-200",
           "number": "200",
           "data": "",
-          "hex": "#A5A7B5"
+          "hex": "#AFB0B9"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-300",
           "number": "300",
           "data": "",
-          "hex": "#818495"
+          "hex": "#81838F"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-400",
           "number": "400",
           "data": "",
-          "hex": "#535669"
+          "hex": "#545665"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-500",
           "number": "500",
           "data": "",
-          "hex": "#26293D"
+          "hex": "#27293A"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-600",
           "number": "600",
           "data": "",
-          "hex": "#1E2135"
+          "hex": "#212333"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-700",
           "number": "700",
           "data": "",
-          "hex": "#171A2D"
+          "hex": "#1C1D2C"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-800",
           "number": "800",
           "data": "",
-          "hex": "#101323"
+          "hex": "#161825"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-850",
           "number": "850",
           "data": "",
-          "hex": "#0A0C19"
+          "hex": "#11121E"
         },
         {
           "name": "Base UI",
           "value": "bg-ui-900",
           "number": "900",
           "data": "",
-          "hex": "#05070F"
+          "hex": "#0C0D16"
         }
       ]
     },

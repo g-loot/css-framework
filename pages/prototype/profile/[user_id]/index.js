@@ -22,7 +22,6 @@ import TabProfileStats from "./tab-stats";
 import TabProfileFollowing from "./tab-following";
 import TabProfileFollowers from "./tab-followers";
 
-
 const achievementsList = [
   {
     level: 1,
@@ -123,8 +122,8 @@ export default function Home() {
   const [achievementLength, setAchievementLength] = useState(0);
 
   useEffect(() => {
-    if(selectedUser) {
-      setAchievementLength(selectedUser.achievements?.badges?.length)
+    if (selectedUser) {
+      setAchievementLength(selectedUser.achievements?.badges?.length);
     }
   }, [selectedUser]);
 
@@ -141,46 +140,43 @@ export default function Home() {
   }, [modalAchievement]);
 
   function openModalAchievementReceived(item) {
-    uiContext.openModal(
-      <ModalAchievementReceived item={item} />
-    );
+    uiContext.openModal(<ModalAchievementReceived item={item} />);
   }
 
-
-const TabsItems = [
-  {
-    label: "Overview",
-    url: "overview",
-    component: TabProfileOverview,
-  },
-  {
-    label: "Activity",
-    url: "activity",
-    component: TabProfileActivity,
-  },
-  {
-    label: `Achievements`,
-    url: "achievements",
-    component: TabProfileAchievements,
-  },
-  {
-    label: "Stats",
-    url: "stats",
-    component: TabProfileStats,
-  },
-  {
-    label: "Followers",
-    url: "followers",
-    component: TabProfileFollowers,
-    number: 253,
-  },
-  {
-    label: "Following",
-    url: "following",
-    component: TabProfileFollowing,
-    number: 135,
-  },
-];
+  const TabsItems = [
+    {
+      label: "Overview",
+      url: "overview",
+      component: TabProfileOverview,
+    },
+    {
+      label: "Activity",
+      url: "activity",
+      component: TabProfileActivity,
+    },
+    {
+      label: `Achievements`,
+      url: "achievements",
+      component: TabProfileAchievements,
+    },
+    {
+      label: "Stats",
+      url: "stats",
+      component: TabProfileStats,
+    },
+    {
+      label: "Followers",
+      url: "followers",
+      component: TabProfileFollowers,
+      number: 253,
+    },
+    {
+      label: "Following",
+      url: "following",
+      component: TabProfileFollowing,
+      number: 135,
+    },
+  ];
 
   useEffect(() => {
     if (modalLeveLUp) {
@@ -203,7 +199,6 @@ const TabsItems = [
 
         {selectedUser && (
           <>
-
             <ProfileHeader />
 
             <nav className="mt-4 flex justify-start px-4 sm:px-0 overflow-auto scrollbar-hidden">
@@ -211,17 +206,25 @@ const TabsItems = [
                 {TabsItems.map((item, itemIndex) => (
                   <li key={item}>
                     <Link
-                      href={`/prototype/profile/${user_id}?tab=${
-                        item.url
-                      }${hasProfileBanner ? profileBanner : ''}${prototype.getURLparams("&")}`}
+                      href={`/prototype/profile/${user_id}?tab=${item.url}${
+                        hasProfileBanner ? profileBanner : ""
+                      }${prototype.getURLparams("&")}`}
                     >
-                      <button type="button"
+                      <button
+                        type="button"
                         className={`${
                           selectedTab === item.url ? "is-active" : ""
                         }`}
                       >
-                        <span>{item.label}</span>
-                        {item.number && <span className="text-sm">{item.number}</span>}
+                        <span>
+                          {item.label}
+                          {item.number && (
+                            <>
+                              {" "}
+                              <span className="text-sm">{item.number}</span>
+                            </>
+                          )}
+                        </span>
                       </button>
                     </Link>
                   </li>

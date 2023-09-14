@@ -25,10 +25,11 @@ const TabsItemsOwn = [
     component: TabClanAbout,
   },
   {
-    label: "Applications (3)",
+    label: "Applications",
     url: "applications",
     component: TabClanApplications,
     isYou: true,
+    number: 3,
   },
   {
     label: "Members",
@@ -146,9 +147,20 @@ export default function Home() {
                             }`}
                           >
                             <span>
-                              {item.label}{" "}
+                              {item.label}
                               {item.url === "members" && (
-                                <>({getClanMembers().length})</>
+                                <>
+                                  {" "}
+                                  <span className="text-sm">
+                                    {getClanMembers().length}
+                                  </span>
+                                </>
+                              )}
+                              {item.number && (
+                                <>
+                                  {" "}
+                                  <span className="text-sm">{item.number}</span>
+                                </>
                               )}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />
@@ -173,7 +185,12 @@ export default function Home() {
                             <span>
                               {item.label}{" "}
                               {item.url === "members" && (
-                                <>({getClanMembers().length})</>
+                                <>
+                                  {" "}
+                                  <span className="text-sm">
+                                    {getClanMembers().length}
+                                  </span>
+                                </>
                               )}
                               {item.hasBadge && (
                                 <span className="ml-1 icon icon-present animate-bounce" />

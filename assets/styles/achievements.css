@@ -157,13 +157,13 @@
   filter: brightness(0) saturate(100%) invert(13%) sepia(8%) saturate(2714%) hue-rotate(195deg) brightness(99%) contrast(91%);
 }
 .achievement-level-1 > * {
-  filter: brightness(0) saturate(100%) invert(33%) sepia(15%) saturate(611%) hue-rotate(194deg) brightness(92%) contrast(86%);
+  filter: brightness(0) saturate(100%) invert(54%) sepia(12%) saturate(284%) hue-rotate(194deg) brightness(94%) contrast(89%);
 }
 .achievement-level-2 > * {
   filter: brightness(0) saturate(100%) invert(53%) sepia(37%) saturate(276%) hue-rotate(339deg) brightness(90%) contrast(89%);
 }
 .achievement-level-3 > * {
-  filter: brightness(0) saturate(100%) invert(87%) sepia(0%) saturate(4%) hue-rotate(271deg) brightness(84%) contrast(85%);
+  filter: brightness(0) saturate(100%) invert(97%) sepia(2%) saturate(1276%) hue-rotate(184deg) brightness(89%) contrast(69%);
 }
 .achievement-level-4 > * {
   filter: brightness(0) saturate(100%) invert(75%) sepia(92%) saturate(353%) hue-rotate(340deg) brightness(99%) contrast(93%);
@@ -179,7 +179,7 @@
 }
 .text-achievement-level-1 {
   @apply
-  text-ui-400
+  text-ui-300
   ;
 }
 .text-achievement-level-2 {
@@ -189,7 +189,7 @@
 }
 .text-achievement-level-3 {
   @apply
-  text-silver-500
+  text-silver-300
   ;
 }
 .text-achievement-level-4 {

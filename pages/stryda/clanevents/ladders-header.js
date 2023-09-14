@@ -18,7 +18,7 @@ export default function LaddersHeader(props) {
             <div className="header-body">
               <div className="flex flex-col lg:flex-row lg:items-end gap-4">
                 <h1 className="text-7xl -mb-0.5">Clan Events</h1>
-                <p className="text-ui-300 max-w-[70ch]">
+                <p className="text-ui-300 leading-tight">
                   Create a 5 people party with members from your Stryda Clan.
                   Play VALORANT together and start climbing the leaderboard!
                 </p>

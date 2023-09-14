@@ -410,8 +410,12 @@ export default function Profile() {
                                 selectedTab === item.url ? "is-active" : ""
                               }`}
                             >
-                              <span>{item.label}</span>
-                              {item.number && <span className="text-sm">{item.number}</span>}
+                              <span>
+                                {item.label}
+                                {item.number && (
+                                  <>{" "}<span className="text-sm">{item.number}</span></>
+                                )}
+                              </span>
                             </button>
                           </Link>
                         </li>
