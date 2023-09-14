@@ -28,16 +28,16 @@ export default function RowUser({ children, ...props }) {
           }}
         >
           <td>
-            <Link
-              href={`/prototype/profile/${userId}
-                          `}
+            <button
+              type="button"
+              className="flex gap-3 items-center self-center "
             >
-              <button
-                type="button"
-                className="flex gap-3 items-center self-center interactive"
+              <Avatar id={userId} hasTooltip={true} size="avatar-sm" />
+              <Link
+                href={`/prototype/profile/${userId}
+                          `}
               >
-                <Avatar id={userId} hasTooltip={true} size="avatar-sm" />
-                <div className="space-y-0.5">
+                <button type="button" className="space-y-0.5 interactive">
                   <div
                     className={`${
                       prototype.getUserByID(userId)?.isPremium
@@ -73,9 +73,9 @@ export default function RowUser({ children, ...props }) {
                         ))}
                     </div>
                   </div>
-                </div>
-              </button>
-            </Link>
+                </button>
+              </Link>
+            </button>
           </td>
           <td>
             {(prototype.getUserByID(userId).socials?.riotValorantNickname ||
@@ -247,18 +247,9 @@ export default function RowUser({ children, ...props }) {
                             </span>
                           }
                         >
-                          <ButtonFeedback
-                            value={`${
-                              prototype.getUserByID(userId).socials
-                                ?.riotValorantNickname
-                            }{" #"}${
-                              prototype.getUserByID(userId).socials
-                                ?.riotValorantHashtag
-                            }`}
-                            variant="button-tertiary rounded-full"
-                            icon="icon-document-copy"
-                            message="Steam ID copied to your clipboard"
-                          />
+                          <button type="button" className="button button-tertiary rounded-full">
+                            <span className="icon icon-document-copy" />
+                          </button>
                         </Tooltip>
                       </div>
                     </li>

@@ -172,11 +172,13 @@ const TabsItems = [
     label: "Followers",
     url: "followers",
     component: TabProfileFollowers,
+    number: 253,
   },
   {
     label: "Following",
     url: "following",
     component: TabProfileFollowing,
+    number: 135,
   },
 ];
 
@@ -219,6 +221,7 @@ const TabsItems = [
                         }`}
                       >
                         <span>{item.label}</span>
+                        {item.number && <span className="text-sm">{item.number}</span>}
                       </button>
                     </Link>
                   </li>

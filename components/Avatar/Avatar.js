@@ -27,6 +27,7 @@ export default function Avatar(props) {
     props.hasTooltipXP !== undefined ? props.hasTooltipXP : false;
   const [selectedUser, setSelectedUser] = useState(null);
   const [activeTooltip, setActiveTooltip] = useState(true);
+  const [isFollowing, setIsFollowing] = useState(null);
 
   function openModalGiftTokens() {
     uiContext.openModal(
@@ -47,6 +48,12 @@ export default function Avatar(props) {
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(userId));
   }, [userId]);
+
+  useEffect(() => {
+    if(selectedUser) {
+      setIsFollowing(selectedUser.isFollowing);
+    }
+  }, [selectedUser]);
 
   useEffect(() => {
     if (selectedUser) {
@@ -353,7 +360,7 @@ export default function Avatar(props) {
                                     <span>Gift tokens</span>
                                   </button>
                                 )}
-                                {selectedUser.isFollowing ? (
+                                {isFollowing ? (
                                   <button
                                     type="button"
                                     className="button button-sm button-tertiary rounded flex-1"
@@ -361,18 +368,17 @@ export default function Avatar(props) {
                                       openModalUnfollow();
                                     }}
                                   >
-                                    <span className="icon icon-a-remove text-error-500" />
-                                    <span className="text-error-500">
-                                      Unfollow
-                                    </span>
+                                    <span>Following</span>
                                   </button>
                                 ) : (
-                                  <ButtonFeedback
-                                    variant="button-sm button-primary rounded flex-1"
-                                    icon="icon-a-add"
-                                    message="Player added in your following"
-                                    label="Follow"
-                                  />
+                                  <button
+                                    type="button"
+                                    className="button button-sm button-primary rounded flex-1"
+                                    onClick={() => setIsFollowing(true)}
+                                  >
+                                    <span className="icon icon-a-add" />
+                                    <span>Follow</span>
+                                  </button>
                                 )}
                               </div>
                             )}

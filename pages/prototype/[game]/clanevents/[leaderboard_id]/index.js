@@ -172,7 +172,7 @@ export default function Ladders() {
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
-                      <div className="flex-1 flex flex-wrap gap-2 items-center text-sm">
+                      <div className="flex-1 flex flex-wrap gap-2 items-center justify-center xl:justify-start text-sm">
                         {selectedClanLeaderboard.meta?.eligibility ? (
                           <>
                             <span>
