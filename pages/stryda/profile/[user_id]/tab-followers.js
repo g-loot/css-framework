@@ -213,16 +213,18 @@ export default function TabProfileFollowers() {
                             {!isEmpty && (
                               <tbody>
                                 {prototype.users
-                                  .filter((g) => g.isFriend)
+                                  .filter((g) => g.isFollower)
                                   .map((item, itemIndex) => (
                                     <RowUser key={itemIndex} id={item.id}>
-                                      <Tooltip tooltip="Follow back">
-                                        <ButtonFeedback
-                                          variant="button-tertiary rounded-full"
-                                          icon="icon-a-sync"
-                                          message="Player added to your following"
-                                        />
-                                      </Tooltip>
+                                      {!item.isFollowing && (
+                                        <Tooltip tooltip="Follow back">
+                                          <ButtonFeedback
+                                            variant="button-tertiary rounded-full"
+                                            icon="icon-a-sync"
+                                            message="Player added to your following"
+                                          />
+                                        </Tooltip>
+                                      )}
                                     </RowUser>
                                   ))}
                               </tbody>

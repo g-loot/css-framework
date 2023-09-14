@@ -5,12 +5,10 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ModalRemoveFriend from "./modal-remove-friend";
-import Avatar from "@/components/Avatar/Avatar";
 import Tooltip from "@/components/Tooltip/Tooltip";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import ButtonSorting from "@/components/Button/ButtonSorting";
-import ButtonFeedback from "@/components/Button/ButtonFeedback";
 import RowUser from "@/components/RowUser/RowUser";
+import ModalUnfollow from "@/pages/stryda/profile/modal-unfollow";
 
 export default function TabProfileFollowing() {
   const router = useRouter();
@@ -57,6 +55,10 @@ export default function TabProfileFollowing() {
 
   function openModalRemoveFriends(id) {
     uiContext.openModal(<ModalRemoveFriend id={id}></ModalRemoveFriend>);
+  }
+
+  function openModalUnfollow(selectedUser) {
+    uiContext.openModal(<ModalUnfollow selectedUser={selectedUser} />);
   }
 
   return (
@@ -217,15 +219,17 @@ export default function TabProfileFollowing() {
                         {!isEmpty && (
                           <tbody>
                             {prototype.users
-                              .filter((g) => g.isFriend)
+                              .filter((g) => g.isFollowing)
                               .map((item, itemIndex) => (
                                 <RowUser key={itemIndex} id={item.id}>
                                   <Tooltip tooltip="Unfollow">
-                                    <ButtonFeedback
-                                      variant="button-tertiary rounded-full"
-                                      icon="icon-a-remove"
-                                      message="Player removed from your followers"
-                                    />
+                                    <button
+                                      type="button"
+                                      className="button button-tertiary rounded-full"
+                                      onClick={() => openModalUnfollow(item)}
+                                    >
+                                      <span className="icon icon-a-remove" />
+                                    </button>
                                   </Tooltip>
                                 </RowUser>
                               ))}

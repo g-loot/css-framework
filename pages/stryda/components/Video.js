@@ -93,7 +93,7 @@ export default function Video(props) {
               height="100%"
               id={`video_${id}`}
               className="relative z-10 w-full"
-              src={`${item.meta?.media?.url}#t=1`}
+              src={`${item.meta?.media?.videoUrl}#t=1`}
             ></video>
             <div className="absolute z-0 inset-0 grid place-content-center">
               <span className="icon icon-video text-ui-400 text-2xl" />

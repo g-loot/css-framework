@@ -1005,7 +1005,7 @@ export default function TabLaddersSoloLeaderboards() {
                                                   {user.user != 1 &&
                                                     prototype.getUserByID(
                                                       user.user
-                                                    )?.isFriend && (
+                                                    )?.isFollowing && (
                                                       <Tooltip
                                                         placement="left"
                                                         tooltip={
@@ -1026,7 +1026,7 @@ export default function TabLaddersSoloLeaderboards() {
                                                {user.user != 1 &&
                                                  !prototype.getUserByID(
                                                    user.user
-                                                 )?.isFriend && (
+                                                 )?.isFollowing && (
                                                    <Tooltip
                                                  placement="left"
                                                  tooltip={

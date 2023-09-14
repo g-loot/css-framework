@@ -281,7 +281,7 @@ export default function ProfileHeader(props) {
                         </Link>
                 </div>
               )}
-              {!selectedUser.isYou && selectedUser.isFriend && (
+              {!selectedUser.isYou && selectedUser.isFollowing && (
                 <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
                     <a
                       type="button"
@@ -293,7 +293,7 @@ export default function ProfileHeader(props) {
                     </a>
                 </div>
               )}
-              {!selectedUser.isYou && !selectedUser.isFriend && (
+              {!selectedUser.isYou && !selectedUser.isFollowing && (
                 <div className="bg-gradient-radial-to-b from-ui-500/75 to-ui-600/50 backdrop-blur rounded-lg shadow-lg w-auto p-3 text-right space-y-3">
                   <Link href="/prototype/friends">
                     <a

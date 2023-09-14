@@ -182,7 +182,7 @@ export default function ProfileHeader(props) {
                   </a>
                 </Link>
               )}
-              {!selectedUser.isYou && selectedUser.isFriend && (
+              {!selectedUser.isYou && selectedUser.isFollowing && (
                 <a
                   type="button"
                   className="button button-sm button-secondary w-full"
@@ -192,7 +192,7 @@ export default function ProfileHeader(props) {
                   <span>Unfollow</span>
                 </a>
               )}
-              {!selectedUser.isYou && !selectedUser.isFriend && (
+              {!selectedUser.isYou && !selectedUser.isFollowing && (
                 <Link href={`/prototype/profile/${selectedUser.id}?tab=followers${prototype.getURLparams("&")}`}>
                   <a
                     type="button"

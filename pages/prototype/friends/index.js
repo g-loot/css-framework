@@ -228,7 +228,7 @@ export default function Friends() {
                   <tbody>
                     {prototype.users.map((item, itemIndex) => (
                       <>
-                        {item.isFriend && (
+                        {item.isFollowing && (
                           <tr
                             key={item.id}
                             className="animate-slide-in-bottom animate-delay"

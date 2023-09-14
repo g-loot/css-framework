@@ -135,7 +135,7 @@ export default function WidgetUser(props) {
                     </a>
                   </Link>
                 )}
-                {!selectedUser.isYou && selectedUser.isFriend && (
+                {!selectedUser.isYou && selectedUser.isFollowing && (
                   <a
                     type="button"
                     className="button button-sm button-tertiary w-full"
@@ -145,7 +145,7 @@ export default function WidgetUser(props) {
                     <span>Unfollow</span>
                   </a>
                 )}
-                {!selectedUser.isYou && !selectedUser.isFriend && (
+                {!selectedUser.isYou && !selectedUser.isFollowing && (
                   <ButtonFeedback
                     variant="button button-sm button-primary w-full"
                     icon="icon-a-add"
