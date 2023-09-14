@@ -204,7 +204,7 @@ export default function TabClanApplications() {
                 <div className="mt-2 mb-6">
                   <p className="text-sm text-ui-400">No applicants to show.</p>
                   <p className="text-lg text-ui-300">
-                    Ladder more to promote your clan.
+                    Ladder more to promote your Clan.
                   </p>
                 </div>
                 <Link href="/prototype/valorant/ladders">

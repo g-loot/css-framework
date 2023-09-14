@@ -11,6 +11,7 @@ import ModalClanInvite from "../modal-clan-invite";
 import ButtonSorting from "@/components/Button/ButtonSorting";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
+import RowUser from "@/components/RowUser/RowUser";
 
 export default function TabClanMembers() {
   const router = useRouter();
@@ -177,7 +178,7 @@ export default function TabClanMembers() {
                           </th>
                           <th className="max-xl:hidden text-left">
                             <ButtonSorting hasArrow={false}>
-                              Riot ID
+                              Riot IDs
                             </ButtonSorting>
                           </th>
                           <th className="max-xl:hidden text-left">
@@ -208,335 +209,101 @@ export default function TabClanMembers() {
                             }
                           })
                           .map((item, itemIndex) => (
-                            <tr
-                              key={item.id}
-                              className="animate-slide-in-bottom animate-delay"
-                              style={{
-                                "--delay": "calc(" + itemIndex + " * 0.05s)",
-                              }}
-                            >
-                              <td>
-                                <Link
-                                  href={`/prototype/profile/${item.id}
-                          `}
-                                >
-                                  <button
-                                    type="button"
-                                    className="flex gap-3 items-center self-center interactive"
-                                  >
-                                    <Avatar
-                                      id={item.id}
-                                      hasTooltip={true}
-                                      size="avatar-sm"
-                                    />
-                                    <div className="space-y-0.5">
+                            <RowUser key={itemIndex} id={item.id}>
+                              {selectedClan.isYou && (
+                                <>
+                                  {hasOnlyOne ? (
+                                    <Tooltip tooltip={`Gift token`}>
+                                      <button
+                                        type="button"
+                                        onClick={() => {
+                                          setSelectedUser(
+                                            prototype.getUserByID(item.id)
+                                              .nickname
+                                          );
+                                          openModalGiftTokens();
+                                        }}
+                                        className="button button-tertiary rounded-full"
+                                      >
+                                        <span className="icon icon-token" />
+                                      </button>
+                                    </Tooltip>
+                                  ) : (
+                                    <div className="item-actions">
                                       <div
-                                        className={`${
-                                          prototype.getUserByID(item.id)
-                                            ?.isPremium
-                                            ? "text-premium-500"
-                                            : ""
-                                        } ${
-                                          prototype.getUserByID(item.id)?.isYou
-                                            ? "text-main"
+                                        className={`dropdown dropdown-left ${
+                                          itemIndex + 1 ===
+                                          selectedClan.members?.length
+                                            ? "dropdown-end"
                                             : ""
                                         }`}
                                       >
-                                        {prototype.getUserByID(item.id)
-                                          ?.clan && (
-                                          <>
-                                            &#91;
-                                            {
-                                              prototype.getClanByID(
-                                                prototype.getUserByID(item.id)
-                                                  ?.clan
-                                              )?.tag
-                                            }
-                                            &#93;{" "}
-                                          </>
-                                        )}
-                                        {
-                                          prototype.getUserByID(item.id)
-                                            ?.nickname
-                                        }
-                                      </div>
-                                      <div className="flex gap-1">
-                                        <div className="flex gap-1">
-                                          {prototype
-                                            .getUserByID(item.id)
-                                            .games.map((game, gameIndex) => (
-                                              <GameIcon
-                                                key={gameIndex}
-                                                game={game}
-                                                size="text-base"
-                                              />
-                                            ))}
+                                        <label
+                                          tabIndex="0"
+                                          className="button button-ghost rounded-full"
+                                        >
+                                          <span className="icon icon-dots-vertical" />
+                                        </label>
+                                        <div
+                                          tabIndex="0"
+                                          className="dropdown-content bg-ui-600 w-52 p-1"
+                                        >
+                                          <ul className="menu menu-rounded menu-secondary">
+                                            {selectedClan.admin ===
+                                              prototype.getUserByID(item.id)
+                                                .id && (
+                                              <>
+                                                <li>
+                                                  <a>
+                                                    <span className="icon icon-leave" />
+                                                    <span>Leave clan</span>
+                                                  </a>
+                                                </li>
+                                              </>
+                                            )}
+                                            {selectedClan.admin !==
+                                              prototype.getUserByID(item.id)
+                                                .id && (
+                                              <>
+                                                <li>
+                                                  <a>
+                                                    <span className="icon icon-chess-king" />
+                                                    <span>
+                                                      Promote to captain
+                                                    </span>
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a>
+                                                    <span className="icon icon-s-ban" />
+                                                    <span>Kick</span>
+                                                  </a>
+                                                </li>
+                                                <li>
+                                                  <a
+                                                    onClick={() => {
+                                                      setSelectedUser(
+                                                        prototype.getUserByID(
+                                                          item.id
+                                                        ).nickname
+                                                      );
+                                                      openModalGiftTokens();
+                                                    }}
+                                                  >
+                                                    <span className="icon icon-token" />
+                                                    <span>Gift tokens</span>
+                                                  </a>
+                                                </li>
+                                              </>
+                                            )}
+                                          </ul>
                                         </div>
                                       </div>
                                     </div>
-                                  </button>
-                                </Link>
-                              </td>
-                              <td>
-                                {itemIndex != 2 && (
-                                  <Tooltip
-                                    placement="top"
-                                    tooltip={
-                                      <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                        <span className="uppercase text-ui-300">
-                                          Riot ID:
-                                        </span>
-                                        <div className="flex-1">
-                                          <div className="truncate">
-                                            <a
-                                              className="link"
-                                              onClick={() => {
-                                                uiContext.openToastr({
-                                                  size: "medium",
-                                                  text: "RIOT ID copied to your clipboard",
-                                                  color: "green",
-                                                  autoDelete: true,
-                                                  autoDeleteDelay: 2500,
-                                                });
-                                                navigator.clipboard.writeText(
-                                                  prototype.getUserByID(item.id)
-                                                    .socials
-                                                    ?.riotValorantNickname
-                                                );
-                                              }}
-                                            >
-                                              {
-                                                prototype.getUserByID(item.id)
-                                                  .nickname
-                                              }
-                                              {" #"}
-                                              {
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantHashtag
-                                              }
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div>
-                                          <Tooltip
-                                            placement="top"
-                                            tooltip={
-                                              <span className="text-sm">
-                                                Click to copy RIOT ID
-                                              </span>
-                                            }
-                                          >
-                                            <ButtonFeedback
-                                              value={`${
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantNickname
-                                              }{" #"}${
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantHashtag
-                                              }`}
-                                              variant="button-tertiary rounded-full"
-                                              icon="icon-document-copy"
-                                              message="RIOT ID copied to your clipboard"
-                                            />
-                                          </Tooltip>
-                                        </div>
-                                      </div>
-                                    }
-                                  >
-                                    <ButtonFeedback
-                                      value={`${
-                                        prototype.getUserByID(item.id).nickname
-                                      } #1111`}
-                                      variant="button-tertiary rounded-full"
-                                      icon="icon-riotgames-symbol"
-                                      message="RIOT ID copied to your clipboard"
-                                    />
-                                  </Tooltip>
-                                )}
-                              </td>
-                              <td>
-                                {itemIndex != 2 && (
-                                  <Tooltip
-                                    placement="top"
-                                    tooltip={
-                                      <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                        <span className="uppercase text-ui-300">
-                                          Steam ID:
-                                        </span>
-                                        <div className="flex-1">
-                                          <div className="truncate">
-                                            <a
-                                              className="link"
-                                              onClick={() => {
-                                                uiContext.openToastr({
-                                                  size: "medium",
-                                                  text: "Steam ID copied to your clipboard",
-                                                  color: "green",
-                                                  autoDelete: true,
-                                                  autoDeleteDelay: 2500,
-                                                });
-                                                navigator.clipboard.writeText(
-                                                  prototype.getUserByID(item.id)
-                                                    .socials
-                                                    ?.riotValorantNickname
-                                                );
-                                              }}
-                                            >
-                                              {
-                                                prototype.getUserByID(item.id)
-                                                  .nickname
-                                              }
-                                              {" #"}
-                                              {
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantHashtag
-                                              }
-                                            </a>
-                                          </div>
-                                        </div>
-                                        <div>
-                                          <Tooltip
-                                            placement="top"
-                                            tooltip={
-                                              <span className="text-sm">
-                                                Click to copy Steam ID
-                                              </span>
-                                            }
-                                          >
-                                            <ButtonFeedback
-                                              value={`${
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantNickname
-                                              }{" #"}${
-                                                prototype.getUserByID(item.id)
-                                                  .socials?.riotValorantHashtag
-                                              }`}
-                                              variant="button-tertiary rounded-full"
-                                              icon="icon-document-copy"
-                                              message="Steam ID copied to your clipboard"
-                                            />
-                                          </Tooltip>
-                                        </div>
-                                      </div>
-                                    }
-                                  >
-                                    <ButtonFeedback
-                                      value={`${
-                                        prototype.getUserByID(item.id).nickname
-                                      } #1111`}
-                                      variant="button-tertiary rounded-full"
-                                      icon="icon-steam"
-                                      message="Steam ID copied to your clipboard"
-                                    />
-                                  </Tooltip>
-                                )}
-                              </td>
-                              <td className="max-xl:hidden">
-                                <div className="text-ui-300">
-                                  {RandomNumber(10, 9999)}
-                                </div>
-                              </td>
-                              <td className="max-xl:hidden">
-                                <div className="text-ui-300">
-                                  #{RandomNumber(10, 300)}
-                                </div>
-                              </td>
-                              <td className="text-right">
-                                {selectedClan.isYou && (
-                                  <>
-                                    {hasOnlyOne ? (
-                                      <Tooltip tooltip={`Gift token`}>
-                                        <button
-                                          type="button"
-                                          onClick={() => {
-                                            setSelectedUser(
-                                              prototype.getUserByID(item.id)
-                                                .nickname
-                                            );
-                                            openModalGiftTokens();
-                                          }}
-                                          className="button button-tertiary rounded-full"
-                                        >
-                                          <span className="icon icon-token" />
-                                        </button>
-                                      </Tooltip>
-                                    ) : (
-                                      <div className="item-actions">
-                                        <div
-                                          className={`dropdown dropdown-left ${
-                                            itemIndex + 1 ===
-                                            selectedClan.members?.length
-                                              ? "dropdown-end"
-                                              : ""
-                                          }`}
-                                        >
-                                          <label
-                                            tabIndex="0"
-                                            className="button button-ghost rounded-full"
-                                          >
-                                            <span className="icon icon-dots-vertical" />
-                                          </label>
-                                          <div
-                                            tabIndex="0"
-                                            className="dropdown-content bg-ui-600 w-52 p-1"
-                                          >
-                                            <ul className="menu menu-rounded menu-secondary">
-                                              {selectedClan.admin ===
-                                                prototype.getUserByID(item.id)
-                                                  .id && (
-                                                <>
-                                                  <li>
-                                                    <a>
-                                                      <span className="icon icon-leave" />
-                                                      <span>Leave clan</span>
-                                                    </a>
-                                                  </li>
-                                                </>
-                                              )}
-                                              {selectedClan.admin !==
-                                                prototype.getUserByID(item.id)
-                                                  .id && (
-                                                <>
-                                                  <li>
-                                                    <a>
-                                                      <span className="icon icon-chess-king" />
-                                                      <span>
-                                                        Promote to captain
-                                                      </span>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a>
-                                                      <span className="icon icon-s-ban" />
-                                                      <span>Kick</span>
-                                                    </a>
-                                                  </li>
-                                                  <li>
-                                                    <a
-                                                      onClick={() => {
-                                                        setSelectedUser(
-                                                          prototype.getUserByID(
-                                                            item.id
-                                                          ).nickname
-                                                        );
-                                                        openModalGiftTokens();
-                                                      }}
-                                                    >
-                                                      <span className="icon icon-token" />
-                                                      <span>Gift tokens</span>
-                                                    </a>
-                                                  </li>
-                                                </>
-                                              )}
-                                            </ul>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    )}
-                                  </>
-                                )}
-                              </td>
-                            </tr>
+                                  )}
+                                </>
+                              )}
+                            </RowUser>
                           ))}
                       </tbody>
                     </table>

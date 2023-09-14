@@ -274,7 +274,7 @@ export default function TabClanLeaderboardsLeaderboards() {
             <div className="col-span-1 lg:col-span-3">
               <div className="mt-10 text-center">
                 <h3 className="h4 mt-2 text-ui-100 leading-tight text-center max-w-[40ch] mx-auto mb-4">
-                  Play together with 5 members of your clan and be the first to
+                  Play together with 5 members of your Clan and be the first to
                   join this leaderboard!
                 </h3>
                 {selectedClanLeaderboard.status === "upcoming" && (

@@ -237,7 +237,7 @@ export default function ProfileHeader(props) {
                           type="button"
                           className="button button-sm button-primary w-full"
                         >
-                          <span>Recruit to your clan</span>
+                          <span>Recruit to your Clan</span>
                         </a>
                       </Link>
                     </div>

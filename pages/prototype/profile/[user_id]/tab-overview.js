@@ -130,8 +130,10 @@ export default function TabProfileOverview() {
                                 );
                               }}
                             >
-                              <span>{selectedUser.socials?.riotValorantNickname}#
-                              {selectedUser.socials?.riotValorantHashtag}</span>
+                              <span>
+                                {selectedUser.socials?.riotValorantNickname}#
+                                {selectedUser.socials?.riotValorantHashtag}
+                              </span>
                               <span className="text-sm text-ui-400">EUNE</span>
                             </a>
                             <Tooltip
@@ -168,8 +170,17 @@ export default function TabProfileOverview() {
                                 );
                               }}
                             >
-                              <span>{selectedUser.socials?.riotLeagueofLegendsNickname}#
-                              {selectedUser.socials?.riotLeagueofLegendsHashtag}</span>
+                              <span>
+                                {
+                                  selectedUser.socials
+                                    ?.riotLeagueofLegendsNickname
+                                }
+                                #
+                                {
+                                  selectedUser.socials
+                                    ?.riotLeagueofLegendsHashtag
+                                }
+                              </span>
                               <span className="text-sm text-ui-400">EUNE</span>
                             </a>
                             <Tooltip
@@ -188,7 +199,7 @@ export default function TabProfileOverview() {
                             </Tooltip>
                           </li>
                         )}
-                        {selectedUser.socials?.discord && (
+                        {selectedUser.socials?.steam && (
                           <li className="flex items-center gap-2 text-ui-300">
                             <span className="icon icon-20 icon-steam" />
                             <a
@@ -196,17 +207,17 @@ export default function TabProfileOverview() {
                               onClick={() => {
                                 uiContext.openToastr({
                                   size: "medium",
-                                  text: "Game tag copied to your clipboard",
+                                  text: "Steam ID to your clipboard",
                                   color: "green",
                                   autoDelete: true,
                                   autoDeleteDelay: 2500,
                                 });
                                 navigator.clipboard.writeText(
-                                  `${selectedUser.socials?.discord}`
+                                  `${selectedUser.socials?.steam}`
                                 );
                               }}
                             >
-                              {selectedUser.socials?.discord}
+                              {selectedUser.socials?.steam}
                             </a>
                             <Tooltip
                               placement="left"
@@ -219,7 +230,7 @@ export default function TabProfileOverview() {
                               <ButtonFeedback
                                 variant="button-ghost rounded-full"
                                 icon="icon-document-copy"
-                                message="Game tag copied to your clipboard"
+                                message="Steam ID to your clipboard"
                               />
                             </Tooltip>
                           </li>
@@ -328,7 +339,7 @@ export default function TabProfileOverview() {
                               type="button"
                               className="button button-sm button-primary w-full"
                             >
-                              <span>Recruit to your clan</span>
+                              <span>Recruit to your Clan</span>
                             </a>
                           </Link>
                         </div>

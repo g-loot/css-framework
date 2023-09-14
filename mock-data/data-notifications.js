@@ -75,7 +75,7 @@ export const dataNotifications = [
         type: "clan",
         intro: "Clan",
         title: "Invitation accepted",
-        text: "<a href='#' class='link font-bold'>Harriss</a> has accepted and joined your clan.",
+        text: "<a href='#' class='link font-bold'>Harriss</a> has accepted and joined your Clan.",
         cta: "View",
         url: "/prototype/clans/1",
         time: "1 min.",

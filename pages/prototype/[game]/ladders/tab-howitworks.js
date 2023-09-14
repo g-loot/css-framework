@@ -144,7 +144,7 @@ const HowitworksTabs = [
     ],
   },
   {
-    title: "Playing with your clan",
+    title: "Playing with your Clan",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737013/Stryda/illustrations/clans.jpg",
     content: [
@@ -167,7 +167,7 @@ const HowitworksTabs = [
     ],
   },
   {
-    title: "If you leave your clan in the middle of a Ladder",
+    title: "If you leave your Clan in the middle of a Ladder",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1674737016/Stryda/illustrations/picture_gamer.jpg",
     content: [

@@ -34,7 +34,7 @@ const slides = [
   },
   {
     subtitle: "Clan Champ",
-    title: "Will your clan be champions?",
+    title: "Will your Clan be champions?",
     description:
       "This week only, join your fellow Stryda players in a fierce battle of the community’s own choosing! Get points for planting and defusing the spike in Swiftplay and fight your way to the top of the leaderboard. We've also lowered the token fee to make sure everyone can join in. Enjoy!",
     image:

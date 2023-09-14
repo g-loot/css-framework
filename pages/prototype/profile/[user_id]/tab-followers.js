@@ -5,11 +5,10 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import ModalRemoveFriend from "./modal-remove-friend";
-import Avatar from "@/components/Avatar/Avatar";
 import Tooltip from "@/components/Tooltip/Tooltip";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import ButtonSorting from "@/components/Button/ButtonSorting";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
+import RowUser from "@/components/RowUser/RowUser";
 
 export default function TabProfileFollowers() {
   const router = useRouter();
@@ -185,7 +184,7 @@ export default function TabProfileFollowers() {
                             </th>
                             <th className="max-xl:hidden text-left">
                               <ButtonSorting hasArrow={false}>
-                                Riot ID
+                                Riot IDs
                               </ButtonSorting>
                             </th>
                             <th className="max-xl:hidden text-left">
@@ -207,261 +206,15 @@ export default function TabProfileFollowers() {
                             {prototype.users
                               .filter((g) => g.isFriend)
                               .map((item, itemIndex) => (
-                                <tr
-                                  key={item.id}
-                                  className="animate-slide-in-bottom animate-delay"
-                                  style={{
-                                    "--delay":
-                                      "calc(" + itemIndex + " * 0.05s)",
-                                  }}
-                                >
-                                  <td>
-                                    <div className="flex gap-3 items-center self-center interactive">
-                                      <Avatar
-                                        id={item.id}
-                                        hasTooltip={true}
-                                        size="avatar-sm"
-                                      />
-                                      <div className="space-y-0.5">
-                                        <div
-                                          className={`${
-                                            prototype.getUserByID(item.id)
-                                              ?.isPremium
-                                              ? "text-premium-500"
-                                              : ""
-                                          } ${
-                                            prototype.getUserByID(item.id)
-                                              ?.isYou
-                                              ? "text-main"
-                                              : ""
-                                          }`}
-                                        >
-                                          {prototype.getUserByID(item.id)
-                                            ?.clan && (
-                                            <>
-                                              &#91;
-                                              {
-                                                prototype.getClanByID(
-                                                  prototype.getUserByID(item.id)
-                                                    ?.clan
-                                                )?.tag
-                                              }
-                                              &#93;{" "}
-                                            </>
-                                          )}
-                                          {
-                                            prototype.getUserByID(item.id)
-                                              ?.nickname
-                                          }
-                                        </div>
-                                        <div className="flex gap-1">
-                                          <div className="flex gap-1">
-                                            {prototype
-                                              .getUserByID(item.id)
-                                              .games.map((game, gameIndex) => (
-                                                <GameIcon
-                                                  key={gameIndex}
-                                                  game={game}
-                                                  size="text-base"
-                                                />
-                                              ))}
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </td>
-                                  <td>
-                                    {itemIndex != 2 && (
-                                      <Tooltip
-                                        placement="top"
-                                        tooltip={
-                                          <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                            <span className="uppercase text-ui-300">
-                                              Riot ID:
-                                            </span>
-                                            <div className="flex-1">
-                                              <div className="truncate">
-                                                <a
-                                                  className="link"
-                                                  onClick={() => {
-                                                    uiContext.openToastr({
-                                                      size: "medium",
-                                                      text: "RIOT ID copied to your clipboard",
-                                                      color: "green",
-                                                      autoDelete: true,
-                                                      autoDeleteDelay: 2500,
-                                                    });
-                                                    navigator.clipboard.writeText(
-                                                      prototype.getUserByID(
-                                                        item.id
-                                                      ).socials
-                                                        ?.riotValorantNickname
-                                                    );
-                                                  }}
-                                                >
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).nickname
-                                                  }
-                                                  {" #"}
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div>
-                                              <Tooltip
-                                                placement="top"
-                                                tooltip={
-                                                  <span className="text-sm">
-                                                    Click to copy RIOT ID
-                                                  </span>
-                                                }
-                                              >
-                                                <ButtonFeedback
-                                                  value={`${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantNickname
-                                                  }{" #"}${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }`}
-                                                  variant="button-tertiary rounded-full"
-                                                  icon="icon-document-copy"
-                                                  message="RIOT ID copied to your clipboard"
-                                                />
-                                              </Tooltip>
-                                            </div>
-                                          </div>
-                                        }
-                                      >
-                                        <ButtonFeedback
-                                          value={`${
-                                            prototype.getUserByID(item.id)
-                                              .nickname
-                                          } #1111`}
-                                          variant="button-tertiary rounded-full"
-                                          icon="icon-riotgames-symbol"
-                                          message="RIOT ID copied to your clipboard"
-                                        />
-                                      </Tooltip>
-                                    )}
-                                  </td>
-                                  <td>
-                                    {itemIndex != 2 && (
-                                      <Tooltip
-                                        placement="top"
-                                        tooltip={
-                                          <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                            <span className="uppercase text-ui-300">
-                                              Steam ID:
-                                            </span>
-                                            <div className="flex-1">
-                                              <div className="truncate">
-                                                <a
-                                                  className="link"
-                                                  onClick={() => {
-                                                    uiContext.openToastr({
-                                                      size: "medium",
-                                                      text: "Steam ID copied to your clipboard",
-                                                      color: "green",
-                                                      autoDelete: true,
-                                                      autoDeleteDelay: 2500,
-                                                    });
-                                                    navigator.clipboard.writeText(
-                                                      prototype.getUserByID(
-                                                        item.id
-                                                      ).socials
-                                                        ?.riotValorantNickname
-                                                    );
-                                                  }}
-                                                >
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).nickname
-                                                  }
-                                                  {" #"}
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }
-                                                </a>
-                                              </div>
-                                            </div>
-                                            <div>
-                                              <Tooltip
-                                                placement="top"
-                                                tooltip={
-                                                  <span className="text-sm">
-                                                    Click to copy Steam ID
-                                                  </span>
-                                                }
-                                              >
-                                                <ButtonFeedback
-                                                  value={`${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantNickname
-                                                  }{" #"}${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }`}
-                                                  variant="button-tertiary rounded-full"
-                                                  icon="icon-document-copy"
-                                                  message="Steam ID copied to your clipboard"
-                                                />
-                                              </Tooltip>
-                                            </div>
-                                          </div>
-                                        }
-                                      >
-                                        <ButtonFeedback
-                                          value={`${
-                                            prototype.getUserByID(item.id)
-                                              .nickname
-                                          } #1111`}
-                                          variant="button-tertiary rounded-full"
-                                          icon="icon-steam"
-                                          message="Steam ID copied to your clipboard"
-                                        />
-                                      </Tooltip>
-                                    )}
-                                  </td>
-                                  <td className="max-xl:hidden">
-                                    <div className="text-ui-300">
-                                      {RandomNumber(10, 9999)}
-                                    </div>
-                                  </td>
-                                  <td className="max-xl:hidden">
-                                    <div className="text-ui-300">
-                                      #{RandomNumber(10, 300)}
-                                    </div>
-                                  </td>
-                                  <td className="text-right">
-                                    <Tooltip tooltip="Follow back">
-                                      <ButtonFeedback
-                                        variant="button-tertiary rounded-full"
-                                        icon="icon-a-sync"
-                                        message="Player added to your following"
-                                      />
-                                    </Tooltip>
-                                  </td>
-                                </tr>
+                                <RowUser key={itemIndex} id={item.id}>
+                                  <Tooltip tooltip="Follow back">
+                                    <ButtonFeedback
+                                      variant="button-tertiary rounded-full"
+                                      icon="icon-a-sync"
+                                      message="Player added to your following"
+                                    />
+                                  </Tooltip>
+                                </RowUser>
                               ))}
                           </tbody>
                         )}

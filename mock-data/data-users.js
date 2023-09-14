@@ -24,6 +24,7 @@ export const dataUsers = [
       riotLeagueofLegendsHashtag: 8573,
       discord: "@ctrlchamp",
       twitch: "@ctrlchamp",
+      steam: "@ctrlchamp",
     },
     shopItems: {
       avatarFrame: 3,
@@ -412,6 +413,7 @@ export const dataUsers = [
       riotLeagueofLegendsHashtag: 8573,
       discord: "@misterkilla",
       twitch: "@misterkilla",
+      steam: "@misterkilla",
     },
     shopItems: {
       avatarFrame: 3,
@@ -554,8 +556,11 @@ export const dataUsers = [
     socials: {
       riotValorantNickname: "shikari",
       riotValorantHashtag: 1901,
+      riotLeagueofLegendsNickname: "shikari",
+      riotLeagueofLegendsHashtag: 1901,
       discord: "@shikari",
       twitch: "@shikari",
+      steam: "@shikari",
     },
     shopItems: {
       avatarFrame: 5,
@@ -585,14 +590,14 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [5],
+    games: [1,6],
     ladders: [
       {
         gameSlug: "valorant",
         id: 2,
       },
       {
-        gameSlug: "pubg",
+        gameSlug: "leagueoflegends",
         id: 2,
       },
       {
@@ -745,6 +750,7 @@ export const dataUsers = [
       riotValorantHashtag: 8573,
       discord: "@dirtyjohnny",
       twitch: "@dirtyjohnny",
+      steam: "@dirtyjohnny",
     },
     shopItems: {
       avatarFrame: 2,
@@ -941,6 +947,7 @@ export const dataUsers = [
       riotValorantHashtag: 8573,
       discord: "@poporob",
       twitch: "@poporob",
+      steam: "@poporob",
     },
     shopItems: {
       avatarFrame: 1,
@@ -1112,6 +1119,7 @@ export const dataUsers = [
       riotValorantHashtag: 1425,
       discord: "@valance",
       twitch: "@valance",
+      steam: "@valance",
     },
     shopItems: {
       avatarFrame: 110,
@@ -1283,9 +1291,10 @@ export const dataUsers = [
     email: "PilarPilar@gmail.com",
     clan: 1,
     socials: {
-      riotValorantNickname: "Pilar",
-      riotValorantHashtag: 7482,
+      riotLeagueofLegendsNickname: "Pilar",
+      riotLeagueofLegendsHashtag: 7482,
       twitch: "@PilarPilar",
+      steam: "@PilarPilar",
     },
     shopItems: {
       avatarFrame: false,
@@ -1461,7 +1470,9 @@ export const dataUsers = [
       riotValorantNickname: "HansGrubby",
       riotValorantHashtag: 1254,
       twitch: "@HansGrubby",
+      steam: "@HansGrubby",
       twitch: "@HansGrubby",
+      steam: "@HansGrubby",
     },
     shopItems: {
       avatarFrame: 102,
@@ -1566,6 +1577,7 @@ export const dataUsers = [
       riotValorantHashtag: 1254,
       discord: "@FrenzyMan",
       twitch: "@FrenzyMan",
+      steam: "@FrenzyMan",
     },
     shopItems: {
       avatarFrame: false,
@@ -1609,6 +1621,8 @@ export const dataUsers = [
     socials: {
       riotValorantNickname: "Joppe",
       riotValorantHashtag: 1254,
+      riotLeagueofLegendsNickname: "Joppe",
+      riotLeagueofLegendsHashtag: 1254,
       discord: "@Joppe",
       twitch: "@Joppe",
     },
@@ -1631,7 +1645,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [1, 6],
     ladders: [
       {
         gameSlug: "valorant",
@@ -1713,8 +1727,11 @@ export const dataUsers = [
     socials: {
       riotValorantNickname: "KooKoo",
       riotValorantHashtag: 1254,
+      riotLeagueofLegendsNickname: "KooKoo",
+      riotLeagueofLegendsHashtag: 1254,
       discord: "@KooKoo",
       twitch: "@KooKoo",
+      steam: "@KooKoo",
     },
     shopItems: {
       avatarFrame: 160,
@@ -1735,7 +1752,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [1, 6, 3],
     ladders: [
       {
         gameSlug: "valorant",
@@ -1817,8 +1834,11 @@ export const dataUsers = [
     socials: {
       riotValorantNickname: "KnuckleDust",
       riotValorantHashtag: 1254,
+      riotLeagueofLegendsNickname: "KnuckleDust",
+      riotLeagueofLegendsHashtag: 1254,
       discord: "@KnuckleDust",
       twitch: "@KnuckleDust",
+      steam: "@KnuckleDust",
     },
     shopItems: {
       avatarFrame: 6,
@@ -1839,7 +1859,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [1, 7, 4, 6],
     ladders: [
       {
         gameSlug: "valorant",
@@ -1921,6 +1941,8 @@ export const dataUsers = [
     socials: {
       riotValorantNickname: "TechCluster",
       riotValorantHashtag: 1254,
+      riotLeagueofLegendsNickname: "TechCluster",
+      riotLeagueofLegendsHashtag: 1254,
       discord: "@TechCluster",
       twitch: "@TechCluster",
     },
@@ -1943,7 +1965,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [1, 6],
     ladders: [
       {
         gameSlug: "valorant",
@@ -2011,7 +2033,7 @@ export const dataUsers = [
     isFriend: true,
     level: 23,
     isOnline: false,
-    nickname: "Obtusk",
+    nickname: "Gimiwi",
     firstname: "Pierre",
     lastname: "Garnier",
     country: "Jamaica",
@@ -2019,14 +2041,17 @@ export const dataUsers = [
     lang: "JM",
     avatar:
       "https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_15.jpg",
-    email: "Obtusk@gmail.com",
+    email: "Gimiwi@gmail.com",
     clan: 5,
     bio: "Sleep. Eat. Game. Repeat.",
     socials: {
-      riotValorantNickname: "Obtusk",
+      riotValorantNickname: "Gimiwi",
       riotValorantHashtag: 1254,
-      discord: "@Obtusk",
-      twitch: "@Obtusk",
+      riotLeagueofLegendsNickname: "Gimiwi",
+      riotLeagueofLegendsHashtag: 1254,
+      discord: "@Gimiwi",
+      twitch: "@Gimiwi",
+      steam: "@Gimiwi",
     },
     shopItems: {
       avatarFrame: 8,
@@ -2047,7 +2072,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [6,1],
     ladders: [
       {
         gameSlug: "valorant",
@@ -2127,10 +2152,11 @@ export const dataUsers = [
     clan: 7,
     bio: "Sleep. Eat. Game. Repeat.",
     socials: {
-      riotValorantNickname: "Obtusk",
-      riotValorantHashtag: 1254,
+      riotLeagueofLegendsNickname: "Obtusk",
+      riotLeagueofLegendsHashtag: 1254,
       discord: "@Obtusk",
       twitch: "@Obtusk",
+      steam: "@Obtusk",
     },
     shopItems: {
       avatarFrame: 9,
@@ -2151,7 +2177,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [6],
     ladders: [
       {
         gameSlug: "valorant",
@@ -2255,7 +2281,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [1],
     ladders: [
       {
         gameSlug: "valorant",
@@ -2335,10 +2361,9 @@ export const dataUsers = [
     clan: 8,
     bio: "I luv Putin.",
     socials: {
-      riotValorantNickname: "Minkx",
-      riotValorantHashtag: 1254,
       discord: "@Minkx",
       twitch: "@Minkx",
+      steam: "@Minkx",
     },
     shopItems: {
       avatarFrame: 2,
@@ -2359,7 +2384,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1, 3],
+    games: [2],
     ladders: [
       {
         gameSlug: "valorant",

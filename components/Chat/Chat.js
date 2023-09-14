@@ -1060,7 +1060,7 @@ export default function Chat(props) {
                   alt=""
                 />
                 <div className="mt-2 mb-6">
-                  <p className="text-sm text-ui-400">Chat with your clan</p>
+                  <p className="text-sm text-ui-400">Chat with your Clan</p>
                   <p className="text-lg text-ui-300">
                     Coordinate and have fun together!
                   </p>

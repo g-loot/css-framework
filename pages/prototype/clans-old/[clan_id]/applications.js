@@ -198,7 +198,7 @@ export default function Applications() {
                       No applicants to show.
                     </p>
                     <p className="text-lg text-ui-300">
-                      Ladder more to promote your clan.
+                      Ladder more to promote your Clan.
                     </p>
                   </div>
                   <Link href="/prototype/valorant/ladders">

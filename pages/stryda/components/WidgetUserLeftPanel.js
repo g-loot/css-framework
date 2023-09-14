@@ -148,7 +148,7 @@ export default function WidgetUserLeftPanel(props) {
                       </Tooltip>
                     </li>
                   )}
-                  {selectedUser.socials?.discord && (
+                  {selectedUser.socials?.steam && (
                     <li className="flex items-center gap-2 text-ui-300">
                       <span className="icon icon-20 icon-steam" />
                       <a
@@ -156,17 +156,17 @@ export default function WidgetUserLeftPanel(props) {
                         onClick={() => {
                           uiContext.openToastr({
                             size: "medium",
-                            text: "Game tag copied to your clipboard",
+                            text: "Steam ID to your clipboard",
                             color: "green",
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
                           navigator.clipboard.writeText(
-                            `${selectedUser.socials?.discord}`
+                            `${selectedUser.socials?.steam}`
                           );
                         }}
                       >
-                        {selectedUser.socials?.discord}
+                        {selectedUser.socials?.steam}
                       </a>
                       <Tooltip
                         placement="left"
@@ -179,7 +179,7 @@ export default function WidgetUserLeftPanel(props) {
                         <ButtonFeedback
                           variant="button-ghost rounded-full"
                           icon="icon-document-copy"
-                          message="Game tag copied to your clipboard"
+                          message="Steam ID to your clipboard"
                         />
                       </Tooltip>
                     </li>

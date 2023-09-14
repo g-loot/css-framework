@@ -359,7 +359,7 @@ const DSpage = () => {
                         {/*
                         <li>
                           <span className="text-ui-100 font-bold">Compete</span>{" "}
-                          in epic Showdowns with your clanmates for big rewards.
+                          in epic Showdowns with your Clanmates for big rewards.
                         </li>
   */}
                         <li>

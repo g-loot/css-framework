@@ -147,7 +147,7 @@ export default function TabClanLeaderboardsHowItWorks() {
                   <ul className="list-inside list-disc space-y-4 text-ui-300 leading-relaxed">
                     <li>
                       Your party in the game need to be filled up with members
-                      from your clan only.
+                      from your Clan only.
                     </li>
                     <li>
                       The scores coming in are based on your teams performance

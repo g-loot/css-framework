@@ -24,7 +24,7 @@ export default function ModalRecruitPlayer(props) {
         size: "small",
         text: `${
           prototype.getUserByID(userID)?.nickname
-        } has been invited to join your clan.`,
+        } has been invited to join your Clan.`,
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,
@@ -56,7 +56,7 @@ export default function ModalRecruitPlayer(props) {
               <h2 className="modal-title">Recruit player?</h2>
               <p>
                 You are about to invite{" "}
-                {prototype.getUserByID(userID)?.nickname} to your clan.
+                {prototype.getUserByID(userID)?.nickname} to your Clan.
                 <br />
                 Are you sure?
               </p>

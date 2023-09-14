@@ -67,7 +67,7 @@ const achievementsList = [
   {
     level: 5,
     name: "Clan Supporter",
-    description: "Gift 200 tokens to members of your clan",
+    description: "Gift 200 tokens to members of your Clan",
     icon: "clansupporter",
     percent: 75,
     progress: 10,
