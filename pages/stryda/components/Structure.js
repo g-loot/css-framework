@@ -10,11 +10,11 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (typeof window !== "undefined") {
       document.body.setAttribute("data-theme", "lighter");
     }
-  }, []);
+  }, []);*/
 
   function openModalFavoriteGames() {
     uiContext.openModal(<ModalFavoriteGames />);

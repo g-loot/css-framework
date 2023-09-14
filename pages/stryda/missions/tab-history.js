@@ -42,7 +42,7 @@ export default function TabMissionsHistory() {
       {selectedGame && (
         <>
           <section>
-            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+            <div className="mt-8 overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
               <table className="table table-rounded rounded-xl w-full">
                 <tbody>
                   {selectedGame?.missions.map((mission, missionIndex) => (

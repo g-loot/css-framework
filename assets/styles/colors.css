@@ -13,22 +13,19 @@ body {
   --color-mono-900: 0 0 0;
 
   --color-blue: 0 225 255;
-  
-  /*
-  --color-ui-100: 229 230 234;
-  --color-ui-200: 182 184 196;
-  --color-ui-300: 136 139 156;
-  --color-ui-400: 94 97 116;
-  --color-ui-500: 49 52 72;
-  --color-ui-600: 41 44 65;
-  --color-ui-700: 33 36 56;
-  --color-ui-800: 25 28 48;
-  --color-ui-850: 19 21 38;
-  --color-ui-900: 13 15 28;
-  */
 
-  
-  --color-ui-100: 225 226 231;
+  --color-ui-100: 222 222 226;
+  --color-ui-200: 175 176 185;
+  --color-ui-300: 129 131 143;
+  --color-ui-400: 84 86 101;
+  --color-ui-500: 39 41 58;
+  --color-ui-600: 33 35 51;
+  --color-ui-700: 28 29 44;
+  --color-ui-800: 22 24 37;
+  --color-ui-850: 17 18 30;
+  --color-ui-900: 12 13 22;
+
+  /* --color-ui-100: 225 226 231;
   --color-ui-200: 165 167 181;
   --color-ui-300: 129 132 149;
   --color-ui-400: 83 86 105;
@@ -37,20 +34,8 @@ body {
   --color-ui-700: 23 27 45;
   --color-ui-800: 16 19 35;
   --color-ui-850: 10 12 25;
-  --color-ui-900: 5 7 15;
-  
-  /*
-  --color-ui-100: 200 200 203;
-  --color-ui-200: 161 162 166;
-  --color-ui-300: 122 123 129;
-  --color-ui-400: 83 84 92;
-  --color-ui-500: 44 45 55;
-  --color-ui-600: 36 37 45;
-  --color-ui-700: 28 29 35;
-  --color-ui-800: 20 21 25;
-  --color-ui-850: 12 13 15;
-  --color-ui-900: 4 5 6;
-  */
+  --color-ui-900: 5 7 15; */
+
   
   --color-premium-300: 176 126 255;
   --color-premium-500: 163 114 255;
@@ -131,19 +116,6 @@ body {
   --color-game-pubg: 242 169 0;
   --color-game-rocketleague: 46 113 198;
   --color-game-valorant: 255 70 85;
-}
-
-[data-theme='lighter'] {
-  --color-ui-100: 222 222 226;
-  --color-ui-200: 175 176 185;
-  --color-ui-300: 129 131 143;
-  --color-ui-400: 84 86 101;
-  --color-ui-500: 39 41 58;
-  --color-ui-600: 33 35 51;
-  --color-ui-700: 28 29 44;
-  --color-ui-800: 22 24 37;
-  --color-ui-850: 17 18 30;
-  --color-ui-900: 12 13 22;
 }
 
 body {

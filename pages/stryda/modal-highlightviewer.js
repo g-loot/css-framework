@@ -120,7 +120,7 @@ export default function ModalHighlightViewer(props) {
                 width="100%"
                 height="100%"
                 className="relative z-0 w-full"
-                src={item.meta.media?.url}
+                src={item.meta.media?.videoUrl}
               ></video>
             </div>
           </div>

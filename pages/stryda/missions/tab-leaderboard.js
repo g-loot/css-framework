@@ -46,7 +46,7 @@ export default function TabMissionsLeaderboard(props) {
 
   return (
     <>
-      <section className="flex items-center gap-x-4 gap-y-2 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
+      <section className="mt-8 flex items-center gap-x-4 gap-y-2 px-2 md:px-0 whitespace-nowrap overflow-x-auto scrollbar-hidden">
         <div className="form-group form-select flex gap-2 items-center">
           <label className="mb-0" htmlFor="favorite-game">
             Battlepass:

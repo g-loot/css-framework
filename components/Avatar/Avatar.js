@@ -8,6 +8,7 @@ import Link from "next/link";
 import AchievementFrame from "../Achievements/AchievementFrame";
 import AchievementIcon from "../Achievements/AchievementIcon";
 import ModalGiftTokens from "@/pages/prototype/clans/modal-gift-tokens";
+import ModalUnfollow from "@/pages/stryda/profile/modal-unfollow";
 import ButtonFeedback from "../Button/ButtonFeedback";
 
 export default function Avatar(props) {
@@ -31,22 +32,28 @@ export default function Avatar(props) {
       <ModalGiftTokens selectedUser={selectedUser.nickname} />
     );
   }
+  function openModalUnfollow() {
+    uiContext.openModal(<ModalUnfollow selectedUser={selectedUser} />);
+  }
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(userId));
   }, [userId]);
 
   useEffect(() => {
-    if(selectedUser) {
+    if (selectedUser) {
       if (hasAvatarFrame) {
         setAvatarFrame(prototype.getShopitemByID(1, hasAvatarFrame).image);
-      } else if(selectedUser.shopItems?.avatarFrame) {
-        setAvatarFrame(prototype.getShopitemByID(1, selectedUser.shopItems?.avatarFrame).image);
+      } else if (selectedUser.shopItems?.avatarFrame) {
+        setAvatarFrame(
+          prototype.getShopitemByID(1, selectedUser.shopItems?.avatarFrame)
+            .image
+        );
       } else {
         setAvatarFrame(false);
       }
     }
-    }, [hasAvatarFrame, selectedUser]);
+  }, [hasAvatarFrame, selectedUser]);
 
   const AvatarInner = (
     <>
@@ -315,10 +322,10 @@ export default function Avatar(props) {
                           )}
                         </div>
                         <div className="mt-2 flex items-stretch gap-2">
-                          {selectedUser.clan === 1 && (
+                          {selectedUser.clan === 1 && !selectedUser.isYou && (
                             <button
                               type="button"
-                              className="button button-sm button-secondary rounded flex-1"
+                              className="button button-sm button-primary rounded flex-1"
                               onClick={() => {
                                 openModalGiftTokens();
                               }}
@@ -328,12 +335,27 @@ export default function Avatar(props) {
                             </button>
                           )}
                           {!selectedUser.isYou && (
-                            <ButtonFeedback
-                              variant="button-sm button-secondary rounded flex-1"
-                              icon="icon-a-add"
-                              message="Player added in your following"
-                              label="Follow"
-                            />
+                            <>
+                              {selectedUser.isFriend ? (
+                                <button
+                                  type="button"
+                                  className="button button-sm button-tertiary rounded flex-1"
+                                  onClick={() => {
+                                    openModalUnfollow();
+                                  }}
+                                >
+                                  <span className="icon icon-a-remove text-error-500" />
+                                  <span className="text-error-500">Unfollow</span>
+                                </button>
+                              ) : (
+                                <ButtonFeedback
+                                  variant="button-sm button-primary rounded flex-1"
+                                  icon="icon-a-add"
+                                  message="Player added in your following"
+                                  label="Follow"
+                                />
+                              )}
+                            </>
                           )}
                         </div>
                       </div>

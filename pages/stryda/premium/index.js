@@ -326,7 +326,7 @@ export default function Premium() {
         </section>
 
         <video
-          className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-60 pointer-events-none"
+          className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-60 pointer-events-none select-none mix-blend-lighten"
           autoPlay
           playsInline
           muted

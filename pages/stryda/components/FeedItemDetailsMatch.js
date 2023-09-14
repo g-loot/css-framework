@@ -205,7 +205,7 @@ export default function FeedItemDetailsMatch(props) {
                       className={`${tabOn ? "is-active" : ""}`}
                       onClick={() => setTabOn(!tabOn)}
                     >
-                      <span>Video highlight</span>
+                      <span>{match.meta.media.videoUrl ? <>Video highlight</> : <>End screen</>}</span>
                     </button>
                   </li>
                 )}
@@ -232,7 +232,7 @@ export default function FeedItemDetailsMatch(props) {
 
           {tabOn ? (
             <>
-              {match.meta.media && (
+              {match.meta.media?.videoUrl && (
                 <video
                   autoPlay={true}
                   controls
@@ -244,6 +244,12 @@ export default function FeedItemDetailsMatch(props) {
                   className="w-full"
                   id={`video_${item.id}`}
                   src={match.meta.media.videoUrl}
+                />
+              )}
+              {match.meta.media?.imageUrl && (
+                <img
+                  src={match.meta.media.imageUrl}
+                  alt=""
                 />
               )}
             </>

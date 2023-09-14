@@ -51,6 +51,12 @@ export default function Topbar() {
   }, [hasForward]);
   */
 
+  useEffect(() => {
+    router.beforePopState((e) => {
+      setHasForward(true);
+    });
+  }, []);
+
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
@@ -59,19 +65,19 @@ export default function Topbar() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
 
+  
+
   function handleBack() {
     router.back();
-    setHasForward(true);
   }
   function handleForward() {
-    window.history.go(1);
-    setHasForward(false);
+    router.forward();
   }
 
   return (
     <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
       <div className="container sm:px-8 relative">
-        <div className="flex justify-between lg:gap-8 mx-auto">
+        <div className="flex justify-between lg:gap-4 mx-auto">
           <div className="flex gap-2 lg:gap-8 items-center">
             <div className="hidden gap-2">
               <button
@@ -121,6 +127,36 @@ export default function Topbar() {
               </Link>
             </Tooltip>
             */}
+            <div className="hidden lg:flex gap-2 mr-2">
+              <div
+                className={`rounded-full bg-ui-500 ${
+                  hasBack ? "" : "opacity-50 pointer-events-none"
+                }`}
+              >
+                <button
+                  type="button"
+                  className={`button button-ghost rounded-full `}
+                  disabled={!hasBack}
+                  onClick={handleBack}
+                >
+                  <span className="icon icon-ctrl-left" />
+                </button>
+              </div>
+              <div
+                className={`rounded-full bg-ui-500 ${
+                  hasForward ? "" : "opacity-50 pointer-events-none"
+                }`}
+              >
+                <button
+                  type="button"
+                  className={`button button-ghost rounded-full`}
+                  disabled={!hasForward}
+                  onClick={handleForward}
+                >
+                  <span className="icon icon-ctrl-right" />
+                </button>
+              </div>
+            </div>
             <div className="md:hidden">
               <label
                 htmlFor="drawer-prototype"
