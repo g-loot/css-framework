@@ -174,8 +174,7 @@ export default function Battlepass(props) {
     }
   }
 
-  function handleNext() {
-    const step = activeStep + 1;
+  function handleNext(step) {
     setActiveStep(step);
     handleNextBatch();
   }
@@ -189,32 +188,12 @@ export default function Battlepass(props) {
   }
 
   function handlePrevBatch() {
-    console.log(
-      "currentStep",
-      currentStep,
-      "activeStep",
-      activeStep,
-      "originStep",
-      originStep,
-      "maxSteps",
-      maxSteps
-    );
     if (activeStep === originStep + 1) {
       setOriginStep(originStep - maxSteps);
     }
   }
 
   function handleNextBatch() {
-    console.log(
-      "currentStep",
-      currentStep,
-      "activeStep",
-      activeStep,
-      "originStep",
-      originStep,
-      "maxSteps",
-      maxSteps
-    );
     if (activeStep === originStep + maxSteps) {
       setOriginStep(activeStep);
     }
@@ -754,6 +733,29 @@ export default function Battlepass(props) {
                 </div>
               </div>
               <ul className="battlepass">
+                {activeStep > maxSteps && (
+                  <li className="battlepass-previous">
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setOriginStep(originStep - maxSteps);
+                        setActiveStep(originStep);
+                      }}
+                    >
+                      <span className="icon icon-present" />
+                    </button>
+                  </li>
+                )}
+                {activeStep <= maxSteps && (
+                  <li className="battlepass-next">
+                    <button type="button" onClick={() => {
+                        setOriginStep(maxSteps);
+                        setActiveStep(maxSteps + 1);
+                      }}>
+                      <span className="icon icon-present" />
+                    </button>
+                  </li>
+                )}
                 {getBattlepassByID(selectedBattlepassID)
                   .steps.slice(originStep, originStep + maxSteps)
                   .map((item, itemIndex) => (
@@ -889,7 +891,7 @@ export default function Battlepass(props) {
                   <button
                     type="button"
                     className="button button-ghost rounded-full button-sm"
-                    onClick={() => handleNext()}
+                    onClick={() => handleNext(activeStep + 1)}
                     disabled={
                       activeStep ===
                       getBattlepassByID(selectedBattlepassID).steps.length
@@ -921,8 +923,7 @@ export default function Battlepass(props) {
               <div
                 className="battlepass-info"
                 data-tooltip={`${calculPercent(
-                  getBattlepassByID(selectedBattlepassID)
-                                .currentStep
+                  getBattlepassByID(selectedBattlepassID).currentStep
                 )} / ${100 * currentStep} XP`}
               >
                 <div
@@ -984,8 +985,7 @@ export default function Battlepass(props) {
                       }`}
                     >
                       {calculPercent(
-                        getBattlepassByID(selectedBattlepassID)
-                        .currentStep
+                        getBattlepassByID(selectedBattlepassID).currentStep
                       )}
                     </span>{" "}
                     <span>

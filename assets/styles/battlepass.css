@@ -333,6 +333,7 @@
   flex
   gap-4
   pt-5
+  relative
   ;
 }
 
@@ -983,5 +984,96 @@
   }
   100% {
     background-position: 900px 0;
+  }
+}
+
+/* previous & next rewards */
+
+.battlepass-previous,
+.battlepass-next {
+  @apply
+  absolute
+  z-[51]
+  w-14
+  h-14
+  rounded-8
+  bg-main
+  top-[calc(50%_-_(3.5rem_/_2)_+_3px)]
+  shadow-lg
+  ;
+  &::before {
+    @apply
+    content-['']
+    w-14
+    h-14
+    absolute
+    -rotate-45
+    inset-0
+    rounded-8
+    from-main
+    via-main/0
+    to-main/0
+    ;
+  }
+  > * {
+    @apply
+    absolute
+    inset-0.5
+    rounded-full
+    bg-gradient-radial-to-b
+    from-ui-600
+    to-ui-850
+    flex
+    items-center
+    justify-center
+    border
+    border-main
+    text-main
+    ;
+    &:hover {
+      @apply
+      border-interaction-300
+      text-interaction-300
+      ;
+    }
+    &:active {
+      @apply
+      border-mono-100
+      text-interaction-300
+      ;
+    }
+  }
+  .icon {
+    &::before {
+      @apply
+      text-xl
+      ;
+    } 
+  } 
+}
+
+.battlepass-previous {
+  @apply
+  left-6
+  animate-bounce-left
+  ;
+  &::before {
+    @apply
+    rounded-tl-[2px]
+    bg-gradient-to-br
+    ;
+  }
+}
+
+.battlepass-next {
+  @apply
+  right-6
+  animate-bounce-right
+  ;
+  &::before {
+    @apply
+    rounded-br-[2px]
+    bg-gradient-to-tl
+    ;
   }
 }

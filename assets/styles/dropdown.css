@@ -19,9 +19,6 @@
     absolute
     z-50
     origin-top
-    rounded-2
-    border
-    border-ui-400/20
     ;
     /*
     .menu > li,
@@ -79,8 +76,6 @@
     .dropdown-content {
       @apply
       scale-100
-      translate-y-0
-      scale-y-100
       ;
     }
   }
@@ -95,8 +90,6 @@
         invisible
         pointer-events-none
         opacity-0
-        translate-y-0
-        scale-y-100
         ;
       }
     }
@@ -206,6 +199,9 @@
 
 .dropdown-content {
   @apply
+  rounded-2
+  border
+  border-ui-400/20
   origin-top
   scale-90
   invisible
@@ -242,8 +238,6 @@
   &.dropdown-open {
     @apply
     scale-100
-    translate-y-0
-    scale-y-100
     visible
     pointer-events-auto
     opacity-100

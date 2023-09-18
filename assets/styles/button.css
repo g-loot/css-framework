@@ -164,6 +164,7 @@ button {
     @apply 
     bg-ui-700
     text-ui-300
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
     ;
 
     &:not([disabled]),
@@ -172,7 +173,8 @@ button {
       &:focus-visible {
         @apply
         bg-ui-600
-        text-ui-200
+        text-ui-100
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.075)]
         ;
       }
       &:focus-visible,
@@ -187,15 +189,15 @@ button {
   &.button-ghost {
     @apply 
     bg-ui-800/0
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0)]
     text-ui-300
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
     ;
     &:not([disabled]),
     &:not(.is-disabled) {
       &:hover,
       &:focus-visible {
         @apply
-        text-ui-200
+        text-ui-100
         shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.075)]
       }
       &:focus-visible,

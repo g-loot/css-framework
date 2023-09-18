@@ -50,7 +50,7 @@ export default function Avatar(props) {
   }, [userId]);
 
   useEffect(() => {
-    if(selectedUser) {
+    if (selectedUser) {
       setIsFollowing(selectedUser.isFollowing);
     }
   }, [selectedUser]);
@@ -226,23 +226,21 @@ export default function Avatar(props) {
                                     className="aspect-video rounded-sm w-6"
                                   />
                                 </div>
-                                {/*
-                            {selectedUser?.isOnline ? (
-                              <div className="flex justify-center mt-0.5 mb-1">
-                                <div className="chip chip-status chip-success chip-xs">
-                                  <span className="badge" />
-                                  <span>online</span>
-                                </div>
-                              </div>
-                            ) : (
-                              <div className="flex justify-center mt-0.5 mb-1">
-                                <div className="chip chip-status chip-xs">
-                                  <span className="badge" />
-                                  <span>last seen 3 days ago</span>
-                                </div>
-                              </div>
-                            )}
-                            */}
+                                {selectedUser?.isOnline ? (
+                                  <div className="flex justify-center mt-0.5 mb-1">
+                                    <div className="chip chip-status chip-success chip-xs">
+                                      <span className="badge" />
+                                      <span>online</span>
+                                    </div>
+                                  </div>
+                                ) : (
+                                  <div className="flex justify-center mt-0.5 mb-1">
+                                    <div className="chip chip-status chip-xs">
+                                      <span className="badge" />
+                                      <span>last seen 3 days ago</span>
+                                    </div>
+                                  </div>
+                                )}
                                 <div className="flex justify-center gap-1 mb-1">
                                   {prototype
                                     .getUserByID(userId)
@@ -351,7 +349,7 @@ export default function Avatar(props) {
                                 {selectedUser.clan === 1 && (
                                   <button
                                     type="button"
-                                    className="button button-sm button-primary rounded flex-1"
+                                    className="button button-sm button-primary flex-1"
                                     onClick={() => {
                                       openModalGiftTokens();
                                     }}
@@ -363,7 +361,7 @@ export default function Avatar(props) {
                                 {isFollowing ? (
                                   <button
                                     type="button"
-                                    className="button button-sm button-tertiary rounded flex-1"
+                                    className="button button-sm button-tertiary flex-1"
                                     onClick={() => {
                                       openModalUnfollow();
                                     }}
@@ -373,7 +371,7 @@ export default function Avatar(props) {
                                 ) : (
                                   <button
                                     type="button"
-                                    className="button button-sm button-primary rounded flex-1"
+                                    className="button button-sm button-primary flex-1"
                                     onClick={() => setIsFollowing(true)}
                                   >
                                     <span className="icon icon-a-add" />

@@ -49,14 +49,15 @@ export default function Topbar() {
       setHasForward(false);
     }
   }, [hasForward]);
-  */
-
+  
   useEffect(() => {
     router.beforePopState((e) => {
       setHasForward(true);
     });
   }, []);
-
+  
+  */
+ 
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }

@@ -15,15 +15,16 @@ const Line = ({ item, giftTokens, addFollowing }) => {
     uiContext.openModal(<ModalGiftTokens selectedUser={selectedUser} />);
   }
   const prototype = usePrototypeData();
+
   return (
     <li className="item py-1">
-      <div className="item-image ml-2">
+      <div className="item-image ml-2 py-1">
         <Link
           href={`/stryda/profile/${
             prototype.getUserByID(item.id).id
           }${prototype.getURLparams()}`}
         >
-          <Avatar id={item.id} size="avatar-tiny" />
+          <Avatar id={item.id} size="avatar-tiny" hasTooltip={true} />
         </Link>
       </div>
       <div className="item-body">
@@ -45,50 +46,46 @@ const Line = ({ item, giftTokens, addFollowing }) => {
           </div>
         </Link>
       </div>
-      <div className="item-actions">
-        {giftTokens && (
-          <Tooltip tooltip="Gift token">
-            <button
-              type="button"
-              className="button button-tertiary rounded-full"
-              onClick={() => {
-                openModalGiftTokens(prototype.getUserByID(item.id).nickname);
-              }}
-            >
-              <span className="icon icon-token" />
-            </button>
-          </Tooltip>
-        )}
-        {addFollowing && (
-          <Tooltip placement="left" tooltip="Follow">
-            <ButtonFeedback
-              variant="button-tertiary rounded-full"
-              icon="icon-a-add"
-              message="Player added to your following"
-            />
-          </Tooltip>
-        )}
-      </div>
+      {prototype.getUserByID(item.id).clan === 1 && (
+        <div className="item-actions">
+          {giftTokens && (
+            <Tooltip tooltip="Gift token">
+              <button
+                type="button"
+                className="button button-tertiary rounded-full"
+                onClick={() => {
+                  openModalGiftTokens(prototype.getUserByID(item.id).nickname);
+                }}
+              >
+                <span className="icon icon-token" />
+              </button>
+            </Tooltip>
+          )}
+          {addFollowing && (
+            <Tooltip placement="left" tooltip="Follow">
+              <ButtonFeedback
+                variant="button-tertiary rounded-full"
+                icon="icon-a-add"
+                message="Player added to your following"
+              />
+            </Tooltip>
+          )}
+        </div>
+      )}
     </li>
   );
 };
 
 export default function WidgetFollowings(props) {
   const prototype = usePrototypeData();
-  const length = 3;
-  const [maxOnlineLoader, setMaxOnlineLoader] = useState(false);
-  const [maxOnline, setMaxOnline] = useState(length);
+  const length = 5;
+  const [followings, setFollowings] = useState([]);
 
-  const handleMoreOnline = () => {
-    setMaxOnlineLoader(true);
-    const interval = setTimeout(() => {
-      setMaxOnlineLoader(false);
-      setMaxOnline(maxOnline + length);
-    }, 500);
-    return () => {
-      clearTimeout(interval);
-    };
-  };
+  useEffect(() => {
+    const sortedData = [...prototype.users];
+    sortedData.sort((a, b) => (a.isOnline ? -1 : 1)).filter((i) => !i.isYou);
+    setFollowings(sortedData);
+  }, [prototype]);
 
   const [maxFollowingsLoader, setMaxFollowingsLoader] = useState(false);
   const [maxFollowings, setMaxFollowings] = useState(length);
@@ -123,43 +120,13 @@ export default function WidgetFollowings(props) {
                               */}
         </div>
         <div className="bg-ui-850">
-          <h3 className="normal-case text-base font-base font-normal px-3 pt-2 pb-1">
-            Online
-          </h3>
           <ul className="divide-y-0">
-            {prototype.users
-              .filter((i) => i.isOnline && !i.isYou)
-              .slice(0, maxOnline)
-              .map((item, itemIndex) => (
-                <Line key={itemIndex} item={item} giftTokens={true} />
-              ))}
+            {followings.slice(0, maxFollowings).map((item, itemIndex) => (
+              <Line key={itemIndex} item={item} giftTokens={true} />
+            ))}
           </ul>
-          {prototype.users.filter((i) => !i.isOnline && !i.isYou).length > maxOnline && (
-            <div className="p-2 text-center">
-              <button
-                type="button"
-                className={`button button-ghost button-sm rounded w-full ${
-                  maxOnlineLoader ? "is-loading" : ""
-                }`}
-                onClick={() => handleMoreOnline()}
-              >
-                <span>View more</span>
-              </button>
-            </div>
-          )}
-          <h3 className="normal-case text-base font-base font-normal px-3 pt-2 pb-1 border-t border-t-ui-700">
-            Suggestions
-          </h3>
-          <ul className="divide-y-0">
-            {prototype.users
-              .filter((i) => !i.isOnline)
-              .filter((i) => !i.isYou)
-              .slice(0, maxFollowings)
-              .map((item, itemIndex) => (
-                <Line key={itemIndex} item={item} addFollowing={true} />
-              ))}
-          </ul>
-          {prototype.users.filter((i) => !i.isOnline).filter((i) => !i.isYou).length > maxFollowings && (
+          {prototype.users.filter((i) => !i.isOnline && !i.isYou).length >
+            maxFollowings && (
             <div className="p-2 text-center">
               <button
                 type="button"

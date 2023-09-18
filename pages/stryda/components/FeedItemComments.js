@@ -59,7 +59,7 @@ const FeedItemComment = (props) => {
           />
           <button
             type="button"
-            className={`switch switch-slot button button-ghost rounded-full ${
+            className={`switch switch-slot button button-ghost rounded-full rounded-full ${
               likeOn ? "switch-active" : ""
             }`}
             onClick={() => {
@@ -106,6 +106,120 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
+        <div className="p-3 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-ui-300 text-base">
+            <div className="flex gap-0.5 items-center text-xs">
+              {item.social?.likes.users && (
+                <>
+                  <Tooltip
+                    placement="top"
+                    tooltip={
+                      item.social.likes.users.length > 0 ? (
+                        <ul className="text-xs leading-snug">
+                          {item.social.likes.users
+                            .slice(0, 5)
+                            .map((user, userIndex) => (
+                              <li key={userIndex}>
+                                {prototype.getUserByID(user).nickname}
+                              </li>
+                            ))}
+                          {item.social.likes.users.length > 5 && (
+                            <li>+ {item.social.likes.users.length - 5}</li>
+                          )}
+                        </ul>
+                      ) : (
+                        <div className="text-xs">Be the first to like</div>
+                      )
+                    }
+                  >
+                    <button type="button">
+                      {totalLikes} like
+                      {totalLikes > 1 && <>s</>}
+                    </button>
+                  </Tooltip>
+                </>
+              )}
+              {item.social?.comments && (
+                <>
+                  <span>•</span>
+                  <Link
+                    href={`/stryda/activity/${
+                      item.id
+                    }#comments${prototype.getURLparams()}`}
+                  >
+                    <a className="interactive">
+                      <span>
+                        {item.social.comments.length} comment
+                        {item.social.comments.length > 1 && <>s</>}
+                      </span>
+                    </a>
+                  </Link>
+                </>
+              )}
+            </div>
+            <div className="flex items-stretch gap-2 sm:gap-0 justify-around">
+              <button
+                type="button"
+                className="button button-ghost rounded-full"
+                onClick={() => {
+                  setLikeOn(!likeOn);
+                }}
+              >
+                <div
+                  className={`switch switch-slot ${
+                    likeOn ? "switch-active" : ""
+                  }`}
+                >
+                  <div className="switch-on icon icon-favorite text-main" />
+                  <div className="switch-off icon icon-favorite text-ui-300" />
+                </div>
+              </button>
+              <button
+                type="button"
+                className="button button-ghost rounded-full"
+                onClick={() => {
+                  setCommentOn(!commentOn);
+                }}
+              >
+                <span className="icon icon-comment text-base" />
+              </button>
+              <button
+                type="button"
+                className="button button-ghost rounded-full"
+                onClick={() => openModalShareActivity(item)}
+              >
+                <span className="icon icon-network-communication text-base" />
+              </button>
+              {item.type === "match" && (
+                <Link
+                  href={`/stryda/activity/${
+                    item.id
+                  }${prototype.getURLparams()}`}
+                >
+                  <button type="button" className="button button-ghost rounded-full">
+                    <span className="icon icon-view text-base" />
+                  </button>
+                </Link>
+              )}
+              {item.type === "post" && item.url && (
+                <Link href={item.url}>
+                  <button type="button" className="button button-ghost rounded-full">
+                    <span className="icon icon-view text-base" />
+                  </button>
+                </Link>
+              )}
+              {item.type === "advertising" && item.url && (
+                <a
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="button button-ghost rounded-full"
+                >
+                  <span className="icon icon-view text-base" />
+                </a>
+              )}
+            </div>
+          </div>
+        {/*
           <div className="p-3 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-ui-300 text-base">
             <div className="flex gap-0.5 items-center text-xs">
               {item.social?.likes.users && (
@@ -159,7 +273,7 @@ export default function FeedItemComments(props) {
             <div className="flex items-stretch gap-2 sm:gap-0 justify-around">
               <button
                 type="button"
-                className="button button-ghost rounded"
+                className="button button-ghost rounded-full"
                 onClick={() => {
                   setLikeOn(!likeOn);
                 }}
@@ -175,7 +289,7 @@ export default function FeedItemComments(props) {
               </button>
               <button
                 type="button"
-                className="button button-ghost rounded"
+                className="button button-ghost rounded-full"
                 onClick={() => {
                   setCommentOn(!commentOn);
                 }}
@@ -184,7 +298,7 @@ export default function FeedItemComments(props) {
               </button>
               <button
                 type="button"
-                className="button button-ghost rounded"
+                className="button button-ghost rounded-full"
                 onClick={() => openModalShareActivity(item)}
               >
                 <span className="icon icon-network-communication text-base" />
@@ -195,14 +309,14 @@ export default function FeedItemComments(props) {
                     item.id
                   }${prototype.getURLparams()}`}
                 >
-                  <button type="button" className="button button-ghost rounded">
+                  <button type="button" className="button button-ghost rounded-full">
                     <span className="icon icon-view text-base" />
                   </button>
                 </Link>
               )}
               {item.type === "post" && item.url && (
                 <Link href={item.url}>
-                  <button type="button" className="button button-ghost rounded">
+                  <button type="button" className="button button-ghost rounded-full">
                     <span className="icon icon-view text-base" />
                   </button>
                 </Link>
@@ -212,79 +326,14 @@ export default function FeedItemComments(props) {
                   href={item.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="button button-ghost rounded"
+                  className="button button-ghost rounded-full"
                 >
                   <span className="icon icon-view text-base" />
                 </a>
               )}
             </div>
           </div>
-          {/*
-          <div className="p-2 flex items-stretch gap-2 justify-around">
-            <button
-              type="button"
-              className="flex-1 button button-ghost rounded button-sm"
-              onClick={() => {
-                setLikeOn(!likeOn);
-              }}
-            >
-              <div
-                className={`switch switch-slot ${
-                  likeOn ? "switch-active" : ""
-                }`}
-              >
-                <div className="switch-on icon icon-favorite text-main" />
-                <div className="switch-off icon icon-favorite text-ui-300" />
-              </div>
-              <span className={likeOn ? "text-main" : ""}>Like</span>
-            </button>
-            <button
-              type="button"
-              className="flex-1 button button-ghost rounded button-sm"
-              onClick={() => {
-                setCommentOn(!commentOn);
-              }}
-            >
-              <span className="icon icon-comment text-base" />
-              <span>Comment</span>
-            </button>
-            {item.type === "match" && (
-              <Link
-                href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
-              >
-                <button
-                  type="button"
-                  className="flex-1 button button-ghost rounded button-sm"
-                >
-                  <span className="icon icon-view text-base" />
-                  <span>View</span>
-                </button>
-              </Link>
-            )}
-            {item.type === "post" && item.url && (
-              <Link href={item.url}>
-                <button
-                  type="button"
-                  className="flex-1 button button-ghost rounded button-sm"
-                >
-                  <span className="icon icon-view text-base" />
-                  <span>View</span>
-                </button>
-              </Link>
-            )}
-            {item.type === "advertising" && item.url && (
-              <a
-                href={item.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex-1 button button-ghost rounded button-sm"
-              >
-                <span className="icon icon-view text-base" />
-                <span>View</span>
-              </a>
-            )}
-          </div>
-            */}
+              */}
           {isExpanded && (
             <>
               {item.social.comments.length > 0 && (
@@ -313,7 +362,7 @@ export default function FeedItemComments(props) {
               <div>
                 <button
                   type="button"
-                  className="button button-sm button-ghost rounded"
+                  className="button button-sm button-ghost"
                 >
                   <span>Post</span>
                 </button>
