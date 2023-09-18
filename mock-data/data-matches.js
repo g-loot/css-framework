@@ -13,7 +13,8 @@ export const dataMatches = [
       averageRank: 4,
       text: "We won big time!",
       media: {
-        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649715/Stryda/demo/game%20footage/B1654A845109D7761_0_3.final.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/gloot/video/upload/v1691649715/Stryda/demo/game%20footage/B1654A845109D7761_0_3.final.mp4",
       },
     },
     stats: {
@@ -144,10 +145,20 @@ export const dataMatches = [
     achievements: [
       {
         type: "ladder",
-        game: 1,
-        ladderID: 1,
-        number: 300,
+        id: 1,
+        number: 252,
       },
+      {
+        type: "ladder",
+        id: 2,
+        number: 523,
+      },
+      {
+        type: "ladder",
+        id: 3,
+        number: 178,
+      },
+      /*
       {
         type: "mission",
         game: 1,
@@ -158,6 +169,7 @@ export const dataMatches = [
         achievementID: 4,
         level: 2,
       },
+      */
     ],
   },
   {
@@ -174,7 +186,8 @@ export const dataMatches = [
       averageRank: 4,
       text: "First time playing Yoru. I suck 😅",
       media: {
-        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691602551/Stryda/demo/game%20footage/012854044DD9DD911_0_3.final.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/gloot/video/upload/v1691602551/Stryda/demo/game%20footage/012854044DD9DD911_0_3.final.mp4",
       },
     },
     stats: {
@@ -188,7 +201,7 @@ export const dataMatches = [
       mainStats: [
         {
           label: "Placement",
-          value: "#7",
+          value: "#3",
         },
         {
           label: "K/D/A",
@@ -302,6 +315,7 @@ export const dataMatches = [
         ],
       },
     },
+    achievements: [],
   },
   {
     id: 2,
@@ -317,7 +331,8 @@ export const dataMatches = [
       averageRank: 4,
       text: "😭😭😭😭",
       media: {
-        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649709/Stryda/demo/game%20footage/42E1C90460381BAD1_0_3.final.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/gloot/video/upload/v1691649709/Stryda/demo/game%20footage/42E1C90460381BAD1_0_3.final.mp4",
       },
     },
     stats: {
@@ -445,6 +460,7 @@ export const dataMatches = [
         ],
       },
     },
+    achievements: [],
   },
   {
     id: 3,
@@ -460,7 +476,8 @@ export const dataMatches = [
       averageRank: 4,
       text: "We won on Lotus",
       media: {
-        imageUrl: "https://res.cloudinary.com/gloot/image/upload/v1694577193/Stryda/demo/game-valorant-endscreen-victory.jpg",
+        imageUrl:
+          "https://res.cloudinary.com/gloot/image/upload/v1694577193/Stryda/demo/game-valorant-endscreen-victory.jpg",
       },
     },
     stats: {
@@ -474,7 +491,7 @@ export const dataMatches = [
       mainStats: [
         {
           label: "Placement",
-          value: "#7",
+          value: "#8",
         },
         {
           label: "K/D/A",
@@ -588,6 +605,7 @@ export const dataMatches = [
         ],
       },
     },
+    achievements: [],
   },
   {
     id: 4,
@@ -603,7 +621,8 @@ export const dataMatches = [
       averageRank: 4,
       text: "They got crushed",
       media: {
-        videoUrl: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
+        videoUrl:
+          "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
       },
     },
     stats: {
@@ -734,19 +753,8 @@ export const dataMatches = [
     achievements: [
       {
         type: "ladder",
-        game: 1,
-        ladderID: 2,
-        number: 50,
-      },
-      {
-        type: "mission",
-        game: 1,
-        number: 1,
-      },
-      {
-        type: "achievement",
-        achievementID: 3,
-        level: 2,
+        id: 2,
+        number: 251,
       },
     ],
   },
@@ -779,7 +787,7 @@ export const dataMatches = [
         },
         {
           label: "K/D/A",
-          value: "17/17/10",
+          value: "18/17/10",
         },
         {
           label: "K/D",
@@ -892,14 +900,8 @@ export const dataMatches = [
     achievements: [
       {
         type: "ladder",
-        game: 1,
-        ladderID: 2,
+        id: 2,
         number: 300,
-      },
-      {
-        type: "achievement",
-        achievementID: 2,
-        level: 3,
       },
     ],
   },
@@ -931,7 +933,7 @@ export const dataMatches = [
         },
         {
           label: "K/D/A",
-          value: "17/17/10",
+          value: "12/17/10",
         },
         {
           label: "K/D",
@@ -1041,5 +1043,6 @@ export const dataMatches = [
         ],
       },
     },
+    achievements: [],
   },
 ];

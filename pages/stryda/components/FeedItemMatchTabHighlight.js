@@ -33,22 +33,23 @@ export default function FeedItemMatchTabHighlight(props) {
     <>
       {item && match && (
         <button
-        type="button border-y border-ui-700"
-        onClick={() => openModalHighlightViewer(match)}
-      >
-        <video
-          autoPlay={autoPlay}
-          controls
-          playsInline
-          loop
-          muted
-          width="100%"
-          height="auto"
-          className="w-full"
-          id={`video_${item.id}`}
-          src={match.meta.media.videoUrl}
-        />
-      </button>
+          type="button"
+          className="aspect-video bg-ui-850 w-full"
+          onClick={() => openModalHighlightViewer(match)}
+        >
+          <video
+            autoPlay={autoPlay}
+            controls
+            playsInline
+            loop
+            muted
+            width="100%"
+            height="auto"
+            className="w-full"
+            id={`video_${item.id}`}
+            src={match.meta.media.videoUrl}
+          />
+        </button>
       )}
     </>
   );

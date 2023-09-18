@@ -1,14 +1,17 @@
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Tooltip from "@/components/Tooltip/Tooltip";
 import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
 
 export default function FeedItemAchievement(props) {
   const prototype = usePrototypeData();
   const achievement = props.achievement;
-  const user = props.user || 1;
+  const match = props.match;
+  const delay = props.delay;
 
   return (
     <>
-      {achievement && (
+      {achievement && match && (
         <>
           {achievement.type === "mission" && (
             <li className="flex items-center gap-2">
@@ -20,30 +23,60 @@ export default function FeedItemAchievement(props) {
                     {achievement.number > 1 && <>s</>}
                   </span>
                 </Link>{" "}
-                completed in {prototype.getGameByID(achievement.game).name}
+                completed in {prototype.getGameByID(match.meta.game).name}
               </p>
             </li>
           )}
           {achievement.type === "ladder" && (
-            <li className="flex items-center gap-2">
-              <span className="icon icon-ladder text-[1.25em] text-ui-400" />
-              <p className="text-ui-300">
-                {achievement.number}+ in{" "}
-                <Link
-                  href={`/stryda/ladders/${
-                    prototype.getGameByID(achievement.game).slug
-                  }/${achievement.ladderID}${prototype.getURLparams()}`}
+            <li
+              className="w-full animate-slide-in-bottom animate-delay"
+              style={{
+                "--delay": "calc(" + delay + " * 0.05s)",
+              }}
+            >
+              <Link
+                href={`/stryda/ladders/${
+                  prototype.getGameByID(match.meta.game).slug
+                }/${achievement.id}${prototype.getURLparams()}`}
+              >
+                <button
+                  type="button"
+                  className="group flex items-center rounded interactive surface-ui-700 w-full"
                 >
-                  <span className="interactive font-bold text-ui-100">
-                    {
+                  <img
+                    src={
                       prototype.getLadderByID(
-                        prototype.getGameByID(achievement.game).slug,
-                        achievement.ladderID
-                      ).name
+                        prototype.getGameByID(match.meta.game).slug,
+                        achievement.id
+                      ).cover
                     }
-                  </span>
-                </Link>
-              </p>
+                    className="w-2/5 rounded-l border-r border-ui-700 group-hover:border-ui-600 object-cover aspect-cover"
+                    alt=""
+                  />
+                  <div className="flex-1 flex items-center gap-3 px-3">
+                    <ul className="flex-1 flex gap-4 items-center justify-between px-2">
+                      <li>
+                        <div className="text-xs text-ui-300">Ladder</div>
+                        <div className="text-sm text-ui-100 truncate">
+                          {
+                            prototype.getLadderByID(
+                              prototype.getGameByID(match.meta.game).slug,
+                              achievement.id
+                            ).name
+                          }
+                        </div>
+                      </li>
+                      <li>
+                        <div className="text-xs text-ui-300">Score</div>
+                        <div className="text-sm text-ui-100">
+                          {achievement.number}
+                        </div>
+                      </li>
+                    </ul>
+                    <span className="icon icon-ctrl-right text-ui-400 group-hover:translate-x-1 group-hover:text-ui-200 transition-all ease-in-out duration-150" />
+                  </div>
+                </button>
+              </Link>
             </li>
           )}
           {achievement.type === "achievement" && (
@@ -51,9 +84,9 @@ export default function FeedItemAchievement(props) {
               <span className="icon icon-medal text-[1.25em] text-ui-400" />
               <p className="text-ui-300">
                 <Link
-                  href={`/stryda/profile/${user}?tab=achievements${prototype.getURLparams(
-                    "&"
-                  )}`}
+                  href={`/stryda/profile/${
+                    match.user
+                  }?tab=achievements${prototype.getURLparams("&")}`}
                 >
                   <span className="interactive font-bold text-ui-100">
                     {

@@ -25,6 +25,14 @@ export default function FeedItemMatch(props) {
     }
   }, [item]);
 
+  const checkIfTab = () => {
+    if (!match.meta.media?.videoUrl && match.achievements?.length === 0) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   return (
     <>
       {item && match && (
@@ -77,19 +85,20 @@ export default function FeedItemMatch(props) {
               </button>
             </Link>
           </div>
-          <ul className="tabs tabs-stretch text-sm border-t border-ui-700">
-            {match.meta.media?.videoUrl && (
+          {checkIfTab() && (
+            <ul className="tabs tabs-stretch text-sm border-t border-ui-700 bg-gradient-to-b from-ui-850 to-ui-800">
+              {match.meta.media?.videoUrl && (
+                <li>
+                  <button
+                    type="button"
+                    className={activeTab === "highlight" ? "is-active" : ""}
+                    onClick={() => setActiveTab("highlight")}
+                  >
+                    <span>Highlight</span>
+                  </button>
+                </li>
+              )}
               <li>
-                <button
-                  type="button"
-                  className={activeTab === "highlight" ? "is-active" : ""}
-                  onClick={() => setActiveTab("highlight")}
-                >
-                  <span>Highlight</span>
-                </button>
-              </li>
-            )}
-            <li>
                 <button
                   type="button"
                   className={activeTab === "summary" ? "is-active" : ""}
@@ -98,20 +107,25 @@ export default function FeedItemMatch(props) {
                   <span>Summary</span>
                 </button>
               </li>
-              {match.achievements && (
+              {match.achievements?.length > 0 && (
                 <li>
-                <button
-                  type="button"
-                  className={activeTab === "activity" ? "is-active" : ""}
-                  onClick={() => setActiveTab("activity")}
-                >
-                  <span>Activity</span>
-                </button>
-              </li>
+                  <button
+                    type="button"
+                    className={activeTab === "activity" ? "is-active" : ""}
+                    onClick={() => setActiveTab("activity")}
+                  >
+                    <span>Activity <span className="text-xs">({match.achievements.length})</span></span>
+                  </button>
+                </li>
               )}
-          </ul>
+            </ul>
+          )}
           {activeTab === "highlight" && (
-            <FeedItemMatchTabHighlight match={match} item={item} autoPlay={autoPlay} />
+            <FeedItemMatchTabHighlight
+              match={match}
+              item={item}
+              autoPlay={autoPlay}
+            />
           )}
           {activeTab === "summary" && (
             <FeedItemMatchTabSummary match={match} item={item} />

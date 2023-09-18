@@ -34,7 +34,7 @@ export default function FeedItemMatchTabSummary(props) {
     <>
       {item && match && (
         <Link href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}>
-          <div className="aspect-video relative interactive-secondary flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none">
+          <div className="aspect-video bg-ui-850 relative interactive-secondary flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none">
             <div
               className={`relative z-50 ${
                 match.stats.hasWon ? " text-success-300" : "text-error-300"
@@ -55,7 +55,7 @@ export default function FeedItemMatchTabSummary(props) {
               {match.stats.mainStats
                 .slice(0, 3)
                 .map((mainStat, mainStatIndex) => (
-                  <li key={mainStatIndex} className="pl-4">
+                  <li key={mainStatIndex} className="pl-5">
                     <div className="text-xs text-ui-200">{mainStat.label}</div>
                     <div className="text-lg text-ui-100">{mainStat.value}</div>
                   </li>

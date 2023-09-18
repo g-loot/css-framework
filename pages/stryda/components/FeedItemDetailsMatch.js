@@ -181,12 +181,12 @@ export default function FeedItemDetailsMatch(props) {
                         </div>
                       </div>
                     </div>
-                    <ul className="space-y-1 space-y-1 text-sm leading-tight">
+                    <ul className="space-y-1 text-sm leading-tight">
                       {match.achievements.map(
                         (achievement, achievementIndex) => (
                           <FeedItemAchievement
                             key={achievementIndex}
-                            user={match.user}
+                            match={match}
                             achievement={achievement}
                           />
                         )
