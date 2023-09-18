@@ -7,7 +7,6 @@
   cursor-pointer
   hover:opacity-80
   active:opacity-80
-  rounded
   outline-offset-2
   focus-visible:outline
   focus-visible:outline-main
@@ -21,6 +20,7 @@
   @apply
   underline
   active:no-underline
+  rounded
   ;
 
   &.link-main {
@@ -97,6 +97,7 @@
 
 .interactive {
   @apply
+  rounded
   active:outline-offset-2
   ;
 }

@@ -5,10 +5,7 @@ export const dataFeedItems = [
     itemID: 0,
     social: {
       views: [2, 5, 6, 8, 9, 10, 11, 12, 13],
-      likes: {
-        hasLiked: false,
-        users: [7, 2],
-      },
+      likes: [7, 2],
       comments: [
         {
           author: 2,
@@ -31,10 +28,7 @@ export const dataFeedItems = [
     itemID: 1,
     social: {
       views: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11],
-      likes: {
-        hasLiked: true,
-        users: [1],
-      },
+      likes: [1],
       comments: [
         {
           author: 2,
@@ -54,10 +48,7 @@ export const dataFeedItems = [
     url: "/stryda/clanevents/valorant/0",
     social: {
       views: [8],
-      likes: {
-        hasLiked: false,
-        users: [],
-      },
+      likes: [],
       comments: [
         {
           author: 5,
@@ -110,10 +101,7 @@ export const dataFeedItems = [
     itemID: 5,
     social: {
       views: [8],
-      likes: {
-        hasLiked: false,
-        users: [],
-      },
+      likes: [],
       comments: [
         {
           author: 5,
@@ -143,10 +131,7 @@ export const dataFeedItems = [
     url: "https://hyperx.com/",
     social: {
       views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
-      likes: {
-        hasLiked: false,
-        users: [7, 2, 5, 6, 8],
-      },
+      likes: [7, 2, 5, 6, 8],
       comments: [
         {
           author: 8,
@@ -168,11 +153,8 @@ export const dataFeedItems = [
     type: "match",
     itemID: 3,
     social: {
-      views: [7, 8, 9, 10, 11],
-      likes: {
-        hasLiked: false,
-        users: [7, 2, 3, 4, 5, 6],
-      },
+      views: [7, 8, 9, 10, 11, 1, 2],
+      likes: [7, 2, 3, 4, 5, 6],
       comments: [],
     },
   },
@@ -182,10 +164,7 @@ export const dataFeedItems = [
     itemID: 4,
     social: {
       views: [7, 8, 9, 10, 11],
-      likes: {
-        hasLiked: false,
-        users: [],
-      },
+      likes: [],
       comments: [
         {
           author: 5,
@@ -209,10 +188,7 @@ export const dataFeedItems = [
     url: "https://razer.com/",
     social: {
       views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
-      likes: {
-        hasLiked: false,
-        users: [7, 2, 5, 6, 8],
-      },
+      likes: [7, 2, 5, 6, 8],
       comments: [
         {
           author: 8,
@@ -235,10 +211,7 @@ export const dataFeedItems = [
     itemID: 2,
     social: {
       views: [7, 8, 9, 10, 11],
-      likes: {
-        hasLiked: false,
-        users: [],
-      },
+      likes: [],
       comments: [
         {
           author: 5,
@@ -255,10 +228,7 @@ export const dataFeedItems = [
     itemID: 6,
     social: {
       views: [1,4,5,6],
-      likes: {
-        hasLiked: true,
-        users: [],
-      },
+      likes: [],
       comments: [
         {
           author: 5,
@@ -282,10 +252,7 @@ export const dataFeedItems = [
     url: "https://www.logitechg.com/sv-se/products/gaming-mice/pro-x-superlight-wireless-mouse.html",
     social: {
       views: [5, 6, 7, 11, 2, 3, 3, 10],
-      likes: {
-        hasLiked: false,
-        users: [7, 2, 5, 6, 8],
-      },
+      likes: [7, 2, 5, 6, 8],
       comments: [
         {
           author: 9,

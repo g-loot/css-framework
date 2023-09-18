@@ -162,7 +162,7 @@ button {
   }
   &.button-tertiary {
     @apply 
-    bg-ui-700
+    bg-ui-600/50
     text-ui-300
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
     ;

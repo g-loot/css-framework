@@ -3,57 +3,27 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import Avatar from "@/components/Avatar/Avatar";
 import Link from "next/link";
-import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
-import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
-import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import FeedItemComments from "./FeedItemComments";
 import FeedItemContextualMenu from "./FeedItemContextualMenu";
-import FeedItemAchievement from "./FeedItemAchievement";
-import ModalHighlightViewer from "../modal-highlightviewer";
-import MatchSneakPeak from "./MatchSneakPeak";
+import FeedItemMatchTabHighlight from "./FeedItemMatchTabHighlight";
+import FeedItemMatchTabSummary from "./FeedItemMatchTabSummary";
+import FeedItemMatchTabActivity from "./FeedItemMatchTabActivity";
 
 export default function FeedItemMatch(props) {
-  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
   const match = props.match;
   const autoPlay = props.autoPlay || false;
-  const [video, setVideo] = useState(null);
   const [viewMore, setViewMore] = useState(false);
+  const [activeTab, setActiveTab] = useState();
 
   useEffect(() => {
-    setVideo(document.getElementById(`video_${item.id}`));
-  }, [item]);
-
-  useEffect(() => {
-    if (video) {
-      if (autoPlay) {
-        video.play();
-      } else {
-        video.pause();
-      }
+    if (match.meta.media?.videoUrl) {
+      setActiveTab("highlight");
+    } else {
+      setActiveTab("summary");
     }
-  }, [video, autoPlay]);
-
-  const getAgentByID = (id) => {
-    return StatsValorantAgents.find((agent) => {
-      return agent.id === parseInt(id);
-    });
-  };
-  const getRankByID = (id) => {
-    return StatsValorantRanks.find((rank) => {
-      return rank.id === parseInt(id);
-    });
-  };
-  const getMapByID = (id) => {
-    return StatsValorantMaps.find((map) => {
-      return map.id === parseInt(id);
-    });
-  };
-
-  function openModalHighlightViewer(match) {
-    uiContext.openModal(<ModalHighlightViewer item={match} />);
-  }
+  }, [item]);
 
   return (
     <>
@@ -79,13 +49,16 @@ export default function FeedItemMatch(props) {
                   </span>
                 </Link>
               </div>
-              <div className="text-xs text-ui-300 px-1 whitespace-nowrap">
-                {match.meta.dateTimeEnded} • {match.meta.mode}
-                {/* • {getMapByID(match.meta.map).name} */}
+              <div className="text-xs text-ui-300 px-1 whitespace-nowrap flex items-center gap-1">
+                <span>{match.meta.dateTimeEnded}</span>
               </div>
             </div>
             <div className="flex-none self-start">
-              <FeedItemContextualMenu item={item} match={match} />
+              <FeedItemContextualMenu
+                item={item}
+                match={match}
+                autoPlay={autoPlay}
+              />
             </div>
           </div>
           <div className="pl-2 sm:pl-3 pr-1 sm:pr-2 pt-1 pb-3 flex items-center justify-between gap-2">
@@ -103,138 +76,48 @@ export default function FeedItemMatch(props) {
                 )}
               </button>
             </Link>
-            <button
-              type="button"
-              className="button button-sm button-ghost rounded mt-0.5"
-              onClick={() => setViewMore(!viewMore)}
-            >
-              <span
-                className={`icon ${
-                  viewMore ? "icon-arrow-sm-up" : "icon-arrow-sm-down"
-                }`}
-              />
-              <span>{viewMore ? <>Less</> : <>More</>} details</span>
-            </button>
           </div>
-          {viewMore && (
-            <div className="px-3 pb-5 space-y-3">
-              <Link
-                href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}
-              >
+          <ul className="tabs tabs-stretch text-sm border-t border-ui-700">
+            {match.meta.media?.videoUrl && (
+              <li>
                 <button
                   type="button"
-                  className="flex flex-col items-start gap-3 interactive"
+                  className={activeTab === "highlight" ? "is-active" : ""}
+                  onClick={() => setActiveTab("highlight")}
                 >
-                  <MatchSneakPeak match={match} />
-                  <div className="overflow-x-auto scrollbar-hidden">
-                    <ul className="flex items-center divide-x divide-ui-500 leading-tight">
-                      {match.meta?.agent && (
-                        <li className="text-0">
-                          <div className="avatar avatar-xs avatar-diamond mr-4">
-                            <div>
-                              <img
-                                src={getAgentByID(match.meta.agent).picturePath}
-                                alt=""
-                              />
-                            </div>
-                          </div>
-                        </li>
-                      )}
-                      {match.stats.mainStats
-                        .slice(0, 4)
-                        .map((mainStat, mainStatIndex) => (
-                          <li key={mainStatIndex} className="px-4">
-                            <div className="text-xs text-ui-300">
-                              {mainStat.label}
-                            </div>
-                            <div className="text-lg text-ui-100">
-                              {mainStat.value}
-                            </div>
-                          </li>
-                        ))}
-                    </ul>
-                  </div>
+                  <span>Highlight</span>
                 </button>
-              </Link>
-              {match.achievements && (
-                <ul className="text-sm space-y-1 leading-tight">
-                  {match.achievements.map((achievement, achievementIndex) => (
-                    <FeedItemAchievement
-                      key={achievementIndex}
-                      user={match.user}
-                      achievement={achievement}
-                    />
-                  ))}
-                </ul>
-              )}
-            </div>
-          )}
-          {match.meta.media ? (
-            <>
-              {match.meta.media.videoUrl && (
+              </li>
+            )}
+            <li>
                 <button
-                  type="button border-y border-ui-700"
-                  onClick={() => openModalHighlightViewer(match)}
+                  type="button"
+                  className={activeTab === "summary" ? "is-active" : ""}
+                  onClick={() => setActiveTab("summary")}
                 >
-                  <video
-                    autoPlay={autoPlay}
-                    controls
-                    playsInline
-                    loop
-                    muted
-                    width="100%"
-                    height="auto"
-                    className="w-full"
-                    id={`video_${item.id}`}
-                    src={match.meta.media.videoUrl}
-                  />
+                  <span>Summary</span>
                 </button>
-              )}
-              {match.meta.media.imageUrl && (
-                <Link
-                  href={`/stryda/activity/${
-                    item.id
-                  }${prototype.getURLparams()}`}
+              </li>
+              {match.achievements && (
+                <li>
+                <button
+                  type="button"
+                  className={activeTab === "activity" ? "is-active" : ""}
+                  onClick={() => setActiveTab("activity")}
                 >
-                  <img src={match.meta.media.imageUrl} alt="" />
-                </Link>
+                  <span>Activity</span>
+                </button>
+              </li>
               )}
-            </>
-          ) : (
-            <>
-              {match.meta.map && (
-                <Link
-                  href={`/stryda/activity/${
-                    item.id
-                  }${prototype.getURLparams()}`}
-                >
-                  <div className="aspect-landscape relative interactive grid place-content-center border-y border-ui-700">
-                    <div
-                      className={`relative z-10 p-4 rounded-2 bg-ui-900/70 backdrop-blur leading-none flex flex-col items-center text-center ${
-                        match.stats.hasWon
-                          ? " text-success-300"
-                          : "text-error-300"
-                      }`}
-                    >
-                      <div className="font-headings text-5xl sm:text-6xl">
-                        {match.stats.score.team1} - {match.stats.score.team2}
-                      </div>
-                      <hr className="border-mono-100/10 mb-2" />
-                      <div className="uppercase text-lg sm:text-xl">
-                        {match.stats.hasWon ? "Victory" : "Defeat"}
-                      </div>
-                    </div>
-                    <img
-                      className="absolute inset-0 h-full w-full object-cover"
-                      src={getMapByID(match.meta.map).picturePath}
-                      alt=""
-                      width="auto"
-                      height="auto"
-                    />
-                  </div>
-                </Link>
-              )}
-            </>
+          </ul>
+          {activeTab === "highlight" && (
+            <FeedItemMatchTabHighlight match={match} item={item} autoPlay={autoPlay} />
+          )}
+          {activeTab === "summary" && (
+            <FeedItemMatchTabSummary match={match} item={item} />
+          )}
+          {activeTab === "activity" && (
+            <FeedItemMatchTabActivity match={match} item={item} />
           )}
           <FeedItemComments item={item} isExpanded={false} />
         </div>

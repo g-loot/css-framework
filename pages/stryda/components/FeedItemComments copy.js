@@ -70,15 +70,15 @@ export default function FeedItemComments(props) {
 
   useEffect(() => {
     setLikeOn(item.social.likes.hasLiked);
-    setTotalLikes(item.social.likes.users.length);
+    setTotalLikes(item.social.likes.length);
   }, [item]);
 
   useEffect(() => {
     console.log("likeOn", totalLikes);
     if (likeOn) {
-      setTotalLikes(item.social.likes.users.length + 1);
+      setTotalLikes(item.social.likes.length + 1);
     } else {
-      setTotalLikes(item.social.likes.users.length);
+      setTotalLikes(item.social.likes.length);
     }
   }, [likeOn]);
 
@@ -135,17 +135,17 @@ export default function FeedItemComments(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      item.social.likes.users.length > 0 ? (
+                      item.social.likes.length > 0 ? (
                         <ul className="text-xs leading-snug">
-                          {item.social.likes.users
+                          {item.social.likes
                             .slice(0, 5)
                             .map((user, userIndex) => (
                               <li key={userIndex}>
                                 {prototype.getUserByID(user).nickname}
                               </li>
                             ))}
-                          {item.social.likes.users.length > 5 && (
-                            <li>+ {item.social.likes.users.length - 5}</li>
+                          {item.social.likes.length > 5 && (
+                            <li>+ {item.social.likes.length - 5}</li>
                           )}
                         </ul>
                       ) : (

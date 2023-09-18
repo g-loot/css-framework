@@ -210,6 +210,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-astra.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-astra.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-astra.webp'),
   },
   {
     id: 1,
@@ -222,6 +223,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-breach.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-breach.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-breach.webp'),
   },
   {
     id: 2,
@@ -234,6 +236,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-brimstone.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-brimstone.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-brimstone.webp'),
   },
   {
     id: 3,
@@ -246,6 +249,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-chamber.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-chamber.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-chamber.webp'),
   },
   {
     id: 4,
@@ -258,6 +262,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-cypher.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-cypher.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-cypher.webp'),
   },
   {
     id: 5,
@@ -270,6 +275,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-jett.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-jett.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-jett.webp'),
   },
   {
     id: 6,
@@ -282,6 +288,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-kayo.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-kayo.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-kayo.webp'),
   },
   {
     id: 7,
@@ -294,6 +301,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-killjoy.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-killjoy.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-killjoy.webp'),
   },
   {
     id: 8,
@@ -306,6 +314,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-neon.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-neon.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-neon.webp'),
   },
   {
     id: 9,
@@ -318,6 +327,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-omen.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-omen.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-omen.webp'),
   },
   {
     id: 10,
@@ -330,6 +340,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-phoenix.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-phoenix.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-phoenix.webp'),
   },
   {
     id: 11,
@@ -342,6 +353,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-raze.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-raze.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-raze.webp'),
   },
   {
     id: 12,
@@ -354,6 +366,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-reyna.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-reyna.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-reyna.webp'),
   },
   {
     id: 13,
@@ -366,6 +379,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-sage.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-sage.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-sage.webp'),
   },
   {
     id: 14,
@@ -378,6 +392,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-skye.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-skye.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-skye.webp'),
   },
   {
     id: 15,
@@ -390,6 +405,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-sova.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-sova.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-sova.webp'),
   },
   {
     id: 16,
@@ -402,6 +418,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-viper.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-viper.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-viper.webp'),
   },
   {
     id: 17,
@@ -414,6 +431,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-yoru.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-yoru.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-yoru.webp'),
   },
   {
     id: 18,
@@ -426,6 +444,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-fade.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-fade.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-fade.webp'),
   },
   {
     id: 19,
@@ -438,6 +457,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-harbor.webp'),
     backgroundPath: getImageUrl('valorant-stats-hero-harbor.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-harbor.webp'),
   },
   {
     id: 20,
@@ -450,6 +470,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-gekko.png'),
     backgroundPath: getImageUrl('valorant-stats-hero-gekko.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-gekko.webp'),
   },
   {
     id: 21,
@@ -462,6 +483,7 @@ export const StatsValorantAgents = [
     },
     picturePath: getImageUrl('agent-avatar-deadlock.png'),
     backgroundPath: getImageUrl('valorant-stats-hero-deadlock.jpg'),
+    bodyPath: getImageUrl('valorant-stats-body-deadlock.webp'),
   },
 ];
 

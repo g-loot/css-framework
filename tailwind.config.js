@@ -279,15 +279,15 @@ module.exports = {
       },
       animation: {
         "load-page": "loadPage 10s linear",
-        "slide-in-left": "slideInLeft 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-in-left": "slideInLeft 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "slide-in-right":
-          "slideInRight 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "slide-in-top": "slideInTop 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
+          "slideInRight 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-in-top": "slideInTop 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "slide-in-bottom":
-          "slideInBottom 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "fade-in": "fadeIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
+          "slideInBottom 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "fade-in": "fadeIn 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fade-out": "fadeOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
-        "scale-in": "scaleIn 0.88s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "scale-in": "scaleIn 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "scale-out": "scaleOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
         heartbeat: "heartbeat 1.5s ease-in-out infinite both",
         "drop-in": "dropIn 1.1s both",

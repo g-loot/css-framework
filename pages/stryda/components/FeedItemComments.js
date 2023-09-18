@@ -83,18 +83,22 @@ export default function FeedItemComments(props) {
   const [commentOn, setCommentOn] = useState(false);
   const [likeOn, setLikeOn] = useState(false);
   const [totalLikes, setTotalLikes] = useState(null);
+  const [commentValue, setCommentValue] = useState("");
 
   useEffect(() => {
-    setLikeOn(item.social.likes.hasLiked);
-    setTotalLikes(item.social.likes.users.length);
+    if(item.social && item.social?.likes?.includes(1)) {
+      setLikeOn(true);
+    } else {
+      setLikeOn(false);
+    }
+    setTotalLikes(item.social.likes.length);
   }, [item]);
 
   useEffect(() => {
-    console.log("likeOn", totalLikes);
     if (likeOn) {
-      setTotalLikes(item.social.likes.users.length + 1);
+      setTotalLikes(item.social.likes.length + 1);
     } else {
-      setTotalLikes(item.social.likes.users.length);
+      setTotalLikes(item.social.likes.length);
     }
   }, [likeOn]);
 
@@ -106,60 +110,41 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-        <div className="p-3 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-ui-300 text-base">
-            <div className="flex gap-0.5 items-center text-xs">
-              {item.social?.likes.users && (
-                <>
-                  <Tooltip
-                    placement="top"
-                    tooltip={
-                      item.social.likes.users.length > 0 ? (
-                        <ul className="text-xs leading-snug">
-                          {item.social.likes.users
-                            .slice(0, 5)
-                            .map((user, userIndex) => (
-                              <li key={userIndex}>
-                                {prototype.getUserByID(user).nickname}
-                              </li>
-                            ))}
-                          {item.social.likes.users.length > 5 && (
-                            <li>+ {item.social.likes.users.length - 5}</li>
-                          )}
-                        </ul>
-                      ) : (
-                        <div className="text-xs">Be the first to like</div>
-                      )
-                    }
-                  >
-                    <button type="button">
-                      {totalLikes} like
-                      {totalLikes > 1 && <>s</>}
-                    </button>
-                  </Tooltip>
-                </>
-              )}
-              {item.social?.comments && (
-                <>
-                  <span>•</span>
-                  <Link
-                    href={`/stryda/activity/${
-                      item.id
-                    }#comments${prototype.getURLparams()}`}
-                  >
-                    <a className="interactive">
-                      <span>
-                        {item.social.comments.length} comment
-                        {item.social.comments.length > 1 && <>s</>}
-                      </span>
-                    </a>
-                  </Link>
-                </>
-              )}
+          <div className="p-3 flex flex-row gap-3 items-center justify-start text-ui-300 text-base">
+            <div className="flex gap-1.5 items-center">
+              <span className="icon icon-view text-ui-300" />
+              <Tooltip
+                placement="top"
+                tooltip={
+                  item.social.views.length > 0 ? (
+                    <ul className="text-xs leading-snug">
+                      {item.social.views.slice(0, 5).map((user, userIndex) => (
+                        <li key={userIndex}>
+                          {prototype.getUserByID(user).nickname}
+                        </li>
+                      ))}
+                      {item.social.views.length > 5 && (
+                        <li>+ {item.social.views.length - 5}</li>
+                      )}
+                    </ul>
+                  ) : (
+                    <div className="text-xs">Be the first to view</div>
+                  )
+                }
+              >
+                <button
+                  type="button"
+                  className="text-xs whitespace-nowrap link link-hover"
+                >
+                  {item.social?.views?.length} view
+                  {item.social?.views?.length > 1 && <>s</>}
+                </button>
+              </Tooltip>
             </div>
-            <div className="flex items-stretch gap-2 sm:gap-0 justify-around">
+            <div className="flex gap-1.5 items-center border-l border-ui-600 pl-3">
               <button
                 type="button"
-                className="button button-ghost rounded-full"
+                className="button button-tertiary rounded-full"
                 onClick={() => {
                   setLikeOn(!likeOn);
                 }}
@@ -170,56 +155,96 @@ export default function FeedItemComments(props) {
                   }`}
                 >
                   <div className="switch-on icon icon-favorite text-main" />
-                  <div className="switch-off icon icon-favorite text-ui-300" />
+                  <div className="switch-off icon icon-favorite" />
                 </div>
               </button>
+              <Tooltip
+                placement="top"
+                tooltip={
+                  item.social.likes.length > 0 ? (
+                    <ul className="text-xs leading-snug">
+                      {item.social.likes.slice(0, 5).map((user, userIndex) => (
+                        <li key={userIndex}>
+                          {prototype.getUserByID(user).nickname}
+                        </li>
+                      ))}
+                      {likeOn && <li>{prototype.getUserByID(1).nickname}</li>}
+                      {item.social.likes.length > 5 && (
+                        <li>+ {item.social.likes.length - 5}</li>
+                      )}
+                    </ul>
+                  ) : (
+                    <div className="text-xs">Be the first to like</div>
+                  )
+                }
+              >
+                <button
+                  type="button"
+                  className="text-xs whitespace-nowrap link link-hover"
+                  onClick={() => {
+                    setLikeOn(!likeOn);
+                  }}
+                >
+                  {totalLikes} like
+                  {totalLikes > 1 && <>s</>}
+                </button>
+              </Tooltip>
+            </div>
+            <div className="flex gap-1.5 items-center">
               <button
                 type="button"
-                className="button button-ghost rounded-full"
+                className="button button-tertiary rounded-full"
                 onClick={() => {
                   setCommentOn(!commentOn);
                 }}
               >
                 <span className="icon icon-comment text-base" />
               </button>
+              <Tooltip
+                placement="top"
+                tooltip={
+                  item.social.comments.length > 0 ? (
+                    <ul className="text-xs leading-snug">
+                      {item.social.comments
+                        .slice(0, 5)
+                        .map((user, userIndex) => (
+                          <li key={userIndex}>
+                            {prototype.getUserByID(user.author).nickname}
+                          </li>
+                        ))}
+                      {item.social.comments.length > 5 && (
+                        <li>+ {item.social.comments.length - 5}</li>
+                      )}
+                    </ul>
+                  ) : (
+                    <div className="text-xs">Be the first to comment</div>
+                  )
+                }
+              >
+                <button
+                  type="button"
+                  className="text-xs whitespace-nowrap link link-hover"
+                  onClick={() => {
+                    setCommentOn(!commentOn);
+                  }}
+                >
+                  {item.social.comments.length} comment
+                  {item.social.comments.length > 1 && <>s</>}
+                </button>
+              </Tooltip>
+            </div>
+
+            <div className="flex-1 text-right">
               <button
                 type="button"
-                className="button button-ghost rounded-full"
+                className="button button-tertiary rounded-full justify-self-end"
                 onClick={() => openModalShareActivity(item)}
               >
                 <span className="icon icon-network-communication text-base" />
               </button>
-              {item.type === "match" && (
-                <Link
-                  href={`/stryda/activity/${
-                    item.id
-                  }${prototype.getURLparams()}`}
-                >
-                  <button type="button" className="button button-ghost rounded-full">
-                    <span className="icon icon-view text-base" />
-                  </button>
-                </Link>
-              )}
-              {item.type === "post" && item.url && (
-                <Link href={item.url}>
-                  <button type="button" className="button button-ghost rounded-full">
-                    <span className="icon icon-view text-base" />
-                  </button>
-                </Link>
-              )}
-              {item.type === "advertising" && item.url && (
-                <a
-                  href={item.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="button button-ghost rounded-full"
-                >
-                  <span className="icon icon-view text-base" />
-                </a>
-              )}
             </div>
           </div>
-        {/*
+          {/*
           <div className="p-3 flex flex-col sm:flex-row gap-6 items-stretch sm:items-center justify-between text-ui-300 text-base">
             <div className="flex gap-0.5 items-center text-xs">
               {item.social?.likes.users && (
@@ -227,17 +252,17 @@ export default function FeedItemComments(props) {
                   <Tooltip
                     placement="top"
                     tooltip={
-                      item.social.likes.users.length > 0 ? (
+                      item.social.likes.length > 0 ? (
                         <ul className="text-xs leading-snug">
-                          {item.social.likes.users
+                          {item.social.likes
                             .slice(0, 5)
                             .map((user, userIndex) => (
                               <li key={userIndex}>
                                 {prototype.getUserByID(user).nickname}
                               </li>
                             ))}
-                          {item.social.likes.users.length > 5 && (
-                            <li>+ {item.social.likes.users.length - 5}</li>
+                          {item.social.likes.length > 5 && (
+                            <li>+ {item.social.likes.length - 5}</li>
                           )}
                         </ul>
                       ) : (
@@ -346,7 +371,7 @@ export default function FeedItemComments(props) {
             </>
           )}
           {commentOn && (
-            <div className="flex items-start gap-3 pr-2 pb-2 pl-3 text-base">
+            <div className="flex items-start gap-3 pr-3 pb-2 pl-3 text-base">
               <div className="w-9">
                 <Avatar id={1} hasLevel={false} />
               </div>
@@ -357,14 +382,12 @@ export default function FeedItemComments(props) {
                   className="resize-none text-sm"
                   placeholder="Add a comment, @ to mention"
                   autoFocus
+                  onChange={(text) => setCommentValue(text.target.value)}
                 ></textarea>
               </div>
               <div>
-                <button
-                  type="button"
-                  className="button button-sm button-ghost"
-                >
-                  <span>Post</span>
+                <button type="button" className="button button-primary rounded-full" disabled={commentValue.length === 0}>
+                  <span className="icon icon-send-message" />
                 </button>
               </div>
             </div>
