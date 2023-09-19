@@ -86,7 +86,7 @@ export default function FeedItemComments(props) {
   const [commentValue, setCommentValue] = useState("");
 
   useEffect(() => {
-    if(item.social && item.social?.likes?.includes(1)) {
+    if (item.social && item.social?.likes?.includes(1)) {
       setLikeOn(true);
     } else {
       setLikeOn(false);
@@ -110,36 +110,13 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-          <div className="p-3 flex flex-row gap-3 items-center justify-start text-ui-300 text-base">
-            <div className="flex gap-1.5 items-center">
+          <div className="px-3 py-1.5 flex flex-row gap-3 items-center justify-start text-ui-300 text-base">
+            <div className="flex gap-1.5 items-center pointer">
               <span className="icon icon-view text-ui-300" />
-              <Tooltip
-                placement="top"
-                tooltip={
-                  item.social.views.length > 0 ? (
-                    <ul className="text-xs leading-snug">
-                      {item.social.views.slice(0, 5).map((user, userIndex) => (
-                        <li key={userIndex}>
-                          {prototype.getUserByID(user).nickname}
-                        </li>
-                      ))}
-                      {item.social.views.length > 5 && (
-                        <li>+ {item.social.views.length - 5}</li>
-                      )}
-                    </ul>
-                  ) : (
-                    <div className="text-xs">Be the first to view</div>
-                  )
-                }
-              >
-                <button
-                  type="button"
-                  className="text-xs whitespace-nowrap link link-hover"
-                >
-                  {item.social?.views?.length} view
-                  {item.social?.views?.length > 1 && <>s</>}
-                </button>
-              </Tooltip>
+              <span className="text-xs whitespace-nowrap">
+                {item.social?.views?.length} view
+                {item.social?.views?.length > 1 && <>s</>}
+              </span>
             </div>
             <div className="flex gap-1.5 items-center border-l border-ui-600 pl-3">
               <button
@@ -163,7 +140,7 @@ export default function FeedItemComments(props) {
                 tooltip={
                   item.social.likes.length > 0 ? (
                     <ul className="text-xs leading-snug">
-                      {item.social.likes.slice(0, 5).map((user, userIndex) => (
+                      {item.social.likes.filter(i => i !== 1).slice(0, 5).map((user, userIndex) => (
                         <li key={userIndex}>
                           {prototype.getUserByID(user).nickname}
                         </li>
@@ -386,7 +363,11 @@ export default function FeedItemComments(props) {
                 ></textarea>
               </div>
               <div>
-                <button type="button" className="button button-primary rounded-full" disabled={commentValue.length === 0}>
+                <button
+                  type="button"
+                  className="button button-primary rounded-full"
+                  disabled={commentValue.length === 0}
+                >
                   <span className="icon icon-send-message" />
                 </button>
               </div>

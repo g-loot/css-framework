@@ -24,6 +24,14 @@ export default function FeedItemMatchTabSummary(props) {
       return rank.id === parseInt(id);
     });
   };
+
+  const getGamemodeImage = (gamemode) => {
+    let baseUrl = "https://res.cloudinary.com/gloot/image/upload/v1695129417/Stryda/stats/valorant/Game_Mode_";
+    let endUrl = ".webp";
+    var gamemode = gamemode.replace(/\s+/g, "_");
+    return baseUrl + gamemode + endUrl;
+  };
+
   const getMapByID = (id) => {
     return StatsValorantMaps.find((map) => {
       return map.id === parseInt(id);
@@ -36,7 +44,7 @@ export default function FeedItemMatchTabSummary(props) {
         <Link href={`/stryda/activity/${item.id}${prototype.getURLparams()}`}>
           <div className="aspect-video bg-ui-850 relative interactive-secondary flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none">
             <div
-              className={`relative z-50 ${
+              className={`relative z-40 ${
                 match.stats.hasWon ? " text-success-300" : "text-error-300"
               }`}
             >
@@ -47,11 +55,14 @@ export default function FeedItemMatchTabSummary(props) {
                 {match.stats.score.team1} - {match.stats.score.team2}
               </div>
             </div>
-            <div className="relative z-50 text-xl uppercase text-ui-100">
-              <div>{match.meta.mode}</div>
+            <div className="relative z-40 text-xl uppercase text-ui-100">
+              <div className="flex gap-1.5 items-center">
+                <img src={getGamemodeImage(match.meta.mode)} alt="" className="h-6 w-6" />
+                <span>{match.meta.mode}</span>
+              </div>
               <div>{getMapByID(match.meta.map).name}</div>
             </div>
-            <ul className="relative z-50 text-xl uppercase flex items-center justify-end text-left">
+            <ul className="relative z-40 text-xl uppercase flex items-center justify-end text-left">
               {match.stats.mainStats
                 .slice(0, 3)
                 .map((mainStat, mainStatIndex) => (

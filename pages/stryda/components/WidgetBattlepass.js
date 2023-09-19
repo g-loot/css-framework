@@ -28,10 +28,14 @@ export default function WidgetBattlepass(props) {
               <div className="progressbar progressbar-tick w-full" style={{ "--percent": 70 }}>
                 <div />
               </div>
-              <div className="flex gap-2 items-center justify-start leading-none text-sm">
-                <span className="text-ui-300">350</span>
-                <span>/ 400</span>
-                <span className="icon icon-xp-symbol text-3xl" />
+              <div className="flex gap-2 items-baseline justify-between leading-none text-sm">
+                <div className="flex gap-1.5 items-center justify-start">
+                  <span className="text-ui-300">350</span>
+                  <span>/</span>
+                  <span>400</span>
+                  <span className="icon icon-xp-symbol text-3xl" />
+                </div>
+                <div className="text-ui-300">Tier 6</div>
               </div>
             </div>
             <div className="flex-none">

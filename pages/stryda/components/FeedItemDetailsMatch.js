@@ -169,7 +169,7 @@ export default function FeedItemDetailsMatch(props) {
                     ))}
                   </ul>
                 </div>
-                {match.achievements && (
+                {match.achievements.length > 0 && (
                   <div className="flex self-stretch items-center gap-4 lg:gap-8 border-t border-ui-700 py-4 px-4 lg:px-8">
                     <div className="hidden lg:grid place-content-center relative aspect-square border-r border-ui-700 pr-4 lg:pr-8">
                       <div className="relative grid place-content-center text-center">

@@ -327,14 +327,14 @@ export default function Premium() {
         </section>
 
         <video
-          className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-60 pointer-events-none"
+          className="absolute z-0 right-0 top-0 h-full w-full md:h-auto object-cover opacity-60 pointer-events-none mix-blend-lighten"
           autoPlay
           playsInline
           muted
           loop
           preload="true"
         >
-          <source src="https://res.cloudinary.com/gloot/video/upload/v1688630053/Stryda/videos/premium_glitter.mp4" />
+          <source src="https://res.cloudinary.com/gloot/video/upload/v1695134465/Stryda/videos/premium_glitter.mp4" />
         </video>
 
         {/* for demo purposes only */}

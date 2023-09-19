@@ -206,6 +206,26 @@ export const dataFeedItems = [
     },
   },
   {
+    id: 11,
+    type: "achievement",
+    author: 8,
+    achievementID: 2,
+    title: "Cloud III Wireless",
+    text: "Cloud III Wireless brings you 120 hours of uninterrupted comfy gaming 😊",
+    social: {
+      views: [1,2,3,4,5,6,7,8,9,10],
+      likes: [1,2],
+      comments: [
+        {
+          author: 5,
+          date: "4 hours ago",
+          text: "nice",
+          likes: [],
+        },
+      ],
+    },
+  },
+  {
     id: 8,
     type: "match",
     itemID: 2,
