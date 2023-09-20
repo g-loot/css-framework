@@ -11,6 +11,7 @@ export default function Video(props) {
   const uiContext = useContext(UiContext);
   const item = props.item;
   const hasMeta = props.hasMeta || false;
+  const hasGameIcon = props.hasGameIcon !== undefined ? props.hasGameIcon : true;
   const autoPlay = props.autoPlay || false;
   const id = RandomNumber(1000, 100000);
   const [video, setVideo] = useState(null);
@@ -79,10 +80,12 @@ export default function Video(props) {
           onMouseOut={handleVideoPause}
           onClick={() => openModalHighlightViewer(item)}
         >
-          <div className="relative aspect-video w-full rounded-2 overflow-hidden bg-ui-700">
-            <div className="absolute z-20 top-1 left-1">
-              <GameIcon game={item.game} size="sm:text-lg" />
-            </div>
+          <div className={`relative aspect-video w-full overflow-hidden bg-ui-700 ${hasGameIcon ? 'rounded-2' : 'rounded'}`}>
+            {hasGameIcon && (
+              <div className="absolute z-20 top-1 left-1">
+                <GameIcon game={item.game} size="sm:text-lg" />
+              </div>
+            )}
             <video
               autoPlay={false}
               playsInline
@@ -113,9 +116,7 @@ export default function Video(props) {
               )}
               <div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <p className="text-ui-100 leading-tight">
-                    AI generated text
-                  </p>
+                  <p className="text-ui-100 leading-tight">AI generated text</p>
                   <div
                     className={`rounded px-1.5 py-1 text-xs leading-none flex gap-2 items-center ${
                       item.stats.hasWon

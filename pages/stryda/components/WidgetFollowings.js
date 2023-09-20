@@ -87,19 +87,20 @@ export default function WidgetFollowings(props) {
     setFollowings(sortedData);
   }, [prototype]);
 
-  const [maxFollowingsLoader, setMaxFollowingsLoader] = useState(false);
-  const [maxFollowings, setMaxFollowings] = useState(length);
+  const [maxLinesLoader, setMaxLinesLoader] = useState(false);
+  const [maxLines, setMaxLines] = useState(length);
 
-  const handleMoreFollowings = () => {
-    setMaxFollowingsLoader(true);
+  const handleMoreLines = () => {
+    setMaxLinesLoader(true);
     const interval = setTimeout(() => {
-      setMaxFollowingsLoader(false);
-      setMaxFollowings(maxFollowings + length);
+      setMaxLinesLoader(false);
+      setMaxLines(maxLines + length);
     }, 500);
     return () => {
       clearTimeout(interval);
     };
   };
+
   return (
     <>
       <div className="surface rounded">
@@ -121,19 +122,19 @@ export default function WidgetFollowings(props) {
         </div>
         <div className="bg-ui-850">
           <ul className="divide-y-0">
-            {followings.slice(0, maxFollowings).map((item, itemIndex) => (
+            {followings.slice(0, maxLines).map((item, itemIndex) => (
               <Line key={itemIndex} item={item} giftTokens={true} />
             ))}
           </ul>
           {prototype.users.filter((i) => !i.isOnline && !i.isYou).length >
-            maxFollowings && (
-            <div className="p-2 text-center">
+            maxLines && (
+            <div className="px-2 pb-2 text-center">
               <button
                 type="button"
                 className={`button button-ghost button-sm rounded w-full ${
-                  maxFollowingsLoader ? "is-loading" : ""
+                  maxLinesLoader ? "is-loading" : ""
                 }`}
-                onClick={() => handleMoreFollowings()}
+                onClick={() => handleMoreLines()}
               >
                 <span>View more</span>
               </button>

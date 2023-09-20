@@ -43,6 +43,11 @@
   items-center
   py-8
   ;
+  &:has(.modal.modal-top) {
+    @apply
+    justify-start
+    ;
+  }
 }
 
 .modal-backdrop {
@@ -64,6 +69,7 @@
   items-stretch
   overflow-hidden
   relative
+  z-50
   rounded
   ;
 

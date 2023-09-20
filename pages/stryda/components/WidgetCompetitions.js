@@ -24,7 +24,7 @@ const Line = ({ game, ladder }) => {
           <div className="text-main">Enrolled</div>
         )}
         {ladder.status === "finished" && ladder.hasClaim && (
-          <span className="icon icon-present text-main mr-2" />
+          <span className="icon icon-present text-main mr-1" />
         )}
         {ladder.status === "finished" && !ladder.hasClaim && (
           <div className="text-ui-400">Ended</div>

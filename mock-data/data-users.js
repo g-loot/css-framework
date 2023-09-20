@@ -38,7 +38,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 12,
+      followers: 43,
+      followings: 65,
       gamestats: [
         {
           game: 1,
@@ -235,7 +238,7 @@ export const dataUsers = [
         },
       ],
     },
-    friends: [4, 8, 11],
+    friends: [2, 3, 4, 5, 6, 7, 8, 9, 10],
     videos: [
       {
         id: 0,
@@ -320,7 +323,6 @@ export const dataUsers = [
             team1: 12,
             team2: 9,
           },
-
         },
         social: {
           views: "0.5k",
@@ -358,7 +360,10 @@ export const dataUsers = [
       avgScore: false,
       timesInTop: false,
       completedMissions: false,
+      highlightViews: false,
       playedTournaments: false,
+      followers: 0,
+      followings: 0,
       gamestats: [
         {
           game: 2,
@@ -394,7 +399,8 @@ export const dataUsers = [
     isPremium: false,
     isFollower: true,
     isFollowing: false,
-    isLive: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
+    isLive:
+      "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
     level: 4,
     isOnline: true,
     nickname: "elligator256",
@@ -429,6 +435,9 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
+      followers: 52,
+      followings: 23,
       playedTournaments: 22,
     },
     wallet: {
@@ -543,7 +552,8 @@ export const dataUsers = [
     isPremium: false,
     isFollower: true,
     isFollowing: false,
-    isLive: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
+    isLive:
+      "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
     level: 198,
     isOnline: true,
     nickname: "Shikari",
@@ -577,7 +587,11 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
+      followers: 147,
+      followings: 2523,
       playedTournaments: 12,
+
       gamestats: [
         {
           game: 1,
@@ -594,7 +608,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [1,6],
+    games: [1, 6],
     ladders: [
       {
         gameSlug: "valorant",
@@ -768,7 +782,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 143,
+      followings: 153,
       gamestats: [
         {
           game: 2,
@@ -966,7 +983,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 2,
+      followers: 2,
+      followings: 4,
     },
     wallet: {
       coins: 50000,
@@ -1139,7 +1159,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 54,
+      followings: 66,
     },
     wallet: {
       coins: 50000,
@@ -1285,7 +1308,8 @@ export const dataUsers = [
     isPremium: true,
     isFollower: true,
     isFollowing: true,
-    isLive: "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
+    isLive:
+      "https://res.cloudinary.com/gloot/video/upload/v1691649700/Stryda/demo/game%20footage/2D4EC5F4050A780C1_0_3.final.mp4",
     level: 87,
     isOnline: false,
     nickname: "Pilar",
@@ -1315,7 +1339,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 23,
+      followers: 23,
+      followings: 76,
     },
     wallet: {
       coins: 50000,
@@ -1494,7 +1521,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 23,
+      followers: 11,
+      followings: 23,
     },
     wallet: {
       coins: 50000,
@@ -1600,7 +1630,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 23,
+      followings: 42,
     },
     wallet: {
       coins: 50000,
@@ -1648,7 +1681,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 98,
+      followings: 101,
     },
     wallet: {
       coins: 50000,
@@ -1756,7 +1792,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 55,
+      followings: 98,
     },
     wallet: {
       coins: 50000,
@@ -1864,7 +1903,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 14,
+      followings: 7,
     },
     wallet: {
       coins: 50000,
@@ -1971,7 +2013,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 827,
+      followings: 1541,
     },
     wallet: {
       coins: 50000,
@@ -2079,7 +2124,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 12,
+      followings: 2,
     },
     wallet: {
       coins: 50000,
@@ -2087,7 +2135,7 @@ export const dataUsers = [
       powertokens: 15,
       tickets: 3,
     },
-    games: [6,1],
+    games: [6, 1],
     ladders: [
       {
         gameSlug: "valorant",
@@ -2185,7 +2233,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 44,
+      followings: 22,
     },
     wallet: {
       coins: 50000,
@@ -2290,7 +2341,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 87,
+      followings: 104,
     },
     wallet: {
       coins: 50000,
@@ -2394,7 +2448,10 @@ export const dataUsers = [
       avgScore: 532,
       timesInTop: 3,
       completedMissions: 558,
+      highlightViews: 558,
       playedTournaments: 0,
+      followers: 55,
+      followings: 48,
     },
     wallet: {
       coins: 50000,

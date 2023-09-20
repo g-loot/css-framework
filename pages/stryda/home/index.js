@@ -59,7 +59,6 @@ export default function Home() {
           <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
             <div className="w-[21rem] space-y-4 hidden md:block">
               <WidgetUser hasActions={false} />
-              
               <div
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}

@@ -51,11 +51,6 @@ export default function TabProfileHighlights() {
             .getUserMatches(selectedUser.id)
             .filter((m) => m.meta?.media).length > 0 ? (
             <>
-              {selectedUser.isYou && (
-                <div className="surface sm:rounded mb-4 py-24 px-4 text-center">
-                  This is where the saved highlights are being displayed.
-                </div>
-              )}
               <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4 px-4 sm:px-0">
                 {prototype
                   .getUserMatches(selectedUser.id)

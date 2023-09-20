@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalHighlightViewer from "../modal-highlightviewer";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 export default function FeedItemMatchTabHighlight(props) {
   const uiContext = useContext(UiContext);
@@ -10,6 +11,7 @@ export default function FeedItemMatchTabHighlight(props) {
   const match = props.match;
   const autoPlay = props.autoPlay || false;
   const [video, setVideo] = useState(null);
+  const detailedView = props.detailedView || false;
 
   useEffect(() => {
     setVideo(document.getElementById(`video_${item.id}`));
@@ -29,13 +31,18 @@ export default function FeedItemMatchTabHighlight(props) {
     uiContext.openModal(<ModalHighlightViewer item={match} />);
   }
 
+  function openFeedItemDetailsMatch(target) {
+    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
+  }
+
   return (
     <>
       {item && match && (
         <button
           type="button"
           className="aspect-video bg-ui-850 w-full"
-          onClick={() => openModalHighlightViewer(match)}
+          //onClick={() => openModalHighlightViewer(match)}
+          onClick={() => !detailedView && openFeedItemDetailsMatch("highlight")}
         >
           <video
             autoPlay={autoPlay}

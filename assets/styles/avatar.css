@@ -119,218 +119,6 @@
     }
   }
 
-  /* size */
-
-  &.avatar-2xl {
-    --inner-padding-one: 12px;
-    --inner-padding-two: 12px/2;
-    @apply
-    h-40
-    w-40
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-5xl
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-xl
-      ;
-      &::after {
-        @apply
-        w-3
-        h-3
-        ;
-      }
-    }
-  }
-  &.avatar-xl {
-    --inner-padding-one: 10px;
-    --inner-padding-two: 10px/2;
-    @apply
-    h-32
-    w-32
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-4xl
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-lg
-      ;
-      &::after {
-        @apply
-        w-2.5
-        h-2.5
-        ;
-      }
-    }
-  }
-  &.avatar-lg {
-    --inner-padding-one: 8px;
-    --inner-padding-two: 8px/2;
-    @apply
-    h-24
-    w-24
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-3xl
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-base
-      ;
-      &::after {
-        @apply
-        w-2
-        h-2
-        ;
-      }
-    }
-  }
-  &.avatar-md {
-    --inner-padding-one: 6px;
-    --inner-padding-two: 6px/2;
-    @apply
-    h-20
-    w-20
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-2xl
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-sm
-      ;
-      &::after {
-        @apply
-        w-[7px]
-        h-[7px]
-        ;
-      }
-    }
-  }
-  &.avatar-sm {
-    --inner-padding-one: 4px;
-    --inner-padding-two: 4px/2;
-    @apply
-    h-14
-    w-14
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-xl
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-xs
-      ;
-      &::after {
-        @apply
-        w-1.5
-        h-1.5
-        ;
-      }
-    }
-  }
-  &.avatar-xs {
-    --inner-padding-one: 4px;
-    --inner-padding-two: 4px/2;
-    @apply
-    h-9
-    w-9
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-sm
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-xs
-        py-px
-        px-1
-        gap-0.5
-      ;
-      &::after {
-        @apply
-        w-1.5
-        h-1.5
-        ;
-      }
-    }
-  }
-  &.avatar-tiny {
-    --inner-padding-one: 2px;
-    --inner-padding-two: 2px/2;
-    @apply
-    h-7
-    w-7
-    ;
-    > div {
-      > * {
-        & {
-          @apply
-          text-sm
-          ;
-        }
-      }
-    }
-    > b,
-    > strong {
-      @apply
-        text-[10px]
-        py-px
-        px-1
-        gap-0.5
-      ;
-      &::after {
-        @apply
-        w-1.5
-        h-1.5
-        ;
-      }
-    }
-  }
-
   /* rank */
 
   &.avatar-gold > div {
@@ -491,8 +279,8 @@
       ;
     }
   }
-
 }
+
 @keyframes avatar-radar {
   from {
     transform: scale(0.9);
@@ -651,857 +439,355 @@
   }
 }
 
+/* sizes */
+
+@define-mixin avatar-2xl {
+  & {
+    --inner-padding-one: 12px;
+    --inner-padding-two: 12px/2;
+    @apply
+    h-40
+    w-40
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-5xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xl
+      ;
+      &::after {
+        @apply
+        w-3
+        h-3
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-xl {
+  & {
+    --inner-padding-one: 10px;
+    --inner-padding-two: 10px/2;
+    @apply
+    h-32
+    w-32
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-4xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-lg
+      ;
+      &::after {
+        @apply
+        w-2.5
+        h-2.5
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-lg {
+  & {
+    --inner-padding-one: 8px;
+    --inner-padding-two: 8px/2;
+    @apply
+    h-24
+    w-24
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-3xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-base
+      ;
+      &::after {
+        @apply
+        w-2
+        h-2
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-md {
+  & {
+    --inner-padding-one: 6px;
+    --inner-padding-two: 6px/2;
+    @apply
+    h-20
+    w-20
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-2xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-sm
+      ;
+      &::after {
+        @apply
+        w-[7px]
+        h-[7px]
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-sm {
+  & {
+    --inner-padding-one: 4px;
+    --inner-padding-two: 4px/2;
+    @apply
+    h-14
+    w-14
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-xl
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xs
+      ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-xs {
+  & {
+    --inner-padding-one: 4px;
+    --inner-padding-two: 4px/2;
+    @apply
+    h-9
+    w-9
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-sm
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-xs
+        py-px
+        px-1
+        gap-0.5
+      ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
+    }
+  }
+}
+@define-mixin avatar-tiny {
+  & {
+    --inner-padding-one: 2px;
+    --inner-padding-two: 2px/2;
+    @apply
+    h-7
+    w-7
+    ;
+    > div {
+      > * {
+        & {
+          @apply
+          text-sm
+          ;
+        }
+      }
+    }
+    > b,
+    > strong {
+      @apply
+        text-[10px]
+        py-px
+        px-1
+        gap-0.5
+      ;
+      &::after {
+        @apply
+        w-1.5
+        h-1.5
+        ;
+      }
+    }
+  }
+}
+
+.avatar {
+  &.avatar-2xl {
+    @mixin avatar-2xl;
+  }
+  &.avatar-xl {
+    @mixin avatar-xl;
+  }
+  &.avatar-lg {
+    @mixin avatar-lg;
+  }
+  &.avatar-md {
+    @mixin avatar-md;
+  }
+  &.avatar-sm {
+    @mixin avatar-sm;
+  }
+  &.avatar-xs {
+    @mixin avatar-xs;
+  }
+  &.avatar-tiny {
+    @mixin avatar-tiny;
+  }
+}
+
 /* responsive sizes */
 
 @media only screen and (min-width: 640px) {
 	.avatar {
     &.sm\:avatar-2xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
-      @apply
-      h-40
-      w-40
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-5xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xl
-        ;
-        &::after {
-          @apply
-          w-3
-          h-3
-          ;
-        }
-      }
+      @mixin avatar-2xl;
     }
     &.sm\:avatar-xl {
-      --inner-padding-one: 10px;
-      --inner-padding-two: 10px/2;
-      @apply
-      h-32
-      w-32
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-4xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-lg
-        ;
-        &::after {
-          @apply
-          w-2.5
-          h-2.5
-          ;
-        }
-      }
+      @mixin avatar-xl;
     }
     &.sm\:avatar-lg {
-      --inner-padding-one: 8px;
-      --inner-padding-two: 8px/2;
-      @apply
-      h-24
-      w-24
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-3xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-base
-        ;
-        &::after {
-          @apply
-          w-2
-          h-2
-          ;
-        }
-      }
+      @mixin avatar-lg;
     }
     &.sm\:avatar-md {
-      --inner-padding-one: 6px;
-      --inner-padding-two: 6px/2;
-      @apply
-      h-20
-      w-20
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-2xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-sm
-        ;
-        &::after {
-          @apply
-          w-[7px]
-          h-[7px]
-          ;
-        }
-      }
+      @mixin avatar-md;
     }
     &.sm\:avatar-sm {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-14
-      w-14
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-sm;
     }
     &.sm\:avatar-xs {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-9
-      w-9
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-xs;
     }
     &.sm\:avatar-tiny {
-      --inner-padding-one: 2px;
-      --inner-padding-two: 2px/2;
-      @apply
-      h-7
-      w-7
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-[10px]
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-tiny;
     }
   }
 }
 @media only screen and (min-width: 768px) {
 	.avatar {
     &.md\:avatar-2xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
-      @apply
-      h-40
-      w-40
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-5xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xl
-        ;
-        &::after {
-          @apply
-          w-3
-          h-3
-          ;
-        }
-      }
+      @mixin avatar-2xl;
     }
     &.md\:avatar-xl {
-      --inner-padding-one: 10px;
-      --inner-padding-two: 10px/2;
-      @apply
-      h-32
-      w-32
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-4xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-lg
-        ;
-        &::after {
-          @apply
-          w-2.5
-          h-2.5
-          ;
-        }
-      }
+      @mixin avatar-xl;
     }
     &.md\:avatar-lg {
-      --inner-padding-one: 8px;
-      --inner-padding-two: 8px/2;
-      @apply
-      h-24
-      w-24
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-3xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-base
-        ;
-        &::after {
-          @apply
-          w-2
-          h-2
-          ;
-        }
-      }
+      @mixin avatar-lg;
     }
     &.md\:avatar-md {
-      --inner-padding-one: 6px;
-      --inner-padding-two: 6px/2;
-      @apply
-      h-20
-      w-20
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-2xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-sm
-        ;
-        &::after {
-          @apply
-          w-[7px]
-          h-[7px]
-          ;
-        }
-      }
+      @mixin avatar-md;
     }
     &.md\:avatar-sm {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-14
-      w-14
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-sm;
     }
     &.md\:avatar-xs {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-9
-      w-9
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-xs;
     }
     &.md\:avatar-tiny {
-      --inner-padding-one: 2px;
-      --inner-padding-two: 2px/2;
-      @apply
-      h-7
-      w-7
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-[10px]
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-tiny;
     }
   }
 }
 @media only screen and (min-width: 1024px) {
 	.avatar {
     &.lg\:avatar-2xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
-      @apply
-      h-40
-      w-40
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-5xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xl
-        ;
-        &::after {
-          @apply
-          w-3
-          h-3
-          ;
-        }
-      }
+      @mixin avatar-2xl;
     }
     &.lg\:avatar-xl {
-      --inner-padding-one: 10px;
-      --inner-padding-two: 10px/2;
-      @apply
-      h-32
-      w-32
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-4xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-lg
-        ;
-        &::after {
-          @apply
-          w-2.5
-          h-2.5
-          ;
-        }
-      }
+      @mixin avatar-xl;
     }
     &.lg\:avatar-lg {
-      --inner-padding-one: 8px;
-      --inner-padding-two: 8px/2;
-      @apply
-      h-24
-      w-24
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-3xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-base
-        ;
-        &::after {
-          @apply
-          w-2
-          h-2
-          ;
-        }
-      }
+      @mixin avatar-lg;
     }
     &.lg\:avatar-md {
-      --inner-padding-one: 6px;
-      --inner-padding-two: 6px/2;
-      @apply
-      h-20
-      w-20
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-2xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-sm
-        ;
-        &::after {
-          @apply
-          w-[7px]
-          h-[7px]
-          ;
-        }
-      }
+      @mixin avatar-md;
     }
     &.lg\:avatar-sm {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-14
-      w-14
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-sm;
     }
     &.lg\:avatar-xs {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-9
-      w-9
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-xs;
     }
     &.lg\:avatar-tiny {
-      --inner-padding-one: 2px;
-      --inner-padding-two: 2px/2;
-      @apply
-      h-7
-      w-7
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-[10px]
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-tiny;
     }
   }
 }
 @media only screen and (min-width: 1280px) {
 	.avatar {
     &.xl\:avatar-2xl {
-      --inner-padding-one: 12px;
-      --inner-padding-two: 12px/2;
-      @apply
-      h-40
-      w-40
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-5xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xl
-        ;
-        &::after {
-          @apply
-          w-3
-          h-3
-          ;
-        }
-      }
+      @mixin avatar-2xl;
     }
     &.xl\:avatar-xl {
-      --inner-padding-one: 10px;
-      --inner-padding-two: 10px/2;
-      @apply
-      h-32
-      w-32
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-4xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-lg
-        ;
-        &::after {
-          @apply
-          w-2.5
-          h-2.5
-          ;
-        }
-      }
+      @mixin avatar-xl;
     }
     &.xl\:avatar-lg {
-      --inner-padding-one: 8px;
-      --inner-padding-two: 8px/2;
-      @apply
-      h-24
-      w-24
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-3xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-base
-        ;
-        &::after {
-          @apply
-          w-2
-          h-2
-          ;
-        }
-      }
+      @mixin avatar-lg;
     }
     &.xl\:avatar-md {
-      --inner-padding-one: 6px;
-      --inner-padding-two: 6px/2;
-      @apply
-      h-20
-      w-20
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-2xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-sm
-        ;
-        &::after {
-          @apply
-          w-[7px]
-          h-[7px]
-          ;
-        }
-      }
+      @mixin avatar-md;
     }
     &.xl\:avatar-sm {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-14
-      w-14
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-xl
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-sm;
     }
     &.xl\:avatar-xs {
-      --inner-padding-one: 4px;
-      --inner-padding-two: 4px/2;
-      @apply
-      h-9
-      w-9
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-xs
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-xs;
     }
     &.xl\:avatar-tiny {
-      --inner-padding-one: 2px;
-      --inner-padding-two: 2px/2;
-      @apply
-      h-7
-      w-7
-      ;
-      > div {
-        > * {
-          & {
-            @apply
-            text-sm
-            ;
-          }
-        }
-      }
-      > b,
-      > strong {
-        @apply
-          text-[10px]
-          py-px
-          px-1
-          gap-0.5
-        ;
-        &::after {
-          @apply
-          w-1.5
-          h-1.5
-          ;
-        }
-      }
+      @mixin avatar-tiny;
     }
   }
 }

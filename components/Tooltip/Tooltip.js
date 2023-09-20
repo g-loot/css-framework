@@ -9,6 +9,8 @@ const Tooltip = (props) => {
     props.alwaysVisible !== undefined ? props.alwaysVisible : false;
   const loading =
     props.isLoading !== undefined ? props.isLoading : false;
+  const additionalClassNames =
+    props.additionalClassNames !== undefined ? props.additionalClassNames : "";
   const className = props.className || "";
   const [isLoading, setIsLoading] = useState(loading);
   
@@ -54,7 +56,7 @@ const Tooltip = (props) => {
           <div
             ref={setTooltipRef}
             {...getTooltipProps({
-              className: `tooltip-container ${isLoading ? 'is-loading' : ''}`,
+              className: `tooltip-container ${isLoading ? 'is-loading' : ''} ${additionalClassNames}`,
             })}
           >
             <div

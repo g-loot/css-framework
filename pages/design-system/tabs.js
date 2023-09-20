@@ -1,7 +1,34 @@
-import React from "react";
+import React, { useState, useContext } from "react";
+import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 
+const tabItems = [
+  {
+    label: "Home",
+  },
+  {
+    label: "Missions",
+    subItems: [
+      {
+        label: "Submenu 1",
+      },
+      {
+        label: "Submenu 2",
+      },
+      {
+        label: "Submenu 3",
+      },
+    ],
+  },
+  {
+    label: "Ladders",
+  },
+];
+
 const DSpage = () => {
+  const uiContext = useContext(UiContext);
+  const [activeTabItem, setActiveTabItem] = useState("Home");
+
   return (
     <>
       <h1 className="mb-2">Tabs</h1>
@@ -285,39 +312,38 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center justify-center">
                   <ul className="tabs">
-                    <li>
-                      <button className="is-active">
-                        <span>Home</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button>
-                        <span>Missions</span>
-                        <span className="icon icon-arrow-sm-down" />
-                      </button>
-                      <ul>
-                        <li>
-                          <a>
-                            <span>Submenu 1</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a>
-                            <span>Submenu 2</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a>
-                            <span>Submenu 3</span>
-                          </a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li>
-                      <button>
-                        <span>Ladders</span>
-                      </button>
-                    </li>
+                    {tabItems.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <button
+                          className={
+                            item.label === activeTabItem ? "is-active" : ""
+                          }
+                          onClick={() => setActiveTabItem(item.label)}
+                        >
+                          <span>{item.label}</span>
+                          {item.subItems && (
+                            <span className="icon icon-arrow-sm-down" />
+                          )}
+                        </button>
+                        {item.subItems && (
+                          <ul>
+                            {item.subItems.map((subItem, subItemIndex) => (
+                              <li key={subItemIndex}>
+                                <button
+                                  className={
+                                    subItem.label === activeTabItem
+                                      ? "is-active"
+                                      : ""
+                                  }
+                                >
+                                  <span>{subItem.label}</span>
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
                   </ul>
                 </div>
               </div>
@@ -445,20 +471,18 @@ const DSpage = () => {
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center">
-                <div className="bg-ui-600 rounded overflow-hidden">
-                  <ul className="tabs tabs-stretch">
-                    <li>
-                      <button className="is-active">
-                        <span>Ladders</span>
-                      </button>
-                    </li>
-                    <li>
-                      <button>
-                        <span>Missions</span>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
+                <ul className="tabs tabs-stretch">
+                  <li>
+                    <button className="is-active">
+                      <span>Ladders</span>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <span>Missions</span>
+                    </button>
+                  </li>
+                </ul>
               </div>
               <div className="flex-1">
                 <iframe
@@ -468,6 +492,165 @@ const DSpage = () => {
                   src="//jsfiddle.net/augustin_hiebel/mwjz8kro/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tab vertical */}
+      <div className="mb-12" id="tab-vertical">
+        <h2 className="h3 mb-3">Tab vertical</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+              <div className="flex-1 space-y-4 text-center">
+                <ul className="tabs tabs-vertical w-full">
+                  {tabItems.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      <button
+                        className={
+                          item.label === activeTabItem ? "is-active" : ""
+                        }
+                        onClick={() => setActiveTabItem(item.label)}
+                      >
+                        <span>{item.label}</span>
+                        {item.subItems && (
+                          <span className="icon icon-arrow-sm-down" />
+                        )}
+                      </button>
+                      {item.subItems && (
+                        <ul>
+                          {item.subItems.map((subItem, subItemIndex) => (
+                            <li key={subItemIndex}>
+                              <button
+                                className={
+                                  subItem.label === activeTabItem
+                                    ? "is-active"
+                                    : ""
+                                }
+                              >
+                                <span>{subItem.label}</span>
+                              </button>
+                            </li>
+                          ))}
+                        </ul>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/jdv6epzx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Responsive orientation */}
+      <div className="mb-12" id="responsive-orientation">
+        <h2 className="h3 mb-3">Responsive orientation</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+            <div className="flex-1 space-y-4">
+              <p className="text-ui-300 mb-6">
+                You can set an vertical tabs to become horizontalbased on the
+                screen size using the class names{" "}
+                <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("md:tabs-horizontal");
+                  }}
+                >
+                  .&#123;xx&#x7D;:tabs-horizontal
+                </code>{" "}
+                or{" "}
+                <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("md:tabs-vertical");
+                  }}
+                >
+                  .&#123;xx&#x7D;:tabs-vertical
+                </code>
+                .<br />
+                &#123;xx&#x7D; can be <code className="text-xs">xs</code>,{" "}
+                <code className="text-xs">sm</code>,{" "}
+                <code className="text-xs">md</code>,{" "}
+                <code className="text-xs">lg</code>,{" "}
+                <code className="text-xs">xl</code>.
+              </p>
+              <div className="w-full space-y-4">
+                <div className="text-ui-400 text-sm leading-tight">
+                  In this example, the vertical tabs will become horizontal
+                  above 768px (md).
+                </div>
+                <div className="flex-1">
+                  <ul className="tabs tabs-vertical sm:tabs-horizontal w-full">
+                    {tabItems.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <button
+                          className={
+                            item.label === activeTabItem ? "is-active" : ""
+                          }
+                          onClick={() => setActiveTabItem(item.label)}
+                        >
+                          <span>{item.label}</span>
+                          {item.subItems && (
+                            <span className="icon icon-arrow-sm-down" />
+                          )}
+                        </button>
+                        {item.subItems && (
+                          <ul>
+                            {item.subItems.map((subItem, subItemIndex) => (
+                              <li key={subItemIndex}>
+                                <button
+                                  className={
+                                    subItem.label === activeTabItem
+                                      ? "is-active"
+                                      : ""
+                                  }
+                                >
+                                  <span>{subItem.label}</span>
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/bgs54etu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
             </div>
           </div>
         </div>

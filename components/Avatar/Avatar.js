@@ -10,6 +10,7 @@ import AchievementIcon from "../Achievements/AchievementIcon";
 import ModalGiftTokens from "@/pages/prototype/clans/modal-gift-tokens";
 import ModalUnfollow from "@/pages/stryda/profile/modal-unfollow";
 import ButtonFeedback from "../Button/ButtonFeedback";
+import WidgetUser from "@/pages/stryda/components/WidgetUser";
 
 export default function Avatar(props) {
   const prototype = usePrototypeData();
@@ -145,8 +146,32 @@ export default function Avatar(props) {
                       isLoading={true}
                       className="p-0"
                       placement={props.tooltipPlacement}
+                      additionalClassNames="!overflow-visible !border-none"
                       tooltip={
-                        <div className={`w-72 flex flex-col`}>
+                        <div className="w-[21rem]">
+                          <WidgetUser id={selectedUser.id} isInTooltip={true} />
+                        </div>
+                      }
+                    >
+                      {AvatarInner}
+                    </Tooltip>
+                  ) : (
+                    AvatarInner
+                  )}
+                </>
+              )}
+            </>
+          ) : (
+            AvatarInner
+          )}
+        </>
+      )}
+    </>
+  );
+}
+{
+  /*
+<div className={`w-72 flex flex-col`}>
                           <div>
                             {selectedUser.shopItems?.profileBanner ? (
                               <>
@@ -382,21 +407,6 @@ export default function Avatar(props) {
                             )}
                           </div>
                         </div>
-                      }
-                    >
-                      {AvatarInner}
-                    </Tooltip>
-                  ) : (
-                    AvatarInner
-                  )}
-                </>
-              )}
-            </>
-          ) : (
-            AvatarInner
-          )}
-        </>
-      )}
-    </>
-  );
+
+*/
 }

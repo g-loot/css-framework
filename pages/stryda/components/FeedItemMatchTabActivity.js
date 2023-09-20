@@ -9,6 +9,7 @@ export default function FeedItemMatchTabActivity(props) {
   const prototype = usePrototypeData();
   const item = props.item;
   const match = props.match;
+  const detailedView = props.detailedView || false;
 
   return (
     <>

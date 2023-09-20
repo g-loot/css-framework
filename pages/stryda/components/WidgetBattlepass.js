@@ -24,18 +24,21 @@ export default function WidgetBattlepass(props) {
           </div>
           <div className="p-3 bg-ui-850 relative rounded-b flex gap-5 items-center justify-center">
             {/* <Battlepass id={0} size="battlepass-sm" /> */}
-            <div className="flex-1 flex flex-col -mb-1.5">
-              <div className="progressbar progressbar-tick w-full" style={{ "--percent": 70 }}>
-                <div />
-              </div>
-              <div className="flex gap-2 items-baseline justify-between leading-none text-sm">
-                <div className="flex gap-1.5 items-center justify-start">
-                  <span className="text-ui-300">350</span>
+            <div className="relative z-10 flex-1 flex flex-col -mt-1.5">
+              <div className="flex gap-2 items-baseline justify-between leading-none text-sm uppercase">
+                <div className="flex gap-1 items-center justify-start">
+                  <span className="text-main">350</span>
                   <span>/</span>
                   <span>400</span>
                   <span className="icon icon-xp-symbol text-3xl" />
                 </div>
-                <div className="text-ui-300">Tier 6</div>
+                <div>Tier 6</div>
+              </div>
+              <div
+                className="progressbar progressbar-tick w-full"
+                style={{ "--percent": 70 }}
+              >
+                <div />
               </div>
             </div>
             <div className="flex-none">
@@ -45,11 +48,11 @@ export default function WidgetBattlepass(props) {
                 alt=""
               />
             </div>
-          <img
-            src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg"
-            alt=""
-            className="absolute z-0 w-full h-full inset-0 mix-blend-lighten pointer-events-none object-cover object-center rounded-b"
-          />
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg"
+              alt=""
+              className="absolute z-0 w-full h-full inset-0 mix-blend-lighten pointer-events-none object-cover object-center rounded-b"
+            />
           </div>
         </div>
       </Link>

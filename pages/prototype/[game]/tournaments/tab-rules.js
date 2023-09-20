@@ -1,6 +1,4 @@
 import Accordion from "@/components/Accordion/Accordion";
-import Link from "next/link";
-import Sticky from "react-stickynode";
 import { useRouter } from "next/router";
 
 const Rules = [
@@ -240,9 +238,7 @@ const Rules = [
         content: [
           {
             type: "ul",
-            text: [
-              "Substitutions are forbidden.",
-            ],
+            text: ["Substitutions are forbidden."],
           },
         ],
       },
@@ -288,9 +284,7 @@ const Rules = [
         content: [
           {
             type: "ul",
-            text: [
-              "Substitutions are forbidden.",
-            ],
+            text: ["Substitutions are forbidden."],
           },
         ],
       },
@@ -317,7 +311,7 @@ const Rules = [
           },
           {
             type: "p",
-            text: "How to find your replays: press “Windows Key + R” and type “%localappdata%\TslGame\Saved\Demos”.",
+            text: "How to find your replays: press “Windows Key + R” and type “%localappdata%TslGameSavedDemos”.",
           },
         ],
       },
@@ -362,70 +356,66 @@ export default function TabTournamentsRules() {
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="flex-1 xl:flex-none xl:w-64 space-y-4">
-          <Sticky
-            top={0}
-            bottomBoundary={1200}
-          >
-            <div className="">
-              <h2 className="h6 mb-2 px-4 sm:px-0">Table of content</h2>
-              <div className="max-h-screen overflow-y-auto surface sm:rounded-lg">
-                <ul className="menu menu-secondary">
-                  {Rules.map((rule, ruleIndex) => (
-                    <>
-                      {!rule.sections?.length && (
-                        <li key={ruleIndex}>
-                          <a href={`#${rule.slug}`}>
-                            <span className="text-base uppercase">
-                              {rule.title}
-                            </span>
-                          </a>
-                        </li>
-                      )}
-                      {rule.sections?.length && (
-                        <div className="accordion">
-                          <Accordion
-                            header={
-                              <>
-                                <div className="item">
-                                  <div className="item-body">
-                                    <div className="item-title uppercase">
-                                      {rule.title}
-                                    </div>
-                                  </div>
-                                  <div className="item-actions flex items-center gap-2">
-                                    <div>
-                                      <span className="icon icon-24 icon-arrow-sm-down" />
-                                    </div>
+          <div className="">
+            <h2 className="h6 mb-2 px-4 sm:px-0">Table of content</h2>
+            <div className="max-h-screen overflow-y-auto surface sm:rounded-lg">
+              <ul className="menu menu-secondary">
+                {Rules.map((rule, ruleIndex) => (
+                  <>
+                    {!rule.sections?.length && (
+                      <li key={ruleIndex}>
+                        <a href={`#${rule.slug}`}>
+                          <span className="text-base uppercase">
+                            {rule.title}
+                          </span>
+                        </a>
+                      </li>
+                    )}
+                    {rule.sections?.length && (
+                      <div className="accordion">
+                        <Accordion
+                          header={
+                            <>
+                              <div className="item">
+                                <div className="item-body">
+                                  <div className="item-title uppercase">
+                                    {rule.title}
                                   </div>
                                 </div>
-                              </>
-                            }
-                          >
-                            <ul className="menu menu-secondary">
-                              {rule.sections?.map((section, sectionItem) => (
-                                <li key={sectionItem}>
-                                  <a href={`#${rule.slug}-${section.slug}`}>
-                                    <span className="pl-4">
-                                      {section.title}
-                                    </span>
-                                  </a>
-                                </li>
-                              ))}
-                            </ul>
-                          </Accordion>
-                        </div>
-                      )}
-                    </>
-                  ))}
-                </ul>
-              </div>
+                                <div className="item-actions flex items-center gap-2">
+                                  <div>
+                                    <span className="icon icon-24 icon-arrow-sm-down" />
+                                  </div>
+                                </div>
+                              </div>
+                            </>
+                          }
+                        >
+                          <ul className="menu menu-secondary">
+                            {rule.sections?.map((section, sectionItem) => (
+                              <li key={sectionItem}>
+                                <a href={`#${rule.slug}-${section.slug}`}>
+                                  <span className="pl-4">{section.title}</span>
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </Accordion>
+                      </div>
+                    )}
+                  </>
+                ))}
+              </ul>
             </div>
-          </Sticky>
+          </div>
         </div>
         <div className="flex-1 space-y-4">
           <div className="surface surface-dimmed p-8 sm:rounded-lg max-w-md mx-auto leading-loose">
             {Rules.map((rule, ruleIndex) => (
-              <div key={ruleIndex} className="space-y-6 mb-12 pb-12 border-b border-ui-700">
+              <div
+                key={ruleIndex}
+                className="space-y-6 mb-12 pb-12 border-b border-ui-700"
+              >
                 <h2 key={ruleIndex} id={rule.slug} className="h3">
                   {rule.title}
                 </h2>
@@ -444,7 +434,8 @@ export default function TabTournamentsRules() {
                     {content.type === "ul" && (
                       <ul className=" list-outside pl-8 list-disc space-y-4 ">
                         {content.text.map((listItem, listItemIndex) => (
-                          <li key={listItemIndex}
+                          <li
+                            key={listItemIndex}
                             dangerouslySetInnerHTML={{
                               __html: listItem,
                             }}

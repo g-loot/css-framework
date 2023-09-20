@@ -9,7 +9,7 @@ const Line = ({ game, mission }) => {
   const prototype = usePrototypeData();
   return (
     <li className="p-1 flex items-center gap-1">
-      <GameIcon game={game.id} size="text-lg" />
+      <GameIcon game={game} size="text-lg" />
       <div className="card-category">
         <div
           className={`rarity ${
@@ -31,11 +31,14 @@ const Line = ({ game, mission }) => {
         <span>{mission.name}</span>
       </div>
       <div className="text-sm text-ui-300">
-        {mission.current} / {mission.target}
+        {mission.current === mission.target ? (
+          <span className="icon icon-present text-main mr-1" />
+        ) : (
+          <>
+            {mission.current} / {mission.target}
+          </>
+        )}
       </div>
-      {/* {!mission.hasClaimed && mission.target === mission.current && (
-        <span className="icon icon-present text-main mr-2" />
-      )} */}
     </li>
   );
 };
@@ -44,6 +47,41 @@ export default function WidgetMissions(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
+  const length = 5;
+  const [missions, setMissions] = useState([]);
+
+  useEffect(() => {
+    const allMissions = prototype.games
+      .filter((game) => game.isFavorite)
+      .flatMap((game) =>
+        game.missions
+          .filter((mission) => mission.isVisible)
+          .map((mission) => ({
+            ...mission,
+            gameID: game.id,
+          }))
+      );
+
+    const sortedData = [...allMissions];
+    sortedData.sort(
+      (a, b) => (b.current * 100) / b.target - (a.current * 100) / a.target
+    );
+    setMissions(sortedData);
+  }, [prototype]);
+
+  const [maxLinesLoader, setMaxLinesLoader] = useState(false);
+  const [maxLines, setMaxLines] = useState(length);
+
+  const handleMoreLines = () => {
+    setMaxLinesLoader(true);
+    const interval = setTimeout(() => {
+      setMaxLinesLoader(false);
+      setMaxLines(maxLines + length);
+    }, 500);
+    return () => {
+      clearTimeout(interval);
+    };
+  };
 
   return (
     <>
@@ -62,23 +100,23 @@ export default function WidgetMissions(props) {
         </div>
         <div className="bg-ui-850">
           <ul className="p-1">
-            {prototype.games
-              .filter((i) => i.isFavorite)
-              .map((game, gameIndex) => (
-                <Fragment key={gameIndex}>
-                  {game.missions
-                    ?.filter((i) => i.isVisible && i.current === i.target)
-                    .map((mission, missionIndex) => (
-                      <Line key={missionIndex} mission={mission} game={game} />
-                    ))}
-                  {game.missions
-                    ?.filter((i) => i.isVisible && i.current != i.target)
-                    .map((mission, missionIndex) => (
-                      <Line key={missionIndex} mission={mission} game={game} />
-                    ))}
-                </Fragment>
-              ))}
+            {missions.slice(0, maxLines).map((item, itemIndex) => (
+              <Line key={itemIndex} mission={item} game={item.gameID} />
+            ))}
           </ul>
+          {missions.length > maxLines && (
+            <div className="px-2 pb-2 text-center">
+              <button
+                type="button"
+                className={`button button-ghost button-sm rounded w-full ${
+                  maxLinesLoader ? "is-loading" : ""
+                }`}
+                onClick={() => handleMoreLines()}
+              >
+                <span>View more</span>
+              </button>
+            </div>
+          )}
         </div>
         <div className="border-t border-t-ui-700 p-2 space-y-2 text-center">
           <div className="text-sm text-ui-300">

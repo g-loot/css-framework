@@ -435,7 +435,7 @@
           "name": "hide"
         },
         {
-          "tags": "navigation,circle,ui,interface,dot,list,gallery,menu,options,settings,circles,dots,more",
+          "tags": "navigation,circle,ui,interface,dot,list,gallery,menu,options,settings,circles,dots,more,contextual,menu,horizontal",
           "name": "dots"
         },
         {
@@ -2023,7 +2023,7 @@
           "name": "shop"
         },
         {
-          "tags": "navigation,circle,dots,ui,interface,list,gallery,menu,option,settings,dot,more",
+          "tags": "navigation,circle,ui,interface,dot,list,gallery,menu,options,settings,circles,dots,more,contextual,menu,vertical",
           "name": "dots-vertical"
         },
         {

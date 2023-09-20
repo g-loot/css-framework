@@ -5,6 +5,8 @@ import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const delay = 4000;
+  const uiContext = useContext(UiContext);
   const [buttonFeedbackMessage1, setButtonFeedbackMessage1] = useState("");
   const [buttonFeedbackMessage2, setButtonFeedbackMessage2] = useState("");
   const [buttonFeedbackMessage3, setButtonFeedbackMessage3] = useState("");
@@ -22,8 +24,6 @@ const DSpage = () => {
   const [buttonFeedbackMessage15, setButtonFeedbackMessage15] = useState("");
   const [buttonFeedbackMessage16, setButtonFeedbackMessage16]= useState("");
   const [buttonFeedbackMessage17, setButtonFeedbackMessage17]= useState("");
-  const delay = 4000;
-  const uiContext = useContext(UiContext);
 
   function buttonFeedback1(message) {
     setButtonFeedbackMessage1(message);
@@ -1689,52 +1689,50 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Responsive sizes</h2>
 
         <div className="surface rounded-lg p-4">
-          <div className="">
-            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
-              <div className="flex-1 space-y-4">
-                <p className="text-ui-300 mb-6">
-                  You can change the size of the button based on the screen size
-                  using the following class name:{" "}
-                  <code
-                    className="interactive text-xs"
-                    onClick={() => {
-                      uiContext.openToastr({
-                        size: "small",
-                        text: "class name copied to your clipboard",
-                        color: "green",
-                        autoDelete: true,
-                        autoDeleteDelay: 2500,
-                      });
-                      navigator.clipboard.writeText("sm:button-lg");
-                    }}
-                  >
-                    .&#123;xx&#x7D;:button-&#123;xx&#x7D;
-                  </code>.<br />
-                  &#123;xx&#x7D; can be <code className="text-xs">xs</code>, <code className="text-xs">sm</code>,{" "}
-                  <code className="text-xs">md</code>, <code className="text-xs">lg</code>, <code className="text-xs">xl</code>.
-                </p>
-                <div className="w-full flex gap-4 items-center">
-                  <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
-                    In this example, the small button will become medium above
-                    768px (md) and large above 1024px (lg).
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex gap-4 justify-start">
-                      <div className="button button-sm md:button-md lg:button-lg">
-                        <span>I change size</span>
-                      </div>
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4">
+              <p className="text-ui-300 mb-6">
+                You can change the size of the button based on the screen size
+                using the following class name:{" "}
+                <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("sm:button-lg");
+                  }}
+                >
+                  .&#123;xx&#x7D;:button-&#123;xx&#x7D;
+                </code>.<br />
+                &#123;xx&#x7D; can be <code className="text-xs">xs</code>, <code className="text-xs">sm</code>,{" "}
+                <code className="text-xs">md</code>, <code className="text-xs">lg</code>, <code className="text-xs">xl</code>.
+              </p>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                  In this example, the small button will become medium above
+                  768px (md) and large above 1024px (lg).
+                </div>
+                <div className="flex-1">
+                  <div className="flex gap-4 justify-start">
+                    <div className="button button-sm md:button-md lg:button-lg">
+                      <span>I change size</span>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="flex-1">
-                <iframe
-                  className="rounded"
-                  width="100%"
-                  height="300"
-                  src="//jsfiddle.net/augustin_hiebel/b8cvks63/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
-                ></iframe>
-              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/b8cvks63/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
             </div>
           </div>
         </div>

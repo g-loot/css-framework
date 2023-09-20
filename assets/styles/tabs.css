@@ -2,248 +2,250 @@
 /* TABS */
 /*----------------------------*/
 
-.tabs {
-  @apply
-  flex
-  flex-nowrap
-  items-stretch
-  whitespace-nowrap
-  relative
-  pt-0.5
-  ;
-
-  :where(a, button, .button) {
+@define-mixin tabs {
+  & {
     @apply
-    relative
+    w-auto
     flex
-    justify-center
-    gap-2 
-    text-ui-300
-    cursor-pointer
-    select-none
-    transition
-    duration-100
-    ease-in-out
-    outline-offset-[-1px]
-    focus-visible:rounded
-    focus-visible:outline
-    focus-visible:outline-1
-    focus-visible:outline-main
+    flex-row
+    flex-nowrap
+    items-stretch
+    whitespace-nowrap
+    relative
+    text-left
+    divide-y-0
+    shadow-none
     ;
-    > span {
+
+    :where(a, button, .button) {
       @apply
-      block
       relative
-      z-10
-      ;
-    }
-    > span,
-    > div {
-      @apply
+      flex
+      justify-center
+      gap-2 
+      text-ui-300
+      cursor-pointer
+      select-none
       transition
-      ease-linear
-      duration-[0s]
+      duration-100
+      ease-in-out
+      outline-offset-[-1px]
+      focus-visible:rounded
+      focus-visible:outline
+      focus-visible:outline-1
+      focus-visible:outline-main
       ;
+      .icon-arrow-sm-down {
+        @apply
+        rotate-0
+        ;
+      }
+      > span {
+        @apply
+        block
+        relative
+        z-10
+        ;
+      }
+      > span,
+      > div {
+        @apply
+        transition
+        ease-linear
+        duration-[0s]
+        ;
+      }
+      &::before,
+      &::after {
+        @apply
+        transition
+        duration-200
+        ease-[cubic-bezier(0.7,0,0.1,1)]
+        ;
+      }
+
+      &::after {
+        @apply
+        content-['']
+        absolute
+        z-0
+        block
+        h-1
+        w-full
+        top-auto
+        bottom-0
+        inset-x-0
+        bg-main
+        opacity-0
+        scale-x-0
+        ;
+      }
+
+      &:hover,
+      &:active {
+        @apply
+        text-mono-100
+        ;
+      }
+
+      &.is-active {
+        @apply
+        text-main
+        ;
+        .icon-arrow-sm-down {
+          @apply
+          rotate-0
+          ;
+        }
+      }
+
+      &.is-active,
+      &:active,
+      &:hover {
+        &::after {
+          @apply
+          opacity-100
+          scale-x-100
+          ;
+        }
+      }
     }
-    &::before,
-    &::after {
+
+    > li {
       @apply
+      flex
+      justify-center
+      items-end
+      relative
       transition
-      duration-200
-      ease-[cubic-bezier(0.7,0,0.1,1)]
+      duration-300
+      ease-in-out
+      leading-none
+      text-center
       ;
+
+      &.is-disabled {
+        @apply
+        opacity-50
+        pointer-events-none
+        ;
+      }
+
+      > :where(a, button, .button) {
+        @apply
+        px-4
+        pb-4
+        pt-3
+        ;
+      }
+
+      ul {
+        @apply
+        flex
+        flex-col
+        items-stretch
+        ;
+      }
+      > ul {
+        @apply
+        absolute
+        block
+        text-base
+        transition-all
+        duration-100
+        origin-top
+        ease-[cubic-bezier(.8,0,.3,1)]
+        pointer-events-none
+        scale-y-75
+        opacity-0
+        w-full
+        rounded-lg
+        bg-ui-600
+        border
+        border-ui-500
+        shadow-xl
+        overflow-hidden
+        top-full
+        ;
+        li {
+          @apply
+          w-full
+          whitespace-nowrap
+          ;
+          > :where(a, button, .button) {
+            @apply
+            px-4
+            py-3
+            ;
+            &::after {
+              @apply
+              h-full
+              bg-ui-400/10
+              transition-all
+              duration-200
+              ease-[cubic-bezier(.7,0,.3,1)]
+              opacity-0
+              scale-x-100
+              scale-y-0
+              translate-y-2
+            }
+            &.is-active,
+            &:hover {
+              &::after {
+                @apply
+                opacity-100
+                scale-y-100
+                translate-y-0
+                duration-75
+              }
+            }
+            &.is-active {
+              @apply
+              pointer-events-none
+              ;
+              &::after {
+                @apply
+                bg-ui-400/25
+              }
+            }
+            &:hover:not(.is-active),
+            &:active {
+              @apply
+              text-mono-100
+              ;
+            }
+          }
+        }
+      }
+      &:hover {
+        > ul {
+          @apply
+          pointer-events-auto
+          scale-y-100
+          opacity-100
+          ;
+        }
+      }
     }
 
     &::after {
       @apply
       content-['']
-      absolute
-      z-0
-      block
-      h-1
+      h-px
       w-full
+      bg-ui-800
+      absolute
       bottom-0
       inset-x-0
-      bg-main
-      opacity-0
-      scale-x-0
+      hidden
       ;
     }
-
-    &:hover,
-    &:active {
-      @apply
-      text-mono-100
-      ;
-    }
-
-    &.is-active {
-      @apply
-      text-main
-      ;
-    }
-
-    &.is-active,
-    &:active,
-    &:hover {
-      &::after {
-        @apply
-        opacity-100
-        scale-x-100
-        ;
-      }
-    }
-  }
-
-  > li {
-    @apply
-    flex
-    justify-center
-    items-end
-    relative
-    transition
-    duration-300
-    ease-in-out
-    leading-none
-    text-center
-    ;
-
-    &.is-disabled {
-      @apply
-      opacity-50
-      pointer-events-none
-      ;
-    }
-
-    > :where(a, button, .button) {
-      &:not([class*="pt-"]) {
-        @apply
-        pt-3
-        ;
-      }
-      &:not([class*="pb-"]) {
-        @apply
-        pb-4
-        ;
-      }
-      &:not([class*="px-"]) {
-        @apply
-        px-4
-        ;
-      }
-    }
-
-    ul {
-      @apply
-      flex
-      flex-col
-      items-stretch
-      ;
-    }
-    > ul {
-      @apply
-      absolute
-      transition-all
-      duration-100
-      origin-top
-      ease-[cubic-bezier(.8,0,.3,1)]
-      pointer-events-none
-      scale-y-75
-      opacity-0
-      w-full
-      rounded-lg
-      bg-ui-600
-      border
-      border-ui-500
-      shadow-xl
-      overflow-hidden
-      top-full
-      ;
-      li {
-        @apply
-        w-full
-        whitespace-nowrap
-        ;
-        > :where(a, button, .button) {
-          @apply
-          px-4
-          py-3
-          ;
-          &::after {
-            @apply
-            h-full
-            bg-ui-400/10
-            transition-all
-            duration-200
-            ease-[cubic-bezier(.7,0,.3,1)]
-            opacity-0
-            scale-x-100
-            scale-y-0
-            translate-y-2
-          }
-          &.is-active,
-          &:hover {
-            &::after {
-              @apply
-              opacity-100
-              scale-y-100
-              translate-y-0
-              duration-75
-            }
-          }
-          &.is-active {
-            @apply
-            pointer-events-none
-            ;
-          }
-          &:hover:not(.is-active),
-          &:active {
-            @apply
-            text-mono-100
-            ;
-          }
-          &.is-active {
-            &::after {
-              @apply
-              bg-ui-400/25
-            }
-          }
-        }
-      }
-    }
-    &:hover {
-      > ul {
-        @apply
-        pointer-events-auto
-        scale-y-100
-        opacity-100
-        ;
-      }
-    }
-  }
-  &::after {
-    @apply
-    content-['']
-    h-px
-    w-full
-    bg-ui-800
-    absolute
-    bottom-0
-    inset-x-0
-    hidden
-    ;
   }
 }
 
-/*
-.tabs:not(.tabs-secondary) {
-  :where(a, button, .button):not([class*=leading-]) {
-    @apply
-    leading-none
-    ;
-  }
+.tabs {
+  @mixin tabs;
 }
-*/
 
 .tabs:not(.tabs-rank):not(.tabs-tertiary) {
   li {
@@ -690,7 +692,6 @@
   }
 }
 
-
 /* Tab button */
 
 .tab {
@@ -856,6 +857,175 @@
       @apply
       w-full
       ;
+    }
+  }
+}
+
+/* tab vertical */
+
+@define-mixin tabs-vertical {
+  & {
+    @apply
+    w-full
+    inline-flex
+    flex-col
+    items-stretch
+    divide-y
+    divide-ui-300/10
+    shadow-[0_0_0_1px_rgba(var(--color-ui-300)/10%)]
+    ;
+
+    > li {
+      @apply
+      flex-col
+      justify-start
+      ;
+      > ul {
+        @apply
+        hidden
+        relative
+        scale-100
+        top-auto
+        rounded-none
+        border-none
+        bg-ui-800
+        shadow-none
+        opacity-100
+        ;
+        > li {
+          :where(a, button, .button) {
+            @apply
+            text-sm
+            pl-8
+            ;
+          }
+        }
+      }
+    }
+
+    :where(a, button, .button) {
+      @apply
+      w-full
+      text-left
+      justify-between
+      pt-3.5
+      pb-3.5
+      ;
+      .icon-arrow-sm-down {
+        @apply
+        transition-transform
+        duration-100
+        -rotate-90
+        ;
+      }
+      &::before {
+        @apply 
+        absolute
+        z-10
+        content-['']
+        inset-0
+        bg-ui-300
+        transition-all
+        duration-200
+        ease-[cubic-bezier(.7,0,.3,1)]
+        opacity-0
+        scale-y-0
+        translate-y-2
+        ;
+      }
+      &::after {
+        @apply
+        h-full
+        w-1
+        inset-y-0
+        inset-x-auto
+        scale-x-100
+        scale-y-0
+        left-0
+        ;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &.is-active,
+      &:active {
+
+        &::before {
+          @apply
+          opacity-5
+          scale-y-100
+          translate-y-0
+          duration-75
+          ;
+        }
+
+        &::after {
+          @apply
+          scale-y-100
+          ;
+        }
+      }
+
+      &.is-active {
+        + ul {
+          @apply
+          block
+          ;
+        }
+        .icon-arrow-sm-down {
+          @apply
+          rotate-0
+          ;
+        }
+      }
+    }
+  }
+}
+
+.tabs.tabs-vertical {
+  @mixin tabs-vertical;
+}
+
+/* responsive card tabs horizontal  */
+
+@media only screen and (min-width: 640px) {
+  .tabs {
+    &.sm\:tabs-horizontal {
+      @mixin tabs;
+    }
+    &.sm\:tabs-vertical {
+      @mixin tabs-vertical;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tabs {
+    &.md\:tabs-horizontal {
+      @mixin tabs;
+    }
+    &.md\:tabs-vertical {
+      @mixin tabs-vertical;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tabs {
+    &.lg\:tabs-horizontal {
+      @mixin tabs;
+    }
+    &.lg\:tabs-vertical {
+      @mixin tabs-vertical;
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .tabs {
+    &.xl\:tabs-horizontal {
+      @mixin tabs;
+    }
+    &.xl\:tabs-vertical {
+      @mixin tabs-vertical;
     }
   }
 }

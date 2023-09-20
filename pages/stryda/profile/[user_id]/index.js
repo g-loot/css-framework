@@ -225,7 +225,7 @@ export default function Profile() {
             <section className="min-h-screen container sm:px-4 flex flex-col mx-4 sm:mx-0 mt-8">
               <div className="surface is-loading rounded w-full aspect-banner flex-none" />
               <div className="container flex flex-col md:flex-row items-stretch gap-8 py-8 flex-1">
-                <div className="w-80 2xl:w-96 space-y-4 hidden md:block surface is-loading rounded" />
+                <div className="w-[21rem] space-y-4 hidden md:block surface is-loading rounded" />
                 <div className="flex-1 surface is-loading rounded w-full" />
               </div>
             </section>
@@ -388,7 +388,7 @@ export default function Profile() {
                 </div>
               </div>
               <div className="relative z-10 min-h-screen container flex flex-col md:flex-row gap-8 py-4">
-                <div className="w-80 2xl:w-96 space-y-4 hidden md:block">
+                <div className="w-[21rem] space-y-4 hidden md:block">
                   <div className="-mt-28 xl:-mt-44 shadow-xl">
                     <WidgetUser id={user_id} />
                   </div>

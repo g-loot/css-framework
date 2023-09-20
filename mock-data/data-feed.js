@@ -46,6 +46,7 @@ export const dataFeedItems = [
     text: "Introducing: Big Clan Battle for League of Legends! Compete with your fellow clan members in a month-long, clan-only Ladder. In Big Clan Battle, every clan can submit 20 individual results to decide their total Ladder score and take home the biggest prize pool yet!",
     image: "https://res.cloudinary.com/gloot/image/upload/v1694459768/Stryda/demo/nordic-clash-ad.webp",
     url: "/stryda/clanevents/valorant/0",
+    buttonLabel: "Learn more",
     social: {
       views: [8],
       likes: [],

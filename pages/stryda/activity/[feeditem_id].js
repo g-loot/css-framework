@@ -35,13 +35,13 @@ export default function Home() {
       <Structure title="Activity">
         <Loader
           loader={
-            <section className="min-h-screen container max-w-md py-4 overflow-hidden space-y-4">
+            <section className="min-h-screen container max-w-lg py-4 overflow-hidden space-y-4">
               <div className="rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           {selectedFeedItem && (
-            <section className="min-h-screen container max-w-md py-4 overflow-hidden space-y-4">
+            <section className="min-h-screen container max-w-lg py-4 overflow-hidden space-y-4">
               <FeedItemDetails item={selectedFeedItem} />
             </section>
           )}

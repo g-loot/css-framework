@@ -86,6 +86,14 @@ export default function FeedItemComments(props) {
   const [commentValue, setCommentValue] = useState("");
 
   useEffect(() => {
+    if (isExpanded) {
+      setCommentOn(true);
+    } else {
+      setCommentOn(false);
+    }
+  }, [isExpanded]);
+
+  useEffect(() => {
     if (item.social && item.social?.likes?.includes(1)) {
       setLikeOn(true);
     } else {
