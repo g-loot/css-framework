@@ -936,6 +936,34 @@ const DSpage = () => {
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Main
+                  </div>
+                  <div className="flex-1 flex items-center gap-2">
+                    <button
+                      type="button"
+                      className="chip chip-status chip-main"
+                    >
+                      <span className="icon icon-warning-sign" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-sm chip-status chip-main"
+                    >
+                      <span className="icon icon-warning-sign" />
+                      <span>Label</span>
+                    </button>
+                    <button
+                      type="button"
+                      className="chip chip-xs chip-status chip-main"
+                    >
+                      <span className="icon icon-warning-sign" />
+                      <span>Label</span>
+                    </button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Attention
                   </div>
                   <div className="flex-1 flex items-center gap-2">

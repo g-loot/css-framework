@@ -4,6 +4,7 @@ import FeedItemLive from "./FeedItemLive";
 import FeedItemMatch from "./FeedItemMatch";
 import FeedItemPost from "./FeedItemPost";
 import { usePrototypeData } from "@/contexts/prototype";
+import FeedItemTrophy from "./FeedItemTrophy";
 
 export default function FeedItem(props) {
   const prototype = usePrototypeData();
@@ -27,6 +28,9 @@ export default function FeedItem(props) {
       )}
       {item && item.type === "live" && (
         <FeedItemLive item={item} autoPlay={autoPlay} />
+      )}
+      {item && item.type === "trophy" && (
+        <FeedItemTrophy item={item} />
       )}
       {item && item.type === "post" && <FeedItemPost item={item} />}
     </>

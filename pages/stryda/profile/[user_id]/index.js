@@ -413,7 +413,7 @@ export default function Profile() {
                               <span>
                                 {item.label}
                                 {item.number && (
-                                  <>{" "}<span className="text-sm">{item.number}</span></>
+                                  <>{" "}<span className="text-sm">({item.number})</span></>
                                 )}
                               </span>
                             </button>

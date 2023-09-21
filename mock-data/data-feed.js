@@ -208,11 +208,11 @@ export const dataFeedItems = [
   },
   {
     id: 11,
-    type: "achievement",
+    type: "trophy",
     author: 8,
-    achievementID: 2,
-    title: "Cloud III Wireless",
-    text: "Cloud III Wireless brings you 120 hours of uninterrupted comfy gaming 😊",
+    achievementID: 11,
+    achievementLevel: 4,
+    text: "[x] just mastered an achievement!",
     social: {
       views: [1,2,3,4,5,6,7,8,9,10],
       likes: [1,2],

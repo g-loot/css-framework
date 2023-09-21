@@ -203,9 +203,9 @@
   }
   &.chip-xs {
     @apply
-    min-h-[24px]
-    gap-1
-    px-1
+    min-h-[20px]
+    gap-0.5
+    px-0.5
     text-xs
     ;
     > * {
@@ -1071,6 +1071,17 @@
       @apply
       bg-ui-300
       ;
+    }
+    &.chip-main {
+      @apply
+      text-interaction-500
+      bg-interaction-700/10
+      ;
+      > .badge {
+        @apply
+        bg-interaction-500
+        ;
+      }
     }
     &.chip-attention {
       @apply

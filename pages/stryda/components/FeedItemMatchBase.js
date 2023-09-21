@@ -76,6 +76,11 @@ export default function FeedItemMatchBase(props) {
               </div>
               <div className="text-xs text-ui-300 px-1 whitespace-nowrap flex items-center gap-1">
                 <span>{match.meta.dateTimeEnded}</span>
+                {match.achievements?.length > 0 && (
+                  <div className="chip chip-status chip-main chip-xs">
+                    <span>Ladder match</span>
+                  </div>
+                )}
               </div>
             </div>
             <div className="flex-none self-start">
