@@ -52,8 +52,8 @@ export default function WidgetUser(props) {
   return (
     <>
       {selectedUser && (
-        <div className={`surface rounded text-center ${isInTooltip ? 'surface-ui-600' : ''}`}>
-          <div className="relative">
+        <div className={`surface relative rounded text-center ${isInTooltip ? 'surface-ui-600' : ''}`}>
+          <div className="relative z-10">
             <Link
               href={`/stryda/profile/${
                 selectedUser.id
@@ -86,13 +86,17 @@ export default function WidgetUser(props) {
               </>
             )}
           </div>
-          <div className="p-2">
+          <div className="relative z-10 p-2 pt-4">
             <Link
               href={`/stryda/profile/${
                 selectedUser.id
               }${prototype.getURLparams()}`}
             >
-              <div className="flex items-center justify-center gap-2 mt-4">
+              <>
+              <div className="mt-4 w-full text-xs uppercase text-achievement-level-2">
+                {prototype.getAchievementitemByID(1, 4).name}
+              </div>
+              <div className="flex items-center justify-center gap-2">
                 <h2
                   className={`text-xl leading-tight truncate interactive ${
                     selectedUser.isPremium ? "text-premium-500" : ""
@@ -122,16 +126,80 @@ export default function WidgetUser(props) {
                   </div>
                 )}
               </div>
+              {selectedUser?.isOnline ? (
+                  <div className="flex justify-center mt-0.5 mb-1">
+                    <div className="chip chip-status chip-success chip-xs">
+                      <span className="badge" />
+                      <span>online</span>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="flex justify-center mt-0.5 mb-1">
+                    <div className="chip chip-status chip-xs">
+                      <span className="badge" />
+                      <span>last seen 3 days ago</span>
+                    </div>
+                  </div>
+                )}
+                </>
             </Link>
-            <div className="my-4 text-center space-y-2">
-              <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center">
+            {prototype.getUserMatches(selectedUser.id).length > 0 ? (
+                <>
+                  {prototype
+                    .getUserMatches(selectedUser.id)
+                    .filter((m) => m.meta?.media)
+                    .slice(0, 1)
+                    .map((item, itemIndex) => (
+                      <Link
+                        key={itemIndex}
+                        href={`/stryda/profile/${
+                          selectedUser.id
+                        }?tab=highlights${prototype.getURLparams("&")}`}
+                      >
+                        <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
+                          <div className="w-32 text-0">
+                            <Video
+                              item={item}
+                              hasMeta={false}
+                              size="xs"
+                            />
+                          </div>
+                          <div className="leading-tight">
+                            <div className="text-sm text-ui-300">Latest highlight</div>
+                            <div className="text-lg text-ui-100">
+                              {selectedUser.stats.highlightViews > 0 ? (
+                                Math.round(
+                                  selectedUser.stats.highlightViews / 2
+                                )
+                              ) : (
+                                <>--</>
+                              )}{" "}
+                              views
+                            </div>
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                </>
+              ) : (
+                <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
+                  <div className="w-32 text-0 aspect-video rounded-2 bg-ui-600 grid place-content-center">
+                    <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
+                  </div>
+                  <div className="leading-tight">
+                    <div className="text-sm text-ui-300">Latest highlight</div>
+                    <div>No highlights published yet</div>
+                  </div>
+                </div>
+              )}
+              <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4">
                 <li>
                   <Link
                     href={`/stryda/profile/${
                       selectedUser.id
                     }?tab=followers${prototype.getURLparams("&")}`}
                   >
-                    <button type="button" className="interactive px-2">
+                    <button type="button" className="interactive px-2 leading-tight">
                       <div className="text-sm text-ui-300">Followers</div>
                       <div className="text-lg text-ui-100">
                         {selectedUser.stats.followers > 0 ? (
@@ -149,73 +217,10 @@ export default function WidgetUser(props) {
                       selectedUser.id
                     }?tab=followers${prototype.getURLparams("&")}`}
                   >
-                    <button type="button" className="interactive px-2">
-                      <div className="text-sm text-ui-300">Following</div>
+                    <button type="button" className="interactive px-2 leading-tight">
+                      <div className="text-sm text-ui-300">Highlights</div>
                       <div className="text-lg text-ui-100">
-                        {selectedUser.stats.followings > 0 ? (
-                          selectedUser.stats.followings
-                        ) : (
-                          <>--</>
-                        )}
-                      </div>
-                    </button>
-                  </Link>
-                </li>
-              </ul>
-              <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center">
-                <li>
-                  <Link
-                    href={`/stryda/profile/${
-                      selectedUser.id
-                    }?tab=stats${prototype.getURLparams("&")}`}
-                  >
-                    <button type="button" className="interactive px-2">
-                      <div className="text-sm text-ui-300">Top Games</div>
-                      <div className="relative">
-                        <div className="flex items-center justify-center gap-0.5">
-                          <GameIcon game={1} size="text-base" />
-                          <GameIcon game={7} size="text-xs" />
-                        </div>
-                      </div>
-                    </button>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={`/stryda/profile/${
-                      selectedUser.id
-                    }?tab=achievements${prototype.getURLparams("&")}`}
-                  >
-                    <button type="button" className="interactive px-2">
-                      <div className="text-sm text-ui-300">Achievements</div>
-                      <div className="flex items-center justify-center gap-1 text-lg text-ui-100">
-                        <div className="w-8 h-full flex-none -my-4 achievement-level-4">
-                          <AchievementFrame
-                            url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl5-animated.svg`}
-                          />
-                          <AchievementIcon
-                            url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${
-                              prototype.getAchievementitemByID(1, 4).icon
-                            }.svg`}
-                          />
-                        </div>
-                        <span>+ 20</span>
-                      </div>
-                    </button>
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href={`/stryda/profile/${
-                      selectedUser.id
-                    }?tab=highlights${prototype.getURLparams("&")}`}
-                  >
-                    <button type="button" className="interactive px-2">
-                      <div className="text-sm text-ui-300">
-                        Highlights views
-                      </div>
-                      <div className="text-lg text-ui-100">
-                        {selectedUser.stats.highlightViews > 0 ? (
+                      {selectedUser.stats.highlightViews > 0 ? (
                           selectedUser.stats.highlightViews
                         ) : (
                           <>--</>
@@ -224,60 +229,26 @@ export default function WidgetUser(props) {
                     </button>
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href={`/stryda/profile/${
+                      selectedUser.id
+                    }?tab=followers${prototype.getURLparams("&")}`}
+                  >
+                    <button type="button" className="interactive px-2 leading-tight">
+                      <div className="text-sm text-ui-300">Achievements</div>
+                      <div className="text-lg text-ui-100">
+                      {selectedUser.stats.followers > 0 ? (
+                          Math.round(selectedUser.stats.followers / 2)
+                        ) : (
+                          <>--</>
+                        )}
+                      </div>
+                    </button>
+                  </Link>
+                </li>
               </ul>
-            </div>
             <div className="space-y-2">
-              {prototype.getUserMatches(selectedUser.id).length > 0 ? (
-                <>
-                  {prototype
-                    .getUserMatches(selectedUser.id)
-                    .filter((m) => m.meta?.media)
-                    .slice(0, 1)
-                    .map((item, itemIndex) => (
-                      <Link
-                        key={itemIndex}
-                        href={`/stryda/profile/${
-                          selectedUser.id
-                        }?tab=highlights${prototype.getURLparams("&")}`}
-                      >
-                        <div className={`group flex items-center justify-start gap-4 text-left interactive rounded bg-gradient-to-b ${isInTooltip ? 'from-ui-800/75 to-ui-800/10' : 'from-ui-850/75 to-ui-850/10'} pr-3`}>
-                          <div className="w-32 text-0">
-                            <Video
-                              item={item}
-                              hasMeta={false}
-                              hasGameIcon={false}
-                            />
-                          </div>
-                          <div className="text-sm text-ui-300 flex-1">
-                            <div>Latest highlight</div>
-                            <div>
-                              {selectedUser.stats.highlightViews > 0 ? (
-                                Math.round(
-                                  selectedUser.stats.highlightViews / 2
-                                )
-                              ) : (
-                                <>--</>
-                              )}{" "}
-                              views
-                            </div>
-                          </div>
-                          <span className="icon icon-ctrl-right text-ui-400 opacity-50 group-hover:translate-x-1 group-hover:text-ui-200 transition-all ease-in-out duration-150" />
-                        </div>
-                      </Link>
-                    ))}
-                </>
-              ) : (
-                <div className={`group flex items-center justify-start gap-4 text-left interactive rounded bg-gradient-to-b ${isInTooltip ? 'from-ui-800/75 to-ui-800/10' : 'from-ui-850/75 to-ui-850/10'} pr-3`}>
-                  <div className="w-32 text-0 aspect-video rounded bg-ui-600 grid place-content-center">
-                    <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
-                  </div>
-                  <div className="text-sm text-ui-300 flex-1">
-                    <div>Latest highlight</div>
-                    <div>No highlights published yet</div>
-                  </div>
-                  <span className="icon icon-ctrl-right text-ui-400 opacity-50 group-hover:translate-x-1 group-hover:text-ui-200 transition-all ease-in-out duration-150" />
-                </div>
-              )}
               {selectedUser.clan ? (
                 <Link
                   href={`/stryda/clans/${
@@ -378,6 +349,31 @@ export default function WidgetUser(props) {
               )}
             </div>
           </div>
+          {/* <div className="absolute z-0 inset-x-0 top-0 rounded overflow-hidden h-72">
+            <i className={`absolute z-10 top-0 inset-0 ${isInTooltip ? 'bg-[linear-gradient(to_bottom,_rgb(var(--color-ui-600)/40%)_30%,_rgb(var(--color-ui-600)/90%)_65%,_rgb(var(--color-ui-600)/100%)_100%)]' : 'bg-[linear-gradient(to_bottom,_rgb(var(--color-ui-800)/40%)_30%,_rgb(var(--color-ui-800)/90%)_65%,_rgb(var(--color-ui-800)/100%)_100%)]'}`} />
+            {selectedUser.shopItems?.profileBanner ? (
+                <>
+                  <img
+                    src={
+                      prototype.getShopitemByID(
+                        2,
+                        selectedUser.shopItems?.profileBanner
+                      ).image
+                    }
+                    alt=""
+                    className="absolute z-0 inset-0 w-full h-full object-cover object-center"
+                  />
+                </>
+              ) : (
+                <>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
+                    alt=""
+                    className="absolute z-0 inset-0 w-full h-full object-cover object-center"
+                  />
+                </>
+              )}
+          </div> */}
         </div>
       )}
     </>

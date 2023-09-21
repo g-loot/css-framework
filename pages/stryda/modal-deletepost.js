@@ -6,7 +6,7 @@ import { usePrototypeData } from "@/contexts/prototype.js";
 import Avatar from "@/components/Avatar/Avatar";
 import FeedItemMatchTabSummary from "./components/FeedItemMatchTabSummary";
 
-export default function ModalDeleteMatch(props) {
+export default function ModalDeletePost(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const match = props.match;
@@ -34,7 +34,7 @@ export default function ModalDeleteMatch(props) {
       <div className="modal max-w-sm modal-center">
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title h4">Delete match?</h2>
+            <h2 className="modal-title h4">Delete post?</h2>
             <div className="max-w-sm rounded surface overflow-hidden">
               <FeedItemMatchTabSummary match={match} item={item} />
             </div>
@@ -47,7 +47,7 @@ export default function ModalDeleteMatch(props) {
               }`}
               onClick={closeModalWithDelay}
             >
-              <span>Delete match</span>
+              <span>Delete post</span>
             </button>
             <button
               type="button"

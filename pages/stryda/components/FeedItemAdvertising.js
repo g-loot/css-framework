@@ -1,5 +1,6 @@
 import Link from "next/link";
 import FeedItemComments from "./FeedItemComments";
+import FeedItemContextualMenu from "./FeedItemContextualMenu";
 
 export default function FeedItemAdvertising(props) {
   const item = props.item;
@@ -8,12 +9,7 @@ export default function FeedItemAdvertising(props) {
     <>
       {item && (
         <button type="button" className="surface sm:rounded w-full text-0">
-          <a
-            href={item.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="interactive-secondary"
-          >
+          
             <div className="p-3 flex items-center gap-3 leading-tight text-base">
               <div className="avatar avatar-sm avatar-circle avatar-simple">
                 <div>
@@ -30,6 +26,11 @@ export default function FeedItemAdvertising(props) {
                   <span>Sponsored</span>
                 </div>
               </div>
+              <div className="flex-none self-start">
+                <FeedItemContextualMenu
+                  item={item}
+                />
+              </div>
             </div>
             {/*
             <div className="px-4 pb-4 space-y-2">
@@ -39,6 +40,12 @@ export default function FeedItemAdvertising(props) {
               <p className="text-ui-300">{item.text}</p>
             </div>
           */}
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="interactive-secondary"
+          >
           <img
             src={item.image}
             alt={item.title}

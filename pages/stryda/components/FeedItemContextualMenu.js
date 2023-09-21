@@ -2,7 +2,8 @@ import { useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalReportMessage from "../clans/modal-report-message";
-import ModalDeleteMatch from "../modal-deletematch";
+import ModalDeletePost from "../modal-deletepost";
+import Link from "next/link";
 
 export default function FeedItemContextualMenu({ item, match, onEdit }) {
   const uiContext = useContext(UiContext);
@@ -12,43 +13,57 @@ export default function FeedItemContextualMenu({ item, match, onEdit }) {
     uiContext.openModal(<ModalReportMessage object="post" />);
   }
 
-  function openDeleteMatch() {
-    uiContext.openModal(<ModalDeleteMatch match={match} item={item} />);
+  function openDeletePost() {
+    uiContext.openModal(<ModalDeletePost match={match} item={item} />);
   }
 
   return (
     <>
-      {item && match && (
+      {item && (
         <div className="dropdown dropdown-left">
           <label tabIndex="0" className="button button-ghost rounded-full">
             <span className="icon icon-dots" />
           </label>
           <div tabIndex="0" className="dropdown-content bg-ui-600 w-52 p-1">
             <ul className="menu menu-rounded menu-secondary">
-              {prototype.getUserByID(match.user).isYou ? (
+              {match && item.type === "match" && (
                 <>
-                  <li>
-                    <button type="button" onClick={() => onEdit()}>
-                      <span className="icon icon-pen-2" />
-                      <span>Edit</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button type="button" onClick={() => openDeleteMatch()}>
-                      <span className="icon icon-trash" />
-                      <span>Delete</span>
-                    </button>
-                  </li>
+                  {prototype.getUserByID(match.user).isYou ? (
+                    <>
+                      <li>
+                        <button type="button" onClick={() => onEdit()}>
+                          <span className="icon icon-pen-2" />
+                          <span>Edit title</span>
+                        </button>
+                      </li>
+                      <li>
+                        <button type="button" onClick={() => openDeletePost()}>
+                          <span className="icon icon-trash" />
+                          <span>Delete post</span>
+                        </button>
+                      </li>
+                    </>
+                  ) : (
+                    <li>
+                      <button
+                        type="button"
+                        onClick={() => openModalReportMessage()}
+                      >
+                        <span className="icon icon-c-warning" />
+                        <span>Report abuse</span>
+                      </button>
+                    </li>
+                  )}
                 </>
-              ) : (
+              )}
+              {item.type === "advertising" && (
                 <li>
-                  <button
-                    type="button"
-                    onClick={() => openModalReportMessage()}
-                  >
-                    <span className="icon icon-c-warning" />
-                    <span>Report abuse</span>
-                  </button>
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <button type="button">
+                      <span className="icon icon-notification" />
+                      <span>Remove ads</span>
+                    </button>
+                  </Link>
                 </li>
               )}
             </ul>

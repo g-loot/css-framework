@@ -29,7 +29,7 @@ export const dataUsers = [
     },
     shopItems: {
       avatarFrame: 3,
-      profileBanner: 34,
+      profileBanner: 36,
     },
     stats: {
       xp: 10000,
