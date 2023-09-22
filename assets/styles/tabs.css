@@ -848,15 +848,53 @@
 
 /* tab stretch */
 
-.tabs.tabs-stretch {
-  > li {
-    @apply
-    flex-1
-    ;
-    > :where(a, button, .button) {
+@define-mixin tabs-stretch {
+  & {
+    > li {
       @apply
-      w-full
+      flex-1
       ;
+      > :where(a, button, .button) {
+        @apply
+        w-full
+        ;
+      }
+    }
+  }
+}
+
+.tabs.tabs-stretch {
+  @mixin tabs-stretch;
+}
+
+/* responsive card tabs stretch  */
+
+@media only screen and (min-width: 640px) {
+  .tabs {
+    &.sm\:tabs-stretch {
+        @mixin tabs-stretch;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .tabs {
+    &.md\:tabs-stretch {
+      @mixin tabs-stretch;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .tabs {
+    &.lg\:tabs-stretch {
+      @mixin tabs-stretch;
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .tabs {
+    &.xl\:tabs-stretch {
+      @mixin tabs-stretch;
     }
   }
 }
@@ -998,7 +1036,6 @@
     }
   }
 }
-
 @media only screen and (min-width: 768px) {
   .tabs {
     &.md\:tabs-horizontal {

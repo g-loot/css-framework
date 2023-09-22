@@ -6,6 +6,7 @@ import Link from "next/link";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import ModalShareActivity from "../modal-shareactivity";
 import ModalReportMessage from "../clans/modal-report-message";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 const FeedItemComment = (props) => {
   const uiContext = useContext(UiContext);
@@ -40,15 +41,25 @@ const FeedItemComment = (props) => {
                 </span>
               </Link>
             </div>
-            <div className="flex gap-4 items-baseline text-sm">
+            <div className="flex gap-2 items-baseline text-xs">
               <span className="text-ui-400">{comment.date}</span>
-              <button
-                type="button"
-                className="hidden group-hover:block interactive"
-                onClick={() => openModalReportMessage()}
-              >
-                <span className="text-main">Report</span>
-              </button>
+              {prototype.getUserByID(comment.author).isYou ? (
+                <button
+                  type="button"
+                  className="hidden group-hover:block interactive"
+                  onClick={() => openModalReportMessage()}
+                >
+                  <span className="text-main">Delete</span>
+                </button>
+              ) : (
+                <button
+                  type="button"
+                  className="hidden group-hover:block interactive"
+                  onClick={() => openModalReportMessage()}
+                >
+                  <span className="text-main">Report</span>
+                </button>
+              )}
             </div>
           </div>
           <p
@@ -59,7 +70,7 @@ const FeedItemComment = (props) => {
           />
           <button
             type="button"
-            className={`switch switch-slot button button-ghost rounded-full rounded-full ${
+            className={`switch switch-slot button button-ghost rounded-full ${
               likeOn ? "switch-active" : ""
             }`}
             onClick={() => {
@@ -79,6 +90,7 @@ export default function FeedItemComments(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const item = props.item;
+  const detailedView = props.detailedView || false;
   const isExpanded = props.isExpanded !== undefined ? props.isExpanded : true;
   const [commentOn, setCommentOn] = useState(false);
   const [likeOn, setLikeOn] = useState(false);
@@ -112,6 +124,15 @@ export default function FeedItemComments(props) {
 
   function openModalShareActivity(item) {
     uiContext.openModal(<ModalShareActivity item={item} />);
+  }
+
+  function openFeedItemDetailsMatch(target) {
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={item}
+        selectedTab={target ? target : "default"}
+      />
+    );
   }
 
   return (
@@ -148,11 +169,14 @@ export default function FeedItemComments(props) {
                 tooltip={
                   item.social.likes.length > 0 ? (
                     <ul className="text-xs leading-snug">
-                      {item.social.likes.filter(i => i !== 1).slice(0, 5).map((user, userIndex) => (
-                        <li key={userIndex}>
-                          {prototype.getUserByID(user).nickname}
-                        </li>
-                      ))}
+                      {item.social.likes
+                        .filter((i) => i !== 1)
+                        .slice(0, 5)
+                        .map((user, userIndex) => (
+                          <li key={userIndex}>
+                            {prototype.getUserByID(user).nickname}
+                          </li>
+                        ))}
                       {likeOn && <li>{prototype.getUserByID(1).nickname}</li>}
                       {item.social.likes.length > 5 && (
                         <li>+ {item.social.likes.length - 5}</li>
@@ -344,15 +368,30 @@ export default function FeedItemComments(props) {
             </div>
           </div>
               */}
-          {isExpanded && (
+          {item.social.comments.length > 0 && (
             <>
-              {item.social.comments.length > 0 && (
-                <ul className="px-4 pb-4 space-y-4 sm:px-6 sm:pb-6 sm:space-y-6 pt-2 text-base">
-                  {item.social.comments.map((comment, commentIndex) => (
+              <ul
+                className={`space-y-2 text-base ${
+                  detailedView ? "p-4" : "p-2"
+                }`}
+              >
+                {item.social.comments
+                  .slice(0, isExpanded ? item.social.comments.length : 2)
+                  .map((comment, commentIndex) => (
                     <FeedItemComment key={commentIndex} comment={comment} />
                   ))}
-                </ul>
-              )}
+                {!detailedView && item.social.comments.length > 2 && (
+                  <li className="text-sm pb-2 px-2">
+                    <button
+                      type="button"
+                      className="link link-hover"
+                      onClick={() => openFeedItemDetailsMatch("comments")}
+                    >
+                      See all {item.social.comments.length} comments
+                    </button>
+                  </li>
+                )}
+              </ul>
             </>
           )}
           {commentOn && (

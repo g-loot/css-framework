@@ -61,7 +61,7 @@ export default function ModalInfoClanEventEnroll(props) {
               <span className="icon icon-e-remove" />
             </button>
             <div className="modal-image">
-              <img src={selectedLeaderboard.logo} alt="" className="h-24 w-auto" />
+              <img src={selectedLeaderboard.logo} alt="" className="max-h-[96px] w-auto" />
               <span
                 style={{
                   backgroundImage: "url(" + selectedLeaderboard.bg + ")",

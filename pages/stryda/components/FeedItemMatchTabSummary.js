@@ -41,7 +41,6 @@ export default function FeedItemMatchTabSummary(props) {
     });
   };
 
-
   function openFeedItemDetailsMatch(target) {
     uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
   }

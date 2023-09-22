@@ -188,7 +188,7 @@ export default function WidgetUser(props) {
                   </div>
                   <div className="leading-tight">
                     <div className="text-sm text-ui-300">Latest highlight</div>
-                    <div>No highlights published yet</div>
+                    <div className="text-xs">No highlights published yet</div>
                   </div>
                 </div>
               )}

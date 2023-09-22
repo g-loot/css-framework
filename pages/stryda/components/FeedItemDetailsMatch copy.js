@@ -38,6 +38,68 @@ export default function FeedItemDetailsMatch(props) {
   return (
     <>
       {item && match && (
+        <div className="flex flex-col md:flex-row gap-4 md:flex-8">
+          <div className="w-full md:w-60 px-4 md:px-0.5 md:py-0.5 flex justify-start overflow-auto scrollbar-hidden md:block">
+            <div>
+              <ul className="tabs sm:tabs-vertical">
+                {match.meta.media?.videoUrl && (
+                  <li>
+                    <button
+                      type="button"
+                      className={activeTab === "highlight" ? "is-active" : ""}
+                      onClick={() => setActiveTab("highlight")}
+                    >
+                      <span>Highlight</span>
+                    </button>
+                  </li>
+                )}
+                <li>
+                  <button
+                    type="button"
+                    className={activeTab === "summary" ? "is-active" : ""}
+                    onClick={() => setActiveTab("summary")}
+                  >
+                    <span>Summary</span>
+                  </button>
+                </li>
+                <li>
+                  <button
+                    type="button"
+                    className={activeTab === "stats" ? "is-active" : ""}
+                    onClick={() => setActiveTab("stats")}
+                  >
+                    <span>Stats &amp; scoreboard</span>
+                  </button>
+                </li>
+                {match.achievements?.length > 0 && (
+                  <li>
+                    <button
+                      type="button"
+                      className={activeTab === "activity" ? "is-active" : ""}
+                      onClick={() => setActiveTab("activity")}
+                    >
+                      <span>
+                        Activity{" "}
+                        <span className="text-xs">
+                          ({match.achievements.length})
+                        </span>
+                      </span>
+                    </button>
+                  </li>
+                )}
+                <li>
+                  <button
+                    type="button"
+                    className={activeTab === "comments" ? "is-active" : ""}
+                    onClick={() => setActiveTab("comments")}
+                  >
+                    <span>Comments</span>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="flex-1 pt-0.5 pb-8">
             <div className="surface rounded">
               <div className="relative overflow-hidden rounded">
                 <FeedItemMatchBase
@@ -158,69 +220,6 @@ export default function FeedItemDetailsMatch(props) {
                 </div> */}
               </div>
 
-              <div className="flex justify-start overflow-auto scrollbar-hidden md:block">
-                <ul className="tabs tabs-stretch text-sm border-t border-ui-700 bg-gradient-to-b from-ui-850 to-ui-800">
-                  {match.meta.media?.videoUrl && (
-                    <li>
-                      <button
-                        type="button"
-                        className={activeTab === "highlight" ? "is-active" : ""}
-                        onClick={() => setActiveTab("highlight")}
-                      >
-                        <span>Highlight</span>
-                      </button>
-                    </li>
-                  )}
-                  <li>
-                    <button
-                      type="button"
-                      className={activeTab === "summary" ? "is-active" : ""}
-                      onClick={() => setActiveTab("summary")}
-                    >
-                      <span>Summary</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      className={activeTab === "stats" ? "is-active" : ""}
-                      onClick={() => setActiveTab("stats")}
-                    >
-                      <span>Stats &amp; scoreboard</span>
-                    </button>
-                  </li>
-                  {match.achievements?.length > 0 && (
-                    <li>
-                      <button
-                        type="button"
-                        className={activeTab === "activity" ? "is-active" : ""}
-                        onClick={() => setActiveTab("activity")}
-                      >
-                        <span>
-                          Activity{" "}
-                          <span className="text-xs">
-                            ({match.achievements.length})
-                          </span>
-                        </span>
-                      </button>
-                    </li>
-                  )}
-                  <li>
-                    <button
-                      type="button"
-                      className={activeTab === "comments" ? "is-active" : ""}
-                      onClick={() => setActiveTab("comments")}
-                    >
-                      <span>Comments
-                          <span className="text-xs">
-                            ({item.social.comments.length})
-                          </span>
-                      </span>
-                    </button>
-                  </li>
-                </ul>
-              </div>
-
               {activeTab === "highlight" && (
                 <FeedItemMatchTabHighlight
                   match={match}
@@ -253,9 +252,10 @@ export default function FeedItemDetailsMatch(props) {
               <FeedItemComments
                 item={item}
                 isExpanded={activeTab === "comments" ? true : false}
-                detailedView={true}
               />
             </div>
+          </div>
+        </div>
       )}
     </>
   );

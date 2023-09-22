@@ -8,6 +8,7 @@ export default function FeedItemAchievement(props) {
   const achievement = props.achievement;
   const match = props.match;
   const delay = props.delay;
+  const detailedView = props.detailedView || false;
 
   return (
     <>
@@ -54,10 +55,10 @@ export default function FeedItemAchievement(props) {
                     alt=""
                   />
                   <div className="flex-1 flex items-center gap-3 px-3">
-                    <ul className="flex-1 flex gap-4 items-center justify-between px-2">
+                    <ul className={`flex-1 flex gap-4 items-center justify-between px-2 ${detailedView ? 'text-base' : 'text-sm'}`}>
                       <li>
-                        <div className="text-xs text-ui-300">Ladder</div>
-                        <div className="text-sm text-ui-100 truncate">
+                        <div className={`text-xs text-ui-300 ${detailedView ? 'text-sm' : 'text-xs'}`}>Ladder</div>
+                        <div className="text-ui-100 truncate">
                           {
                             prototype.getLadderByID(
                               prototype.getGameByID(match.meta.game).slug,
@@ -67,8 +68,8 @@ export default function FeedItemAchievement(props) {
                         </div>
                       </li>
                       <li>
-                        <div className="text-xs text-ui-300">Score</div>
-                        <div className="text-sm text-ui-100">
+                        <div className={`text-xs text-ui-300 ${detailedView ? 'text-sm' : 'text-xs'}`}>Score</div>
+                        <div className="text-ui-100">
                           {achievement.number}
                         </div>
                       </li>

@@ -47,7 +47,7 @@ export default function ScoreboardOverview(props) {
               <img
                 src={item.logo}
                 alt={item.name}
-                className="h-24 w-auto relative z-20"
+                className="max-h-[96px] w-auto relative z-20"
               />
               <span className="absolute z-10 inset-0 bg-ui-900/80" />
 
