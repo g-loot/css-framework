@@ -7,24 +7,6 @@ export const dataFeedItems = [
       views: [2, 5, 6, 8, 9, 10, 11, 12, 13],
       likes: [7, 2],
       comments: [
-        {
-          author: 2,
-          date: "1 min. ago",
-          text: "Well done man!",
-          likes: [11, 2, 5, 6],
-        },
-        {
-          author: 5,
-          date: "1 min. ago",
-          text: "🔥🔥🔥",
-          likes: [],
-        },
-        {
-          author: 6,
-          date: "10 min. ago",
-          text: "You could have done better",
-          likes: [2],
-        },
       ],
     },
   },
@@ -38,9 +20,27 @@ export const dataFeedItems = [
       comments: [
         {
           author: 2,
-          date: "1 hour ago",
+          date: "1 min. ago",
           text: "Better luck next time",
           likes: false,
+        },
+        {
+          author: 2,
+          date: "2 min. ago",
+          text: "First time with a new agent is never easy!",
+          likes: [11, 2, 5, 6],
+        },
+        {
+          author: 5,
+          date: "10 min. ago",
+          text: "☠️☠️☠️",
+          likes: [],
+        },
+        {
+          author: 6,
+          date: "10 min. ago",
+          text: "You could have done better",
+          likes: [2],
         },
       ],
     },
@@ -241,10 +241,10 @@ export const dataFeedItems = [
       likes: [],
       comments: [
         {
-          author: 5,
+          author: 1,
           date: "3 hours ago",
           text: "Boom Boom",
-          likes: [],
+          likes: [1],
         },
       ],
     },

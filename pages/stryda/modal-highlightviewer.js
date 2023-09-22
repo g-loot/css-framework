@@ -61,9 +61,6 @@ export default function ModalHighlightViewer(props) {
           <div className="modal-content p-0">
             <div className="modal-body relative">
               <div className="absolute z-10 inset-0 p-4">
-                <div className="absolute top-2 right-14">
-                  
-                </div>
                 <div className="absolute bottom-2 right-2 p-1 bg-ui-900/80 backdrop-blur rounded-r-[2rem] rounded-l-3 flex gap-2 items-center">
                   <div
                     className={`rounded px-2 py-1.5 text-xs sm:text-sm leading-none flex gap-2 items-center ${

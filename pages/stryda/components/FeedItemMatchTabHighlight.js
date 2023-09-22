@@ -40,7 +40,7 @@ export default function FeedItemMatchTabHighlight(props) {
       {item && match && (
         <button
           type="button"
-          className="aspect-video bg-ui-850 w-full"
+          className="aspect-video bg-ui-850 w-full text-0"
           //onClick={() => openModalHighlightViewer(match)}
           onClick={() => !detailedView && openFeedItemDetailsMatch("highlight")}
         >

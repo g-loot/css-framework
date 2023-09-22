@@ -42,7 +42,7 @@ export default function ModalDeletePost(props) {
           <div className="modal-action">
             <button
               type="button"
-              className={`button button-primary ${
+              className={`button flex-1 button-primary ${
                 submitting ? "is-loading" : ""
               }`}
               onClick={closeModalWithDelay}
@@ -51,7 +51,7 @@ export default function ModalDeletePost(props) {
             </button>
             <button
               type="button"
-              className="button button-secondary"
+              className="button flex-1 button-secondary"
               onClick={uiContext.closeModal}
             >
               <span>Cancel</span>

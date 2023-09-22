@@ -14,6 +14,7 @@ import TabClanLeaderboardsRewards from "./tab-rewards";
 import ResetsIn from "@/components/Countdown/ResetsIn";
 import { VariablesContext } from "@/contexts/variables";
 import GameIcon from "@/components/GameIcon/GameIcon";
+import ModalClanEventHowitworksVideo from "../../modal-howitworks-video";
 
 const TabsItems = [
   {
@@ -78,6 +79,10 @@ export default function Ladders() {
 
   function handleEnroll() {
     uiContext.openModal(<ModalInfoClanEventEnroll />);
+  }
+
+  function openmodalClanEventOnboarding() {
+    uiContext.openModal(<ModalClanEventHowitworksVideo />);
   }
 
   return (
@@ -171,10 +176,7 @@ export default function Ladders() {
                 selectedClanLeaderboard.status === "ongoing" && (
                   <div className="border-t border-ui-700 mt-4 pt-4 text-center xl:text-left flex flex-col xl:flex-row items-center gap-4">
                     {selectedClanLeaderboard.meta?.eligibility && (
-                      <div className="flex-1 flex flex-wrap gap-2 items-center text-sm">
-                        <span className="uppercase font-bold text-ui-400">
-                          Eligibility:
-                        </span>
+                      <div className="flex-1 flex flex-wrap gap-2 items-center justify-center xl:justify-start text-sm">
                         {selectedClanLeaderboard.meta?.eligibility ? (
                           <>
                             <span>
@@ -210,7 +212,7 @@ export default function Ladders() {
                               </Tooltip>
                             </span>
                             {selectedClanLeaderboard.meta.eligibility.ranks && (
-                              <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
+                              <div className="border-l border-ui-700 pl-1 flex flex-wrap gap-1 items-center">
                                 {selectedClanLeaderboard.meta.eligibility
                                   .ranks &&
                                   selectedClanLeaderboard.meta.eligibility.ranks?.map(
@@ -229,9 +231,14 @@ export default function Ladders() {
                                   )}
                               </div>
                             )}
+                            <div className="border-l border-ui-700 pl-2">
+                              <button type="button" onClick={openmodalClanEventOnboarding} className="link whitespace-nowrap">
+                                Watch video
+                              </button>
+                            </div>
                           </>
                         ) : (
-                          <span>Everyone</span>
+                          <span>Everyone can enter</span>
                         )}
                       </div>
                     )}

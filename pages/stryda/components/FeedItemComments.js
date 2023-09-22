@@ -7,6 +7,7 @@ import Tooltip from "@/components/Tooltip/Tooltip";
 import ModalShareActivity from "../modal-shareactivity";
 import ModalReportMessage from "../clans/modal-report-message";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
+import ModalDeleteComment from "../modal-deletecomment";
 
 const FeedItemComment = (props) => {
   const uiContext = useContext(UiContext);
@@ -24,11 +25,15 @@ const FeedItemComment = (props) => {
     uiContext.openModal(<ModalReportMessage object="comment" />);
   }
 
+  function openModalDeleteComment() {
+    uiContext.openModal(<ModalDeleteComment />);
+  }
+
   return (
     <>
       <li className="flex items-start gap-3 group">
         <Avatar id={comment.author} size="avatar-xs" hasTooltip={true} />
-        <div className="flex-1 text-sm">
+        <div className="flex-1 text-sm -mt-2">
           <div className="flex flex-col sm:flex-row sm:gap-2 items-start sm:items-baseline sm:justify-between">
             <div className="flex-1 truncate p-1">
               <Link
@@ -47,7 +52,7 @@ const FeedItemComment = (props) => {
                 <button
                   type="button"
                   className="hidden group-hover:block interactive"
-                  onClick={() => openModalReportMessage()}
+                  onClick={() => openModalDeleteComment()}
                 >
                   <span className="text-main">Delete</span>
                 </button>
@@ -139,7 +144,7 @@ export default function FeedItemComments(props) {
     <>
       {item && (
         <>
-          <div className="px-3 py-1.5 flex flex-row gap-3 items-center justify-start text-ui-300 text-base">
+          <div className="border-t border-ui-700 px-3 py-1.5 flex flex-row gap-3 items-center justify-start text-ui-300 text-base">
             <div className="flex gap-1.5 items-center pointer">
               <span className="icon icon-view text-ui-300" />
               <span className="text-xs whitespace-nowrap">
@@ -372,7 +377,7 @@ export default function FeedItemComments(props) {
             <>
               <ul
                 className={`space-y-2 text-base ${
-                  detailedView ? "p-4" : "p-2"
+                  detailedView ? "p-4" : "p-3"
                 }`}
               >
                 {item.social.comments
@@ -395,7 +400,7 @@ export default function FeedItemComments(props) {
             </>
           )}
           {commentOn && (
-            <div className="flex items-start gap-3 pr-3 pb-2 pl-3 text-base">
+            <div className="flex items-start gap-3 p-2 pl-3 text-base border-t border-ui-700">
               <div className="w-9">
                 <Avatar id={1} hasLevel={false} />
               </div>

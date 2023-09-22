@@ -15,6 +15,7 @@ import TabClanLeaderboardsRewards from "./tab-rewards";
 import ResetsIn from "../../../../../components/Countdown/ResetsIn";
 import { VariablesContext } from "@/contexts/variables";
 import GameIcon from "../../../../../components/GameIcon/GameIcon";
+import ModalClanEventHowitworksVideo from "../modal-howitworks-video";
 
 const TabsItems = [
   {
@@ -80,6 +81,11 @@ export default function Ladders() {
   function handleEnroll() {
     uiContext.openModal(<ModalInfoClanEventEnroll />);
   }
+
+  function openmodalClanEventOnboarding() {
+    uiContext.openModal(<ModalClanEventHowitworksVideo />);
+  }
+
 
   return (
     <>
@@ -227,6 +233,11 @@ export default function Ladders() {
                                   )}
                               </div>
                             )}
+                            <div className="border-l border-ui-700 pl-2">
+                              <button type="button" onClick={openmodalClanEventOnboarding} className="link whitespace-nowrap">
+                                Watch video
+                              </button>
+                            </div>
                           </>
                         ) : (
                           <span>Everyone can enter</span>

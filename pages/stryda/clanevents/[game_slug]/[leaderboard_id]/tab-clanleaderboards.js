@@ -17,6 +17,7 @@ import ResetsIn from "@/components/Countdown/ResetsIn";
 import Rewards from "@/components/Reward/Rewards";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
+import ModalClanEventHowitworksVideo from "../../modal-howitworks-video";
 
 const rewardDistribClan = [
   {
@@ -257,7 +258,8 @@ export default function TabClanLeaderboardsLeaderboards() {
     );
   }
   function openmodalClanEventOnboarding() {
-    uiContext.openModal(<ModalClanEventOnboarding />);
+    uiContext.openModal(<ModalClanEventHowitworksVideo />);
+    // uiContext.openModal(<ModalClanEventOnboarding />);
   }
 
   const getRankByID = (id) => {

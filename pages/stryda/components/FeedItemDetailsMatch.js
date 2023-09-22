@@ -38,7 +38,7 @@ export default function FeedItemDetailsMatch(props) {
   return (
     <>
       {item && match && (
-            <div className="surface rounded">
+            <div className="surface rounded text-0">
               <div className="relative overflow-hidden rounded">
                 <FeedItemMatchBase
                   match={match}
