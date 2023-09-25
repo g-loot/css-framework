@@ -102,7 +102,7 @@ export default function ModalBuyPremium(props) {
                   <div
                     key={itemIndex}
                     className={`rounded-xl flex-1 flex flex-col animate-fade-in animate-delay p-1 ${
-                      item.type === "bestvalue" ? "surface surface-ui-600" : ""
+                      item.type === "bestvalue" ? "surface surface-ui-700" : ""
                     } ${
                       item.type === "mostpopular"
                         ? "border border-ui-700 bg-gradient-to-b from-interaction-300 via-interaction-500 to-interaction-500"
@@ -110,7 +110,11 @@ export default function ModalBuyPremium(props) {
                     } ${!item.type ? "surface" : ""}`}
                     style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                   >
-                    <div className="px-2 pb-3 pt-2 text-center font-bold">
+                    <div
+                      className={`px-2 pb-3 pt-2 text-center font-bold ${
+                        item.type === "regular" ? "hidden md:block" : ""
+                      }`}
+                    >
                       {item.type === "regular" && (
                         <span className="opacity-0">—</span>
                       )}
@@ -142,9 +146,7 @@ export default function ModalBuyPremium(props) {
                             >
                               {item.pricePerMonth}
                             </div>
-                            <div className="uppercase">
-                              / per month
-                            </div>
+                            <div className="uppercase">/ per month</div>
                           </div>
                           <label className="text-sm text-ui-300">
                             {!item.amount ? (
@@ -173,39 +175,7 @@ export default function ModalBuyPremium(props) {
                             alt=""
                           />
                         </div>
-
-                        {/* 
-                        
-                        <div className="flex justify-center gap-2 text-center text-3xl">
-                          {item.previousAmount && (
-                            <div className="text-ui-300 line-through">
-                              {item.previousAmount}
-                            </div>
-                          )}
-                          <div className="text-attention-300">
-                            {item.amount}
-                          </div>
-                        </div>
-                        <label className="text-sm text-ui-300">
-                          {item.pricePerMonth && (
-                            <>only {item.pricePerMonth} </>
-                          )}
-                          per month
-                        </label>
-                        {item.save && (
-                          <h5
-                            className={`mt-4 ${
-                              item.type === "mostpopular"
-                                ? "text-main"
-                                : "text-premium-500"
-                            }`}
-                          >
-                            Save {item.save}%
-                          </h5> 
-                          )}
-                        */}
                       </div>
-
                       <div className="border-t border-ui-700 mt-3 pt-3">
                         <button
                           className={`button button-main w-full ${
@@ -224,8 +194,8 @@ export default function ModalBuyPremium(props) {
                   </div>
                 ))}
               </div>
-              <div className="p-6 text-center text-sm space-y-2">
-                <p className="text-ui-300">
+              <div className="px-2 md:px-6 py-6 text-center text-sm space-y-2 text-ui-300">
+                <p>
                   You can cancel your subscription at any time via your Stryda
                   profile. Unless canceled, your subscription will be
                   automatically renewed at the end of each period.{" "}
@@ -239,13 +209,14 @@ export default function ModalBuyPremium(props) {
                   </a>{" "}
                   apply.
                 </p>
-                <p className="text-ui-300">
-                  *Please note: The gift cards we offer in our store do not
-                  cater to all regions allowed on Stryda e.g. Riot cards
-                  specifically for India. Please be sure to check our regional
-                  availability and ensure that any gift card your purchase works
-                  in your region. Everyone is able to use coins for profile
-                  customization items and our Global gift card selection.
+                <p>
+                  *Please note: This is a one-time offer only. The gift cards we
+                  offer in our store do not cater to all regions allowed on
+                  Stryda e.g. Riot cards specifically for India. Please be sure
+                  to check our regional availability and ensure that any gift
+                  card your purchase works in your region. Everyone is able to
+                  use coins for profile customization items and our Global gift
+                  card selection.
                 </p>
               </div>
             </div>

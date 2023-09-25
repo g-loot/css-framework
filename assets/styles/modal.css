@@ -212,14 +212,15 @@
 
       .modal-title {
         @apply
-        leading-none
-        text-3xl
-        lg:text-4xl
         pr-8
-        mt-2
-        mb-4
         ;
+        &:first-child {
+          @apply
+          pr-8
+          ;
+        }
       }
+
 
       p {
         &:not([class*="my-"]):not([class*="mt-"]):not(:first-child) {
