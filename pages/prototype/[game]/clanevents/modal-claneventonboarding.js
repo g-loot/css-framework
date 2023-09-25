@@ -207,7 +207,7 @@ export default function ModalClanEventOnboarding(props) {
                         className="mx-auto aspect-video rounded"
                         width="100%"
                         height="auto"
-                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
