@@ -15,6 +15,7 @@ import ResetsIn from "@/components/Countdown/ResetsIn";
 import { VariablesContext } from "@/contexts/variables";
 import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalClanEventHowitworksVideo from "../../modal-howitworks-video";
+import ModalClanEventOnboarding from "../../modal-claneventonboarding";
 
 const TabsItems = [
   {
@@ -82,7 +83,7 @@ export default function Ladders() {
   }
 
   function openmodalClanEventOnboarding() {
-    uiContext.openModal(<ModalClanEventHowitworksVideo />);
+    uiContext.openModal(<ModalClanEventOnboarding />);
   }
 
   return (
@@ -233,7 +234,7 @@ export default function Ladders() {
                             )}
                             <div className="border-l border-ui-700 pl-2">
                               <button type="button" onClick={openmodalClanEventOnboarding} className="link whitespace-nowrap">
-                                Watch video
+                                Learn more
                               </button>
                             </div>
                           </>

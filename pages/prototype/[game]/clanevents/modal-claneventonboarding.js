@@ -203,13 +203,25 @@ export default function ModalClanEventOnboarding(props) {
                   )}
                   <div className="flex-1 animate-fade-in">
                     <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
+                      <iframe
+                        className="mx-auto aspect-video rounded"
+                        width="100%"
+                        height="auto"
+                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+                        title="YouTube video player"
+                        frameBorder="0"
+                        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                        allowFullScreen
+                      ></iframe>
+                      {/*
                       <img
                         src="https://res.cloudinary.com/gloot/image/upload/v1692100062/Stryda/illustrations/Clan_Season_onboarding_4.png"
                         alt=""
                       />
+                          */}
                     </div>
                     <div className="px-4 leading-tight">
-                      For each win the Clan gets 1 point, for each loss the Clan loses 1 point. <span className="text-ui-100">May the best Clan win.</span>
+                      {/* For each win the Clan gets 1 point, for each loss the Clan loses 1 point. <span className="text-ui-100">May the best Clan win.</span> */}
                     </div>
                   </div>
                 </div>

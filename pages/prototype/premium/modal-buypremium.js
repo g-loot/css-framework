@@ -102,9 +102,7 @@ export default function ModalBuyPremium(props) {
                   <div
                     key={itemIndex}
                     className={`rounded-xl flex-1 flex flex-col animate-fade-in animate-delay p-1 ${
-                      item.type === "bestvalue"
-                        ? "surface surface-ui-700"
-                        : ""
+                      item.type === "bestvalue" ? "surface surface-ui-700" : ""
                     } ${
                       item.type === "mostpopular"
                         ? "border border-ui-700 bg-gradient-to-b from-interaction-300 via-interaction-500 to-interaction-500"
@@ -113,7 +111,9 @@ export default function ModalBuyPremium(props) {
                     style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                   >
                     <div className="px-2 pb-3 pt-2 text-center font-bold">
-                      {item.type === "regular" && <span className="opacity-0">—</span>}
+                      {item.type === "regular" && (
+                        <span className="opacity-0">—</span>
+                      )}
                       {item.type === "bestvalue" && (
                         <span className="text-main">Best value</span>
                       )}
@@ -129,22 +129,28 @@ export default function ModalBuyPremium(props) {
                             {item.monthNumber > 1 && <>s</>}
                           </h2>
                           <div className="flex justify-center items-baseline gap-2 text-center">
-                              <div className={`font-bold text-main ${item.type === "regular" ? 'text-[2.1rem]' : ''} ${item.type === "mostpopular" ? 'text-[2.3rem]' : ''} ${item.type === "bestvalue" ? 'text-[2.5rem]' : ''}`}>
-                                {item.pricePerMonth}
-                              </div>
+                            <div
+                              className={`font-bold text-main ${
+                                item.type === "regular" ? "text-[2.1rem]" : ""
+                              } ${
+                                item.type === "mostpopular"
+                                  ? "text-[2.3rem]"
+                                  : ""
+                              } ${
+                                item.type === "bestvalue" ? "text-[2.5rem]" : ""
+                              }`}
+                            >
+                              {item.pricePerMonth}
+                            </div>
                             <div className="uppercase text-ui-300">
                               / per month
                             </div>
                           </div>
                           <label className="text-sm text-ui-300">
                             {!item.amount ? (
-                              <>
-                              billed monthly
-                              </>
+                              <>billed monthly</>
                             ) : (
-                              <>
-                                billed {item.amount}
-                              </>
+                              <>billed {item.amount}</>
                             )}
                           </label>
                         </div>
@@ -162,9 +168,12 @@ export default function ModalBuyPremium(props) {
                               </div>
                             </div>
                           </div>
-                          <img src="https://res.cloudinary.com/gloot/image/upload/v1695642734/Stryda/illustrations/premium-giftcards.webp" alt="" />
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/v1695642734/Stryda/illustrations/premium-giftcards.webp"
+                            alt=""
+                          />
                         </div>
-                      
+
                         {/* 
                         
                         <div className="flex justify-center gap-2 text-center text-3xl">
@@ -215,19 +224,29 @@ export default function ModalBuyPremium(props) {
                   </div>
                 ))}
               </div>
-              <div className="p-4 text-center text-sm">
-                You can cancel your subscription at any time via your Stryda
-                profile. Unless canceled, your subscription will be
-                automatically renewed at the end of each period.{" "}
-                <a
-                  href="https://stryda.gg/terms-conditions?noRedirect=true"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="link"
-                >
-                  Terms and Conditions and Payment Policies
-                </a>{" "}
-                apply.
+              <div className="p-6 text-center text-sm space-y-2">
+                <p>
+                  You can cancel your subscription at any time via your Stryda
+                  profile. Unless canceled, your subscription will be
+                  automatically renewed at the end of each period.{" "}
+                  <a
+                    href="https://stryda.gg/terms-conditions?noRedirect=true"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="link"
+                  >
+                    Terms and Conditions and Payment Policies
+                  </a>{" "}
+                  apply.
+                </p>
+                <p>
+                  *Please note: The gift cards we offer in our store do not
+                  cater to all regions allowed on Stryda e.g. Riot cards
+                  specifically for India. Please be sure to check our regional
+                  availability and ensure that any gift card your purchase works
+                  in your region. Everyone is able to use coins for profile
+                  customization items and our Global gift card selection.
+                </p>
               </div>
             </div>
           </div>
