@@ -128,7 +128,7 @@ export default function ModalBuyPremium(props) {
                             {item.monthNumber} month
                             {item.monthNumber > 1 && <>s</>}
                           </h2>
-                          <div className="flex justify-center items-baseline gap-2 text-center">
+                          <div className="flex justify-center items-baseline gap-1.5 text-center">
                             <div
                               className={`font-bold text-main ${
                                 item.type === "regular" ? "text-[2.1rem]" : ""
@@ -142,7 +142,7 @@ export default function ModalBuyPremium(props) {
                             >
                               {item.pricePerMonth}
                             </div>
-                            <div className="uppercase text-ui-300">
+                            <div className="uppercase">
                               / per month
                             </div>
                           </div>
@@ -155,7 +155,7 @@ export default function ModalBuyPremium(props) {
                           </label>
                         </div>
                         <div>
-                          <div className="flex items-center justify-center leading-none gap-3 mb-4">
+                          <div className="flex items-center justify-center leading-none gap-2 mb-4">
                             <div className="text-main font-bold text-[2.25rem] text-right">
                               {item.giftAmount}
                             </div>
@@ -216,7 +216,7 @@ export default function ModalBuyPremium(props) {
                         >
                           <span>Choose plan</span>
                         </button>
-                        <div className="mt-2 text-xs">
+                        <div className="mt-2 text-xs text-ui-300">
                           Renews every {item.renewDays} days
                         </div>
                       </div>
@@ -224,7 +224,7 @@ export default function ModalBuyPremium(props) {
                   </div>
                 ))}
               </div>
-              <div className="p-6 text-center text-sm space-y-2">
+              <div className="p-6 text-center text-sm space-y-2 text-ui-300">
                 <p>
                   You can cancel your subscription at any time via your Stryda
                   profile. Unless canceled, your subscription will be

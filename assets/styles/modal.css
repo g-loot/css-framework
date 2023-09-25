@@ -222,11 +222,6 @@
       }
 
       p {
-        &:not([class*="text-"]) {
-          @apply
-          text-ui-200
-          ;
-        }
         &:not([class*="my-"]):not([class*="mt-"]):not(:first-child) {
           @apply
           mt-2
