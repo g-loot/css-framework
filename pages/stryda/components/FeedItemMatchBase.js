@@ -142,7 +142,7 @@ export default function FeedItemMatchBase(props) {
                       </span>
                     </span>
                   )}
-                  {editText.length > maxChar && (
+                  {editText.length > Math.round(maxChar*0.89) && (
                     <span className="absolute z-20 pointer-events-none -top-2 right-0 -translate-y-full">
                       <span className="chip chip-xs chip-status chip-attention animate-slide-in-bottom">
                         <span>

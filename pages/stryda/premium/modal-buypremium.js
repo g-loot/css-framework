@@ -9,28 +9,31 @@ import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
 const Offers = [
   {
-    tokenNumber: 60,
-    amount: "17€",
-    previousAmount: "34€",
-    save: "50%",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-small.png",
-    special: "bestvalue",
+    monthNumber: 1,
+    pricePerMonth: "9.49€",
+    giftAmount: "5€",
+    renewDays: 30,
+    type: "regular",
   },
   {
-    tokenNumber: 10,
-    amount: "4.30€",
-    previousAmount: "5.70€",
-    save: "24%",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
-    special: "mostpopular",
+    monthNumber: 3,
+    pricePerMonth: "7.50€",
+    amount: "22.49€ quarterly",
+    previousAmount: "28.47€",
+    giftAmount: "10€",
+    save: 22,
+    renewDays: 90,
+    type: "mostpopular",
   },
   {
-    tokenNumber: 3,
-    amount: "1.70€",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159333/Stryda/currencies/Reward-centered-token-large.png",
+    monthNumber: 12,
+    pricePerMonth: "6.25€",
+    amount: "74.99€ annually",
+    previousAmount: "113.88€",
+    giftAmount: "20€",
+    save: 35,
+    renewDays: 365,
+    type: "bestvalue",
   },
 ];
 
@@ -58,7 +61,13 @@ export default function ModalBuyPremium(props) {
     setSubmitting(true);
 
     setTimeout(() => {
-      uiContext.openToastr({size: "", text: "Tokens bought successfully", color: "green", autoDelete: true, autoDeleteDelay: 2500});
+      uiContext.openToastr({
+        size: "",
+        text: "Tokens bought successfully",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
       uiContext.closeModal();
       setSubmitting(false);
     }, 1000);
@@ -81,82 +90,144 @@ export default function ModalBuyPremium(props) {
           </button>
           <div className="modal-content">
             <div className="modal-body text-center">
-              <PremiumLogo className="mx-auto mb-4" src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg" width="230" height="auto" />
+              <PremiumLogo
+                className="mx-auto mb-4"
+                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                width="230"
+                height="auto"
+              />
               <h2 className="modal-title">Choose your Premium plan</h2>
-              <div className="flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mt-4">
+              <div className="w-full flex flex-col md:flex-row gap-4 items-stretch justify-center mx-auto mt-4">
                 {Offers.map((item, itemIndex) => (
                   <div
                     key={itemIndex}
                     className={`rounded-xl flex-1 flex flex-col animate-fade-in animate-delay p-1 ${
-                      item.special === "bestvalue"
+                      item.type === "bestvalue"
                         ? "surface surface-ui-700"
                         : ""
                     } ${
-                      item.special === "mostpopular"
-                        ? "border border-ui-700 bg-premium-500"
+                      item.type === "mostpopular"
+                        ? "border border-ui-700 bg-gradient-to-b from-interaction-300 via-interaction-500 to-interaction-500"
                         : ""
-                    } ${!item.special ? "surface" : ""}`}
+                    } ${!item.type ? "surface" : ""}`}
                     style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                   >
                     <div className="px-2 pb-3 pt-2 text-center font-bold">
-                      {item.special === "bestvalue" && (
-                        <span className="text-premium-500">Best value</span>
+                      {item.type === "regular" && <span className="opacity-0">—</span>}
+                      {item.type === "bestvalue" && (
+                        <span className="text-main">Best value</span>
                       )}
-                      {item.special === "mostpopular" && (
+                      {item.type === "mostpopular" && (
                         <span className="text-ui-800">Most popular</span>
                       )}
-                      {!item.special && <span className="opacity-0">—</span>}
                     </div>
                     <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
-                      <div className="flex-1">
-                        <img
-                          className="w-auto h-52 mx-auto -mt-2 -mb-4 drop-shadow-2xl"
-                          src={item.image}
-                          width="auto"
-                          height="auto"
-                          alt="tokens"
-                        />
-                        <h2 className="mb-4 h3">{item.tokenNumber} tokens</h2>
-                        {item.previousAmount && (
-                          <>
-                            <div className="flex gap-2 text-3xl text-center justify-center">
-                              <span className="line-through text-ui-300">
-                                {item.previousAmount}
-                              </span>
-                              <span className="text-premium-500">
-                                {item.amount}
-                              </span>
+                      <div className="flex-1 flex-col items-center justify-between leading-none">
+                        <div className="flex-1 my-12">
+                          <h2 className="h3 mb-6">
+                            {item.monthNumber} month
+                            {item.monthNumber > 1 && <>s</>}
+                          </h2>
+                          <div className="flex justify-center items-baseline gap-2 text-center">
+                              <div className={`font-bold text-main ${item.type === "regular" ? 'text-[2.1rem]' : ''} ${item.type === "mostpopular" ? 'text-[2.3rem]' : ''} ${item.type === "bestvalue" ? 'text-[2.5rem]' : ''}`}>
+                                {item.pricePerMonth}
+                              </div>
+                            <div className="uppercase text-ui-300">
+                              / per month
                             </div>
-                            <div className="text-sm uppercase text-ui-200 font-bold">
-                              Save {item.save}
+                          </div>
+                          <label className="text-sm text-ui-300">
+                            {!item.amount ? (
+                              <>
+                              billed monthly
+                              </>
+                            ) : (
+                              <>
+                                billed {item.amount}
+                              </>
+                            )}
+                          </label>
+                        </div>
+                        <div>
+                          <div className="flex items-center justify-center leading-none gap-3 mb-4">
+                            <div className="text-main font-bold text-[2.25rem] text-right">
+                              {item.giftAmount}
                             </div>
-                          </>
-                        )}
-                        {!item.previousAmount && (
-                          <>
-                            <div className="flex gap-2 text-3xl text-center justify-center">
-                              <span className="text-ui-200">
-                                {item.amount}
-                              </span>
+                            <div className="text-left">
+                              <div className="uppercase font-bold text-xl text-ui-100">
+                                Free gift card
+                              </div>
+                              <div className="text-xs text-ui-300">
+                                included with this subscription*
+                              </div>
                             </div>
-                          </>
-                        )}
+                          </div>
+                          <img src="https://res.cloudinary.com/gloot/image/upload/v1695642734/Stryda/illustrations/premium-giftcards.webp" alt="" />
+                        </div>
+                      
+                        {/* 
+                        
+                        <div className="flex justify-center gap-2 text-center text-3xl">
+                          {item.previousAmount && (
+                            <div className="text-ui-300 line-through">
+                              {item.previousAmount}
+                            </div>
+                          )}
+                          <div className="text-attention-300">
+                            {item.amount}
+                          </div>
+                        </div>
+                        <label className="text-sm text-ui-300">
+                          {item.pricePerMonth && (
+                            <>only {item.pricePerMonth} </>
+                          )}
+                          per month
+                        </label>
+                        {item.save && (
+                          <h5
+                            className={`mt-4 ${
+                              item.type === "mostpopular"
+                                ? "text-main"
+                                : "text-premium-500"
+                            }`}
+                          >
+                            Save {item.save}%
+                          </h5> 
+                          )}
+                        */}
                       </div>
 
                       <div className="border-t border-ui-700 mt-3 pt-3">
                         <button
-                          className={`button button-premium w-full ${
+                          className={`button button-main w-full ${
                             submitting ? "is-loading" : ""
                           }`}
                           onClick={closeModalWithDelay}
                           disabled={selectedGamesCount === 0}
                         >
-                          <span>Buy</span>
+                          <span>Choose plan</span>
                         </button>
+                        <div className="mt-2 text-xs">
+                          Renews every {item.renewDays} days
+                        </div>
                       </div>
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className="p-4 text-center text-sm">
+                You can cancel your subscription at any time via your Stryda
+                profile. Unless canceled, your subscription will be
+                automatically renewed at the end of each period.{" "}
+                <a
+                  href="https://stryda.gg/terms-conditions?noRedirect=true"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="link"
+                >
+                  Terms and Conditions and Payment Policies
+                </a>{" "}
+                apply.
               </div>
             </div>
           </div>
