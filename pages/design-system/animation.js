@@ -481,6 +481,146 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Slide out bottom */}
+      <div className="mb-12" id="slide-out-bottom">
+        <h2 className="h3 mb-3">Slide out bottom</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim1 === true ? "animate-slide-out-bottom" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim1.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/3a19ohqs/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide out top */}
+      <div className="mb-12" id="slide-out-top">
+        <h2 className="h3 mb-3">Slide out top</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim2 === true ? "animate-slide-out-top" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim2.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/j637d5hp/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide out right */}
+      <div className="mb-12" id="slide-out-right">
+        <h2 className="h3 mb-3">Slide out right</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim3 === true ? "animate-slide-out-right" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim3.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/zat6459o/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Slide out left */}
+      <div className="mb-12" id="slide-out-left">
+        <h2 className="h3 mb-3">Slide out left</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center">
+                <div
+                  className={`w-24 h-24 rounded-full bg-ui-400 mx-auto ${
+                    StartAnim4 === true ? "animate-slide-out-left" : ""
+                  }`}
+                ></div>
+                <div className="text-center mt-5">
+                  <button
+                    className="button button-tertiary mx-auto"
+                    onClick={handleStartAnim4.bind(this)}
+                  >
+                    <span>Play animation</span>
+                  </button>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/kum1we7y/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Fade in */}
       <div className="mb-12" id="fade-in">
         <h2 className="h3 mb-3">Fade in</h2>

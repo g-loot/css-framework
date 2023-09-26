@@ -77,7 +77,7 @@ export default function Topbar() {
 
   return (
     <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
-      <div className="w-full px-2 sm:px-4 relative">
+      <div className="w-full px-2  relative">
         <div className="flex justify-between lg:gap-4 mx-auto">
           <div className="flex lg:flex-1 items-center">
             <div className="hidden gap-2">
@@ -264,6 +264,19 @@ export default function Topbar() {
                     }
                   >
                     <span>Battle Pass</span>
+                  </button>
+                </Link>
+              </li>
+              <li className="tab-premium">
+                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    className={
+                      router.pathname.includes("premium") ? "is-active" : ""
+                    }
+                  >
+                    <span className="icon icon-crown text-lg" />
+                    <span>Premium</span>
                   </button>
                 </Link>
               </li>

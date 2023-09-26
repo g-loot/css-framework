@@ -190,7 +190,7 @@ button {
     @apply 
     bg-ui-800/0
     text-ui-300
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0)]
     ;
     &:not([disabled]),
     &:not(.is-disabled) {

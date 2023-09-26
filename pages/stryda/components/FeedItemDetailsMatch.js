@@ -211,7 +211,7 @@ export default function FeedItemDetailsMatch(props) {
                       className={activeTab === "comments" ? "is-active" : ""}
                       onClick={() => setActiveTab("comments")}
                     >
-                      <span>Comments
+                      <span>Comments{" "}
                           <span className="text-xs">
                             ({item.social.comments.length})
                           </span>

@@ -79,6 +79,10 @@
         ;
       }
     }
+    > div,
+    > div > * {
+      mask-image: none;
+    }
   }
   > div {
     > * {

@@ -32,10 +32,10 @@ export default function TopbarHighlightsSettings() {
   };
 
   return (
-    <div className="max-h-[400px] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop p-6 space-y-6">
+    <div className="p-6 space-y-6">
       <div class="form-group">
         <label for="file-input">Destination folder</label>
-        <input type="file" name="file-input" id="file-input" />
+        <input type="file" name="file-input" id="file-input" webkitdirectory directory multiple />
       </div>
       <div className="form-group">
         <label for="range">Allocated space</label>

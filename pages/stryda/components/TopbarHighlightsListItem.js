@@ -21,6 +21,7 @@ export default function TopbarHighlightsListItem({
 }) {
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [status, setStatus] = useState();
+  let interval;
 
   useEffect(() => {
     if (finished === true) {
@@ -31,20 +32,20 @@ export default function TopbarHighlightsListItem({
   useEffect(() => {
     if (loadingProgress === 100) {
       setStatus("finished");
-      onLoad(match.id, loadingProgress, status);
+      onLoad(match.id, loadingProgress, "finished");
+      clearInterval(interval);
     } else if (loadingProgress > 0 && loadingProgress < 100) {
       setStatus("processing");
-      onLoad(match.id, loadingProgress, status);
+      onLoad(match.id, loadingProgress, "processing");
     }
   }, [loadingProgress]);
 
   const handleClick = () => {
-    let interval;
     if (loadingProgress < 100) {
       interval = setInterval(() => {
         setLoadingProgress((prevProgress) => {
           const newProgress = prevProgress + 1;
-          onLoad(match.id, newProgress, status);
+          //onLoad(match.id, newProgress, "processing");
           return newProgress <= 100 ? newProgress : 100;
         });
       }, 80);
@@ -105,25 +106,25 @@ export default function TopbarHighlightsListItem({
             "--delay": "calc(" + delay + " * 0.05s)",
           }}
         >
-          <div className="flex-1 flex flex-col gap-1 justify-between border-r border-ui-400/20">
-            <div className="flex items-center gap-2 p-1 pr-2 text-sm leading-none">
+          <div className="flex-1 flex flex-col gap-1 p-2 justify-between border-r border-ui-400/20">
+            <div className="flex items-center gap-2 text-sm leading-none">
               <GameIcon game={match.meta.game} size="text-sm" />
               <span
-                className={`text-base uppercase ${
+                className={`uppercase ${
                   match.stats.hasWon ? " text-success-300" : "text-error-300"
                 }`}
               >
                 {match.stats.hasWon ? "Victory" : "Defeat"}
               </span>
-              <span>
+              <span className="text-ui-100">
                 {match.stats.score.team1} - {match.stats.score.team2}
               </span>
-              <span className="text-right text-xs flex-1">
+              <span className="text-right text-xs flex-1 text-ui-300">
                 {match.meta.dateTimeEnded}
               </span>
             </div>
             <div className="flex items-center">
-              <div className="avatar avatar-sm avatar-diamond avatar-simple mx-2">
+              <div className="avatar avatar-xs avatar-simple">
                 <div>
                   <img
                     src={getAgentByID(match.meta.agent).picturePath}
@@ -131,32 +132,34 @@ export default function TopbarHighlightsListItem({
                   />
                 </div>
               </div>
-              <div className="avatar-group -space-x-2">
-                {match.stats.leaderboard.team1.map((agent, agentIndex) => (
-                  <>
-                    <div
-                      key={agentIndex}
-                      className="avatar avatar-xs avatar-diamond avatar-simple"
-                    >
-                      <div>
-                        <img
-                          src={getAgentByID(agent.agent).picturePath}
-                          alt=""
-                        />
+              <div className="flex-1 flex justify-center">
+                <div className="avatar-group space-x-1">
+                  {match.stats.leaderboard.team1.map((agent, agentIndex) => (
+                    <>
+                      <div
+                        key={agentIndex}
+                        className="avatar avatar-tiny avatar-simple"
+                      >
+                        <div>
+                          <img
+                            src={getAgentByID(agent.agent).picturePath}
+                            alt=""
+                          />
+                        </div>
                       </div>
-                    </div>
-                  </>
-                ))}
+                    </>
+                  ))}
+                </div>
               </div>
             </div>
-            <div className="text-xs px-1 pb-1 capitalize text-ui-300">
+            <div className="text-xs capitalize text-ui-300">
               <span className="text-ui-100 uppercase">
                 {getAgentByID(match.meta.agent).name}
               </span>{" "}
               • {match.meta.mode} • {getMapByID(match.meta.map).name}
             </div>
           </div>
-          <div className="relative w-40 flex flex-col items-stretch justify-center gap-2 rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
+          <div className="relative w-40 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
             <div
               className="progresscontainer"
               style={{ "--percent": loadingProgress }}
@@ -181,7 +184,7 @@ export default function TopbarHighlightsListItem({
               </>
             ) : (
               <>
-                <div className="text-sm text-center">Create highlight reel</div>
+                <div className="text-xs text-center">Create highlight reel</div>
                 <button
                   type="button"
                   className="button button-sm button-primary"

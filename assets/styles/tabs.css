@@ -808,6 +808,28 @@
   ;
 }
 
+/* Tab premium */
+
+.tab-premium {
+  :where(a, button, .button) {
+    @apply
+    text-premium-500
+    ;
+    &::after {
+      @apply
+      bg-premium-500
+      ;
+    }
+    &.is-active,
+    &:active,
+    &:hover {
+      @apply
+      text-premium-500
+      ;
+    }
+  }
+}
+
 /* Shining */
 
 .tab,

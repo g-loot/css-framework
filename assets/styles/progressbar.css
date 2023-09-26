@@ -370,7 +370,8 @@
   &[style*="--percent: 100"] {
     @apply
     pointer-events-none
-    animate-scale-out-x-right
+    animate-scale-out
+    /* animate-slide-out-right */
     ;
     > *:first-child::before {
       @apply
@@ -406,11 +407,12 @@
       inset-0
       opacity-100
       bg-[length:1rem_1rem]
-      animate-[progresscontainer-stripes_2s_cubic-bezier(.2,0,.8,1)_infinite]
+      animate-[progresscontainer-stripes_2s_linear_infinite]
       transition
       duration-1000
       bg-[linear-gradient(135deg,_rgba(0,0,0,0.05)_25%,_rgba(0,0,0,0)_25%,_rgba(0,0,0,0)_50%,_rgba(0,0,0,0.05)_50%,_rgba(0,0,0,0.05)_75%,_rgba(0,0,0,0)_75%,_rgba(0,0,0,0)_100%)]
       ;
+      animation-duration: calc(3.5s + ((100 * 0.11s) - (var(--percent) * 0.1s)));
     }
     > * {
       @apply

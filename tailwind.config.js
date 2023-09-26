@@ -285,6 +285,12 @@ module.exports = {
         "slide-in-top": "slideInTop 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "slide-in-bottom":
           "slideInBottom 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-out-left": "slideOutLeft 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-out-right":
+          "slideOutRight 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-out-top": "slideOutTop 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
+        "slide-out-bottom":
+          "slideOutBottom 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fade-in": "fadeIn 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
         "fade-out": "fadeOut 0.44s cubic-bezier(0.7, 0, 0.1, 1) both",
         "scale-in": "scaleIn 0.77s cubic-bezier(0.7, 0, 0.1, 1) both",
@@ -363,6 +369,46 @@ module.exports = {
             opacity: "0",
           },
           "51%, 100%": {
+            opacity: "1",
+          },
+        },
+        slideOutLeft: {
+          "100%": {
+            transform: "translateX(-2rem)",
+            opacity: "0",
+          },
+          "0%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideOutRight: {
+          "100%": {
+            transform: "translateX(2rem)",
+            opacity: "0",
+          },
+          "0%": {
+            transform: "translateX(0)",
+            opacity: "1",
+          },
+        },
+        slideOutTop: {
+          "100%": {
+            transform: "translateY(-2rem)",
+            opacity: "0",
+          },
+          "0%": {
+            transform: "translateY(0)",
+            opacity: "1",
+          },
+        },
+        slideOutBottom: {
+          "100%": {
+            transform: "translateY(2rem)",
+            opacity: "0",
+          },
+          "0%": {
+            transform: "translateY(0)",
             opacity: "1",
           },
         },

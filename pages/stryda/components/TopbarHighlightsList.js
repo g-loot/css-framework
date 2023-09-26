@@ -13,7 +13,7 @@ const Matches = [
   {
     id: 1,
     matchID: 2,
-    isCompleted: false,
+    isCompleted: true,
   },
   {
     id: 2,
@@ -40,13 +40,13 @@ export default function TopbarHighlightsList({ onLoad, ...props }) {
   };
 
   function handleLoad(id, progress, status) {
-    onLoad(id, progress);
     setProgressingItem(id);
     setStatus(status);
+    onLoad(id, progress, status);
   }
 
   return (
-    <ul className="max-h-[400px] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop p-2 space-y-2">
+    <ul className="p-2 space-y-2">
       {Matches.map((match, matchIndex) => (
         <TopbarHighlightsListItem
           key={matchIndex}
