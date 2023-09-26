@@ -47,7 +47,16 @@ export default function ModalShareActivity(props) {
                 <h2 className="modal-title">Share post</h2>
 
                 <div className="flex flex-wrap items-center justify-center gap-8 text-sm py-8">
-                  <div>
+                <div>
+                    <button
+                      type="button"
+                      className="aspect-square rounded-full grid place-content-center bg-mono-900 p-4 interactive"
+                    >
+                      <span className="icon text-3xl icon-tiktok text-mono-100" />
+                    </button>
+                    <div className="mt-2 truncate hidden">Tik-Tok</div>
+                  </div>
+                  {/* <div>
                     <button
                       type="button"
                       className="aspect-square rounded-full grid place-content-center bg-[#25D366] p-4 interactive"
@@ -82,7 +91,7 @@ export default function ModalShareActivity(props) {
                       <span className="icon text-3xl icon-send-message text-mono-100" />
                     </button>
                     <div className="mt-2 truncate hidden">Email</div>
-                  </div>
+                  </div> */}
                 </div>
 
                 {/* 

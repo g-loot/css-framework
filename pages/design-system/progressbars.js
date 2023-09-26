@@ -6,6 +6,52 @@ function RandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+const ProgressContainer = () => {
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const handleClick = () => {
+    let interval;
+
+    if (loadingProgress < 100) {
+      interval = setInterval(() => {
+        setLoadingProgress((prevProgress) => {
+          const newProgress = prevProgress + 1;
+          return newProgress <= 100 ? newProgress : 100;
+        });
+      }, 80);
+    } else {
+      clearInterval(interval);
+    }
+
+    // Clean up the interval when the component unmounts
+    return () => clearInterval(interval);
+  };
+  return (
+    <div className="relative p-8">
+      <div
+        className="progresscontainer"
+        style={{ "--percent": loadingProgress }}
+        onClick={() => setLoadingProgress(0)}
+      >
+        <div>
+          <div className="text-2xl font-bold">{loadingProgress}%</div>
+          <div className="text-sm">Analysing</div>
+        </div>
+        <div>
+          <div className="text-2xl font-bold">{loadingProgress}%</div>
+          <div className="text-sm">Analysing</div>
+        </div>
+      </div>
+      <button
+        type="button"
+        className="button button-sm button-primary"
+        onClick={() => handleClick()}
+      >
+        <span>Automate with AI</span>
+      </button>
+    </div>
+  );
+};
+
 const DSpage = () => {
   const [random1, setRandom1] = useState(0);
   const [random2, setRandom2] = useState(0);
@@ -82,9 +128,7 @@ const DSpage = () => {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-2xl font-bold">
-                          {random1}%
-                        </div>
+                        <div className="text-2xl font-bold">{random1}%</div>
                         <div className="text-xs text-ui-300 uppercase">
                           win rate
                         </div>
@@ -97,9 +141,7 @@ const DSpage = () => {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-2xl font-bold">
-                          {random2}%
-                        </div>
+                        <div className="text-2xl font-bold">{random2}%</div>
                         <div className="text-xs text-ui-300 uppercase">
                           win rate
                         </div>
@@ -112,9 +154,7 @@ const DSpage = () => {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-2xl font-bold">
-                          {random3}%
-                        </div>
+                        <div className="text-2xl font-bold">{random3}%</div>
                         <div className="text-xs text-ui-300 uppercase">
                           win rate
                         </div>
@@ -127,9 +167,7 @@ const DSpage = () => {
                   <div className="progressbar-radial">
                     <div>
                       <div>
-                        <div className="text-2xl font-bold">
-                          {random4}%
-                        </div>
+                        <div className="text-2xl font-bold">{random4}%</div>
                         <div className="text-xs text-ui-300 uppercase">
                           win rate
                         </div>
@@ -184,9 +222,7 @@ const DSpage = () => {
                     <div className="progressbar-sm progressbar-radial m-0">
                       <div>
                         <div>
-                          <div className="text-xl font-bold">
-                            {random2}%
-                          </div>
+                          <div className="text-xl font-bold">{random2}%</div>
                           <div className="text-xs text-ui-300 uppercase">
                             win rate
                           </div>
@@ -280,6 +316,31 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/4oxs3a5b/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Progress container */}
+      <div className="mb-12" id="with-tick">
+        <h2 className="h3 mb-3">Progress container</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex flex-col gap-4 items-center">
+                  <ProgressContainer />
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/79gc54jr/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

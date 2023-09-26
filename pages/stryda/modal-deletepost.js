@@ -35,7 +35,7 @@ export default function ModalDeletePost(props) {
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title h4">Delete post?</h2>
-            <div className="max-w-sm rounded surface overflow-hidden">
+            <div className="max-w-sm rounded surface overflow-hidden mt-4">
               <FeedItemMatchTabSummary match={match} item={item} />
             </div>
           </div>

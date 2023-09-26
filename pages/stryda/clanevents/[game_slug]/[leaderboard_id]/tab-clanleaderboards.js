@@ -258,7 +258,7 @@ export default function TabClanLeaderboardsLeaderboards() {
     );
   }
   function openmodalClanEventOnboarding() {
-    uiContext.openModal(<ModalClanEventHowitworksVideo />);
+    uiContext.openModal(<ModalClanEventOnboarding />);
     // uiContext.openModal(<ModalClanEventOnboarding />);
   }
 

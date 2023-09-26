@@ -434,10 +434,12 @@ module.exports = {
         },
         scaleOut: {
           "0%": {
+            pointerEvents: "none",
             opacity: "1",
             transform: "scale(1)",
           },
           "100%": {
+            pointerEvents: "none",
             opacity: "0",
             transform: "scale(0)",
           },
@@ -576,10 +578,12 @@ module.exports = {
         },
         scaleOutXLeft: {
           "0%": {
+            pointerEvents: "none",
             transform: "scaleX(1)",
             transformOrigin: "0% 0%",
           },
           "100%": {
+            pointerEvents: "none",
             transform: "scaleX(0)",
             transformOrigin: "0% 0%",
           },
@@ -596,10 +600,12 @@ module.exports = {
         },
         scaleOutXRight: {
           "0%": {
+            pointerEvents: "none",
             transform: "scaleX(1)",
             transformOrigin: "100% 100%",
           },
           "100%": {
+            pointerEvents: "none",
             transform: "scaleX(0)",
             transformOrigin: "100% 100%",
           },

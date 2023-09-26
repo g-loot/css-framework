@@ -17,6 +17,7 @@ import { StatsValorantDemoMaps } from "@/mock-data/data-stats-demo-valorant";
 import LoadMore from "@/components/LoadMore/LoadMore";
 import LoadMoreContainer from "@/components/LoadMore/LoadMoreContainer";
 import Avatar from "@/components/Avatar/Avatar";
+import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 export default function StatsValorant() {
   const router = useRouter();
@@ -420,21 +421,7 @@ export default function StatsValorant() {
                   </div>
                   <div className="flex flex-row md:flex-col gap-2 md:gap-4 items-center md:items-end justify-between border-t border-ui-700 md:border-none pt-4 md:pt-0">
                     <div className="hidden md:block">
-                      <button
-                        className={`button button-sm button-tertiary ${
-                          submitting ? "is-loading" : ""
-                        }`}
-                        onClick={addToastWithDelay.bind(this, {
-                          icon: "f-check",
-                          color: "green",
-                          text: "Your stats have been updated.",
-                          autoDelete: true,
-                          autoDeleteDelay: 2500,
-                        })}
-                      >
-                        <span className="icon icon-16 icon-refresh-02" />
-                        <span>Update my stats</span>
-                      </button>
+                      <ButtonStatsUpdate />
                     </div>
                     <div className="md:text-right leading-none mb-2">
                       <div className="text-sm uppercase text-ui-300">

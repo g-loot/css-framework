@@ -22,6 +22,7 @@
       relative
       flex
       justify-center
+      items-center
       gap-2 
       text-ui-300
       cursor-pointer
@@ -115,7 +116,7 @@
       @apply
       flex
       justify-center
-      items-end
+      items-stretch
       relative
       transition
       duration-300

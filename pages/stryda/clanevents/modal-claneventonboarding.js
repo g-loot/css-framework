@@ -142,19 +142,21 @@ export default function ModalClanEventOnboarding(props) {
                     <div className="flex-1 animate-fade-in">
                       <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                         <div className="absolute inset-0 grid place-content-center p-8">
-                          <div className="inline-flex flex-wrap items-center justify-center gap-2">
+                          <div className="inline-flex flex-wrap items-center justify-center child:w-14">
                             {selectedLeaderboard.meta.eligibility.ranks?.map(
                               (rank, rankIndex) => (
-                                <Tooltip
-                                  key={rankIndex}
-                                  placement="top"
-                                  tooltip={rank.name}
-                                >
-                                  <img
-                                    src={rank.image}
-                                    className="inline w-20 h-20 object-contain object-center"
-                                  />
-                                </Tooltip>
+                                <>
+                                  <Tooltip
+                                    key={rankIndex}
+                                    placement="top"
+                                    tooltip={rank.name}
+                                  >
+                                    <img
+                                      src={rank.image}
+                                      className="inline aspect-square object-fill object-center"
+                                    />
+                                  </Tooltip>
+                                </>
                               )
                             )}
                           </div>
@@ -207,7 +209,7 @@ export default function ModalClanEventOnboarding(props) {
                         className="mx-auto aspect-video rounded"
                         width="100%"
                         height="auto"
-                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"

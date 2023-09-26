@@ -15,7 +15,7 @@ import ModalBuyTokens from "@/pages/stryda/wallet/modal-buytokens";
 import Countdown from "@/components/Countdown/Countdown";
 import Avatar from "@/components/Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
-import TopbarHighlightProcessing from "./TopbarHighlightProcessing";
+import TopbarHighlights from "./TopbarHighlights";
 
 export default function Topbar() {
   const router = useRouter();
@@ -79,7 +79,7 @@ export default function Topbar() {
     <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
       <div className="w-full px-2 sm:px-4 relative">
         <div className="flex justify-between lg:gap-4 mx-auto">
-          <div className="flex gap-2 lg:gap-8 items-center">
+          <div className="flex lg:flex-1 items-center">
             <div className="hidden gap-2">
               <button
                 type="button"
@@ -88,20 +88,20 @@ export default function Topbar() {
                 }`}
                 onClick={handleBack}
               >
-                <span className="icon icon-ctrl-left" />
+                <span className="icon icon-arrow-left" />
               </button>
-              <button
+              {/* <button
                 type="button"
                 className={`button button-tertiary rounded-full ${
                   hasForward ? "" : "opacity-50 pointer-events-none"
                 }`}
                 onClick={handleForward}
               >
-                <span className="icon icon-ctrl-right" />
-              </button>
+                <span className="icon icon-arrow-right" />
+              </button> */}
             </div>
-            <Link href={`/stryda/home${prototype.getURLparams()}`}>
-              <a className="flex items-center gap-2 interactive">
+            {/* <Link href={`/stryda/home${prototype.getURLparams()}`}>
+              <a className="flex items-center gap-2 interactive shrink-0">
                 <img
                   width="110"
                   height="auto"
@@ -111,7 +111,7 @@ export default function Topbar() {
                 />
                 <span className="block md:hidden icon icon-stryda-symbol text-3xl text-main" />
               </a>
-            </Link>
+            </Link> */}
             {/*
             <Tooltip
               placement="bottom"
@@ -128,7 +128,7 @@ export default function Topbar() {
               </Link>
             </Tooltip>
             */}
-            <div className="hidden lg:flex gap-2 mr-2">
+            <div className="hidden lg:flex gap-0 mr-2">
               <div
                 className={`rounded-full bg-ui-500 ${
                   hasBack ? "" : "opacity-50 pointer-events-none"
@@ -143,7 +143,7 @@ export default function Topbar() {
                   <span className="icon icon-ctrl-left" />
                 </button>
               </div>
-              <div
+              {/* <div
                 className={`rounded-full bg-ui-500 ${
                   hasForward ? "" : "opacity-50 pointer-events-none"
                 }`}
@@ -156,7 +156,7 @@ export default function Topbar() {
                 >
                   <span className="icon icon-ctrl-right" />
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="md:hidden">
               <label
@@ -171,6 +171,22 @@ export default function Topbar() {
                 <Link href={`/stryda/home${prototype.getURLparams()}`}>
                   <button
                     type="button"
+                    className={`w-12 ${
+                      router.pathname.endsWith("stryda") ||
+                      router.pathname.includes("home")
+                        ? "is-active"
+                        : ""
+                    }`}
+                  >
+                    <div className="absolute inset-0 grid place-content-center">
+                      <span className="icon icon-stryda-symbol text-2xl" />
+                    </div>
+                  </button>
+                </Link>
+                {/*
+                <Link href={`/stryda/home${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
                     className={
                       router.pathname.endsWith("stryda") ||
                       router.pathname.includes("home")
@@ -181,18 +197,7 @@ export default function Topbar() {
                     <span>Home</span>
                   </button>
                 </Link>
-              </li>
-              <li>
-                <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
-                  <button
-                    type="button"
-                    className={
-                      router.pathname.includes("battlepass") ? "is-active" : ""
-                    }
-                  >
-                    <span>Battle Pass</span>
-                  </button>
-                </Link>
+                  */}
               </li>
               <li>
                 <Link href={`/stryda/missions${prototype.getURLparams()}`}>
@@ -251,6 +256,19 @@ export default function Topbar() {
                 </ul>
               </li>
               <li>
+                <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    className={
+                      router.pathname.includes("battlepass") ? "is-active" : ""
+                    }
+                  >
+                    <span>Battle Pass</span>
+                  </button>
+                </Link>
+              </li>
+              {/*
+              <li>
                 <Link href={`/stryda/shop${prototype.getURLparams()}`}>
                   <button
                     type="button"
@@ -262,7 +280,6 @@ export default function Topbar() {
                   </button>
                 </Link>
               </li>
-              {/*
               <li>
                 <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                   <button
@@ -285,8 +302,11 @@ export default function Topbar() {
                   */}
             </ul>
           </div>
-          <div className="flex justify-end items-center gap-1 sm:gap-2">
-            <TopbarHighlightProcessing />
+          <div className="flex lg:flex-1 items-center justify-center">
+
+          </div>
+          <div className="flex lg:flex-1 justify-end items-center gap-1 sm:gap-2">
+            <TopbarHighlights />
             <Link href={`/stryda/search${prototype.getURLparams()}`}>
               <div className="bg-ui-500 rounded-full">
                 <button
@@ -380,7 +400,7 @@ export default function Topbar() {
               </div>
             </div>
 
-            <div className="flex gap-x-3 items-stretch justify-center bg-ui-500 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
+            {/* <div className="flex gap-x-3 items-stretch justify-center bg-ui-500 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
               <div className="inline-flex xl:hidden items-center">
                 <Tooltip
                   placement="bottom"
@@ -536,7 +556,7 @@ export default function Topbar() {
                   </Tooltip>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             <div className="dropdown dropdown-end">
               <div

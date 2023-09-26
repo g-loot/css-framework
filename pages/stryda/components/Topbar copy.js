@@ -15,7 +15,7 @@ import ModalBuyTokens from "@/pages/stryda/wallet/modal-buytokens";
 import Countdown from "@/components/Countdown/Countdown";
 import Avatar from "@/components/Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
-import TopbarHighlightProcessing from "./TopbarHighlightProcessing";
+import TopbarHighlights from "./TopbarHighlights";
 
 export default function Topbar() {
   const router = useRouter();
@@ -286,7 +286,7 @@ export default function Topbar() {
             </ul>
           </div>
           <div className="flex justify-end items-center gap-1 sm:gap-2">
-            <TopbarHighlightProcessing />
+            <TopbarHighlights />
             <Link href={`/stryda/search${prototype.getURLparams()}`}>
               <div className="bg-ui-500 rounded-full">
                 <button
