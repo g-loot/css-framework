@@ -1,21 +1,46 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useContext } from "react";
 import { usePrototypeData } from "@/contexts/prototype";
+import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
-import TopbarHighlightsList from "./TopbarHighlightsList";
 import TopbarHighlightsSettings from "./TopbarHighlightsSettings";
+import TopbarHighlightsListItem from "./TopbarHighlightsListItem";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
-export default function TopbarHighlights(props) {
+const feedItems = [
+  {
+    id: 12,
+    isCompleted: false,
+  },
+  {
+    id: 13,
+    isCompleted: false,
+  },
+  {
+    id: 14,
+    isCompleted: false,
+  },
+  {
+    id: 15,
+    isCompleted: false,
+  },
+  {
+    id: 16,
+    isCompleted: true,
+  },
+];
+
+export default function TopbarHighlights() {
+  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
-  const router = useRouter();
   const { query } = useRouter();
   const isEmpty = query.empty === "true" ? true : false;
-  const [loading, setLoading] = useState(true);
-  const [hasNewVideos, setHasNewVideos] = useState(false);
   const [buttonWidth, setButtonWidth] = useState(0);
   const spanRef = useRef(null);
   const [activeTab, setActiveTab] = useState("list");
-  const [loadingProgress, setLoadingProgress] = useState(0);
-  const [status, setStatus] = useState();
+  const [itemsToProcess, setItemsToProcess] = useState(feedItems.filter((i) => !i.isCompleted).length);
+  const [processingID, setProcessingID] = useState(0);
+  const [processingPercent, setProcessingPercent] = useState(0);
+  const [processingStatus, setProcessingStatus] = useState("idle");
   let interval;
 
   const [isActive, setActive] = useState(false);
@@ -40,11 +65,17 @@ export default function TopbarHighlights(props) {
   });
 
   useEffect(() => {
-    handleStart(4000);
+    extendButton(1000);
   }, []);
 
-  const handleStart = (delay) => {
-    setStatus("processing");
+  useEffect(() => {
+    console.log("itemsToProcess", itemsToProcess);
+    if(itemsToProcess === 0) {
+        setButtonWidth(0);
+      }
+  }, [itemsToProcess]);
+
+  const extendButton = (delay) => {
     if (spanRef.current) {
       const spanWidth = spanRef.current.offsetWidth;
       interval = setTimeout(() => {
@@ -56,18 +87,41 @@ export default function TopbarHighlights(props) {
     }
   };
 
-  useEffect(() => {
-    if (loadingProgress === 100) {
-      setStatus("finished");
-      setButtonWidth(0);
-    } else if (loadingProgress === 1) {
-      handleStart(0);
+  const handleProcessing = (id) => {
+    let interval;
+    if (processingPercent < 100) {
+      interval = setInterval(() => {
+        setProcessingPercent((prevProgress) => {
+          const newProgress = prevProgress + 1;
+          return newProgress <= 100 ? newProgress : 100;
+        });
+      }, 80);
+    } else {
+      clearInterval(interval);
     }
-  }, [loadingProgress]);
+    return () => clearInterval(interval);
+  };
 
-  const handleLoad = (id, progress, status) => {
-    setLoadingProgress(progress);
-    console.log(status, "status");
+  useEffect(() => {
+    if (processingPercent === 100) {
+      setProcessingStatus("finished");
+      setItemsToProcess(itemsToProcess - 1);
+      uiContext.openModal(
+        <ModalFeedItemViewer
+          item={prototype.getFeedItemByID(processingID)}
+          selectedTab={"highlight"}
+          editMode={true}
+        />
+      );
+    } else if (processingPercent === 1) {
+      setProcessingStatus("processing");
+    }
+  }, [processingPercent]);
+
+  const handleLoad = (id) => {
+    setProcessingID(id);
+    setProcessingPercent(0);
+    handleProcessing(id);
   };
 
   return (
@@ -88,19 +142,21 @@ export default function TopbarHighlights(props) {
             }`}
             onClick={dropdownActive}
           >
-            {loadingProgress > 0 && (
+            {processingPercent > 0 && (
               <div className="!m-0 absolute rounded-full inset-1 z-50 pointer-events-none overflow-hidden">
                 <div
                   className="progresscontainer"
-                  style={{ "--percent": loadingProgress }}
+                  style={{ "--percent": processingPercent }}
                 >
                   <div>
                     <div className="text-sm font-bold">
-                      {loadingProgress}% Analysing
+                      {processingPercent}% Analysing
                     </div>
                   </div>
                   <div>
-                    <div className="text-sm">{loadingProgress}% Analysing</div>
+                    <div className="text-sm">
+                      {processingPercent}% Analysing
+                    </div>
                   </div>
                 </div>
               </div>
@@ -166,7 +222,21 @@ export default function TopbarHighlights(props) {
               </ul>
               <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
                 {isActive && activeTab === "list" && (
-                  <TopbarHighlightsList onLoad={handleLoad} />
+                  <ul className="p-2 space-y-2">
+                    {feedItems.map((item, itemIndex) => (
+                      <TopbarHighlightsListItem
+                        key={itemIndex}
+                        delay={itemIndex}
+                        id={item.id}
+                        match={prototype.getMatchByID(prototype.getFeedItemByID(item.id).itemID)}
+                        onLoad={handleLoad}
+                        finished={item.isCompleted}
+                        processingID={processingID}
+                        processingStatus={processingStatus}
+                        processingPercent={processingPercent}
+                      />
+                    ))}
+                  </ul>
                 )}
                 {isActive && activeTab === "settings" && (
                   <TopbarHighlightsSettings />

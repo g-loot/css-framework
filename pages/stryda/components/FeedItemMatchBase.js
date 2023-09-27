@@ -14,7 +14,8 @@ export default function FeedItemMatchBase(props) {
   const item = props.item;
   const match = props.match;
   const detailedView = props.detailedView || false;
-  const [isEditing, setIsEditing] = useState(false);
+  const editMode = props.editMode !== undefined ? props.editMode : false;
+  const [isEditing, setIsEditing] = useState(editMode);
   const [savedText, setSavedText] = useState("");
   const [editText, setEditText] = useState("");
   const textareaRef = useRef(null);
@@ -54,7 +55,7 @@ export default function FeedItemMatchBase(props) {
   };
 
   const handleInputBlur = () => {
-    if(editText.length <= maxChar) {
+    if(editText.length <= maxChar || editText === " " || editText === "") {
       setIsEditing(false);
     } else if (textareaRef.current) {
       textareaRef.current.focus();
@@ -100,7 +101,7 @@ export default function FeedItemMatchBase(props) {
                         : ""
                     }`}
                   >
-                    {prototype.getUserByID(match.user)?.nickname}
+                    {prototype.getUserByID(match.user)?.nickname} {isEditing && <span className="text-base">editMode</span>}
                   </span>
                 </Link>
               </div>

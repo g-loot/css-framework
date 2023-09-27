@@ -65,35 +65,6 @@ export default function Home() {
               >
                 <WidgetBattlepass />
                 <WidgetMissions />
-                {/*
-                <div className="surface rounded px-4 py-6 text-center">
-                  <PremiumLogo
-                    src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                    width="180"
-                    height="auto"
-                    className="mx-auto"
-                  />
-                  <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
-                    Increase your amount of XP you can earn each day with a{" "}
-                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                      <a className="link text-premium-500">
-                        Premium subscription
-                      </a>
-                    </Link>
-                    .
-                  </p>
-                  <div className="mx-auto mt-2">
-                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                      <a className="button button-premium is-shining">
-                        <span>Get Premium</span>
-                      </a>
-                    </Link>
-                  </div>
-                </div>
-                <div className="surface-ui-600 rounded aspect-square grid place-content-center text-center text-2xl text-ui-400">
-                  <span>AD</span>
-                </div>
-                */}
               </div>
             </div>
             <div className="flex-1 overflow-hidden">
@@ -108,26 +79,6 @@ export default function Home() {
                 style={{ top: "calc(48px + 1rem)" }}
               >
                 <WidgetFollowings />
-                {/*
-                <div className="surface surface-dimmed rounded text-center flex flex-col items-center px-4 pb-4">
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1680426016/Stryda/illustrations/battlepass/battlepass-reward-10.png"
-                    alt=""
-                    className="h-36 w-auto -mt-8 -mb-4 drop-shadow-xl"
-                  />
-                  <h5>Need tokens?</h5>
-                  <p className="text-ui-300 mt-2 mb-3">
-                    Buy more tokens to compete in Ladders.
-                  </p>
-                  <button
-                    onClick={openModalBuyTokens}
-                    type="button"
-                    className="button button-primary px-4"
-                  >
-                    <span>Get tokens</span>
-                  </button>
-                </div>
-                            */}
               </div>
             </div>
           </section>

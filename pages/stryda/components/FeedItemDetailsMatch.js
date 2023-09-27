@@ -19,6 +19,7 @@ export default function FeedItemDetailsMatch(props) {
   const match = props.match;
   const { tab } = router.query;
   const selectedTab = tab ? tab : props.selectedTab;
+  const editMode = props.editMode !== undefined ? props.editMode : false;
   const url = "/stryda/activity/";
   const defaultTab = selectedTab != "default" ? selectedTab : (match.meta.media?.videoUrl ? "highlight" : "summary");
   const [activeTab, setActiveTab] = useState(defaultTab);
@@ -44,6 +45,7 @@ export default function FeedItemDetailsMatch(props) {
                   match={match}
                   item={item}
                   detailedView={true}
+                  editMode={editMode}
                 />
 
                 {/* <div className="relative z-10 p-4 flex flex-col lg:flex-row items-start gap-4">

@@ -42,7 +42,7 @@ export default function FeedItemPost(props) {
             </p>
             {item.buttonLabel && (
               <Link href={item.url}>
-                <button type="button" className="button button-primary">
+                <button type="button" className="button button-sm button-primary">
                   <span>{item.buttonLabel}</span>
                 </button>
               </Link>

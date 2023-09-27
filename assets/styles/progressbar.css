@@ -371,7 +371,6 @@
     @apply
     pointer-events-none
     animate-scale-out
-    /* animate-slide-out-right */
     ;
     > *:first-child::before {
       @apply
@@ -391,33 +390,38 @@
     text-center
     text-ui-100
     ;
-  }
-  > *:first-child {
-    @apply
-    z-10
-    text-ui-900
-    bg-main
-    ;
-    clip-path: polygon(0 0, calc(1% * var(--percent)) 0, calc(1% * var(--percent)) 100%, 0% 100%);
-    &::before {
+    &:nth-child(1) {
       @apply
-      content-['']
-      absolute
-      z-0
-      inset-0
-      opacity-100
-      bg-[length:1rem_1rem]
-      animate-[progresscontainer-stripes_2s_linear_infinite]
-      transition
-      duration-1000
-      bg-[linear-gradient(135deg,_rgba(0,0,0,0.05)_25%,_rgba(0,0,0,0)_25%,_rgba(0,0,0,0)_50%,_rgba(0,0,0,0.05)_50%,_rgba(0,0,0,0.05)_75%,_rgba(0,0,0,0)_75%,_rgba(0,0,0,0)_100%)]
-      ;
-      animation-duration: calc(3.5s + ((100 * 0.11s) - (var(--percent) * 0.1s)));
-    }
-    > * {
-      @apply
-      relative
       z-10
+      text-ui-900
+      bg-main
+      ;
+      clip-path: polygon(0 0, calc(1% * var(--percent)) 0, calc(1% * var(--percent)) 100%, 0% 100%);
+      &::before {
+        @apply
+        content-['']
+        absolute
+        z-0
+        inset-0
+        opacity-100
+        bg-[length:1rem_1rem]
+        animate-[progresscontainer-stripes_2s_linear_infinite]
+        transition
+        duration-1000
+        bg-[linear-gradient(135deg,_rgba(0,0,0,0.05)_25%,_rgba(0,0,0,0)_25%,_rgba(0,0,0,0)_50%,_rgba(0,0,0,0.05)_50%,_rgba(0,0,0,0.05)_75%,_rgba(0,0,0,0)_75%,_rgba(0,0,0,0)_100%)]
+        ;
+        animation-duration: calc(3.5s + ((100 * 0.11s) - (var(--percent) * 0.1s)));
+      }
+      > * {
+        @apply
+        relative
+        z-10
+        ;
+      }
+    }
+    &:nth-child(2) {
+      @apply
+      shadow-[inset_0_0_.5rem_0_rgba(var(--color-ui-400)/30%)]
       ;
     }
   }

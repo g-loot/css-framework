@@ -9,6 +9,7 @@ export default function ModalFeedItemViewer(props) {
   const prototype = usePrototypeData();
   const item = props.item;
   const selectedTab = props.selectedTab;
+  const editMode = props.editMode || false;
 
   const handleKeyDown = (e) => {
     if (e.key === "Escape" || e.keyCode === 27) {
@@ -24,23 +25,25 @@ export default function ModalFeedItemViewer(props) {
   }, []);
 
   const handleCloseModal = () => {
-    history.pushState(null, '', `/prototype/home`);
+    history.pushState(null, "", `/prototype/home`);
     uiContext.closeModal();
-  }
+  };
 
   return (
     <>
       {item && (
         <>
-          <div className="absolute z-10 top-4 right-4">
-            <button
-              type="button"
-              className="button button-secondary button-close"
-              onClick={handleCloseModal}
-            >
-              <span className="icon icon-e-remove" />
-            </button>
-          </div>
+          {!editMode && (
+            <div className="fixed z-[51] top-4 right-4">
+              <button
+                type="button"
+                className="button button-secondary button-close"
+                onClick={handleCloseModal}
+              >
+                <span className="icon icon-e-remove" />
+              </button>
+            </div>
+          )}
           <div className="modal surface-transparent max-w-lg modal-top">
             <div className="modal-content p-0">
               {item.type === "match" && (
@@ -48,6 +51,7 @@ export default function ModalFeedItemViewer(props) {
                   item={item}
                   match={prototype.getMatchByID(item.itemID)}
                   selectedTab={selectedTab}
+                  editMode={editMode}
                 />
               )}
             </div>
@@ -55,7 +59,7 @@ export default function ModalFeedItemViewer(props) {
           <button
             type="button"
             className="absolute z-0 inset-0"
-            onClick={handleCloseModal}
+            onClick={editMode ? null : handleCloseModal}
           />
         </>
       )}

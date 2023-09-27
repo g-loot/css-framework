@@ -22,7 +22,6 @@
 .label {
   @apply
   text-sm
-  uppercase
   font-bold
   leading-tight
   ;

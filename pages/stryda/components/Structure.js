@@ -10,6 +10,8 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
 
+  const pageTitle = `${title} — Stryda v2`;
+
   /*useEffect(() => {
     if (typeof window !== "undefined") {
       document.body.setAttribute("data-theme", "lighter");
@@ -22,7 +24,7 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
   return (
     <>
       <Head>
-        <title>{title} — Stryda v2</title>
+        <title>{pageTitle}</title>
         <meta name="description" content="Stryda Prototype" />
         <link
           rel="icon"
@@ -72,45 +74,8 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
           </div>
         </div>
       )}
-      {/* <div className="absolute bottom-2 left-2">
-        <button type="button" className="button button-main rounded-full">
-
-        </button>
-      </div> */}
-
-
       <div className={`min-h-screen ${fullWidth ? '' : 'container sm:px-8'}`}>{children}</div>
       {!hiddenUI && <Footer />}
-      {/*
-      <div className="drawer min-h-full">
-        <input id="drawer-1" type="checkbox" className="drawer-toggle" />
-        <div className="drawer-content">
-          
-        </div>
-        <div className="drawer-side">
-          <label htmlFor="drawer-prototype" className="drawer-overlay"></label>
-          <div className="p-4 overflow-y-auto w-1/2 lg:w-80 bg-ui-700 text-base-content">
-            <ul className="menu">
-              <li>
-                <a>
-                  <span>Item 1</span>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <span>Item 2</span>
-                </a>
-              </li>
-              <li>
-                <a>
-                  <span>Item 3</span>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-  */}
     </>
   );
 }

@@ -34,7 +34,7 @@ export default function Feed() {
 
   return (
     <>
-      {prototype.feedItems.map((item, itemIndex) => (
+      {prototype.feedItems.filter((i) => !i.isHidden).map((item, itemIndex) => (
         <FeedItem
           item={item}
           key={itemIndex}
