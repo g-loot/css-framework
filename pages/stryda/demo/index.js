@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { usePrototypeData } from "@/contexts/prototype";
 
 export default function Demo() {
   const projects = [
@@ -63,7 +62,7 @@ export default function Demo() {
           href="https://res.cloudinary.com/gloot/image/upload/v1671441061/Stryda/favicons/stryda-favicon.png"
         />
       </Head>
-      <div className="absolute inset-0 p-4 flex items-center justify-center">
+      <div className="absolute inset-0 p-4 flex flex-col items-center justify-center">
         <div className="w-full max-w-xl grid md:grid-cols-2 lg:grid-cols-3 items-stretch justify-center gap-4 p-4">
           {projects
             .slice(0)

@@ -81,15 +81,7 @@ button {
     }
   }
 
-  /*
-  &:not([class*='rounded']) {
-    @apply
-    rounded-full
-    ;
-  }
-  */
-
-  &:not(.switch) {
+  &:not(.switch):not(.button-stretch) {
     @apply
     gap-2
     ;
@@ -378,10 +370,12 @@ button {
       }
     }
   }
+}
 
-  /* Sizes */
+/* Sizes */
 
-  &.button-lg {
+@define-mixin button-lg {
+  & {
     @apply
     py-3
     px-5
@@ -399,7 +393,9 @@ button {
       ;
     }
   }
-  &.button-md {
+}
+@define-mixin button-md {
+  & {
     @apply
     py-2.5
     ;
@@ -410,7 +406,9 @@ button {
       ;
     }
   }
-  &.button-sm {
+}
+@define-mixin button-sm {
+  & {
     @apply
     py-2
     text-sm
@@ -427,7 +425,9 @@ button {
       ;
     }
   }
-  &.button-xs {
+}
+@define-mixin button-xs {
+  & {
     @apply
     py-1.5
     text-xs
@@ -444,9 +444,25 @@ button {
       ;
     }
   }
+}
+.button {
+  &.button-lg {
+    @mixin button-lg;
+  }
+  &.button-md {
+    @mixin button-md;
+  }
+  &.button-sm {
+    @mixin button-sm;
+  }
+  &.button-xs {
+    @mixin button-xs;
+  }
+}
 
-  /* Currency */
+/* Currency */
 
+.button {
   &.button-currency {
     @apply
     p-0.5
@@ -753,14 +769,10 @@ button {
       ;
     }
 
-    &::before {
-   
-    }
     &::after {
       animation-delay: .1s;
       
     }
-
   }
 
   /* Close */ 
@@ -1120,268 +1132,212 @@ button {
 @media only screen and (min-width: 640px) {
 	.button {
     &.sm\:button-lg {
-      @apply
-      py-3
-      px-5
-      text-lg
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-lg
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-3
-        ;
-      }
+      @mixin button-lg;
     }
     &.sm\:button-md {
-      @apply
-      py-2.5
-      ;
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2.5
-        ;
-      }
+      @mixin button-md;
     }
     &.sm\:button-sm {
-      @apply
-      py-2
-      text-sm
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-sm
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2
-        ;
-      }
+      @mixin button-sm;
     }
     &.sm\:button-xs {
-      @apply
-      py-1.5
-      text-xs
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-xs
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-1.5
-        ;
-      }
+      @mixin button-xs;
     }
   }
 }
 @media only screen and (min-width: 768px) {
 	.button {
     &.md\:button-lg {
-      @apply
-      py-3
-      px-5
-      text-lg
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-lg
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-3
-        ;
-      }
+      @mixin button-lg;
     }
     &.md\:button-md {
-      @apply
-      py-2.5
-      ;
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2.5
-        ;
-      }
+      @mixin button-md;
     }
     &.md\:button-sm {
-      @apply
-      py-2
-      text-sm
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-sm
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2
-        ;
-      }
+      @mixin button-sm;
     }
     &.md\:button-xs {
-      @apply
-      py-1.5
-      text-xs
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-xs
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-1.5
-        ;
-      }
+      @mixin button-xs;
     }
   }
 }
 @media only screen and (min-width: 1024px) {
 	.button {
     &.lg\:button-lg {
-      @apply
-      py-3
-      px-5
-      text-lg
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-lg
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-3
-        ;
-      }
+      @mixin button-lg;
     }
     &.lg\:button-md {
-      @apply
-      py-2.5
-      ;
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2.5
-        ;
-      }
+      @mixin button-md;
     }
     &.lg\:button-sm {
-      @apply
-      py-2
-      text-sm
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-sm
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2
-        ;
-      }
+      @mixin button-sm;
     }
     &.lg\:button-xs {
-      @apply
-      py-1.5
-      text-xs
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-xs
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-1.5
-        ;
-      }
+      @mixin button-xs;
     }
   }
 }
 @media only screen and (min-width: 1280px) {
 	.button {
     &.xl\:button-lg {
-      @apply
-      py-3
-      px-5
-      text-lg
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-lg
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-3
-        ;
-      }
+      @mixin button-lg;
     }
     &.xl\:button-md {
-      @apply
-      py-2.5
-      ;
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2.5
-        ;
-      }
+      @mixin button-md;
     }
     &.xl\:button-sm {
-      @apply
-      py-2
-      text-sm
-      ;
-      &[data-feedback]::before {
-        @apply
-        text-sm
-        ;
-      }
-      &[class*='rounded-full'],
-      &.button-play {
-        @apply
-        px-2
-        ;
-      }
+      @mixin button-sm;
     }
     &.xl\:button-xs {
+      @mixin button-xs;
+    }
+  }
+}
+
+/* Button loader */
+
+.button {
+  &.button-loader {
+    > .progresscontainer {
       @apply
-      py-1.5
-      text-xs
+      !m-0
+      absolute
+      rounded-full
+      inset-1
+      z-50
+      pointer-events-none
+      overflow-hidden
       ;
-      &[data-feedback]::before {
+    }
+    &.button-secondary {
+      &:has([style*="--percent:0"]),
+      &:has([style*="--percent: 0"]),
+      & {
         @apply
-        text-xs
+        !shadow-[inset_0_0_0_1px_rgba(var(--color-main)/70%),inset_0_-0.25rem_1rem_0_rgba(var(--color-main)/20%)]
         ;
+        > span {
+          @apply
+          text-main
+          ;
+        }
       }
-      &[class*='rounded-full'],
-      &.button-play {
+      /* &:has([style*="--percent:100"]),
+      &:has([style*="--percent: 100"]) {
         @apply
-        px-1.5
+        !shadow-[inset_0_0_0_1px_rgba(var(--color-success-500)/70%),inset_0_-0.25rem_1rem_0_rgba(var(--color-success-500)/20%)]
         ;
+        > span {
+          @apply
+          text-success-500
+          ;
+        }
+        > .progresscontainer {
+          > *:nth-child(1) {
+            @apply
+            bg-success-500
+            ;
+          }
+        }
+      } */
+    }
+    &.button-premium {
+      > .progresscontainer {
+        > *:nth-child(1) {
+          @apply
+          bg-premium-500
+          ;
+        }
       }
     }
+    &.button-error {
+      > .progresscontainer {
+        > *:nth-child(1) {
+          @apply
+          bg-error-500
+          ;
+        }
+      }
+    }
+    &.button-success {
+      > .progresscontainer {
+        > *:nth-child(1) {
+          @apply
+          bg-success-500
+          ;
+        }
+      }
+    }
+  }
+}
+
+/* Button stretch */
+
+.button {
+  &.button-stretch {
+    @apply
+    gap-0
+    px-2.5
+    ;
+    > span {
+      &:not(.icon) {
+        @apply
+        /* max-w-[0px] */
+        !m-0
+        overflow-hidden
+        whitespace-nowrap
+        normal-case
+        leading-none
+        items-center
+        justify-center
+        grid
+        grid-cols-[0fr]
+        opacity-0
+        transition-[grid-template-columns,opacity,width]
+        ease-[cubic-bezier(0.6,0,0.4,1)]
+        duration-500
+        ;
+        grid-template-columns: 0fr;
+        > * {
+          @apply
+          px-0
+          transition
+          ease-[cubic-bezier(0.6,0,0.4,1)]
+          duration-700
+          overflow-hidden
+          flex
+          before:content-['']
+          before:w-1
+          after:content-['']
+          after:w-2
+          translate-x-1/2
+          ;
+        }
+      }
+    }
+    &.is-active {
+      > span {
+        &:not(.icon) {
+          @apply
+          opacity-100
+          grid-cols-[1fr]
+          ;
+          > * {
+            @apply
+            translate-x-0
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes button-stretch-label {
+  from {
+    max-width: 0px;
+  }
+  to {
+    max-width: 200px;
   }
 }

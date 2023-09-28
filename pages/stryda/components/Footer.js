@@ -13,7 +13,7 @@ export default function Footer(props) {
 
   return (
     <footer
-      className={`relative z-50 bg-ui-800 border-t border-ui-700 py-12 ${
+      className={`relative z-[49] bg-ui-800 border-t border-ui-700 py-12 ${
         props.className ? props.className : ""
       }`}
     >

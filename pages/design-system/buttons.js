@@ -3,6 +3,67 @@ import React, { useContext, useState } from "react";
 import Button from "@/components/Button/Button";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Link from "next/link";
+
+const ButtonLoader = ({ children, ...props }) => {
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const handleClick = () => {
+    let interval;
+    setLoadingProgress(0);
+
+    if (loadingProgress < 100) {
+      interval = setInterval(() => {
+        setLoadingProgress((prevProgress) => {
+          const newProgress = prevProgress + 1;
+          return newProgress <= 100 ? newProgress : 100;
+        });
+      }, 80);
+    } else {
+      clearInterval(interval);
+    }
+
+    return () => clearInterval(interval);
+  };
+  return (
+    <button
+      type="button"
+      className={`button button-loader ${props.variant}`}
+      onClick={() => handleClick()}
+    >
+      <div
+        className="progresscontainer"
+        style={{ "--percent": loadingProgress }}
+      >
+        <div>
+          <div>{loadingProgress}% loading</div>
+        </div>
+        <div>
+          <div>{loadingProgress}% loading</div>
+        </div>
+      </div>
+      <span>Button label</span>
+    </button>
+  );
+};
+
+const ButtonStretch = ({ children, ...props }) => {
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setTimeout(() => {
+      setIsActive(!isActive);
+    }, 500);
+  };
+  return (
+    <button
+      type="button"
+      className={`button button-stretch ${props.variant} ${isActive ? 'is-active' : ''}`}
+      onClick={() => setIsActive(!isActive)}
+    >
+      <span><span>Button label</span></span>
+      <span className="icon icon-video" />
+    </button>
+  );
+};
 
 const DSpage = () => {
   const delay = 4000;
@@ -18,12 +79,12 @@ const DSpage = () => {
   const [buttonFeedbackMessage9, setButtonFeedbackMessage9] = useState("");
   const [buttonFeedbackMessage10, setButtonFeedbackMessage10] = useState("");
   const [buttonFeedbackMessage11, setButtonFeedbackMessage11] = useState("");
-  const [buttonFeedbackMessage12, setButtonFeedbackMessage12]= useState("");
-  const [buttonFeedbackMessage13, setButtonFeedbackMessage13]= useState("");
+  const [buttonFeedbackMessage12, setButtonFeedbackMessage12] = useState("");
+  const [buttonFeedbackMessage13, setButtonFeedbackMessage13] = useState("");
   const [buttonFeedbackMessage14, setButtonFeedbackMessage14] = useState("");
   const [buttonFeedbackMessage15, setButtonFeedbackMessage15] = useState("");
-  const [buttonFeedbackMessage16, setButtonFeedbackMessage16]= useState("");
-  const [buttonFeedbackMessage17, setButtonFeedbackMessage17]= useState("");
+  const [buttonFeedbackMessage16, setButtonFeedbackMessage16] = useState("");
+  const [buttonFeedbackMessage17, setButtonFeedbackMessage17] = useState("");
 
   function buttonFeedback1(message) {
     setButtonFeedbackMessage1(message);
@@ -156,7 +217,12 @@ const DSpage = () => {
         {/* variant: primary */}
         <div className="surface rounded-lg p-4">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
-            <h3 className="h4 mb-6 lg:mb-10">Primary</h3>
+            <h3 className="h4 mb-6 lg:mb-10">
+              Primary{" "}
+              <div className="chip chip-xs chip-secondary pointer-events-none uppercase">
+                <span>default</span>
+              </div>
+            </h3>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
@@ -882,9 +948,9 @@ const DSpage = () => {
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Medium{" "}
-                    <button className="chip chip-xs chip-secondary pointer-events-none uppercase">
+                    <div className="chip chip-xs chip-secondary pointer-events-none uppercase">
                       <span>default</span>
-                    </button>
+                    </div>
                   </div>
                   <div className="flex-1 flex flex-col items-start flex-wrap gap-2">
                     <Button
@@ -1526,12 +1592,11 @@ const DSpage = () => {
               </div>
             </div>
           </div>
-          <div
-            id="feedback-in-tooltip"
-          >
+          <div id="feedback-in-tooltip">
             <h3 className="h4 mb-3">In tooltip</h3>
             <p className="mb-5">
-              You can choose to put the feedback in a tooltip message by adding a
+              You can choose to put the feedback in a tooltip message by adding
+              a
               <code
                 className="interactive text-xs"
                 onClick={() => {
@@ -1545,10 +1610,11 @@ const DSpage = () => {
                   navigator.clipboard.writeText('data-feedback-icon="success"');
                 }}
               >
-                &#91;data-feedback-icon=&#34;success || error || attention&#34;&#93;
+                &#91;data-feedback-icon=&#34;success || error ||
+                attention&#34;&#93;
               </code>{" "}
-              attribute to your button. Like the label feeedback, the message is visible for 4
-              seconds.
+              attribute to your button. Like the label feeedback, the message is
+              visible for 4 seconds.
             </p>
             <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
               <div className="flex-1 space-y-4">
@@ -1561,7 +1627,10 @@ const DSpage = () => {
                       className="button rounded-full button-success"
                       data-feedback={buttonFeedbackMessage6}
                       data-feedback-icon="success"
-                      onClick={buttonFeedback6.bind(this, "Link copied successfully")}
+                      onClick={buttonFeedback6.bind(
+                        this,
+                        "Link copied successfully"
+                      )}
                     >
                       <span className="icon icon-network-communication" />
                     </button>
@@ -1569,7 +1638,10 @@ const DSpage = () => {
                       className="button rounded-full button-secondary"
                       data-feedback={buttonFeedbackMessage7}
                       data-feedback-icon="success"
-                      onClick={buttonFeedback7.bind(this, "Link copied successfully")}
+                      onClick={buttonFeedback7.bind(
+                        this,
+                        "Link copied successfully"
+                      )}
                     >
                       <span className="icon icon-network-communication" />
                     </button>
@@ -1577,7 +1649,10 @@ const DSpage = () => {
                       className="button rounded-full button-tertiary"
                       data-feedback={buttonFeedbackMessage8}
                       data-feedback-icon="success"
-                      onClick={buttonFeedback8.bind(this, "Link copied successfully")}
+                      onClick={buttonFeedback8.bind(
+                        this,
+                        "Link copied successfully"
+                      )}
                     >
                       <span className="icon icon-network-communication" />
                     </button>
@@ -1585,7 +1660,10 @@ const DSpage = () => {
                       className="button rounded-full button-ghost"
                       data-feedback={buttonFeedbackMessage9}
                       data-feedback-icon="success"
-                      onClick={buttonFeedback9.bind(this, "Link copied successfully")}
+                      onClick={buttonFeedback9.bind(
+                        this,
+                        "Link copied successfully"
+                      )}
                     >
                       <span className="icon icon-network-communication" />
                     </button>
@@ -1683,7 +1761,6 @@ const DSpage = () => {
         </div>
       </div>
 
-
       {/* Responsive sizes */}
       <div className="mb-12" id="responsive-sizes">
         <h2 className="h3 mb-3">Responsive sizes</h2>
@@ -1708,9 +1785,13 @@ const DSpage = () => {
                   }}
                 >
                   .&#123;xx&#x7D;:button-&#123;xx&#x7D;
-                </code>.<br />
-                &#123;xx&#x7D; can be <code className="text-xs">xs</code>, <code className="text-xs">sm</code>,{" "}
-                <code className="text-xs">md</code>, <code className="text-xs">lg</code>, <code className="text-xs">xl</code>.
+                </code>
+                .<br />
+                &#123;xx&#x7D; can be <code className="text-xs">xs</code>,{" "}
+                <code className="text-xs">sm</code>,{" "}
+                <code className="text-xs">md</code>,{" "}
+                <code className="text-xs">lg</code>,{" "}
+                <code className="text-xs">xl</code>.
               </p>
               <div className="w-full flex gap-4 items-center">
                 <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
@@ -1732,6 +1813,177 @@ const DSpage = () => {
                 width="100%"
                 height="300"
                 src="//jsfiddle.net/augustin_hiebel/b8cvks63/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Button loader */}
+      <div className="mb-12" id="button-loader">
+        <h2 className="h3 mb-3">Button loader</h2>
+
+        <div className="surface rounded-lg p-4">
+            <p className="mb-5">
+              You can create a button loader by placing a
+              <code className="interactive text-xs">progress-container</code> inside
+              your button. Head over to the{" "}
+              <Link href="/design-system/progressbar">
+                <a className="link">Progress bar</a>
+              </Link>{" "}
+              component To learn more about{" "}
+              <code className="interactive text-xs">progress-container</code>
+            </p>
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4">
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Primary{" "}
+                  <div className="chip chip-xs chip-secondary pointer-events-none uppercase">
+                    <span>default</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Secondary
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-secondary" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Tertiary
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-tertiary" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Ghost
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-ghost" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Premium
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-premium" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Error
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-error" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Success
+                </div>
+                <div className="flex-1">
+                  <ButtonLoader variant="button-success" />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/n6oupyd1/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Button stretch */}
+      <div className="mb-12" id="button-stretch">
+        <h2 className="h3 mb-3">Button stretch</h2>
+        <div className="surface rounded-lg p-4">
+          <p className="mb-5">
+            Follow this structure to create a stretchable button. Use the 
+            <code className="interactive text-xs">.is-active</code> class name to toggle the button on and off.
+          </p>
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4">
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Primary{" "}
+                  <div className="chip chip-xs chip-secondary pointer-events-none uppercase">
+                    <span>default</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Secondary
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-secondary" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Tertiary
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-tertiary" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Ghost
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-ghost" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Premium
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-premium" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Error
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-error" />
+                </div>
+              </div>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                  Success
+                </div>
+                <div className="flex-1">
+                  <ButtonStretch variant="button-success" />
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/vmLw93na/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

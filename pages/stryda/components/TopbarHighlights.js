@@ -34,13 +34,15 @@ export default function TopbarHighlights() {
   const prototype = usePrototypeData();
   const { query } = useRouter();
   const isEmpty = query.empty === "true" ? true : false;
-  const [buttonWidth, setButtonWidth] = useState(0);
-  const spanRef = useRef(null);
   const [activeTab, setActiveTab] = useState("list");
-  const [itemsToProcess, setItemsToProcess] = useState(feedItems.filter((i) => !i.isCompleted).length);
+  const [itemsToProcess, setItemsToProcess] = useState(
+    feedItems.filter((i) => !i.isCompleted).length
+  );
   const [processingID, setProcessingID] = useState(0);
   const [processingPercent, setProcessingPercent] = useState(0);
   const [processingStatus, setProcessingStatus] = useState("idle");
+  const [buttonState, setButtonState] = useState(0);
+  const [hasNewHighlights, setHasNewHighlights] = useState(false);
   let interval;
 
   const [isActive, setActive] = useState(false);
@@ -65,29 +67,37 @@ export default function TopbarHighlights() {
   });
 
   useEffect(() => {
-    extendButton(1000);
+    console.log("staaate");
+    const interval = setTimeout(() => {
+      setButtonState(1);
+    }, 1000);
+    return () => {
+      clearTimeout(interval);
+    };
   }, []);
 
   useEffect(() => {
-    console.log("itemsToProcess", itemsToProcess);
-    if(itemsToProcess === 0) {
-        setButtonWidth(0);
-      }
-  }, [itemsToProcess]);
+    //extendButton(1000);
+  }, [buttonState]);
+
+  // useEffect(() => {
+  //   console.log("itemsToProcess", itemsToProcess);
+  //   if (itemsToProcess === 0) {
+  //     setHasNewHighlights(false);
+  //   }
+  // }, [itemsToProcess]);
 
   const extendButton = (delay) => {
-    if (spanRef.current) {
-      const spanWidth = spanRef.current.offsetWidth;
-      interval = setTimeout(() => {
-        setButtonWidth(spanWidth);
-      }, delay);
-      return () => {
-        clearTimeout(interval);
-      };
-    }
+    const interval = setTimeout(() => {
+      setHasNewHighlights(true);
+    }, delay);
+    return () => {
+      clearTimeout(interval);
+    };
   };
 
   const handleProcessing = (id) => {
+    console.log("handleProcessing", id);
     let interval;
     if (processingPercent < 100) {
       interval = setInterval(() => {
@@ -106,13 +116,18 @@ export default function TopbarHighlights() {
     if (processingPercent === 100) {
       setProcessingStatus("finished");
       setItemsToProcess(itemsToProcess - 1);
-      uiContext.openModal(
-        <ModalFeedItemViewer
-          item={prototype.getFeedItemByID(processingID)}
-          selectedTab={"highlight"}
-          editMode={true}
-        />
-      );
+      setButtonState(2);
+      setTimeout(() => {
+        setButtonState(1);
+        //setProcessingPercent(0);
+      }, 4000);
+      // uiContext.openModal(
+      //   <ModalFeedItemViewer
+      //     item={prototype.getFeedItemByID(processingID)}
+      //     selectedTab={"highlight"}
+      //     editMode={true}
+      //   />
+      // );
     } else if (processingPercent === 1) {
       setProcessingStatus("processing");
     }
@@ -121,6 +136,7 @@ export default function TopbarHighlights() {
   const handleLoad = (id) => {
     setProcessingID(id);
     setProcessingPercent(0);
+    console.log("handleLoad", id);
     handleProcessing(id);
   };
 
@@ -135,52 +151,34 @@ export default function TopbarHighlights() {
         <div className="flex items-center rounded-full bg-ui-500 interactive my-1.5">
           <button
             type="button"
-            className={`button button-ghost rounded-full !gap-0 ${
-              buttonWidth > 0
-                ? "!shadow-[inset_0_0_0_1px_rgba(var(--color-main)/70%),inset_0_-0.25rem_1rem_0_rgba(var(--color-main)/20%)]"
-                : ""
+            className={`button button-loader button-stretch ${
+              buttonState === 1 ? "button-secondary" : ""
+            } ${buttonState === 2 ? "button-success" : ""} ${
+              buttonState > 0 ? "is-active" : ""
             }`}
             onClick={dropdownActive}
           >
-            {processingPercent > 0 && (
-              <div className="!m-0 absolute rounded-full inset-1 z-50 pointer-events-none overflow-hidden">
-                <div
-                  className="progresscontainer"
-                  style={{ "--percent": processingPercent }}
-                >
-                  <div>
-                    <div className="text-sm font-bold">
-                      {processingPercent}% Analysing
-                    </div>
-                  </div>
-                  <div>
-                    <div className="text-sm">
-                      {processingPercent}% Analysing
-                    </div>
+              <div
+                className="progresscontainer"
+                style={{ "--percent": processingPercent }}
+              >
+                <div>
+                  <div className="text-sm font-bold">
+                    {processingPercent}% Analysing
                   </div>
                 </div>
+                <div>
+                  <div className="text-sm">{processingPercent}% Analysing</div>
+                </div>
               </div>
-            )}
-            <span
-              className="!m-0 overflow-hidden transition-all duration-1000 ease whitespace-nowrap normal-case leading-none flex items-center justify-center"
-              style={{ width: `${buttonWidth}px` }}
-            >
-              <span
-                ref={spanRef}
-                className={`pl-0.5 pr-2 text-sm ${
-                  buttonWidth > 0 ? "text-main" : "-translate-x-full"
-                }`}
-              >
-                New matches recorded
+            <span>
+              <span className="text-sm">
+                {buttonState === 0 && ""}
+                {buttonState === 1 && "New highlights recorded"}
+                {buttonState === 2 && "Highlights ready"}
               </span>
             </span>
-            <span
-              className={`!m-0 leading-[0] after:absolute after:-right-3 after:top-1 ${
-                buttonWidth > 0 ? "text-main" : ""
-              }`}
-            >
-              <span className="icon icon-video" />
-            </span>
+            <span className="icon icon-video" />
           </button>
         </div>
 
@@ -228,7 +226,9 @@ export default function TopbarHighlights() {
                         key={itemIndex}
                         delay={itemIndex}
                         id={item.id}
-                        match={prototype.getMatchByID(prototype.getFeedItemByID(item.id).itemID)}
+                        match={prototype.getMatchByID(
+                          prototype.getFeedItemByID(item.id).itemID
+                        )}
                         onLoad={handleLoad}
                         finished={item.isCompleted}
                         processingID={processingID}

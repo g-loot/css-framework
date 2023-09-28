@@ -78,8 +78,8 @@ export default function Topbar() {
   return (
     <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
       <div className="w-full px-2  relative">
-        <div className="flex justify-between lg:gap-4 mx-auto">
-          <div className="flex lg:flex-1 items-center">
+        <div className="flex justify-between items-center lg:gap-4 mx-auto">
+          <div className="flex justify-start items-center">
             <div className="hidden gap-2">
               <button
                 type="button"
@@ -129,20 +129,14 @@ export default function Topbar() {
             </Tooltip>
             */}
             <div className="hidden lg:flex gap-0 mr-2">
-              <div
-                className={`rounded-full bg-ui-500 ${
-                  hasBack ? "" : "opacity-50 pointer-events-none"
-                }`}
-              >
-                <button
+            <button
                   type="button"
                   className={`button button-ghost rounded-full `}
                   disabled={!hasBack}
                   onClick={handleBack}
                 >
-                  <span className="icon icon-ctrl-left" />
+                  <span className="icon icon-arrow-left" />
                 </button>
-              </div>
               {/* <div
                 className={`rounded-full bg-ui-500 ${
                   hasForward ? "" : "opacity-50 pointer-events-none"
@@ -275,8 +269,8 @@ export default function Topbar() {
                       router.pathname.includes("premium") ? "is-active" : ""
                     }
                   >
-                    <span className="icon icon-crown text-lg" />
                     <span>Premium</span>
+                    <span className="icon icon-crown text-lg" />
                   </button>
                 </Link>
               </li>
@@ -315,12 +309,9 @@ export default function Topbar() {
                   */}
             </ul>
           </div>
-          <div className="flex lg:flex-1 items-center justify-center">
-
-          </div>
-          <div className="flex lg:flex-1 justify-end items-center gap-1 sm:gap-2">
+          <div className="flex justify-end items-center gap-1 sm:gap-2">
             <TopbarHighlights />
-            <Link href={`/stryda/search${prototype.getURLparams()}`}>
+            {/* <Link href={`/stryda/search${prototype.getURLparams()}`}>
               <div className="bg-ui-500 rounded-full">
                 <button
                   type="button"
@@ -329,89 +320,7 @@ export default function Topbar() {
                   <span className="icon icon-zoom text-ui-200" />
                 </button>
               </div>
-            </Link>
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex="1"
-                className="flex items-center rounded-full bg-ui-500 interactive"
-              >
-                <button
-                  type="button"
-                  className="button button-ghost rounded-full"
-                >
-                  <span
-                    data-badge={!isEmpty ? "12" : ""}
-                    className="leading-[0] after:absolute after:-right-3 after:top-1"
-                  >
-                    <span className="icon icon-alarm text-ui-200" />
-                  </span>
-                </button>
-              </div>
-
-              <div
-                tabIndex="1"
-                className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
-              >
-                {isEmpty && (
-                  <div className="h-72 flex items-center justify-center text-center">
-                    <div>
-                      <span className="icon icon-smile text-6xl text-ui-500" />
-                      <p className="text-sm text-ui-400 mt-2">
-                        You&lsquo;re all caught up!
-                      </p>
-                      <p className="text-ui-300">
-                        Check back later for new notifications.
-                      </p>
-                    </div>
-                  </div>
-                )}
-                {!isEmpty && (
-                  <>
-                    <div className="flex items-center justify-between p-2">
-                      <div className="form-group form-select">
-                        <select id="favorite-game" className="input-sm">
-                          <option defaultValue={true}>
-                            Show all categories
-                          </option>
-                          <option>Clans</option>
-                          <option>Ladders</option>
-                          <option>Missions</option>
-                          <option>Wallet</option>
-                        </select>
-                      </div>
-
-                      <button
-                        type="button"
-                        className="button button-sm button-ghost"
-                      >
-                        <span className="icon icon-check-double" />
-                        <span>Mark all as read</span>
-                      </button>
-                    </div>
-                    <div className="max-h-[300px] overflow-y-auto scrollbar-desktop px-2 pb-2 space-y-2">
-                      {dataNotifications.map(
-                        (notificationGroup, notificationGroupIndex) => (
-                          <>
-                            <div key={notificationGroupIndex}>
-                              <ul className="items-spaced space-y-2">
-                                {notificationGroup.notifications?.map(
-                                  (notification, notificationIndex) => (
-                                    <Notification
-                                      key={notificationIndex}
-                                      notification={notification}
-                                    />
-                                  )
-                                )}
-                              </ul>
-                            </div>
-                          </>
-                        )
-                      )}
-                    </div>
-                  </>
-                )}
-              </div>
-            </div>
+            </Link> */}
 
             {/* <div className="flex gap-x-3 items-stretch justify-center bg-ui-500 min-w-[2.25rem] h-9 xl:px-3 rounded-full">
               <div className="inline-flex xl:hidden items-center">
@@ -571,7 +480,7 @@ export default function Topbar() {
               </div>
             </div> */}
 
-            <div className="dropdown dropdown-end">
+            {/* <div className="dropdown dropdown-end">
               <div
                 tabIndex="1"
                 className="flex items-center rounded-full bg-ui-500 interactive"
@@ -643,123 +552,226 @@ export default function Topbar() {
                   </li>
                 </ul>
               </div>
-            </div>
+            </div> */}
 
-            <div className="dropdown dropdown-end">
-              <div
-                tabIndex="1"
-                className="flex items-center rounded-full bg-ui-500 interactive"
-              >
-                <div className="avatar avatar-circle avatar-xs">
-                  {prototype.getUserByID(1).shopItems.avatarFrame && (
+            <div className="flex items-center rounded-full bg-ui-500">
+              <div className="z-20 dropdown dropdown-end">
+                <button
+                    type="button"
+                    tabIndex="1"
+                    className="button button-ghost rounded-full"
+                  >
+                    <span
+                      data-badge={!isEmpty ? "12" : ""}
+                      className="leading-[0] after:absolute after:-right-3 after:top-1"
+                    >
+                      <span className="icon icon-alarm text-ui-200" />
+                    </span>
+                  </button>
+
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+                >
+                  {isEmpty && (
+                    <div className="h-72 flex items-center justify-center text-center">
+                      <div>
+                        <span className="icon icon-smile text-6xl text-ui-500" />
+                        <p className="text-sm text-ui-400 mt-2">
+                          You&lsquo;re all caught up!
+                        </p>
+                        <p className="text-ui-300">
+                          Check back later for new notifications.
+                        </p>
+                      </div>
+                    </div>
+                  )}
+                  {!isEmpty && (
                     <>
-                      <img
-                        src={
-                          prototype.getShopitemByID(
-                            1,
-                            prototype.getUserByID(1).shopItems.avatarFrame
-                          ).image
-                        }
-                        alt=""
-                      />
+                      <div className="flex items-center justify-between p-2 border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600">
+                        <div className="form-group form-select">
+                          <select id="favorite-game" className="input-sm">
+                            <option defaultValue={true}>
+                              Show all categories
+                            </option>
+                            <option>Clans</option>
+                            <option>Ladders</option>
+                            <option>Missions</option>
+                            <option>Wallet</option>
+                          </select>
+                        </div>
+
+                        <button
+                          type="button"
+                          className="button button-sm button-ghost"
+                        >
+                          <span className="icon icon-check-double" />
+                          <span>Mark all as read</span>
+                        </button>
+                      </div>
+                      <div className="max-h-[calc(100dvh-102px-1rem)] overflow-y-auto overflow-x-hidden scrollbar-desktop bg-ui-700 p-2 space-y-2">
+                        {dataNotifications.map(
+                          (notificationGroup, notificationGroupIndex) => (
+                            <>
+                              <div key={notificationGroupIndex}>
+                                <ul className="items-spaced space-y-2">
+                                  {notificationGroup.notifications?.map(
+                                    (notification, notificationIndex) => (
+                                      <Notification
+                                        key={notificationIndex}
+                                        notification={notification}
+                                      />
+                                    )
+                                  )}
+                                </ul>
+                              </div>
+                            </>
+                          )
+                        )}
+                      </div>
                     </>
                   )}
-                  <div>
-                    <img src={prototype.getUserByID(1).avatar} alt="avatar" />
-                  </div>
                 </div>
-                <span className="icon icon-arrow-sm-down mx-2" />
               </div>
-
-              <div tabIndex="1" className="dropdown-content bg-ui-500 w-52 p-1">
-                <ul className="menu menu-rounded menu-secondary">
-                  <li>
-                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-circle-09" />
-                        <span>Profile</span>
+              <div className="z-10 dropdown dropdown-end">
+                <button
+                    type="button"
+                    tabIndex="1"
+                    className="button button-ghost rounded-full"
+                  >
+                    <span className="icon icon-wallet-43 text-ui-200" />
+                  </button>
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+                >
+                  {isEmpty && (
+                    <div className="h-72 flex items-center justify-center text-center">
+                      
+                    </div>
+                  )}
+                  {!isEmpty && (
+                    <>
+                      <div className="p-2">
+                      </div>
+                    </>
+                  )}
+                </div>
+              </div>
+              <div className="z-0 dropdown dropdown-end">
+                <div
+                  className="flex items-center rounded-full interactive pl-1"
+                >
+                  <div tabIndex="1" className="avatar avatar-circle avatar-xs">
+                    {prototype.getUserByID(1).shopItems.avatarFrame && (
+                      <>
+                        <img
+                          src={
+                            prototype.getShopitemByID(
+                              1,
+                              prototype.getUserByID(1).shopItems.avatarFrame
+                            ).image
+                          }
+                          alt=""
+                        />
+                      </>
+                    )}
+                    <div>
+                      <img src={prototype.getUserByID(1).avatar} alt="avatar" />
+                    </div>
+                  </div>
+                  <span className="icon icon-arrow-sm-down mx-2" />
+                </div>
+                <div tabIndex="1" className="dropdown-content bg-ui-500 w-52 p-1">
+                  <ul className="menu menu-rounded menu-secondary">
+                    <li>
+                      <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-circle-09" />
+                          <span>Profile</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={`/stryda/wallet${prototype.getURLparams()}`}>
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-wallet-43" />
+                          <span>Wallet</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li className="separator" />
+                    <li>
+                      <Link
+                        href={`/stryda/profile/settings${prototype.getURLparams()}`}
+                      >
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-cogwheel" />
+                          <span>Settings</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-crown" />
+                          <span>Get Premium</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`/stryda/patch-notes${prototype.getURLparams()}`}
+                      >
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-notification" />
+                          <span>Patch notes</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`/stryda/recruit-a-friend/${prototype.getURLparams()}`}
+                      >
+                        <button type="button">
+                          <span className="icon icon-b-love" />
+                          <span>Recruit a friend</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={`/stryda/how-it-works${prototype.getURLparams()}`}
+                      >
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-file-article" />
+                          <span>How Stryda works</span>
+                        </button>
+                      </Link>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        tabIndex="1"
+                        onClick={openModalDownloadStarted}
+                        href="#"
+                        rel="noopener noreferrer"
+                      >
+                        <span className="icon icon-data-download" />
+                        <span>Download tracker</span>
                       </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/stryda/wallet${prototype.getURLparams()}`}>
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-wallet-43" />
-                        <span>Wallet</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li className="separator" />
-                  <li>
-                    <Link
-                      href={`/stryda/profile/settings${prototype.getURLparams()}`}
-                    >
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-cogwheel" />
-                        <span>Settings</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-crown" />
-                        <span>Get Premium</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/stryda/patch-notes${prototype.getURLparams()}`}
-                    >
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-notification" />
-                        <span>Patch notes</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/stryda/recruit-a-friend/${prototype.getURLparams()}`}
-                    >
-                      <button type="button">
-                        <span className="icon icon-b-love" />
-                        <span>Recruit a friend</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      href={`/stryda/how-it-works${prototype.getURLparams()}`}
-                    >
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-file-article" />
-                        <span>How Stryda works</span>
-                      </button>
-                    </Link>
-                  </li>
-                  <li>
-                    <button
-                      type="button"
-                      tabIndex="1"
-                      onClick={openModalDownloadStarted}
-                      href="#"
-                      rel="noopener noreferrer"
-                    >
-                      <span className="icon icon-data-download" />
-                      <span>Download tracker</span>
-                    </button>
-                  </li>
-                  <li className="separator" />
-                  <li>
-                    <Link href={`/${prototype.getURLparams()}`}>
-                      <button type="button" tabIndex="1">
-                        <span className="icon icon-leave" />
-                        <span>Log out</span>
-                      </button>
-                    </Link>
-                  </li>
-                </ul>
+                    </li>
+                    <li className="separator" />
+                    <li>
+                      <Link href={`/${prototype.getURLparams()}`}>
+                        <button type="button" tabIndex="1">
+                          <span className="icon icon-leave" />
+                          <span>Log out</span>
+                        </button>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
