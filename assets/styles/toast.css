@@ -119,6 +119,11 @@
       text-ui-800
       ;
     }
+    .button:not(.button-close) {
+      @apply
+      !bg-ui-800
+      !text-ui-100
+    }
   }
 
   &.toast-green {

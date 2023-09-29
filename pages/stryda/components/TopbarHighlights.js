@@ -67,10 +67,9 @@ export default function TopbarHighlights() {
   });
 
   useEffect(() => {
-    console.log("staaate");
     const interval = setTimeout(() => {
       setButtonState(1);
-    }, 1000);
+    }, 4000);
     return () => {
       clearTimeout(interval);
     };
@@ -121,6 +120,21 @@ export default function TopbarHighlights() {
         setButtonState(1);
         //setProcessingPercent(0);
       }, 4000);
+      uiContext.openToastr({
+        text: "Highlight automated successfully.",
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 8000,
+        actions: (
+          <button
+            type="button"
+            class="button button-sm"
+            onClick={() => openFeedItemDetailsMatch("highlight", uiContext.closeToastr(0))}
+          >
+            <span>View</span>
+          </button>
+        ),
+      });
       // uiContext.openModal(
       //   <ModalFeedItemViewer
       //     item={prototype.getFeedItemByID(processingID)}
@@ -140,6 +154,15 @@ export default function TopbarHighlights() {
     handleProcessing(id);
   };
 
+  function openFeedItemDetailsMatch(target) {
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={prototype.getFeedItemByID(processingID)}
+        selectedTab={target ? target : "default"}
+      />
+    );
+  }
+
   return (
     <>
       <div
@@ -151,31 +174,29 @@ export default function TopbarHighlights() {
         <div className="flex items-center rounded-full bg-ui-500 interactive my-1.5">
           <button
             type="button"
-            className={`button button-loader button-stretch ${
-              buttonState > 0 && buttonState < 2 ? "button-secondary" : ""
-            } ${buttonState === 2 ? "button-success" : ""} ${
+            className={`button button-loader button-stretch button-secondary ${
               buttonState > 0 ? "is-active" : ""
             }`}
             onClick={dropdownActive}
           >
-              <div
-                className="progresscontainer"
-                style={{ "--percent": processingPercent }}
-              >
-                <div>
-                  <div className="text-sm font-bold">
-                    {processingPercent}% Analysing
-                  </div>
-                </div>
-                <div>
-                  <div className="text-sm">{processingPercent}% Analysing</div>
+            <div
+              className="progresscontainer"
+              style={{ "--percent": processingPercent }}
+            >
+              <div>
+                <div className="text-sm font-bold">
+                  {processingPercent}% Analysing
                 </div>
               </div>
+              <div>
+                <div className="text-sm">{processingPercent}% Analysing</div>
+              </div>
+            </div>
             <span>
               <span className="text-sm">
                 {buttonState === 0 && ""}
-                {buttonState === 1 && "New highlights recorded"}
-                {buttonState === 2 && "Highlights ready"}
+                {buttonState > 0 && "New highlights recorded"}
+                {/* {buttonState === 2 && "Highlights ready"} */}
               </span>
             </span>
             <span className="icon icon-video" />
@@ -224,7 +245,7 @@ export default function TopbarHighlights() {
                     {feedItems.map((item, itemIndex) => (
                       <TopbarHighlightsListItem
                         key={itemIndex}
-                        delay={itemIndex}
+                        itemIndex={itemIndex}
                         id={item.id}
                         item={prototype.getFeedItemByID(item.id)}
                         onLoad={handleLoad}

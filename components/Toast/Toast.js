@@ -96,6 +96,7 @@ export default function Toast(props) {
                 </button>
               </div>
             )}
+            {props.actions && (<>{props.actions}</>)}
           </div>
           {dismissable && (
             <button

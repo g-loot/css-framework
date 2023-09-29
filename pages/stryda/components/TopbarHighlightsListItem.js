@@ -13,10 +13,11 @@ import { StatsLeagueOfLegendsItems } from "@/mock-data/data-stats-leagueoflegend
 import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalHighlightViewer from "../modal-highlightviewer";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function TopbarHighlightsListItem({
   item,
-  delay,
+  itemIndex,
   id,
   isAlreadyProcessed,
   onLoad,
@@ -100,15 +101,15 @@ export default function TopbarHighlightsListItem({
     <>
       {item && selectedMatch && (
         <li
-          className={`surface-ui-500 rounded flex items-stretch animate-delay animate-slide-in-right`}
+          className={`surface-ui-500 rounded flex items-stretch animate-delay ${isProcessed ? 'animate-scale-in' : 'animate-slide-in-right'}`}
           style={{
-            "--delay": "calc(" + delay + " * 0.05s)",
+            "--delay": "calc(" + isProcessed ? 0 : itemIndex + " * 0.05s)",
           }}
         >
           <div
             className={`flex-1 flex flex-col gap-1 p-2 justify-between border-r border-ui-400/20 ${
               isAlreadyProcessed ? "child:opacity-30" : ""
-            } ${isAlreadyProcessed ? "child:opacity-30" : ""}`}
+            }`}
           >
             <div className="flex items-center gap-2 text-sm leading-none">
               <GameIcon game={selectedMatch.meta.game} size="text-sm" />
@@ -157,11 +158,22 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             </div>
-            <div className="text-xs capitalize text-ui-300">
-              <span className="text-ui-100 uppercase">
-                {getAgentByID(selectedMatch.meta.agent).name}
-              </span>{" "}
-              • {selectedMatch.meta.mode} • {getMapByID(selectedMatch.meta.map).name}
+            <div className="flex items-center justify-between">
+              <div className="flex-1 truncate text-xs capitalize text-ui-300">
+                <span className="text-ui-100 uppercase">
+                  {getAgentByID(selectedMatch.meta.agent).name}
+                </span>{" "}
+                • {selectedMatch.meta.mode} • {getMapByID(selectedMatch.meta.map).name}
+              </div>
+              {itemIndex > 2 && !isAlreadyProcessed && !isProcessed && (
+                <Tooltip
+                placement="top"
+                  tooltip={<div className="max-w-xs text-center"><span className="text-attention-500">The files of this highlight might get removed from your hard drive. Get the highlight video from this match now by clicking "Automate with AI".</span></div>}                >
+                  <button type="button" className="text-ui-300 text-0">
+                    <span className="icon text-sm icon-warning-sign text-attention-500" />
+                  </button>
+                </Tooltip>
+              )}
             </div>
           </div>
           <div className="relative w-40 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
@@ -173,15 +185,15 @@ export default function TopbarHighlightsListItem({
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
-                  <span className="text-xs whitespace-normal px-2">
-                    Keep Stryda open.
+                  <span className="text-xs uppercase whitespace-normal mt-1 px-2">
+                    Keep Stryda open
                   </span>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
-                  <span className="text-xs whitespace-normal px-2">
-                    Keep Stryda open.
+                  <span className="text-xs uppercase whitespace-normal mt-1 px-2">
+                    Keep Stryda open
                   </span>
                 </div>
               </div>

@@ -1303,7 +1303,7 @@ button {
           px-0
           transition
           ease-[cubic-bezier(0.6,0,0.4,1)]
-          duration-700
+          duration-1000
           overflow-hidden
           flex
           before:content-['']

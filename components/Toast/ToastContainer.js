@@ -22,6 +22,7 @@ const ToastContainer = (props) => {
               dismissable={toast.dismissable}
               autoDelete={toast.autoDelete}
               autoDeleteDelay={toast.autoDeleteDelay}
+              actions={toast.actions}
             />
           ))}
         </div>,
