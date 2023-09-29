@@ -1,5 +1,6 @@
 import { useEffect, useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
+import { usePrototypeData } from "@/contexts/prototype";
 import { dataMatches } from "@/mock-data/data-matches";
 import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
@@ -14,20 +15,26 @@ import ModalHighlightViewer from "../modal-highlightviewer";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 export default function TopbarHighlightsListItem({
-  match,
+  item,
   delay,
   id,
-  finished,
+  isAlreadyProcessed,
   onLoad,
   processingID,
   processingStatus,
   processingPercent,
 }) {
   const uiContext = useContext(UiContext);
+  const prototype = usePrototypeData();
   const [isProcessed, setIsProcessed] = useState(false);
+  const [selectedMatch, setSelectedMatch] = useState();
 
   useEffect(() => {
-    if ((id === processingID && processingStatus === "finished") || finished) {
+    setSelectedMatch(prototype.getMatchByID(item.itemID));
+  }, [item]);
+
+  useEffect(() => {
+    if (id === processingID && processingStatus === "finished") {
       setIsProcessed(true);
     }
   }, [processingStatus]);
@@ -83,7 +90,7 @@ export default function TopbarHighlightsListItem({
   function openFeedItemDetailsMatch(target) {
     uiContext.openModal(
       <ModalFeedItemViewer
-        item={match}
+        item={item}
         selectedTab={target ? target : "default"}
       />
     );
@@ -91,7 +98,7 @@ export default function TopbarHighlightsListItem({
 
   return (
     <>
-      {match && (
+      {item && selectedMatch && (
         <li
           className={`surface-ui-500 rounded flex items-stretch animate-delay animate-slide-in-right`}
           style={{
@@ -100,59 +107,61 @@ export default function TopbarHighlightsListItem({
         >
           <div
             className={`flex-1 flex flex-col gap-1 p-2 justify-between border-r border-ui-400/20 ${
-              isProcessed ? "child:opacity-30" : ""
-            }`}
+              isAlreadyProcessed ? "child:opacity-30" : ""
+            } ${isAlreadyProcessed ? "child:opacity-30" : ""}`}
           >
             <div className="flex items-center gap-2 text-sm leading-none">
-              <GameIcon game={match.meta.game} size="text-sm" />
+              <GameIcon game={selectedMatch.meta.game} size="text-sm" />
               <span
                 className={`uppercase ${
-                  match.stats.hasWon ? " text-success-300" : "text-error-300"
+                  selectedMatch.stats.hasWon ? " text-success-300" : "text-error-300"
                 }`}
               >
-                {match.stats.hasWon ? "Victory" : "Defeat"}
+                {selectedMatch.stats.hasWon ? "Victory" : "Defeat"}
               </span>
               <span className="text-ui-100">
-                {match.stats.score.team1} - {match.stats.score.team2}
+                {selectedMatch.stats.score.team1} - {selectedMatch.stats.score.team2}
               </span>
               <span className="text-right text-xs flex-1 text-ui-300">
-                {match.meta.dateTimeEnded}
+                {selectedMatch.meta.dateTimeEnded}
               </span>
             </div>
             <div className="flex items-center">
               <div className="avatar avatar-xs avatar-simple">
                 <div>
                   <img
-                    src={getAgentByID(match.meta.agent).picturePath}
+                    src={getAgentByID(selectedMatch.meta.agent).picturePath}
                     alt=""
                   />
                 </div>
               </div>
               <div className="flex-1 flex justify-center">
                 <div className="avatar-group space-x-1.5">
-                  {match.stats.leaderboard.team1.map((agent, agentIndex) => (
-                    <>
-                      <div
-                        key={agentIndex}
-                        className="avatar avatar-tiny avatar-simple"
-                      >
-                        <div>
-                          <img
-                            src={getAgentByID(agent.agent).picturePath}
-                            alt=""
-                          />
+                  {selectedMatch.stats.leaderboard.team1
+                    .slice(0, 4)
+                    .map((agent, agentIndex) => (
+                      <>
+                        <div
+                          key={agentIndex}
+                          className="avatar avatar-tiny avatar-simple"
+                        >
+                          <div>
+                            <img
+                              src={getAgentByID(agent.agent).picturePath}
+                              alt=""
+                            />
+                          </div>
                         </div>
-                      </div>
-                    </>
-                  ))}
+                      </>
+                    ))}
                 </div>
               </div>
             </div>
             <div className="text-xs capitalize text-ui-300">
               <span className="text-ui-100 uppercase">
-                {getAgentByID(match.meta.agent).name}
+                {getAgentByID(selectedMatch.meta.agent).name}
               </span>{" "}
-              • {match.meta.mode} • {getMapByID(match.meta.map).name}
+              • {selectedMatch.meta.mode} • {getMapByID(selectedMatch.meta.map).name}
             </div>
           </div>
           <div className="relative w-40 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
@@ -164,20 +173,29 @@ export default function TopbarHighlightsListItem({
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
+                  <span className="text-xs whitespace-normal px-2">
+                    Keep Stryda open.
+                  </span>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
+                  <span className="text-xs whitespace-normal px-2">
+                    Keep Stryda open.
+                  </span>
                 </div>
               </div>
             )}
-            {isProcessed ? (
+            {isProcessed || isAlreadyProcessed ? (
               <>
                 <button
                   type="button"
-                  className="button button-sm button-secondary"
-                  onClick={() => openModalHighlightViewer(match)}
+                  className={`button button-sm ${isProcessed ? 'button-success is-shining' : 'button-secondary'}`}
+                  onClick={() => openFeedItemDetailsMatch("highlight")}
                 >
+                  {isProcessed && (
+                    <span className="icon icon-circle-caret-right animate-bounce-right" />
+                  )}
                   <span>View highlight</span>
                 </button>
               </>
@@ -198,13 +216,13 @@ export default function TopbarHighlightsListItem({
                 >
                   <span>Automate with AI</span>
                 </button>
-                <button
+                {/* <button
                   type="button"
                   disabled={processingStatus === "processing"}
                   className="button button-sm button-secondary"
                 >
                   <span>Customize</span>
-                </button>
+                </button> */}
               </>
             )}
           </div>

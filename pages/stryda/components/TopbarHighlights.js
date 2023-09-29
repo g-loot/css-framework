@@ -152,7 +152,7 @@ export default function TopbarHighlights() {
           <button
             type="button"
             className={`button button-loader button-stretch ${
-              buttonState === 1 ? "button-secondary" : ""
+              buttonState > 0 && buttonState < 2 ? "button-secondary" : ""
             } ${buttonState === 2 ? "button-success" : ""} ${
               buttonState > 0 ? "is-active" : ""
             }`}
@@ -226,11 +226,9 @@ export default function TopbarHighlights() {
                         key={itemIndex}
                         delay={itemIndex}
                         id={item.id}
-                        match={prototype.getMatchByID(
-                          prototype.getFeedItemByID(item.id).itemID
-                        )}
+                        item={prototype.getFeedItemByID(item.id)}
                         onLoad={handleLoad}
-                        finished={item.isCompleted}
+                        isAlreadyProcessed={item.isCompleted}
                         processingID={processingID}
                         processingStatus={processingStatus}
                         processingPercent={processingPercent}
