@@ -168,7 +168,7 @@ export default function TopbarHighlightsListItem({
               {itemIndex > 2 && !isAlreadyProcessed && !isProcessed && (
                 <Tooltip
                 placement="top"
-                  tooltip={<div className="max-w-xs text-center"><span className="text-attention-500">The files of this highlight might get removed from your hard drive. Get the highlight video from this match now by clicking "Automate with AI".</span></div>}                >
+                  tooltip={<div className="max-w-xs text-center"><span className="text-attention-500">The files of this highlight might get replaced by newer matches. Get the highlight video from this match now by clicking &quot;Automate with AI&quot;.</span></div>}                >
                   <button type="button" className="text-ui-300 text-0">
                     <span className="icon text-sm icon-warning-sign text-attention-500" />
                   </button>
