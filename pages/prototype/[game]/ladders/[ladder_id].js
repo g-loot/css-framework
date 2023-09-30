@@ -248,7 +248,7 @@ export default function Home() {
               </section>
 
               {/* for demo purposes only */}
-              {/* <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+              {/* <section className="text-sm text-ui-100/0 hover:text-ui-100 flex flex-col items-stretch">
                 <a
                   onClick={() => {
                     setIsPremium(!isPremium);

@@ -418,7 +418,10 @@ export default function StatsValorant() {
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          {prototype.getUserByID(1)?.socials.riotValorantNickname}
+                          {
+                            prototype.getUserByID(1)?.socials
+                              .riotValorantNickname
+                          }
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
@@ -1894,28 +1897,39 @@ export default function StatsValorant() {
             </>
           )}
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={switchVariants}>Switch between various users</a>
-            <a
-              onClick={() => {
-                setIsEmpty(false);
-                setHasRiot(!hasRiot);
-              }}
-            >
-              Toggle has Riot {hasRiot ? "ON" : "OFF"}
-            </a>
-            <a
-              onClick={() => {
-                setIsEmpty(!isEmpty);
-                setHasRiot(true);
-              }}
-            >
-              Toggle empty state {isEmpty ? "ON" : "OFF"}
-            </a>
-            <a onClick={() => prototype.togglePremium()}>
-              Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-            </a>
-          </section>
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <a onClick={switchVariants}>Switch between various users</a>
+              <a
+                onClick={() => {
+                  setIsEmpty(false);
+                  setHasRiot(!hasRiot);
+                }}
+              >
+                Toggle has Riot {hasRiot ? "ON" : "OFF"}
+              </a>
+              <a
+                onClick={() => {
+                  setIsEmpty(!isEmpty);
+                  setHasRiot(true);
+                }}
+              >
+                Toggle empty state {isEmpty ? "ON" : "OFF"}
+              </a>
+              <a onClick={() => prototype.togglePremium()}>
+                Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
+              </a>
+            </section>
+          )}
         </>
       )}
     </>

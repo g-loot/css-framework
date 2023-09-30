@@ -371,6 +371,7 @@ label.button {
       }
     }
   }
+
   input:not(:checked) {
     + label {
       &::before {
@@ -677,6 +678,8 @@ label.button {
   }
 }
 
+/* form image */
+
 .form-radio,
 .form-checkbox,
 .form-toggle {
@@ -788,6 +791,179 @@ label.button {
           after:opacity-100
           before:translate-y-0
           after:translate-y-0
+          ;
+        }
+      }
+    }
+  }
+}
+
+/* sizes */
+
+.form-xs {
+  label {
+    @apply
+    pl-8
+    py-1
+    pr-1
+    min-h-[24px]
+    min-w-[24px]
+    ;
+  }
+  &.form-radio {
+    label {
+      &::before {
+        @apply
+        h-3
+        w-3
+        left-1
+        ;
+      }
+      &::after {
+        @apply
+        w-1
+        h-1
+        left-2
+        ;
+      }
+    }
+  }
+  &.form-toggle {
+    label {
+      &::before {
+        @apply
+        h-3
+        w-5
+        left-0
+        ;
+      }
+      &::after {
+        @apply
+        w-1
+        h-1
+        left-1
+        ;
+      }
+    }
+    input:checked {
+      + label {
+        &::after {
+          @apply
+          translate-x-2
+          ;
+        }
+      }
+    }
+  }
+  &.form-checkbox {
+    label {
+      &::before {
+        @apply
+        h-3
+        w-3
+        left-1
+        rounded
+        ;
+      }
+      &::after {
+        @apply
+        w-2
+        h-1.5
+        border-[2px]
+        left-1.5
+        ;
+      }
+    }
+    input:indeterminate {
+      + label {
+        &::after {
+          @apply
+          h-1
+          ;
+        }
+      }
+    }
+  }
+}
+.form-sm {
+  label {
+    @apply
+    pl-9
+    py-1.5
+    pr-1.5
+    min-h-[24px]
+    min-w-[24px]
+    ;
+  }
+  &.form-radio {
+    label {
+      &::before {
+        @apply
+        h-4
+        w-4
+        left-1
+        ;
+      }
+      &::after {
+        @apply
+        w-2
+        h-2
+        left-2
+        ;
+      }
+    }
+  }
+  &.form-toggle {
+    label {
+      &::before {
+        @apply
+        h-4
+        w-6
+        left-0
+        ;
+      }
+      &::after {
+        @apply
+        w-2
+        h-2
+        left-1
+        ;
+      }
+    }
+    input:checked {
+      + label {
+        &::after {
+          @apply
+          translate-x-2.5
+          ;
+        }
+      }
+    }
+  }
+  &.form-checkbox {
+    label {
+      &::before {
+        @apply
+        h-4
+        w-4
+        left-1
+        rounded
+        ;
+      }
+      &::after {
+        @apply
+        w-3
+        h-2
+        border-[2.5px]
+        left-1.5
+        ;
+      }
+    }
+    input:indeterminate {
+      + label {
+        &::after {
+          @apply
+          h-1
           ;
         }
       }

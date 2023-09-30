@@ -401,12 +401,23 @@ export default function TabProfileOverview() {
         </>
       )}
       {/* for demo purposes only */}
-      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col mt-4">
-        <a onClick={() => openModalAchievementReceived()}>
-          Open achievemnts received modal
-        </a>
-        <a onClick={() => openmodalLeveLUp()}>Open level up modal</a>
-      </section>
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <a onClick={() => openModalAchievementReceived()}>
+            Open achievemnts received modal
+          </a>
+          <a onClick={() => openmodalLeveLUp()}>Open level up modal</a>
+        </section>
+      )}
     </>
   );
 }

@@ -471,8 +471,8 @@ export default function TabLaddersSoloLeaderboards() {
                         <ResetsIn
                           label=" "
                           status={
-                            prototype.getLadderByID(game_slug, ladder_id)?.status ===
-                            "upcoming"
+                            prototype.getLadderByID(game_slug, ladder_id)
+                              ?.status === "upcoming"
                               ? 2
                               : 1
                           }
@@ -1043,7 +1043,8 @@ export default function TabLaddersSoloLeaderboards() {
 
                                                 <div className="item-body flex justify-around items-center">
                                                   <div className="text-ui-300 leading-none w-40 text-center">
-                                                    {user.stats.ladderPoints}.24231
+                                                    {user.stats.ladderPoints}
+                                                    .24231
                                                   </div>
                                                   <div className="w-12 flex justify-center">
                                                     {prototype.getUserByID(
@@ -1293,11 +1294,22 @@ export default function TabLaddersSoloLeaderboards() {
       )}
 
       {/* for demo purposes only */}
-      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-        <a onClick={() => prototype.togglePremium()}>
-          Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-        </a>
-      </section>
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <a onClick={() => prototype.togglePremium()}>
+            Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
+          </a>
+        </section>
+      )}
     </>
   );
 }

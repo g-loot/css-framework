@@ -391,7 +391,7 @@ export default function TabClanOverview() {
             </div>
           </div>
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+          <section className="text-sm text-ui-100/0 hover:text-ui-100 flex flex-col items-stretch">
             <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
             <div
               onClick={() =>

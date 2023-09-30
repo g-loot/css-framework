@@ -1,4 +1,4 @@
-import React, { Fragment, useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
@@ -6,20 +6,10 @@ import { useRouter } from "next/router";
 import { usePrototypeData } from "@/contexts/prototype";
 import WidgetUser from "@/pages/stryda/components/WidgetUser";
 import Structure from "@/pages/stryda/components/Structure";
-import Link from "next/link";
-import Tooltip from "@/components/Tooltip/Tooltip";
-import Avatar from "@/components/Avatar/Avatar";
 import Loader from "@/pages/stryda/components/Loader";
-import ModalGiftTokens from "../clans/modal-gift-tokens";
-import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import Feed from "@/pages/stryda/components/Feed";
 import { VariablesContext } from "@/contexts/variables";
-import CardMission from "@/pages/stryda/components/CardMission";
-import CardLadder from "@/pages/stryda/components/CardLadder";
 import ModalBuyTokens from "../wallet/modal-buytokens";
-import Battlepass from "@/components/BattlePass/BattlePass";
-import ButtonFeedback from "@/components/Button/ButtonFeedback";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import WidgetCompetitions from "../components/WidgetCompetitions";
 import WidgetBattlepass from "../components/WidgetBattlepass";
 import WidgetMissions from "../components/WidgetMissions";
@@ -31,7 +21,13 @@ export default function Home() {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
+  const [stateBattlepass, setStateBattlepass] = useState("normal");
+  const [stateMissions, setStateMissions] = useState("normal");
+  const [stateCompetitions, setStateCompetitions] = useState("normal");
+  const [stateFollowings, setStateFollowings] = useState("normal");
+  const [hasError, setHasError] = useState(false);
 
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens />);
@@ -63,25 +59,161 @@ export default function Home() {
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
-                <WidgetBattlepass />
-                <WidgetMissions />
+                <WidgetBattlepass isEmpty={stateBattlepass} />
+                <WidgetMissions state={stateMissions} />
               </div>
             </div>
-            <div className="flex-1 overflow-hidden">
-              <div className="max-w-[550px] mx-auto space-y-4">
-                <Feed />
-              </div>
+            <div className="flex-1">
+              {hasError ? (
+                <div
+                  className="max-w-[550px] mx-auto sticky text-center"
+                  style={{ top: "calc(48px + 1rem)" }}
+                >
+                  <span className="icon icon-warning-sign text-7xl text-ui-400 my-4" />
+                  <h2 className="h4">We seem to have an issue</h2>
+                  <p className="mt-3 mb-4">
+                    Something went wrong when loading the feed.
+                    <br />
+                    Please refresh the page.
+                  </p>
+                  <button
+                    type="button"
+                    className="button button-secondary"
+                    onClick={() => setHasError(!hasError)}
+                  >
+                    <span className="icon icon-refresh-01" />
+                    <span>Refresh</span>
+                  </button>
+                </div>
+              ) : (
+                <div className="max-w-[550px] mx-auto space-y-4">
+                  <Feed />
+                </div>
+              )}
             </div>
             <div className="w-[21rem] space-y-4 hidden xl:block">
-              <WidgetCompetitions />
+              <WidgetCompetitions state={stateCompetitions} />
               <div
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
-                <WidgetFollowings />
+                <WidgetFollowings state={stateFollowings} />
               </div>
             </div>
           </section>
+          {/* for demo purposes only */}
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <div>
+                <div>Missions state: </div>
+                <div className="form-group pl-4">
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="missions"
+                      id="missions-normal"
+                      defaultChecked={stateMissions === "normal"}
+                      onChange={() => setStateMissions("normal")}
+                    />
+                    <label htmlFor="missions-normal">Normal</label>
+                  </div>
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="missions"
+                      id="missions-empty"
+                      defaultChecked={stateMissions === "empty"}
+                      onChange={() => setStateMissions("empty")}
+                    />
+                    <label htmlFor="missions-empty">Empty</label>
+                  </div>
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="missions"
+                      id="missions-onboarding"
+                      defaultChecked={stateMissions === "onboarding"}
+                      onChange={() => setStateMissions("onboarding")}
+                    />
+                    <label htmlFor="missions-onboarding">Onboarding</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Feed: </div>
+                <div className="form-group pl-4">
+                  <div className="form-xs form-toggle">
+                    <input
+                      type="checkbox"
+                      name="feed"
+                      id="feed-error"
+                      onChange={() => setHasError(!hasError)}
+                    />
+                    <label htmlFor="feed-error">Error state</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Competitions: </div>
+                <div className="form-group pl-4">
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="competitions"
+                      id="competitions-normal"
+                      defaultChecked={stateCompetitions === "normal"}
+                      onChange={() => setStateCompetitions("normal")}
+                    />
+                    <label htmlFor="competitions-normal">Normal</label>
+                  </div>
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="competitions"
+                      id="competitions-empty"
+                      defaultChecked={stateCompetitions === "empty"}
+                      onChange={() => setStateCompetitions("empty")}
+                    />
+                    <label htmlFor="competitions-empty">Empty / onboarding</label>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div>Followings: </div>
+                <div className="form-group pl-4">
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="followings"
+                      id="followings-normal"
+                      defaultChecked={stateFollowings === "normal"}
+                      onChange={() => setStateFollowings("normal")}
+                    />
+                    <label htmlFor="followings-normal">Normal</label>
+                  </div>
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="followings"
+                      id="followings-empty"
+                      defaultChecked={stateFollowings === "empty"}
+                      onChange={() => setStateFollowings("empty")}
+                    />
+                    <label htmlFor="followings-empty">Empty</label>
+                  </div>
+                </div>
+              </div>
+            </section>
+          )}
         </Loader>
       </Structure>
     </>

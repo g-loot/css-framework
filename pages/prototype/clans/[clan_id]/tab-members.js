@@ -314,7 +314,7 @@ export default function TabClanMembers() {
           )}
 
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+          <section className="text-sm text-ui-100/0 hover:text-ui-100 flex flex-col items-stretch">
             <div onClick={() => setHasOnlyOne(!hasOnlyOne)}>
               Toggle admin view {hasOnlyOne ? "ON" : "OFF"}
             </div>

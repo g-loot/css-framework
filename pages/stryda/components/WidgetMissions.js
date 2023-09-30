@@ -4,6 +4,7 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { VariablesContext } from "@/contexts/variables";
 import Link from "next/link";
 import GameIcon from "@/components/GameIcon/GameIcon";
+import Countdown from "@/components/Countdown/Countdown";
 
 const Line = ({ game, mission }) => {
   const prototype = usePrototypeData();
@@ -47,6 +48,7 @@ export default function WidgetMissions(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
+  const state = props.state || "normal";
   const length = 5;
   const [missions, setMissions] = useState([]);
 
@@ -98,36 +100,83 @@ export default function WidgetMissions(props) {
                   </Link>
         */}
         </div>
-        <div className="bg-ui-850">
-          <ul className="p-1">
-            {missions.slice(0, maxLines).map((item, itemIndex) => (
-              <Line key={itemIndex} mission={item} game={item.gameID} />
-            ))}
-          </ul>
-          {missions.length > maxLines && (
-            <div className="px-2 pb-2 text-center">
-              <button
-                type="button"
-                className={`button button-ghost button-sm rounded w-full ${
-                  maxLinesLoader ? "is-loading" : ""
-                }`}
-                onClick={() => handleMoreLines()}
-              >
-                <span>View more</span>
-              </button>
+        {state == "normal" && (
+          <>
+            <div className="bg-ui-850">
+              <ul className="p-1">
+                {missions.slice(0, maxLines).map((item, itemIndex) => (
+                  <Line key={itemIndex} mission={item} game={item.gameID} />
+                ))}
+              </ul>
+              {missions.length > maxLines && (
+                <div className="px-2 pb-2 text-center">
+                  <button
+                    type="button"
+                    className={`button button-ghost button-sm rounded w-full ${
+                      maxLinesLoader ? "is-loading" : ""
+                    }`}
+                    onClick={() => handleMoreLines()}
+                  >
+                    <span>View more</span>
+                  </button>
+                </div>
+              )}
             </div>
-          )}
-        </div>
-        <div className="border-t border-t-ui-700 p-2 space-y-2 text-center">
-          <div className="text-sm text-ui-300">
-            {12 - variablesContext.availableMissions} / 12 missions revealed
-          </div>
-          <Link href={`/stryda/missions${prototype.getURLparams()}`}>
-            <button type="button" className="button button-sm button-secondary">
-              <span>Reveal more missions</span>
-            </button>
-          </Link>
-        </div>
+            <div className="border-t border-t-ui-700 p-2 space-y-2 text-center">
+              <div className="text-sm text-ui-300">
+                {12 - variablesContext.availableMissions} / 12 missions revealed
+              </div>
+              <Link href={`/stryda/missions${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className="button button-sm button-secondary"
+                >
+                  <span>Reveal more missions</span>
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
+        {state == "empty" && (
+          <>
+            <div className="bg-ui-850 p-4 text-center">
+              <h3 className="text-base text-ui-100 mb-3">New missions in</h3>
+              <Countdown
+                separator=" "
+                hasDays={false}
+                hasHours={true}
+                hasMinutes={true}
+                hasSeconds={true}
+                className="text-4xl text-ui-100"
+              />
+              <Link href={`/stryda/missions${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className="button button-sm button-tertiary mt-4"
+                >
+                  <span>Go to Missions page</span>
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
+        {state === "onboarding" && (
+          <>
+            <div className="bg-ui-850 p-4">
+              <div className="flex items-center gap-4">
+                <p className="text-sm flex-1">Reveal Missions to earn XP</p>
+              </div>
+              <Link href={`/stryda/missions${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className="button button-sm button-primary mt-4"
+                >
+                  <span>Find Missions to play</span>
+                </button>
+              </Link>
+            </div>
+          </>
+        )}
       </div>
     </>
   );

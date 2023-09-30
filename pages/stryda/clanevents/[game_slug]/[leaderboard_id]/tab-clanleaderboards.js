@@ -383,315 +383,315 @@ export default function TabClanLeaderboardsLeaderboards() {
                   )}
                   {isInAClan ? (
                     <div
-                    className={`surface surface-dimmed p-2 pt-4 rounded text-center ${
-                      isLoadingRank ? "is-loading" : ""
-                    }`}
-                  >
-                    <AvatarClan id={1} size="avatar-lg" />
-                    <p>
-                      {prototype.getUserByID(1).clan && (
+                      className={`surface surface-dimmed p-2 pt-4 rounded text-center ${
+                        isLoadingRank ? "is-loading" : ""
+                      }`}
+                    >
+                      <AvatarClan id={1} size="avatar-lg" />
+                      <p>
+                        {prototype.getUserByID(1).clan && (
+                          <>
+                            &#91;
+                            {
+                              prototype.getClanByID(
+                                prototype.getUserByID(1).clan
+                              )?.tag
+                            }
+                            &#93;{" "}
+                          </>
+                        )}{" "}
+                        {
+                          prototype.getClanByID(prototype.getUserByID(1).clan)
+                            ?.nickname
+                        }
+                      </p>
+                      {variablesContext.clanLeaderboardEnrolled ||
+                      selectedClanLeaderboard.status === "finished" ? (
                         <>
-                          &#91;
-                          {
-                            prototype.getClanByID(
-                              prototype.getUserByID(1).clan
-                            )?.tag
-                          }
-                          &#93;{" "}
-                        </>
-                      )}{" "}
-                      {
-                        prototype.getClanByID(prototype.getUserByID(1).clan)
-                          ?.nickname
-                      }
-                    </p>
-                    {variablesContext.clanLeaderboardEnrolled ||
-                    selectedClanLeaderboard.status === "finished" ? (
-                      <>
-                        <div
-                          className={`infobanner ${
-                            selectedClanLeaderboard.status === "ongoing"
-                              ? "is-active"
-                              : ""
-                          }`}
-                        >
-                          <div className="py-2 space-y-2 infobanner-front">
-                            <h3>#5</h3>
-                            <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
-                              <span>Score: 3</span>
-                              <span>Top 5%</span>
-                            </p>
-                          </div>
-                          <div className="infobanner-back absolute inset-0 flex justify-center text-center text-sm">
-                            <div className="animate-pulse text-ui-100">
-                              Waiting for matches...
+                          <div
+                            className={`infobanner ${
+                              selectedClanLeaderboard.status === "ongoing"
+                                ? "is-active"
+                                : ""
+                            }`}
+                          >
+                            <div className="py-2 space-y-2 infobanner-front">
+                              <h3>#5</h3>
+                              <p className="text-ui-300 text-sm uppercase flex gap-3 justify-center">
+                                <span>Score: 3</span>
+                                <span>Top 5%</span>
+                              </p>
+                            </div>
+                            <div className="infobanner-back absolute inset-0 flex justify-center text-center text-sm">
+                              <div className="animate-pulse text-ui-100">
+                                Waiting for matches...
+                              </div>
                             </div>
                           </div>
-                        </div>
 
-                        {selectedClanLeaderboard.status === "ongoing" && (
-                          <ButtonFeedback
-                            variant="button-sm button-secondary w-full my-2"
-                            icon="icon-refresh-02"
-                            message="Stats updated"
-                            label="Update my stats"
-                            delay={3000}
-                          />
-                        )}
+                          {selectedClanLeaderboard.status === "ongoing" && (
+                            <ButtonFeedback
+                              variant="button-sm button-secondary w-full my-2"
+                              icon="icon-refresh-02"
+                              message="Stats updated"
+                              label="Update my stats"
+                              delay={3000}
+                            />
+                          )}
 
-                        {selectedClanLeaderboard.status === "finished" && (
+                          {selectedClanLeaderboard.status === "finished" && (
+                            <button
+                              type="button"
+                              className="button button-sm button-primary w-full mb-2"
+                              onClick={() =>
+                                openmodalLadderResults(
+                                  selectedClanLeaderboard.id
+                                )
+                              }
+                            >
+                              <span>View results</span>
+                            </button>
+                          )}
                           <button
                             type="button"
-                            className="button button-sm button-primary w-full mb-2"
-                            onClick={() =>
-                              openmodalLadderResults(
-                                selectedClanLeaderboard.id
-                              )
-                            }
+                            className="button button-sm button-secondary w-full"
                           >
-                            <span>View results</span>
+                            <span>Go to Clan position</span>
                           </button>
-                        )}
-                        <button
-                          type="button"
-                          className="button button-sm button-secondary w-full"
-                        >
-                          <span>Go to Clan position</span>
-                        </button>
-                      </>
-                    ) : (
-                      <>
-                        <p className="text-ui-300 mt-4 mb-5">
-                          Enroll your Clan and play matches with party
-                          composed of 5 Clan members to be placed on the
-                          leaderboard.
-                        </p>
-                      </>
-                    )}
+                        </>
+                      ) : (
+                        <>
+                          <p className="text-ui-300 mt-4 mb-5">
+                            Enroll your Clan and play matches with party
+                            composed of 5 Clan members to be placed on the
+                            leaderboard.
+                          </p>
+                        </>
+                      )}
 
-                    <div className="surface rounded mt-4">
-                      <div className="text-center py-2 pr-2">
-                        <table className="table table-compact w-full">
-                          <tbody>
-                            <tr>
-                              <td className="flex items-center gap-2">
-                                <div
-                                  className="text-sm uppercase"
-                                  onClick={() =>
-                                    SetHasEligibleMembers(!hasEligibleMembers)
-                                  }
-                                >
-                                  Clan members
-                                </div>
-                                <Tooltip tooltip="Showing eligible Clan members only">
-                                  <button
-                                    type="button"
-                                    className="text-ui-300"
-                                  >
-                                    <span className="icon icon-16 icon-c-info" />
-                                  </button>
-                                </Tooltip>
-                              </td>
-                              {selectedClanLeaderboard.status ===
-                                "finished" ||
-                              (selectedClanLeaderboard.status === "ongoing" &&
-                                variablesContext.clanLeaderboardEnrolled) ? (
-                                <td className="text-right">
-                                  <div className="text-sm uppercase">
-                                    Score
-                                  </div>
-                                </td>
-                              ) : (
-                                <td className="text-right">
-                                  <Link href="/prototype/clans/1?tab=members">
-                                    <a className="text-sm link">View all</a>
-                                  </Link>
-                                </td>
-                              )}
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div className="border-t border-ui-700 max-h-[250px] overflow-x-hidden overflow-y-auto scrollbar-desktop">
-                        {hasEligibleMembers ? (
+                      <div className="surface rounded mt-4">
+                        <div className="text-center py-2 pr-2">
                           <table className="table table-compact w-full">
                             <tbody>
-                              {getMyClanMembers().map((item, itemIndex) => (
-                                <tr key={itemIndex}>
-                                  <td>
-                                    <div className="flex items-center gap-2">
-                                      <Avatar
-                                        id={item.id}
-                                        hasTooltip={true}
-                                      />
-                                      <Link
-                                        href={`/prototype/profile/${
-                                          prototype.getUserByID(item.id).id
-                                        }${prototype.getURLparams()}`}
-                                      >
-                                        <span
-                                          className={`text-sm interactive truncate w-28 ${
-                                            prototype.getUserByID(item.id)
-                                              .isPremium
-                                              ? "text-premium-500"
-                                              : "text-ui-200"
-                                          }`}
-                                        >
-                                          {
-                                            prototype.getUserByID(item.id)
-                                              .nickname
-                                          }
-                                        </span>
-                                      </Link>
+                              <tr>
+                                <td className="flex items-center gap-2">
+                                  <div
+                                    className="text-sm uppercase"
+                                    onClick={() =>
+                                      SetHasEligibleMembers(!hasEligibleMembers)
+                                    }
+                                  >
+                                    Clan members
+                                  </div>
+                                  <Tooltip tooltip="Showing eligible Clan members only">
+                                    <button
+                                      type="button"
+                                      className="text-ui-300"
+                                    >
+                                      <span className="icon icon-16 icon-c-info" />
+                                    </button>
+                                  </Tooltip>
+                                </td>
+                                {selectedClanLeaderboard.status ===
+                                  "finished" ||
+                                (selectedClanLeaderboard.status === "ongoing" &&
+                                  variablesContext.clanLeaderboardEnrolled) ? (
+                                  <td className="text-right">
+                                    <div className="text-sm uppercase">
+                                      Score
                                     </div>
                                   </td>
-                                  <td>
-                                    <div className="flex items-center justify-end">
-                                      <Tooltip
-                                        placement="top"
-                                        tooltip={
-                                          <div className="uppercase">
-                                            {item.countryFlag}
-                                          </div>
-                                        }
-                                      >
-                                        <img
-                                          src={`https://flagcdn.com/${item.countryFlag}.svg`}
-                                          className="aspect-video rounded-sm w-6 mr-3"
+                                ) : (
+                                  <td className="text-right">
+                                    <Link href="/prototype/clans/1?tab=members">
+                                      <a className="text-sm link">View all</a>
+                                    </Link>
+                                  </td>
+                                )}
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                        <div className="border-t border-ui-700 max-h-[250px] overflow-x-hidden overflow-y-auto scrollbar-desktop">
+                          {hasEligibleMembers ? (
+                            <table className="table table-compact w-full">
+                              <tbody>
+                                {getMyClanMembers().map((item, itemIndex) => (
+                                  <tr key={itemIndex}>
+                                    <td>
+                                      <div className="flex items-center gap-2">
+                                        <Avatar
+                                          id={item.id}
+                                          hasTooltip={true}
                                         />
-                                      </Tooltip>
-                                      <Tooltip
-                                        placement="top"
-                                        tooltip={
-                                          <div className="uppercase">
+                                        <Link
+                                          href={`/prototype/profile/${
+                                            prototype.getUserByID(item.id).id
+                                          }${prototype.getURLparams()}`}
+                                        >
+                                          <span
+                                            className={`text-sm interactive truncate w-28 ${
+                                              prototype.getUserByID(item.id)
+                                                .isPremium
+                                                ? "text-premium-500"
+                                                : "text-ui-200"
+                                            }`}
+                                          >
                                             {
-                                              getRankByID(RandomNumber(1, 10))
-                                                .name
+                                              prototype.getUserByID(item.id)
+                                                .nickname
                                             }
-                                          </div>
-                                        }
-                                      >
-                                        <img
-                                          src={
-                                            getRankByID(RandomNumber(1, 10))
-                                              .picturePath
+                                          </span>
+                                        </Link>
+                                      </div>
+                                    </td>
+                                    <td>
+                                      <div className="flex items-center justify-end">
+                                        <Tooltip
+                                          placement="top"
+                                          tooltip={
+                                            <div className="uppercase">
+                                              {item.countryFlag}
+                                            </div>
                                           }
-                                          className="inline w-6 h-6 object-contain object-center"
-                                        />
-                                      </Tooltip>
-                                      <Tooltip
-                                        placement="top"
-                                        tooltip={
-                                          <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
-                                            <span className="uppercase text-ui-300">
-                                              Riot ID:
-                                            </span>
-                                            <div className="flex-1">
-                                              <div className="truncate">
-                                                <a
-                                                  className="link"
-                                                  onClick={() => {
-                                                    uiContext.openToastr({
-                                                      size: "medium",
-                                                      text: "RIOT ID copied to your clipboard",
-                                                      color: "green",
-                                                      autoDelete: true,
-                                                      autoDeleteDelay: 2500,
-                                                    });
-                                                    navigator.clipboard.writeText(
+                                        >
+                                          <img
+                                            src={`https://flagcdn.com/${item.countryFlag}.svg`}
+                                            className="aspect-video rounded-sm w-6 mr-3"
+                                          />
+                                        </Tooltip>
+                                        <Tooltip
+                                          placement="top"
+                                          tooltip={
+                                            <div className="uppercase">
+                                              {
+                                                getRankByID(RandomNumber(1, 10))
+                                                  .name
+                                              }
+                                            </div>
+                                          }
+                                        >
+                                          <img
+                                            src={
+                                              getRankByID(RandomNumber(1, 10))
+                                                .picturePath
+                                            }
+                                            className="inline w-6 h-6 object-contain object-center"
+                                          />
+                                        </Tooltip>
+                                        <Tooltip
+                                          placement="top"
+                                          tooltip={
+                                            <div className="text-sm w-64 pl-2 flex gap-1 items-center justify-center">
+                                              <span className="uppercase text-ui-300">
+                                                Riot ID:
+                                              </span>
+                                              <div className="flex-1">
+                                                <div className="truncate">
+                                                  <a
+                                                    className="link"
+                                                    onClick={() => {
+                                                      uiContext.openToastr({
+                                                        size: "medium",
+                                                        text: "RIOT ID copied to your clipboard",
+                                                        color: "green",
+                                                        autoDelete: true,
+                                                        autoDeleteDelay: 2500,
+                                                      });
+                                                      navigator.clipboard.writeText(
+                                                        prototype.getUserByID(
+                                                          item.id
+                                                        ).socials
+                                                          ?.riotValorantNickname
+                                                      );
+                                                    }}
+                                                  >
+                                                    {
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).nickname
+                                                    }
+                                                    {" #"}
+                                                    {
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).socials
+                                                        ?.riotValorantHashtag
+                                                    }
+                                                  </a>
+                                                </div>
+                                              </div>
+                                              <div>
+                                                <Tooltip
+                                                  placement="top"
+                                                  tooltip={
+                                                    <span className="text-sm">
+                                                      Click to copy RIOT ID
+                                                    </span>
+                                                  }
+                                                >
+                                                  <ButtonFeedback
+                                                    value={`${
                                                       prototype.getUserByID(
                                                         item.id
                                                       ).socials
                                                         ?.riotValorantNickname
-                                                    );
-                                                  }}
-                                                >
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).nickname
-                                                  }
-                                                  {" #"}
-                                                  {
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }
-                                                </a>
+                                                    }{" #"}${
+                                                      prototype.getUserByID(
+                                                        item.id
+                                                      ).socials
+                                                        ?.riotValorantHashtag
+                                                    }`}
+                                                    variant="button-ghost rounded-full"
+                                                    icon="icon-document-copy"
+                                                    message="RIOT ID copied to your clipboard"
+                                                  />
+                                                </Tooltip>
                                               </div>
                                             </div>
-                                            <div>
-                                              <Tooltip
-                                                placement="top"
-                                                tooltip={
-                                                  <span className="text-sm">
-                                                    Click to copy RIOT ID
-                                                  </span>
-                                                }
-                                              >
-                                                <ButtonFeedback
-                                                  value={`${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantNickname
-                                                  }{" #"}${
-                                                    prototype.getUserByID(
-                                                      item.id
-                                                    ).socials
-                                                      ?.riotValorantHashtag
-                                                  }`}
-                                                  variant="button-ghost rounded-full"
-                                                  icon="icon-document-copy"
-                                                  message="RIOT ID copied to your clipboard"
-                                                />
-                                              </Tooltip>
-                                            </div>
-                                          </div>
-                                        }
-                                      >
-                                        <ButtonFeedback
-                                          value={`${
-                                            prototype.getUserByID(item.id)
-                                              .nickname
-                                          } #1111`}
-                                          variant="button-ghost rounded-full"
-                                          icon="icon-riotgames-symbol"
-                                          message="RIOT ID copied to your clipboard"
-                                        />
-                                      </Tooltip>
-                                    </div>
-                                  </td>
-                                  {selectedClanLeaderboard.status ===
-                                    "finished" ||
-                                  (selectedClanLeaderboard.status ===
-                                    "ongoing" &&
-                                    variablesContext.clanLeaderboardEnrolled) ? (
-                                    <td>
-                                      <div className="text-sm font-bold">
-                                        {41 - itemIndex}
+                                          }
+                                        >
+                                          <ButtonFeedback
+                                            value={`${
+                                              prototype.getUserByID(item.id)
+                                                .nickname
+                                            } #1111`}
+                                            variant="button-ghost rounded-full"
+                                            icon="icon-riotgames-symbol"
+                                            message="RIOT ID copied to your clipboard"
+                                          />
+                                        </Tooltip>
                                       </div>
                                     </td>
-                                  ) : (
-                                    <></>
-                                  )}
-                                </tr>
-                              ))}
-                            </tbody>
-                          </table>
-                        ) : (
-                          <div className="text-center py-4 px-8">
-                            <span className="icon icon-multiple-11 text-6xl text-ui-500" />
-                            <p className="mt-2 text-ui-300 leading-tight">
-                              Your Clan has no eligible members for this
-                              Event.
-                            </p>
-                          </div>
-                        )}
+                                    {selectedClanLeaderboard.status ===
+                                      "finished" ||
+                                    (selectedClanLeaderboard.status ===
+                                      "ongoing" &&
+                                      variablesContext.clanLeaderboardEnrolled) ? (
+                                      <td>
+                                        <div className="text-sm font-bold">
+                                          {41 - itemIndex}
+                                        </div>
+                                      </td>
+                                    ) : (
+                                      <></>
+                                    )}
+                                  </tr>
+                                ))}
+                              </tbody>
+                            </table>
+                          ) : (
+                            <div className="text-center py-4 px-8">
+                              <span className="icon icon-multiple-11 text-6xl text-ui-500" />
+                              <p className="mt-2 text-ui-300 leading-tight">
+                                Your Clan has no eligible members for this
+                                Event.
+                              </p>
+                            </div>
+                          )}
+                        </div>
                       </div>
                     </div>
-                  </div>
                   ) : (
                     <>
                       {selectedClanLeaderboard.status === "ongoing" && (
@@ -1359,32 +1359,43 @@ export default function TabClanLeaderboardsLeaderboards() {
         </>
       )}
       {/* for demo purposes only */}
-      <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-        <a onClick={() => setHasRiot(!hasRiot)}>
-          Toggle has Riot {hasRiot ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => setHasRewards(!hasRewards)}>
-          Toggle has Rewards {hasRewards ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => setIsInAClan(!isInAClan)}>
-          Toggle in a clan {isInAClan ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => setIsEmpty(!isEmpty)}>
-          Toggle empty state {isEmpty ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => setHasRanks(!hasRanks)}>
-          Toggle ranks {hasRanks ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
-          Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => SetHasEligibleMembers(!hasEligibleMembers)}>
-          Toggle eligible members {hasEligibleMembers ? "ON" : "OFF"}
-        </a>
-        <a onClick={() => openmodalClanEventOnboarding()}>
-          Open Modal Onboarding
-        </a>
-      </section>
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <a onClick={() => setHasRiot(!hasRiot)}>
+            Toggle has Riot {hasRiot ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => setHasRewards(!hasRewards)}>
+            Toggle has Rewards {hasRewards ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => setIsInAClan(!isInAClan)}>
+            Toggle in a clan {isInAClan ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => setIsEmpty(!isEmpty)}>
+            Toggle empty state {isEmpty ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => setHasRanks(!hasRanks)}>
+            Toggle ranks {hasRanks ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
+            Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => SetHasEligibleMembers(!hasEligibleMembers)}>
+            Toggle eligible members {hasEligibleMembers ? "ON" : "OFF"}
+          </a>
+          <a onClick={() => openmodalClanEventOnboarding()}>
+            Open Modal Onboarding
+          </a>
+        </section>
+      )}
     </>
   );
 }

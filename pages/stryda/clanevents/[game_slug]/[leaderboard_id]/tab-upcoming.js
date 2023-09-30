@@ -32,18 +32,19 @@ export default function TabClanLeaderboardUpcoming() {
       {selectedGame && (
         <>
           <section className="pb-8">
-            {isEmpty || !selectedGame.clanLeaderboards && (
-              <>
-                <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
-                  <div className="max-w-xs mx-auto">
-                    <span className="icon icon-multiple-11 text-6xl text-ui-500" />
-                    <div className="mt-2 text-ui-300">
-                      There is no upcoming Clan Event in {selectedGame.name}.
+            {isEmpty ||
+              (!selectedGame.clanLeaderboards && (
+                <>
+                  <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
+                    <div className="max-w-xs mx-auto">
+                      <span className="icon icon-multiple-11 text-6xl text-ui-500" />
+                      <div className="mt-2 text-ui-300">
+                        There is no upcoming Clan Event in {selectedGame.name}.
+                      </div>
                     </div>
                   </div>
-                </div>
-              </>
-            )}
+                </>
+              ))}
             {!isEmpty && (
               <>
                 {loading ? (
@@ -106,7 +107,8 @@ export default function TabClanLeaderboardUpcoming() {
                 ) : (
                   <>
                     <div className="items-spaced item-interactive space-y-2">
-                      {selectedGame.clanLeaderboards?.filter((g) => g.status === "upcoming")
+                      {selectedGame.clanLeaderboards
+                        ?.filter((g) => g.status === "upcoming")
                         .map((item, itemIndex) => (
                           <CardClanEvent
                             key={itemIndex}
@@ -121,11 +123,22 @@ export default function TabClanLeaderboardUpcoming() {
             )}
           </section>
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={() => setIsEmpty(!isEmpty)}>
-              Toggle empty state {isEmpty ? "ON" : "OFF"}
-            </a>
-          </section>
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <a onClick={() => setIsEmpty(!isEmpty)}>
+                Toggle empty state {isEmpty ? "ON" : "OFF"}
+              </a>
+            </section>
+          )}
         </>
       )}
     </>

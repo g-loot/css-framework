@@ -145,7 +145,11 @@ export default function StatsLeagueOfLegends() {
                             Connect your League of Legends account and start
                             playing.
                           </p>
-                          <button type="button" className="button button-primary" onClick={openModalConnectIDLeagueOfLegends}>
+                          <button
+                            type="button"
+                            className="button button-primary"
+                            onClick={openModalConnectIDLeagueOfLegends}
+                          >
                             <span
                               className={`icon icon-game-${selectedGame.slug}-symbol`}
                             />
@@ -278,7 +282,10 @@ export default function StatsLeagueOfLegends() {
                           {prototype.getUserByID(1)?.nickname}
                         </div>
                         <div>
-                          {prototype.getUserByID(1)?.socials.riotValorantNickname}
+                          {
+                            prototype.getUserByID(1)?.socials
+                              .riotValorantNickname
+                          }
                           <span className="text-sm text-ui-300">#8492</span>
                         </div>
                         <div className="text-ui-300 uppercase text-xs lg:text-sm">
@@ -728,7 +735,9 @@ export default function StatsLeagueOfLegends() {
                                                     alt=""
                                                     className="relative z-0 w-8 h-8 object-cover rounded"
                                                   />
-                                                  <span className="absolute -bottom-2 -right-2 z-10 rounded-full px-1 py-0.5 text-xs text-center font-bold bg-ui-100 text-ui-800 leading-none">x11</span>
+                                                  <span className="absolute -bottom-2 -right-2 z-10 rounded-full px-1 py-0.5 text-xs text-center font-bold bg-ui-100 text-ui-800 leading-none">
+                                                    x11
+                                                  </span>
                                                 </button>
                                               )
                                             )}
@@ -1160,28 +1169,39 @@ export default function StatsLeagueOfLegends() {
             </>
           )}
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <a onClick={switchVariants}>Switch between various users</a>
-            <a
-              onClick={() => {
-                setIsEmpty(false);
-                setHasRiot(!hasRiot);
-              }}
-            >
-              Toggle has Riot {hasRiot ? "ON" : "OFF"}
-            </a>
-            <a
-              onClick={() => {
-                setIsEmpty(!isEmpty);
-                setHasRiot(true);
-              }}
-            >
-              Toggle empty state {isEmpty ? "ON" : "OFF"}
-            </a>
-            <a onClick={() => prototype.togglePremium()}>
-              Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-            </a>
-          </section>
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <a onClick={switchVariants}>Switch between various users</a>
+              <a
+                onClick={() => {
+                  setIsEmpty(false);
+                  setHasRiot(!hasRiot);
+                }}
+              >
+                Toggle has Riot {hasRiot ? "ON" : "OFF"}
+              </a>
+              <a
+                onClick={() => {
+                  setIsEmpty(!isEmpty);
+                  setHasRiot(true);
+                }}
+              >
+                Toggle empty state {isEmpty ? "ON" : "OFF"}
+              </a>
+              <a onClick={() => prototype.togglePremium()}>
+                Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
+              </a>
+            </section>
+          )}
         </>
       )}
     </>

@@ -216,7 +216,7 @@ export default function Home() {
         <HomeLadderMissions gameSlug="pubg" />
 
         {/* for demo purposes only */}
-        <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
+        <section className="text-sm text-ui-100/0 hover:text-ui-100 flex flex-col items-stretch">
           <a onClick={() => prototype.togglePremium()}>
             Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
           </a>

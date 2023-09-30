@@ -1,9 +1,7 @@
-import React, { Fragment, useContext, useState, useEffect } from "react";
+import React, { useContext, useState, useEffect } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
-import { VariablesContext } from "@/contexts/variables";
 import Link from "next/link";
-import GameIcon from "@/components/GameIcon/GameIcon";
 import Avatar from "@/components/Avatar/Avatar";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
@@ -78,6 +76,7 @@ const Line = ({ item, giftTokens, addFollowing }) => {
 
 export default function WidgetFollowings(props) {
   const prototype = usePrototypeData();
+  const state = props.state || "normal";
   const length = 5;
   const [followings, setFollowings] = useState([]);
 
@@ -120,27 +119,49 @@ export default function WidgetFollowings(props) {
                     </Link>
                               */}
         </div>
-        <div className="bg-ui-850">
-          <ul className="divide-y-0">
-            {followings.slice(0, maxLines).map((item, itemIndex) => (
-              <Line key={itemIndex} item={item} giftTokens={true} />
-            ))}
-          </ul>
-          {prototype.users.filter((i) => !i.isOnline && !i.isYou).length >
-            maxLines && (
-            <div className="px-2 pb-2 text-center">
-              <button
-                type="button"
-                className={`button button-ghost button-sm rounded w-full ${
-                  maxLinesLoader ? "is-loading" : ""
-                }`}
-                onClick={() => handleMoreLines()}
-              >
-                <span>View more</span>
-              </button>
+        {state === "normal" && (
+          <div className="bg-ui-850">
+            <ul className="divide-y-0">
+              {followings.slice(0, maxLines).map((item, itemIndex) => (
+                <Line key={itemIndex} item={item} giftTokens={true} />
+              ))}
+            </ul>
+            {prototype.users.filter((i) => !i.isOnline && !i.isYou).length >
+              maxLines && (
+              <div className="px-2 pb-2 text-center">
+                <button
+                  type="button"
+                  className={`button button-ghost button-sm rounded w-full ${
+                    maxLinesLoader ? "is-loading" : ""
+                  }`}
+                  onClick={() => handleMoreLines()}
+                >
+                  <span>View more</span>
+                </button>
+              </div>
+            )}
+          </div>
+        )}
+        {state === "empty" && (
+          <>
+            <div className="bg-ui-850 p-4">
+              <div className="flex items-center gap-4">
+                <p className="text-sm flex-1">
+                  Make sure you follow your friends or other Stryda players, to
+                  see them sharing their epic gameplays!
+                </p>
+              </div>
+              <Link href={`/stryda/search${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className="button button-sm button-primary mt-4"
+                >
+                  <span>Search for players</span>
+                </button>
+              </Link>
             </div>
-          )}
-        </div>
+          </>
+        )}
       </div>
     </>
   );

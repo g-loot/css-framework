@@ -101,7 +101,7 @@ export default function FeedItemMatchBase(props) {
                         : ""
                     }`}
                   >
-                    {prototype.getUserByID(match.user)?.nickname} {isEditing && <span className="text-base">editMode</span>}
+                    {prototype.getUserByID(match.user)?.nickname}
                   </span>
                 </Link>
               </div>

@@ -1,7 +1,8 @@
 import {
   createContext,
   useContext,
-  useState
+  useState,
+  useEffect
 } from 'react';
 
 import { dataClans } from '@/mock-data/data-clans';
@@ -31,6 +32,7 @@ export const PrototypeProvider = ({ children }) => {
   const feedItems = dataFeedItems;
   const [defaultGameID, setDefaultGameID] = useState(1);
   const [isPremium, setIsPremium] = useState(false);
+  const [showDemo, setShowDemo] = useState(false);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -168,6 +170,22 @@ export const PrototypeProvider = ({ children }) => {
   const togglePremium = () => {
     setIsPremium(!isPremium);
   }
+  const handleKeyDown = (e) => {
+    console.log(e.key, e.keyCode);
+    if (e.key === "Control" || e.keyCode === 17) {
+      setShowDemo(true);
+    } else if (e.key === "Escape" || e.keyCode === 27) {
+      setShowDemo(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.removeEventListener("keydown", handleKeyDown);
+    };
+  }, []);
+
   return (
     <Provider
       value={{
@@ -180,6 +198,7 @@ export const PrototypeProvider = ({ children }) => {
         feedItems,
         defaultGameID,
         isPremium,
+        showDemo,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -202,6 +221,8 @@ export const PrototypeProvider = ({ children }) => {
         getMatchByID,
         getFeedItemByID,
         getUserMatches,
+        setIsPremium,
+        setShowDemo,
       }}
     >
       {children}

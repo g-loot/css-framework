@@ -2017,7 +2017,7 @@
 
   > .icon {
     @apply
-    animate-rotate
+    /* animate-rotate */
     text-xl
     ;
   }

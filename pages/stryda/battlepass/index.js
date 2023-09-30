@@ -100,12 +100,14 @@ export default function BattlepassPage() {
   return (
     <>
       <Structure title="Battle Pass">
-        <Loader loader={
-          <div className="flex flex-col gap-4 items-stretch my-8 min-h-screen">
-            <div className="flex-1 surface is-loading rounded" />
-            <div className="flex-4 surface is-loading rounded" />
-          </div>
-        }>
+        <Loader
+          loader={
+            <div className="flex flex-col gap-4 items-stretch my-8 min-h-screen">
+              <div className="flex-1 surface is-loading rounded" />
+              <div className="flex-4 surface is-loading rounded" />
+            </div>
+          }
+        >
           {selectedBattlepass && (
             <>
               <section className="mt-4 mb-8 p-4 relative sm:rounded overflow-hidden">
@@ -166,31 +168,46 @@ export default function BattlepassPage() {
               </div>
 
               {/* for demo purposes only */}
-              <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-                <a onClick={() => prototype.togglePremium()}>
-                  Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-                </a>
-                <a onClick={switchBattlepasses}>
-                  Switch between various Battle Passes
-                </a>
-                <a
-                  onClick={() => openModalBattlepassCompletedBonusSteps(false)}
-                >
-                  Open Battle Pass completed: bonus steps
-                </a>
-                <a onClick={() => openModalBattlepassCompletedBonusSteps(true)}>
-                  Open Battle Pass completed: bonus steps (premium)
-                </a>
-                <a onClick={openModalBattlepassCompletedClaim}>
-                  Open Battle Pass ended: claim previous rewards
-                </a>
-                <a onClick={openModalBattlepassCompletedSummary}>
-                  Open Battle Pass ended: summary
-                </a>
-                <a onClick={openModalBattlepassCompletedPremium}>
-                  Open Premium purchased
-                </a>
-              </section>
+              {prototype.showDemo && (
+                <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+                  <div className="absolute top-1 right-1">
+                    <button
+                      type="button"
+                      className="button button-sm button-secondary button-close"
+                      onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                    >
+                      <span className="icon icon-e-remove" />
+                    </button>
+                  </div>
+                  <a onClick={() => prototype.togglePremium()}>
+                    Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
+                  </a>
+                  <a onClick={switchBattlepasses}>
+                    Switch between various Battle Passes
+                  </a>
+                  <a
+                    onClick={() =>
+                      openModalBattlepassCompletedBonusSteps(false)
+                    }
+                  >
+                    Open Battle Pass completed: bonus steps
+                  </a>
+                  <a
+                    onClick={() => openModalBattlepassCompletedBonusSteps(true)}
+                  >
+                    Open Battle Pass completed: bonus steps (premium)
+                  </a>
+                  <a onClick={openModalBattlepassCompletedClaim}>
+                    Open Battle Pass ended: claim previous rewards
+                  </a>
+                  <a onClick={openModalBattlepassCompletedSummary}>
+                    Open Battle Pass ended: summary
+                  </a>
+                  <a onClick={openModalBattlepassCompletedPremium}>
+                    Open Premium purchased
+                  </a>
+                </section>
+              )}
             </>
           )}
         </Loader>

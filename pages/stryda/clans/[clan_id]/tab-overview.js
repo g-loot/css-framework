@@ -79,7 +79,9 @@ export default function TabClanOverview() {
                               prototype.getGameBySlug(ladder.gameSlug).slug
                             }/ladders/${
                               ladder.id
-                            }?tab=clan-leaderboard${prototype.getURLparams("&")}`}
+                            }?tab=clan-leaderboard${prototype.getURLparams(
+                              "&"
+                            )}`}
                           >
                             <div className="rounded surface surface-ui-600 overflow-hidden w-64 shrink-0 interactive">
                               <div className="relative">
@@ -297,16 +299,29 @@ export default function TabClanOverview() {
             </div>
           </div>
           {/* for demo purposes only */}
-          <section className="text-ui-100/0 hover:text-ui-100 inline-flex flex-col">
-            <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
-            <div
-              onClick={() =>
-                setHasMembersActionsInPlayerCard(!hasMembersActionsInPlayerCard)
-              }
-            >
-              Toggle members view
-            </div>
-          </section>
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
+              <div
+                onClick={() =>
+                  setHasMembersActionsInPlayerCard(
+                    !hasMembersActionsInPlayerCard
+                  )
+                }
+              >
+                Toggle members view
+              </div>
+            </section>
+          )}
         </>
       )}
       {selectedClan && !selectedClan.isYou && (
