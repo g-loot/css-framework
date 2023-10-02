@@ -14,10 +14,10 @@ const NOW_IN_MS = new Date().getTime();
 const dateTimeAfterThreeDays = NOW_IN_MS + THREE_DAYS_IN_MS;
 
 const Countdown = (props) => {
-  const hasDays = props.hasDays || false;
-  const hasHours = props.hasHours || true;
-  const hasMinutes = props.hasMinutes || true;
-  const hasSeconds = props.hasSeconds || true;
+  const hasDays = props.hasDays !== undefined ? props.hasDays : false;
+  const hasHours = props.hasHours !== undefined ? props.hasHours : true;
+  const hasMinutes = props.hasMinutes !== undefined ? props.hasMinutes : true;
+  const hasSeconds = props.hasSeconds !== undefined ? props.hasSeconds : true;
   const hasLabels = props.hasLabels || true;
   const labelsAbbr = props.labelsAbbr || true;
   const className = props.className || "";

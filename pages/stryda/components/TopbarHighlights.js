@@ -96,7 +96,6 @@ export default function TopbarHighlights() {
   };
 
   const handleProcessing = (id) => {
-    console.log("handleProcessing", id);
     let interval;
     if (processingPercent < 100) {
       interval = setInterval(() => {

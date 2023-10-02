@@ -112,10 +112,11 @@ const Index = () => {
                             return true;
                           }
                         })
-                        .map((item) => (
+                        .map((item, itemIndex) => (
                           <>
                             {(!item.deprecated || showDeprecated) && (
                               <li
+                                key={itemIndex}
                                 className={`item border-ui-700  ${
                                   item.isDisabled ? "is-disabled" : ""
                                 } ${item.title ? "pointer-events-none" : ""} ${

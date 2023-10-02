@@ -107,7 +107,7 @@ export default function WidgetFollowings(props) {
           <Link
             href={`/stryda/profile/1?tab=following${prototype.getURLparams()}`}
           >
-            <h2 className="text-base text-ui-100 interactive">Followings</h2>
+            <h2 className="text-base text-ui-100 interactive">Followings <span className="text-sm">(167)</span></h2>
           </Link>
           {/*
                     <Link

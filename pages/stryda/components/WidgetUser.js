@@ -78,7 +78,7 @@ export default function WidgetUser(props) {
                     ).image
                   }
                   alt=""
-                  className="rounded-t aspect-landscape w-full"
+                  className="rounded-t aspect-banner w-full"
                 />
               </>
             ) : (
@@ -86,7 +86,7 @@ export default function WidgetUser(props) {
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                   alt=""
-                  className="rounded-t aspect-landscape w-full"
+                  className="rounded-t aspect-banner w-full"
                 />
               </>
             )}

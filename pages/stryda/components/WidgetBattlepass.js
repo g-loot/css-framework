@@ -29,15 +29,18 @@ export default function WidgetBattlepass(props) {
           </div>
           {state === "empty" ? (
             <div className="bg-ui-850 p-4 text-center">
+              <h3 className="text-sm text-ui-200 mb-2">Congratulations, you have unlocked all tiers!</h3>
               <h3 className="text-sm text-ui-200 mb-2">New Battle Pass in</h3>
-              <Countdown
-                separator=" "
-                hasDays={false}
-                hasHours={true}
-                hasMinutes={true}
-                hasSeconds={true}
-                className="text-3xl"
-              />
+              <div>
+                <Countdown
+                  separator=" "
+                  hasDays={true}
+                  hasHours={true}
+                  hasMinutes={true}
+                  hasSeconds={false}
+                  className="text-3xl"
+                />
+              </div>
             </div>
           ) : (
             <div className="p-3 bg-ui-850 relative rounded-b flex gap-5 items-center justify-center">

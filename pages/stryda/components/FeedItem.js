@@ -10,6 +10,7 @@ export default function FeedItem(props) {
   const prototype = usePrototypeData();
   const item = props.item;
   const autoPlay = props.autoPlay || false;
+  const stateFeedAd = props.stateFeedAd
 
   return (
     <>
@@ -21,7 +22,7 @@ export default function FeedItem(props) {
         />
       )}
       {item && item.type === "advertising" && (
-        <FeedItemAdvertising item={item} />
+        <FeedItemAdvertising item={item} stateFeedAd={stateFeedAd} />
       )}
       {item && item.type === "ladders" && (
         <FeedItemLadders item={item} />

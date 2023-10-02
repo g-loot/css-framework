@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
 import FeedItem from "@/pages/stryda/components/FeedItem";
 import { usePrototypeData } from "@/contexts/prototype";
-export default function Feed() {
+
+export default function Feed(props) {
   const prototype = usePrototypeData();
   const [playingIndex, setPlayingIndex] = useState(null);
+  const stateFeedAd = props.stateFeedAd
 
   const handleScroll = () => {
     const videoElements = document.querySelectorAll(".video");
@@ -39,6 +41,7 @@ export default function Feed() {
           item={item}
           key={itemIndex}
           autoPlay={playingIndex === itemIndex}
+          stateFeedAd={stateFeedAd}
         />
       ))}
       <div role="loading" className="loader loader-sm mx-auto">

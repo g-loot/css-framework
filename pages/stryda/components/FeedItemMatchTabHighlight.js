@@ -48,7 +48,7 @@ export default function FeedItemMatchTabHighlight(props) {
             autoPlay={autoPlay}
             controls
             playsInline
-            loop
+            // loop
             muted
             width="100%"
             height="auto"

@@ -62,7 +62,7 @@ export default function FeedItemMatch(props) {
                     onClick={() => setActiveTab("activity")}
                   >
                     <span>
-                      Activity{" "}
+                      Ladder{match.achievements.length > 1 && <>s</>}{" "}
                       <span className="text-xs">
                         ({match.achievements.length})
                       </span>

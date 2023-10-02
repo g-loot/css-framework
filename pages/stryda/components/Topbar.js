@@ -75,7 +75,7 @@ export default function Topbar() {
   }
 
   return (
-    <div className="sticky top-0 z-40 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
+    <div className="sticky top-0 z-50 bg-ui-700/95 navbar h-12 flex items-center border-b border-ui-500 shadow-xs">
       <div className="w-full px-2  relative">
         <div className="flex justify-between items-center lg:gap-4 mx-auto">
           <div className="flex justify-start items-center">

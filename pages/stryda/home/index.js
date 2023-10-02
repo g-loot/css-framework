@@ -28,6 +28,7 @@ export default function Home() {
   const [stateMissions, setStateMissions] = useState("normal");
   const [stateCompetitions, setStateCompetitions] = useState("normal");
   const [stateFollowings, setStateFollowings] = useState("normal");
+  const [stateFeedAd, setStateFeedAd] = useState("normal");
   const [hasError, setHasError] = useState(false);
 
   function openModalBuyTokens() {
@@ -42,7 +43,7 @@ export default function Home() {
             <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
               <div className="w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1">
-                <div className="max-w-[620px] overflow-x-hidden mx-auto space-y-4">
+                <div className="max-w-[620px] mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
@@ -87,8 +88,8 @@ export default function Home() {
                   </button>
                 </div>
               ) : (
-                <div className="max-w-[620px] overflow-x-hidden mx-auto space-y-4">
-                  <Feed />
+                <div className="max-w-[620px] mx-auto space-y-4">
+                  <Feed stateFeedAd={stateFeedAd} />
                 </div>
               )}
             </div>
@@ -280,6 +281,41 @@ export default function Home() {
                         onChange={() => setStateFollowings("empty")}
                       />
                       <label htmlFor="followings-empty">Empty</label>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-sm">Ad feed item:</h3>
+                  <div className="form-group pl-4 mt-2">
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="ad"
+                        id="ad-normal"
+                        defaultChecked={stateFeedAd === "normal"}
+                        onChange={() => setStateFeedAd("normal")}
+                      />
+                      <label htmlFor="ad-normal">With brand as author</label>
+                    </div>
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="ad"
+                        id="ad-stryda"
+                        defaultChecked={stateFeedAd === "stryda"}
+                        onChange={() => setStateFeedAd("stryda")}
+                      />
+                      <label htmlFor="ad-stryda">With Stryda as author</label>
+                    </div>
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="ad"
+                        id="ad-noauthor"
+                        defaultChecked={stateFeedAd === "noauthor"}
+                        onChange={() => setStateFeedAd("noauthor")}
+                      />
+                      <label htmlFor="ad-noauthor">Without author</label>
                     </div>
                   </div>
                 </div>
