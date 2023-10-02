@@ -300,7 +300,7 @@ export default function TabClanOverview() {
           </div>
           {/* for demo purposes only */}
           {prototype.showDemo && (
-            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
               <div className="absolute top-1 right-1">
                 <button
                   type="button"
@@ -310,15 +310,35 @@ export default function TabClanOverview() {
                   <span className="icon icon-e-remove" />
                 </button>
               </div>
-              <div onClick={() => setIsAdmin(!isAdmin)}>Toggle admin view</div>
-              <div
-                onClick={() =>
-                  setHasMembersActionsInPlayerCard(
-                    !hasMembersActionsInPlayerCard
-                  )
-                }
-              >
-                Toggle members view
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-admin"
+                    defaultChecked={isAdmin}
+                    onChange={() => {
+                      setIsAdmin(!isAdmin);
+                    }}
+                  />
+                  <label htmlFor="feed-admin">Admin view</label>
+                </div>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-members"
+                    defaultChecked={hasMembersActionsInPlayerCard}
+                    onChange={() => {
+                      setHasMembersActionsInPlayerCard(
+                        !hasMembersActionsInPlayerCard
+                      );
+                    }}
+                  />
+                  <label htmlFor="feed-members">Members view</label>
+                </div>
               </div>
             </section>
           )}

@@ -402,7 +402,7 @@ export default function TabProfileOverview() {
       )}
       {/* for demo purposes only */}
       {prototype.showDemo && (
-        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
           <div className="absolute top-1 right-1">
             <button
               type="button"
@@ -412,10 +412,20 @@ export default function TabProfileOverview() {
               <span className="icon icon-e-remove" />
             </button>
           </div>
-          <a onClick={() => openModalAchievementReceived()}>
-            Open achievemnts received modal
-          </a>
-          <a onClick={() => openmodalLeveLUp()}>Open level up modal</a>
+          <button
+            type="button"
+            className="button button-sm button-ghost"
+            onClick={openModalAchievementReceived}
+          >
+            <span>Open achievements received modal</span>
+          </button>
+          <button
+            type="button"
+            className="button button-sm button-ghost"
+            onClick={openmodalLeveLUp}
+          >
+            <span>Open level up modal</span>
+          </button>
         </section>
       )}
     </>

@@ -164,7 +164,7 @@ const DSpage = () => {
                   <span>Ladder points</span>
                 </li>
                 <li>
-                  <span>jamlog</span>
+                  <span>CtrlChampion</span>
                   <span>77</span>
                 </li>
                 <li>

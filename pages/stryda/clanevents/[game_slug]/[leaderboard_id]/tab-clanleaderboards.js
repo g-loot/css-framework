@@ -178,11 +178,11 @@ export default function TabClanLeaderboardsLeaderboards() {
     );
   }, [leaderboard_id]);
 
-  useEffect(() => {
-    if (selectedClanLeaderboard && selectedClanLeaderboard?.id === 0) {
-      openmodalClanEventOnboarding();
-    }
-  }, [selectedClanLeaderboard]);
+  // useEffect(() => {
+  //   if (selectedClanLeaderboard && selectedClanLeaderboard?.id === 0) {
+  //     openmodalClanEventOnboarding();
+  //   }
+  // }, [selectedClanLeaderboard]);
 
   const sliderRankWrapper = useRef(null);
   const sliderRankItem = useRef(null);
@@ -258,8 +258,9 @@ export default function TabClanLeaderboardsLeaderboards() {
     );
   }
   function openmodalClanEventOnboarding() {
-    uiContext.openModal(<ModalClanEventOnboarding />);
-    // uiContext.openModal(<ModalClanEventOnboarding />);
+    uiContext.openModal(
+      <ModalClanEventOnboarding leaderboard={selectedClanLeaderboard} />
+    );
   }
 
   const getRankByID = (id) => {
@@ -1360,7 +1361,7 @@ export default function TabClanLeaderboardsLeaderboards() {
       )}
       {/* for demo purposes only */}
       {prototype.showDemo && (
-        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
           <div className="absolute top-1 right-1">
             <button
               type="button"
@@ -1370,30 +1371,110 @@ export default function TabClanLeaderboardsLeaderboards() {
               <span className="icon icon-e-remove" />
             </button>
           </div>
-          <a onClick={() => setHasRiot(!hasRiot)}>
-            Toggle has Riot {hasRiot ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => setHasRewards(!hasRewards)}>
-            Toggle has Rewards {hasRewards ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => setIsInAClan(!isInAClan)}>
-            Toggle in a clan {isInAClan ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => setIsEmpty(!isEmpty)}>
-            Toggle empty state {isEmpty ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => setHasRanks(!hasRanks)}>
-            Toggle ranks {hasRanks ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => setHasPlayersDetails(!hasPlayersDetails)}>
-            Toggle players details {hasPlayersDetails ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => SetHasEligibleMembers(!hasEligibleMembers)}>
-            Toggle eligible members {hasEligibleMembers ? "ON" : "OFF"}
-          </a>
-          <a onClick={() => openmodalClanEventOnboarding()}>
-            Open Modal Onboarding
-          </a>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-riot"
+                defaultChecked={hasRiot}
+                onChange={() => {
+                  setHasRiot(!hasRiot);
+                }}
+              />
+              <label htmlFor="feed-riot">Riot account</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-rewards"
+                defaultChecked={hasRewards}
+                onChange={() => {
+                  setHasRewards(!hasRewards);
+                }}
+              />
+              <label htmlFor="feed-rewards">Rewards</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-clan"
+                defaultChecked={isInAClan}
+                onChange={() => {
+                  setIsInAClan(!isInAClan);
+                }}
+              />
+              <label htmlFor="feed-clan">In a Clan</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-empty"
+                defaultChecked={isEmpty}
+                onChange={() => {
+                  setIsEmpty(!isEmpty);
+                }}
+              />
+              <label htmlFor="feed-empty">Empty state</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-ranks"
+                defaultChecked={hasRanks}
+                onChange={() => {
+                  setHasRanks(!hasRanks);
+                }}
+              />
+              <label htmlFor="feed-ranks">Ranks</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-playerdetails"
+                defaultChecked={hasPlayersDetails}
+                onChange={() => {
+                  setHasPlayersDetails(!hasPlayersDetails);
+                }}
+              />
+              <label htmlFor="feed-playerdetails">Player details</label>
+            </div>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-eligiblemembers"
+                onChange={() => {
+                  SetHasEligibleMembers(!hasEligibleMembers);
+                }}
+              />
+              <label htmlFor="feed-eligiblemembers">Eligible members</label>
+            </div>
+          </div>
+          <button
+            type="button"
+            className="button button-sm button-ghost"
+            onClick={openmodalClanEventOnboarding}
+          >
+            <span>Open Modal Onboarding</span>
+          </button>
         </section>
       )}
     </>

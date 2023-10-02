@@ -297,7 +297,7 @@ export default function TabProfileFollowing() {
           )}
           {/* for demo purposes only */}
           {prototype.showDemo && (
-            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
               <div className="absolute top-1 right-1">
                 <button
                   type="button"
@@ -307,9 +307,20 @@ export default function TabProfileFollowing() {
                   <span className="icon icon-e-remove" />
                 </button>
               </div>
-              <a onClick={() => setIsEmpty(!isEmpty)}>
-                Toggle empty state {isEmpty ? "ON" : "OFF"}
-              </a>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-empty"
+                    defaultChecked={isEmpty}
+                    onChange={() => {
+                      setIsEmpty(!isEmpty);
+                    }}
+                  />
+                  <label htmlFor="feed-empty">Empty state</label>
+                </div>
+              </div>
             </section>
           )}
         </>

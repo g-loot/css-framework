@@ -150,7 +150,6 @@ export default function TopbarHighlights() {
   const handleLoad = (id) => {
     setProcessingID(id);
     setProcessingPercent(0);
-    console.log("handleLoad", id);
     handleProcessing(id);
   };
 

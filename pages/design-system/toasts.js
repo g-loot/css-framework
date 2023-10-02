@@ -91,7 +91,7 @@ const DSpage = () => {
                   <div>
                     <div className="toast-title">New invite</div>
                     <div className="toast-text">
-                      Jamlog is inviting you to join his clan.
+                      CtrlChampion is inviting you to join his clan.
                     </div>
                     <div className="flex items-center gap-2 mt-2">
                       <button
@@ -185,7 +185,7 @@ const DSpage = () => {
                   </div>
                   <div>
                     <div className="toast-title">
-                      Jamlog
+                      CtrlChampion
                     </div>
                     <div className="toast-text">
                       Wanna have a quick game of Valorant?

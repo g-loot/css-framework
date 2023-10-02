@@ -23,6 +23,7 @@ export default function Home() {
   const variablesContext = useContext(VariablesContext);
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
+  const [stateUser, setStateUser] = useState("normal");
   const [stateBattlepass, setStateBattlepass] = useState("normal");
   const [stateMissions, setStateMissions] = useState("normal");
   const [stateCompetitions, setStateCompetitions] = useState("normal");
@@ -41,7 +42,7 @@ export default function Home() {
             <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
               <div className="w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 overflow-x-hidden">
-                <div className="max-w-[550px] mx-auto space-y-4">
+                <div className="max-w-[620px] mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
@@ -54,19 +55,19 @@ export default function Home() {
         >
           <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
             <div className="w-[21rem] space-y-4 hidden md:block">
-              <WidgetUser hasActions={false} />
+              <WidgetUser hasActions={false} state={stateUser} />
               <div
                 className="sticky space-y-4"
                 style={{ top: "calc(48px + 1rem)" }}
               >
-                <WidgetBattlepass isEmpty={stateBattlepass} />
+                <WidgetBattlepass state={stateBattlepass} />
                 <WidgetMissions state={stateMissions} />
               </div>
             </div>
             <div className="flex-1">
               {hasError ? (
                 <div
-                  className="max-w-[550px] mx-auto sticky text-center"
+                  className="max-w-[620px] mx-auto sticky text-center"
                   style={{ top: "calc(48px + 1rem)" }}
                 >
                   <span className="icon icon-warning-sign text-7xl text-ui-400 my-4" />
@@ -86,7 +87,7 @@ export default function Home() {
                   </button>
                 </div>
               ) : (
-                <div className="max-w-[550px] mx-auto space-y-4">
+                <div className="max-w-[620px] mx-auto space-y-4">
                   <Feed />
                 </div>
               )}
@@ -103,7 +104,7 @@ export default function Home() {
           </section>
           {/* for demo purposes only */}
           {prototype.showDemo && (
-            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
               <div className="absolute top-1 right-1">
                 <button
                   type="button"
@@ -114,7 +115,30 @@ export default function Home() {
                 </button>
               </div>
               <div>
-                <div>Missions state: </div>
+                <div>User: </div>
+                <div className="form-group pl-4">
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="user"
+                      id="user-normal"
+                      defaultChecked={stateUser === "normal"}
+                      onChange={() => setStateUser("normal")}
+                    />
+                    <label htmlFor="user-normal">Normal</label>
+                  </div>
+                  <div className="form-xs form-radio">
+                    <input
+                      type="radio"
+                      name="user"
+                      id="user-noclan"
+                      defaultChecked={stateUser === "noclan"}
+                      onChange={() => setStateUser("noclan")}
+                    />
+                    <label htmlFor="user-noclan">No Clan</label>
+                  </div>
+                </div>
+                <div>Missions: </div>
                 <div className="form-group pl-4">
                   <div className="form-xs form-radio">
                     <input

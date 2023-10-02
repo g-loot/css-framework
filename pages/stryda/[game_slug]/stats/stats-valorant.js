@@ -1898,7 +1898,7 @@ export default function StatsValorant() {
           )}
           {/* for demo purposes only */}
           {prototype.showDemo && (
-            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
               <div className="absolute top-1 right-1">
                 <button
                   type="button"
@@ -1908,26 +1908,56 @@ export default function StatsValorant() {
                   <span className="icon icon-e-remove" />
                 </button>
               </div>
-              <a onClick={switchVariants}>Switch between various users</a>
-              <a
-                onClick={() => {
-                  setIsEmpty(false);
-                  setHasRiot(!hasRiot);
-                }}
+              <button
+                type="button"
+                className="button button-sm button-tertiary w-full"
+                onClick={switchVariants}
               >
-                Toggle has Riot {hasRiot ? "ON" : "OFF"}
-              </a>
-              <a
-                onClick={() => {
-                  setIsEmpty(!isEmpty);
-                  setHasRiot(true);
-                }}
-              >
-                Toggle empty state {isEmpty ? "ON" : "OFF"}
-              </a>
-              <a onClick={() => prototype.togglePremium()}>
-                Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-              </a>
+                <span>Switch between various users</span>
+              </button>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-riot"
+                    onClick={() => {
+                      setIsEmpty(false);
+                      setHasRiot(!hasRiot);
+                    }}
+                  />
+                  <label htmlFor="feed-riot">
+                    No Riot account connected State
+                  </label>
+                </div>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-empty"
+                    onChange={() => {
+                      setIsEmpty(!isEmpty);
+                      setHasRiot(true);
+                    }}
+                  />
+                  <label htmlFor="feed-empty">Empty State</label>
+                </div>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-premium"
+                    onChange={() => {
+                      prototype.togglePremium();
+                    }}
+                  />
+                  <label htmlFor="feed-premium">Has Premium</label>
+                </div>
+              </div>
             </section>
           )}
         </>

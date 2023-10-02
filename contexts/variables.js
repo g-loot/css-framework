@@ -68,7 +68,7 @@ const variablesReducer = (state, action) => {
   } else if (action.type === "CLAN_SEASON_ENROLL") {
     return {
       ...state,
-      clanLeaderboardEnrolled: true,
+      clanLeaderboardEnrolled: action.payload.bool,
     };
   }
 };
@@ -115,9 +115,12 @@ const VariablesContextProvider = (props) => {
       type: "DAILY_REWARD_UNCLAIM",
     });
   };
-  const clanEventEnroll = () => {
+  const clanEventEnroll = (bool) => {
     dispatchVariablesAction({
       type: "CLAN_SEASON_ENROLL",
+      payload: {
+        bool,
+      },
     });
   };
 

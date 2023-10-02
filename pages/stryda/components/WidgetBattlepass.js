@@ -7,6 +7,7 @@ import Battlepass from "@/components/BattlePass/BattlePass";
 export default function WidgetBattlepass(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
+  const state = props.state || "normal";
 
   return (
     <>

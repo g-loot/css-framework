@@ -108,6 +108,14 @@ select:-webkit-autofill:focus {
       text-sm
       ;
     }
+
+    &.input-secondary {
+      @apply
+      !rounded-full
+      bg-ui-500
+      border-ui-400/20
+      ;
+    }
   }
 
   :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text) {

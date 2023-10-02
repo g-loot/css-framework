@@ -16,6 +16,7 @@ import Countdown from "@/components/Countdown/Countdown";
 import Avatar from "@/components/Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
 import TopbarHighlights from "./TopbarHighlights";
+import TopbarSearch from "./TopbarSearch";
 
 export default function Topbar() {
   const router = useRouter();
@@ -57,7 +58,7 @@ export default function Topbar() {
   }, []);
   
   */
- 
+
   function openModalDownloadStarted() {
     uiContext.openModal(<ModalDownloadStarted></ModalDownloadStarted>);
   }
@@ -65,8 +66,6 @@ export default function Topbar() {
   function openModalBuyTokens() {
     uiContext.openModal(<ModalBuyTokens></ModalBuyTokens>);
   }
-
-  
 
   function handleBack() {
     router.back();
@@ -100,57 +99,15 @@ export default function Topbar() {
                 <span className="icon icon-arrow-right" />
               </button> */}
             </div>
-            {/* <Link href={`/stryda/home${prototype.getURLparams()}`}>
-              <a className="flex items-center gap-2 interactive shrink-0">
-                <img
-                  width="110"
-                  height="auto"
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672130648/Stryda/logos/stryda-logo-main-white.svg"
-                  alt="Stryda logo"
-                  className="hidden md:block"
-                />
-                <span className="block md:hidden icon icon-stryda-symbol text-3xl text-main" />
-              </a>
-            </Link> */}
-            {/*
-            <Tooltip
-              placement="bottom"
-              tooltip={
-                <div className="relative text-sm">
-                  <span>Search</span>
-                </div>
-              }
-            >
-              <Link href={`/stryda/search${prototype.getURLparams()}`}>
-                <a className="button button-ghost rounded-full">
-                  <span className="icon icon-zoom text-ui-200" />
-                </a>
-              </Link>
-            </Tooltip>
-            */}
             <div className="hidden lg:flex gap-0 mr-2">
-            <button
-                  type="button"
-                  className={`button button-ghost rounded-full `}
-                  disabled={!hasBack}
-                  onClick={handleBack}
-                >
-                  <span className="icon icon-arrow-left" />
-                </button>
-              {/* <div
-                className={`rounded-full bg-ui-500 ${
-                  hasForward ? "" : "opacity-50 pointer-events-none"
-                }`}
+              <button
+                type="button"
+                className={`button button-ghost rounded-full `}
+                disabled={!hasBack}
+                onClick={handleBack}
               >
-                <button
-                  type="button"
-                  className={`button button-ghost rounded-full`}
-                  disabled={!hasForward}
-                  onClick={handleForward}
-                >
-                  <span className="icon icon-ctrl-right" />
-                </button>
-              </div> */}
+                <span className="icon icon-arrow-left" />
+              </button>
             </div>
             <div className="md:hidden">
               <label
@@ -177,21 +134,6 @@ export default function Topbar() {
                     </div>
                   </button>
                 </Link>
-                {/*
-                <Link href={`/stryda/home${prototype.getURLparams()}`}>
-                  <button
-                    type="button"
-                    className={
-                      router.pathname.endsWith("stryda") ||
-                      router.pathname.includes("home")
-                        ? "is-active"
-                        : ""
-                    }
-                  >
-                    <span>Home</span>
-                  </button>
-                </Link>
-                  */}
               </li>
               <li>
                 <Link href={`/stryda/missions${prototype.getURLparams()}`}>
@@ -243,7 +185,7 @@ export default function Topbar() {
                             : ""
                         }
                       >
-                        <span>Clan events</span>
+                        <span>Clan Events</span>
                       </a>
                     </Link>
                   </li>
@@ -274,40 +216,8 @@ export default function Topbar() {
                   </button>
                 </Link>
               </li>
-              {/*
-              <li>
-                <Link href={`/stryda/shop${prototype.getURLparams()}`}>
-                  <button
-                    type="button"
-                    className={
-                      router.pathname.includes("shop") ? "is-active" : ""
-                    }
-                  >
-                    <span>Shop</span>
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                  <button
-                    type="button"
-                    className={
-                      router.pathname.includes("premium") ? "is-active" : ""
-                    }
-                  >
-                    <span>Premium</span>
-                  </button>
-                </Link>
-              </li>
-              <button
-                onClick={openModalBuyTokens}
-                type="button"
-                className="tab tab-secondary"
-              >
-                <span>Get tokens</span>
-              </button>
-                  */}
             </ul>
+            <TopbarSearch />
           </div>
           <div className="flex justify-end items-center gap-1 sm:gap-2">
             <TopbarHighlights />
@@ -557,17 +467,17 @@ export default function Topbar() {
             <div className="flex items-center rounded-full bg-ui-500">
               <div className="z-20 dropdown dropdown-end">
                 <button
-                    type="button"
-                    tabIndex="1"
-                    className="button button-ghost rounded-full"
+                  type="button"
+                  tabIndex="1"
+                  className="button button-ghost rounded-full"
+                >
+                  <span
+                    data-badge={!isEmpty ? "12" : ""}
+                    className="leading-[0] after:absolute after:-right-3 after:top-1"
                   >
-                    <span
-                      data-badge={!isEmpty ? "12" : ""}
-                      className="leading-[0] after:absolute after:-right-3 after:top-1"
-                    >
-                      <span className="icon icon-alarm text-ui-200" />
-                    </span>
-                  </button>
+                    <span className="icon icon-alarm text-ui-200" />
+                  </span>
+                </button>
 
                 <div
                   tabIndex="1"
@@ -635,34 +545,32 @@ export default function Topbar() {
               </div>
               <div className="z-10 dropdown dropdown-end">
                 <button
-                    type="button"
-                    tabIndex="1"
-                    className="button button-ghost rounded-full"
-                  >
-                    <span className="icon icon-wallet-43 text-ui-200" />
-                  </button>
+                  type="button"
+                  tabIndex="1"
+                  className="button button-ghost rounded-full"
+                >
+                  <span className="icon icon-wallet-43 text-ui-200" />
+                </button>
                 <div
                   tabIndex="1"
                   className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
                 >
                   {isEmpty && (
-                    <div className="h-72 flex items-center justify-center text-center">
-                      
-                    </div>
+                    <div className="h-72 flex items-center justify-center text-center"></div>
                   )}
                   {!isEmpty && (
                     <>
-                      <div className="p-2">
-                      </div>
+                      <div className="p-2"></div>
                     </>
                   )}
                 </div>
               </div>
               <div className="z-0 dropdown dropdown-end">
                 <div
+                  tabIndex="1"
                   className="flex items-center rounded-full interactive pl-1"
                 >
-                  <div tabIndex="1" className="avatar avatar-circle avatar-xs">
+                  <div className="avatar avatar-circle avatar-xs">
                     {prototype.getUserByID(1).shopItems.avatarFrame && (
                       <>
                         <img
@@ -682,10 +590,15 @@ export default function Topbar() {
                   </div>
                   <span className="icon icon-arrow-sm-down mx-2" />
                 </div>
-                <div tabIndex="1" className="dropdown-content bg-ui-500 w-52 p-1">
+                <div
+                  tabIndex="1"
+                  className="dropdown-content bg-ui-500 w-52 p-1"
+                >
                   <ul className="menu menu-rounded menu-secondary">
                     <li>
-                      <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                      <Link
+                        href={`/stryda/profile/1${prototype.getURLparams()}`}
+                      >
                         <button type="button" tabIndex="1">
                           <span className="icon icon-circle-09" />
                           <span>Profile</span>
@@ -760,6 +673,21 @@ export default function Topbar() {
                         <span className="icon icon-data-download" />
                         <span>Download tracker</span>
                       </button>
+                    </li>
+                    <li className="separator" />
+                    <li>
+                      <div className="form-sm form-toggle !px-0 !py-0.5 w-full">
+                        <input
+                          type="checkbox"
+                          name="ShowStates"
+                          id="ShowStates"
+                          defaultChecked={prototype.showDemo}
+                          onChange={() =>
+                            prototype.setShowDemo(!prototype.showDemo)
+                          }
+                        />
+                        <label htmlFor="ShowStates">Show hidden options</label>
+                      </div>
                     </li>
                     <li className="separator" />
                     <li>

@@ -28,7 +28,7 @@ const Line = ({ game, ladder }) => {
             type="button"
             className="text-xs flex items-center gap-1 text-main"
           >
-            <span>Show results</span>
+            <span>View results</span>
             <span className="icon icon-ctrl-right group-hover:translate-x-1 transition-all ease-in-out duration-150" />
           </button>
         )}

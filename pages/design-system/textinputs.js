@@ -485,6 +485,43 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Variant */}
+      <div className="mb-12" id="variant">
+        <h2 className="h3 mb-3">Variant</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-group">
+                      <div className="input-group">
+                        <span className="icon icon-right icon-zoom" />
+                        <input
+                          type="text"
+                          name="search-field"
+                          id="search-field"
+                          className="input-secondary"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/m50w24xe/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Input date */}
       <div className="mb-12" id="input-date">
         <h2 className="h3 mb-3">Input date</h2>
@@ -550,7 +587,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="form-group">
                   <label htmlFor="token2">
-                    How many tokens to you want to gift Jamlog?
+                    How many tokens to you want to gift CtrlChampion?
                   </label>
                   <input min="1" max="100" name="token2" type="number" />
                 </div>
@@ -571,7 +608,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="form-group">
                   <label htmlFor="token2">
-                    How many tokens to you want to gift Jamlog?
+                    How many tokens to you want to gift CtrlChampion?
                   </label>
                   <input
                     min="1"
@@ -598,7 +635,7 @@ const DSpage = () => {
               <div className="flex-1 space-y-4">
                 <div className="form-group">
                   <label htmlFor="token">
-                    How many tokens to you want to gift Jamlog?
+                    How many tokens to you want to gift CtrlChampion?
                   </label>
                   <div className="input-number">
                     <button type="button" onClick={inputNumberPlus}>

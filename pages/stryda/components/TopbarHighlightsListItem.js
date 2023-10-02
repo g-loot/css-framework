@@ -103,7 +103,7 @@ export default function TopbarHighlightsListItem({
         <li
           className={`surface-ui-500 rounded flex items-stretch animate-delay ${isProcessed ? 'animate-scale-in' : 'animate-slide-in-right'}`}
           style={{
-            "--delay": "calc(" + isProcessed ? 0 : itemIndex + " * 0.05s)",
+            "--delay": "calc(" + itemIndex + " * 0.05s)",
           }}
         >
           <div

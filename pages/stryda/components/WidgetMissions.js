@@ -152,7 +152,7 @@ export default function WidgetMissions(props) {
               <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                 <button
                   type="button"
-                  className="button button-sm button-tertiary mt-4"
+                  className="button button-sm button-secondary mt-4"
                 >
                   <span>Go to Missions page</span>
                 </button>

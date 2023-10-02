@@ -171,7 +171,6 @@ export const PrototypeProvider = ({ children }) => {
     setIsPremium(!isPremium);
   }
   const handleKeyDown = (e) => {
-    console.log(e.key, e.keyCode);
     if (e.key === "Control" || e.keyCode === 17) {
       setShowDemo(true);
     } else if (e.key === "Escape" || e.keyCode === 27) {

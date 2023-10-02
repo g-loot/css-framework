@@ -83,7 +83,7 @@ export default function Ladders() {
   }
 
   function openmodalClanEventOnboarding() {
-    uiContext.openModal(<ModalClanEventOnboarding />);
+    uiContext.openModal(<ModalClanEventOnboarding leaderboard={selectedClanLeaderboard} />);
   }
 
   return (

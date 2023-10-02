@@ -169,7 +169,7 @@ export default function BattlepassPage() {
 
               {/* for demo purposes only */}
               {prototype.showDemo && (
-                <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-stretch">
+                <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
                   <div className="absolute top-1 right-1">
                     <button
                       type="button"
@@ -179,33 +179,67 @@ export default function BattlepassPage() {
                       <span className="icon icon-e-remove" />
                     </button>
                   </div>
-                  <a onClick={() => prototype.togglePremium()}>
-                    Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
-                  </a>
-                  <a onClick={switchBattlepasses}>
-                    Switch between various Battle Passes
-                  </a>
-                  <a
+
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
+                    onClick={switchBattlepasses}
+                  >
+                    <span>Switch between various Battle Passes</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
                     onClick={() =>
                       openModalBattlepassCompletedBonusSteps(false)
                     }
                   >
-                    Open Battle Pass completed: bonus steps
-                  </a>
-                  <a
+                    <span>Open Battle Pass completed: bonus steps</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
                     onClick={() => openModalBattlepassCompletedBonusSteps(true)}
                   >
-                    Open Battle Pass completed: bonus steps (premium)
-                  </a>
-                  <a onClick={openModalBattlepassCompletedClaim}>
-                    Open Battle Pass ended: claim previous rewards
-                  </a>
-                  <a onClick={openModalBattlepassCompletedSummary}>
-                    Open Battle Pass ended: summary
-                  </a>
-                  <a onClick={openModalBattlepassCompletedPremium}>
-                    Open Premium purchased
-                  </a>
+                    <span>
+                      Open Battle Pass completed: bonus steps (premium)
+                    </span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
+                    onClick={() => openModalBattlepassCompletedClaim()}
+                  >
+                    <span>Open Battle Pass ended: claim previous rewards</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
+                    onClick={() => openModalBattlepassCompletedSummary()}
+                  >
+                    <span>Open Battle Pass ended: summary</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
+                    onClick={() => openModalBattlepassCompletedPremium()}
+                  >
+                    <span>Open Premium purchased</span>
+                  </button>
+
+                  <div className="form-group pl-4">
+                    <div className="form-xs form-toggle">
+                      <input
+                        type="checkbox"
+                        name="feed"
+                        id="feed-premium"
+                        onChange={() => {
+                          prototype.togglePremium();
+                        }}
+                      />
+                      <label htmlFor="feed-premium">Premium state</label>
+                    </div>
+                  </div>
                 </section>
               )}
             </>
