@@ -560,7 +560,22 @@ export default function Topbar() {
                   )}
                   {!isEmpty && (
                     <>
-                      <div className="p-2"></div>
+                      <div className="p-2">
+                        <Link
+                          href={`/prototype/wallet${prototype.getURLparams()}`}
+                        >
+                          <ul>
+                            <li className="flex items-center justify-between">
+                              <div className="flex items-center gap-1 text-currency-1-500">
+                                <span className="icon icon-20 icon-coin" />
+                                <span className="">
+                                  {prototype.getUserByID(1)?.wallet.coins}
+                                </span>
+                              </div>
+                            </li>
+                          </ul>
+                        </Link>
+                      </div>
                     </>
                   )}
                 </div>

@@ -63,8 +63,7 @@
   focus-visible:outline
   focus-visible:outline-main
   transition-[color,background,transform,opacity]
-  duration-200
-  ease-in-out
+  duration-75
   ;
   .item-title {
     &:not([class*="text-"]) {
@@ -247,13 +246,12 @@ ul.item-actions-hidden > .item,
       content-['']
       block
       rounded
-      bg-ui-700
+      bg-[linear-gradient(to_right,_rgba(var(--color-ui-400)_/_20%)_8%,_rgba(var(--color-ui-500)_/_50%)_18%,_rgba(var(--color-ui-400)_/_20%)_33%)]
       bg-[length:800px_100%]
       bg-[-200%_center]
       bg-no-repeat
       animate-[loader-list_1s_linear_infinite]
       ;
-      background-image: linear-gradient(to right, rgba(var(--color-ui-700) / 100%) 8%, rgba(var(--color-ui-600) / 100%) 18%, rgba(var(--color-ui-700) / 100%) 33%);
     }
   }
   .avatar {

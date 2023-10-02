@@ -131,7 +131,7 @@ export default function WidgetFollowings(props) {
               <div className="px-2 pb-2 text-center">
                 <button
                   type="button"
-                  className={`button button-ghost button-sm rounded w-full ${
+                  className={`button button-ghost button-sm w-full ${
                     maxLinesLoader ? "is-loading" : ""
                   }`}
                   onClick={() => handleMoreLines()}

@@ -112,7 +112,7 @@ export default function WidgetMissions(props) {
                 <div className="px-2 pb-2 text-center">
                   <button
                     type="button"
-                    className={`button button-ghost button-sm rounded w-full ${
+                    className={`button button-ghost button-sm w-full ${
                       maxLinesLoader ? "is-loading" : ""
                     }`}
                     onClick={() => handleMoreLines()}
@@ -140,19 +140,19 @@ export default function WidgetMissions(props) {
         {state == "empty" && (
           <>
             <div className="bg-ui-850 p-4 text-center">
-              <h3 className="text-base text-ui-100 mb-3">New missions in</h3>
+              <h3 className="text-sm text-ui-200 mb-2">New missions in</h3>
               <Countdown
                 separator=" "
                 hasDays={false}
                 hasHours={true}
                 hasMinutes={true}
                 hasSeconds={true}
-                className="text-4xl text-ui-100"
+                className="text-3xl"
               />
               <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                 <button
                   type="button"
-                  className="button button-sm button-secondary mt-4"
+                  className="button button-sm button-secondary mt-3"
                 >
                   <span>Go to Missions page</span>
                 </button>
@@ -162,10 +162,15 @@ export default function WidgetMissions(props) {
         )}
         {state === "onboarding" && (
           <>
-            <div className="bg-ui-850 p-4">
-              <div className="flex items-center gap-4">
-                <p className="text-sm flex-1">Reveal Missions to earn XP</p>
-              </div>
+            <div className=" bg-gradient-radial from-ui-500 via-ui-850 to-ui-850 p-4 text-center">
+              <img
+                className="w-2/3 h-auto mx-auto"
+                src="https://res.cloudinary.com/gloot/image/upload/v1696233637/Stryda/illustrations/missions-empty.webp"
+                alt=""
+              />
+              <p className="inline-flex gap-1 items-center justify-center">
+                <span className="text-sm">Reveal Missions to earn</span> <span className="sr-only">XP</span> <span className="icon icon-xp-symbol text-main text-3xl"></span>
+                </p>
               <Link href={`/stryda/missions${prototype.getURLparams()}`}>
                 <button
                   type="button"

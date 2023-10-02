@@ -78,7 +78,7 @@ export default function WidgetUser(props) {
                     ).image
                   }
                   alt=""
-                  className="rounded-t"
+                  className="rounded-t aspect-landscape w-full"
                 />
               </>
             ) : (
@@ -86,7 +86,7 @@ export default function WidgetUser(props) {
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
                   alt=""
-                  className="rounded-t"
+                  className="rounded-t aspect-landscape w-full"
                 />
               </>
             )}
@@ -148,116 +148,181 @@ export default function WidgetUser(props) {
                 )}
               </>
             </Link>
-            {prototype.getUserMatches(selectedUser.id).length > 0 ? (
+
+            {state === "mvp" ? (
               <>
-                {prototype
-                  .getUserMatches(selectedUser.id)
-                  .filter((m) => m.meta?.media)
-                  .slice(0, 1)
-                  .map((item, itemIndex) => (
+              <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
+                  <li>
                     <Link
-                      key={itemIndex}
                       href={`/stryda/profile/${
                         selectedUser.id
-                      }?tab=highlights${prototype.getURLparams("&")}`}
+                      }${prototype.getURLparams()}`}
                     >
-                      <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
-                        <div className="w-32 text-0">
-                          <Video item={item} hasMeta={false} size="xs" />
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Ladders played</div>
+                        <div className="text-lg text-ui-100">
+                          234
                         </div>
-                        <div className="leading-tight">
-                          <div className="text-sm text-ui-300">
-                            Latest highlight
-                          </div>
-                          <div className="text-lg text-ui-100">
-                            {selectedUser.stats.highlightViews > 0 ? (
-                              Math.round(selectedUser.stats.highlightViews / 2)
-                            ) : (
-                              <>--</>
-                            )}{" "}
-                            views
-                          </div>
-                        </div>
-                      </div>
+                      </button>
                     </Link>
-                  ))}
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }${prototype.getURLparams()}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Avg. placement</div>
+                        <div className="text-lg text-ui-100">
+                          #43
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=achievements${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Achievements</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers > 0 ? (
+                            Math.round(selectedUser.stats.followers / 2)
+                          ) : (
+                            <>--</>
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
               </>
             ) : (
-              <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
-                <div className="w-32 text-0 aspect-video rounded-2 bg-ui-600 grid place-content-center">
-                  <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
-                </div>
-                <div className="leading-tight">
-                  <div className="text-sm text-ui-300">Latest highlight</div>
-                  <div className="text-xs">No highlights published yet</div>
-                </div>
-              </div>
+              <>
+                {prototype.getUserMatches(selectedUser.id).length > 0 ? (
+                  <>
+                    {prototype
+                      .getUserMatches(selectedUser.id)
+                      .filter((m) => m.meta?.media)
+                      .slice(0, 1)
+                      .map((item, itemIndex) => (
+                        <Link
+                          key={itemIndex}
+                          href={`/stryda/profile/${
+                            selectedUser.id
+                          }?tab=highlights${prototype.getURLparams("&")}`}
+                        >
+                          <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
+                            <div className="w-32 text-0">
+                              <Video item={item} hasMeta={false} size="xs" />
+                            </div>
+                            <div className="leading-tight">
+                              <div className="text-sm text-ui-300">
+                                Latest highlight
+                              </div>
+                              <div className="text-lg text-ui-100">
+                                {selectedUser.stats.highlightViews > 0 ? (
+                                  Math.round(selectedUser.stats.highlightViews / 2)
+                                ) : (
+                                  <>--</>
+                                )}{" "}
+                                views
+                              </div>
+                            </div>
+                          </div>
+                        </Link>
+                      ))}
+                  </>
+                ) : (
+                  <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
+                    <div className="w-32 text-0 aspect-video rounded-2 bg-ui-600 grid place-content-center">
+                      <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
+                    </div>
+                    <div className="leading-tight">
+                      <div className="text-sm text-ui-300">Latest highlight</div>
+                      <div className="text-xs">No highlights published yet</div>
+                    </div>
+                  </div>
+                )}
+                <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=followers${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Followers</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers > 0 ? (
+                            selectedUser.stats.followers
+                          ) : (
+                            <>--</>
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=followings${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Highlights</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.highlightViews > 0 ? (
+                            selectedUser.stats.highlightViews
+                          ) : (
+                            <>--</>
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=achievements${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Achievements</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers > 0 ? (
+                            Math.round(selectedUser.stats.followers / 2)
+                          ) : (
+                            <>--</>
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                </ul>
+              </>
             )}
-            <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4">
-              <li>
-                <Link
-                  href={`/stryda/profile/${
-                    selectedUser.id
-                  }?tab=followers${prototype.getURLparams("&")}`}
-                >
-                  <button
-                    type="button"
-                    className="interactive px-2 leading-tight"
-                  >
-                    <div className="text-sm text-ui-300">Followers</div>
-                    <div className="text-lg text-ui-100">
-                      {selectedUser.stats.followers > 0 ? (
-                        selectedUser.stats.followers
-                      ) : (
-                        <>--</>
-                      )}
-                    </div>
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/stryda/profile/${
-                    selectedUser.id
-                  }?tab=followers${prototype.getURLparams("&")}`}
-                >
-                  <button
-                    type="button"
-                    className="interactive px-2 leading-tight"
-                  >
-                    <div className="text-sm text-ui-300">Highlights</div>
-                    <div className="text-lg text-ui-100">
-                      {selectedUser.stats.highlightViews > 0 ? (
-                        selectedUser.stats.highlightViews
-                      ) : (
-                        <>--</>
-                      )}
-                    </div>
-                  </button>
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href={`/stryda/profile/${
-                    selectedUser.id
-                  }?tab=followers${prototype.getURLparams("&")}`}
-                >
-                  <button
-                    type="button"
-                    className="interactive px-2 leading-tight"
-                  >
-                    <div className="text-sm text-ui-300">Achievements</div>
-                    <div className="text-lg text-ui-100">
-                      {selectedUser.stats.followers > 0 ? (
-                        Math.round(selectedUser.stats.followers / 2)
-                      ) : (
-                        <>--</>
-                      )}
-                    </div>
-                  </button>
-                </Link>
-              </li>
-            </ul>
             <div className="space-y-2">
               {!selectedUser.clan || state === "noclan" ? (
                 <>
@@ -397,31 +462,6 @@ export default function WidgetUser(props) {
               )}
             </div>
           </div>
-          {/* <div className="absolute z-0 inset-x-0 top-0 rounded overflow-hidden h-72">
-            <i className={`absolute z-10 top-0 inset-0 ${isInTooltip ? 'bg-[linear-gradient(to_bottom,_rgb(var(--color-ui-600)/40%)_30%,_rgb(var(--color-ui-600)/90%)_65%,_rgb(var(--color-ui-600)/100%)_100%)]' : 'bg-[linear-gradient(to_bottom,_rgb(var(--color-ui-800)/40%)_30%,_rgb(var(--color-ui-800)/90%)_65%,_rgb(var(--color-ui-800)/100%)_100%)]'}`} />
-            {selectedUser.shopItems?.profileBanner ? (
-                <>
-                  <img
-                    src={
-                      prototype.getShopitemByID(
-                        2,
-                        selectedUser.shopItems?.profileBanner
-                      ).image
-                    }
-                    alt=""
-                    className="absolute z-0 inset-0 w-full h-full object-cover object-center"
-                  />
-                </>
-              ) : (
-                <>
-                  <img
-                    src="https://res.cloudinary.com/gloot/image/upload/v1692022099/Stryda/illustrations/Generic_background_v2.jpg"
-                    alt=""
-                    className="absolute z-0 inset-0 w-full h-full object-cover object-center"
-                  />
-                </>
-              )}
-          </div> */}
         </div>
       )}
     </>

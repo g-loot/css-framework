@@ -457,6 +457,19 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="form-group">
+                      <label htmlFor="search-field">Search</label>
+                      <div className="input-group input-sm input-secondary">
+                        <button role="button" className="button button-ghost">
+                          <span className="icon icon-zoom" />
+                        </button>
+                        <input
+                          type="text"
+                          name="search-field"
+                          id="search-field"
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group">
                       <label htmlFor="send-email">Send email</label>
                       <div className="input-group">
                         <button type="button" className="button button-primary">
@@ -503,6 +516,16 @@ const DSpage = () => {
                           name="search-field"
                           id="search-field"
                           className="input-secondary"
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group">
+                      <div className="input-group input-secondary">
+                        <span className="icon icon-right icon-zoom" />
+                        <input
+                          type="text"
+                          name="search-field"
+                          id="search-field"
                         />
                       </div>
                     </div>

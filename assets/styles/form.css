@@ -101,21 +101,6 @@ select:-webkit-autofill:focus {
     focus-visible:z-20
     p-2
     ;
-
-    &.input-sm {
-      @apply
-      h-9
-      text-sm
-      ;
-    }
-
-    &.input-secondary {
-      @apply
-      !rounded-full
-      bg-ui-500
-      border-ui-400/20
-      ;
-    }
   }
 
   :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], input[type=password], textarea, .input-text) {
@@ -138,6 +123,23 @@ select:-webkit-autofill:focus {
     }
   }
   
+}
+
+.input-group.input-sm > input,
+input.input-sm {
+  @apply
+  h-9
+  text-sm
+  ;
+}
+
+.input-group.input-secondary > input,
+input.input-secondary {
+  @apply
+  !rounded-full
+  bg-ui-500
+  border-ui-400/20
+  ;
 }
 
 
@@ -986,6 +988,7 @@ label.button {
 .input-group {
   @apply
   flex
+  items-center
   relative
   ;
   &:not([class*="rounded-"]) {
@@ -996,7 +999,7 @@ label.button {
 
   /* :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], textarea, button, .button, .button.button-primary) */
 
-  > * {
+  /* > * {
     @apply
     rounded-none
     ;
@@ -1020,7 +1023,7 @@ label.button {
         ;
       }
     }
-  }
+  } */
 
   :where(span, div) {
     @apply
@@ -1074,6 +1077,7 @@ label.button {
       @apply
       inline-flex
       items-center
+      self-stretch
       px-3
       border
       border-ui-500
@@ -1081,6 +1085,18 @@ label.button {
       text-ui-200
       text-sm
       ;
+      &:first-child {
+        @apply
+        rounded-l
+        -mr-px
+        ;
+      }
+      &:last-child {
+        @apply
+        rounded-r
+        -ml-px
+        ;
+      }
     }
   }
 
@@ -1132,18 +1148,16 @@ label.button {
     &:not(.button-primary) {
       @apply
       absolute
-      right-0.5
-      bottom-0.5
+      right-1
       p-2.5
       ;      
     }
 
-    &.button-sm {
+    /* &.button-sm {
       @apply
       right-0.5
-      bottom-[calc(50%-calc(36px/2))]
       ;
-    }
+    } */
 
     &.button-primary {
       @apply

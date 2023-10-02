@@ -171,6 +171,7 @@ export default function TopbarHighlights() {
         }`}
       >
         <div className="flex items-center rounded-full bg-ui-500 interactive my-1.5">
+          <div className="hidden md:block">
           <button
             type="button"
             className={`button button-loader button-stretch button-secondary ${
@@ -200,6 +201,18 @@ export default function TopbarHighlights() {
             </span>
             <span className="icon icon-video" />
           </button>
+          </div>
+          <div className="block md:hidden">
+          <button
+            type="button"
+            className={`button button-tertiary rounded-full ${
+              buttonState > 0 ? "is-active" : ""
+            }`}
+            onClick={dropdownActive}
+          >
+            <span className="icon icon-video" />
+          </button>
+          </div>
         </div>
 
         <div
