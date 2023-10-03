@@ -148,6 +148,16 @@ export default function Home() {
                       />
                       <label htmlFor="user-mvp">MVP 1</label>
                     </div>
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="user"
+                        id="user-empty"
+                        defaultChecked={stateUser === "empty"}
+                        onChange={() => setStateUser("empty")}
+                      />
+                      <label htmlFor="user-empty">Empty</label>
+                    </div>
                   </div>
                 </div>
                 <div>

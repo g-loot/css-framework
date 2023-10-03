@@ -32,6 +32,12 @@ export default function WidgetUser(props) {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);
 
+  useEffect(() => {
+    if(selectedUser && selectedUser.isFollowing) {
+      setIsFollowing(true);
+    }
+  }, [selectedUser]);
+
   function openModalRemoveFriends(id) {
     uiContext.openModal(<ModalRemoveFriend id={id} />);
   }
@@ -54,7 +60,12 @@ export default function WidgetUser(props) {
 
   function openFeedItemDetailsMatch(target) {
     const item = dataFeedItems[1];
-    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={item}
+        selectedTab={target ? target : "default"}
+      />
+    );
   }
 
   return (
@@ -205,10 +216,11 @@ export default function WidgetUser(props) {
                       >
                         <div className="text-sm text-ui-300">Achievements</div>
                         <div className="text-lg text-ui-100">
-                          {selectedUser.stats.followers > 0 ? (
-                            Math.round(selectedUser.stats.followers / 2)
-                          ) : (
+                          {selectedUser.stats.followers === 0 ||
+                          state === "empty" ? (
                             <>--</>
+                          ) : (
+                            Math.round(selectedUser.stats.followers / 2)
                           )}
                         </div>
                       </button>
@@ -218,14 +230,32 @@ export default function WidgetUser(props) {
               </>
             ) : (
               <>
-                {prototype.getUserMatches(selectedUser.id).length > 0 ? (
+                {prototype.getUserMatches(selectedUser.id).length === 0 ||
+                state === "empty" ? (
+                  <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
+                    <div className="w-32 text-0 aspect-video rounded-2 bg-ui-500 grid place-content-center">
+                      <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
+                    </div>
+                    <div className="leading-tight">
+                      <div className="text-sm text-ui-300">
+                        Latest highlight
+                      </div>
+                      <div className="text-xs">No highlights published yet</div>
+                    </div>
+                  </div>
+                ) : (
                   <>
                     {prototype
                       .getUserMatches(selectedUser.id)
                       .filter((m) => m.meta?.media)
                       .slice(0, 1)
                       .map((item, itemIndex) => (
-                        <button key={itemIndex} type="button" className="inline-flex items-center justify-center gap-4 mt-5 text-left interactive rounded" onClick={() => openFeedItemDetailsMatch("highlight")}>
+                        <button
+                          key={itemIndex}
+                          type="button"
+                          className="inline-flex items-center justify-center gap-4 mt-5 text-left interactive rounded"
+                          onClick={() => openFeedItemDetailsMatch("highlight")}
+                        >
                           <div className="w-32 text-0 pointer-events-none">
                             <Video item={item} hasMeta={false} size="xs" />
                           </div>
@@ -247,18 +277,6 @@ export default function WidgetUser(props) {
                         </button>
                       ))}
                   </>
-                ) : (
-                  <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
-                    <div className="w-32 text-0 aspect-video rounded-2 bg-ui-600 grid place-content-center">
-                      <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
-                    </div>
-                    <div className="leading-tight">
-                      <div className="text-sm text-ui-300">
-                        Latest highlight
-                      </div>
-                      <div className="text-xs">No highlights published yet</div>
-                    </div>
-                  </div>
                 )}
                 <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
                   <li>
@@ -273,10 +291,11 @@ export default function WidgetUser(props) {
                       >
                         <div className="text-sm text-ui-300">Followers</div>
                         <div className="text-lg text-ui-100">
-                          {selectedUser.stats.followers > 0 ? (
-                            selectedUser.stats.followers
-                          ) : (
+                          {selectedUser.stats.followers === 0 ||
+                          state === "empty" ? (
                             <>--</>
+                          ) : (
+                            selectedUser.stats.followers
                           )}
                         </div>
                       </button>
@@ -294,10 +313,11 @@ export default function WidgetUser(props) {
                       >
                         <div className="text-sm text-ui-300">Highlights</div>
                         <div className="text-lg text-ui-100">
-                          {selectedUser.stats.highlightViews > 0 ? (
-                            selectedUser.stats.highlightViews
-                          ) : (
+                          {selectedUser.stats.followers === 0 ||
+                          state === "empty" ? (
                             <>--</>
+                          ) : (
+                            selectedUser.stats.highlightViews
                           )}
                         </div>
                       </button>
@@ -315,10 +335,11 @@ export default function WidgetUser(props) {
                       >
                         <div className="text-sm text-ui-300">Achievements</div>
                         <div className="text-lg text-ui-100">
-                          {selectedUser.stats.followers > 0 ? (
-                            Math.round(selectedUser.stats.followers / 2)
-                          ) : (
+                          {selectedUser.stats.followers === 0 ||
+                          state === "empty" ? (
                             <>--</>
+                          ) : (
+                            Math.round(selectedUser.stats.followers / 2)
                           )}
                         </div>
                       </button>

@@ -121,7 +121,7 @@ export default function ModalDiscardMission(props) {
                 >
                   Premium
                 </button>{" "}
-                members can discard and get a new mission every day.
+                members can discard and get new missions every day.
               </p>
             </div>
             <div className="modal-action">
