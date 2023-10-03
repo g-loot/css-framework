@@ -32,6 +32,7 @@ export default function Search() {
   const prototype = usePrototypeData();
   const [selectedGame, setSelectedGame] = useState(null);
   const hasAds = query.ads === "true" ? true : false;
+  const searchQuery = query.q || null;
   const { game } = router.query;
   const { tab } = router.query;
   const defaultTab = "players";
@@ -43,6 +44,12 @@ export default function Search() {
   useEffect(() => {
     setSelectedGame(prototype.getGameBySlug(game));
   }, [game]);
+
+  useEffect(() => {
+    if(searchQuery) {
+      setFilter(searchQuery);
+    }
+  }, [searchQuery]);
 
   return (
     <Structure title="Search">

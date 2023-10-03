@@ -165,8 +165,24 @@ export default function Home() {
           </div>
           <HomeLaddersClan hasNoClan={hasNoClan} hasNoLadders={hasNoLadders} />
         </section>
+        <section className="my-16 surface sm:rounded-lg overflow-hidden flex flex-col lg:flex-row items-center">
+          <div className="flex-1 grid place-content-center p-8">
+            <img
+              className="w-44 sm:w-44 xl:w-48 h-auto"
+              src="https://res.cloudinary.com/gloot/image/upload/v1696335464/Ladders/Big%20Clan%20Battle/BCB%20Winners%20graphics/bg_bcb_winners_logo.svg"
+              alt="Big Clan Battle winners"
+            />
+          </div>
+          <div className="flex-3 xl:flex-2 grid place-content-center">
+            <img
+              className="flex-2"
+              src="https://res.cloudinary.com/gloot/image/upload/v1696336013/Ladders/Big%20Clan%20Battle/BCB%20Winners%20graphics/bg_bcb_winners_20231003.webp"
+              alt=""
+            />
+          </div>
+        </section>
         {!isPremium && (
-          <section className="my-16 py-4 surface flex-1 sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
+          <section className="my-16 py-4 surface sm:rounded-lg overflow-hidden flex flex-col lg:flex-row lg:items-center lg:justify-end">
             <div className="flex-2 relative z-10 p-4 lg:p-8 lg:pr-0 order-2 lg:order-1 text-center lg:text-left">
               <h3 className="h1 text-6xl lg:text-7xl">
                 Make your gg more
@@ -221,19 +237,19 @@ export default function Home() {
             Toggle Premium state {prototype.isPremium ? "ON" : "OFF"}
           </a>
           <a
-              onClick={() => {
-                setHasNoClan(!hasNoClan);
-              }}
-            >
-              Toggle has no Clan {hasNoClan ? "ON" : "OFF"}
-            </a>
+            onClick={() => {
+              setHasNoClan(!hasNoClan);
+            }}
+          >
+            Toggle has no Clan {hasNoClan ? "ON" : "OFF"}
+          </a>
           <a
-              onClick={() => {
-                setHasNoLadders(!hasNoLadders);
-              }}
-            >
-              Toggle empty state Ladders {hasNoLadders ? "ON" : "OFF"}
-            </a>
+            onClick={() => {
+              setHasNoLadders(!hasNoLadders);
+            }}
+          >
+            Toggle empty state Ladders {hasNoLadders ? "ON" : "OFF"}
+          </a>
         </section>
       </PrototypeStructure>
     </>

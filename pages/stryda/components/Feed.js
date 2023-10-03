@@ -44,8 +44,10 @@ export default function Feed(props) {
           stateFeedAd={stateFeedAd}
         />
       ))}
-      <div role="loading" className="loader loader-sm mx-auto">
-        <span className="sr-only">Loading...</span>
+      <div className="flex items-center justify-center">
+        <div role="loading" className="loader loader-sm">
+          <span className="sr-only">Loading...</span>
+        </div>
       </div>
     </>
   );

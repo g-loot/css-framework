@@ -465,7 +465,7 @@ export default function TabClanLeaderboardsAbout() {
                   </p>
                 </div>
                 <div className="border-t border-ui-700 pt-4">
-                  <Link href={`/prototype/shop`}>
+                  <Link href={`/stryda/shop`}>
                     <button type="button" className="button button-secondary">
                       <span>Visit the shop</span>
                     </button>

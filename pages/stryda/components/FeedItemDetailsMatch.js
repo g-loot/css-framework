@@ -182,7 +182,7 @@ export default function FeedItemDetailsMatch(props) {
                       <span>Summary</span>
                     </button>
                   </li>
-                  {/* <li>
+                  <li>
                     <button
                       type="button"
                       className={activeTab === "stats" ? "is-active" : ""}
@@ -190,7 +190,7 @@ export default function FeedItemDetailsMatch(props) {
                     >
                       <span>Stats &amp; scoreboard</span>
                     </button>
-                  </li> */}
+                  </li>
                   {match.achievements?.length > 0 && (
                     <li>
                       <button
@@ -199,7 +199,7 @@ export default function FeedItemDetailsMatch(props) {
                         onClick={() => setActiveTab("activity")}
                       >
                         <span>
-                          Activity{" "}
+                          Ladder{match.achievements.length > 1 && <>s</>}{" "}
                           <span className="text-xs">
                             ({match.achievements.length})
                           </span>

@@ -44,30 +44,113 @@ export default function FeedItemMatchTabStats(props) {
   return (
     <>
       {item && match && (
-        <div className="border-y border-ui-700 bg-ui-850">
-          <div className="border-b border-ui-800">
-            <ul className="flex flex-wrap gap-4 p-4 items-center divide-x divide-ui-600 leading-tight">
-              {match.meta?.agent && (
-                <li className="text-0">
-                  <div className="avatar avatar-sm avatar-diamond">
-                    <div>
-                      <img
-                        src={getAgentByID(match.meta.agent).picturePath}
-                        alt=""
-                      />
-                    </div>
+        <div className="border-y border-ui-700 bg-ui-850 text-base">
+          <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop">
+            <div className="item text-center whitespace-nowrap gap-4">
+              <div className="item-image">
+                <div className="avatar avatar-sm avatar-diamond">
+                  <div>
+                    <img
+                      src={getAgentByID(match.meta.agent).picturePath}
+                      alt=""
+                    />
                   </div>
-                </li>
-              )}
-              {match.stats.mainStats.map((mainStat, mainStatIndex) => (
-                <li key={mainStatIndex} className="pl-4">
-                  <div className="text-sm text-ui-300">{mainStat.label}</div>
-                  <div className="text-2xl text-ui-100">{mainStat.value}</div>
-                </li>
-              ))}
-            </ul>
+                </div>
+              </div>
+              <div className="item-body flex-none text-left">
+                <div>
+                  <div className="text-ui-100 capitalize">
+                    {getAgentByID(match.meta.agent).name}
+                  </div>
+                  <div className="text-ui-300 text-xs font-normal capitalize">
+                    {getMapByID(match.meta.map).name} • {match.meta.mode}
+                  </div>
+                </div>
+              </div>
+              <div className="item-body flex-0 flex gap-4 items-center justify-around">
+                {match.meta.mode === "Deathmatch" ? (
+                  <div className="text-2xl text-ui-300 text-center">
+                    5th place
+                  </div>
+                ) : (
+                  <>
+                    <div className="text-2xl uppercase text-center">
+                      {match.stats.hasWon ? (
+                        <span className="text-success-500">Victory</span>
+                      ) : (
+                        <span className="text-ui-300">Defeat</span>
+                      )}
+                    </div>
+                    <div>
+                      <div className="text-ui-300 text-xl">
+                        <span
+                          className={`${
+                            match.stats.hasWon
+                              ? "text-success-300"
+                              : "text-error-300"
+                          }`}
+                        >
+                          {match.stats.score.team1}
+                        </span>{" "}
+                        -{" "}
+                        <span
+                          className={`${
+                            !match.stats.hasWon
+                              ? "text-success-300"
+                              : "text-error-300"
+                          }`}
+                        >
+                          {match.stats.score.team2}
+                        </span>
+                      </div>
+                      <div className="text-sm text-ui-400 font-normal">
+                        5th place
+                      </div>
+                    </div>
+                  </>
+                )}
+              </div>
+              <div className="item-body flex-1 flex gap-4 items-center justify-around">
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    {match.meta.dateTimeEnded}
+                  </div>
+                  <div>{match.meta.duration}</div>
+                </div>
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    K/D/A
+                  </div>
+                  <div>17 - 9 - 11</div>
+                </div>
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    KD
+                  </div>
+                  <div>1.00</div>
+                </div>
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    ADR
+                  </div>
+                  <div>135</div>
+                </div>
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    ACS
+                  </div>
+                  <div>175</div>
+                </div>
+                <div>
+                  <div className="text-ui-400 text-xs lg:text-sm uppercase">
+                    HS%
+                  </div>
+                  <div>15.4%</div>
+                </div>
+              </div>
+            </div>
           </div>
-          <div className="overflow-x-auto scrollbar-hidden">
+          <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop">
             <table className="table table-compact w-full text-center text-xs lg:text-sm">
               <tbody>
                 <tr className="bg-success-300/20 uppercase">

@@ -58,7 +58,7 @@ export default function FeedItemContextualMenu({ item, match, onEdit }) {
               )}
               {item.type === "advertising" && (
                 <li>
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <button type="button">
                       <span className="icon icon-notification" />
                       <span>Remove ads</span>

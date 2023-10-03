@@ -521,7 +521,7 @@ export default function Home() {
                     >
                       <span>Save changes</span>
                     </button>
-                    <Link href={`/prototype/profile/1${prototype.getURLparams()}`}>
+                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
                       <button type="button" className="button button-secondary">
                         <span>Cancel</span>
                       </button>

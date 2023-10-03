@@ -71,7 +71,7 @@ export default function ClanHeader(props) {
                 <nav className="breadcrumbs" aria-label="Breadcrumb">
                   <ol>
                     <li>
-                      <Link href={`/prototype/home${prototype.getURLparams()}`}>
+                      <Link href={`/stryda/home${prototype.getURLparams()}`}>
                         <a href="#">
                           <span className="icon icon-20 icon-home-2" />
                           <span>Home</span>
@@ -79,7 +79,7 @@ export default function ClanHeader(props) {
                       </Link>
                     </li>
                     <li>
-                      <Link href={`/prototype/clans/${selectedClan.id}${prototype.getURLparams()}`}>
+                      <Link href={`/stryda/clans/${selectedClan.id}${prototype.getURLparams()}`}>
                         <a href="#">
                           <span>{selectedClan.nickname}</span>
                         </a>

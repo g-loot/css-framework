@@ -42,7 +42,7 @@ export default function Home() {
           loader={
             <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
               <div className="w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
-              <div className="flex-1">
+              <div className="flex-1 overflow-x-hidden">
                 <div className="max-w-[620px] mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />

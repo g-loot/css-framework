@@ -156,7 +156,7 @@ export default function TopbarSearch() {
     if (filter.length > maxLength) {
       setActive(true);
     }
-  }
+  };
 
   useEffect(() => {
     searchActive();
@@ -177,7 +177,7 @@ export default function TopbarSearch() {
 
   return (
     <>
-      <div ref={ref} className="relative ml-2">
+      <div ref={ref} className="hidden md:block relative ml-2">
         <div className="form-group w-56">
           <div className="input-group">
             {filter.length > maxLength && (
@@ -212,15 +212,26 @@ export default function TopbarSearch() {
           <div className="absolute top-full inset-x-0 rounded surface-ui-600">
             <ResultsList filter={filter} />
             <div className="p-2 border-t border-ui-500">
-              <button
-                type="button"
-                className="button button-ghost button-sm w-full"
+              <Link
+                href={`/stryda/search?q=${filter}${prototype.getURLparams()}`}
               >
-                <span>View all results</span>
-              </button>
+                <button
+                  type="button"
+                  className="button button-ghost button-sm w-full"
+                >
+                  <span>View all results</span>
+                </button>
+              </Link>
             </div>
           </div>
         )}
+      </div>
+      <div className="block md:hidden rounded-full bg-ui-700 interactive">
+        <Link href={`/prototype/search${prototype.getURLparams()}`}>
+          <a className="button button-ghost rounded-full">
+            <span className="icon icon-zoom text-ui-200" />
+          </a>
+        </Link>
       </div>
       {/* <div
         ref={ref}
