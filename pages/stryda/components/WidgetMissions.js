@@ -140,7 +140,7 @@ export default function WidgetMissions(props) {
         {state == "empty" && (
           <>
             <div className="bg-ui-850 p-4 text-center">
-              <h3 className="text-sm text-ui-200 mb-2">New missions in</h3>
+              <h3 className="text-sm text-ui-200 mb-2">New Missions in</h3>
               <div>
                 <Countdown
                   separator=" "
@@ -165,10 +165,10 @@ export default function WidgetMissions(props) {
         {state === "onboarding" && (
           <>
             <div className="bg-ui-850 p-4">
-              <div className="flex items-center justify-start">
+              <div className="flex items-center justify-start gap-2">
 
                 <img
-                  className="flex-2 w-1/2 h-auto -mt-3 -mb-6"
+                  className="flex-2 w-1/2 h-auto -mt-3 -mb-6 -ml-3"
                   src="https://res.cloudinary.com/gloot/image/upload/v1696233637/Stryda/illustrations/missions-empty.webp"
                   alt=""
                 />

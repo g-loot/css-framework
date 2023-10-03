@@ -12,6 +12,8 @@ import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import ModalGiftTokens from "../clans/modal-gift-tokens";
 import ModalUnfollow from "../profile/modal-unfollow";
 import Video from "./Video";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
+import { dataFeedItems } from "@/mock-data/data-feed";
 
 export default function WidgetUser(props) {
   const router = useRouter();
@@ -48,6 +50,11 @@ export default function WidgetUser(props) {
     return () => {
       clearTimeout(interval);
     };
+  }
+
+  function openFeedItemDetailsMatch(target) {
+    const item = dataFeedItems[1];
+    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
   }
 
   return (
@@ -151,7 +158,7 @@ export default function WidgetUser(props) {
 
             {state === "mvp" ? (
               <>
-              <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
+                <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
                   <li>
                     <Link
                       href={`/stryda/profile/${
@@ -162,10 +169,10 @@ export default function WidgetUser(props) {
                         type="button"
                         className="interactive leading-tight"
                       >
-                        <div className="text-sm text-ui-300">Ladders played</div>
-                        <div className="text-lg text-ui-100">
-                          234
+                        <div className="text-sm text-ui-300">
+                          Ladders played
                         </div>
+                        <div className="text-lg text-ui-100">234</div>
                       </button>
                     </Link>
                   </li>
@@ -179,10 +186,10 @@ export default function WidgetUser(props) {
                         type="button"
                         className="interactive leading-tight"
                       >
-                        <div className="text-sm text-ui-300">Avg. placement</div>
-                        <div className="text-lg text-ui-100">
-                          #43
+                        <div className="text-sm text-ui-300">
+                          Avg. placement
                         </div>
+                        <div className="text-lg text-ui-100">#43</div>
                       </button>
                     </Link>
                   </li>
@@ -218,31 +225,26 @@ export default function WidgetUser(props) {
                       .filter((m) => m.meta?.media)
                       .slice(0, 1)
                       .map((item, itemIndex) => (
-                        <Link
-                          key={itemIndex}
-                          href={`/stryda/profile/${
-                            selectedUser.id
-                          }?tab=highlights${prototype.getURLparams("&")}`}
-                        >
-                          <div className="flex items-center justify-center gap-4 mt-5 mb-4 text-left interactive rounded">
-                            <div className="w-32 text-0">
-                              <Video item={item} hasMeta={false} size="xs" />
+                        <button key={itemIndex} type="button" className="inline-flex items-center justify-center gap-4 mt-5 text-left interactive rounded" onClick={() => openFeedItemDetailsMatch("highlight")}>
+                          <div className="w-32 text-0 pointer-events-none">
+                            <Video item={item} hasMeta={false} size="xs" />
+                          </div>
+                          <div className="leading-tight">
+                            <div className="text-sm text-ui-300">
+                              Latest highlight
                             </div>
-                            <div className="leading-tight">
-                              <div className="text-sm text-ui-300">
-                                Latest highlight
-                              </div>
-                              <div className="text-lg text-ui-100">
-                                {selectedUser.stats.highlightViews > 0 ? (
-                                  Math.round(selectedUser.stats.highlightViews / 2)
-                                ) : (
-                                  <>--</>
-                                )}{" "}
-                                views
-                              </div>
+                            <div className="text-lg text-ui-100">
+                              {selectedUser.stats.highlightViews > 0 ? (
+                                Math.round(
+                                  selectedUser.stats.highlightViews / 2
+                                )
+                              ) : (
+                                <>--</>
+                              )}{" "}
+                              views
                             </div>
                           </div>
-                        </Link>
+                        </button>
                       ))}
                   </>
                 ) : (
@@ -251,7 +253,9 @@ export default function WidgetUser(props) {
                       <span className="icon text-2xl text-ui-400 icon-circle-caret-right" />
                     </div>
                     <div className="leading-tight">
-                      <div className="text-sm text-ui-300">Latest highlight</div>
+                      <div className="text-sm text-ui-300">
+                        Latest highlight
+                      </div>
                       <div className="text-xs">No highlights published yet</div>
                     </div>
                   </div>

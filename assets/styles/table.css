@@ -202,7 +202,8 @@
       content-['']
       block
       rounded
-      bg-[linear-gradient(to_right,_rgba(var(--color-ui-400)_/_20%)_8%,_rgba(var(--color-ui-500)_/_50%)_18%,_rgba(var(--color-ui-400)_/_20%)_33%)]
+      bg-ui-600
+      bg-[linear-gradient(to_right,_rgba(var(--color-ui-600))_0%,_rgba(var(--color-ui-500)/70%)_50%,_rgba(var(--color-ui-600))_100%)]
       bg-[length:800px_100%]
       bg-[-200%_center]
       bg-no-repeat

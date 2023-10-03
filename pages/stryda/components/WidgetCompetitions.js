@@ -3,6 +3,7 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
 import GameIcon from "@/components/GameIcon/GameIcon";
+import ModalVideoYoutubePlayer from "../modal-videoyoutubeplayer";
 
 const Line = ({ game, ladder }) => {
   const prototype = usePrototypeData();
@@ -44,6 +45,10 @@ export default function WidgetCompetitions(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const state = props.state || "normal";
+
+  function openModalVideoYoutubePlayer(url) {
+    uiContext.openModal(<ModalVideoYoutubePlayer url={url} />);
+  }
 
   return (
     <>
@@ -96,9 +101,13 @@ export default function WidgetCompetitions(props) {
           <>
             <div className="bg-ui-850 p-4">
               <h3 className="text-base">Ladders & Clan Events</h3>
-              <div className="rounded-4 overflow-hidden mt-3 mb-2 surface">
+              <button
+                type="button"
+                className="rounded-4 overflow-hidden mt-3 mb-2 surface interactive"
+                onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
+              >
                 <iframe
-                  className="mx-auto aspect-video"
+                  className="mx-auto aspect-video pointer-events-none"
                   width="100%"
                   height="auto"
                   src="https://www.youtube.com/embed/Wso2JUKPP8o?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
@@ -107,7 +116,7 @@ export default function WidgetCompetitions(props) {
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 ></iframe>
-              </div>
+              </button>
 
               <p className="text-sm">
                 Have some fun and climb the leaderboards. Enter a competition

@@ -6,6 +6,7 @@ import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
 import { StatsValorantWeapons } from "@/mock-data/data-stats-valorant";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 export default function Video(props) {
   const uiContext = useContext(UiContext);
@@ -49,6 +50,10 @@ export default function Video(props) {
     uiContext.openModal(<ModalHighlightViewer item={item} />);
   }
 
+  function openFeedItemDetailsMatch(target) {
+    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
+  }
+
   const getAgentByID = (id) => {
     return StatsValorantAgents.find((agent) => {
       return agent.id === parseInt(id);
@@ -78,7 +83,7 @@ export default function Video(props) {
           className="interactive active:opacity-50 w-full"
           onMouseOver={handleVideoPlay}
           onMouseOut={handleVideoPause}
-          onClick={() => openModalHighlightViewer(item)}
+          onClick={() => openFeedItemDetailsMatch("highlight")}
         >
           <div
             className={`relative aspect-video w-full overflow-hidden bg-ui-700 ${
