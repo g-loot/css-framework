@@ -30,7 +30,7 @@ const DSpage = () => {
                     We just released a bunch of new missions for Dota 2. Check
                     them out.
                   </p>
-                  <div className="card-actions justify-end">
+                  <div className="card-actions">
                     <button type="button" className="button button-primary">
                       <span>Learn more</span>
                     </button>
@@ -125,7 +125,7 @@ const DSpage = () => {
                     Our VALORANT Showdown registration just opened. Time to
                     suscribe!
                   </p>
-                  <div className="card-actions justify-end">
+                  <div className="card-actions">
                     <button type="button" className="button button-primary">
                       <span>Learn more</span>
                     </button>
@@ -159,7 +159,7 @@ const DSpage = () => {
                     Our VALORANT Showdown registration just opened. Time to
                     suscribe!
                   </p>
-                  <div className="card-actions justify-end">
+                  <div className="card-actions">
                     <button type="button" className="button button-primary">
                       <span>Learn more</span>
                     </button>
@@ -192,7 +192,7 @@ const DSpage = () => {
                   <p>
                     Join Stryda Premium to unlock the full gaming experience.
                   </p>
-                  <div className="card-actions justify-end">
+                  <div className="card-actions">
                     <button type="button" className="button button-tertiary">
                       <span>View plans</span>
                     </button>

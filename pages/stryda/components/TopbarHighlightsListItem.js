@@ -83,6 +83,13 @@ export default function TopbarHighlightsListItem({
       return rank.id === parseInt(id);
     });
   };
+  const getGamemodeImage = (gamemode) => {
+    let baseUrl =
+      "https://res.cloudinary.com/gloot/image/upload/v1695129417/Stryda/stats/valorant/Game_Mode_";
+    let endUrl = ".webp";
+    var gamemode = gamemode.replace(/\s+/g, "_");
+    return baseUrl + gamemode + endUrl;
+  };
 
   function openModalHighlightViewer(match) {
     uiContext.openModal(<ModalHighlightViewer item={match} />);
@@ -101,12 +108,55 @@ export default function TopbarHighlightsListItem({
     <>
       {item && selectedMatch && (
         <li
-          className={`surface-ui-500 rounded flex items-stretch animate-delay ${isProcessed ? 'animate-scale-in' : 'animate-slide-in-right'}`}
+          className={`surface-ui-500 rounded flex items-stretch animate-delay ${
+            isProcessed ? "animate-scale-in" : "animate-slide-in-right"
+          }`}
           style={{
             "--delay": "calc(" + itemIndex + " * 0.05s)",
           }}
         >
           <div
+            className={`flex-1 flex flex-col gap-1 p-3 justify-between items-end border-r border-ui-400/20 relative overflow-hidden h-28 text-right text-xs text-ui-100 leading-none ${
+              isAlreadyProcessed ? "child:opacity-30" : ""
+            }`}
+          >
+            <div className="absolute top-2 left-2 z-40">
+              <GameIcon game={selectedMatch.meta.game} size="text-sm" />
+            </div>
+            <div className="relative z-40 text-ui-200">
+              {selectedMatch.meta.dateTimeEnded}
+            </div>
+            <div className="relative z-40 uppercase font-bold text-base">
+              {getAgentByID(selectedMatch.meta.agent).name}
+            </div>
+            <div className="relative z-40">
+              <div className="flex gap-1.5 items-center">
+                <img
+                  src={getGamemodeImage(selectedMatch.meta.mode)}
+                  alt=""
+                  className="h-4 w-4"
+                />
+                <span className="capitalize text-ui-200">{selectedMatch.meta.mode}</span>
+              </div>
+              <div className="font-bold capitalize">
+                {getMapByID(selectedMatch.meta.map).name}
+              </div>
+            </div>
+            <img
+              src={getAgentByID(selectedMatch.meta.agent).bodyPath}
+              className="absolute z-10 -top-4 -left-5 h-48 w-auto object-contain object-left-top drop-shadow-[.75rem_0_0_rgba(22,24,37,0.5)]"
+              alt=""
+            />
+            <span className="absolute z-20 inset-0 left-8 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
+            <img
+              className="absolute z-0 inset-0 h-full w-full object-cover opacity-25"
+              src={getMapByID(selectedMatch.meta.map).picturePath}
+              alt=""
+              width="auto"
+              height="auto"
+            />
+          </div>
+          {/* <div
             className={`flex-1 flex flex-col gap-1 p-2 justify-between border-r border-ui-400/20 ${
               isAlreadyProcessed ? "child:opacity-30" : ""
             }`}
@@ -175,7 +225,7 @@ export default function TopbarHighlightsListItem({
                 </Tooltip>
               )}
             </div>
-          </div>
+          </div> */}
           <div className="relative w-40 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
             {id === processingID && processingStatus === "processing" && (
               <div
@@ -202,7 +252,11 @@ export default function TopbarHighlightsListItem({
               <>
                 <button
                   type="button"
-                  className={`button button-sm ${isProcessed ? 'button-success is-shining' : 'button-secondary'}`}
+                  className={`button button-sm ${
+                    isProcessed
+                      ? "button-success is-shining"
+                      : "button-secondary"
+                  }`}
                   onClick={() => openFeedItemDetailsMatch("highlight")}
                 >
                   {isProcessed && (

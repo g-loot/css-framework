@@ -50,7 +50,7 @@ export default function FeedItemContextualMenu({ item, match, onEdit }) {
                         onClick={() => openModalReportMessage()}
                       >
                         <span className="icon icon-c-warning" />
-                        <span>Report abuse</span>
+                        <span>Report</span>
                       </button>
                     </li>
                   )}
