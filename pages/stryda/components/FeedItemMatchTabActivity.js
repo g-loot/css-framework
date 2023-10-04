@@ -28,8 +28,8 @@ export default function FeedItemMatchTabActivity(props) {
   return (
     <>
       {item && match && (
-        <div className={`border-t border-ui-700 bg-ui-850 relative flex flex-col items-center justify-between p-3 overflow-hidden ${detailedView ? '' : 'aspect-video'}`}>
-          <ul className={`w-full text-sm flex-1 flex flex-col items-center justify-center leading-tight ${detailedView ? 'space-y-3' : 'space-y-1.5'}`}>
+        <div className={`border-t border-ui-700 bg-ui-850 relative flex flex-col items-center justify-between p-1.5 md:p-3 overflow-hidden ${detailedView ? '' : 'aspect-video'}`}>
+          <ul className={`w-full text-sm flex-1 flex flex-col items-center justify-center leading-tight ${detailedView ? 'space-y-1 md:space-y-3' : 'space-y-1 md:space-y-1.5'}`}>
             {achievementsList.map((achievement, achievementIndex) => (
               <FeedItemAchievement
                 key={achievementIndex}

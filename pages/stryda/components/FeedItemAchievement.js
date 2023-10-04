@@ -54,10 +54,10 @@ export default function FeedItemAchievement(props) {
                     className="w-2/5 rounded-l border-r border-ui-700 group-hover:border-ui-600 object-cover aspect-cover"
                     alt=""
                   />
-                  <div className="flex-1 flex items-center gap-3 px-3">
-                    <ul className={`flex-1 flex gap-4 items-center justify-between px-2 ${detailedView ? 'text-base' : 'text-sm'}`}>
-                      <li>
-                        <div className={`text-xs text-ui-300 ${detailedView ? 'text-sm' : 'text-xs'}`}>Ladder</div>
+                  <div className="flex-1 flex items-center gap-1 sm:gap-3 px-1 sm:px-3 overflow-hidden">
+                    <ul className="flex-1 px-2 flex flex-col sm:flex-row gap-1 sm:gap-4 sm:items-center sm:justify-between text-sm sm:text-base">
+                      <li className="">
+                        <div className="hidden sm:block text-ui-300 text-xs sm:text-sm">Ladder</div>
                         <div className="text-ui-100 truncate">
                           {
                             prototype.getLadderByID(
@@ -67,9 +67,9 @@ export default function FeedItemAchievement(props) {
                           }
                         </div>
                       </li>
-                      <li>
-                        <div className={`text-xs text-ui-300 ${detailedView ? 'text-sm' : 'text-xs'}`}>Score</div>
-                        <div className="text-ui-100">
+                      <li className="flex flex-row gap-1 sm:gap-0 items-baseline sm:flex-col">
+                        <div className="text-ui-300 text-xs sm:text-sm">Score</div>
+                        <div className="text-ui-100 truncate">
                           {achievement.number}
                         </div>
                       </li>

@@ -56,33 +56,33 @@ export default function FeedItemMatchTabSummary(props) {
                   match.stats.hasWon ? " text-success-300" : "text-error-300"
                 }`}
               >
-                <div className="font-headings font-bold text-5xl sm:text-6xl uppercase leading-none">
+                <div className="font-headings font-bold text-5xl sm:text-6xl md:text-7xl uppercase leading-none">
                   {match.stats.hasWon ? "Victory" : "Defeat"}
                 </div>
-                <div className="text-4xl">
+                <div className="text-3xl sm:text-4xl md:text-5xl">
                   {match.stats.score.team1} - {match.stats.score.team2}
                 </div>
               </div>
-              <div className="relative z-40 text-xl uppercase text-ui-100">
+              <div className="relative z-40 text-base sm:text-xl md:text-2xl uppercase text-ui-100">
                 <div className="flex gap-1.5 items-center">
                   <img
                     src={getGamemodeImage(match.meta.mode)}
                     alt=""
-                    className="h-6 w-6"
+                    className="h-4 w-4 sm:h-6 sm:w-6 md:h-8 md:w-8"
                   />
                   <span>{match.meta.mode}</span>
                 </div>
                 <div>{getMapByID(match.meta.map).name}</div>
               </div>
-              <ul className="relative z-40 text-xl uppercase flex items-center justify-end text-left">
+              <ul className="relative z-40 text-xl uppercase flex items-center justify-end text-left space-x-4 sm:space-x-6 md:space-x-8">
                 {match.stats.mainStats
                   .slice(0, 3)
                   .map((mainStat, mainStatIndex) => (
-                    <li key={mainStatIndex} className="pl-5">
-                      <div className="text-xs text-ui-200">
+                    <li key={mainStatIndex} className="">
+                      <div className="text-xs sm:text-sm md:text-base text-ui-200">
                         {mainStat.label}
                       </div>
-                      <div className="text-lg text-ui-100">
+                      <div className="text-lg sm:text-xl md:text-xl text-ui-100">
                         {mainStat.value}
                       </div>
                     </li>
@@ -90,12 +90,12 @@ export default function FeedItemMatchTabSummary(props) {
               </ul>
               <img
                 src={getAgentByID(match.meta.agent).bodyPath}
-                className="absolute z-30 inset-y-0 left-0 h-full w-2/3 object-contain object-right-bottom drop-shadow-[.75rem_0_0_rgba(22,24,37,0.5)] animate-slide-in-left"
+                className="absolute z-30 inset-y-0 -left-8 sm:left-0 h-full w-2/3 object-contain object-right-bottom drop-shadow-[.75rem_0_0_rgba(22,24,37,0.5)] animate-slide-in-left"
                 alt=""
               />
-              <span className="absolute z-10 inset-0 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
+              <span className="absolute z-20 inset-0 left-1/4 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
               <span
-                className={`absolute z-20 inset-0 ${
+                className={`absolute z-10 inset-0 ${
                   match.stats.hasWon
                     ? "shadow-[inset_0_0_3rem_0_rgb(var(--color-success-500)/20%)]"
                     : "shadow-[inset_0_0_3rem_0_rgb(var(--color-error-500)/40%)]"

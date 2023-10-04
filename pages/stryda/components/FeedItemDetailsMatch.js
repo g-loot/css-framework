@@ -161,7 +161,7 @@ export default function FeedItemDetailsMatch(props) {
               </div>
 
               <div className="flex justify-start overflow-auto scrollbar-hidden md:block">
-                <ul className="tabs tabs-stretch text-sm border-t border-ui-700 bg-gradient-to-b from-ui-850 to-ui-800">
+                <ul className="tabs tabs-stretch text-sm border-t border-ui-700 bg-gradient-to-b from-ui-850 to-ui-800 w-full">
                   {match.meta.media?.videoUrl && (
                     <li>
                       <button

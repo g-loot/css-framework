@@ -177,7 +177,7 @@ export default function TopbarSearch() {
 
   return (
     <>
-      <div ref={ref} className="hidden md:block relative ml-2">
+      <div ref={ref} className="hidden xl:block relative ml-2">
         <div className="form-group w-56">
           <div className="input-group">
             {filter.length > maxLength && (
@@ -226,7 +226,7 @@ export default function TopbarSearch() {
           </div>
         )}
       </div>
-      <div className="block md:hidden rounded-full bg-ui-700 interactive">
+      <div className="block xl:hidden rounded-full bg-ui-600 interactive">
         <Link href={`/prototype/search${prototype.getURLparams()}`}>
           <a className="button button-ghost rounded-full">
             <span className="icon icon-zoom text-ui-200" />

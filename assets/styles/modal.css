@@ -191,7 +191,7 @@
     flex-col
     items-stretch
     max-w-[100%]
-    text-center
+    /* text-center */
     ;
 
     &:not([class*="p-"]) {

@@ -275,3 +275,43 @@
     }
   }
 }
+
+
+/* forced (javascript) */
+
+.drawer-side.drawer-forced {
+  @apply
+  block
+  md:hidden
+  fixed
+  z-[51]
+  top-0
+  bottom-0
+  left-0
+  overflow-y-auto
+  overflow-x-hidden
+  scrollbar-desktop
+  w-2/3
+  md:w-1/3
+  bg-ui-600
+  border
+  border-ui-500
+  transition-all
+  transform-gpu
+  duration-500
+  ease-[cubic-bezier(.7,0,.3,1)]
+  shadow-none
+  -translate-x-full
+  pointer-events-none
+  select-none
+  ;
+  
+  &.is-active {
+    @apply
+    shadow-2xl
+    translate-x-0
+    pointer-events-auto
+    select-auto
+    ;
+  }
+}

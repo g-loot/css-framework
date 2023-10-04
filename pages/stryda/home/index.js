@@ -41,21 +41,21 @@ export default function Home() {
         <Loader
           loader={
             <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-              <div className="w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 overflow-x-hidden">
-                <div className="max-w-[620px] mx-auto space-y-4">
+                <div className="max-w-[400px] md:max-w-[620px] mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                 </div>
               </div>
-              <div className="w-[21rem] hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-[21rem] hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-            <div className="w-[21rem] space-y-4 hidden md:block">
+            <div className="flex-none w-[21rem] space-y-4 hidden md:block">
               <WidgetUser hasActions={false} state={stateUser} />
               <div
                 className="sticky space-y-4"
@@ -65,10 +65,10 @@ export default function Home() {
                 <WidgetMissions state={stateMissions} />
               </div>
             </div>
-            <div className="flex-1">
+            <div className="flex-1 min-w-[0]">
               {hasError ? (
                 <div
-                  className="max-w-[620px] mx-auto sticky text-center"
+                  className="max-w-[400px] md:max-w-[620px] mx-auto sticky text-center"
                   style={{ top: "calc(48px + 1rem)" }}
                 >
                   <span className="icon icon-warning-sign text-7xl text-ui-400 my-4" />
@@ -88,12 +88,12 @@ export default function Home() {
                   </button>
                 </div>
               ) : (
-                <div className="max-w-[620px] mx-auto space-y-4">
+                <div className="max-w-[400px] md:max-w-[620px] mx-auto space-y-4">
                   <Feed stateFeedAd={stateFeedAd} />
                 </div>
               )}
             </div>
-            <div className="w-[21rem] space-y-4 hidden xl:block">
+            <div className="flex-none w-[21rem] space-y-4 hidden xl:block">
               <WidgetCompetitions state={stateCompetitions} />
               <div
                 className="sticky space-y-4"

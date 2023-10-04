@@ -1,7 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const [isActive, setIsActive] = useState(false);
+
+
   return (
     <>
       <h1 className="mb-2">Drawer</h1>
@@ -232,6 +235,42 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/wtr8zq2n/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       {/* Forced javascript */}
+       <div className="mb-12" id="forced-javascript">
+        <h2 className="h3 mb-3">Forced <small class="text-ui-300">javascript</small></h2>
+        
+        <div className="">
+          <div className="">
+            <div className="flex flex-col gap-4">
+              <div className="surface rounded-lg p-8 grid place-content-center">
+                  <label className="switch switch-rotate button button-tertiary rounded-full">
+                    <input type="checkbox" name="drawer-forced" defaultChecked={isActive} onChange={() => setIsActive(!isActive)} />
+                    <div className="switch-on icon icon-24 icon-dots-vertical"></div>
+                    <div className="switch-off icon icon-24 icon-e-remove"></div>
+                  </label>
+
+                  <div className={`drawer-side drawer-forced ${isActive ? 'is-active' : ''}`}>
+                    <label className="switch switch-rotate button button-tertiary rounded-full">
+                      <input type="checkbox" name="drawer-forced" defaultChecked={isActive} onChange={() => setIsActive(!isActive)} />
+                      <div className="switch-on icon icon-24 icon-dots-vertical"></div>
+                      <div className="switch-off icon icon-24 icon-e-remove"></div>
+                    </label>
+                  </div>
+                  
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/p9odrkh0/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>
