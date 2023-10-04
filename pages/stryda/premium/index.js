@@ -8,6 +8,12 @@ import { usePrototypeData } from "@/contexts/prototype";
 
 const PremiumBenefits = [
   {
+    id: 0,
+    name: "Get an instant gift card",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1696421302/Stryda/illustrations/picture_premium_giftcard.webp",
+  },
+  {
     id: 1,
     name: "Get a 50% XP boost",
     image:
@@ -236,6 +242,12 @@ export default function Premium() {
                   <li className="flex gap-4 items-start">
                     <span className="icon text-2xl icon-e-remove text-ui-400" />
                     <span className="text-ui-400">
+                      Get an instant gift card.
+                    </span>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <span className="icon text-2xl icon-e-remove text-ui-400" />
+                    <span className="text-ui-400">
                       Get free extra tokens for each token purchase.
                     </span>
                   </li>
@@ -283,6 +295,12 @@ export default function Premium() {
                     <span className="icon text-2xl icon-verified text-premium-500" />
                     <span className="text-ui-200">
                       Compete in missions and ladders with rewards.
+                    </span>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <span className="icon text-2xl icon-verified text-premium-500" />
+                    <span className="text-ui-200">
+                      Get an instant gift card.
                     </span>
                   </li>
                   <li className="flex gap-4 items-start">

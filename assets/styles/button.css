@@ -119,7 +119,7 @@ button {
   }
   &.button-secondary {
     @apply 
-    bg-ui-800/0
+    bg-ui-600
     text-ui-200
     shadow-[inset_0_0_0_1px_rgb(var(--color-ui-200))]
     ;
@@ -129,7 +129,7 @@ button {
       &:hover,
       &:focus-visible {
         @apply
-        bg-ui-700
+        bg-ui-600
         text-ui-100
         shadow-[inset_0_0_0_1px_rgb(var(--color-ui-100))]
         ;
@@ -154,7 +154,7 @@ button {
   }
   &.button-tertiary {
     @apply 
-    bg-ui-600/50
+    bg-ui-600
     text-ui-300
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
     ;
@@ -166,7 +166,7 @@ button {
         @apply
         bg-ui-600
         text-ui-100
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.075)]
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_0.25rem_1rem_0_rgba(255,255,255,0.075)]
         ;
       }
       &:focus-visible,
@@ -182,7 +182,7 @@ button {
     @apply 
     bg-ui-800/0
     text-ui-300
-    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0)]
+    shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0.25rem_1rem_0_rgba(255,255,255,0)]
     ;
     &:not([disabled]),
     &:not(.is-disabled) {
@@ -190,7 +190,7 @@ button {
       &:focus-visible {
         @apply
         text-ui-100
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.075)]
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-400)/20%),inset_0_0.25rem_1rem_0_rgba(255,255,255,0.075)]
       }
       &:focus-visible,
       &:active {
@@ -1214,7 +1214,7 @@ button {
       &:has([style*="--percent: 0"]),
       & {
         @apply
-        !shadow-[inset_0_0_0_1px_rgba(var(--color-main)/70%),inset_0_-0.25rem_1rem_0_rgba(var(--color-main)/20%)]
+        !shadow-[inset_0_0_0_1px_rgba(var(--color-main)/70%),inset_0_0.25rem_1rem_0_rgba(var(--color-main)/20%)]
         ;
         > span {
           @apply
@@ -1225,7 +1225,7 @@ button {
       /* &:has([style*="--percent:100"]),
       &:has([style*="--percent: 100"]) {
         @apply
-        !shadow-[inset_0_0_0_1px_rgba(var(--color-success-500)/70%),inset_0_-0.25rem_1rem_0_rgba(var(--color-success-500)/20%)]
+        !shadow-[inset_0_0_0_1px_rgba(var(--color-success-500)/70%),inset_0_0.25rem_1rem_0_rgba(var(--color-success-500)/20%)]
         ;
         > span {
           @apply

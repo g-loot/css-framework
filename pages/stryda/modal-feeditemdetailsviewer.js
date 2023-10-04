@@ -25,7 +25,7 @@ export default function ModalFeedItemViewer(props) {
   }, []);
 
   const handleCloseModal = () => {
-    history.pushState(null, "", `/prototype/home`);
+    history.pushState(null, "", `/stryda/home`);
     uiContext.closeModal();
   };
 

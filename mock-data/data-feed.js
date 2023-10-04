@@ -25,7 +25,7 @@ export const dataFeedItems = [
           likes: false,
         },
         {
-          author: 2,
+          author: 11,
           date: "2 min. ago",
           text: "First time with a new agent is never easy!",
           likes: [11, 2, 5, 6],

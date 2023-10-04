@@ -39,6 +39,16 @@ const Line = ({ item, giftTokens, addFollowing }) => {
                   : ""
               }`}
             >
+              {prototype.getUserByID(item.id)?.clan && (
+                <>
+                  &#91;
+                  {
+                    prototype.getClanByID(prototype.getUserByID(item.id)?.clan)
+                      ?.tag
+                  }
+                  &#93;{" "}
+                </>
+              )}
               {prototype.getUserByID(item.id).nickname}
             </span>
           </div>
@@ -87,6 +97,7 @@ export default function WidgetFollowings(props) {
   }, [prototype]);
 
   const [maxLinesLoader, setMaxLinesLoader] = useState(false);
+  const [hasLoadedMore, setHasLoadedMore] = useState(false);
   const [maxLines, setMaxLines] = useState(length);
 
   const handleMoreLines = () => {
@@ -94,6 +105,7 @@ export default function WidgetFollowings(props) {
     const interval = setTimeout(() => {
       setMaxLinesLoader(false);
       setMaxLines(maxLines + length);
+      setHasLoadedMore(true);
     }, 500);
     return () => {
       clearTimeout(interval);
@@ -107,7 +119,10 @@ export default function WidgetFollowings(props) {
           <Link
             href={`/stryda/profile/1?tab=following${prototype.getURLparams()}`}
           >
-            <h2 className="text-base text-ui-100 interactive">Followings <span className="text-sm">(167)</span></h2>
+            <h2 className="text-base text-ui-100 interactive">
+              Followings
+              {/* <span className="text-sm">(167)</span> */}
+            </h2>
           </Link>
           {/*
                     <Link
@@ -129,15 +144,28 @@ export default function WidgetFollowings(props) {
             {prototype.users.filter((i) => !i.isOnline && !i.isYou).length >
               maxLines && (
               <div className="px-2 pb-2 text-center">
-                <button
-                  type="button"
-                  className={`button button-ghost button-sm w-full ${
-                    maxLinesLoader ? "is-loading" : ""
-                  }`}
-                  onClick={() => handleMoreLines()}
-                >
-                  <span>View more</span>
-                </button>
+                {hasLoadedMore ? (
+                  <Link
+                    href={`/stryda/profile/1?tab=following${prototype.getURLparams()}`}
+                  >
+                    <button
+                      type="button"
+                      className={`button button-secondary button-sm`}
+                    >
+                      <span>View all (167)</span>
+                    </button>
+                  </Link>
+                ) : (
+                  <button
+                    type="button"
+                    className={`button button-ghost button-sm w-full ${
+                      maxLinesLoader ? "is-loading" : ""
+                    }`}
+                    onClick={() => handleMoreLines()}
+                  >
+                    <span>View {length} more</span>
+                  </button>
+                )}
               </div>
             )}
           </div>

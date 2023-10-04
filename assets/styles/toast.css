@@ -128,7 +128,7 @@
       &:hover,
       &:focus-visible {
         @apply
-        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-800)/40%),inset_0_-0.25rem_1rem_0_rgba(255,255,255,0.075)]
+        shadow-[inset_0_0_0_1px_rgba(var(--color-ui-800)/40%),inset_0_0.25rem_1rem_0_rgba(255,255,255,0.075)]
         ;
         > *,
         > .icon {

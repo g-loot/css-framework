@@ -31,11 +31,11 @@ export default function ModalDeletePost(props) {
   return (
     <>
     {match && (
-      <div className="modal max-w-sm modal-center">
+      <div className="modal max-w-md modal-center">
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title h4">Delete post?</h2>
-            <div className="max-w-sm rounded surface overflow-hidden mt-4">
+            <div className="max-w-md rounded-2 surface overflow-hidden mt-4">
               <FeedItemMatchTabSummary match={match} item={item} />
             </div>
           </div>

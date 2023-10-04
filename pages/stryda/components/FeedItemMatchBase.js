@@ -36,7 +36,7 @@ export default function FeedItemMatchBase(props) {
     setIsEditing(true);
     setSavedText(editText);
     handleTextareaInput();
-    
+
     const interval = setTimeout(() => {
       if (textareaRef.current) {
         // textareaRef.current.select();
@@ -55,7 +55,7 @@ export default function FeedItemMatchBase(props) {
   };
 
   const handleInputBlur = () => {
-    if(editText.length <= maxChar || editText === " " || editText === "") {
+    if (editText.length <= maxChar || editText === " " || editText === "") {
       setIsEditing(false);
     } else if (textareaRef.current) {
       textareaRef.current.focus();
@@ -78,7 +78,12 @@ export default function FeedItemMatchBase(props) {
   }, [item]);
 
   function openFeedItemDetailsMatch(target) {
-    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={item}
+        selectedTab={target ? target : "default"}
+      />
+    );
   }
 
   return (
@@ -101,6 +106,17 @@ export default function FeedItemMatchBase(props) {
                         : ""
                     }`}
                   >
+                    {prototype.getUserByID(match.user)?.clan && (
+                      <>
+                        &#91;
+                        {
+                          prototype.getClanByID(
+                            prototype.getUserByID(match.user)?.clan
+                          )?.tag
+                        }
+                        &#93;{" "}
+                      </>
+                    )}{" "}
                     {prototype.getUserByID(match.user)?.nickname}
                   </span>
                 </Link>
@@ -135,15 +151,18 @@ export default function FeedItemMatchBase(props) {
                     rows={rows}
                     autoFocus
                     className="resize-none w-full relative z-10 inset-0 shadow-sm bg-ui-700 focus-visible:outline-offset-2 focus-visible:outline focus-visible:outline-1 focus-visible:outline-ui-400 focus-visible:z-20 rounded"
-                  >{editText}</textarea>
+                  >
+                    {editText}
+                  </textarea>
                   {isEditing && (
                     <span className="absolute z-20 pointer-events-none bottom-0 left-0 translate-y-1/2 pt-1.5">
                       <span className="animate-slide-in-top text-xs text-ui-300">
-                          Press <span className="text-main">Enter</span> to save / <span className="text-main">Esc</span> to cancel
+                        Press <span className="text-main">Enter</span> to save /{" "}
+                        <span className="text-main">Esc</span> to cancel
                       </span>
                     </span>
                   )}
-                  {editText.length > Math.round(maxChar*0.89) && (
+                  {editText.length > Math.round(maxChar * 0.89) && (
                     <span className="absolute z-20 pointer-events-none -top-2 right-0 -translate-y-full">
                       <span className="chip chip-xs chip-status chip-attention animate-slide-in-bottom">
                         <span>
@@ -156,7 +175,9 @@ export default function FeedItemMatchBase(props) {
               ) : (
                 <button
                   type="button"
-                  className={`${!detailedView ? 'interactive' : 'pointer-events-none'}`}
+                  className={`${
+                    !detailedView ? "interactive" : "pointer-events-none"
+                  }`}
                   onClick={() => !detailedView && openFeedItemDetailsMatch()}
                 >
                   <p

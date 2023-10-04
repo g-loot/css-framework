@@ -242,7 +242,7 @@ export const DSpages = [
       },
       {
         label: "Drawer",
-        tags: "nav,navigation,drawer,side,left,closed,opened",
+        tags: "nav,navigation,drawer,side,left,closed,opened,panel",
         url: "drawer",
       },
       {

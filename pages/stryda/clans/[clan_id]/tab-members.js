@@ -291,7 +291,7 @@ export default function TabClanMembers() {
                                                     }}
                                                   >
                                                     <span className="icon icon-token" />
-                                                    <span>Gift tokens</span>
+                                                    <span>Gift tokens to Clan member</span>
                                                   </a>
                                                 </li>
                                               </>

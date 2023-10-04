@@ -251,14 +251,14 @@ const DSpage = () => {
             <div className="flex flex-col gap-4">
               <div className="surface rounded-lg p-8 grid place-content-center">
                   <label className="switch switch-rotate button button-tertiary rounded-full">
-                    <input type="checkbox" name="drawer-forced" defaultChecked={isActive} onChange={() => setIsActive(!isActive)} />
+                    <input type="checkbox" name="drawer-forced" checked={isActive} onChange={() => setIsActive(!isActive)} />
                     <div className="switch-on icon icon-24 icon-dots-vertical"></div>
                     <div className="switch-off icon icon-24 icon-e-remove"></div>
                   </label>
 
                   <div className={`drawer-side drawer-forced ${isActive ? 'is-active' : ''}`}>
                     <label className="switch switch-rotate button button-tertiary rounded-full">
-                      <input type="checkbox" name="drawer-forced" defaultChecked={isActive} onChange={() => setIsActive(!isActive)} />
+                      <input type="checkbox" name="drawer-forced" checked={isActive} onChange={() => setIsActive(!isActive)} />
                       <div className="switch-on icon icon-24 icon-dots-vertical"></div>
                       <div className="switch-off icon icon-24 icon-e-remove"></div>
                     </label>

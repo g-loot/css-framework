@@ -42,6 +42,17 @@ const FeedItemComment = (props) => {
                 }${prototype.getURLparams()}`}
               >
                 <span className="interactive truncate font-bold">
+                  {prototype.getUserByID(comment.author)?.clan && (
+                    <>
+                      &#91;
+                      {
+                        prototype.getClanByID(
+                          prototype.getUserByID(comment.author)?.clan
+                        )?.tag
+                      }
+                      &#93;{" "}
+                    </>
+                  )}
                   {prototype.getUserByID(comment.author)?.nickname}
                 </span>
               </Link>
@@ -142,7 +153,11 @@ export default function FeedItemComments(props) {
   }
 
   const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target) && commentValue.length === 0) {
+    if (
+      ref.current &&
+      !ref.current.contains(e.target) &&
+      commentValue.length === 0
+    ) {
       setCommentOn(false);
     }
   };
@@ -154,9 +169,7 @@ export default function FeedItemComments(props) {
     };
   });
 
-  const addComment = () => {
-    
-  }
+  const addComment = () => {};
 
   return (
     <>
@@ -303,7 +316,10 @@ export default function FeedItemComments(props) {
             </>
           )}
           {commentOn && (
-            <div ref={ref} className="flex items-start gap-3 p-2 pl-3 text-base border-t border-ui-700">
+            <div
+              ref={ref}
+              className="flex items-start gap-3 p-2 pl-3 text-base border-t border-ui-700"
+            >
               <div className="w-9">
                 <Avatar id={1} hasLevel={false} />
               </div>

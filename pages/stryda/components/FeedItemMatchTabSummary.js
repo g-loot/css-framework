@@ -59,7 +59,7 @@ export default function FeedItemMatchTabSummary(props) {
                 <div className="font-headings font-bold text-5xl sm:text-6xl md:text-7xl uppercase leading-none">
                   {match.stats.hasWon ? "Victory" : "Defeat"}
                 </div>
-                <div className="text-3xl sm:text-4xl md:text-5xl">
+                <div className="text-2xl sm:text-3xl md:text-4xl">
                   {match.stats.score.team1} - {match.stats.score.team2}
                 </div>
               </div>

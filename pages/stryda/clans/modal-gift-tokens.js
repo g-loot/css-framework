@@ -37,7 +37,7 @@ export default function ModalGiftTokens(props) {
         </button>
         <div className="modal-content">
           <div className="modal-body">
-            <h2 className="modal-title">Gift tokens</h2>
+            <h2 className="modal-title">Gift tokens to Clan member</h2>
             <img
               className="mx-auto -mt-2 -mb-4"
               src="https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png"
