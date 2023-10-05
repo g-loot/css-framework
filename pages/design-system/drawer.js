@@ -259,8 +259,8 @@ const DSpage = () => {
                   <div className={`drawer-side drawer-forced ${isActive ? 'is-active' : ''}`}>
                     <label className="switch switch-rotate button button-tertiary rounded-full">
                       <input type="checkbox" name="drawer-forced" checked={isActive} onChange={() => setIsActive(!isActive)} />
-                      <div className="switch-on icon icon-24 icon-dots-vertical"></div>
-                      <div className="switch-off icon icon-24 icon-e-remove"></div>
+                      <div className="switch-off icon icon-24 icon-dots-vertical"></div>
+                      <div className="switch-on icon icon-24 icon-e-remove"></div>
                     </label>
                   </div>
                   

@@ -52,7 +52,7 @@ export default function ModalClanEventOnboarding(props) {
     <>
       {selectedLeaderboard && (
         <div className="relative z-10">
-          <div className="modal modal-center w-full max-w-xl">
+          <div className="modal modal-center max-w-xl">
             <button
               type="button"
               className="button button-secondary button-close"
@@ -64,7 +64,7 @@ export default function ModalClanEventOnboarding(props) {
               <div className="modal-body">
                 <h2 className="modal-title">Welcome to Clan Events</h2>
                 <p>Play with your Clan and compete against other Clans.</p>
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start mt-4 max-w-md mx-auto child:animate-delay">
+                <div className="flex flex-wrap flex-col md:flex-row items-start justify-center gap-8 mt-4 mx-auto child:animate-delay">
                   <div className="flex-1 animate-fade-in">
                     <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                       <img
@@ -203,7 +203,7 @@ export default function ModalClanEventOnboarding(props) {
                       </div>
                     </div>
                   )}
-                  <div className="flex-1 animate-fade-in">
+                  <div className="w-full lg:w-72 flex-1 animate-fade-in">
                     <div className="w-full rounded border border-ui-700 bg-ui-850 aspect-video mb-2 relative">
                       <iframe
                         className="mx-auto aspect-video rounded"

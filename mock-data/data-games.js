@@ -3153,40 +3153,40 @@ export const dataGames = [
                 image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_3.png',
               },
             ],
-            countries: [
-              {
-                name: "Åland Islands",
-                flag: "ax",
-              },
-              {
-                name: "Denmark",
-                flag: "dk",
-              },
-              {
-                name: "Faroe Islands",
-                flag: "fo",
-              },
-              {
-                name: "Finland",
-                flag: "fi",
-              },
-              {
-                name: "Greenland",
-                flag: "gl",
-              },
-              {
-                name: "Iceland",
-                flag: "is",
-              },
-              {
-                name: "Norway",
-                flag: "no",
-              },
-              {
-                name: "Sweden",
-                flag: "se",
-              },
-            ]
+            // countries: [
+            //   {
+            //     name: "Åland Islands",
+            //     flag: "ax",
+            //   },
+            //   {
+            //     name: "Denmark",
+            //     flag: "dk",
+            //   },
+            //   {
+            //     name: "Faroe Islands",
+            //     flag: "fo",
+            //   },
+            //   {
+            //     name: "Finland",
+            //     flag: "fi",
+            //   },
+            //   {
+            //     name: "Greenland",
+            //     flag: "gl",
+            //   },
+            //   {
+            //     name: "Iceland",
+            //     flag: "is",
+            //   },
+            //   {
+            //     name: "Norway",
+            //     flag: "no",
+            //   },
+            //   {
+            //     name: "Sweden",
+            //     flag: "se",
+            //   },
+            // ]
           },
         },
         rewards: [

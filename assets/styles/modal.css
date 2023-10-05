@@ -40,8 +40,9 @@
   flex
   flex-col
   justify-center
-  items-center
+  items-stretch
   py-8
+  px-4
   ;
   &:has(.modal.modal-top) {
     @apply
@@ -71,6 +72,7 @@
   relative
   z-50
   rounded
+  mx-auto
   ;
 
   &:not(.modal-stacked) {

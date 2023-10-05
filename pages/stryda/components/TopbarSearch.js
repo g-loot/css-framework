@@ -49,22 +49,27 @@ const ResultsList = (props) => {
         <ul className="is-loading divide-y-0">
           <li className="item">
             <div className="item-body truncate">
-              <div className="item-title">Result line 1</div>
+              <div className="item-title">Loading</div>
             </div>
           </li>
           <li className="item">
             <div className="item-body truncate">
-              <div className="item-title">Result line 2</div>
+              <div className="item-title">Loading</div>
             </div>
           </li>
           <li className="item">
             <div className="item-body truncate">
-              <div className="item-title">Result line 3</div>
+              <div className="item-title">Loading</div>
             </div>
           </li>
           <li className="item">
             <div className="item-body truncate">
-              <div className="item-title">Result line 4</div>
+              <div className="item-title">Loading</div>
+            </div>
+          </li>
+          <li className="item">
+            <div className="item-body truncate">
+              <div className="item-title">Loading</div>
             </div>
           </li>
         </ul>
@@ -107,9 +112,9 @@ const ResultsList = (props) => {
             <div className="p-2 text-sm">No Players found</div>
           )}
 
-          <h3 className="text-base m-2">Clans</h3>
+          <h3 className="text-base m-2 pt-2 border-t border-ui-500">Clans</h3>
           {filteredClans.length > 0 ? (
-            <ul className="item-interactive">
+            <ul className="item-interactive divide-y-0">
               {filteredClans.map((item, itemIndex) => (
                 <Link
                   key={itemIndex}
@@ -146,6 +151,7 @@ export default function TopbarSearch() {
   const [filter, setFilter] = useState("");
   const [isActive, setActive] = useState(false);
   const ref = useRef(null);
+  const inputRef = useRef(null);
 
   const dropdownActive = (e) => {
     e.preventDefault();
@@ -155,6 +161,14 @@ export default function TopbarSearch() {
   const searchActive = () => {
     if (filter.length > maxLength) {
       setActive(true);
+    } else {
+      setActive(false);
+    }
+  };
+
+  const focusInput = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
     }
   };
 
@@ -184,7 +198,9 @@ export default function TopbarSearch() {
               <button
                 type="button"
                 className="button button-sm button-tertiary button-close"
-                onClick={() => setFilter("")}
+                onClick={() => {
+                  setFilter(""), searchActive(), focusInput()
+                }}
               >
                 <span className="icon icon-e-remove" />
               </button>
@@ -203,6 +219,7 @@ export default function TopbarSearch() {
               autoComplete="off"
               onFocus={searchActive}
               className="input-sm input-secondary"
+              ref={inputRef}
               onChange={(event) => setFilter(event.target.value)}
             />
           </div>

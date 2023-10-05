@@ -180,12 +180,13 @@ export default function Ladders() {
                       <div className="flex-1 flex flex-wrap gap-2 items-center justify-center xl:justify-start text-sm">
                         {selectedClanLeaderboard.meta?.eligibility ? (
                           <>
+                          {selectedClanLeaderboard.meta.eligibility.countries && (
                             <span>
                               3 out of 5 party members have to be from the{" "}
                               <Tooltip
                                 tooltip={
                                   <ul className="max-w-xs text-sm text-ui-200 leading-tight normal-case space-y-2">
-                                    {selectedClanLeaderboard.meta?.eligibility?.countries.map(
+                                    {selectedClanLeaderboard.meta?.eligibility?.countries?.map(
                                       (country, countryIndex) => (
                                         <li
                                           key={countryIndex}
@@ -212,6 +213,7 @@ export default function Ladders() {
                                 </span>
                               </Tooltip>
                             </span>
+                          )}
                             {selectedClanLeaderboard.meta.eligibility.ranks && (
                               <div className="border-l border-ui-700 pl-1 flex flex-wrap gap-1 items-center">
                                 {selectedClanLeaderboard.meta.eligibility
