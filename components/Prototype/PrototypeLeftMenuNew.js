@@ -317,9 +317,55 @@ export default function PrototypeLeftMenuNew(props) {
                 <span>Get tokens</span>
               </button>
             </div>
-            {/*
             <div className="px-2 pb-2">
-              <Link href="/prototype/valorant/clanevents/0">
+              <div className="w-full rounded bg-ui-500 overflow-hidden relative border border-ui-500 interative group flex flex-col">
+                <Link href="/prototype/valorant/clanevents/0">
+                  <button
+                    type="button"
+                    className="relative z-20 flex-1 p-2 flex flex-col gap-4 items-center justify-center child:animate-delay cursor-pointer active:opacity-50"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1696497339/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-logo.webp"
+                      alt="Stryda Nordic Clash"
+                      className="mt-2 -mb-20 w-full h-auto animate-slide-in-bottom"
+                    />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1696497339/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-prizepool.webp"
+                      alt="Stryda Nordic Clash"
+                      className="w-3/4 -mb-12 h-auto animate-slide-in-bottom"
+                    />
+                  </button>
+                </Link>
+                <div className="relative z-30 flex items-center gap-2 p-2 mt-2">
+                  <Link href="/prototype/valorant/clanevents/0">
+                    <button
+                      type="button"
+                      className="flex-1 button button-primary button-sm"
+                    >
+                      <span>Sign up</span>
+                    </button>
+                  </Link>
+                  <a
+                    href="http://nordicclash.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-1 button button-secondary button-sm"
+                  >
+                    <span>Learn more</span>
+                  </a>
+                </div>
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1696497338/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-fb.webp"
+                  alt=""
+                  className="absolute z-10 w-full h-auto bottom-0 object-cover object-bottom scale-125 origin-bottom"
+                />
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1696497338/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-bg.webp"
+                  alt=""
+                  className="absolute z-0 w-full h-full object-cover"
+                />
+              </div>
+              {/* <Link href="/prototype/valorant/clanevents/0">
                 <button
                   type="button"
                   className="block w-full rounded bg-ui-500 aspect-square overflow-hidden relative border border-ui-500 interative group"
@@ -377,9 +423,8 @@ export default function PrototypeLeftMenuNew(props) {
                     </video>
                   </div>
                 </button>
-              </Link>
+              </Link> */}
             </div>
-                */}
           </div>
         )}
 

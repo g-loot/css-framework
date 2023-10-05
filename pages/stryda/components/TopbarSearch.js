@@ -46,7 +46,7 @@ const ResultsList = (props) => {
   return (
     <>
       {loading ? (
-        <ul className="is-loading">
+        <ul className="is-loading divide-y-0">
           <li className="item">
             <div className="item-body truncate">
               <div className="item-title">Result line 1</div>
@@ -72,7 +72,7 @@ const ResultsList = (props) => {
         <div className="max-h-[calc(100dvh-92px-1rem)] overflow-y-auto scrollbar-desktop">
           <h3 className="text-base m-2">Players</h3>
           {filteredClans.length > 0 ? (
-            <ul className="item-interactive">
+            <ul className="item-interactive divide-y-0">
               {filteredUsers.map((item, itemIndex) => (
                 <Link
                   key={itemIndex}

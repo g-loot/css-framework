@@ -281,10 +281,7 @@
 
 .drawer-side.drawer-forced {
   @apply
-  block
-  md:hidden
-  fixed
-  z-[51]
+  z-[52]
   top-0
   bottom-0
   left-0
@@ -305,6 +302,11 @@
   pointer-events-none
   select-none
   ;
+  &:not(.fixed) {
+    @apply
+    absolute
+    ;
+  }
   
   &.is-active {
     @apply
