@@ -330,13 +330,18 @@ export default function PrototypeLeftMenuNew(props) {
                       className="mt-2 -mb-20 w-full h-auto animate-slide-in-bottom"
                     />
                     <img
-                      src="https://res.cloudinary.com/gloot/image/upload/v1696497339/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-prizepool.webp"
+                      src="https://res.cloudinary.com/gloot/image/upload/v1696503716/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-prizepool.webp"
                       alt="Stryda Nordic Clash"
                       className="w-3/4 -mb-12 h-auto animate-slide-in-bottom"
                     />
                   </button>
                 </Link>
-                <div className="relative z-30 flex items-center gap-2 p-2 mt-2">
+                <div
+                  className="relative z-30 flex items-center gap-2 p-2 mt-2 animate-slide-in-bottom animate-delay"
+                  style={{
+                    "--delay": "calc(2 * 0.05s)",
+                  }}
+                >
                   <Link href="/prototype/valorant/clanevents/0">
                     <button
                       type="button"
@@ -357,12 +362,12 @@ export default function PrototypeLeftMenuNew(props) {
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1696497338/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-fb.webp"
                   alt=""
-                  className="absolute z-10 w-full h-auto bottom-0 object-cover object-bottom scale-125 origin-bottom"
+                  className="absolute z-10 w-full h-auto bottom-0 object-cover object-bottom transition-transform duration-1000 ease origin-bottom scale-105 group-hover:scale-125"
                 />
                 <img
                   src="https://res.cloudinary.com/gloot/image/upload/v1696497338/Stryda/marketing/campaigns/Nordic%20Clash/SNC-ad-bg.webp"
                   alt=""
-                  className="absolute z-0 w-full h-full object-cover"
+                  className="absolute z-0 w-full h-full object-cover transition-transform duration-1000 ease origin-center scale-105 group-hover:scale-110"
                 />
               </div>
               {/* <Link href="/prototype/valorant/clanevents/0">
