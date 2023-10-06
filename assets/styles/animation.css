@@ -470,3 +470,20 @@
     transform: scale(1.5) translateX(100%);
   }
 }
+
+/* cash in */
+
+.cash-in {
+  @apply
+  absolute
+  top-0
+  inset-x-0
+  opacity-0
+  ;
+
+  &.is-active {
+    @apply
+    animate-cash-in
+    ;
+  }
+}

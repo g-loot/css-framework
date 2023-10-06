@@ -155,7 +155,7 @@ button {
   &.button-tertiary {
     @apply 
     bg-ui-600
-    text-ui-300
+    text-ui-200
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0_1rem_0_rgba(255,255,255,0)]
     ;
 
@@ -181,7 +181,7 @@ button {
   &.button-ghost {
     @apply 
     bg-ui-800/0
-    text-ui-300
+    text-ui-200
     shadow-[inset_0_0_0_1px_rgba(255,255,255,0),inset_0_0.25rem_1rem_0_rgba(255,255,255,0)]
     ;
     &:not([disabled]),

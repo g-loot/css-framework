@@ -17,6 +17,7 @@ import Avatar from "@/components/Avatar/Avatar";
 import { dataNotifications } from "@/mock-data/data-notifications";
 import TopbarHighlights from "./TopbarHighlights";
 import TopbarSearch from "./TopbarSearch";
+import TopbarWallet from "./TopbarWallet";
 
 export default function Topbar() {
   const router = useRouter();
@@ -308,79 +309,7 @@ export default function Topbar() {
                     )}
                   </div>
                 </div>
-                <div className="z-10 dropdown dropdown-end">
-                  <button
-                    type="button"
-                    tabIndex="1"
-                    className="button button-ghost rounded-full"
-                  >
-                    <span className="icon icon-wallet-43 text-ui-200" />
-                  </button>
-                  <div
-                    tabIndex="1"
-                    className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-72 overflow-hidden rounded-xl shadow-xl"
-                  >
-                    {isEmpty && (
-                      <div className="h-72 flex items-center justify-center text-center"></div>
-                    )}
-                    {!isEmpty && (
-                      <>
-                        <div className="p-1.5">
-                          <div className="p-1.5">
-                            <h3 className="text-base">Wallet overview</h3>
-                            <ul className="space-y-1 my-2 px-1.5">
-                              <li className="flex items-center justify-between gap-2 text-currency-1-500">
-                                <span className="icon text-xl icon-coin" />
-                                <span className="flex-1">
-                                  {prototype.getUserByID(1)?.wallet.coins}
-                                </span>
-                                <span className="text-sm text-ui-300">Coins</span>
-                              </li>
-                              <li className="flex items-center justify-between gap-2 text-currency-2-500">
-                                <span className="icon text-xl icon-token" />
-                                <span className="flex-1">
-                                  {prototype.getUserByID(1)?.wallet.tokens}
-                                </span>
-                                <span className="text-sm text-ui-300">Tokens</span>
-                              </li>
-                              <li className="flex items-center justify-between gap-2 text-currency-3-500">
-                                <span className="icon text-xl icon-powertoken" />
-                                <span className="flex-1">
-                                  {prototype.getUserByID(1)?.wallet.coins}
-                                </span>
-                                <span className="text-sm text-ui-300">Power Tokens</span>
-                              </li>
-                            </ul>
-                            <Link
-                              href={`/stryda/wallet${prototype.getURLparams()}`}
-                            >
-                              <button type="button" className="button button-sm button-tertiary w-full">
-                                <span className="icon icon-wallet-43" />
-                                <span>View wallet</span>
-                              </button>
-                            </Link>
-                          </div>
-                          <div className="rounded rounded-t-2 bg-gradient-to-b from-ui-600 to-ui-800 border border-ui-400/40 p-1.5 pb-3 text-center">
-                            <div className="flex gap-2 items-center px-1.5 text-left">
-                              <div className="flex-1 leading-tight px-1.5">
-                                Need more Tokens?
-                              </div>
-                              <img src="https://res.cloudinary.com/gloot/image/upload/v1694012304/Stryda/currencies/battlepass-reward-token-40.png" alt="" className="w-32 h-auto drop-shadow-lg -mt-6 -mb-4" />
-                            </div>
-                          <Link
-                            href={`/stryda/shop${prototype.getURLparams()}`}
-                          >
-                            <button type="button" className="button button-sm button-secondary">
-                              <span className="icon icon-store" />
-                              <span>Visit the shop</span>
-                            </button>
-                          </Link>
-                          </div>
-                        </div>
-                      </>
-                    )}
-                  </div>
-                </div>
+                <TopbarWallet />
                 <div className="z-0 dropdown dropdown-end">
                   <div
                     tabIndex="1"

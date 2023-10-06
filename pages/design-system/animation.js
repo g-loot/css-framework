@@ -21,6 +21,7 @@ const DSpage = () => {
   const [StartAnim16, setStartAnim16] = useState(false);
   const [StartAnim17, setStartAnim17] = useState(false);
   const [StartAnim18, setStartAnim18] = useState(false);
+  const [StartAnim19, setStartAnim19] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -134,6 +135,13 @@ const DSpage = () => {
     const timer = setTimeout(() => {
       setStartAnim18(false);
     }, 1000);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim19() {
+    setStartAnim19(true);
+    const timer = setTimeout(() => {
+      setStartAnim19(false);
+    }, 1600);
     return () => clearTimeout(timer);
   }
 
@@ -1153,6 +1161,48 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/qwbo9ank/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Cash in */}
+      <div className="mb-12" id="cashin">
+        <h2 className="h3 mb-3">Cash in</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="relative">
+                  <div className="flex items-center justify-start gap-2 text-currency-1-500">
+                    <span className="icon text-4xl icon-coin" />
+                    <span className="flex-1 text-2xl font-bold">
+                      15 000
+                    </span>
+                  </div>
+                  <div className={`flex items-center justify-start gap-2 text-currency-1-500 cash-in ${StartAnim19 ? "is-active" : ""}`}>
+                    <span className="icon text-4xl icon-coin" />
+                    <span className="flex-1 text-2xl font-bold">
+                      15 000
+                    </span>
+                  </div>
+                </div>
+                <button
+                  className="button button-tertiary mx-auto"
+                  onClick={handleStartAnim19.bind(this)}
+                >
+                  <span>Play animation</span>
+                </button>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/1f52bmo8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

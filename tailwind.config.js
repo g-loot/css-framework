@@ -319,8 +319,19 @@ module.exports = {
           "blockRevealBefore .66s cubic-bezier(1,0,.2,1) both",
         "blockreveal-content":
           "blockRevealContent .66s cubic-bezier(1,0,.2,1) both",
+          "cash-in": "cashIn 1.6s cubic-bezier(0,0,.2,1) both",
       },
       keyframes: {
+        cashIn: {
+          "0%": {
+            transform: "translateY(0)",
+            opacity: 0.5,
+          },
+          "100%": {
+            transform: "translateY(-2rem)",
+            opacity: 0,
+          },
+        },
         loadPage: {
           "0%": {
             transform: "translateX(-100%)",
