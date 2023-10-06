@@ -1175,17 +1175,17 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
-              <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-4 text-center">
                 <div className="relative">
-                  <div className="flex items-center justify-start gap-2 text-currency-1-500">
+                  <div className="flex items-center justify-center gap-2 text-currency-1-500">
                     <span className="icon text-4xl icon-coin" />
-                    <span className="flex-1 text-2xl font-bold">
+                    <span className="text-2xl font-bold">
                       15 000
                     </span>
                   </div>
-                  <div className={`flex items-center justify-start gap-2 text-currency-1-500 cash-in ${StartAnim19 ? "is-active" : ""}`}>
+                  <div className={`flex items-center justify-center gap-2 text-currency-1-500 cash-in ${StartAnim19 ? "is-active" : ""}`}>
                     <span className="icon text-4xl icon-coin" />
-                    <span className="flex-1 text-2xl font-bold">
+                    <span className="text-2xl font-bold">
                       15 000
                     </span>
                   </div>

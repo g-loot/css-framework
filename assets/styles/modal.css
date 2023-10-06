@@ -49,6 +49,11 @@
     justify-start
     ;
   }
+  > * {
+    @apply
+    mx-auto
+    ;
+  }
 }
 
 .modal-backdrop {
