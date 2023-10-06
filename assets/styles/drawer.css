@@ -301,13 +301,8 @@
   -translate-x-full
   pointer-events-none
   select-none
+  fixed
   ;
-  &:not(.fixed) {
-    @apply
-    absolute
-    ;
-  }
-  
   &.is-active {
     @apply
     shadow-2xl
@@ -316,4 +311,10 @@
     select-auto
     ;
   }
+}
+
+body:has(.drawer-side.drawer-forced.is-active) {
+  @apply
+  overflow-hidden
+  ;
 }

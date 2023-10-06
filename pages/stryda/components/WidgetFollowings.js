@@ -57,7 +57,7 @@ const Line = ({ item, giftTokens, addFollowing }) => {
       {prototype.getUserByID(item.id).clan === 1 && (
         <div className="item-actions">
           {giftTokens && (
-            <Tooltip tooltip="Gift tokens">
+            <Tooltip tooltip="Gift tokens to Clan member">
               <button
                 type="button"
                 className="button button-tertiary rounded-full"

@@ -98,7 +98,7 @@ const ClanEventCard = (props) => {
                 </span>
                 {item.meta?.eligibility ? (
                   <>
-                    {selectedClanLeaderboard.meta.eligibility.countries && (
+                    {item.meta?.eligibility?.countries && (
                             <span>
                               3 out of 5 party members have to be from the{" "}
                               <Tooltip
@@ -132,7 +132,7 @@ const ClanEventCard = (props) => {
                               </Tooltip>
                             </span>
                           )}
-                    {item.meta.eligibility.ranks && (
+                    {item.meta?.eligibility?.ranks && (
                       <div className="border-l border-ui-700 flex flex-wrap gap-1 items-center">
                         {item.meta.eligibility.ranks &&
                           item.meta.eligibility.ranks?.map(

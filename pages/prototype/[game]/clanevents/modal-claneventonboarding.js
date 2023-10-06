@@ -209,7 +209,7 @@ export default function ModalClanEventOnboarding(props) {
                         className="mx-auto aspect-video rounded"
                         width="100%"
                         height="auto"
-                        src="https://www.youtube.com/embed/OHqzfhVuPO8?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1"
+                        src="https://www.youtube.com/embed/d6ZWd-M0C6M?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1"
                         title="YouTube video player"
                         frameBorder="0"
                         allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
@@ -223,7 +223,7 @@ export default function ModalClanEventOnboarding(props) {
                           */}
                     </div>
                     <div className="px-4 leading-tight">
-                      Learn more by whatching this short introduction (1:37)
+                      Learn more by whatching this short introduction (1:29)
                       {/* For each win the Clan gets 1 point, for each loss the Clan loses 1 point. <span className="text-ui-100">May the best Clan win.</span> */}
                     </div>
                   </div>

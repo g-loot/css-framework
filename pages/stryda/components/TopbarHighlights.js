@@ -169,7 +169,7 @@ export default function TopbarHighlights() {
           isActive ? "dropdown-open" : "dropdown-closed"
         }`}
       >
-        <div className="flex items-center rounded-full bg-ui-500 interactive my-1.5">
+        <div className="flex items-center rounded-full bg-ui-500 interactive">
           <div className="hidden md:block">
           <button
             type="button"

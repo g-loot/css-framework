@@ -303,3 +303,9 @@
     }
   }
 }
+
+body:has(.modal-container) {
+  @apply
+  overflow-hidden
+  ;
+}
