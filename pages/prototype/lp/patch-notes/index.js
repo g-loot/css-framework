@@ -70,8 +70,8 @@ const PrototypePage = () => {
                 <div className="p-4 border-b border-ui-700 flex items-center gap-4 group">
                   <h2>{item.name}</h2>
                   <Link href={`/prototype/lp/patch-notes/${item.slug}`}>
-                    <a class="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
-                      <span class="icon icon-url" />
+                    <a className="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
+                      <span className="icon icon-url" />
                     </a>
                   </Link>
                 </div>

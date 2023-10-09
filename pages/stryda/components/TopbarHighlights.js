@@ -38,8 +38,17 @@ export default function TopbarHighlights() {
   const [itemsToProcess, setItemsToProcess] = useState(
     feedItems.filter((i) => !i.isCompleted).length
   );
+  const processingCopySentences = [
+    "Preparing video for AI",
+    "Uploading to AI",
+    "AI analysing recording",
+    "Creating highlight reel",
+    "Finishing up",
+    "Finishing up",
+  ];
   const [processingID, setProcessingID] = useState(0);
   const [processingPercent, setProcessingPercent] = useState(0);
+  const [processingCopy, setProcessingCopy] = useState("");
   const [processingStatus, setProcessingStatus] = useState("idle");
   const [buttonState, setButtonState] = useState(0);
   const [hasNewHighlights, setHasNewHighlights] = useState(false);
@@ -103,7 +112,7 @@ export default function TopbarHighlights() {
           const newProgress = prevProgress + 1;
           return newProgress <= 100 ? newProgress : 100;
         });
-      }, 80);
+      }, 300);
     } else {
       clearInterval(interval);
     }
@@ -112,30 +121,41 @@ export default function TopbarHighlights() {
 
   useEffect(() => {
     if (processingPercent === 100) {
+      setProcessingCopy(
+        processingCopySentences[processingCopySentences.lastIndexOf]
+      );
       setProcessingStatus("finished");
       setItemsToProcess(itemsToProcess - 1);
       setButtonState(2);
       setTimeout(() => {
         setButtonState(1);
-        //setProcessingPercent(0);
       }, 4000);
-      uiContext.openToastr({
-        text: "Highlight automated successfully.",
-        color: "green",
-        autoDelete: true,
-        autoDeleteDelay: 8000,
-        actions: (
-          <button
-            type="button"
-            class="button button-sm"
-            onClick={() =>
-              openFeedItemDetailsMatch("highlight", uiContext.closeToastr(0))
-            }
-          >
-            <span>View</span>
-          </button>
-        ),
-      });
+      if (processingID === 13) {
+        uiContext.openToastr({
+          text: "Creation failed",
+          color: "red",
+          autoDelete: true,
+          autoDeleteDelay: 4000,
+        });
+      } else {
+        uiContext.openToastr({
+          text: "Highlight automated successfully.",
+          color: "green",
+          autoDelete: true,
+          autoDeleteDelay: 8000,
+          actions: (
+            <button
+              type="button"
+              className="button button-sm"
+              onClick={() =>
+                openFeedItemDetailsMatch("highlight", uiContext.closeToastr(0))
+              }
+            >
+              <span>View</span>
+            </button>
+          ),
+        });
+      }
       // uiContext.openModal(
       //   <ModalFeedItemViewer
       //     item={prototype.getFeedItemByID(processingID)}
@@ -145,6 +165,12 @@ export default function TopbarHighlights() {
       // );
     } else if (processingPercent === 1) {
       setProcessingStatus("processing");
+    } else {
+      setProcessingCopy(
+        processingCopySentences[
+          Math.round(((processingPercent / 100) * 10) / 2)
+        ]
+      );
     }
   }, [processingPercent]);
 
@@ -156,7 +182,7 @@ export default function TopbarHighlights() {
 
   const handleTab = (tab) => {
     setActiveTab(tab);
-  } 
+  };
 
   function openFeedItemDetailsMatch(target) {
     uiContext.openModal(
@@ -189,12 +215,16 @@ export default function TopbarHighlights() {
                 style={{ "--percent": processingPercent }}
               >
                 <div>
-                  <div className="text-sm font-bold">
-                    {processingPercent}% Analysing
+                  <div className="w-full text-xs flex items-center justify-between px-1">
+                    <span className="w-9">{processingPercent}%</span>
+                    <span className="flex-1 truncate">{processingCopy}</span>
                   </div>
                 </div>
                 <div>
-                  <div className="text-sm">{processingPercent}% Analysing</div>
+                  <div className="w-full text-xs flex items-center justify-between px-1">
+                    <span className="w-9">{processingPercent}%</span>
+                    <span className="flex-1 truncate">{processingCopy}</span>
+                  </div>
                 </div>
               </div>
               <span>
@@ -291,6 +321,7 @@ export default function TopbarHighlights() {
                             isAlreadyProcessed={item.isCompleted}
                             processingID={processingID}
                             processingStatus={processingStatus}
+                            processingCopy={processingCopy}
                             processingPercent={processingPercent}
                           />
                         ))}

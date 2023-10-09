@@ -872,10 +872,11 @@ export default function StatsValorant() {
                               <Accordion
                                 header={
                                   <div
-                                    className={`item surface sm:rounded-lg text-center ${
-                                      match.hasWon ? "surface-halo halo-l" : ""
-                                    }`}
+                                    className="item surface sm:rounded-lg text-center"
                                   >
+                                    {match.hasWon && (
+                                      <span className="absolute inset-0 bg-gradient-to-r from-success-500/20 to-success-500/0 rounded" />
+                                    )}
                                     <div className="item-image">
                                       <div className="avatar avatar-sm avatar-diamond">
                                         <div>
@@ -918,7 +919,7 @@ export default function StatsValorant() {
                                         <>
                                           <div className="text-2xl uppercase w-20 text-center">
                                             {match.hasWon ? (
-                                              <span className="text-main">
+                                              <span className="text-success-500">
                                                 Victory
                                               </span>
                                             ) : (

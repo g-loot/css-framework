@@ -244,7 +244,7 @@ const DSpage = () => {
 
        {/* Forced javascript */}
        <div className="mb-12" id="forced-javascript">
-        <h2 className="h3 mb-3">Forced <small class="text-ui-300">javascript</small></h2>
+        <h2 className="h3 mb-3">Forced <small className="text-ui-300">javascript</small></h2>
         
         <div className="">
           <div className="">

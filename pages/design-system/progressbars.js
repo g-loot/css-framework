@@ -51,6 +51,77 @@ const ProgressContainer = () => {
     </div>
   );
 };
+const ProgressContainerStep = () => {
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const maxSteps = 5;
+  const [stepActive, setStepActive] = useState(0);
+  const [speed, setSpeed] = useState(5);
+  const speedValues = [
+   1,5,10,20,30
+  ];
+
+  const handleClick = () => {
+    if (stepActive < maxSteps) {
+      setStepActive(stepActive + 1);
+    } else {
+      setStepActive(0);
+    }
+  };
+
+  function handleSpeed(e) {
+    setSpeed(e.target.value);
+  }
+  return (
+    <>
+      <div className="relative p-8 w-full h-32">
+        <div
+          className="progresscontainer progresscontainer-step"
+          onClick={() => setLoadingProgress(0)}
+          style={{ "--active": stepActive, "--max": maxSteps, "--duration": `${speed}s` }}
+        >
+          <div>
+            <div>Preparing video for AI</div>
+            <div>Uploading to AI</div>
+            <div>AI analysing recording</div>
+            <div>Creating highlight reel</div>
+            <div>Finishing up</div>
+          </div>
+          <div>
+            <div>Preparing video for AI</div>
+            <div>Uploading to AI</div>
+            <div>AI analysing recording</div>
+            <div>Creating highlight reel</div>
+            <div>Finishing up</div>
+          </div>
+        </div>
+      </div>
+      <div className="flex items-center justify-center gap-2">
+        <div className="form-group form-select flex items-center gap-2">
+            <label htmlFor="speed" className="m-0">
+              Speed (in second):
+            </label>
+            <select id="speed" onChange={(e) => handleSpeed(e)}>
+              {speedValues.map((value, key) => (
+                <option
+                  key={key}
+                  value={value}
+                >
+                  {value}
+                </option>
+              ))}
+            </select>
+          </div>
+        <button
+          type="button"
+          className="button button-sm button-primary"
+          onClick={() => handleClick()}
+        >
+          <span>Next step</span>
+        </button>
+      </div>
+    </>
+  );
+};
 
 const DSpage = () => {
   const [random1, setRandom1] = useState(0);
@@ -324,7 +395,7 @@ const DSpage = () => {
       </div>
 
       {/* Progress container */}
-      <div className="mb-12" id="with-tick">
+      <div className="mb-12" id="progress-container">
         <h2 className="h3 mb-3">Progress container</h2>
 
         <div className="surface rounded-lg p-4">
@@ -341,6 +412,31 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/79gc54jr/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Progress step container */}
+      <div className="mb-12" id="progress-container-step">
+        <h2 className="h3 mb-3">Progress step container</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex flex-col gap-4 items-center">
+                  <ProgressContainerStep />
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/skc1jvLu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
             </div>

@@ -69,8 +69,8 @@ export default function PatchNotes() {
                     <h2 className="interactive">{item.name}</h2>
                   </Link>
                   <Link href={`/stryda/patch-notes/${item.slug}${prototype.getURLparams()}`}>
-                    <a class="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
-                      <span class="icon icon-url" />
+                    <a className="button button-secondary rounded-full opacity-0 group-hover:opacity-100">
+                      <span className="icon icon-url" />
                     </a>
                   </Link>
                 </div>

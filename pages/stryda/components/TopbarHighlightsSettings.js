@@ -33,7 +33,7 @@ export default function TopbarHighlightsSettings() {
 
   return (
     <div className="p-6 space-y-6">
-      <div class="form-group">
+      <div className="form-group">
         <label for="file-input">Destination folder</label>
         <input type="file" name="file-input" id="file-input" webkitdirectory directory multiple />
       </div>
@@ -52,7 +52,7 @@ export default function TopbarHighlightsSettings() {
           <div className="flex-1">
             <input
               type="range"
-              class="form-range"
+              className="form-range"
               id="range"
               min="10"
               max="100"
@@ -60,7 +60,7 @@ export default function TopbarHighlightsSettings() {
               onChange={handleInputChange}
               step="10"
             />
-            <div class="w-full flex justify-between text-xs text-ui-400 px-2">
+            <div className="w-full flex justify-between text-xs text-ui-400 px-2">
               <span className="h-2 w-px bg-ui-400/20" />
               <span className="h-2 w-px bg-ui-400/20" />
               <span className="h-2 w-px bg-ui-400/20" />

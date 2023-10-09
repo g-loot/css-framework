@@ -310,15 +310,15 @@ export default function TabMissionsLeaderboard(props) {
                             placement="top"
                             tooltip={<MissionsCompletedList />}
                           >
-                            <button type="button" class="chip chip-xp chip-sm">
+                            <button type="button" className="chip chip-xp chip-sm">
                               <span>{missionsNo * 75}</span>
                               <span class="icon icon-xp-symbol"></span>
                             </button>
                           </Tooltip>
                                   */}
-                            <div class="chip chip-xp chip-sm">
+                            <div className="chip chip-xp chip-sm">
                               <span>{missionsNo * 75}</span>
-                              <span class="icon icon-xp-symbol"></span>
+                              <span className="icon icon-xp-symbol"></span>
                             </div>
                         </div>
                       </li>

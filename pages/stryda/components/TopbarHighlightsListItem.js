@@ -23,6 +23,7 @@ export default function TopbarHighlightsListItem({
   onLoad,
   onTab,
   processingID,
+  processingCopy,
   processingStatus,
   processingPercent,
 }) {
@@ -124,12 +125,12 @@ export default function TopbarHighlightsListItem({
           {itemIndex === 1 &&
             id === processingID &&
             processingStatus === "finished" && (
-              <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-4">
+              <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
                 <div className="flex gap-2 items-center text-error-500 animate-shake">
                   <span className="icon icon-warning-sign" />
-                  <div className="text-base">Creation failed</div>
+                  <div className="text-sm">Creation failed</div>
                 </div>
-                <p className="text-sm">
+                <p className="text-xs">
                   Oh no! For some reason the creation of your highlight failed.
                 </p>
                 <div className="flex items-center gap-2 mt-2">
@@ -150,12 +151,12 @@ export default function TopbarHighlightsListItem({
               </div>
             )}
           {itemIndex === 2 && (
-            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-4">
+            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
               <div className="flex gap-2 items-center text-ui-100">
                 <span className="icon icon-circle-caret-right" />
-                <div className="text-base">Recording slot disabled</div>
+                <div className="text-sm">Recording slot disabled</div>
               </div>
-              <p className="text-sm">
+              <p className="text-xs">
                 Allocate more space in the{" "}
                 <button
                   type="button"
@@ -166,6 +167,21 @@ export default function TopbarHighlightsListItem({
                 </button>{" "}
                 tab.
               </p>
+            </div>
+          )}
+          {itemIndex === 3 && (
+            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
+              <div className="text-sm text-ui-100">Not enough content</div>
+              <p className="text-xs">
+                The AI needs at least 3 moments in order to create the
+                highlight.
+              </p>
+              <button
+                type="button"
+                className="button button-primary button-sm mt-2"
+              >
+                <span>Got it</span>
+              </button>
             </div>
           )}
           <div
@@ -224,15 +240,15 @@ export default function TopbarHighlightsListItem({
               >
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
-                  <div className="text-sm">Analysing</div>
-                  <span className="text-xs uppercase whitespace-normal mt-1 px-2">
+                  <div className="text-xs uppercase my-1">{processingCopy}</div>
+                  <span className="text-xs whitespace-normal px-2">
                     Do not close Stryda during this process
                   </span>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
-                  <div className="text-sm">Analysing</div>
-                  <span className="text-xs uppercase whitespace-normal mt-1 px-2">
+                  <div className="text-xs uppercase my-1">{processingCopy}</div>
+                  <span className="text-xs whitespace-normal px-2">
                     Do not close Stryda during this process
                   </span>
                 </div>
