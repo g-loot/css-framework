@@ -115,6 +115,50 @@ export default function Home() {
                   <span className="icon icon-e-remove" />
                 </button>
               </div>
+              <div>
+                  <h3 className="text-sm">Premium:</h3>
+                  <div className="form-group pl-4 mt-2">
+                    <div className="form-xs form-toggle">
+                      <input
+                        type="checkbox"
+                        name="feed"
+                        id="feed-premium"
+                        checked={prototype.isPremium}
+                        onChange={() => prototype.togglePremium()}
+                      />
+                      <label htmlFor="feed-premium">Premium state</label>
+                    </div>
+                  </div>
+                </div>
+              <div>
+                  <h3 className="text-sm">Client:</h3>
+                  <div className="form-group pl-4 mt-2">
+                    <div className="form-xs form-toggle">
+                      <input
+                        type="checkbox"
+                        name="feed"
+                        id="feed-client"
+                        checked={prototype.isClient}
+                        onChange={() => prototype.toggleClient()}
+                      />
+                      <label htmlFor="feed-client">Client state</label>
+                    </div>
+                  </div>
+                </div>
+              <div>
+                  <h3 className="text-sm">Feed:</h3>
+                  <div className="form-group pl-4 mt-2">
+                    <div className="form-xs form-toggle">
+                      <input
+                        type="checkbox"
+                        name="feed"
+                        id="feed-error"
+                        onChange={() => setHasError(!hasError)}
+                      />
+                      <label htmlFor="feed-error">Error state</label>
+                    </div>
+                  </div>
+                </div>
                 <div>
                   <h3 className="text-sm">User: </h3>
                   <div className="form-group pl-4 mt-2">
@@ -227,20 +271,6 @@ export default function Home() {
                         onChange={() => setStateMissions("onboarding")}
                       />
                       <label htmlFor="missions-onboarding">Onboarding</label>
-                    </div>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-sm">Feed:</h3>
-                  <div className="form-group pl-4 mt-2">
-                    <div className="form-xs form-toggle">
-                      <input
-                        type="checkbox"
-                        name="feed"
-                        id="feed-error"
-                        onChange={() => setHasError(!hasError)}
-                      />
-                      <label htmlFor="feed-error">Error state</label>
                     </div>
                   </div>
                 </div>

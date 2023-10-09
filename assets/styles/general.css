@@ -19,3 +19,10 @@ body {
   overflow-x-hidden
   ;
 }
+
+/* fix flex overflow */
+.flex-1 {
+  @apply
+  min-w-[0]
+  ;
+}

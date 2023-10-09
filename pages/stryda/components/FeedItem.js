@@ -21,7 +21,7 @@ export default function FeedItem(props) {
           autoPlay={autoPlay}
         />
       )}
-      {item && item.type === "advertising" && (
+      {item && item.type === "advertising" && !prototype.isPremium && (
         <FeedItemAdvertising item={item} stateFeedAd={stateFeedAd} />
       )}
       {item && item.type === "ladders" && (

@@ -128,7 +128,9 @@ export default function TopbarHighlights() {
           <button
             type="button"
             class="button button-sm"
-            onClick={() => openFeedItemDetailsMatch("highlight", uiContext.closeToastr(0))}
+            onClick={() =>
+              openFeedItemDetailsMatch("highlight", uiContext.closeToastr(0))
+            }
           >
             <span>View</span>
           </button>
@@ -171,46 +173,46 @@ export default function TopbarHighlights() {
       >
         <div className="flex items-center rounded-full bg-ui-500 interactive">
           <div className="hidden md:block">
-          <button
-            type="button"
-            className={`button button-loader button-stretch button-secondary ${
-              buttonState > 0 ? "is-active" : ""
-            }`}
-            onClick={dropdownActive}
-          >
-            <div
-              className="progresscontainer"
-              style={{ "--percent": processingPercent }}
+            <button
+              type="button"
+              className={`button button-loader button-stretch button-secondary ${
+                buttonState > 0 ? "is-active" : ""
+              }`}
+              onClick={dropdownActive}
             >
-              <div>
-                <div className="text-sm font-bold">
-                  {processingPercent}% Analysing
+              <div
+                className="progresscontainer"
+                style={{ "--percent": processingPercent }}
+              >
+                <div>
+                  <div className="text-sm font-bold">
+                    {processingPercent}% Analysing
+                  </div>
+                </div>
+                <div>
+                  <div className="text-sm">{processingPercent}% Analysing</div>
                 </div>
               </div>
-              <div>
-                <div className="text-sm">{processingPercent}% Analysing</div>
-              </div>
-            </div>
-            <span>
-              <span className="text-sm">
-                {buttonState === 0 && ""}
-                {buttonState > 0 && "New highlights recorded"}
-                {/* {buttonState === 2 && "Highlights ready"} */}
+              <span>
+                <span className="text-sm">
+                  {buttonState === 0 && ""}
+                  {buttonState > 0 && "New highlights recorded"}
+                  {/* {buttonState === 2 && "Highlights ready"} */}
+                </span>
               </span>
-            </span>
-            <span className="icon icon-video" />
-          </button>
+              <span className="icon icon-video" />
+            </button>
           </div>
           <div className="block md:hidden">
-          <button
-            type="button"
-            className={`button button-tertiary rounded-full ${
-              buttonState > 0 ? "is-active" : ""
-            }`}
-            onClick={dropdownActive}
-          >
-            <span className="icon icon-video" />
-          </button>
+            <button
+              type="button"
+              className={`button button-tertiary rounded-full ${
+                buttonState > 0 ? "is-active" : ""
+              }`}
+              onClick={dropdownActive}
+            >
+              <span className="icon icon-video" />
+            </button>
           </div>
         </div>
 
@@ -218,60 +220,83 @@ export default function TopbarHighlights() {
           tabIndex="1"
           className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
         >
-          {isEmpty && (
-            <div className="h-72 flex items-center justify-center text-center">
-              <div>
-                <span className="icon icon-video text-6xl text-ui-500" />
-                <p className="text-sm text-ui-400 mt-2">
-                  You have no new highlights.
+          {prototype.isClient ? (
+            <div>
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1696837189/Stryda/illustrations/video_manager_empty_state.webp"
+                alt=""
+                className=" aspect-video"
+              />
+              <div className="p-6 text-center border-t border-ui-400/20">
+                <h2 className="h5">Never miss an epic moment again</h2>
+                <p className="leading-tight mt-3 mb-4">
+                  Transform your matches into epic highlight videos and shared
+                  with your friends.
                 </p>
+                <button type="button" className="button button-primary">
+                  <span className="icon icon-windows-symbol" />
+                  <span>Download Stryda</span>
+                </button>
               </div>
             </div>
-          )}
-          {!isEmpty && (
+          ) : (
             <>
-              <ul className="tabs tabs-stretch text-sm border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600">
-                <li>
-                  <button
-                    type="button"
-                    className={activeTab === "list" ? "is-active" : ""}
-                    onClick={() => setActiveTab("list")}
-                  >
-                    <span>New recordings</span>
-                  </button>
-                </li>
-                <li>
-                  <button
-                    type="button"
-                    className={activeTab === "settings" ? "is-active" : ""}
-                    onClick={() => setActiveTab("settings")}
-                  >
-                    <span>Highlights settings</span>
-                  </button>
-                </li>
-              </ul>
-              <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
-                {isActive && activeTab === "list" && (
-                  <ul className="p-2 space-y-2">
-                    {feedItems.map((item, itemIndex) => (
-                      <TopbarHighlightsListItem
-                        key={itemIndex}
-                        itemIndex={itemIndex}
-                        id={item.id}
-                        item={prototype.getFeedItemByID(item.id)}
-                        onLoad={handleLoad}
-                        isAlreadyProcessed={item.isCompleted}
-                        processingID={processingID}
-                        processingStatus={processingStatus}
-                        processingPercent={processingPercent}
-                      />
-                    ))}
+              {isEmpty && (
+                <div className="h-72 flex items-center justify-center text-center">
+                  <div>
+                    <span className="icon icon-video text-6xl text-ui-500" />
+                    <p className="text-sm text-ui-400 mt-2">
+                      You have no new highlights.
+                    </p>
+                  </div>
+                </div>
+              )}
+              {!isEmpty && (
+                <>
+                  <ul className="tabs tabs-stretch text-sm border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600">
+                    <li>
+                      <button
+                        type="button"
+                        className={activeTab === "list" ? "is-active" : ""}
+                        onClick={() => setActiveTab("list")}
+                      >
+                        <span>New recordings</span>
+                      </button>
+                    </li>
+                    <li>
+                      <button
+                        type="button"
+                        className={activeTab === "settings" ? "is-active" : ""}
+                        onClick={() => setActiveTab("settings")}
+                      >
+                        <span>Highlights settings</span>
+                      </button>
+                    </li>
                   </ul>
-                )}
-                {isActive && activeTab === "settings" && (
-                  <TopbarHighlightsSettings />
-                )}
-              </div>
+                  <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
+                    {isActive && activeTab === "list" && (
+                      <ul className="p-2 space-y-2">
+                        {feedItems.map((item, itemIndex) => (
+                          <TopbarHighlightsListItem
+                            key={itemIndex}
+                            itemIndex={itemIndex}
+                            id={item.id}
+                            item={prototype.getFeedItemByID(item.id)}
+                            onLoad={handleLoad}
+                            isAlreadyProcessed={item.isCompleted}
+                            processingID={processingID}
+                            processingStatus={processingStatus}
+                            processingPercent={processingPercent}
+                          />
+                        ))}
+                      </ul>
+                    )}
+                    {isActive && activeTab === "settings" && (
+                      <TopbarHighlightsSettings />
+                    )}
+                  </div>
+                </>
+              )}
             </>
           )}
         </div>

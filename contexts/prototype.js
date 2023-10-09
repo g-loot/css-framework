@@ -33,6 +33,7 @@ export const PrototypeProvider = ({ children }) => {
   const [defaultGameID, setDefaultGameID] = useState(1);
   const [isPremium, setIsPremium] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
+  const [isClient, setIsClient] = useState(false);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -170,6 +171,9 @@ export const PrototypeProvider = ({ children }) => {
   const togglePremium = () => {
     setIsPremium(!isPremium);
   }
+  const toggleClient = () => {
+    setIsClient(!isClient);
+  }
   const handleKeyDown = (e) => {
     if (e.key === "Control" || e.keyCode === 17) {
       setShowDemo(true);
@@ -198,6 +202,7 @@ export const PrototypeProvider = ({ children }) => {
         defaultGameID,
         isPremium,
         showDemo,
+        isClient,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -215,6 +220,7 @@ export const PrototypeProvider = ({ children }) => {
         getURLparams,
         defineDefaultGameID,
         togglePremium,
+        toggleClient,
         getClanLeaderboardByID,
         getCurrentClanLeaderboard,
         getMatchByID,
@@ -222,6 +228,7 @@ export const PrototypeProvider = ({ children }) => {
         getUserMatches,
         setIsPremium,
         setShowDemo,
+        setIsClient,
       }}
     >
       {children}
