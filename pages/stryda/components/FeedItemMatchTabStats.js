@@ -75,30 +75,25 @@ export default function FeedItemMatchTabStats(props) {
                 ) : (
                   <>
                     <div className="text-2xl uppercase text-center">
-                      {match.stats.hasWon ? (
-                        <span className="text-success-500">Victory</span>
-                      ) : (
-                        <span className="text-ui-300">Defeat</span>
-                      )}
+                    {match.stats.result === "victory" && <span className="text-success-500">Victory</span>}
+                    {match.stats.result === "defeat" && <span className="text-ui-300">Defeat</span>}
+                    {match.stats.result === "draw" && <span className="text-ui-300">Draw</span>}
+                     
                     </div>
                     <div>
                       <div className="text-ui-300 text-xl">
                         <span
-                          className={`${
-                            match.stats.hasWon
-                              ? "text-success-300"
-                              : "text-error-300"
-                          }`}
+                          className={`${match.stats.result === "victory" && "text-success-300"}
+                          ${match.stats.result === "defeat" && "text-error-300"}
+                          ${match.stats.result === "draw" && "text-ui-200"}`}
                         >
                           {match.stats.score.team1}
                         </span>{" "}
                         -{" "}
                         <span
-                          className={`${
-                            !match.stats.hasWon
-                              ? "text-success-300"
-                              : "text-error-300"
-                          }`}
+                          className={`${match.stats.result === "victory" && "text-success-300"}
+                          ${match.stats.result === "defeat" && "text-error-300"}
+                          ${match.stats.result === "draw" && "text-ui-200"}`}
                         >
                           {match.stats.score.team2}
                         </span>

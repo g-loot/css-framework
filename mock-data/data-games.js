@@ -3141,16 +3141,64 @@ export const dataGames = [
           eligibility: {
             ranks: [
               {
-                name: 'Ascendant',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_ascendant_1.png',
+                name: 'Iron 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_iron_1.png',
               },
               {
-                name: 'Immortal',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_1.png',
+                name: 'Iron 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_iron_2.png',
               },
               {
-                name: 'Radiant',
-                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_immortal_3.png',
+                name: 'Iron 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_iron_3.png',
+              },
+              {
+                name: 'Silver 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_silver_1.png',
+              },
+              {
+                name: 'Silver 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_silver_2.png',
+              },
+              {
+                name: 'Silver 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_silver_3.png',
+              },
+              {
+                name: 'Bronze 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_bronze_1.png',
+              },
+              {
+                name: 'Bronze 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_bronze_2.png',
+              },
+              {
+                name: 'Bronze 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_bronze_3.png',
+              },
+              {
+                name: 'Gold 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_gold_1.png',
+              },
+              {
+                name: 'Gold 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_gold_2.png',
+              },
+              {
+                name: 'Gold 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_gold_3.png',
+              },
+              {
+                name: 'Platinum 1',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_platinum_1.png',
+              },
+              {
+                name: 'Platinum 2',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_platinum_2.png',
+              },
+              {
+                name: 'Platinum 3',
+                image: 'https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/rank_platinum_3.png',
               },
             ],
             // countries: [

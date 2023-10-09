@@ -19,16 +19,27 @@ export default function FeedItemMatch(props) {
           </span>
           <div
             className={`self-stretch rounded px-2 py-1 leading-none flex gap-2 items-center ${
-              match.stats.hasWon
-                ? " bg-success-500/10 text-success-300"
-                : "bg-error-500/10 text-error-300"
-            }`}
+              match.stats.result === "victory" &&
+              "bg-success-500/10 text-success-300"
+            }
+            ${
+              match.stats.result === "defeat" &&
+              "bg-error-500/10 text-error-300"
+            }
+            ${match.stats.result === "draw" && "text-ui-200"}`}
           >
-            <span>{match.stats.hasWon ? "Victory" : "Defeat"}</span>{" "}
+            <span>
+              {" "}
+              {match.stats.result === "victory" && "Victory"}
+              {match.stats.result === "defeat" && "Defeat"}
+              {match.stats.result === "draw" && "Draw"}
+            </span>{" "}
             <i
               className={`block h-4 w-px ${
-                match.stats.hasWon ? " bg-success-300/25" : "bg-error-300/25"
-              }`}
+                match.stats.result === "victory" && "bg-success-300/25"
+              }
+              ${match.stats.result === "defeat" && "bg-error-300/25"}
+              ${match.stats.result === "draw" && "bg-error-200/25"}`}
             />{" "}
             <span>
               {match.stats.score.team1} - {match.stats.score.team2}

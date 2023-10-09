@@ -18,7 +18,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -196,7 +196,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: false,
+      result: "defeat",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -341,7 +341,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: false,
+      result: "defeat",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -486,7 +486,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -631,7 +631,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -778,12 +778,12 @@ export const dataMatches = [
       text: "Shock Dart!",
     },
     stats: {
-      hasWon: true,
+      result: "draw",
       time: "08:10 PM",
       duration: "28m 12s",
       score: {
-        team1: 12,
-        team2: 10,
+        team1: 13,
+        team2: 13,
       },
       mainStats: [
         {
@@ -924,7 +924,7 @@ export const dataMatches = [
       averageRank: 4,
     },
     stats: {
-      hasWon: false,
+      result: "defeat",
       time: "08:10 PM",
       duration: "28m 12s",
       score: {
@@ -1068,7 +1068,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -1213,7 +1213,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -1364,7 +1364,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: false,
+      result: "defeat",
       time: "08:10 PM",
       duration: "28m 12s",
       score: {
@@ -1509,7 +1509,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
@@ -1687,7 +1687,7 @@ export const dataMatches = [
       },
     },
     stats: {
-      hasWon: true,
+      result: "victory",
       time: "08:10 PM",
       duration: "24m 12s",
       score: {
