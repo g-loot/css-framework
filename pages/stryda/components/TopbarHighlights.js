@@ -234,7 +234,7 @@ export default function TopbarHighlights() {
               <div className="p-6 text-center border-t border-ui-400/20">
                 <h2 className="h5">Never miss an epic moment again</h2>
                 <p className="leading-tight mt-3 mb-4">
-                  Transform your matches into epic highlight videos and shared
+                  Transform your matches into epic highlight videos and share
                   with your friends.
                 </p>
                 <button type="button" className="button button-primary">

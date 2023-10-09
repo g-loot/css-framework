@@ -207,9 +207,9 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             </div>
-            <span className="absolute z-20 inset-0 bg-gradient-to-b from-ui-800/20 via-ui-800/60 to-ui-800/80" />
+            <span className="absolute z-20 inset-0 bg-gradient-to-b from-ui-800/20 via-ui-800/20 to-ui-800/60" />
             <img
-              className="absolute z-0 inset-0 h-full w-full object-cover opacity-25"
+              className="absolute z-0 inset-0 h-full w-full object-cover opacity-50"
               src={getMapByID(selectedMatch.meta.map).picturePath}
               alt=""
               width="auto"
@@ -226,14 +226,14 @@ export default function TopbarHighlightsListItem({
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
                   <span className="text-xs uppercase whitespace-normal mt-1 px-2">
-                    Keep Stryda open
+                    Do not close Stryda during this process
                   </span>
                 </div>
                 <div>
                   <div className="text-2xl font-bold">{processingPercent}%</div>
                   <div className="text-sm">Analysing</div>
                   <span className="text-xs uppercase whitespace-normal mt-1 px-2">
-                    Keep Stryda open
+                    Do not close Stryda during this process
                   </span>
                 </div>
               </div>
