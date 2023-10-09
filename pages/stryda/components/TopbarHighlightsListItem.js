@@ -21,6 +21,7 @@ export default function TopbarHighlightsListItem({
   id,
   isAlreadyProcessed,
   onLoad,
+  onTab,
   processingID,
   processingStatus,
   processingPercent,
@@ -40,8 +41,13 @@ export default function TopbarHighlightsListItem({
     }
   }, [processingStatus]);
 
-  const handleClick = () => {
+  const handleAutomate = () => {
     onLoad(id);
+  };
+
+  const handleChangeTab = (tab) => {
+    console.log("handleChangeTab", tab);
+    onTab(tab);
   };
 
   const getMatchByID = (id) => {
@@ -115,15 +121,62 @@ export default function TopbarHighlightsListItem({
             "--delay": "calc(" + itemIndex + " * 0.05s)",
           }}
         >
+          {itemIndex === 1 &&
+            id === processingID &&
+            processingStatus === "finished" && (
+              <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-4">
+                <div className="flex gap-2 items-center text-error-500 animate-shake">
+                  <span className="icon icon-warning-sign" />
+                  <div className="text-base">Creation failed</div>
+                </div>
+                <p className="text-sm">
+                  Oh no! For some reason the creation of your highlight failed.
+                </p>
+                <div className="flex items-center gap-2 mt-2">
+                  <button
+                    type="button"
+                    className="button button-primary button-sm"
+                    onClick={() => handleAutomate()}
+                  >
+                    <span>Try again</span>
+                  </button>
+                  <button
+                    type="button"
+                    className="button button-secondary button-sm"
+                  >
+                    <span>Cancel</span>
+                  </button>
+                </div>
+              </div>
+            )}
+          {itemIndex === 2 && (
+            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-4">
+              <div className="flex gap-2 items-center text-ui-100">
+                <span className="icon icon-circle-caret-right" />
+                <div className="text-base">Recording slot disabled</div>
+              </div>
+              <p className="text-sm">
+                Allocate more space in the{" "}
+                <button
+                  type="button"
+                  className="link"
+                  onClick={() => handleChangeTab("settings")}
+                >
+                  Highlight settings
+                </button>{" "}
+                tab.
+              </p>
+            </div>
+          )}
           <div
-            className={`flex-1 flex justify-between items-stretch border-r border-ui-400/20 relative overflow-hidden h-28 text-sm text-ui-100 leading-none ${
+            className={`flex-1 flex justify-between items-stretch border-r border-ui-400/20 relative overflow-hidden h-28 text-xs text-ui-100 leading-none ${
               isAlreadyProcessed ? "child:opacity-30 [&>img]:hidden" : ""
             }`}
           >
             <div className="absolute top-2 left-2 z-40">
               <GameIcon game={selectedMatch.meta.game} size="text-sm" />
             </div>
-            <div className="relative z-40 flex-1 flex flex-col justify-end items-start gap-1 p-2 text-left">
+            <div className="relative z-30 flex-1 flex flex-col justify-end items-start gap-2 p-2 text-left">
               <div className="avatar avatar-simple avatar-xs">
                 <div>
                   <img
@@ -136,8 +189,8 @@ export default function TopbarHighlightsListItem({
                 {getAgentByID(selectedMatch.meta.agent).name}
               </div>
             </div>
-            <div className="relative z-40 flex-1 flex flex-col justify-between items-end gap-1 p-2 text-right">
-              <div className="text-xs text-ui-200">
+            <div className="relative z-30 flex-1 flex flex-col justify-between items-end gap-1 p-2 text-right">
+              <div className="text-ui-200">
                 {selectedMatch.meta.dateTimeEnded}
               </div>
               <div className="flex flex-col items-end">
@@ -154,7 +207,7 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             </div>
-            <span className="absolute z-20 inset-0 left-8 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
+            <span className="absolute z-20 inset-0 bg-gradient-to-b from-ui-800/20 via-ui-800/60 to-ui-800/80" />
             <img
               className="absolute z-0 inset-0 h-full w-full object-cover opacity-25"
               src={getMapByID(selectedMatch.meta.map).picturePath}
@@ -215,7 +268,7 @@ export default function TopbarHighlightsListItem({
                   type="button"
                   disabled={processingStatus === "processing"}
                   className="button button-sm button-primary"
-                  onClick={() => handleClick()}
+                  onClick={() => handleAutomate()}
                 >
                   <span>Automate with AI</span>
                 </button>

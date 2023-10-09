@@ -154,6 +154,10 @@ export default function TopbarHighlights() {
     handleProcessing(id);
   };
 
+  const handleTab = (tab) => {
+    setActiveTab(tab);
+  } 
+
   function openFeedItemDetailsMatch(target) {
     uiContext.openModal(
       <ModalFeedItemViewer
@@ -283,6 +287,7 @@ export default function TopbarHighlights() {
                             id={item.id}
                             item={prototype.getFeedItemByID(item.id)}
                             onLoad={handleLoad}
+                            onTab={handleTab}
                             isAlreadyProcessed={item.isCompleted}
                             processingID={processingID}
                             processingStatus={processingStatus}
