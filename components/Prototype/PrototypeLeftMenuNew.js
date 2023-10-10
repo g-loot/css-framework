@@ -148,7 +148,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span className="icon icon-home-2 icon-16" />
+                        <span className="icon icon-home-2" />
                       </div>
                     </div>
                   </div>
@@ -168,7 +168,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span className="icon icon-shop icon-16" />
+                        <span className="icon icon-shop" />
                       </div>
                     </div>
                   </div>
@@ -188,7 +188,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span className="icon icon-crown icon-16" />
+                        <span className="icon icon-crown" />
                       </div>
                     </div>
                   </div>
@@ -254,7 +254,7 @@ export default function PrototypeLeftMenuNew(props) {
                   <div className="item-image">
                     <div className="avatar avatar-simple avatar-xs">
                       <div>
-                        <span className="icon icon-gold-coin icon-16" />
+                        <span className="icon icon-gold-coin" />
                       </div>
                     </div>
                   </div>
@@ -299,7 +299,7 @@ export default function PrototypeLeftMenuNew(props) {
                 <div className="avatar avatar-simple avatar-xs">
                   <div className="border border-ui-600">
                     <div>
-                      <span className="icon icon-cursor-pointer px-3 icon-16" />
+                      <span className="icon icon-cursor-pointer px-3" />
                     </div>
                   </div>
                 </div>

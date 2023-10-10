@@ -144,9 +144,8 @@ const ResultsList = (props) => {
   );
 };
 export default function TopbarSearch() {
-  const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
-  const { query } = useRouter();
+  const router = useRouter();
   const maxLength = 0;
   const [filter, setFilter] = useState("");
   const [isActive, setActive] = useState(false);
@@ -179,6 +178,12 @@ export default function TopbarSearch() {
   const handleClickOutside = (e) => {
     if (ref.current && !ref.current.contains(e.target)) {
       setActive(false);
+    }
+  };
+
+  const handleKeyDown = (e) => {
+    if (e.key === "Enter" || e.keyCode === 13) {
+      router.push(`/stryda/search?q=${filter}`);
     }
   };
 
@@ -221,6 +226,7 @@ export default function TopbarSearch() {
               className="input-sm input-secondary"
               ref={inputRef}
               onChange={(event) => setFilter(event.target.value)}
+              onKeyDown={handleKeyDown}
             />
           </div>
         </div>
@@ -250,27 +256,6 @@ export default function TopbarSearch() {
           </a>
         </Link>
       </div>
-      {/* <div
-        ref={ref}
-        className={`dropdown dropdown-end ${
-          isActive ? "dropdown-open" : "dropdown-closed"
-        }`}
-      >
-        <div className="flex items-center rounded-full bg-ui-500 interactive my-1.5">
-          <button
-            type="button"
-            onClick={dropdownActive}
-          >
-            <span className="icon icon-video" />
-          </button>
-        </div>
-
-        <div
-          tabIndex="1"
-          className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
-        >
-        </div>
-      </div> */}
     </>
   );
 }

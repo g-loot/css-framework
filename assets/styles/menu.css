@@ -69,6 +69,9 @@
       transition
       ease-linear
       duration-75
+      flex
+      items-center
+      gap-1
       ;
 
       &:not([class*='icon']) {

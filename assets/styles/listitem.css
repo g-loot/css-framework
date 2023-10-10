@@ -77,12 +77,11 @@
     @apply
     bg-ui-700
     ;
-    .item-title {
-      &:not([class*="hover:text-"]) {
-        @apply
-        text-ui-100
-        ;
-      }
+    .item-title:not([class*="hover:text-"]),
+    .avatar .icon {
+      @apply
+      text-ui-100
+      ;
     }
   }
   &:not(.is-active) {
@@ -96,10 +95,13 @@
     @apply
     bg-ui-700
     ;
-    .item-title {
+    .item-title,
+    .avatar .icon {
       @apply
       text-main
       ;
+    }
+    .item-title {
       &:not([class*="font-regular"]) {
         @apply
         font-bold

@@ -18,6 +18,7 @@ import { dataNotifications } from "@/mock-data/data-notifications";
 import TopbarHighlights from "./TopbarHighlights";
 import TopbarSearch from "./TopbarSearch";
 import TopbarWallet from "./TopbarWallet";
+import TopbarSidebar from "./TopbarSidebar";
 
 export default function Topbar() {
   const router = useRouter();
@@ -464,7 +465,7 @@ export default function Topbar() {
       <div
         className={`drawer-side drawer-forced ${isActive ? "is-active" : ""}`}
       >
-        <div className="pr-2 flex items-start gap-2 justify-between">
+        <div className="flex items-center gap-2 px-1.5 justify-between">
           <Link href={`/prototype/home${prototype.getURLparams()}`}>
             <a className="flex items-center gap-2 interactive m-2">
               <img
@@ -486,6 +487,8 @@ export default function Topbar() {
             <div className="switch-on icon icon-e-remove"></div>
           </label>
         </div>
+
+        <TopbarSidebar />
       </div>
     </>
   );
