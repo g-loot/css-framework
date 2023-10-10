@@ -103,10 +103,10 @@ export default function BattlepassPage() {
           <>
             <section className="mb-8 surface surface-dimmed p-4 relative sm:rounded overflow-hidden animate-slide-in-bottom">
               <div className="relative z-10 flex flex-col lg:flex-row lg:items-start text-center lg:text-left lg:justify-between pb-4 mb-4 gap-4 lg:gap-8 border-b border-ui-100/10">
-                <div className="flex-1 flex flex-col items-center 2xl:flex-row gap-4 2xl:gap-8">
+                <div className="flex-1 flex flex-col items-center lg:items-start 2xl:flex-row 2xl:items-center gap-4 2xl:gap-8">
                   <div
                     onClick={switchBattlepasses}
-                    className="px-4 md:px-8 py-4 flex flex-col items-center justify-center gap-4 w-full md:w-1/2 lg:w-[375px]"
+                    className="2xl:px-8 py-4 flex flex-col items-center justify-center gap-4 w-64 lg:w-72 2xl:w-96"
                   >
                     <img
                       src={getBattlepassByID(selectedBattlepassID).meta?.logo}

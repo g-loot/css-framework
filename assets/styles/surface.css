@@ -2,14 +2,119 @@
 /* SURFACE */
 /*----------------------------*/
 
+@define-mixin surface-ui-900 {
+  & {
+    @apply
+    bg-ui-900
+    border
+    border-ui-800
+    ;
+    .progressbar {
+      @apply
+      bg-ui-700
+      ;
+    }
+  }
+}
+@define-mixin surface-ui-800 {
+  & {
+    @apply
+    bg-ui-800
+    border
+    border-ui-700
+    ;
+    .progressbar {
+      @apply
+      bg-ui-600
+      ;
+    }
+  }
+}
+@define-mixin surface-ui-700 {
+  & {
+    @apply
+    bg-ui-700
+    border
+    border-ui-600
+    ;
+    .progressbar {
+      @apply
+      bg-ui-500
+      ;
+    }
+  }
+}
+@define-mixin surface-ui-600 {
+  & {
+    @apply
+    bg-ui-600
+    border
+    border-ui-500
+    ;
+    .progressbar {
+      @apply
+      bg-ui-400
+      ;
+    }
+  }
+}
+@define-mixin surface-ui-500 {
+  & {
+    @apply
+    bg-ui-500
+    border
+    border-ui-400/20
+    ;
+    .progressbar {
+      @apply
+      bg-ui-300
+      ;
+    }
+  }
+}
+@define-mixin surface-dimmed {
+  & {
+    @apply
+    bg-ui-850
+    border
+    border-ui-700/50
+    ;
+  }
+}
+@define-mixin surface-premium {
+  & {
+    @apply
+    border
+    border-premium-700/25
+    bg-ui-800
+    ;
+    .progressbar {
+      @apply
+      bg-ui-600
+      ;
+    }
+  }
+}
+@define-mixin surface-main {
+  & {
+    @apply
+    border
+    border-main
+    bg-ui-800
+    ;
+    .progressbar {
+      @apply
+      bg-ui-600
+      ;
+    }
+  }
+}
 
 .surface {
   @apply
   relative
-  bg-ui-800
-  border
-  border-ui-700
   ;
+  @mixin surface-ui-800;
 }
 
 .surface {
@@ -34,8 +139,6 @@
     ;
   }
 }
-
-
 
 .surface-halo {
   @apply
@@ -152,454 +255,140 @@
 
 /* colors */
 .surface-dimmed {
-  @apply
-  bg-ui-850
-  border
-  border-ui-700/50
-  ;
+  @mixin surface-dimmed;
 }
-
 .surface-ui-900 {
-  @apply
-  bg-ui-900
-  border
-  border-ui-800
-  ;
-  .progressbar {
-    @apply
-    bg-ui-700
-    ;
-  }
+  @mixin surface-ui-900;
 }
-
 .surface-ui-800 {
-  @apply
-  bg-ui-800
-  border
-  border-ui-700
-  ;
-  .progressbar {
-    @apply
-    bg-ui-600
-    ;
-  }
+  @mixin surface-ui-800;
 }
-
 .surface-ui-700 {
-  @apply
-  bg-ui-700
-  border
-  border-ui-600
-  ;
-  .progressbar {
-    @apply
-    bg-ui-500
-    ;
-  }
+  @mixin surface-ui-700;
 }
-
 .surface-ui-600 {
-  @apply
-  bg-ui-600
-  border
-  border-ui-500
-  ;
-  .progressbar {
-    @apply
-    bg-ui-400
-    ;
-  }
+  @mixin surface-ui-600;
 }
-
 .surface-ui-500 {
-  @apply
-  bg-ui-500
-  border
-  border-ui-400/20
-  ;
-  .progressbar {
-    @apply
-    bg-ui-300
-    ;
-  }
+  @mixin surface-ui-500;
 }
-
-.surface-premium,
-.surface-unlocked {
-  @apply
-  border
-  border-premium-700/25
-  bg-ui-800
-  ;
-  .progressbar {
-    @apply
-    bg-premium-700
-    ;
-  }
+.surface-premium {
+  @mixin surface-ui-500;
+}
+.surface-premium {
+  @mixin surface-premium;
 }
 .surface-main {
-  @apply
-  border
-  border-main
-  bg-ui-800
-  ;
+  @mixin surface-main;
 }
 
 /* responsive surfaces */
 
-@media only screen and (min-width: 640px) {
-	.sm\:surface {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
-  }
-  .sm\:surface-dimmed {
-    @apply
-    bg-ui-850
-    border
-    border-ui-700/50
-    ;
-  }
-  
+@screen sm {
   .sm\:surface-ui-900 {
-    @apply
-    bg-ui-900
-    border
-    border-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-ui-700
-      ;
-    }
+    @mixin surface-ui-900;
   }
-  .sm\:surface-ui-800 {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
+	.sm\:surface,
+	.sm\:surface-ui-800 {
+    @mixin surface-ui-800;
   }
   .sm\:surface-ui-700 {
-    @apply
-    bg-ui-700
-    border
-    border-ui-600
-    ;
-    .progressbar {
-      @apply
-      bg-ui-500
-      ;
-    }
+    @mixin surface-ui-700;
   }
   .sm\:surface-ui-600 {
-    @apply
-    bg-ui-600
-    border
-    border-ui-500
-    ;
-    .progressbar {
-      @apply
-      bg-ui-400
-      ;
-    }
+    @mixin surface-ui-600;
   }
   .sm\:surface-ui-500 {
-    @apply
-    bg-ui-500
-    border
-    border-ui-400/20
-    ;
-    .progressbar {
-      @apply
-      bg-ui-300
-      ;
-    }
+    @mixin surface-ui-500;
   }
-  .sm\:surface-premium,
-  .sm\:surface-unlocked {
-    @apply
-    border-premium-700/25
-    bg-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-premium-700
-      ;
-    }
+  .sm\:surface-dimmed {
+    @mixin surface-dimmed;
+  }
+  .sm\:surface-premium {
+    @mixin surface-premium;
   }
   .sm\:surface-main {
-    @apply
-    border-main
-    bg-ui-800
-    ;
+    @mixin surface-main;
   }
 }
-@media only screen and (min-width: 768px) {
-	.md\:surface {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
+@screen md {
+	.md\:surface-ui-900 {
+    @mixin surface-ui-900;
   }
-  .md\:surface-dimmed {
-    @apply
-    bg-ui-850
-    border
-    border-ui-700/50
-    ;
-  }
-  
-  .md\:surface-ui-900 {
-    @apply
-    bg-ui-900
-    border
-    border-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-ui-700
-      ;
-    }
-  }
-  .md\:surface-ui-800 {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
+	.md\:surface,
+	.md\:surface-ui-800 {
+    @mixin surface-ui-800;
   }
   .md\:surface-ui-700 {
-    @apply
-    bg-ui-700
-    border
-    border-ui-600
-    ;
-    .progressbar {
-      @apply
-      bg-ui-500
-      ;
-    }
+    @mixin surface-ui-700;
   }
   .md\:surface-ui-600 {
-    @apply
-    bg-ui-600
-    border
-    border-ui-500
-    ;
-    .progressbar {
-      @apply
-      bg-ui-400
-      ;
-    }
+    @mixin surface-ui-600;
   }
   .md\:surface-ui-500 {
-    @apply
-    bg-ui-500
-    border
-    border-ui-400/20
-    ;
-    .progressbar {
-      @apply
-      bg-ui-300
-      ;
-    }
+    @mixin surface-ui-500;
   }
-  .md\:surface-premium,
-  .md\:surface-unlocked {
-    @apply
-    border-premium-700/25
-    bg-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-premium-700
-      ;
-    }
+  .md\:surface-dimmed {
+    @mixin surface-dimmed;
+  }
+  .md\:surface-premium {
+    @mixin surface-premium;
   }
   .md\:surface-main {
-    @apply
-    border-main
-    bg-ui-800
-    ;
+    @mixin surface-main;
   }
 }
-@media only screen and (min-width: 1024px) {
-	.lg\:surface {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
+@screen lg {
+	.lg\:surface-ui-900 {
+    @mixin surface-ui-900;
   }
-  .lg\:surface-dimmed {
-    @apply
-    bg-ui-850
-    border
-    border-ui-700/50
-    ;
-  }
-  
-  .lg\:surface-ui-900 {
-    @apply
-    bg-ui-900
-    border
-    border-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-ui-700
-      ;
-    }
-  }
-  .lg\:surface-ui-800 {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
+	.lg\:surface,
+	.lg\:surface-ui-800 {
+    @mixin surface-ui-800;
   }
   .lg\:surface-ui-700 {
-    @apply
-    bg-ui-700
-    border
-    border-ui-600
-    ;
-    .progressbar {
-      @apply
-      bg-ui-500
-      ;
-    }
+    @mixin surface-ui-700;
   }
   .lg\:surface-ui-600 {
-    @apply
-    bg-ui-600
-    border
-    border-ui-500
-    ;
-    .progressbar {
-      @apply
-      bg-ui-400
-      ;
-    }
+    @mixin surface-ui-600;
   }
-  .lg\:surface-premium,
-  .lg\:surface-unlocked {
-    @apply
-    border-premium-700/25
-    bg-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-premium-700
-      ;
-    }
+  .lg\:surface-ui-500 {
+    @mixin surface-ui-500;
+  }
+  .lg\:surface-dimmed {
+    @mixin surface-dimmed;
+  }
+  .lg\:surface-premium {
+    @mixin surface-premium;
   }
   .lg\:surface-main {
-    @apply
-    border-main
-    bg-ui-800
-    ;
+    @mixin surface-main;
   }
 }
-@media only screen and (min-width: 1280px) {
-	.xl\:surface {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
+@screen xl {
+	.xl\:surface-ui-900 {
+    @mixin surface-ui-900;
   }
-  .xl\:surface-dimmed {
-    @apply
-    bg-ui-850
-    border
-    border-ui-700/50
-    ;
-  }
-  
-  .xl\:surface-ui-900 {
-    @apply
-    bg-ui-900
-    border
-    border-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-ui-700
-      ;
-    }
-  }
-  .xl\:surface-ui-800 {
-    @apply
-    bg-ui-800
-    border
-    border-ui-700
-    ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
+	.xl\:surface,
+	.xl\:surface-ui-800 {
+    @mixin surface-ui-800;
   }
   .xl\:surface-ui-700 {
-    @apply
-    bg-ui-700
-    border
-    border-ui-600
-    ;
-    .progressbar {
-      @apply
-      bg-ui-500
-      ;
-    }
+    @mixin surface-ui-700;
   }
   .xl\:surface-ui-600 {
-    @apply
-    bg-ui-600
-    border
-    border-ui-500
-    ;
-    .progressbar {
-      @apply
-      bg-ui-400
-      ;
-    }
+    @mixin surface-ui-600;
   }
-  .xl\:surface-premium,
-  .xl\:surface-unlocked {
-    @apply
-    border-premium-700/25
-    bg-ui-800
-    ;
-    .progressbar {
-      @apply
-      bg-premium-700
-      ;
-    }
+  .xl\:surface-ui-500 {
+    @mixin surface-ui-500;
+  }
+  .xl\:surface-dimmed {
+    @mixin surface-dimmed;
+  }
+  .xl\:surface-premium {
+    @mixin surface-premium;
   }
   .xl\:surface-main {
-    @apply
-    border-main
-    bg-ui-800
-    ;
+    @mixin surface-main;
   }
 }

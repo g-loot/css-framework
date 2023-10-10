@@ -695,7 +695,7 @@
 
 /* responsive sizes */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
 	.avatar {
     &.sm\:avatar-2xl {
       @mixin avatar-2xl;
@@ -720,7 +720,7 @@
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
 	.avatar {
     &.md\:avatar-2xl {
       @mixin avatar-2xl;
@@ -745,7 +745,7 @@
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
 	.avatar {
     &.lg\:avatar-2xl {
       @mixin avatar-2xl;
@@ -770,7 +770,7 @@
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
 	.avatar {
     &.xl\:avatar-2xl {
       @mixin avatar-2xl;

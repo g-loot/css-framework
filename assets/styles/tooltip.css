@@ -88,80 +88,103 @@
         ;
       }
     }
+  }
+}
 
-    /* position */
+/* position */
 
-    &.tooltip-top {
+@define-mixin tooltip-top {
+  & {
+    &::after {
+      @apply
+      right-auto
+      left-[50%]
+      top-auto
+      bottom-[100%]
+      translate-y-0.5
+      ;
+    }
+    &:hover {
       &::after {
         @apply
-        right-auto
-        left-[50%]
-        top-auto
-        bottom-[100%]
-        translate-y-0.5
+        -translate-y-0.5
         ;
       }
-      &:hover {
-        &::after {
-          @apply
-          -translate-y-0.5
-          ;
-        }
-      }
     }
-    &.tooltip-bottom {
+  }
+}
+@define-mixin tooltip-right {
+  & {
+    &::after {
+      @apply
+      top-auto
+      bottom-[50%]
+      left-[100%]
+      -translate-x-1
+      translate-y-[50%]
+      ;
+    }
+    &:hover {
       &::after {
         @apply
-        bottom-auto
-        top-[100%]
-        -translate-y-1
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-y-1
-          ;
-        }
-      }
-    }
-    &.tooltip-right {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.tooltip-left {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        right-[100%]
-        left-auto
         translate-x-1
-        translate-y-[50%]
         ;
       }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
-          ;
-        }
+    }
+  }
+}
+@define-mixin tooltip-bottom {
+  & {
+    &::after {
+      @apply
+      bottom-auto
+      top-[100%]
+      -translate-y-1
+      ;
+    }
+    &:hover {
+      &::after {
+        @apply
+        translate-y-1
+        ;
       }
     }
+  }
+}
+@define-mixin tooltip-left {
+  & {
+    &::after {
+      @apply
+      top-auto
+      bottom-[50%]
+      right-[100%]
+      left-auto
+      translate-x-1
+      translate-y-[50%]
+      ;
+    }
+    &:hover {
+      &::after {
+        @apply
+        -translate-x-1
+        ;
+      }
+    }
+  }
+}
+
+[data-tooltip]:not([data-tooltip=""]) {
+  &.tooltip-top {
+    @mixin tooltip-top;
+  }
+  &.tooltip-bottom {
+    @mixin tooltip-bottom;
+  }
+  &.tooltip-right {
+    @mixin tooltip-right;
+  }
+  &.tooltip-left {
+    @mixin tooltip-left;
   }
 }
 
@@ -199,7 +222,7 @@
     bg-[length:800px_100%]
     bg-[-200%_center]
     bg-no-repeat
-    animate-[surface-loader_1s_linear_infinite]
+    animate-[tooltip-loader_1s_linear_infinite]
     opacity-100
     transition-none
     ;
@@ -224,7 +247,7 @@
   }
 }
 
-@keyframes surface-loader {
+@keyframes tooltip-loader {
   0% {
     background-position: -900px 0;
   }
@@ -234,6 +257,111 @@
 }
 
 /* tooltip attention */
+
+@define-mixin tooltip-attention-top {
+  & {
+    &::before {
+      @apply
+      border-t-8
+      border-x-8
+      border-b-0
+      border-ui-900/0
+      border-t-main
+      animate-bounce
+      translate-y-0
+      -translate-x-[50%]
+      top-auto
+      right-auto
+      left-[calc(50%-0.5rem)]
+      bottom-[calc(100%+0.5rem)]
+      ;
+    }
+    &::after {
+      @apply
+      -translate-x-[50%]
+      -translate-y-6
+      ;
+    }
+  }
+}
+@define-mixin tooltip-attention-right {
+  & {
+    &::before {
+      @apply
+      border-r-8
+      border-y-8
+      border-l-0
+      border-ui-900/0
+      border-r-main
+      animate-bounce-left
+      top-auto
+      right-auto
+      bottom-[calc(50%-0.5rem)]
+      left-[calc(100%+0.5rem)]
+      translate-x-0
+      translate-y-0
+      ;
+    }
+    &::after {
+      @apply
+      translate-y-[50%]
+      translate-x-6
+      ;
+    }
+  }
+}
+@define-mixin tooltip-attention-bottom {
+  & {
+    &::before {
+      @apply
+      border-b-8
+      border-x-8
+      border-t-0
+      border-ui-900/0
+      border-b-main
+      animate-bounce
+      translate-y-0
+      -translate-x-[50%]
+      bottom-auto
+      right-auto
+      left-[calc(50%-0.5rem)]
+      top-[calc(100%+0.5rem)]
+      ;
+    }
+    &::after {
+      @apply
+      -translate-x-[50%]
+      translate-y-6
+      ;
+    }
+  }
+}
+@define-mixin tooltip-attention-left {
+  & {
+    &::before {
+      @apply
+      border-l-8
+      border-y-8
+      border-r-0
+      border-ui-900/0
+      border-l-main
+      animate-bounce-right
+      top-auto
+      left-auto
+      bottom-[calc(50%-0.5rem)]
+      right-[calc(100%+0.5rem)]
+      translate-x-0
+      translate-y-0
+      ;
+    }
+    &::after {
+      @apply
+      translate-y-[50%]
+      -translate-x-6
+      ;
+    }
+  }
+}
 
 [data-tooltip]:not([data-tooltip=""]) {
   &.tooltip-attention {
@@ -270,100 +398,16 @@
       ;
     }
     &.tooltip-top {
-      &::before {
-        @apply
-        border-t-8
-        border-x-8
-        border-b-0
-        border-ui-900/0
-        border-t-main
-        animate-bounce
-        translate-y-0
-        -translate-x-[50%]
-        top-auto
-        right-auto
-        left-[calc(50%-0.5rem)]
-        bottom-[calc(100%+0.5rem)]
-        ;
-      }
-      &::after {
-        @apply
-        -translate-x-[50%]
-        -translate-y-6
-        ;
-      }
-    }
-    &.tooltip-bottom {
-      &::before {
-        @apply
-        border-b-8
-        border-x-8
-        border-t-0
-        border-ui-900/0
-        border-b-main
-        animate-bounce
-        translate-y-0
-        -translate-x-[50%]
-        bottom-auto
-        right-auto
-        left-[calc(50%-0.5rem)]
-        top-[calc(100%+0.5rem)]
-        ;
-      }
-      &::after {
-        @apply
-        -translate-x-[50%]
-        translate-y-6
-        ;
-      }
+      @mixin tooltip-attention-top;
     }
     &.tooltip-right {
-      &::before {
-        @apply
-        border-r-8
-        border-y-8
-        border-l-0
-        border-ui-900/0
-        border-r-main
-        animate-bounce-left
-        top-auto
-        right-auto
-        bottom-[calc(50%-0.5rem)]
-        left-[calc(100%+0.5rem)]
-        translate-x-0
-        translate-y-0
-        ;
-      }
-      &::after {
-        @apply
-        translate-y-[50%]
-        translate-x-6
-        ;
-      }
+      @mixin tooltip-attention-right;
+    }
+    &.tooltip-bottom {
+      @mixin tooltip-attention-bottom;
     }
     &.tooltip-left {
-      &::before {
-        @apply
-        border-l-8
-        border-y-8
-        border-r-0
-        border-ui-900/0
-        border-l-main
-        animate-bounce-right
-        top-auto
-        left-auto
-        bottom-[calc(50%-0.5rem)]
-        right-[calc(100%+0.5rem)]
-        translate-x-0
-        translate-y-0
-        ;
-      }
-      &::after {
-        @apply
-        translate-y-[50%]
-        -translate-x-6
-        ;
-      }
+      @mixin tooltip-attention-left;
     }
   }
 }
@@ -474,702 +518,128 @@
     opacity: 1;
   }
 }
-
-
 /* responsive positioning */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
 	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.sm\:tooltip-top {
-      &::after {
-        @apply
-        right-auto
-        left-[50%]
-        top-auto
-        bottom-[100%]
-        translate-y-0.5
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-y-0.5
-          ;
-        }
-      }
+      @mixin tooltip-top;
     }
     &.sm\:tooltip-right {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.sm\:tooltip-left {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        right-[100%]
-        left-auto
-        translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
-          ;
-        }
-      }
+      @mixin tooltip-right;
     }
     &.sm\:tooltip-bottom {
-      &::after {
-        @apply
-        bottom-auto
-        top-[100%]
-        -translate-y-1
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-y-1
-          ;
-        }
-      }
+      @mixin tooltip-bottom;
     }
+    &.sm\:tooltip-left {
+      @mixin tooltip-left;
+    }
+    
     &.tooltip-attention {
       &.sm\:tooltip-top {
-        &::before {
-          @apply
-          border-t-8
-          border-x-8
-          border-b-0
-          border-ui-900/0
-          border-t-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          top-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          bottom-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          -translate-y-6
-          ;
-        }
-      }
-      &.sm\:tooltip-bottom {
-        &::before {
-          @apply
-          border-b-8
-          border-x-8
-          border-t-0
-          border-ui-900/0
-          border-b-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          bottom-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          top-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          translate-y-6
-          left-[50%]
-          ;
-        }
+        @mixin tooltip-attention-top;
       }
       &.sm\:tooltip-right {
-        &::before {
-          @apply
-          border-r-8
-          border-y-8
-          border-l-0
-          border-ui-900/0
-          border-r-main
-          animate-bounce-left
-          top-auto
-          right-auto
-          bottom-[calc(50%-0.5rem)]
-          left-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-right;
+      }
+      &.sm\:tooltip-bottom {
+        @mixin tooltip-attention-bottom;
       }
       &.sm\:tooltip-left {
-        &::before {
-          @apply
-          border-l-8
-          border-y-8
-          border-r-0
-          border-ui-900/0
-          border-l-main
-          animate-bounce-right
-          top-auto
-          left-auto
-          bottom-[calc(50%-0.5rem)]
-          right-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          -translate-x-6
-          left-[50%]
-          ;
-        }
+        @mixin tooltip-attention-left;
       }
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
 	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.md\:tooltip-top {
-      &::after {
-        @apply
-        right-auto
-        left-[50%]
-        top-auto
-        bottom-[100%]
-        translate-y-0.5
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-y-0.5
-          ;
-        }
-      }
+      @mixin tooltip-top;
     }
     &.md\:tooltip-right {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.md\:tooltip-left {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        right-[100%]
-        left-auto
-        translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
-          ;
-        }
-      }
+      @mixin tooltip-right;
     }
     &.md\:tooltip-bottom {
-      &::after {
-        @apply
-        bottom-auto
-        top-[100%]
-        -translate-y-1
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-y-1
-          ;
-        }
-      }
+      @mixin tooltip-bottom;
     }
+    &.md\:tooltip-left {
+      @mixin tooltip-left;
+    }
+    
     &.tooltip-attention {
       &.md\:tooltip-top {
-        &::before {
-          @apply
-          border-t-8
-          border-x-8
-          border-b-0
-          border-ui-900/0
-          border-t-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          top-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          bottom-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          -translate-y-6
-          ;
-        }
-      }
-      &.md\:tooltip-bottom {
-        &::before {
-          @apply
-          border-b-8
-          border-x-8
-          border-t-0
-          border-ui-900/0
-          border-b-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          bottom-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          top-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          translate-y-6
-          ;
-        }
+        @mixin tooltip-attention-top;
       }
       &.md\:tooltip-right {
-        &::before {
-          @apply
-          border-r-8
-          border-y-8
-          border-l-0
-          border-ui-900/0
-          border-r-main
-          animate-bounce-left
-          top-auto
-          right-auto
-          bottom-[calc(50%-0.5rem)]
-          left-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-right;
+      }
+      &.md\:tooltip-bottom {
+        @mixin tooltip-attention-bottom;
       }
       &.md\:tooltip-left {
-        &::before {
-          @apply
-          border-l-8
-          border-y-8
-          border-r-0
-          border-ui-900/0
-          border-l-main
-          animate-bounce-right
-          top-auto
-          left-auto
-          bottom-[calc(50%-0.5rem)]
-          right-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          -translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-left;
       }
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
 	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.lg\:tooltip-top {
-      &::after {
-        @apply
-        right-auto
-        left-[50%]
-        top-auto
-        bottom-[100%]
-        translate-y-0.5
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-y-0.5
-          ;
-        }
-      }
+      @mixin tooltip-top;
     }
     &.lg\:tooltip-right {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.lg\:tooltip-left {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        right-[100%]
-        left-auto
-        translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
-          ;
-        }
-      }
+      @mixin tooltip-right;
     }
     &.lg\:tooltip-bottom {
-      &::after {
-        @apply
-        bottom-auto
-        top-[100%]
-        -translate-y-1
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-y-1
-          ;
-        }
-      }
+      @mixin tooltip-bottom;
     }
+    &.lg\:tooltip-left {
+      @mixin tooltip-left;
+    }
+    
     &.tooltip-attention {
       &.lg\:tooltip-top {
-        &::before {
-          @apply
-          border-t-8
-          border-x-8
-          border-b-0
-          border-ui-900/0
-          border-t-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          top-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          bottom-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          -translate-y-6
-          left-[50%]
-          ;
-        }
-      }
-      &.lg\:tooltip-bottom {
-        &::before {
-          @apply
-          border-b-8
-          border-x-8
-          border-t-0
-          border-ui-900/0
-          border-b-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          bottom-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          top-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          translate-y-6
-          left-[50%]
-          ;
-        }
+        @mixin tooltip-attention-top;
       }
       &.lg\:tooltip-right {
-        &::before {
-          @apply
-          border-r-8
-          border-y-8
-          border-l-0
-          border-ui-900/0
-          border-r-main
-          animate-bounce-left
-          top-auto
-          right-auto
-          bottom-[calc(50%-0.5rem)]
-          left-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-right;
+      }
+      &.lg\:tooltip-bottom {
+        @mixin tooltip-attention-bottom;
       }
       &.lg\:tooltip-left {
-        &::before {
-          @apply
-          border-l-8
-          border-y-8
-          border-r-0
-          border-ui-900/0
-          border-l-main
-          animate-bounce-right
-          top-auto
-          left-auto
-          bottom-[calc(50%-0.5rem)]
-          right-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          -translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-left;
       }
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
 	.tooltip[data-tooltip]:not([data-tooltip=""]) {
     &.xl\:tooltip-top {
-      &::after {
-        @apply
-        right-auto
-        left-[50%]
-        top-auto
-        bottom-[100%]
-        translate-y-0.5
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-y-0.5
-          ;
-        }
-      }
+      @mixin tooltip-top;
     }
     &.xl\:tooltip-right {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        left-[100%]
-        -translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-x-1
-          ;
-        }
-      }
-    }
-    &.xl\:tooltip-left {
-      &::after {
-        @apply
-        top-auto
-        bottom-[50%]
-        right-[100%]
-        left-auto
-        translate-x-1
-        translate-y-[50%]
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          -translate-x-1
-          ;
-        }
-      }
+      @mixin tooltip-right;
     }
     &.xl\:tooltip-bottom {
-      &::after {
-        @apply
-        bottom-auto
-        top-[100%]
-        -translate-y-1
-        ;
-      }
-      &:hover {
-        &::after {
-          @apply
-          translate-y-1
-          ;
-        }
-      }
+      @mixin tooltip-bottom;
     }
+    &.xl\:tooltip-left {
+      @mixin tooltip-left;
+    }
+    
     &.tooltip-attention {
       &.xl\:tooltip-top {
-        &::before {
-          @apply
-          border-t-8
-          border-x-8
-          border-b-0
-          border-ui-900/0
-          border-t-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          top-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          bottom-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          -translate-y-6
-          ;
-        }
-      }
-      &.xl\:tooltip-bottom {
-        &::before {
-          @apply
-          border-b-8
-          border-x-8
-          border-t-0
-          border-ui-900/0
-          border-b-main
-          animate-bounce
-          translate-y-0
-          -translate-x-[50%]
-          bottom-auto
-          right-auto
-          left-[calc(50%-0.5rem)]
-          top-[calc(100%+0.5rem)]
-          ;
-        }
-        &::after {
-          @apply
-          -translate-x-[50%]
-          translate-y-6
-          ;
-        }
+        @mixin tooltip-attention-top;
       }
       &.xl\:tooltip-right {
-        &::before {
-          @apply
-          border-r-8
-          border-y-8
-          border-l-0
-          border-ui-900/0
-          border-r-main
-          animate-bounce-left
-          top-auto
-          right-auto
-          bottom-[calc(50%-0.5rem)]
-          left-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-right;
+      }
+      &.xl\:tooltip-bottom {
+        @mixin tooltip-attention-bottom;
       }
       &.xl\:tooltip-left {
-        &::before {
-          @apply
-          border-l-8
-          border-y-8
-          border-r-0
-          border-ui-900/0
-          border-l-main
-          animate-bounce-right
-          top-auto
-          left-auto
-          bottom-[calc(50%-0.5rem)]
-          right-[calc(100%+0.5rem)]
-          translate-x-0
-          translate-y-0
-          ;
-        }
-        &::after {
-          @apply
-          translate-y-[50%]
-          -translate-x-6
-          ;
-        }
+        @mixin tooltip-attention-left;
       }
     }
   }

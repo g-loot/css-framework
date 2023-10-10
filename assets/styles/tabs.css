@@ -892,7 +892,7 @@
 
 /* responsive card tabs stretch  */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
   .tabs {
     &.sm\:tabs-stretch {
         @mixin tabs-stretch;
@@ -900,21 +900,21 @@
   }
 }
 
-@media only screen and (min-width: 768px) {
+@screen md {
   .tabs {
     &.md\:tabs-stretch {
       @mixin tabs-stretch;
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
   .tabs {
     &.lg\:tabs-stretch {
       @mixin tabs-stretch;
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
   .tabs {
     &.xl\:tabs-stretch {
       @mixin tabs-stretch;
@@ -1049,7 +1049,7 @@
 
 /* responsive card tabs horizontal  */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
   .tabs {
     &.sm\:tabs-horizontal {
       @mixin tabs;
@@ -1059,7 +1059,7 @@
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
   .tabs {
     &.md\:tabs-horizontal {
       @mixin tabs;
@@ -1069,7 +1069,7 @@
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
   .tabs {
     &.lg\:tabs-horizontal {
       @mixin tabs;
@@ -1079,7 +1079,7 @@
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
   .tabs {
     &.xl\:tabs-horizontal {
       @mixin tabs;

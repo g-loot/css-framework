@@ -1129,7 +1129,7 @@ button {
 
 /* responsive sizes */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
 	.button {
     &.sm\:button-lg {
       @mixin button-lg;
@@ -1145,7 +1145,7 @@ button {
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
 	.button {
     &.md\:button-lg {
       @mixin button-lg;
@@ -1161,7 +1161,7 @@ button {
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
 	.button {
     &.lg\:button-lg {
       @mixin button-lg;
@@ -1177,7 +1177,7 @@ button {
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
 	.button {
     &.xl\:button-lg {
       @mixin button-lg;

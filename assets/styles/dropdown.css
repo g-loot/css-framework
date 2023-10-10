@@ -157,7 +157,7 @@
     }
   }
 }
-@define-mixin dropdown-responsive {
+@define-mixin dropdown-mobile {
   & {
     .dropdown-content {
       @apply
@@ -187,8 +187,8 @@
   @mixin dropdown-left;
 }
 @media only screen and (max-width: 640px) {
-  .dropdown-responsive {
-    @mixin dropdown-responsive;
+  .dropdown-mobile {
+    @mixin dropdown-mobile;
   }
 }
 
@@ -233,7 +233,7 @@
 
 /* responsive positioning */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
 	.dropdown {
     &.sm\:dropdown-end {
       @mixin dropdown-end;
@@ -253,12 +253,9 @@
     &.sm\:dropdown-right {
       @mixin dropdown-right;
     }
-    &.sm\:dropdown-responsive {
-      @mixin dropdown-responsive;
-    }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
 	.dropdown {
     &.md\:dropdown-end {
       @mixin dropdown-end;
@@ -278,12 +275,9 @@
     &.md\:dropdown-right {
       @mixin dropdown-right;
     }
-    &.md\:dropdown-responsive {
-      @mixin dropdown-responsive;
-    }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
 	.dropdown {
     &.lg\:dropdown-end {
       @mixin dropdown-end;
@@ -303,12 +297,9 @@
     &.lg\:dropdown-right {
       @mixin dropdown-right;
     }
-    &.lg\:dropdown-responsive {
-      @mixin dropdown-responsive;
-    }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
 	.dropdown {
     &.xl\:dropdown-end {
       @mixin dropdown-end;
@@ -327,9 +318,6 @@
     }
     &.xl\:dropdown-right {
       @mixin dropdown-right;
-    }
-    &.xl\:dropdown-responsive {
-      @mixin dropdown-responsive;
     }
   }
 }

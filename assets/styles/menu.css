@@ -265,114 +265,65 @@
 }
 
 /* horizontal */
+
+@define-mixin menu-horizontal {
+  & {
+    @apply
+    inline-flex
+    flex-row
+    whitespace-nowrap
+    ;
+    :where(a, button, div) {
+      &:not([class*="p-"]) {
+        @apply
+        px-4
+        ;
+      }
+      &::after {
+        @apply 
+        rounded
+        ;
+      }
+    }
+    > li {
+      > ul {
+        @apply
+        top-full
+        left-[initial]
+        ;
+      }
+    }
+  }
+}
+
 .menu.menu-horizontal {
-  @apply
-  inline-flex
-  flex-row
-  whitespace-nowrap
-  ;
-  :where(a, button, div) {
-    &:not([class*="p-"]) {
-      @apply
-      px-4
-      ;
-    }
-    &::after {
-      @apply 
-      rounded
-      ;
-    }
-  }
-  > li {
-    > ul {
-      @apply
-      top-full
-      left-[initial]
-      ;
-    }
-  }
+  @mixin menu-horizontal;
 }
 @screen sm {
   .menu {
     &.sm\:menu-horizontal {
-      @apply
-      inline-flex
-      flex-row
-      whitespace-nowrap
-      ;
-      :where(a, button, div) {
-        @apply 
-        px-4
-        ;
-        &::after {
-          @apply 
-          rounded
-          ;
-        }
-      }
+      @mixin menu-horizontal;
     }
   }
 }
 @screen md {
   .menu {
     &.md\:menu-horizontal {
-      @apply
-      inline-flex
-      flex-row
-      whitespace-nowrap
-      ;
-      :where(a, button, div) {
-        @apply 
-        px-4
-        ;
-        &::after {
-          @apply 
-          rounded
-          ;
-        }
-      }
+      @mixin menu-horizontal;
     }
   }
 }
 @screen lg {
   .menu {
     &.lg\:menu-horizontal {
-      @apply
-      inline-flex
-      flex-row
-      whitespace-nowrap
-      ;
-      :where(a, button, div) {
-        @apply 
-        px-4
-        ;
-        &::after {
-          @apply 
-          rounded
-          ;
-        }
-      }
+      @mixin menu-horizontal;
     }
   }
 }
 @screen xl {
   .menu {
     &.xl\:menu-horizontal {
-      @apply
-      inline-flex
-      flex-row
-      whitespace-nowrap
-      ;
-      :where(a, button, div) {
-        @apply 
-        px-4
-        ;
-        &::after {
-          @apply 
-          rounded
-          ;
-        }
-      }
+      @mixin menu-horizontal;
     }
   }
 }

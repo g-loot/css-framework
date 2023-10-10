@@ -370,6 +370,16 @@
       hidden
       ;
     }
+
+    > img {
+      @apply
+      absolute
+      w-full
+      h-full
+      object-cover
+      object-right-bottom
+      ;
+    }
   }
 
   &.card-locked,
@@ -1445,47 +1455,6 @@
     }
   }
 
-  &.card-horizontal {
-    @apply 
-    flex
-    flex-row
-    md:max-w-[809px]
-    min-h-10
-    ;
-    > .card-image {
-      @apply 
-      w-auto
-      order-2
-      ;
-    }
-    > .card-content {
-      @apply 
-      order-1
-      flex-1
-      rounded-l
-      rounded-r-none
-      ;
-    }
-    > .card-image-bg {
-      @apply 
-      w-auto
-      rounded-r
-      rounded-l-none
-      ;
-      &::before {
-        @apply 
-        hidden
-        ;
-      }
-      > img {
-        @apply 
-        z-0
-        left-auto
-        ;
-      }
-    }
-  }
-
   &.card-premium {
     .card-image {
       > .card-image-content {
@@ -1563,183 +1532,81 @@
   }
 }
 
+@define-mixin card-ladder-horizontal {
+  & {
+    @apply 
+    flex
+    flex-row
+    md:max-w-[809px]
+    min-h-10
+    ;
+    > .card-image {
+      @apply 
+      w-auto
+      order-2
+      rounded-r
+      ;
+    }
+    > .card-content {
+      @apply 
+      order-1
+      flex-1
+      rounded-l
+      rounded-r-none
+      ;
+    }
+    > .card-image-bg {
+      @apply 
+      w-auto
+      rounded-r
+      rounded-l-none;
+      &::before {
+        @apply 
+        hidden
+        ;
+      }
+      > img {
+        @apply 
+        z-0
+        left-auto
+        ;
+      }
+    }
+  }
+}
+.card-ladder {
+  &.card-horizontal {
+    @mixin card-ladder-horizontal;
+  }
+}
+
 /* responsive card ladder secondary stacked  */
 
-@media only screen and (min-width: 640px) {
+@screen sm {
   .card-ladder.card-secondary {
     &.sm\:card-horizontal {
-      @apply 
-      flex
-      flex-row
-      md:max-w-[809px]
-      min-h-10
-      ;
-      > .card-image {
-        @apply 
-        w-auto
-        order-2
-        rounded-r
-        ;
-      }
-      > .card-content {
-        @apply 
-        order-1
-        flex-1
-        rounded-l
-        rounded-r-none
-        ;
-      }
-      > .card-image-bg {
-        @apply 
-        w-auto
-        rounded-r
-        rounded-l-none
-        ;
-        &::before {
-          @apply 
-          hidden
-          ;
-        }
-        > img {
-          @apply 
-          z-0
-          left-auto
-          ;
-        }
-      }
+      @mixin card-ladder-horizontal;
     }
   }
 }
-@media only screen and (min-width: 768px) {
+@screen md {
   .card-ladder.card-secondary {
     &.md\:card-horizontal {
-      @apply 
-      flex
-      flex-row
-      md:max-w-[809px]
-      min-h-10
-      ;
-      > .card-image {
-        @apply 
-        w-auto
-        order-2
-        rounded-r
-        ;
-      }
-      > .card-content {
-        @apply 
-        order-1
-        flex-1
-        rounded-l
-        rounded-r-none
-        ;
-      }
-      > .card-image-bg {
-        @apply 
-        w-auto
-        rounded-r
-        rounded-l-none
-        ;
-        &::before {
-          @apply 
-          hidden
-          ;
-        }
-        > img {
-          @apply 
-          z-0
-          left-auto
-          ;
-        }
-      }
+      @mixin card-ladder-horizontal;
     }
   }
 }
-@media only screen and (min-width: 1024px) {
+@screen lg {
   .card-ladder.card-secondary {
     &.lg\:card-horizontal {
-      @apply 
-      flex
-      flex-row
-      md:max-w-[809px]
-      min-h-10
-      ;
-      > .card-image {
-        @apply 
-        w-auto
-        order-2
-        rounded-r
-        ;
-      }
-      > .card-content {
-        @apply 
-        order-1
-        flex-1
-        rounded-l
-        rounded-r-none
-        ;
-      }
-      > .card-image-bg {
-        @apply 
-        w-auto
-        rounded-r
-        rounded-l-none;
-        &::before {
-          @apply 
-          hidden
-          ;
-        }
-        > img {
-          @apply 
-          z-0
-          left-auto
-          ;
-        }
-      }
+      @mixin card-ladder-horizontal;
     }
   }
 }
-@media only screen and (min-width: 1280px) {
+@screen xl {
   .card-ladder.card-secondary {
     &.xl\:card-horizontal {
-      @apply 
-      flex
-      flex-row
-      md:max-w-[809px]
-      min-h-10
-      ;
-      > .card-image {
-        @apply 
-        w-auto
-        order-2
-        rounded-r
-        ;
-      }
-      > .card-content {
-        @apply 
-        order-1
-        flex-1
-        rounded-l
-        rounded-r-none
-        ;
-      }
-      > .card-image-bg {
-        @apply 
-        w-auto
-        rounded-r
-        rounded-l-none;
-        &::before {
-          @apply 
-          hidden
-          ;
-        }
-        > img {
-          @apply 
-          z-0
-          left-auto
-          ;
-        }
-      }
+      @mixin card-ladder-horizontal;
     }
   }
 }
