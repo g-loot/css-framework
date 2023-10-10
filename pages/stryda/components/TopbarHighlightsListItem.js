@@ -46,7 +46,7 @@ export default function TopbarHighlightsListItem({
   useEffect(() => {
     const interval = setTimeout(() => {
       setIsReady(true);
-    }, 6000);
+    }, 8000);
     return () => {
       clearTimeout(interval);
     };
@@ -268,7 +268,7 @@ export default function TopbarHighlightsListItem({
               <div className="absolute z-20 inset-0 bg-ui-500 flex items-center justify-center text-center text-sm">
                 <div className="infobanner is-active w-full">
                   <div className="infobanner-front">
-                    <span className="text-center">AI working</span>
+                    <span className="text-center">Preparing video for AI</span>
                   </div>
                   <div className="infobanner-back justify-center">
                     <span className="text-center">Please wait...</span>
