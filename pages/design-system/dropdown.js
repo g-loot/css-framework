@@ -655,7 +655,6 @@ const DSpage = () => {
         </div>
       </div>
 
-
       {/* Responsive positioning */}
       <div className="mb-12" id="responsive-positioning">
         <h2 className="h3 mb-3">Responsive positioning</h2>
@@ -695,6 +694,77 @@ const DSpage = () => {
                     In this example, the tooltip will be displayed aligned on end by default, but will be centered above 1024px (lg).
                   </div>
                   <div className="dropdown dropdown-end lg:dropdown-center">
+                    <label tabIndex="1" className="button button-primary">
+                      <span>Click me</span>
+                      <span className="icon icon-arrow-sm-down" />
+                    </label>
+                    <div tabIndex="1" className="dropdown-content w-52 p-1">
+                      <ul className="menu menu-rounded">
+                        <li>
+                          <a tabIndex="1">
+                            <span>Item 1</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a tabIndex="1">
+                            <span>Item 2</span>
+                          </a>
+                        </li>
+                        <li>
+                          <a tabIndex="1">
+                            <span>Item 3</span>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/17t08vup/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Fixed positioning */}
+      <div className="mb-12" id="fixed-positioning">
+        <h2 className="h3 mb-3">Fixed positioning</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <p className="text-ui-300 mb-6">
+                  On some screens you sometimes need the dropdown content to "detach" from its dropdown container to make its content take the full width of the screen. Do to so, simply add
+                  <code
+                    className="interactive text-xs"
+                    onClick={() => {
+                      uiContext.openToastr({
+                        size: "small",
+                        text: "class name to your clipboard",
+                        color: "green",
+                        autoDelete: true,
+                        autoDeleteDelay: 2500,
+                      });
+                      navigator.clipboard.writeText("dropdown-responsive");
+                    }}
+                  >
+                    .dropdown-&#123;fixed&#x7D;
+                  </code>{" "} This only works under the sm threshold (640px)
+                  .<br />
+                </p>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                    In this example, the tooltip will be displayed fixed up under 640px (sm).
+                  </div>
+                  <div className="dropdown dropdown-end dropdown-responsive">
                     <label tabIndex="1" className="button button-primary">
                       <span>Click me</span>
                       <span className="icon icon-arrow-sm-down" />

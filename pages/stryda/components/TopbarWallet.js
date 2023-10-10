@@ -53,7 +53,7 @@ export default function TopbarWallet() {
     <>
       <div
         ref={ref}
-        className={`dropdown dropdown-end ${
+        className={`dropdown dropdown-end dropdown-responsive ${
           isActive ? "dropdown-open" : "dropdown-closed"
         }`}
       >
