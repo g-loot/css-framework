@@ -29,6 +29,7 @@ export default function TopbarHighlightsListItem({
 }) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
+  const [isReady, setIsReady] = useState(false);
   const [isProcessed, setIsProcessed] = useState(false);
   const [selectedMatch, setSelectedMatch] = useState();
 
@@ -41,6 +42,15 @@ export default function TopbarHighlightsListItem({
       setIsProcessed(true);
     }
   }, [processingStatus]);
+
+  useEffect(() => {
+    const interval = setTimeout(() => {
+      setIsReady(true);
+    }, 6000);
+    return () => {
+      clearTimeout(interval);
+    };
+  }, []);
 
   const handleAutomate = () => {
     onLoad(id);
@@ -254,6 +264,18 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             )}
+            {!isReady && (!isProcessed || !isAlreadyProcessed) && (
+              <div className="absolute z-20 inset-0 bg-ui-500 flex items-center justify-center text-center text-sm">
+                <div className="infobanner is-active w-full">
+                  <div className="infobanner-front">
+                    <span className="text-center">AI working</span>
+                  </div>
+                  <div className="infobanner-back justify-center">
+                    <span className="text-center">Please wait...</span>
+                  </div>
+                </div>
+              </div>
+            )}
             {isProcessed || isAlreadyProcessed ? (
               <>
                 <button
@@ -282,19 +304,19 @@ export default function TopbarHighlightsListItem({
                 </div>
                 <button
                   type="button"
-                  disabled={processingStatus === "processing"}
+                  disabled={processingStatus === "processing" || !isReady}
                   className="button button-sm button-primary"
                   onClick={() => handleAutomate()}
                 >
                   <span>Automate with AI</span>
                 </button>
-                {/* <button
+                <button
                   type="button"
-                  disabled={processingStatus === "processing"}
+                  disabled={processingStatus === "processing" || !isReady}
                   className="button button-sm button-secondary"
                 >
                   <span>Customize</span>
-                </button> */}
+                </button>
               </>
             )}
           </div>

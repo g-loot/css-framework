@@ -41,7 +41,7 @@ export default function Home() {
         <Loader
           loader={
             <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-              <div className="flex-none w-[21rem] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-80 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 overflow-x-hidden">
                 <div className="max-w-[400px] md:max-w-[620px] mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
@@ -50,26 +50,24 @@ export default function Home() {
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                 </div>
               </div>
-              <div className="flex-none w-[21rem] hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-80 hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
           <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-            <div className="flex-none w-[21rem] space-y-4 hidden md:block">
+            <div className="flex-none w-80 space-y-4 hidden md:block">
               <WidgetUser hasActions={false} state={stateUser} />
               <div
-                className="sticky space-y-4"
-                style={{ top: "calc(48px + 1rem)" }}
+                className="sticky space-y-4 top-16"
               >
                 <WidgetBattlepass state={stateBattlepass} />
                 <WidgetMissions state={stateMissions} />
               </div>
             </div>
-            <div className="flex-1 min-w-[0]">
+            <div className="flex-1">
               {hasError ? (
                 <div
-                  className="max-w-[400px] md:max-w-[620px] mx-auto sticky text-center"
-                  style={{ top: "calc(48px + 1rem)" }}
+                  className="max-w-[400px] md:max-w-[620px] mx-auto sticky text-center top-16"
                 >
                   <span className="icon icon-warning-sign text-7xl text-ui-400 my-4" />
                   <h2 className="h4">We seem to have an issue</h2>
@@ -93,11 +91,10 @@ export default function Home() {
                 </div>
               )}
             </div>
-            <div className="flex-none w-[21rem] space-y-4 hidden xl:block">
+            <div className="flex-none w-80 space-y-4 hidden xl:block">
               <WidgetCompetitions state={stateCompetitions} />
               <div
-                className="sticky space-y-4"
-                style={{ top: "calc(48px + 1rem)" }}
+                className="sticky space-y-4 top-16"
               >
                 <WidgetFollowings state={stateFollowings} />
               </div>

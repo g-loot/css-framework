@@ -243,8 +243,7 @@ export default function WidgetUserLeftPanel(props) {
             </ul>
           </div>
           <div
-            className="sticky space-y-4"
-            style={{ top: "calc(48px + 1rem)" }}
+            className="sticky space-y-4 top-16"
           >
             <div className="surface rounded px-4 py-6 text-center">
               <PremiumLogo

@@ -32,7 +32,7 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
         />
       </Head>
       {!hiddenUI && <Topbar />}
-      {gamePicker && (
+      {/* {gamePicker && (
         <div className="relative z-10 bg-gradient-to-b from-ui-900/70 to-ui-900/50 border-b border-ui-700 flex items-center">
           <div className="container relative flex justify-start overflow-x-auto scrollbar-hidden">
             <nav className="flex gap-2 items-center justify-center mx-auto">
@@ -73,7 +73,7 @@ export default function Structure({ children, title, gamePicker, hiddenUI, fullW
             </nav>
           </div>
         </div>
-      )}
+      )} */}
       <div className={`min-h-screen ${fullWidth ? '' : 'container sm:px-8'}`}>{children}</div>
       {!hiddenUI && <Footer />}
     </>

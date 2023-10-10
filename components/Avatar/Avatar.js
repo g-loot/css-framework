@@ -148,7 +148,7 @@ export default function Avatar(props) {
                       placement={props.tooltipPlacement}
                       additionalClassNames="!overflow-visible !border-none"
                       tooltip={
-                        <div className="w-[21rem]">
+                        <div className="w-80">
                           <WidgetUser id={selectedUser.id} isInTooltip={true} />
                         </div>
                       }

@@ -35,6 +35,32 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Without button */}
+      <div className="mb-12" id="without-button">
+        <h2 className="h3 mb-3">Without button</h2>
+
+        <div className="surface rounded-lg px-4 py-8 text-center">
+          <div className="max-w-sm mx-auto">
+            <span className="icon icon-video text-6xl text-ui-500" />
+            <div className="mt-2 mb-6">
+              <p className="text-sm text-ui-400">You have no recorded matches</p>
+              <p className="text-lg text-ui-300">
+                Make sure Stryda is up and running when you play.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-4">
+          <iframe
+            className="rounded"
+            width="100%"
+            height="300"
+            src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+          ></iframe>
+        </div>
+      </div>
+
       {/* With skip button */}
       <div className="mb-12" id="with-skip-button">
         <h2 className="h3 mb-3">With skip button</h2>
