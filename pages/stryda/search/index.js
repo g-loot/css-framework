@@ -60,7 +60,7 @@ export default function Search() {
           Search {filter && <>results for &#34;{filter}&#34;</>}
         </h1>
         <div className="flex flex-col md:flex-row items-center gap-4 mt-4">
-          <div className="flex-1 form-group">
+          <div className="flex-1 form-group w-full">
             <div className="input-group">
               <span className="icon icon-zoom" />
               <input

@@ -56,16 +56,6 @@
       opacity-100
       outline-none
       ;
-      /*
-      .menu > li,
-      > * {
-        @apply
-        translate-y-0
-        scale-y-100
-        opacity-100
-        ;
-      }
-      */
     }
   }
 
@@ -122,28 +112,7 @@
     top-auto
     origin-bottom
     ;
-    /*
-    .menu > li,
-    > * {
-      @apply
-      translate-y-4
-      scale-y-95
-      ;
-    }
-    */
   }
-}
-
-.dropdown-content.dropdown-top {
-  /*
-  .menu > li,
-  > * {
-    @apply
-    translate-y-4
-    scale-y-95
-    ;
-  }
-  */
 }
 
 .dropdown-end {
@@ -160,15 +129,6 @@
       bottom-0
       top-auto
       ;
-      /*
-      .menu > li,
-      > * {
-        @apply
-        translate-y-4
-        scale-y-95
-        ;
-      }
-      */
     }
   }
 }

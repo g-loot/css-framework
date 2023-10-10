@@ -28,7 +28,7 @@ export default function TopbarSidebar() {
     <>
       <nav className="border-b border-ui-500">
         <ul class="menu">
-          <li className="border-t border-ui-500">
+          <li>
             <Link href={`/stryda/home${prototype.getURLparams()}`}>
               <button
                 type="button"
@@ -110,9 +110,6 @@ export default function TopbarSidebar() {
           </li>
         </ul>
       </nav>
-      <div className="p-2">
-        <TopbarSidebarSearch />
-      </div>
     </>
   );
 }

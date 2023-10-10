@@ -249,13 +249,6 @@ export default function TopbarSearch() {
           </div>
         )}
       </div>
-      <div className="block xl:hidden rounded-full bg-ui-600 interactive">
-        <Link href={`/prototype/search${prototype.getURLparams()}`}>
-          <a className="button button-ghost rounded-full">
-            <span className="icon icon-zoom text-ui-200" />
-          </a>
-        </Link>
-      </div>
     </>
   );
 }

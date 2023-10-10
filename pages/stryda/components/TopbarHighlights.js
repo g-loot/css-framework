@@ -237,17 +237,6 @@ export default function TopbarHighlights() {
               <span className="icon icon-video" />
             </button>
           </div>
-          <div className="block md:hidden">
-            <button
-              type="button"
-              className={`button button-tertiary rounded-full ${
-                buttonState > 0 ? "is-active" : ""
-              }`}
-              onClick={dropdownActive}
-            >
-              <span className="icon icon-video" />
-            </button>
-          </div>
         </div>
 
         <div

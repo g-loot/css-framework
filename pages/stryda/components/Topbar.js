@@ -231,6 +231,13 @@ export default function Topbar() {
               <TopbarSearch />
             </div>
             <div className="flex justify-end items-center gap-1 sm:gap-2">
+              <div className="block xl:hidden rounded-full bg-ui-500 interactive">
+                <Link href={`/stryda/search${prototype.getURLparams()}`}>
+                  <a className="button button-ghost rounded-full">
+                    <span className="icon icon-zoom text-ui-200" />
+                  </a>
+                </Link>
+              </div>
               <TopbarHighlights />
               <div className="flex items-center rounded-full bg-ui-500">
                 <div className="z-20 dropdown dropdown-end">
@@ -465,8 +472,8 @@ export default function Topbar() {
       <div
         className={`drawer-side drawer-forced ${isActive ? "is-active" : ""}`}
       >
-        <div className="flex items-center gap-2 px-1.5 justify-between">
-          <Link href={`/prototype/home${prototype.getURLparams()}`}>
+        <div className="flex items-center gap-2 px-1.5 justify-between h-12 border-b border-ui-500">
+          <Link href={`/stryda/home${prototype.getURLparams()}`}>
             <a className="flex items-center gap-2 interactive m-2">
               <img
                 width="110"
@@ -476,16 +483,13 @@ export default function Topbar() {
               />
             </a>
           </Link>
-          <label className="switch switch-rotate button button-tertiary rounded-full">
-            <input
-              type="checkbox"
-              name="drawer-forced"
-              checked={isActive}
-              onChange={() => setIsActive(!isActive)}
-            />
-            <div className="switch-off icon icon-dots-vertical"></div>
-            <div className="switch-on icon icon-e-remove"></div>
-          </label>
+          <button
+            type="button"
+            className="button button-secondary button-close"
+            onClick={() => setIsActive(!isActive)}
+          >
+            <span className="icon icon-e-remove" />
+          </button>
         </div>
 
         <TopbarSidebar />
