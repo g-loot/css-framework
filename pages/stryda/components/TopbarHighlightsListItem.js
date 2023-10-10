@@ -264,7 +264,7 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             )}
-            {!isReady && (!isProcessed || !isAlreadyProcessed) && (
+            {!isReady && (!isProcessed || !isAlreadyProcessed) && id === 12 && (
               <div className="absolute z-20 inset-0 bg-ui-500 flex items-center justify-center text-center text-sm">
                 <div className="infobanner is-active w-full">
                   <div className="infobanner-front">
