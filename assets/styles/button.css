@@ -1273,6 +1273,70 @@ button {
 
 /* Button stretch */
 
+/* Button stretch functionality */
+
+
+.button-stretch { 
+  > span {
+    &:not(.icon) {
+      @apply
+      !m-0
+      overflow-hidden
+      whitespace-nowrap
+      normal-case
+      leading-none
+      items-center
+      justify-center
+      !grid
+      grid-cols-[0fr]
+      opacity-0
+      !transition-[grid-template-columns,opacity,width]
+      ease-[cubic-bezier(0.6,0,0.4,1)]
+      duration-500
+      ;
+      grid-template-columns: 0fr;
+      > * {
+        @apply
+        px-0
+        transition
+        ease-[cubic-bezier(0.6,0,0.4,1)]
+        duration-1000
+        overflow-hidden
+        flex
+        before:content-['']
+        after:content-['']
+        ;
+      }
+      &:first-child {
+        > * {
+          @apply
+          before:w-1
+          after:w-2
+          ;
+        }
+      }
+      &:not(:first-child) {
+        > * {
+          @apply
+          before:w-2
+          after:w-1
+          ;
+        }
+      }
+    }
+  }
+  &.is-active {
+    > span {
+      &:not(.icon) {
+        @apply
+        opacity-100
+        grid-cols-[1fr]
+        ;
+      }
+    }
+  }
+}
+
 .button {
   &.button-stretch {
     @apply
@@ -1281,35 +1345,8 @@ button {
     ;
     > span {
       &:not(.icon) {
-        @apply
-        /* max-w-[0px] */
-        !m-0
-        overflow-hidden
-        whitespace-nowrap
-        normal-case
-        leading-none
-        items-center
-        justify-center
-        grid
-        grid-cols-[0fr]
-        opacity-0
-        transition-[grid-template-columns,opacity,width]
-        ease-[cubic-bezier(0.6,0,0.4,1)]
-        duration-500
-        ;
-        grid-template-columns: 0fr;
         > * {
           @apply
-          px-0
-          transition
-          ease-[cubic-bezier(0.6,0,0.4,1)]
-          duration-1000
-          overflow-hidden
-          flex
-          before:content-['']
-          before:w-1
-          after:content-['']
-          after:w-2
           translate-x-1/2
           ;
         }
@@ -1318,10 +1355,6 @@ button {
     &.is-active {
       > span {
         &:not(.icon) {
-          @apply
-          opacity-100
-          grid-cols-[1fr]
-          ;
           > * {
             @apply
             translate-x-0

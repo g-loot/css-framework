@@ -48,19 +48,35 @@ const ButtonLoader = ({ children, ...props }) => {
 
 const ButtonStretch = ({ children, ...props }) => {
   const [isActive, setIsActive] = useState(false);
-  const handleClick = () => {
-    setTimeout(() => {
-      setIsActive(!isActive);
-    }, 500);
+  const icon = () => {
+    return <span className="icon icon-video" />;
+  };
+  const label = () => {
+    return (
+      <span>
+        <span>Button label</span>
+      </span>
+    );
   };
   return (
     <button
       type="button"
-      className={`button button-stretch ${props.variant} ${isActive ? 'is-active' : ''}`}
+      className={`button button-stretch ${props.variant} ${
+        isActive ? "is-active" : ""
+      }`}
       onClick={() => setIsActive(!isActive)}
     >
-      <span><span>Button label</span></span>
-      <span className="icon icon-video" />
+      {props.isReverse ? (
+        <>
+          {icon()}
+          {label()}
+        </>
+      ) : (
+        <>
+          {label()}
+          {icon()}
+        </>
+      )}
     </button>
   );
 };
@@ -1824,16 +1840,16 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Button loader</h2>
 
         <div className="surface rounded-lg p-4">
-            <p className="mb-5">
-              You can create a button loader by placing a
-              <code className="interactive text-xs">progress-container</code> inside
-              your button. Head over to the{" "}
-              <Link href="/design-system/progressbar">
-                <a className="link">Progress bar</a>
-              </Link>{" "}
-              component To learn more about{" "}
-              <code className="interactive text-xs">progress-container</code>
-            </p>
+          <p className="mb-5">
+            You can create a button loader by placing a
+            <code className="interactive text-xs">progress-container</code>{" "}
+            inside your button. Head over to the{" "}
+            <Link href="/design-system/progressbar">
+              <a className="link">Progress bar</a>
+            </Link>{" "}
+            component To learn more about{" "}
+            <code className="interactive text-xs">progress-container</code>
+          </p>
           <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
             <div className="flex-1 space-y-4">
               <div className="w-full flex gap-4 items-center">
@@ -1913,8 +1929,9 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Button stretch</h2>
         <div className="surface rounded-lg p-4">
           <p className="mb-5">
-            Follow this structure to create a stretchable button. Use the 
-            <code className="interactive text-xs">.is-active</code> class name to toggle the button on and off.
+            Follow this structure to create a stretchable button. Use the
+            <code className="interactive text-xs">.is-active</code> class name
+            to toggle the button on and off.
           </p>
           <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
             <div className="flex-1 space-y-4">
@@ -1974,7 +1991,7 @@ const DSpage = () => {
                   Success
                 </div>
                 <div className="flex-1">
-                  <ButtonStretch variant="button-success" />
+                  <ButtonStretch variant="button-success" isReverse={true} />
                 </div>
               </div>
             </div>

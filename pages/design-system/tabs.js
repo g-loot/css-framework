@@ -25,6 +25,19 @@ const tabItems = [
   },
 ];
 
+const tabIconsItems = [
+  {
+    label: "Home",
+    icon: ""
+  },
+  {
+    label: "Missions",
+  },
+  {
+    label: "Ladders",
+  },
+];
+
 const DSpage = () => {
   const uiContext = useContext(UiContext);
   const [activeTabItem, setActiveTabItem] = useState("Home");
@@ -643,6 +656,47 @@ const DSpage = () => {
                   </ul>
                 </div>
               </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/bgs54etu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tabs & button stretch */}
+      <div className="mb-12" id="tabs-button-stretch">
+        <h2 className="h3 mb-3">Tabs & button stretch</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+            <div className="flex-1 space-y-4">
+              <p className="text-ui-300 mb-6">
+                You can set an vertical tabs to become horizontalbased on the
+                screen size using the class names.
+              </p>
+              <ul className="tabs tabs-vertical sm:tabs-horizontal w-full">
+                    {tabIconsItems.map((item, itemIndex) => (
+                      <li key={itemIndex}>
+                        <button
+                          className={`button-stretch ${
+                            item.label === activeTabItem ? "is-active" : ""
+                          }`}
+                          onClick={() => setActiveTabItem(item.label)}
+                        >
+                          <span className="icon icon-video" />
+                          <span>
+                            <span>{item.label}</span>
+                          </span>
+                        </button>
+                      </li>
+                    ))}
+                  </ul>
             </div>
             <div className="flex-1">
               <iframe

@@ -241,7 +241,7 @@ export default function TopbarHighlights() {
 
         <div
           tabIndex="1"
-          className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[420px] overflow-hidden rounded-xl shadow-xl"
+          className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-[436px] overflow-hidden rounded-xl shadow-xl"
         >
           {prototype.isClient ? (
             <div>

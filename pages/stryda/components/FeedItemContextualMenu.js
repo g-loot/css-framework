@@ -28,6 +28,14 @@ export default function FeedItemContextualMenu({ item, match, onEdit }) {
             <ul className="menu menu-rounded menu-secondary">
               {match && item.type === "match" && (
                 <>
+                {match.meta.media?.videoUrl && (
+                  <li>
+                    <button type="button" onClick={() => onEdit()}>
+                      <span className="icon icon-data-download" />
+                      <span>Download video</span>
+                    </button>
+                  </li>
+                )}
                   {prototype.getUserByID(match.user).isYou ? (
                     <>
                       <li>

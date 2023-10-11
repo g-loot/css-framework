@@ -160,43 +160,19 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             )}
-          {itemIndex === 2 && (
-            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
-              <div className="flex gap-2 items-center text-ui-100">
-                <span className="icon icon-circle-caret-right" />
-                <div className="text-sm">Recording slot disabled</div>
-              </div>
-              <p className="text-xs">
-                Allocate more space in the{" "}
-                <button
-                  type="button"
-                  className="link"
-                  onClick={() => handleChangeTab("settings")}
-                >
-                  Highlight settings
-                </button>{" "}
-                tab.
-              </p>
-            </div>
-          )}
-          {itemIndex === 3 && (
-            <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
-              <div className="text-sm text-ui-100">Not enough content</div>
-              <p className="text-xs">
-                The AI needs at least 3 moments in order to create the
-                highlight.
-              </p>
-              <button
-                type="button"
-                className="button button-primary button-sm mt-2"
-              >
-                <span>Got it</span>
-              </button>
-            </div>
-          )}
+          {/*
+          <Tooltip
+                placement="top"
+                  tooltip={<div className="max-w-xs text-center"><span className="text-attention-500">The files of this highlight might get replaced by newer matches. Get the highlight video from this match now by clicking &quot;Automate with AI&quot;.</span></div>}                >
+                  <button type="button" className="text-ui-300 text-0">
+                    <span className="icon text-sm icon-warning-sign text-attention-500" />
+                  </button>
+                </Tooltip>
+          */}
+
           <div
             className={`flex-1 flex justify-between items-stretch border-r border-ui-400/20 relative overflow-hidden h-28 text-xs text-ui-100 leading-none ${
-              isAlreadyProcessed ? "child:opacity-30 [&>img]:hidden" : ""
+              isAlreadyProcessed ? "child:opacity-30 [&>img]:opacity-5" : ""
             }`}
           >
             <div className="absolute top-2 left-2 z-40">
@@ -242,7 +218,7 @@ export default function TopbarHighlightsListItem({
               height="auto"
             />
           </div>
-          <div className="relative w-40 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
+          <div className="relative w-44 flex flex-col items-stretch justify-center gap-1.5 leading-none rounded-r overflow-hidden p-2 whitespace-nowrap bg-gradient-to-r from-ui-600 to-ui-500">
             {id === processingID && processingStatus === "processing" && (
               <div
                 className="progresscontainer"
@@ -264,16 +240,50 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             )}
-            {!isReady && (!isProcessed || !isAlreadyProcessed) && id === 12 && (
-              <div className="absolute z-20 inset-0 bg-ui-500 flex items-center justify-center text-center text-sm">
-                <div className="infobanner is-active w-full">
-                  <div className="infobanner-front">
-                    <span className="text-center">Preparing video for AI</span>
-                  </div>
-                  <div className="infobanner-back justify-center">
-                    <span className="text-center">Please wait...</span>
+            {!isReady &&
+              (!isProcessed || !isAlreadyProcessed) &&
+              (id === 12 || id === 15) && (
+                <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                  <div className="infobanner is-active w-full">
+                    <div className="infobanner-front">
+                      <span className="text-center">
+                        Preparing video for AI
+                      </span>
+                    </div>
+                    <div className="infobanner-back justify-center">
+                      <span className="text-center">Please wait...</span>
+                    </div>
                   </div>
                 </div>
+              )}
+            {isReady && (!isProcessed || !isAlreadyProcessed) && id === 15 && (
+              <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                <div className="text-sm text-ui-100 mb-1">
+                  Not enough content
+                </div>
+                <p className="text-xs">
+                  The AI needs at least 3 moments in order to create the
+                  highlight.
+                </p>
+              </div>
+            )}
+            {itemIndex === 2 && (
+              <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                <div className="text-sm text-ui-100 mb-1">
+                  Local files deleted
+                </div>
+                <p className="text-xs">
+                  The video files of this match have been deleted from your hard
+                  drive. Allocate more space in the{" "}
+                  <button
+                    type="button"
+                    className="link"
+                    onClick={() => handleChangeTab("settings")}
+                  >
+                    Highlight settings
+                  </button>{" "}
+                  tab.
+                </p>
               </div>
             )}
             {isProcessed || isAlreadyProcessed ? (
