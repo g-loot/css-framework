@@ -186,7 +186,7 @@
 .dropdown-left {
   @mixin dropdown-left;
 }
-@media only screen and (max-width: 640px) {
+@screen sm {
   .dropdown-mobile {
     @mixin dropdown-mobile;
   }

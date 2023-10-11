@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Link from "next/link";
 
 const tabItems = [
   {
@@ -27,14 +28,39 @@ const tabItems = [
 
 const tabIconsItems = [
   {
-    label: "Home",
-    icon: ""
+    label: "Apex Legends",
+    icon: "icon-game-apexlegends-symbol",
+    color: "apexlegends",
+  },
+  // {
+  //   label: "CS:GO",
+  //   icon: "icon-game-csgo-symbol",
+  //   color: "csgo",
+  // },
+  {
+    label: "Dota 2",
+    icon: "icon-game-dota2-symbol",
+    color: "dota2",
   },
   {
-    label: "Missions",
+    label: "PUBG",
+    icon: "icon-game-pubg-symbol",
+    color: "pubg",
   },
   {
-    label: "Ladders",
+    label: "Rocket League",
+    icon: "icon-game-rocketleague-symbol",
+    color: "rocketleague",
+  },
+  {
+    label: "Valorant",
+    icon: "icon-game-valorant-symbol",
+    color: "valorant",
+  },
+  {
+    label: "League of Legends",
+    icon: "icon-game-leagueoflegends-symbol",
+    color: "leagueoflegends",
   },
 ];
 
@@ -677,33 +703,70 @@ const DSpage = () => {
           <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
             <div className="flex-1 space-y-4">
               <p className="text-ui-300 mb-6">
-                You can set an vertical tabs to become horizontalbased on the
-                screen size using the class names.
+                You can combine tabs with the <Link href="/design-system/buttons#button-stretch"><a className="link link-main">button stretch component</a></Link>.
               </p>
-              <ul className="tabs tabs-vertical sm:tabs-horizontal w-full">
-                    {tabIconsItems.map((item, itemIndex) => (
-                      <li key={itemIndex}>
-                        <button
-                          className={`button-stretch ${
-                            item.label === activeTabItem ? "is-active" : ""
-                          }`}
-                          onClick={() => setActiveTabItem(item.label)}
-                        >
-                          <span className="icon icon-video" />
-                          <span>
-                            <span>{item.label}</span>
-                          </span>
-                        </button>
-                      </li>
-                    ))}
-                  </ul>
+              <ul className="tabs ">
+                {tabIconsItems.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <button
+                      className={`button-stretch ${
+                        item.label === activeTabItem ? "is-active" : ""
+                      }`}
+                      onClick={() => setActiveTabItem(item.label)}
+                    >
+                      <span className={`icon text-xl ${item.icon}`} />
+                      <span>
+                        <span>{item.label}</span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
             </div>
             <div className="flex-1">
               <iframe
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/bgs54etu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/4vhj0sg3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Tabs colored */}
+      <div className="mb-12" id="tabs-colored">
+        <h2 className="h3 mb-3">Tabs game picker</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+            <div className="flex-1 space-y-4">
+              <ul className="tabs tabs-colored">
+                {tabIconsItems.map((item, itemIndex) => (
+                  <li key={itemIndex}>
+                    <button
+                      className={`button-stretch  ${
+                        item.label === activeTabItem ? "is-active" : ""
+                      }`}
+                      style={{ "--color" : `var(--color-game-${item.color})`}}
+                      onClick={() => setActiveTabItem(item.label)}
+                    >
+                      <span className={`icon text-xl ${item.icon}`} />
+                      <span>
+                        <span>{item.label}</span>
+                      </span>
+                    </button>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/4vhj0sg3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

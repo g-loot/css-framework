@@ -16,12 +16,12 @@ export default function Loader(props) {
     }
   }, [loading]);
 
-  useEffect(() => {
-    setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 700);
-  }, [prototype.defaultGameID]);
+  // useEffect(() => {
+  //   setLoading(true);
+  //   setTimeout(() => {
+  //     setLoading(false);
+  //   }, 700);
+  // }, [prototype.defaultGameID]);
 
   return (
     <>

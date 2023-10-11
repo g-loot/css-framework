@@ -65,6 +65,11 @@
         ;
       }
 
+      &::before {
+        @apply
+        bg-ui-300/0
+        ;
+      }
       &::after {
         @apply
         content-['']
@@ -1087,5 +1092,165 @@
     &.xl\:tabs-vertical {
       @mixin tabs-vertical;
     }
+  }
+}
+
+/* tabs & button stretch */
+
+
+.tabs > li > :where(a, button, .button), 
+.tab.button {
+  &.button-stretch {
+    @apply
+    py-0
+    ;
+    > span {
+      &.icon {
+        @apply
+        pb-1
+        ;
+      }
+      &:not(.icon) {
+        @apply
+        pb-4
+        pt-3
+        ;
+        > * {
+          @apply
+          scale-y-75
+          translate-y-full
+          ;
+        }
+      }
+    }
+    &.is-active {
+      > span {
+        &:not(.icon) {
+          > * {
+            @apply
+            scale-y-100
+            translate-y-0
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+/* tabs colored (game picker) */
+
+.tabs {
+  &.tabs-colored {
+    --color: var(--color-main);
+    > li {
+      :where(a, button, .button) {
+        @apply
+        rounded-t
+        border-t
+        border-x
+        border-main/0
+        ;
+        &::before {
+          @apply 
+          absolute
+          z-10
+          content-['']
+          inset-0
+          bg-ui-300
+          transition-all
+          duration-200
+          ease-[cubic-bezier(.7,0,.3,1)]
+          opacity-0
+          scale-y-0
+          translate-y-2
+          rounded-t
+          ;
+        }
+        &.is-active {
+          @apply
+          text-[rgb(var(--color)/var(--tw-text-opacity))]
+          border-[rgb(var(--color)/var(--tw-border-opacity))]
+          ;
+        }
+        &.is-active,
+        &:active,
+        &:hover {
+          &::before {
+            @apply
+            opacity-5
+            scale-y-100
+            translate-y-0
+            duration-75
+            ;
+          }
+          &::after {
+            @apply
+            bg-[rgb(var(--color)/var(--tw-bg-opacity))];
+            ;
+          }
+        }
+      }
+    }
+  }
+}
+
+.tabs-colored-shadow {
+  @apply
+  absolute
+  inset-x-0
+  bottom-0
+  h-1
+  bg-[rgb(var(--color)/var(--tw-bg-opacity))]
+  shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+  transition
+  duration-1000
+  ;
+
+  /* &::before {
+    @apply
+    content-[""]
+    absolute
+    inset-x-0
+    bottom-0
+    h-20
+    bg-gradient-to-t
+    from-[rgb(var(--color)/20%)]
+    to-[rgb(var(--color)/0%)]
+    transition
+    ease
+    duration-1000
+    ;
+  } */
+  @screen 3xl {
+    @apply
+    shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
+  }
+  @screen 2xl {
+    @apply
+    shadow-[-1576px_0_rgb(var(--color)/100%),1576px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
+  }
+  @screen xl {
+    @apply
+    shadow-[-1280px_0_rgb(var(--color)/100%),1280px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
+  }
+  @screen lg {
+    @apply
+    shadow-[-1024px_0_rgb(var(--color)/100%),1024px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
+  }
+  @screen md {
+    @apply
+    shadow-[-768px_0_rgb(var(--color)/100%),768px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
+  }
+  @screen sm {
+    @apply
+    shadow-[-640px_0_rgb(var(--color)/100%),640px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    ;
   }
 }

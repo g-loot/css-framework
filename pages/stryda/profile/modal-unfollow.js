@@ -16,7 +16,7 @@ export default function ModalUnfollow(props) {
     setTimeout(() => {
       uiContext.openToastr({
         size: "medium",
-        text: `${selectedUser.nickname} removed from your followings`,
+        text: `${selectedUser.nickname} removed from your following`,
         color: "green",
         autoDelete: true,
         autoDeleteDelay: 2500,

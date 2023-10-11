@@ -38,15 +38,15 @@ export default function TabMissionsMissions() {
     <>
       {selectedGame && (
         <>
-          <section className="my-8 animate-slide-in-bottom">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
+          <section className="mb-8 animate-slide-in-bottom">
+            {/* <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-3 mx-4 sm:mx-0 text-sm text-ui-300">
               <div className="max-w-md:pb-2 max-w-md:text-center">
                 Your latest match ended <b>Dec 13 / 8:12 PM</b>
               </div>
               <ButtonStatsUpdate />
-            </div>
+            </div> */}
           
-            {selectedGame.needsSteam && (
+            {/* {selectedGame.needsSteam && (
               <>
                 <div className="px-4 sm:px-0">
                   <div className="alert mb-4">
@@ -75,10 +75,10 @@ export default function TabMissionsMissions() {
                   </div>
                 </div>
               </>
-            )}
+            )} */}
 
             {isEmpty ? (
-              <div className="surface surface-dimmed rounded px-4 py-8 text-center">
+              <div className="surface surface-dimmed rounded px-4 pb-8 text-center">
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-missions text-6xl text-ui-500" />
                   <p className="mt-2 text-ui-300">

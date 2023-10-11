@@ -12,8 +12,8 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Structure from "@/pages/stryda/components/Structure";
 import Loader from "@/pages/stryda/components/Loader";
-import StructureSubMenu from "../components/StructureSubMenu";
 import Countdown from "@/components/Countdown/Countdown";
+import GamePicker from "../components/GamePicker";
 
 const TabsItems = [
   {
@@ -49,6 +49,7 @@ export default function Missions() {
   const selectedTab = tab ? tab : defaultTab;
   const modalConnectIDLeagueOfLegends =
     query.modalconnect === "true" ? true : false;
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     if (modalConnectIDLeagueOfLegends) {
@@ -59,6 +60,21 @@ export default function Missions() {
   function openModalConnectIDLeagueOfLegends() {
     uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
   }
+
+  useEffect(() => {
+    if (loading) {
+      setTimeout(() => {
+        setLoading(false);
+      }, 700);
+    }
+  }, [loading]);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 700);
+  }, [prototype.defaultGameID]);
 
   return (
     <>
@@ -81,7 +97,7 @@ export default function Missions() {
         >
           {selectedGame && (
             <>
-              <section className="header header-quaternary my-8">
+              {/* <section className="header header-quaternary my-8">
                 <div className="header-content">
                   <div className="header-body">
                     <h1 className="text-7xl -mb-0.5">Missions</h1>
@@ -150,7 +166,17 @@ export default function Missions() {
                 <div className="header-bg">
                   <img src={selectedGame.assets.heroV2} alt="" />
                 </div>
-              </section>
+              </section> */}
+
+              <div className="relative flex items-end justify-between gap-4 mt-14 mb-8">
+                <h1 className="text-7xl mb-2">Missions</h1>
+                <GamePicker />
+                <i
+                  className={`hidden absolute inset-x-0 bottom-0 h-1 bg-game-${prototype
+                    .getGameByID(prototype.defaultGameID)
+                    .slug.replace(/#|_/g, "")}`}
+                />
+              </div>
 
               <div className="flex flex-col lg:flex-row lg:items-stretch gap-8">
                 <div className="w-56">
@@ -187,24 +213,30 @@ export default function Missions() {
                           hasSeconds={false}
                           className="text-3xl"
                         />
-                        <div className="text-sm">
-                          Until all Missions resets
-                        </div>
+                        <div className="text-sm">Until all Missions resets</div>
                       </li>
-                      <li>
-                        
-                      </li>
+                      <li></li>
                     </ul>
                   </div>
                 </div>
-                <div className="flex-1">
-                  {TabsItems.map((item, itemIndex) => {
-                    if (item.url === selectedTab) {
-                      return React.createElement(item.component, {
-                        key: itemIndex,
-                      });
-                    }
-                  })}
+                <div className="relative flex-1 min-h-[calc(100dvh-200px)]">
+                  {loading ? (
+                    <div className="absolute inset-0 grid place-content-center">
+                      <div role="loading" className="loader">
+                        <span className="sr-only">Loading...</span>
+                      </div>
+                    </div>
+                  ) : (
+                    <>
+                      {TabsItems.map((item, itemIndex) => {
+                        if (item.url === selectedTab) {
+                          return React.createElement(item.component, {
+                            key: itemIndex,
+                          });
+                        }
+                      })}
+                    </>
+                  )}
                 </div>
               </div>
             </>

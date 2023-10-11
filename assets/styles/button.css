@@ -1276,7 +1276,10 @@ button {
 /* Button stretch functionality */
 
 
-.button-stretch { 
+.button-stretch {
+  @apply
+  !gap-0
+  ;
   > span {
     &:not(.icon) {
       @apply
@@ -1288,21 +1291,21 @@ button {
       items-center
       justify-center
       !grid
-      grid-cols-[0fr]
-      opacity-0
+      !grid-cols-[0fr]
       !transition-[grid-template-columns,opacity,width]
-      ease-[cubic-bezier(0.6,0,0.4,1)]
-      duration-500
+      !ease-[cubic-bezier(0.6,0,0.4,1)]
+      !duration-500
       ;
-      grid-template-columns: 0fr;
       > * {
         @apply
-        px-0
-        transition
-        ease-[cubic-bezier(0.6,0,0.4,1)]
-        duration-1000
-        overflow-hidden
-        flex
+        !px-0
+        !transition
+        !ease-[cubic-bezier(0.6,0,0.4,1)]
+        !duration-500
+        delay-300
+        !overflow-hidden
+        !flex
+        !opacity-0
         before:content-['']
         after:content-['']
         ;
@@ -1329,9 +1332,13 @@ button {
     > span {
       &:not(.icon) {
         @apply
-        opacity-100
-        grid-cols-[1fr]
+        !grid-cols-[1fr]
         ;
+        > * {
+          @apply
+          !opacity-100
+          ;
+        }
       }
     }
   }
@@ -1340,7 +1347,6 @@ button {
 .button {
   &.button-stretch {
     @apply
-    gap-0
     px-2.5
     ;
     > span {
