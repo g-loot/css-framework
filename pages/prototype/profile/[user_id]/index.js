@@ -221,7 +221,7 @@ export default function Home() {
                           {item.number && (
                             <>
                               {" "}
-                              <span className="text-sm">{item.number}</span>
+                              <span className="text-sm">({item.number})</span>
                             </>
                           )}
                         </span>

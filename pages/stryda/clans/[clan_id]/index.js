@@ -220,7 +220,7 @@ export default function ClanDetails() {
                                 <>
                                   {" "}
                                   <span className="text-sm">
-                                    {getClanMembers().length}
+                                    ({getClanMembers().length})
                                   </span>
                                 </>
                               )}
@@ -250,7 +250,7 @@ export default function ClanDetails() {
                                 <>
                                   {" "}
                                   <span className="text-sm">
-                                    {getClanMembers().length}
+                                    ({getClanMembers().length})
                                   </span>
                                 </>
                               )}

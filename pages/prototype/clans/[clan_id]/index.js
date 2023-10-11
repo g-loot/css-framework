@@ -152,14 +152,14 @@ export default function Home() {
                                 <>
                                   {" "}
                                   <span className="text-sm">
-                                    {getClanMembers().length}
+                                    ({getClanMembers().length})
                                   </span>
                                 </>
                               )}
                               {item.number && (
                                 <>
                                   {" "}
-                                  <span className="text-sm">{item.number}</span>
+                                  <span className="text-sm">({item.number})</span>
                                 </>
                               )}
                               {item.hasBadge && (
@@ -188,7 +188,7 @@ export default function Home() {
                                 <>
                                   {" "}
                                   <span className="text-sm">
-                                    {getClanMembers().length}
+                                    ({getClanMembers().length})
                                   </span>
                                 </>
                               )}

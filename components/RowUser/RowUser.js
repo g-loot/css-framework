@@ -17,7 +17,6 @@ export default function RowUser({ children, ...props }) {
   function RandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
-
   return (
     <>
       {userId && (
@@ -39,7 +38,7 @@ export default function RowUser({ children, ...props }) {
               >
                 <button type="button" className="space-y-0.5 interactive">
                   <div
-                    className={`${
+                    className={`truncate max-w-xs flex items-center gap-2 ${
                       prototype.getUserByID(userId)?.isPremium
                         ? "text-premium-500"
                         : ""
@@ -47,18 +46,21 @@ export default function RowUser({ children, ...props }) {
                       prototype.getUserByID(userId)?.isYou ? "text-main" : ""
                     }`}
                   >
-                    {prototype.getUserByID(userId)?.clan && (
-                      <>
-                        &#91;
-                        {
-                          prototype.getClanByID(
-                            prototype.getUserByID(userId)?.clan
-                          )?.tag
-                        }
-                        &#93;{" "}
-                      </>
-                    )}
-                    {prototype.getUserByID(userId)?.nickname}
+                    <span className="flex-1 truncate">
+                      {prototype.getUserByID(userId)?.clan && (
+                        <>
+                          &#91;
+                          {
+                            prototype.getClanByID(
+                              prototype.getUserByID(userId)?.clan
+                            )?.tag
+                          }
+                          &#93;{" "}
+                        </>
+                      )}
+                      {prototype.getUserByID(userId)?.nickname}
+                    </span>
+                    {userId === 1 && <span className="icon icon-chess-king" />}
                   </div>
                   <div className="flex gap-1">
                     <div className="flex gap-1">
@@ -247,7 +249,10 @@ export default function RowUser({ children, ...props }) {
                             </span>
                           }
                         >
-                          <button type="button" className="button button-tertiary rounded-full">
+                          <button
+                            type="button"
+                            className="button button-tertiary rounded-full"
+                          >
                             <span className="icon icon-document-copy" />
                           </button>
                         </Tooltip>
