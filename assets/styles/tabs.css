@@ -1097,7 +1097,6 @@
 
 /* tabs & button stretch */
 
-
 .tabs > li > :where(a, button, .button), 
 .tab.button {
   &.button-stretch {
@@ -1149,6 +1148,7 @@
         border-t
         border-x
         border-main/0
+        min-h-[45px]
         ;
         &::before {
           @apply 
@@ -1189,6 +1189,15 @@
             ;
           }
         }
+        @media (max-width: theme('screens.md')) {
+          > span {
+            &:not(.icon) {
+              @apply
+              !hidden
+              ;
+            }
+          }
+        }
       }
     }
   }
@@ -1201,7 +1210,7 @@
   bottom-0
   h-1
   bg-[rgb(var(--color)/var(--tw-bg-opacity))]
-  shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+  shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
   transition
   duration-1000
   ;
@@ -1223,32 +1232,37 @@
   } */
   @screen 3xl {
     @apply
-    shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
   @screen 2xl {
     @apply
-    shadow-[-1576px_0_rgb(var(--color)/100%),1576px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-1576px_0_rgb(var(--color)/100%),1576px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
   @screen xl {
     @apply
-    shadow-[-1280px_0_rgb(var(--color)/100%),1280px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-1280px_0_rgb(var(--color)/100%),1280px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
   @screen lg {
     @apply
-    shadow-[-1024px_0_rgb(var(--color)/100%),1024px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-1024px_0_rgb(var(--color)/100%),1024px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
   @screen md {
     @apply
-    shadow-[-768px_0_rgb(var(--color)/100%),768px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-768px_0_rgb(var(--color)/100%),768px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
   @screen sm {
     @apply
-    shadow-[-640px_0_rgb(var(--color)/100%),640px_0_rgb(var(--color)/100%),0_-1rem_3rem_-0.02rem_rgb(var(--color)/100%)]
+    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
+    ;
+  }
+  @media (max-width: theme('screens.sm')) {
+    @apply
+    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_1.5rem_0_rgb(var(--color)/100%)]
     ;
   }
 }

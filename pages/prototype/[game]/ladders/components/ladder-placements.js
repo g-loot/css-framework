@@ -11,6 +11,7 @@ import Link from "next/link";
 import Tooltip from "../../../../../components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
 import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
+import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 
 const enrollSteps = [
   {
@@ -348,7 +349,8 @@ export default function LadderPlacements() {
           <div className="flex gap-3">
             {variablesContext.ladderStep >= 3 && (
               <>
-                <button
+                <ButtonStatsUpdate hasTooltip={false} />
+                {/* <button
                   type="button"
                   className={`button button-sm button-secondary ${
                     submitting ? "is-loading" : ""
@@ -370,7 +372,7 @@ export default function LadderPlacements() {
                   className="button button-sm button-ghost rounded-full"
                 >
                   <span className="icon icon-c-info" />
-                </button>
+                </button> */}
               </>
             )}
           </div>

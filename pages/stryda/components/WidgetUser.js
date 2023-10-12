@@ -419,7 +419,7 @@ export default function WidgetUser(props) {
                           />
                         </div>
                       </div>
-                      <div className="" data-badge="1">
+                      <div data-badge="1">
                         <span className="truncate text-sm text-left">
                           &#91;
                           {prototype.getClanByID(selectedUser.clan).tag}

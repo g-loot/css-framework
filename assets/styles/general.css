@@ -13,9 +13,14 @@
   scroll-behavior: var(--scroll-behavior);
 }
 
+html {
+  @apply
+  max-w-[100dvw]
+  ;
+}
 body {
   @apply
-  max-w-[100vw]
+  max-w-[100dvw]
   overflow-x-hidden
   ;
 }

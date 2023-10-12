@@ -262,7 +262,7 @@ export default function TabLaddersHowItWorks() {
       {selectedGame && (
         <>
           <section
-            className="py-12 animate-slide-in-bottom animate-delay"
+            className="pb-12 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-3 items-center">

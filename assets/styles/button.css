@@ -1310,7 +1310,7 @@ button {
         after:content-['']
         ;
       }
-      &:first-child {
+      &:first-of-type {
         > * {
           @apply
           before:w-1
@@ -1318,7 +1318,7 @@ button {
           ;
         }
       }
-      &:not(:first-child) {
+      &:not(:first-of-type) {
         > * {
           @apply
           before:w-2

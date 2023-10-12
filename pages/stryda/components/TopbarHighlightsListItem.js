@@ -125,7 +125,7 @@ export default function TopbarHighlightsListItem({
     <>
       {item && selectedMatch && (
         <li
-          className={`surface-ui-500 rounded flex items-stretch animate-delay ${
+          className={`surface-ui-500 rounded flex items-stretch animate-delay overflow-hidden ${
             isProcessed ? "animate-scale-in" : "animate-slide-in-right"
           }`}
           style={{
@@ -135,7 +135,7 @@ export default function TopbarHighlightsListItem({
           {itemIndex === 1 &&
             id === processingID &&
             processingStatus === "finished" && (
-              <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 rounded text-center flex flex-col items-center justify-center p-2">
+              <div className="absolute z-40 inset-0 backdrop-blur-sm bg-ui-600/95 text-center flex flex-col items-center justify-center p-2">
                 <div className="flex gap-2 items-center text-error-500 animate-shake">
                   <span className="icon icon-warning-sign" />
                   <div className="text-sm">Creation failed</div>
@@ -313,7 +313,7 @@ export default function TopbarHighlightsListItem({
                 </div>
                 <button
                   type="button"
-                  disabled={processingStatus === "processing" || !isReady}
+                  disabled={processingStatus === "processing"}
                   className="button button-sm button-primary"
                   onClick={() => handleAutomate()}
                 >
@@ -321,7 +321,7 @@ export default function TopbarHighlightsListItem({
                 </button>
                 <button
                   type="button"
-                  disabled={processingStatus === "processing" || !isReady}
+                  disabled={processingStatus === "processing"}
                   className="button button-sm button-secondary"
                 >
                   <span>Customize</span>

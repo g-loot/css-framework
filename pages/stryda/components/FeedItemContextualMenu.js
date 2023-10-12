@@ -30,7 +30,7 @@ export default function FeedItemContextualMenu({ item, match, onEdit }) {
                 <>
                 {match.meta.media?.videoUrl && (
                   <li>
-                    <button type="button" onClick={() => onEdit()}>
+                    <button type="button">
                       <span className="icon icon-data-download" />
                       <span>Download video</span>
                     </button>

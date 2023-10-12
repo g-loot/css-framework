@@ -8,7 +8,7 @@ export default function ButtonStatsUpdate(props) {
   const uiContext = useContext(UiContext);
   const direction = props.direction || "md:tooltip-left";
   const additionalClassNames = props.additionalClassNames || "button-xs";
-  const hasTooltip = props.hasTooltip || true;
+  const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : true;
   const prototype = usePrototypeData();
   const [submitting, setSubmitting] = useState(false);
   const [isMoreProminent, setIsMoreProminent] = useState(false);

@@ -88,7 +88,7 @@ export default function TabMissionsLeaderboard(props) {
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="flex flex-col lg:flex-row gap-8">
-          <div className="w-80 hidden lg:block pt-9 space-y-4">
+          <div className="w-80 hidden lg:block pt-4 space-y-4">
             <div
               className={`surface p-2 pt-4 rounded text-center ${
                 isLoading ? "is-loading" : ""
@@ -172,7 +172,7 @@ export default function TabMissionsLeaderboard(props) {
           </div>
           <div className="flex-1">
             <div className="px-2 md:px-0">
-              <div className="item border-0 text-sm uppercase text-ui-300">
+              <div className="item border-0 text-sm uppercase text-ui-300 lg:h-6 lg:-mt-2">
                 <div className="w-14" />
                 <div className="item-image w-7" />
                 <div className="item-body">Player</div>

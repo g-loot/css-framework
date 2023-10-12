@@ -7,7 +7,7 @@ export default function TabLaddersRules() {
   return (
     <>
       <section
-        className="pt-6 pb-12 animate-slide-in-bottom animate-delay"
+        className="pb-12 animate-slide-in-bottom animate-delay"
         style={{ "--delay": "calc(1 * 0.05s)" }}
       >
         <div className="max-w-lg mx-auto gap-8 flex flex-col md:flex-row items-center px-4 sm:px-0">

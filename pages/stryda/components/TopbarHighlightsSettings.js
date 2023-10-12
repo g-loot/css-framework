@@ -35,7 +35,14 @@ export default function TopbarHighlightsSettings() {
     <div className="p-6 space-y-6">
       <div className="form-group">
         <label for="file-input">Destination folder</label>
-        <input type="file" name="file-input" id="file-input" webkitdirectory directory multiple />
+        <input
+          type="file"
+          name="file-input"
+          id="file-input"
+          webkitdirectory
+          directory
+          multiple
+        />
       </div>
       <div className="form-group">
         <label for="range">Allocated space</label>
@@ -72,17 +79,21 @@ export default function TopbarHighlightsSettings() {
               <span className="h-2 w-px bg-ui-400/20" />
             </div>
           </div>
-          <div className={`flex-none whitespace-nowrap ${inputValue < 30 ? 'text-error-500' : ''}`}>{inputValue} GB</div>
+          <div
+            className={`flex-none whitespace-nowrap ${
+              inputValue < 30 ? "text-error-500" : ""
+            }`}
+          >
+            {inputValue} GB
+          </div>
         </div>
-        {inputValue < 30 ? (
-          <div className="text-xs text-error-300 animate-shake">
-            {inputValue} GB ≈ {Math.round(inputValue * 3.75)} min. of gameplay
-          </div>
-        ) : (
-          <div className="text-xs text-ui-300">
-            {inputValue} GB ≈ {Math.round(inputValue * 3.75)} hours of gameplay
-          </div>
-        )}
+        <div
+          className={`text-xs ${
+            inputValue < 30 ? "text-error-300 animate-shake" : "text-ui-300"
+          }`}
+        >
+          {inputValue} GB ≈ {Math.round(inputValue * 3.75)} min. of gameplay
+        </div>
       </div>
       <button
         type="button"

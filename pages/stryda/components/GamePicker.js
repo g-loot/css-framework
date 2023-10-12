@@ -9,7 +9,7 @@ export default function GamePicker(props) {
 
   return (
     <>
-      <nav className="">
+      <nav className="order-1 md:order-2 relative md:static mt-1 md:mt-0 flex justify-start px-4 sm:px-0 overflow-auto scrollbar-hidden">
         <ul className="tabs tabs-colored">
           {prototype.games
             // .filter((g) => g.isFavorite)

@@ -100,7 +100,7 @@ export default function TabMissionsHowItWorks() {
       {selectedGame && (
         <>
           <section
-            className="my-8 animate-slide-in-bottom animate-delay"
+            className="mb-8 animate-slide-in-bottom animate-delay"
             style={{ "--delay": "calc(1 * 0.05s)" }}
           >
             <div className="grid gap-8 grid-cols-1 xl:grid-cols-2">

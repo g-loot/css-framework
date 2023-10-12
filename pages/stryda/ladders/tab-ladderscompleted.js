@@ -44,7 +44,7 @@ export default function TabLaddersCompleted() {
             </div>
           ) : (
             <>
-              <section className="my-8 animate-slide-in-bottom">
+              <section className="mb-8 animate-slide-in-bottom">
                 <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
                   <h2 className="h5">Solo</h2>
                 </div>

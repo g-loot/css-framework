@@ -35,7 +35,7 @@ export default function TabClanLeaderboardUpcoming() {
             {isEmpty ||
               (!selectedGame.clanLeaderboards && (
                 <>
-                  <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
+                  <div className="surface sm:rounded px-4 py-8 text-center">
                     <div className="max-w-xs mx-auto">
                       <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                       <div className="mt-2 text-ui-300">
@@ -48,7 +48,7 @@ export default function TabClanLeaderboardUpcoming() {
             {!isEmpty && (
               <>
                 {loading ? (
-                  <section className="mt-2">
+                  <section>
                     <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
                       <table className="table table-rounded rounded-xl is-loading w-full">
                         <tbody>
