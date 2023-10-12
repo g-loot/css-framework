@@ -42,7 +42,7 @@ export default function TabMissionsHistory() {
       {selectedGame && (
         <>
           <section>
-            <div className="mt-8 overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
+            <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
               <table className="table table-rounded rounded-xl w-full">
                 <tbody>
                   {selectedGame?.missions.map((mission, missionIndex) => (
@@ -77,7 +77,7 @@ export default function TabMissionsHistory() {
               />
               <div className="md:border-l md:border-ui-700 pl-0 md:pl-8">
                 <h4 className="text-3xl">
-                  <span>Join</span>{" "}
+                  <span>Get</span>{" "}
                   <span className="text-premium-500">Stryda Premium</span>
                 </h4>
                 <p className="max-w-[50ch] text-sm text-ui-300 mx-auto mt-2 mb-5">

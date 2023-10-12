@@ -270,11 +270,10 @@ export default function TopbarHighlightsListItem({
             {itemIndex === 2 && (
               <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
                 <div className="text-sm text-ui-100 mb-1">
-                  Local files deleted
+                  Recording removed
                 </div>
                 <p className="text-xs">
-                  The video files of this match have been deleted from your hard
-                  drive. Allocate more space in the{" "}
+                  Recording of this match have been deleted to make room for new matches. Manage allocated space in the{" "}
                   <button
                     type="button"
                     className="link"

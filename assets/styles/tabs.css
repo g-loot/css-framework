@@ -1117,8 +1117,7 @@
         ;
         > * {
           @apply
-          scale-y-75
-          translate-y-full
+          translate-y-[110%]
           ;
         }
       }
@@ -1128,7 +1127,6 @@
         &:not(.icon) {
           > * {
             @apply
-            scale-y-100
             translate-y-0
             ;
           }

@@ -442,7 +442,7 @@ export default function CardMission(props) {
                     backgroundImage: "url(" + mission.image + ")",
                   }}
                 />
-                <img src="https://res.cloudinary.com/gloot/image/upload/v1696941944/Stryda/demo/mission-halloween-overlay.webp" alt="" />
+                {/* <img src="https://res.cloudinary.com/gloot/image/upload/v1696941944/Stryda/demo/mission-halloween-overlay.webp" alt="" /> */}
               </div>
             </div>
           </div>

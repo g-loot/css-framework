@@ -101,6 +101,10 @@
   border-spacing-y-2
   ;
 
+  > *:first-child {
+    border-spacing: 0.5rem 0; 
+  }
+
   :where(thead,tfoot) :where(th,td) {
     @apply
     py-0
