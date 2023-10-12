@@ -240,7 +240,7 @@ export default function Topbar() {
               </div>
               <TopbarHighlights />
               <div className="flex items-center rounded-full bg-ui-500">
-                <div className="z-20 dropdown dropdown-responsive md:dropdown-end">
+                <div className="z-20 dropdown dropdown-responsive dropdown-end">
                   <button
                     type="button"
                     tabIndex="1"
