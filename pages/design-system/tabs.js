@@ -1,6 +1,7 @@
 import React, { useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
 
 const tabItems = [
@@ -27,37 +28,37 @@ const tabItems = [
 ];
 
 const tabIconsItems = [
-  {
+  { id: 3,
     label: "Apex Legends",
     icon: "icon-game-apexlegends-symbol",
     color: "apexlegends",
   },
-  // {
-  //   label: "CS:GO",
-  //   icon: "icon-game-csgo-symbol",
-  //   color: "csgo",
-  // },
-  {
+  {  id: 4,
+    label: "CS:GO",
+    icon: "icon-game-csgo-symbol",
+    color: "csgo",
+  },
+  { id: 5,
     label: "Dota 2",
     icon: "icon-game-dota2-symbol",
     color: "dota2",
   },
-  {
+  { id: 2,
     label: "PUBG",
     icon: "icon-game-pubg-symbol",
     color: "pubg",
   },
-  {
+  { id: 7,
     label: "Rocket League",
     icon: "icon-game-rocketleague-symbol",
     color: "rocketleague",
   },
-  {
+  { id: 1,
     label: "Valorant",
     icon: "icon-game-valorant-symbol",
     color: "valorant",
   },
-  {
+  { id: 6,
     label: "League of Legends",
     icon: "icon-game-leagueoflegends-symbol",
     color: "leagueoflegends",
@@ -67,6 +68,8 @@ const tabIconsItems = [
 const DSpage = () => {
   const uiContext = useContext(UiContext);
   const [activeTabItem, setActiveTabItem] = useState("Home");
+  const [activeTabItemGame, setActiveTabItemGame] = useState(1);
+  const prototype = usePrototypeData();
 
   return (
     <>
@@ -710,9 +713,9 @@ const DSpage = () => {
                   <li key={itemIndex}>
                     <button
                       className={`button-stretch ${
-                        item.label === activeTabItem ? "is-active" : ""
+                        item.id === activeTabItemGame ? "is-active" : ""
                       }`}
-                      onClick={() => setActiveTabItem(item.label)}
+                      onClick={() => setActiveTabItemGame(item.id)}
                     >
                       <span className={`icon text-xl ${item.icon}`} />
                       <span>
@@ -742,31 +745,41 @@ const DSpage = () => {
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
             <div className="flex-1 space-y-4">
-              <ul className="tabs tabs-colored">
-                {tabIconsItems.map((item, itemIndex) => (
-                  <li key={itemIndex}>
-                    <button
-                      className={`button-stretch  ${
-                        item.label === activeTabItem ? "is-active" : ""
-                      }`}
-                      style={{ "--color" : `var(--color-game-${item.color})`}}
-                      onClick={() => setActiveTabItem(item.label)}
-                    >
-                      <span className={`icon text-xl ${item.icon}`} />
-                      <span>
-                        <span>{item.label}</span>
-                      </span>
-                    </button>
-                  </li>
-                ))}
-              </ul>
+              <div className="relative overflow-hidden">
+                <ul className="tabs tabs-colored">
+                  {tabIconsItems.map((item, itemIndex) => (
+                    <li key={itemIndex}>
+                      <button
+                        className={`button-stretch  ${
+                          item.id === activeTabItemGame ? "is-active" : ""
+                        }`}
+                        style={{ "--color" : `var(--color-game-${item.color})`}}
+                        onClick={() => setActiveTabItemGame(item.id)}
+                      >
+                        <span className={`icon text-xl ${item.icon}`} />
+                        <span>
+                          <span>{item.label}</span>
+                        </span>
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+                <span
+                  className="tabs-colored-shadow"
+                  style={{
+                    "--color": `var(--color-game-${
+                      prototype.getGameByID(activeTabItemGame).slug
+                    })`,
+                  }}
+                />
+              </div>
             </div>
             <div className="flex-1">
               <iframe
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/4vhj0sg3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/x4w1yavj/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>
