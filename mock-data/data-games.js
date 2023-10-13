@@ -7081,7 +7081,7 @@ export const dataGames = [
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
       heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1691590003/Stryda/illustrations/stryda_v2_pagebg_csgo:webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1697190198/Stryda/illustrations/stryda_v2_pagebg_csgo.webp",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
       heroLadder:

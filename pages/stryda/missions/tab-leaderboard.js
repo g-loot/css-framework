@@ -312,7 +312,7 @@ export default function TabMissionsLeaderboard(props) {
                           >
                             <button type="button" className="chip chip-xp chip-sm">
                               <span>{missionsNo * 75}</span>
-                              <span class="icon icon-xp-symbol"></span>
+                              <span className="icon icon-xp-symbol"></span>
                             </button>
                           </Tooltip>
                                   */}

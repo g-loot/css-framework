@@ -27,7 +27,7 @@ export default function TopbarSidebar() {
   return (
     <>
       <nav className="border-b border-ui-500">
-        <ul class="menu">
+        <ul className="menu">
           <li>
             <Link href={`/stryda/home${prototype.getURLparams()}`}>
               <button

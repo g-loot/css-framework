@@ -2042,6 +2042,7 @@ const DSpage = () => {
                 design work with Tailwind (see{" "}
                 <a
                   href="https://tailwindcss.com/docs/responsive-design"
+                  rel="noreferrer"
                   target="_blank"
                   className="link"
                 >

@@ -2,7 +2,7 @@
   "name": "@g-loot/css-framework",
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build 2> build-error.log",
     "start": "next start",
     "lint": "next lint",
     "build:framework": "./build-framework.sh",
