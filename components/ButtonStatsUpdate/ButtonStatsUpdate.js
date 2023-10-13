@@ -8,6 +8,7 @@ export default function ButtonStatsUpdate(props) {
   const uiContext = useContext(UiContext);
   const direction = props.direction || "md:tooltip-left";
   const additionalClassNames = props.additionalClassNames || "button-xs";
+  const hasLabel = props.hasLabel !== undefined ? props.hasLabel : true;
   const hasTooltip = props.hasTooltip !== undefined ? props.hasTooltip : true;
   const prototype = usePrototypeData();
   const [submitting, setSubmitting] = useState(false);
@@ -44,7 +45,9 @@ export default function ButtonStatsUpdate(props) {
           data-tooltip={isMoreProminent ? "Missing progress? Click here!" : ""}
         >
           <button
-            className={`button ${additionalClassNames} ${
+            className={`button ${
+              hasLabel ? "" : "rounded-full"
+            } ${additionalClassNames} ${
               isMoreProminent ? "button-primary" : "button-secondary"
             } ${submitting ? "is-loading" : undefined}`}
             onClick={addToastWithDelay.bind(this, {
@@ -56,12 +59,14 @@ export default function ButtonStatsUpdate(props) {
             })}
           >
             <span className="icon icon-16 icon-refresh-02" />
-            <span>Update my stats</span>
+            {hasLabel && <span>Update my stats</span>}
           </button>
         </div>
       ) : (
         <button
-          className={`button ${additionalClassNames} ${
+          className={`button ${
+            hasLabel ? "" : "rounded-full"
+          } ${additionalClassNames} ${
             isMoreProminent ? "button-primary" : "button-secondary"
           } ${submitting ? "is-loading" : undefined}`}
           onClick={addToastWithDelay.bind(this, {
@@ -73,7 +78,7 @@ export default function ButtonStatsUpdate(props) {
           })}
         >
           <span className="icon icon-16 icon-refresh-02" />
-          <span>Update my stats</span>
+          {hasLabel && <span>Update my stats</span>}
         </button>
       )}
     </>

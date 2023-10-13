@@ -1236,37 +1236,37 @@
   } */
   @screen 3xl {
     @apply
-    shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-1920px_0_rgb(var(--color)/100%),1920px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @screen 2xl {
     @apply
-    shadow-[-1576px_0_rgb(var(--color)/100%),1576px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-1576px_0_rgb(var(--color)/100%),1576px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @screen xl {
     @apply
-    shadow-[-1280px_0_rgb(var(--color)/100%),1280px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-1280px_0_rgb(var(--color)/100%),1280px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @screen lg {
     @apply
-    shadow-[-1024px_0_rgb(var(--color)/100%),1024px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-1024px_0_rgb(var(--color)/100%),1024px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @screen md {
     @apply
-    shadow-[-768px_0_rgb(var(--color)/100%),768px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-768px_0_rgb(var(--color)/100%),768px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @screen sm {
     @apply
-    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
   @media (max-width: theme('screens.sm')) {
     @apply
-    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/100%)]
+    shadow-[-320px_0_rgb(var(--color)/100%),320px_0_rgb(var(--color)/100%),0_-0.5rem_2rem_0_rgb(var(--color)/75%)]
     ;
   }
 }

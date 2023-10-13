@@ -19,6 +19,7 @@ import StructureGamePage from "../components/StructureGamePage";
 import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 import Countdown from "@/components/Countdown/Countdown";
 import ModalVideoYoutubePlayer from "../modal-videoyoutubeplayer";
+import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
 
 const TabsItems = [
   {
@@ -65,10 +66,14 @@ export default function Ladders() {
     );
   }
 
+  function openModalConnectIDLeagueOfLegends() {
+    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  }
+
   useEffect(() => {
     if (selectedGame) {
       setLaddersFinishedLength(
-        selectedGame.ladders.filter(
+        selectedGame.ladders?.filter(
           (g) => g.status === "finished" && g.hasClaim
         ).length
       );

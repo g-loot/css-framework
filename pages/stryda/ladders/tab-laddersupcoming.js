@@ -22,7 +22,7 @@ export default function TabLaddersUpcoming() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Solo</h2>
             </div>
-            {isEmpty ? (
+            {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
@@ -35,7 +35,7 @@ export default function TabLaddersUpcoming() {
               </>
             ) : (
               <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mt-2">
-                {selectedGame.ladders.map((ladder, ladderIndex) => (
+                {selectedGame.ladders?.map((ladder, ladderIndex) => (
                   <>
                     {ladder.status === "upcoming" && (
                       <CardLadder
@@ -56,7 +56,7 @@ export default function TabLaddersUpcoming() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Clan</h2>
             </div>
-            {isEmpty ? (
+            {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
@@ -74,7 +74,7 @@ export default function TabLaddersUpcoming() {
                   itemWidth={397 + 16}
                   bgColor="from-ui-900 via-ui-900/90 to-ui-900/0"
                 >
-                  {selectedGame.ladders.map((ladder, ladderIndex) => (
+                  {selectedGame.ladders?.map((ladder, ladderIndex) => (
                     <>
                       {ladder.status === "upcoming" && ladder.clan && (
                         <CardLadder

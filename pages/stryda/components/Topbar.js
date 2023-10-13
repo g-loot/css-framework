@@ -214,6 +214,34 @@ export default function Topbar() {
                     </button>
                   </Link>
                 </li>
+                <li>
+                  <Link href={`/stryda/clans${prototype.getURLparams()}`}>
+                    <button
+                      type="button"
+                      className={
+                        router.pathname.includes("clans")
+                          ? "is-active"
+                          : ""
+                      }
+                    >
+                      <span>Clans</span>
+                    </button>
+                  </Link>
+                </li>
+                <li>
+                  <Link href={`/stryda/shop${prototype.getURLparams()}`}>
+                    <button
+                      type="button"
+                      className={
+                        router.pathname.includes("shop")
+                          ? "is-active"
+                          : ""
+                      }
+                    >
+                      <span>Shop</span>
+                    </button>
+                  </Link>
+                </li>
                 <li className="tab-premium">
                   <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <button

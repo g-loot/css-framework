@@ -23,7 +23,7 @@ export default function TabLaddersCompleted() {
     <>
       {selectedGame && (
         <>
-          {isEmpty ? (
+          {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
             <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
               <div className="max-w-xs mx-auto">
                 <span className="icon icon-ladder text-6xl text-ui-500" />
@@ -49,7 +49,7 @@ export default function TabLaddersCompleted() {
                   <h2 className="h5">Solo</h2>
                 </div>
                 <div className="grid lg:grid-cols-2 2xl:grid-cols-3 gap-4 mx-4 sm:mx-0 mt-2">
-                  {selectedGame.ladders.map((ladder, ladderIndex) => (
+                  {selectedGame.ladders?.map((ladder, ladderIndex) => (
                     <>
                       {ladder.status === "finished" && (
                         <CardLadder

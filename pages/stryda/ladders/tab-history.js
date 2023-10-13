@@ -19,7 +19,7 @@ export default function TabLaddersHistory() {
 
   return (
     <>
-      {isEmpty && (
+      {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
         <>
           <div className="surface rounded-lg px-4 pb-8 text-center">
             <div className="max-w-xs mx-auto">
@@ -41,8 +41,7 @@ export default function TabLaddersHistory() {
             </div>
           </div>
         </>
-      )}
-      {!isEmpty && (
+      ) : (
         <>
           <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop px-4 sm:px-0 pb-4">
             <table className="table table-rounded rounded-xl w-full text-center">
@@ -56,7 +55,7 @@ export default function TabLaddersHistory() {
               </thead>
               <tbody>
                 {selectedGame &&
-                  selectedGame.ladders.map((ladder, ladderIndex) => (
+                  selectedGame.ladders?.map((ladder, ladderIndex) => (
                     <>
                       <tr
                         key={ladder}

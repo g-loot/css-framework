@@ -1279,6 +1279,7 @@ button {
 .button-stretch {
   @apply
   !gap-0
+  py-2
   ;
   > span {
     &:not(.icon) {
@@ -1287,7 +1288,7 @@ button {
       overflow-hidden
       whitespace-nowrap
       normal-case
-      leading-none
+      leading-[1.25]
       items-center
       justify-center
       !grid
