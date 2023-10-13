@@ -37,11 +37,13 @@ export default function StructureGamePage({ children, side, ...props }) {
         <GamePicker />
       </div>
       {selectedGame && !loading && (
-        <div className="absolute z-0 -top-32 inset-x-0 animate-slide-in-bottom mix-blend-lighten"  style={{ animationDuration: "2s"}}>
+        <div className="absolute z-0 top-0 inset-x-0 animate-slide-in-bottom mix-blend-lighten" style={{ animationDuration: "2s"}}>
+          <i className="absolute z-10 inset-0 bg-ui-900/20" />
+          <i className="absolute z-10 bottom-0 inset-x-0 h-96 bg-gradient-to-b from-ui-900/0 via-ui-900/80 to-ui-900" />
           <img
             src={selectedGame.assets.heroV2}
             alt={selectedGame.name}
-            className="opacity-75"
+            className="relative z-0 opacity-10"
           />
         </div>
       )}

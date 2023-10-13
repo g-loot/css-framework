@@ -1275,7 +1275,6 @@ button {
 
 /* Button stretch functionality */
 
-
 .button-stretch {
   @apply
   !gap-0
@@ -1368,6 +1367,58 @@ button {
             ;
           }
         }
+      }
+    }
+  }
+}
+
+@define-mixin button-unstretch {
+  & {
+    > span {
+      &:not(.icon) {
+        @apply
+        !grid-cols-[0fr]
+        ;
+      }
+    }
+  }
+}
+
+.button-stretch,
+.button-stretch.is-active {
+  &.button-unstretch {
+    @mixin button-unstretch;
+  }
+}
+
+/* responsive sizes */
+
+.button-stretch,
+.button-stretch.is-active {
+  @media (max-width: theme('screens.sm')) {
+    &.sm\:button-unstretch {
+      @mixin button-unstretch;
+    }
+  }
+  @media (max-width: theme('screens.md')) {
+    &.md\:button-unstretch {
+      @mixin button-unstretch;
+    }
+  }
+  @media (max-width: theme('screens.lg')) {
+    &.lg\:button-unstretch {
+      @mixin button-unstretch;
+    }
+  }
+  @media (max-width: theme('screens.xl')) {
+    &.xl\:button-unstretch {
+      @mixin button-unstretch;
+    }
+  }
+  @media (max-width: theme('screens.2xl')) {
+    & {
+      &.2xl\:button-unstretch {
+        @mixin button-unstretch;
       }
     }
   }

@@ -47,7 +47,7 @@ const ButtonLoader = ({ children, ...props }) => {
 };
 
 const ButtonStretch = ({ children, ...props }) => {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(props.isActive);
   const icon = () => {
     return <span className="icon icon-video" />;
   };
@@ -61,7 +61,7 @@ const ButtonStretch = ({ children, ...props }) => {
   return (
     <button
       type="button"
-      className={`button button-stretch ${props.variant} ${
+      className={`button button-stretch ${props.variant} ${props.unstretch} ${
         isActive ? "is-active" : ""
       }`}
       onClick={() => setIsActive(!isActive)}
@@ -2001,6 +2001,77 @@ const DSpage = () => {
                 width="100%"
                 height="300"
                 src="//jsfiddle.net/augustin_hiebel/vmLw93na/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Responsive button unstretch */}
+      <div className="mb-12" id="responsive-button-unstretch">
+        <h2 className="h3 mb-3">Responsive button unstretch</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4">
+              <p className="text-ui-300 mb-6">
+                You can force a button stretch to be unstretch (hide its label)
+                under a certain responsive threshold whether that button is
+                active or not by using the following class name:
+                <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("sm:button-unstretch");
+                  }}
+                >
+                  .&#123;xx&#x7D;:button-unstretch
+                </code>
+                .<br />
+                &#123;xx&#x7D; can be <code className="text-xs">xs</code>,{" "}
+                <code className="text-xs">sm</code>,{" "}
+                <code className="text-xs">md</code>,{" "}
+                <code className="text-xs">lg</code>,{" "}
+                <code className="text-xs">xl</code>. Unlike the way responsive
+                design work with Tailwind (see{" "}
+                <a
+                  href="https://tailwindcss.com/docs/responsive-design"
+                  target="_blank"
+                  className="link"
+                >
+                  here
+                </a>
+                ), this works the other way and represents the maximum screen
+                size it should work for.
+              </p>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                  In this example, the button stretch will become unstretch
+                  below 768px (md) (whether it is active or not).
+                </div>
+                <div className="flex-1">
+                  <div className="flex gap-4 justify-start">
+                    <ButtonStretch
+                      variant="button-secondary"
+                      unstretch="lg:button-unstretch"
+                      isActive={true}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/b8cvks63/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

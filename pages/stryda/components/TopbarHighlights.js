@@ -205,7 +205,7 @@ export default function TopbarHighlights() {
           <div className="hidden md:block">
             <button
               type="button"
-              className={`button button-loader button-stretch button-secondary ${
+              className={`button button-loader button-stretch xl:button-unstretch button-secondary ${
                 buttonState > 0 ? "is-active" : ""
               }`}
               onClick={dropdownActive}
