@@ -34,6 +34,16 @@ export const PrototypeProvider = ({ children }) => {
   const [isPremium, setIsPremium] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
   const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    const savedValue = localStorage.getItem('defaultGameID');
+    if (savedValue) {
+      setDefaultGameID(savedValue);
+    } else {
+      setDefaultGameID(1);
+      localStorage.setItem('defaultGameID', 1);
+    }
+  }, []);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -166,6 +176,7 @@ export const PrototypeProvider = ({ children }) => {
     }
   }
   const defineDefaultGameID = (id) => {
+    localStorage.setItem('defaultGameID', id);
     setDefaultGameID(id);
   }
   const togglePremium = () => {

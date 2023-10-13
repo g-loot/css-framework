@@ -14,6 +14,7 @@ import TabClanLeaderboardsHowItWorks from "./[game_slug]/[leaderboard_id]/tab-ho
 import TabClanLeaderboardsHistory from "./[game_slug]/[leaderboard_id]/tab-history";
 import StructureGamePage from "../components/StructureGamePage";
 import ModalVideoYoutubePlayer from "../modal-videoyoutubeplayer";
+import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
 
 const TabsItems = [
   {
@@ -62,6 +63,10 @@ export default function Ladders() {
 
   function openModalVideoYoutubePlayer(url) {
     uiContext.openModal(<ModalVideoYoutubePlayer url={url} />);
+  }
+
+  function openModalConnectIDLeagueOfLegends() {
+    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
   }
 
   return (
@@ -158,10 +163,10 @@ export default function Ladders() {
                       )}
                     </li>
                   </ul>
-                  <div className="surface rounded text-left overflow-hidden">
+                  <div className="surface-ui-700 rounded text-left overflow-hidden">
                     <button
                       type="button"
-                      className="rounded-t border-b border-ui-700 overflow-hidden interactive"
+                      className="rounded-t rounded-b-none border-b border-ui-600 overflow-hidden interactive"
                       onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
                     >
                       <iframe

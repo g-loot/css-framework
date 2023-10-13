@@ -15,7 +15,7 @@ export const dataGames = [
       cover:
         "https://res.cloudinary.com/gloot/image/upload/v1644677000/Marketing/202109_gloot2/Game_cover_Valorant.jpg",
       heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1697189509/Stryda/illustrations/stryda_v2_pagebg_valorant.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1697197190/Stryda/illustrations/stryda_v2_pagebg_valorant.webp",
       heroMission:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-valorant-4.webp",
       heroLadder:

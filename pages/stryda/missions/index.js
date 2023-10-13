@@ -88,9 +88,10 @@ export default function Missions() {
         {selectedGame && (
           <StructureGamePage
             title="Missions"
+            refreshButton={true}
             side={
               <>
-                <nav className="flex justify-start px-4 sm:p-px overflow-auto scrollbar-hidden border-b border-ui-700 lg:border-none">
+                <nav className="flex justify-start items-center px-4 sm:p-px overflow-auto scrollbar-hidden border-b border-ui-700 lg:border-none">
                   <ul className="tabs lg:tabs-vertical">
                     {TabsItems.map((item, itemIndex) => (
                       <li key={itemIndex}>
@@ -111,6 +112,9 @@ export default function Missions() {
                       </li>
                     ))}
                   </ul>
+                  <div className="hidden md:flex lg:hidden flex-1 justify-end">
+                    <ButtonStatsUpdate hasTooltip={false} hasLabel={false} />
+                  </div>
                 </nav>
                 <div className="hidden lg:block">
                   <ul className="divide-y divide-ui-300/10 text-center">
@@ -135,10 +139,10 @@ export default function Missions() {
                       </div>
                     </li>
                   </ul>
-                  <div className="surface rounded text-left overflow-hidden">
+                  <div className="surface-ui-700 rounded text-left overflow-hidden">
                     <button
                       type="button"
-                      className="rounded-t border-b border-ui-700 overflow-hidden interactive"
+                      className="rounded-t border-b border-ui-600 overflow-hidden interactive"
                       onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
                     >
                       <iframe
