@@ -142,7 +142,7 @@ export default function Missions() {
                   <div className="surface-ui-700 rounded text-left overflow-hidden">
                     <button
                       type="button"
-                      className="rounded-t border-b border-ui-600 overflow-hidden interactive"
+                      className="rounded-t rounded-b-none border-b border-ui-600 overflow-hidden interactive"
                       onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
                     >
                       <iframe

@@ -737,7 +737,7 @@ const DSpage = () => {
 
       {/* Tabs colored */}
       <div className="mb-12" id="tabs-colored">
-        <h2 className="h3 mb-3">Tabs game picker</h2>
+        <h2 className="h3 mb-3">Tabs colored (game picker)</h2>
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-start">

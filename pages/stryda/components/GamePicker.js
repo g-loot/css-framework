@@ -17,7 +17,7 @@ export default function GamePicker(props) {
               <li key={itemIndex}>
                 <button
                   type="button"
-                  className={`button-stretch ${
+                  className={`button-stretch lg:button-unstretch ${
                     item.id === prototype.getGameByID(prototype.defaultGameID).id ? "is-active" : ""
                   } `}
                   style={{ "--color": `var(--color-game-${item.slug})` }}

@@ -1193,15 +1193,6 @@
             ;
           }
         }
-        @media (max-width: theme('screens.md')) {
-          > span {
-            &:not(.icon) {
-              @apply
-              !hidden
-              ;
-            }
-          }
-        }
       }
     }
   }
