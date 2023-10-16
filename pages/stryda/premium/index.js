@@ -5,57 +5,7 @@ import { UiContext } from "@/contexts/ui";
 import ModalBuyPremium from "./modal-buypremium";
 import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import { usePrototypeData } from "@/contexts/prototype";
-
-const PremiumBenefits = [
-  {
-    id: 0,
-    name: "Get an instant gift card",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1696421302/Stryda/illustrations/picture_premium_giftcard.webp",
-  },
-  {
-    id: 1,
-    name: "Get a 50% XP boost",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_XP_2.png",
-  },
-  {
-    id: 2,
-    name: "Get free extra tokens for each token purchase",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_extra_tokens_2.png",
-  },
-  {
-    id: 3,
-    name: "Remove ads on the platform",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ads_2.png",
-  },
-  {
-    id: 4,
-    name: "Significantly higher chance for rare, epic and legendary missions",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_rarity_2.png",
-  },
-  {
-    id: 5,
-    name: "Ability to participate in premium only competitions",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_ladders_2.png",
-  },
-  {
-    id: 6,
-    name: "Get 2 mission discards per day in order to reroll new ones",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1680527672/Stryda/illustrations/picture_premium_missions_2.png",
-  },
-  {
-    id: 7,
-    name: "See the full overview of your stats",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1688544126/Stryda/illustrations/picture_premium_more_stats.png",
-  },
-];
+import { dataPremiumBenefits } from "@/mock-data/data-premium";
 
 export default function Premium() {
   const { query } = useRouter();
@@ -159,10 +109,10 @@ export default function Premium() {
         )}
 
         <section className="relative z-10 grid md:grid-cols-2 lg:grid-cols-3 gap-y-4 justify-center mb-24 max-w-lg mx-auto text-center leading-none min-h-[800px]">
-          {PremiumBenefits.map((item, itemIndex) => (
+          {dataPremiumBenefits.map((item, itemIndex) => (
             <div
               className={`animate-slide-in-bottom animate-delay ${
-                itemIndex + 1 === PremiumBenefits.length ? "lg:col-start-2" : ""
+                itemIndex + 1 === dataPremiumBenefits.length ? "lg:col-start-2" : ""
               }`}
               key={itemIndex}
               style={{

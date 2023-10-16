@@ -972,13 +972,17 @@
   @apply
   relative
   flex
+  flex-col
   justify-center
+  items-center
+  gap-2
   ;
 
   .carousel-slides-container {
     @apply
     relative
     overflow-hidden
+    max-w-[100%]
     ;
   }
   .carousel-slides {
@@ -1016,11 +1020,12 @@
     mx-auto
     items-center
     justify-center
-    bottom-1
-    absolute
+    /* bottom-1
+    absolute */
     z-30
     rounded-full
-    bg-ui-800/50
+    bg-ui-850/90
+    backdrop-blur-sm
     leading-[0]
     p-0.5
     ;
@@ -1052,10 +1057,10 @@
   .carousel-control {
     @apply
     absolute
+    inset-0
     flex
     items-center
     justify-between
-    inset-0
     ;
     > .button:first-child {
       @apply
