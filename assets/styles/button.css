@@ -81,7 +81,7 @@ button {
     }
   }
 
-  &:not(.switch):not(.button-stretch) {
+  &:not(.switch):not(.button-stretch):not(.button-currency) {
     @apply
     gap-2
     ;

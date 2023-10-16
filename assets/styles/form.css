@@ -275,6 +275,11 @@ label.button {
     rounded
     leading-tight
     ;
+    &:empty {
+      @apply
+      px-0
+      ;
+    }
   }
 
   &.is-disabled {
@@ -819,6 +824,11 @@ label.button {
     min-h-[24px]
     min-w-[24px]
     ;
+    &:empty {
+      @apply
+      px-0
+      ;
+    }
   }
   &.form-radio {
     label {
@@ -904,6 +914,11 @@ label.button {
     min-h-[24px]
     min-w-[24px]
     ;
+    &:empty {
+      @apply
+      px-0
+      ;
+    }
   }
   &.form-radio {
     label {

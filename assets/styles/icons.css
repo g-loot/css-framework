@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'icons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1692107620/Stryda/icons/v104/icons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1692107620/Stryda/icons/v104/icons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1697460658/Stryda/icons/v108/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1697460658/Stryda/icons/v108/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -2241,4 +2241,104 @@
 
 .icon-logo-x::before {
   content: "\ec2e";
+}
+
+.icon-swap-vertical::before {
+  content: "\ec2e";
+}
+
+.icon-swap-horizontal::before {
+  content: "\ec2f";
+}
+
+.icon-opposite-directions-2::before {
+  content: "\ec30";
+}
+
+.icon-opposite-directions::before {
+  content: "\ec31";
+}
+
+.icon-change-direction::before {
+  content: "\ec32";
+}
+
+.icon-contrast::before {
+  content: "\ec33";
+}
+
+.icon-drag-31::before {
+  content: "\ec34";
+}
+
+.icon-drag-21::before {
+  content: "\ec35";
+}
+
+.icon-drag::before {
+  content: "\ec36";
+}
+
+.icon-conversion::before {
+  content: "\ec37";
+}
+
+.icon-text-align-justify::before {
+  content: "\ec38";
+}
+
+.icon-text-align-right::before {
+  content: "\ec39";
+}
+
+.icon-text-align-left::before {
+  content: "\ec3a";
+}
+
+.icon-text-align-center::before {
+  content: "\ec3b";
+}
+
+.icon-chat-bot::before {
+  content: "\ec3c";
+}
+
+.icon-magic-wand::before {
+  content: "\ec3d";
+}
+
+.icon-fairy-wand::before {
+  content: "\ec3e";
+}
+
+.icon-move::before {
+  content: "\ec3f";
+}
+
+.icon-move-2::before {
+  content: "\ec40";
+}
+
+.icon-metrics::before {
+  content: "\ec41";
+}
+
+.icon-gallery-layout::before {
+  content: "\ec42";
+}
+
+.icon-grid::before {
+  content: "\ec43";
+}
+
+.icon-fullscreen::before {
+  content: "\ec44";
+}
+
+.icon-robot::before {
+  content: "\ec45";
+}
+
+.icon-handle::before {
+  content: "\ec46";
 }

@@ -2177,6 +2177,106 @@
         {
           "tags": "data,security,preferences,edit,options,settings,privacy,private,configuration,cog,cogwheel,policy,terms",
           "name": "privacy-settings"
+        },
+        {
+          "tags": "handle,drag,order,vertical,interaction",
+          "name": "handle"
+        },
+        {
+          "tags": "robot,ai,artificial,intelligence,conrad",
+          "name": "robot"
+        },
+        {
+          "tags": "arrow,arrows,move,out,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom,disperse",
+          "name": "fullscreen"
+        },
+        {
+          "tags": "line,ui,interface,layout,list,shape,gallery,boxes,column,grid,row,table,tile,view,square,squares",
+          "name": "gallery-layout"
+        },
+        {
+          "tags": "media,photo,grid,camera,option,multimedia",
+          "name": "grid"
+        },
+        {
+          "tags": "ui,interface,growth,settings,dashboard,speed,setting,fast,gauge,indicator,metrics,odometer,performance,productivity,speedometer,widgets,bandwidth",
+          "name": "metrics"
+        },
+        {
+          "tags": "arrow,arrows,direction,move,out,directions,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom,tool",
+          "name": "move"
+        },
+        {
+          "tags": "arrow,arrows,direction,move,out,directions,enlarge,expand,fullscreen,increase,maximize,reach,window,zoom",
+          "name": "move-2"
+        },
+        {
+          "tags": "tool,fairy,fantasy,magician,trick,wand,wizard,witch,stars,sparkle,magical",
+          "name": "fairy-wand"
+        },
+        {
+          "tags": "select,tool,design,development,editing,filter,photo,magic,stick,effect,enhance,fairy,fairytail,fantasy,juggle,magician,trick,wand,wish,wizard",
+          "name": "magic-wand"
+        },
+        {
+          "tags": "chat,conversation,message,bot,robot,support,bubble,chatting,assistant,chatbot",
+          "name": "chat-bot"
+        },
+        {
+          "tags": "right,align,font,paragraph,text,type,typography",
+          "name": "text-align-right"
+        },
+        {
+          "tags": "left,align,font,paragraph,text,type,typography",
+          "name": "text-align-left"
+        },
+        {
+          "tags": "center,align,font,paragraph,text,type,typography,editing",
+          "name": "text-align-center"
+        },
+        {
+          "tags": "align,font,paragraph,text,type,typography,editing,justify",
+          "name": "text-align-justify"
+        },
+        {
+          "tags": "arrow,left,right,arrows,change,exchange,commerce,conversion,convert,interchange,trade",
+          "name": "conversion"
+        },
+        {
+          "tags": "move,control,drag,cursor,gesture,touch,gestures",
+          "name": "drag-31"
+        },
+        {
+          "tags": "move,control,drag,cursor,gesture,touch,gestures",
+          "name": "drag-21"
+        },
+        {
+          "tags": "arrow,move,upload,resize,drag,drop,cursor,select,design,development,click,mouse,point,pointer,paste,reposition,touch",
+          "name": "drag"
+        },
+        {
+          "tags": "arrow,line,alternative,arrows,change,direction,exchange,files,flip,horizontal,swap,switch,transmit,navigation,directions,gps,location,payments",
+          "name": "opposite-directions"
+        },
+        {
+          "tags": "arrow,line,alternative,arrows,change,direction,exchange,files,flip,horizontal,swap,switch,transmit",
+          "name": "change-direction"
+        },
+        {
+          "tags": "arrow,line,alternative,arrows,change,direction,exchange,files,flip,horizontal,swap,switch,transmit,navigation,directions,gps,location",
+          "name": "opposite-directions-2"
+        },
+        {
+          "tags": "arrow,alternative,arrows,change,exchange,files,flip,swap,switch,transmit,vertical",
+          "name": "swap-vertical"
+        },
+        {
+          "tags": "arrow,alternative,arrows,change,exchange,files,flip,horizontal,swap,switch,transmit,payments",
+          "name": "swap-horizontal"
+        },
+        {
+          "tags": "arrow,swap,directions,scale,balance,navigate,scales,weight,opposite,revert,contrast,contrasting,compare",
+          "name": "contrast"
         }
       ]
     }

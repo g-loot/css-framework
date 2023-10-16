@@ -222,7 +222,7 @@ const Index = () => {
                       <Link href="stryda/home">
                         <div className="flex-1 flex flex-col items-start justify-start p-4 interactive-secondary">
                           <div className="flex items-baseline gap-2 mb-3">
-                            <h2 className="h4">Stryda v2</h2>
+                            <h2 className="h4">Stryda v3</h2>
                           </div>
                           <div className="text-ui-300 leading-tight">
                             Feed, AI video highlights, social interactions...

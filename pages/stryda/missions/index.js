@@ -32,11 +32,11 @@ const TabsItems = [
     url: "how-it-works",
     component: TabMissionsHowItWorks,
   },
-  {
-    label: "Your Mission history",
-    url: "history",
-    component: TabMissionsHistory,
-  },
+  // {
+  //   label: "Your Mission history",
+  //   url: "history",
+  //   component: TabMissionsHistory,
+  // },
 ];
 
 export default function Missions() {
