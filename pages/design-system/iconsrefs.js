@@ -9,7 +9,7 @@ const DSpage = () => {
   const uiContext = useContext(UiContext);
 
   return (
-    <>
+    <section className="min-h-screen">
       <div className="flex items-end justify-between mb-2">
         <h1 className="mb-6">
           Icons <small className="text-ui-300">references</small>
@@ -89,7 +89,7 @@ const DSpage = () => {
           <div className={`w-full ${filter ? "mb-2" : "mb-8"}`}></div>
         </div>
       ))}
-    </>
+    </section>
   );
 };
 

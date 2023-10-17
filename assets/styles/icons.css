@@ -6,10 +6,11 @@
 
 @font-face {
   font-family: 'icons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1697460658/Stryda/icons/v108/icons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1697460658/Stryda/icons/v108/icons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1697529871/Stryda/icons/v108/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1697529871/Stryda/icons/v108/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
+  
 }
 
 .icon {
@@ -2341,4 +2342,96 @@
 
 .icon-handle::before {
   content: "\ec46";
+}
+
+.icon-triangle-right::before {
+  content: "\ec48";
+}
+
+.icon-button-pause::before {
+  content: "\ec49";
+}
+
+.icon-btn-play::before {
+  content: "\ec4a";
+}
+
+.icon-btn-stop::before {
+  content: "\ec4b";
+}
+
+.icon-btn-pause::before {
+  content: "\ec4c";
+}
+
+.icon-shuffle::before {
+  content: "\ec4d";
+}
+
+.icon-sound::before {
+  content: "\ec4f";
+}
+
+.icon-volume-1::before {
+  content: "\ec50";
+}
+
+.icon-volume-mute::before {
+  content: "\ec51";
+}
+
+.icon-volume-down::before {
+  content: "\ec52";
+}
+
+.icon-volume-off::before {
+  content: "\ec53";
+}
+
+.icon-volume-up::before {
+  content: "\ec54";
+}
+
+.icon-love-movie::before {
+  content: "\ec55";
+}
+
+.icon-music::before {
+  content: "\ec56";
+}
+
+.icon-music-note::before {
+  content: "\ec57";
+}
+
+.icon-movie-2::before {
+  content: "\ec58";
+}
+
+.icon-play-movie::before {
+  content: "\ec59";
+}
+
+.icon-play-media::before {
+  content: "\ec5a";
+}
+
+.icon-button-skip::before {
+  content: "\ec5b";
+}
+
+.icon-button-rewind::before {
+  content: "\ec5c";
+}
+
+.icon-button-previous::before {
+  content: "\ec5d";
+}
+
+.icon-button-next::before {
+  content: "\ec5e";
+}
+
+.icon-clapperboard::before {
+  content: "\ec5f";
 }

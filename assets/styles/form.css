@@ -279,6 +279,16 @@ label.button {
       @apply
       px-0
       ;
+      &::before {
+        @apply
+        !left-0
+        ;
+      }
+      &::after {
+        @apply
+        !left-1
+        ;
+      }
     }
   }
 
@@ -911,8 +921,8 @@ label.button {
     pl-9
     py-1.5
     pr-1.5
-    min-h-[24px]
-    min-w-[24px]
+    min-h-[18px]
+    min-w-[18px]
     ;
     &:empty {
       @apply
@@ -982,6 +992,18 @@ label.button {
         border-[2.5px]
         left-1.5
         ;
+      }
+      &:empty {
+        &::before {
+          @apply
+          !left-0
+          ;
+        }
+        &::after {
+          @apply
+          !left-0.5
+          ;
+        }
       }
     }
     input:indeterminate {

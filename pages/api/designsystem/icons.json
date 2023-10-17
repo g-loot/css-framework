@@ -2277,6 +2277,98 @@
         {
           "tags": "arrow,swap,directions,scale,balance,navigate,scales,weight,opposite,revert,contrast,contrasting,compare",
           "name": "contrast"
+        },
+        {
+          "tags": "back,previous,rewind,ui,media,multimedia",
+          "name": "button-rewind"
+        },
+        {
+          "tags": "play,media,video,film,movie,multimedia",
+          "name": "play-media"
+        },
+        {
+          "tags": "next,ui,media,multimedia,skip",
+          "name": "button-skip"
+        },
+        {
+          "tags": "arrow,arrows,exchange,play,sync,compilation,cross,crossing,media,mix,music,playlist,random,shuffle,songs,video",
+          "name": "shuffle"
+        },
+        {
+          "tags": "media,volume,multimedia,audio,sound,speaker",
+          "name": "sound"
+        },
+        {
+          "tags": "media,volume,multimedia,audio,sound,speaker",
+          "name": "volume-1"
+        },
+        {
+          "tags": "media,ban,volume,multimedia,audio,sound,speaker,mute",
+          "name": "volume-mute"
+        },
+        {
+          "tags": "down,media,volume,multimedia,audio,sound,speaker",
+          "name": "volume-down"
+        },
+        {
+          "tags": "media,volume,multimedia,audio,sound,speaker,mute",
+          "name": "volume-off"
+        },
+        {
+          "tags": "up,media,volume,multimedia,audio,sound,speaker",
+          "name": "volume-up"
+        },
+        {
+          "tags": "media,video,film,movie,love,romantic,heart,valentine,clip,romance,wedding,marriage,lovers,married",
+          "name": "love-movie"
+        },
+        {
+          "tags": "media,music,note,holidays,multimedia,audio,sound",
+          "name": "music"
+        },
+        {
+          "tags": "media,music,note,multimedia,audio,sound",
+          "name": "music-note"
+        },
+        {
+          "tags": "play,media,video,film,movie,multimedia",
+          "name": "movie-2"
+        },
+        {
+          "tags": "play,media,video,film,movie,multimedia",
+          "name": "play-movie"
+        },
+        {
+          "tags": "back,previous,rewind,ui,media,multimedia",
+          "name": "button-previous"
+        },
+        {
+          "tags": "next,ui,media,multimedia,skip",
+          "name": "button-next"
+        },
+        {
+          "tags": "media,video,action,film,movie,multimedia",
+          "name": "clapperboard"
+        },
+        {
+          "tags": "play,ui,media,control,button,multimedia",
+          "name": "btn-play"
+        },
+        {
+          "tags": "ui,media,control,button,stop,multimedia",
+          "name": "btn-stop"
+        },
+        {
+          "tags": "ui,media,control,button,multimedia,pause",
+          "name": "btn-pause"
+        },
+        {
+          "tags": "ui,media,control,button,multimedia,pause",
+          "name": "button-pause"
+        },
+        {
+          "tags": "arrow,forward,right,direction,keyboard,move,navigation,out,position,next,onward,onwards,play",
+          "name": "triangle-right"
         }
       ]
     }

@@ -35,7 +35,6 @@
       focus-visible:outline
       focus-visible:outline-1
       focus-visible:outline-main
-      backdrop-blur-0
       ;
       .icon-arrow-sm-down {
         @apply
@@ -109,9 +108,6 @@
       &.is-active,
       &:active,
       &:hover {
-        @apply
-        backdrop-blur
-        ;
         &::after {
           @apply
           opacity-100
