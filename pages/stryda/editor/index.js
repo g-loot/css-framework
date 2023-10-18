@@ -24,22 +24,23 @@ const Track = ({
             type="radio"
             name="trackSelection"
             id={`trackSelection_${id}`}
+            defaultChecked={id === 1}
           />
           <label htmlFor={`trackSelection_${id}`} />
         </div>
       </div>
       <div className="flex-1 flex gap-2 items-center relative p-2 [&>div]:relative [&>div]:z-10 overflow-hidden">
         <div className="item-image">
-        <img
-          src={image}
-          alt={name}
-          className={`h-8 w-8 rounded object-cover ${
-            isPlaying && isPlayingID === id
-              ? "opacity-100"
-              : "opacity-25 grayscale-0"
-          }`}
-        />
-      </div>
+          <img
+            src={image}
+            alt={name}
+            className={`h-8 w-8 rounded object-cover ${
+              isPlaying && isPlayingID === id
+                ? "opacity-100"
+                : "opacity-25 grayscale-0"
+            }`}
+          />
+        </div>
         <div className="item-body">
           <div
             className={`item-title text-sm truncate ${
@@ -53,7 +54,7 @@ const Track = ({
           <div className="text-xs text-ui-300 text-right">{duration}</div>
         </div>
         {isPlaying && isPlayingID === id && progress > 0 && (
-          <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-slide-in-bottom">
+          <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
             <i
               className="absolute inset-0 bg-mono-100/20"
               style={{ width: `${progress}%` }}
@@ -109,6 +110,87 @@ const Playlist = () => {
       audio:
         "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
     },
+    {
+      id: 4,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 5,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 6,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 7,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 8,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 9,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 10,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 11,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
+    {
+      id: 12,
+      name: "As It Was",
+      duration: "4:15",
+      image:
+        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
+      audio:
+        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+    },
   ];
 
   const audioRef = useRef(null);
@@ -150,7 +232,7 @@ const Playlist = () => {
 
   return (
     <>
-      <ul>
+      <ul className="absolute inset-0 overflow-y-auto scrollbar-desktop">
         {initialTracks.map((track) => (
           <Track
             key={track.id}
@@ -172,95 +254,102 @@ const Playlist = () => {
   );
 };
 
-const Clips = [
+const initialClips = [
   {
     id: 1,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-01.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-01",
   },
   {
     id: 2,
     isSelected: false,
     isAIFavored: false,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-02.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-02",
   },
   {
     id: 3,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-03.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-03",
   },
   {
     id: 4,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-04.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-04",
   },
   {
     id: 5,
     isSelected: false,
     isAIFavored: false,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-05.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-05",
   },
   {
     id: 6,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-06.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-06",
   },
   {
     id: 7,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-07.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-07",
   },
   {
     id: 8,
     isSelected: false,
     isAIFavored: false,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-08.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-08",
   },
   {
     id: 9,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-09.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-09",
   },
   {
     id: 10,
     isSelected: false,
     isAIFavored: false,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-10.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-10",
   },
   {
     id: 11,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-11.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-11",
   },
   {
     id: 12,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-12.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-12",
   },
   {
     id: 13,
     isSelected: true,
     isAIFavored: true,
-    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-13.mp4",
+    url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-13",
   },
 ];
 
 const getClipByID = (id) => {
-  const selectedClip = Clips.find((clip) => {
+  const selectedClip = initialClips.find((clip) => {
     return clip.id === parseInt(id);
   });
   return selectedClip;
 };
 
-const Clip = ({ item, showOnlySelected, onLoad, onSelect }) => {
+const Clip = ({
+  item,
+  showOnlySelected,
+  isActive,
+  clipPlayingPercent,
+  onLoad,
+  onSelect,
+}) => {
   const [isSelected, setIsSelected] = useState(item.isSelected);
   const id = RandomNumber(1000, 100000);
   const [video, setVideo] = useState(null);
@@ -277,18 +366,11 @@ const Clip = ({ item, showOnlySelected, onLoad, onSelect }) => {
   }, [item]);
 
   useEffect(() => {
-    if (isSelected) {
-      onSelect(+1);
-    } else {
-      onSelect(-1);
-    }
-  }, [isSelected]);
-
-  useEffect(() => {
     setVideo(document.getElementById(`video_${id}`));
   }, [id]);
 
   const handleSelection = () => {
+    onSelect(item.id);
     setIsSelected(!isSelected);
   };
 
@@ -303,9 +385,9 @@ const Clip = ({ item, showOnlySelected, onLoad, onSelect }) => {
 
   return (
     <li
-      className={`surface-ui-600 text-0 rounded-2 overflow-hidden duration-200 transition-[width] child:transition child:duration-300 ${
+      className={`surface-ui-600 relative text-0 rounded-2 overflow-hidden duration-500 ease-[cubic-bezier(.85,0,.2,1)] transition-[width] child:transition child:duration-75 child:ease-in-out ${
         isSelected ? "!border-main" : "opacity-60 child:grayscale"
-      } ${
+      } ${isActive ? "!bg-ui-500 text-ui-100" : "text-ui-300"} ${
         showOnlySelected && !isSelected
           ? "w-2 child:opacity-0 pointer-events-none"
           : "w-44"
@@ -321,14 +403,14 @@ const Clip = ({ item, showOnlySelected, onLoad, onSelect }) => {
               </div>
             }
           >
-            <button type="button" className="text-ui-300 text-0">
+            <button type="button" className="text-0">
               <span className="icon icon-robot text-lg" />
             </button>
           </Tooltip>
         ) : (
           <div />
         )}
-        <div className="flex items-center gap-1 text-xs text-ui-300">
+        <div className="flex items-center gap-1 text-xs">
           <span className="icon icon-clock" />
           <span>12s</span>
         </div>
@@ -347,31 +429,46 @@ const Clip = ({ item, showOnlySelected, onLoad, onSelect }) => {
         type="button"
         onMouseOver={handleVideoPlay}
         onMouseOut={handleVideoPause}
+        onClick={isPlaying ? handleVideoPause : handleVideoPlay}
         className="w-full aspect-video bg-ui-850 relative child:pointer-events-none"
       >
         <div
-          className={`absolute z-10 inset-0 grid place-content-center transition-all overflow-hidden ${
-            isPlaying ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+          className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden ${
+            isActive
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-1"
           }`}
         >
-          <span className="icon icon-circle-caret-right text-mono-100 text-5xl" />
+          {isPlaying ? (
+            <span className="icon icon-btn-pause text-mono-100 text-5xl" />
+          ) : (
+            <span className="icon icon-btn-play text-mono-100 text-5xl" />
+          )}
         </div>
-        <video
+        {isActive && clipPlayingPercent && (
+          <i className="absolute z-10 inset-0 pointer-events-none">
+            <i
+              className="absolute inset-0 bg-mono-900/50 transition-all"
+              style={{ width: `${clipPlayingPercent}%` }}
+            />
+          </i>
+        )}
+        {/* <video
           autoPlay={false}
           controls={false}
           playsInline
-          // loop
           muted
           width="100%"
           height="auto"
           className="relative z-0 w-full pointer-events-none"
           id={`video_${id}`}
-          src={`${item.url}#t=1`}
-        />
+          src={`${item.url}.jpg`}
+        /> */}
+        <img src={`${item.url}.jpg`} alt="" />
       </button>
       <button
         type="button"
-        className="w-full flex text-lg cursor-grab items-center justify-center text-ui-300 hover:text-ui-100 h-7"
+        className="w-full flex text-lg cursor-grab items-center justify-center hover:text-ui-100 h-7"
       >
         <span className="icon icon-handle" />
       </button>
@@ -384,41 +481,99 @@ export default function HighlightEditor() {
   const prototype = usePrototypeData();
   const isPremium = prototype.isPremium;
   const uiContext = useContext(UiContext);
-  const [selectedClip, setSelectedClip] = useState(getClipByID(1));
+  const [clips, setClips] = useState(initialClips);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [clipPlayingID, setClipPlayingID] = useState(0);
   const [selectedClipsLength, setSelectedClipsLength] = useState();
-  const [isHovered, setIsHovered] = useState(false);
+  const [playAllHasStarted, setPlayAllHasStarted] = useState(false);
   const [showOnlySelected, setShowOnlySelected] = useState(false);
-  const mainVideoRef = useRef(null);
-
-  const handleLoad = (itemID, plays) => {
-    mainVideoRef.current.src = getClipByID(itemID).url;
-    if (plays) {
-      setIsHovered(true);
-    } else {
-      setIsHovered(false);
-    }
-  };
-
-  const handleSelect = (plus) => {
-    setSelectedClipsLength(selectedClipsLength + plus);
-  };
+  const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
+  const mainVideoRef = useRef(0);
+  const currentVideoIndex = useRef(0);
 
   useEffect(() => {
     setSelectedClipsLength(getSelectedClipsLength);
-  }, []);
+  }, [clips]);
 
-  const getSelectedClipsLength = () => {
-    return Math.round(Clips?.filter((g) => g.isSelected).length);
+  const handleLoad = (itemID, plays) => {
+    setPlayAllHasStarted(false);
+    currentVideoIndex.current = itemID;
+    const currentClip = clips.find(
+      (clip) => clip.id === currentVideoIndex.current
+    );
+    mainVideoRef.current.src = currentClip.url + ".mp4";
+    setClipPlayingID(currentClip.id);
+    if (plays) {
+      setIsPlaying(true);
+    } else {
+      setIsPlaying(false);
+    }
   };
 
-  function openModalBuyPremium() {
-    uiContext.openModal(<ModalBuyPremium></ModalBuyPremium>);
-  }
+  const handleSelect = (id) => {
+    const updatedClips = clips.map((item) =>
+      item.id === id ? { ...item, isSelected: !item.isSelected } : item
+    );
+    setClips(updatedClips);
+  };
+
+  const getSelectedClipsLength = () => {
+    return Math.round(clips?.filter((item) => item.isSelected).length);
+  };
 
   const handleMainVideoLoaded = () => {
-    if (isHovered) {
+    if (isPlaying) {
       mainVideoRef.current.play();
+    } else {
+      mainVideoRef.current.pause();
+    }
+  };
+
+  const handlePlayPauseAllVideos = () => {
+    if (playAllHasStarted) {
+      if (isPlaying) {
+        mainVideoRef.current.pause();
+        setIsPlaying(false);
+      } else {
+        mainVideoRef.current.play();
+        setIsPlaying(true);
+      }
+    } else {
+      currentVideoIndex.current = 0;
+      playNextVideo();
+      setIsPlaying(true);
+      setPlayAllHasStarted(true);
+    }
+  };
+
+  const playNextVideo = () => {
+    const filteredClips = clips.filter((clip) => clip.isSelected === true);
+    const currentClip = filteredClips[currentVideoIndex.current];
+    if (currentClip && currentVideoIndex.current < clips.length) {
+      setClipPlayingID(currentClip.id);
+      mainVideoRef.current.src = currentClip.url + ".mp4";
+      mainVideoRef.current.play();
+      currentVideoIndex.current++;
+    } else {
+      setIsPlaying(false);
+      setPlayAllHasStarted(false);
+    }
+  };
+
+  const handleMainVideoEnded = () => {
+    if (isPlaying && playAllHasStarted) {
+      playNextVideo();
+    }
+  };
+
+  const handleVideoTimeUpdate = () => {
+    const video = mainVideoRef.current;
+    if (video) {
+      const currentTime = video.currentTime;
+      const duration = video.duration;
+      const widthPercentage = (currentTime / duration) * 100;
+      console.log(widthPercentage, duration, currentTime);
+      setClipPlayingPercent(widthPercentage);
     }
   };
 
@@ -428,7 +583,7 @@ export default function HighlightEditor() {
         <section className="hidden md:flex flex-col gap-4 my-4 max-w-xl mx-auto">
           <div className="flex flex-col md:flex-row md:items-stretch gap-4">
             <div className="surface rounded flex-1">
-              <div className="border-b border-ui-700 p-1 pr-3 flex items-center justify-between text-xs h-11 bg-gradient-to-b from-ui-700 to-ui-800">
+              <div className="border-b border-ui-700 p-1 pl-2 pr-4 flex items-center justify-between text-xs h-11 bg-gradient-to-b from-ui-700 to-ui-800">
                 <div className="flex items-center gap-1">
                   <GameIcon id={1} />
                   <span>Today at 10:30am</span>
@@ -448,7 +603,7 @@ export default function HighlightEditor() {
                   <div className="pl-2">Fracture</div>
                   <div className="pl-2">Unrated</div>
                   <div className="pl-2">
-                    Recorded clips: <b>{Clips.length}</b>
+                    Recorded clips: <b>{clips.length}</b>
                   </div>
                 </div>
               </div>
@@ -456,12 +611,14 @@ export default function HighlightEditor() {
                 <video
                   //controls
                   ref={mainVideoRef}
-                  loop
+                  //loop
                   muted
                   width="100%"
                   height="auto"
                   className="w-full"
                   onLoadedMetadata={handleMainVideoLoaded}
+                  onEnded={handleMainVideoEnded}
+                  onTimeUpdate={handleVideoTimeUpdate}
                   // src={selectedClip.url}
                 />
               </div>
@@ -475,7 +632,7 @@ export default function HighlightEditor() {
                     </a>
                   </li>
                 </ul>
-                <div className="flex-1 overflow-y-auto scrollbar-desktop">
+                <div className="relative flex-1">
                   <Playlist />
                 </div>
               </div>
@@ -498,7 +655,7 @@ export default function HighlightEditor() {
               <div className="flex items-center gap-2 w-24">
                 <span className="icon icon-film" />
                 <span className="text-sm">
-                  {selectedClipsLength} / {Clips.length}
+                  {selectedClipsLength} / {clips.length}
                 </span>
               </div>
               <div className="form-toggle form-sm text-sm text-ui-300">
@@ -516,20 +673,32 @@ export default function HighlightEditor() {
               </div>
               <button
                 type="button"
-                className="button button-sm button-secondary"
+                className="button button-sm button-secondary w-56"
+                onClick={handlePlayPauseAllVideos}
               >
-                <span className="icon icon-circle-caret-right" />
-                <span>Play selected clips</span>
+                {isPlaying && playAllHasStarted ? (
+                  <>
+                    <span className="icon icon-btn-pause" />
+                    <span>Pause selected clips</span>
+                  </>
+                ) : (
+                  <>
+                    <span className="icon icon-btn-play" />
+                    <span>Play selected clips</span>
+                  </>
+                )}
               </button>
             </div>
             <div className="relative flex justify-start z-0 overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850">
               <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto ">
-                {Clips.map((item, itemIndex) => (
+                {clips.map((item, itemIndex) => (
                   <Clip
                     key={itemIndex}
                     item={item}
                     onLoad={handleLoad}
                     onSelect={handleSelect}
+                    isActive={clipPlayingID === item.id && isPlaying}
+                    clipPlayingPercent={clipPlayingPercent}
                     showOnlySelected={showOnlySelected}
                   />
                 ))}

@@ -381,21 +381,21 @@
           "value": "bg-error-300",
           "number": "300",
           "data": "system.error.light",
-          "hex": "#FF5958"
+          "hex": "#FF6969"
         },
         {
           "name": "Error Main",
           "value": "bg-error-500",
           "number": "500",
           "data": "system.error.main",
-          "hex": "#FF3333"
+          "hex": "#F35151"
         },
         {
           "name": "Error Dark",
           "value": "bg-error-700",
           "number": "700",
           "data": "system.error.dark",
-          "hex": "#B32424"
+          "hex": "#DD3838"
         },
         {
           "name": "Attention Light",

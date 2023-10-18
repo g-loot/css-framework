@@ -14,6 +14,7 @@ import GameIcon from "@/components/GameIcon/GameIcon";
 import ModalHighlightViewer from "../modal-highlightviewer";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import Link from "next/link";
 
 export default function TopbarHighlightsListItem({
   item,
@@ -273,7 +274,8 @@ export default function TopbarHighlightsListItem({
                   Recording removed
                 </div>
                 <p className="text-xs">
-                  Recording of this match have been deleted to make room for new matches. Manage allocated space in the{" "}
+                  Recording of this match have been deleted to make room for new
+                  matches. Manage allocated space in the{" "}
                   <button
                     type="button"
                     className="link"
@@ -319,13 +321,15 @@ export default function TopbarHighlightsListItem({
                 >
                   <span>Automate with AI</span>
                 </button>
-                <button
-                  type="button"
-                  disabled={processingStatus === "processing"}
-                  className="button button-sm button-secondary"
-                >
-                  <span>Customize</span>
-                </button>
+                <Link href={`/stryda/editor${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    disabled={processingStatus === "processing"}
+                    className="button button-sm button-secondary"
+                  >
+                    <span>Customize</span>
+                  </button>
+                </Link>
               </>
             )}
           </div>

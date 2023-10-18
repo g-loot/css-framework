@@ -35,14 +35,20 @@ export default function TopbarHighlightsSettings() {
     <div className="p-6 space-y-6">
       <div className="form-group">
         <label for="file-input">Destination folder</label>
-        <input
-          type="file"
-          name="file-input"
-          id="file-input"
-          webkitdirectory
-          directory
-          multiple
-        />
+        <div className="flex items-stretch gap-0 justify-start">
+          <button
+            type="button"
+            className="relative z-10 p-0 h-11 bg-ui-600 cursor-pointer px-4 rounded-l-sm border border-ui-500 font-bold block w-full text-sm text-ui-200 whitespace-nowrap flex-[0] hover:text-ui-100 hover:bg-ui-500 hover:border-ui-400 focus:outline-none focus:text-ui-100 focus:bg-ui-500 focus:border-ui-400"
+          >
+            Choose folder
+          </button>
+          <input
+            className="relative z-0 rounded-r w-full -ml-px bg-ui-700 border border-ui-500 shadow-[inset_2px_2px_6px_0px_rgb(0,0,0,0.25)] focus-visible:-outline-offset-1 focus-visible:outline focus-visible:outline-1 focus-visible:outline-ui-300 focus-visible:z-20 p-2 text-sm truncate hover:text-ui-100 hover:bg-ui-500 hover:border-ui-400 hover:z-20 focus:outline-none focus:text-ui-100 focus:bg-ui-500 focus:border-ui-400 focus:z-20"
+            type="text"
+            readOnly
+            value="C:\Program Files\My Softwares\Gaming\Esports\Recording Devices\"
+          />
+        </div>
       </div>
       <div className="form-group">
         <label for="range">Allocated space</label>
