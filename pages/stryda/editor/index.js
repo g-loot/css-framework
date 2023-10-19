@@ -2,11 +2,28 @@ import { useContext, useEffect, useState, useRef } from "react";
 import Structure from "@/pages/stryda/components/Structure";
 import { useRouter } from "next/router";
 import { UiContext } from "@/contexts/ui";
-import ModalBuyPremium from "./modal-buypremium";
-import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import { usePrototypeData } from "@/contexts/prototype";
 import GameIcon from "@/components/GameIcon/GameIcon";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import {
+  DndContext,
+  DragOverlay,
+  closestCenter,
+  KeyboardSensor,
+  PointerSensor,
+  useSensor,
+  useSensors,
+} from "@dnd-kit/core";
+import {
+  arrayMove,
+  SortableContext,
+  sortableKeyboardCoordinates,
+  horizontalListSortingStrategy,
+  useSortable,
+} from "@dnd-kit/sortable";
+import { restrictToHorizontalAxis } from "@dnd-kit/modifiers";
+import { CSS } from "@dnd-kit/utilities";
+import Link from "next/link";
 
 const Track = ({
   trackData,
@@ -14,60 +31,59 @@ const Track = ({
   isPlayingID,
   progress,
   playPauseTrack,
+  selectedTrackID,
+  selectTrack,
 }) => {
-  const { id, image, name, duration } = trackData;
+  const { id, artist, name, duration } = trackData;
   return (
-    <li className="item py-0">
+    <button
+      type="button"
+      onClick={() => selectTrack(trackData)}
+      onMouseEnter={() => playPauseTrack(trackData)}
+      onMouseLeave={() => playPauseTrack(trackData)}
+      className="item item-interactive"
+    >
       <div className="item-image pl-0">
         <div className="form-radio">
           <input
             type="radio"
             name="trackSelection"
             id={`trackSelection_${id}`}
-            defaultChecked={id === 1}
+            readOnly
+            checked={id === selectedTrackID}
           />
           <label htmlFor={`trackSelection_${id}`} />
         </div>
       </div>
-      <div className="flex-1 flex gap-2 items-center relative p-2 [&>div]:relative [&>div]:z-10 overflow-hidden">
-        <div className="item-image">
-          <img
-            src={image}
-            alt={name}
-            className={`h-8 w-8 rounded object-cover ${
-              isPlaying && isPlayingID === id
-                ? "opacity-100"
-                : "opacity-25 grayscale-0"
-            }`}
-          />
-        </div>
-        <div className="item-body">
-          <div
-            className={`item-title text-sm truncate ${
-              isPlaying && isPlayingID === id ? "text-main" : "text-ui-300"
-            }`}
-          >
-            {name}
-          </div>
-        </div>
-        <div className="item-actions">
-          <div className="text-xs text-ui-300 text-right">{duration}</div>
-        </div>
-        {isPlaying && isPlayingID === id && progress > 0 && (
-          <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
-            <i
-              className="absolute inset-0 bg-mono-100/20"
-              style={{ width: `${progress}%` }}
-            />
-          </i>
-        )}
-      </div>
-
-      <div className="item-actions">
-        <button
-          onClick={() => playPauseTrack(trackData)}
-          className="button button-tertiary button-sm rounded-full"
+      <div className="item-body pl-1">
+        <div
+          className={`item-title text-sm truncate ${
+            isPlaying && isPlayingID === id && id !== selectedTrackID ? "!text-ui-100" : "text-ui-300"
+          } ${id === selectedTrackID ? "!text-main" : ""}`}
         >
+          {name}
+        </div>
+        <div
+          className={`item-description text-xs truncate ${
+            isPlaying && isPlayingID === id && id !== selectedTrackID ? "!text-ui-100" : "text-ui-400"
+          } ${id === selectedTrackID ? "!text-main" : ""}`}
+        >
+          {artist}
+        </div>
+      </div>
+      <div className="item-actions">
+        <div className="text-xs text-ui-300 text-right">{duration}</div>
+      </div>
+      {isPlaying && isPlayingID === id && progress > 0 && (
+        <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
+          <i
+            className="absolute inset-0 bg-mono-100/20"
+            style={{ width: `${progress}%` }}
+          />
+        </i>
+      )}
+      <div className="item-actions">
+        <div className="button button-tertiary button-sm rounded-full">
           <span
             className={`icon ${
               isPlaying && isPlayingID === id
@@ -75,9 +91,9 @@ const Track = ({
                 : "icon-triangle-right"
             }`}
           />
-        </button>
+        </div>
       </div>
-    </li>
+    </button>
   );
 };
 
@@ -85,116 +101,93 @@ const Playlist = () => {
   const initialTracks = [
     {
       id: 1,
-      name: "What It Is",
+      name: "Ace-High",
+      artist: "Splasher!",
       duration: "3:45",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525867/Stryda/demo/music/Doechii_-_What_It_Is_Block_Boy_feat.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525510/Stryda/demo/music/Doechii_-_What_It_Is_Block_Boy_feat._Kodak_Black_Official_Video.mp3",
+      url: "ES_Ace-High_-_Splasher.mp3",
     },
     {
       id: 2,
-      name: "Makeba",
+      name: "Adventure Awaits",
+      artist: "Dream Cave",
       duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525862/Stryda/demo/music/Jain_-_Makeba_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525506/Stryda/demo/music/Jain_-_Makeba.mp3",
+      url: "ES_Adventure_Awaits_-_Dream_Cave.mp3",
     },
     {
       id: 3,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Application",
+      artist: "Autohacker",
+      duration: "5:12",
+      url: "ES_Application_-_Autohacker.mp3",
     },
     {
       id: 4,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Balls of Steel",
+      artist: "Balls of Steel",
+      duration: "3:09",
+      url: "ES_Balls_of_Steel_-_Rymdklang_Soundtracks.mp3",
     },
     {
       id: 5,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Bam Bam",
+      artist: "Bambi Haze",
+      duration: "3:16",
+      url: "ES_Bam_Bam_-_Bambi_Haze.mp3",
     },
     {
       id: 6,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Bam Bam (Instrumental Version)",
+      artist: "Bambi Haze",
+      duration: "2:12",
+      url: "ES_Bam_Bam_Instrumental_Version_-_Bambi_Haze.mp3",
     },
     {
       id: 7,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Beast Mode",
+      artist: "Nbhd Nick",
+      duration: "2:45",
+      url: "ES_Beast_Mode_-_Nbhd_Nick.mp3",
     },
     {
       id: 8,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Big Ballin",
+      artist: "Cushy",
+      duration: "3:22",
+      url: "ES_Big_Ballin_-_Cushy.mp3",
     },
     {
       id: 9,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Bird Flex",
+      artist: "Bonkers Beat Club",
+      duration: "3:43",
+      url: "ES_Bird_Flex_-_Bonkers_Beat_Club.mp3",
     },
     {
       id: 10,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Blade Running",
+      artist: "Cushy",
+      duration: "2:33",
+      url: "ES_Blade_Running_-_Cushy.mp3",
     },
     {
       id: 11,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Bop Bop Bop",
+      artist: "Bonkers Beat Club",
+      duration: "4:01",
+      url: "ES_Bop_Bop_Bop_-_Bonkers_Beat_Club.mp3",
     },
     {
       id: 12,
-      name: "As It Was",
-      duration: "4:15",
-      image:
-        "https://res.cloudinary.com/gloot/image/upload/v1697525863/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video_cover.webp",
-      audio:
-        "https://res.cloudinary.com/gloot/video/upload/v1697525503/Stryda/demo/music/Harry_Styles_-_As_It_Was_Official_Video.mp3",
+      name: "Break Your Chains (Instrumental Version)",
+      artist: "Happy Republic",
+      duration: "3:54",
+      url: "ES_Break_Your_Chains_Instrumental_Version_-_Happy_Republic.mp3",
     },
   ];
 
   const audioRef = useRef(null);
-  const [selectedTrack, setSelectedTrack] = useState(initialTracks[0]);
+  const [selectedTrackID, setSelectedTrackID] = useState(1);
+  const [playingTrack, setPlayingTrack] = useState(initialTracks[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
 
@@ -206,15 +199,23 @@ const Playlist = () => {
       setProgress(currentProgress);
     };
 
-    audioRef.current.addEventListener("timeupdate", updateProgress);
+    if (audioRef.current) {
+      audioRef.current.addEventListener("timeupdate", updateProgress);
 
-    return () => {
-      audioRef.current.removeEventListener("timeupdate", updateProgress);
-    };
+      return () => {
+        if (audioRef.current) {
+          audioRef.current.removeEventListener("timeupdate", updateProgress);
+        }
+      };
+    }
   }, []);
 
+  const selectTrack = (track) => {
+    setSelectedTrackID(track.id);
+  };
+
   const playPauseTrack = (track) => {
-    if (selectedTrack.name === track.name) {
+    if (playingTrack.name === track.name) {
       if (isPlaying) {
         setIsPlaying(false);
         audioRef.current.pause();
@@ -223,31 +224,38 @@ const Playlist = () => {
         audioRef.current.play();
       }
     } else {
-      setSelectedTrack(track);
+      setPlayingTrack(track);
       setIsPlaying(true);
-      audioRef.current.src = track.audio;
+      audioRef.current.src =
+        "https://res.cloudinary.com/gloot/video/upload/v1697718160/Stryda/demo/music/Epidemic%20Sound/" +
+        track.url;
       audioRef.current.play();
     }
   };
 
   return (
     <>
-      <ul className="absolute inset-0 overflow-y-auto scrollbar-desktop">
+      <div className="absolute inset-0 overflow-y-auto scrollbar-desktop">
         {initialTracks.map((track) => (
           <Track
             key={track.id}
             id={track.id}
             trackData={track}
             isPlaying={isPlaying}
-            isPlayingID={selectedTrack.id}
+            isPlayingID={playingTrack.id}
             progress={progress}
+            selectedTrackID={selectedTrackID}
             playPauseTrack={playPauseTrack}
+            selectTrack={selectTrack}
           />
         ))}
-      </ul>
+      </div>
       <audio ref={audioRef}>
-        {selectedTrack && (
-          <source src={selectedTrack.audio} type="audio/mpeg" />
+        {playingTrack && (
+          <source
+            src={`https://res.cloudinary.com/gloot/video/upload/v1697718160/Stryda/demo/music/Epidemic%20Sound/${playingTrack.url}`}
+            type="audio/mpeg"
+          />
         )}
       </audio>
     </>
@@ -259,88 +267,94 @@ const initialClips = [
     id: 1,
     isSelected: true,
     isAIFavored: true,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-01",
   },
   {
     id: 2,
     isSelected: false,
     isAIFavored: false,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-02",
   },
   {
     id: 3,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-03",
   },
   {
     id: 4,
     isSelected: true,
     isAIFavored: true,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-04",
   },
   {
     id: 5,
     isSelected: false,
     isAIFavored: false,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-05",
   },
   {
     id: 6,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-06",
   },
   {
     id: 7,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-07",
   },
   {
     id: 8,
     isSelected: false,
     isAIFavored: false,
+    duration: 11,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-08",
   },
   {
     id: 9,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-09",
   },
   {
     id: 10,
     isSelected: false,
     isAIFavored: false,
+    duration: 8,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-10",
   },
   {
     id: 11,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-11",
   },
   {
     id: 12,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-12",
   },
   {
     id: 13,
-    isSelected: true,
+    isSelected: false,
     isAIFavored: true,
+    duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-13",
   },
 ];
-
-const getClipByID = (id) => {
-  const selectedClip = initialClips.find((clip) => {
-    return clip.id === parseInt(id);
-  });
-  return selectedClip;
-};
 
 const Clip = ({
   item,
@@ -349,25 +363,46 @@ const Clip = ({
   clipPlayingPercent,
   onLoad,
   onSelect,
+  hasError,
+  selectedClipsLength,
 }) => {
+  const { attributes, listeners, setNodeRef, transform, transition } =
+    useSortable({ id: item.id });
+
+  const style = {
+    transform: CSS.Transform.toString(transform),
+    transition,
+  };
+
+  const prototype = usePrototypeData();
   const [isSelected, setIsSelected] = useState(item.isSelected);
-  const id = RandomNumber(1000, 100000);
   const [video, setVideo] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
-
-  function RandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
+  const [maxClips, setMaxClips] = useState(10);
 
   useEffect(() => {
-    if (item.isSelected) {
-      setIsSelected(true);
+    if (!hasError) {
+      setIsSelected(item.isSelected);
     }
-  }, [item]);
+  }, [item.isSelected]);
 
   useEffect(() => {
-    setVideo(document.getElementById(`video_${id}`));
-  }, [id]);
+    if (!hasError) {
+      setIsSelected(item.isSelected);
+    }
+  }, [isSelected]);
+
+  useEffect(() => {
+    setVideo(document.getElementById(`video_${item.id}`));
+  }, [item.id]);
+
+  useEffect(() => {
+    if (prototype.isPremium) {
+      setMaxClips(20);
+    } else {
+      setMaxClips(3);
+    }
+  }, [prototype]);
 
   const handleSelection = () => {
     onSelect(item.id);
@@ -375,25 +410,45 @@ const Clip = ({
   };
 
   function handleVideoPlay() {
-    setIsPlaying(true);
-    onLoad(item.id, true);
+    if (!isSelected && selectedClipsLength >= maxClips) {
+    } else {
+      setIsPlaying(true);
+      onLoad(item.id, true);
+    }
   }
+
   function handleVideoPause() {
-    setIsPlaying(false);
-    onLoad(item.id, false);
+    if (!isSelected && selectedClipsLength >= maxClips) {
+    } else {
+      setIsPlaying(false);
+      onLoad(item.id, false);
+    }
+  }
+
+  function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.round(duration % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
 
   return (
     <li
-      className={`surface-ui-600 relative text-0 rounded-2 overflow-hidden duration-500 ease-[cubic-bezier(.85,0,.2,1)] transition-[width] child:transition child:duration-75 child:ease-in-out ${
-        isSelected ? "!border-main" : "opacity-60 child:grayscale"
+      ref={setNodeRef}
+      style={style}
+      className={`relative text-0 rounded-2 overflow-hidden duration-500 ease-[cubic-bezier(.85,0,.2,1)] transition-[width] h-40 flex flex-col ${
+        isSelected ? "!border-main surface-ui-600" : "surface"
       } ${isActive ? "!bg-ui-500 text-ui-100" : "text-ui-300"} ${
         showOnlySelected && !isSelected
-          ? "w-2 child:opacity-0 pointer-events-none"
+          ? "w-2 child:!opacity-0 pointer-events-none"
           : "w-44"
-      }`}
+      }
+      `}
     >
-      <div className="flex items-center justify-between px-1 h-7">
+      <div
+        className={`flex items-center justify-between px-1 h-7 ${
+          !isSelected ? "opacity-50" : ""
+        }`}
+      >
         {item.isAIFavored ? (
           <Tooltip
             placement="top"
@@ -412,7 +467,7 @@ const Clip = ({
         )}
         <div className="flex items-center gap-1 text-xs">
           <span className="icon icon-clock" />
-          <span>12s</span>
+          <span>{formatDuration(item.duration)}</span>
         </div>
         <div className="form-checkbox form-sm">
           <input
@@ -420,6 +475,7 @@ const Clip = ({
             name={`item_${item.id}`}
             id={`item_${item.id}`}
             checked={isSelected}
+            disabled={!isSelected && selectedClipsLength >= maxClips}
             onChange={handleSelection}
           />
           <label htmlFor={`item_${item.id}`} />
@@ -429,14 +485,13 @@ const Clip = ({
         type="button"
         onMouseOver={handleVideoPlay}
         onMouseOut={handleVideoPause}
+        disabled={hasError || selectedClipsLength >= maxClips}
         onClick={isPlaying ? handleVideoPause : handleVideoPlay}
-        className="w-full aspect-video bg-ui-850 relative child:pointer-events-none"
+        className={`w-full aspect-video bg-ui-850 relative grid place-content-center`}
       >
         <div
-          className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden ${
-            isActive
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-1"
+          className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden pointer-events-none ${
+            isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
           }`}
         >
           {isPlaying ? (
@@ -448,10 +503,21 @@ const Clip = ({
         {isActive && clipPlayingPercent && (
           <i className="absolute z-10 inset-0 pointer-events-none">
             <i
-              className="absolute inset-0 bg-mono-900/50 transition-all"
+              className="absolute inset-0 bg-ui-900/75 transition-all"
               style={{ width: `${clipPlayingPercent}%` }}
             />
           </i>
+        )}
+        {selectedClipsLength >= maxClips && !isSelected && (
+          <div className="absolute z-30 inset-2 grid place-content-center transition-all overflow-hidden text-ui-100 text-sm leading-tight text-center p-2 rounded bg-ui-700/90 backdrop-blur-sm animate-scale-in">
+            <span>
+              You have reached the {maxClips} clips limit. Increase the limit
+              with{" "}
+              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                <a className="link link-premium">Premium</a>
+              </Link>
+            </span>
+          </div>
         )}
         {/* <video
           autoPlay={false}
@@ -461,14 +527,27 @@ const Clip = ({
           width="100%"
           height="auto"
           className="relative z-0 w-full pointer-events-none"
-          id={`video_${id}`}
+          id={`video_${item.id}`}
           src={`${item.url}.jpg`}
         /> */}
-        <img src={`${item.url}.jpg`} alt="" />
+        {!hasError && (
+          <img
+            className={`${
+              !isSelected ? "opacity-50 grayscale mix-blend-lighten" : ""
+            }`}
+            src={`${item.url}.jpg`}
+            alt=""
+          />
+        )}
+        {hasError && (
+          <span className="icon icon-warning-sign text-4xl text-ui-300" />
+        )}
       </button>
       <button
         type="button"
-        className="w-full flex text-lg cursor-grab items-center justify-center hover:text-ui-100 h-7"
+        {...attributes}
+        {...listeners}
+        className="flex-1 w-full flex text-lg cursor-grab items-center justify-center hover:text-ui-800 hover:bg-mono-100 active:text-ui-800 active:bg-mono-100"
       >
         <span className="icon icon-handle" />
       </button>
@@ -479,20 +558,24 @@ const Clip = ({
 export default function HighlightEditor() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
-  const isPremium = prototype.isPremium;
   const uiContext = useContext(UiContext);
   const [clips, setClips] = useState(initialClips);
   const [isPlaying, setIsPlaying] = useState(false);
   const [clipPlayingID, setClipPlayingID] = useState(0);
   const [selectedClipsLength, setSelectedClipsLength] = useState();
+  const [selectedClipsDuration, setSelectedClipsDuration] = useState();
   const [playAllHasStarted, setPlayAllHasStarted] = useState(false);
   const [showOnlySelected, setShowOnlySelected] = useState(false);
   const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
+  const [activeId, setActiveId] = useState(null);
   const mainVideoRef = useRef(0);
   const currentVideoIndex = useRef(0);
+  const [hasError, setHasError] = useState(false);
 
   useEffect(() => {
+    // console.log("Clips updated:", clips);
     setSelectedClipsLength(getSelectedClipsLength);
+    setSelectedClipsDuration(getSelectedClipsDuration);
   }, [clips]);
 
   const handleLoad = (itemID, plays) => {
@@ -519,6 +602,13 @@ export default function HighlightEditor() {
 
   const getSelectedClipsLength = () => {
     return Math.round(clips?.filter((item) => item.isSelected).length);
+  };
+
+  const getSelectedClipsDuration = () => {
+    const totalDuration = clips
+      ?.filter((clip) => clip.isSelected)
+      .reduce((acc, clip) => acc + clip.duration, 0);
+    return totalDuration;
   };
 
   const handleMainVideoLoaded = () => {
@@ -572,140 +662,218 @@ export default function HighlightEditor() {
       const currentTime = video.currentTime;
       const duration = video.duration;
       const widthPercentage = (currentTime / duration) * 100;
-      console.log(widthPercentage, duration, currentTime);
+      //console.log(widthPercentage, duration, currentTime);
       setClipPlayingPercent(widthPercentage);
     }
   };
 
+  const sensors = useSensors(
+    useSensor(PointerSensor),
+    useSensor(KeyboardSensor, {
+      coordinateGetter: sortableKeyboardCoordinates,
+    })
+  );
+
+  function handleDragStart(event) {
+    setActiveId(event.active.id);
+  }
+
+  function handleDragEnd(event) {
+    const { active, over } = event;
+
+    if (active.id !== over.id) {
+      setActiveId(null);
+      setClips((clips) => {
+        const oldIndex = clips.findIndex((clip) => clip.id === active.id);
+        const newIndex = clips.findIndex((clip) => clip.id === over.id);
+        const newItemsArray = arrayMove(clips, oldIndex, newIndex);
+        return newItemsArray;
+      });
+    }
+  }
+
+  function formatDuration(duration) {
+    const minutes = Math.floor(duration / 60);
+    const seconds = Math.round(duration % 60);
+    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
+
   return (
     <>
       <Structure title="Highlight Editor">
-        <section className="hidden md:flex flex-col gap-4 my-4 max-w-xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-stretch gap-4">
-            <div className="surface rounded flex-1">
-              <div className="border-b border-ui-700 p-1 pl-2 pr-4 flex items-center justify-between text-xs h-11 bg-gradient-to-b from-ui-700 to-ui-800">
-                <div className="flex items-center gap-1">
-                  <GameIcon id={1} />
-                  <span>Today at 10:30am</span>
-                </div>
-                <div className="flex items-center gap-2 divide-x divide-ui-600">
-                  <div className="flex items-center gap-2">
-                    <div className="avatar avatar-simple avatar-tiny">
-                      <div>
-                        <img
-                          src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/agent-avatar-phoenix.webp"
-                          alt="avatar"
-                        />
+        {clips && (
+          <section className="hidden md:flex flex-col gap-4 my-4 max-w-xl mx-auto">
+            <div className="flex flex-col md:flex-row md:items-stretch gap-4">
+              <div className="surface rounded flex-1">
+                <div className="border-b border-ui-700 p-1 pl-3 pr-4 flex items-center justify-between text-sm h-11 bg-gradient-to-b from-ui-700 to-ui-800">
+                  <div className="flex items-center gap-1">
+                    <GameIcon id={1} />
+                    <span>Today at 10:30am</span>
+                  </div>
+                  <div className="flex items-center gap-3 divide-x divide-ui-400/20">
+                    <div className="flex items-center gap-2">
+                      <div className="avatar avatar-simple avatar-tiny">
+                        <div>
+                          <img
+                            src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/agent-avatar-phoenix.webp"
+                            alt="avatar"
+                          />
+                        </div>
                       </div>
+                      <span>Phoenix</span>
                     </div>
-                    <span>Phoenix</span>
+                    <div className="pl-3">Fracture</div>
+                    <div className="pl-3">Unrated</div>
+                    <div className="pl-3">
+                      Recorded clips:{" "}
+                      <b className="text-ui-100">{clips.length}</b>
+                    </div>
                   </div>
-                  <div className="pl-2">Fracture</div>
-                  <div className="pl-2">Unrated</div>
-                  <div className="pl-2">
-                    Recorded clips: <b>{clips.length}</b>
-                  </div>
+                </div>
+                <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
+                  <video
+                    //controls
+                    ref={mainVideoRef}
+                    //loop
+                    //muted
+                    width="100%"
+                    height="auto"
+                    className="w-full"
+                    onLoadedMetadata={handleMainVideoLoaded}
+                    onEnded={handleMainVideoEnded}
+                    onTimeUpdate={handleVideoTimeUpdate}
+                    // src={selectedClip.url}
+                  />
                 </div>
               </div>
-              <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
-                <video
-                  //controls
-                  ref={mainVideoRef}
-                  //loop
-                  muted
-                  width="100%"
-                  height="auto"
-                  className="w-full"
-                  onLoadedMetadata={handleMainVideoLoaded}
-                  onEnded={handleMainVideoEnded}
-                  onTimeUpdate={handleVideoTimeUpdate}
-                  // src={selectedClip.url}
-                />
+              <div className="surface rounded w-80 flex flex-col">
+                <div className="flex-1 relative flex flex-col">
+                  <ul className="tabs tabs-secondary border-b border-ui-700 bg-gradient-to-b from-ui-700 to-ui-800">
+                    <li>
+                      <a className="is-active">
+                        <span>Music</span>
+                      </a>
+                    </li>
+                  </ul>
+                  <div className="relative flex-1">
+                    <Playlist />
+                  </div>
+                </div>
+                <div className="p-2 text-center space-y-2 border-t border-ui-700 rounded-b bg-gradient-to-t from-ui-700 to-ui-800">
+                  <button
+                    type="button"
+                    className="button button-primary w-full"
+                    disabled={selectedClipsLength === 0}
+                  >
+                    <span>Create highlight</span>
+                  </button>
+                  <span className="text-xs leading-none">
+                    Estimated time to render:{" "}
+                    <b className="text-ui-100">{formatDuration(selectedClipsDuration * (selectedClipsLength * 22))}</b>
+                  </span>
+                </div>
               </div>
             </div>
-            <div className="surface rounded w-80 flex flex-col">
-              <div className="flex-1 relative flex flex-col">
-                <ul className="tabs tabs-secondary border-b border-ui-700 bg-gradient-to-b from-ui-700 to-ui-800">
-                  <li>
-                    <a className="is-active">
-                      <span>Music</span>
-                    </a>
-                  </li>
-                </ul>
-                <div className="relative flex-1">
-                  <Playlist />
+            <div className="surface rounded">
+              <div className="border-b border-ui-700 flex items-center gap-2 justify-between h-11 px-2 bg-gradient-to-b from-ui-700 to-ui-800">
+                <div className="flex items-center gap-2 w-24">
+                  <span className="icon icon-film" />
+                  <span className="text-sm">
+                    {selectedClipsLength} / {clips.length}
+                  </span>
                 </div>
-              </div>
-              <div className="p-2 text-center space-y-2 border-t border-ui-700">
+                <div className="form-toggle form-sm text-sm">
+                  <input
+                    type="checkbox"
+                    name="notification"
+                    id="showOnlySelected"
+                    onChange={(event) =>
+                      setShowOnlySelected(event.target.checked)
+                    }
+                  />
+                  <label htmlFor="showOnlySelected">
+                    <i className="form-icon" /> Show selected clips only
+                  </label>
+                </div>
+                <div className="flex items-center justify-center gap-2 w-40">
+                  <span className="icon icon-clock" />
+                  <span className="text-sm">
+                    Total duration:{" "}
+                    <b className="text-ui-100 font-bold">
+                      {formatDuration(selectedClipsDuration)}
+                    </b>
+                  </span>
+                </div>
                 <button
                   type="button"
-                  className="button button-primary w-full"
-                  disabled={selectedClipsLength === 0}
+                  className="button button-sm button-secondary w-56"
+                  onClick={handlePlayPauseAllVideos}
                 >
-                  <span>Create highlight</span>
+                  {isPlaying && playAllHasStarted ? (
+                    <>
+                      <span className="icon icon-btn-pause" />
+                      <span>Pause selected clips</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="icon icon-btn-play" />
+                      <span>Play selected clips</span>
+                    </>
+                  )}
                 </button>
-                <span className="text-xs leading-none">
-                  Estimated time to render: <b className="text-ui-100">02:30</b>
-                </span>
+              </div>
+              <div className="relative flex justify-start z-0 overflow-y-hidden overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none">
+                <DndContext
+                  sensors={sensors}
+                  modifiers={[restrictToHorizontalAxis]}
+                  collisionDetection={closestCenter}
+                  onDragEnd={handleDragEnd}
+                >
+                  <SortableContext
+                    items={clips}
+                    strategy={horizontalListSortingStrategy}
+                  >
+                    <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto">
+                      {clips?.map((item, itemIndex) => (
+                        <Clip
+                          key={item.id}
+                          item={item}
+                          onLoad={handleLoad}
+                          onSelect={handleSelect}
+                          isActive={clipPlayingID === item.id && isPlaying}
+                          clipPlayingPercent={clipPlayingPercent}
+                          showOnlySelected={showOnlySelected}
+                          hasError={hasError}
+                          selectedClipsLength={selectedClipsLength}
+                        />
+                      ))}
+                    </ul>
+                  </SortableContext>
+                  <DragOverlay
+                    dropAnimation={{
+                      duration: 0,
+                      easing: "cubic-bezier(0.18, 0.67, 0.6, 1.22)",
+                    }}
+                  >
+                    {activeId ? (
+                      <Clip
+                        key={activeId}
+                        item={clips.findIndex((clip) => clip.id === activeId)}
+                        onLoad={handleLoad}
+                        onSelect={handleSelect}
+                        isActive={clipPlayingID === item.id && isPlaying}
+                        clipPlayingPercent={clipPlayingPercent}
+                        showOnlySelected={showOnlySelected}
+                        hasError={hasError}
+                        selectedClipsLength={selectedClipsLength}
+                      />
+                    ) : null}
+                  </DragOverlay>
+                </DndContext>
               </div>
             </div>
-          </div>
-          <div className="surface rounded">
-            <div className="border-b border-ui-700 flex items-center gap-2 justify-between h-11 px-2 bg-gradient-to-b from-ui-700 to-ui-800">
-              <div className="flex items-center gap-2 w-24">
-                <span className="icon icon-film" />
-                <span className="text-sm">
-                  {selectedClipsLength} / {clips.length}
-                </span>
-              </div>
-              <div className="form-toggle form-sm text-sm text-ui-300">
-                <input
-                  type="checkbox"
-                  name="notification"
-                  id="showOnlySelected"
-                  onChange={(event) =>
-                    setShowOnlySelected(event.target.checked)
-                  }
-                />
-                <label htmlFor="showOnlySelected">
-                  <i className="form-icon" /> Show selected clips only
-                </label>
-              </div>
-              <button
-                type="button"
-                className="button button-sm button-secondary w-56"
-                onClick={handlePlayPauseAllVideos}
-              >
-                {isPlaying && playAllHasStarted ? (
-                  <>
-                    <span className="icon icon-btn-pause" />
-                    <span>Pause selected clips</span>
-                  </>
-                ) : (
-                  <>
-                    <span className="icon icon-btn-play" />
-                    <span>Play selected clips</span>
-                  </>
-                )}
-              </button>
-            </div>
-            <div className="relative flex justify-start z-0 overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850">
-              <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto ">
-                {clips.map((item, itemIndex) => (
-                  <Clip
-                    key={itemIndex}
-                    item={item}
-                    onLoad={handleLoad}
-                    onSelect={handleSelect}
-                    isActive={clipPlayingID === item.id && isPlaying}
-                    clipPlayingPercent={clipPlayingPercent}
-                    showOnlySelected={showOnlySelected}
-                  />
-                ))}
-              </ul>
-            </div>
-          </div>
-        </section>
+          </section>
+        )}
 
         {/* for demo purposes only */}
         {prototype.showDemo && (
@@ -719,16 +887,28 @@ export default function HighlightEditor() {
                 <span className="icon icon-e-remove" />
               </button>
             </div>
-            <div className="form-group pl-4">
-              <div className="form-xs form-toggle">
-                <input
-                  type="checkbox"
-                  name="feed"
-                  id="feed-premium"
-                  defaultChecked={prototype.isPremium}
-                  onClick={() => prototype.togglePremium()}
-                />
-                <label htmlFor="feed-premium">Premium state</label>
+            <div>
+              <h3 className="text-sm">Global states:</h3>
+              <div className="form-group pl-4 mt-2">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-premium"
+                    checked={prototype.isPremium}
+                    onChange={() => prototype.togglePremium()}
+                  />
+                  <label htmlFor="feed-premium">Premium state</label>
+                </div>
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="feed-error"
+                    onChange={() => setHasError(!hasError)}
+                  />
+                  <label htmlFor="feed-error">Error state</label>
+                </div>
               </div>
             </div>
           </section>

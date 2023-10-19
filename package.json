@@ -32,6 +32,10 @@
     "tailwind.config.js"
   ],
   "dependencies": {
+    "@dnd-kit/core": "^6.0.8",
+    "@dnd-kit/modifiers": "^6.0.1",
+    "@dnd-kit/sortable": "^7.0.2",
+    "@dnd-kit/utilities": "^3.2.1",
     "react-select": "^5.7.2",
     "react-spring": "^9.6.1",
     "react-swipeable": "^7.0.0"

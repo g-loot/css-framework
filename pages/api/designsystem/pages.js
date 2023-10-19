@@ -222,7 +222,7 @@ export const DSpages = [
       },
       {
         label: "Tabs",
-        tags: "nav,navigation,tabs,submenu,ranks",
+        tags: "nav,navigation,tabs,submenu,ranks,rank",
         url: "tabs",
       },
       {

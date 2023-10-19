@@ -1108,7 +1108,8 @@
       }
       &:not(.icon) {
         @apply
-        py-4
+        pt-3
+        pb-4
         ;
         > * {
           @apply
