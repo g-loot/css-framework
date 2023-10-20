@@ -532,7 +532,17 @@ const Clip = ({
             </span>
           </div>
         )}
-        {/* <video
+       
+        {!hasError && (
+          <>
+          {/* <img
+            className={`${
+              !isSelected ? "opacity-50 grayscale mix-blend-lighten" : ""
+            }`}
+            src={`${item.url}.jpg`}
+            alt=""
+          /> */}
+           <video
           autoPlay={false}
           controls={false}
           playsInline
@@ -541,16 +551,9 @@ const Clip = ({
           height="auto"
           className="relative z-0 w-full pointer-events-none"
           id={`video_${item.id}`}
-          src={`${item.url}.jpg`}
-        /> */}
-        {!hasError && (
-          <img
-            className={`${
-              !isSelected ? "opacity-50 grayscale mix-blend-lighten" : ""
-            }`}
-            src={`${item.url}.jpg`}
-            alt=""
-          />
+          src={`${item.url}.mp4`}
+        />
+          </>
         )}
         {hasError && (
           <span className="icon icon-warning-sign text-3xl text-ui-300" />
@@ -606,6 +609,7 @@ export default function HighlightEditor() {
   }, [clips]);
 
   const handleLoad = (itemID, plays) => {
+    // console.log("handleLoad", itemID, plays);
     setPlayAllHasStarted(false);
     currentVideoIndex.current = itemID;
     const currentClip = clips.find(
@@ -784,7 +788,7 @@ export default function HighlightEditor() {
                     //controls
                     ref={mainVideoRef}
                     //loop
-                    //muted
+                    muted
                     width="100%"
                     height="auto"
                     className="w-full"
