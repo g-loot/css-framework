@@ -43,7 +43,7 @@ const Track = ({
       onMouseLeave={() => playPauseTrack(trackData)}
       className="item item-interactive"
     >
-      <div className="item-image pl-0">
+      <div className="relative z-10 item-image pl-0">
         <div className="form-radio">
           <input
             type="radio"
@@ -55,7 +55,7 @@ const Track = ({
           <label htmlFor={`trackSelection_${id}`} />
         </div>
       </div>
-      <div className="item-body pl-1">
+      <div className="relative z-10 item-body pl-1">
         <div
           className={`item-title text-sm truncate ${
             isPlaying && isPlayingID === id && id !== selectedTrackID
@@ -75,23 +75,17 @@ const Track = ({
           {artist}
         </div>
       </div>
-      <div className="item-actions">
+      <div className="relative z-10 item-actions">
         <div className="text-xs text-ui-300 text-right">{duration}</div>
       </div>
-      {isPlaying && isPlayingID === id && progress > 0 && (
-        <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
-          <i
-            className="absolute inset-0 bg-mono-100/20"
-            style={{ width: `${progress}%` }}
-          />
-        </i>
-      )}
-      <div className="item-actions">
+      <div className="relative z-10 item-actions overflow-hidden">
         <img
           src="https://res.cloudinary.com/gloot/image/upload/v1697790771/Stryda/icons/svg/bars-anim.svg"
           alt=""
-          className={`h-4 w-4 transition-opacity ${
-            isPlaying && isPlayingID === id ? "opacity-100" : "opacity-0"
+          className={`h-4 w-4 transition ease-out ${
+            isPlaying && isPlayingID === id
+              ? "opacity-100 translate-x-0"
+              : "opacity-0 translate-x-8"
           }`}
         />
         {/* <div className="button button-tertiary button-sm rounded-full">
@@ -104,6 +98,14 @@ const Track = ({
           />
         </div> */}
       </div>
+      {isPlaying && isPlayingID === id && progress > 0 && (
+        <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
+          <i
+            className="absolute inset-0 bg-mono-100/20"
+            style={{ width: `${progress}%` }}
+          />
+        </i>
+      )}
     </button>
   );
 };
@@ -452,7 +454,7 @@ const Clip = ({
         showOnlySelected && !isSelected
           ? "w-2 child:!opacity-0 pointer-events-none"
           : "w-44"
-      }
+      } ${hasError ? "pointer-events-none" : ""}
       `}
     >
       <div
@@ -551,7 +553,7 @@ const Clip = ({
           />
         )}
         {hasError && (
-          <span className="icon icon-warning-sign text-4xl text-ui-300" />
+          <span className="icon icon-warning-sign text-3xl text-ui-300" />
         )}
       </button>
       <button
@@ -582,6 +584,7 @@ export default function HighlightEditor() {
   const mainVideoRef = useRef(0);
   const currentVideoIndex = useRef(1);
   const [hasError, setHasError] = useState(false);
+  const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -726,7 +729,7 @@ export default function HighlightEditor() {
     <>
       <Structure title="Highlight Editor">
         {clips && (
-          <section className="hidden md:flex flex-col gap-4 my-4 max-w-xl mx-auto">
+          <section className="hidden lg:flex flex-col gap-4 my-4 max-w-xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-stretch gap-4">
               <div className="surface rounded flex-1">
                 <div className="border-b border-ui-700 p-1 pl-3 pr-4 flex items-center justify-between text-sm h-11 bg-gradient-to-b from-ui-700 to-ui-800">
@@ -756,13 +759,24 @@ export default function HighlightEditor() {
                 </div>
                 <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
                   {isLoading && (
-                    <div className="absolute inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-700">
+                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
                       <div role="loading" className="loader loader-sm">
                         <span className="sr-only">Loading...</span>
                       </div>
                       <p>
-                        Loading clips, this might take a few minutes.<br />Grab a
-                        glass of water and stay hydrated while you wait.
+                        Loading clips, this might take a few minutes.
+                        <br />
+                        Grab a glass of water and stay hydrated while you wait.
+                      </p>
+                    </div>
+                  )}
+                  {hasError && (
+                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                      <span className="icon icon-warning-sign text-4xl text-ui-300" />
+                      <p>
+                        Video does not load.
+                        <br />
+                        Try to reload the app.
                       </p>
                     </div>
                   )}
@@ -791,6 +805,16 @@ export default function HighlightEditor() {
                     </li>
                   </ul>
                   <div className="relative flex-1">
+                    {hasError && (
+                      <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                        <span className="icon icon-warning-sign text-4xl text-ui-300" />
+                        <p>
+                          Could not load music.
+                          <br />
+                          Try to reload the app.
+                        </p>
+                      </div>
+                    )}
                     {isLoading ? (
                       <ul className="is-loading">
                         <li className="item">
@@ -863,7 +887,7 @@ export default function HighlightEditor() {
                   <button
                     type="button"
                     className="button button-primary w-full"
-                    disabled={selectedClipsLength === 0 || isLoading}
+                    disabled={selectedClipsLength === 0 || isLoading || hasError || hasCorruptedFiles}
                   >
                     <span>Create highlight</span>
                   </button>
@@ -916,6 +940,7 @@ export default function HighlightEditor() {
                   type="button"
                   className="button button-sm button-secondary w-56"
                   onClick={handlePlayPauseAllVideos}
+                  disabled={selectedClipsLength === 0 || isLoading || hasError || hasCorruptedFiles}
                 >
                   {isPlaying && playAllHasStarted ? (
                     <>
@@ -931,8 +956,18 @@ export default function HighlightEditor() {
                 </button>
               </div>
               <div className="relative flex justify-start z-0 overflow-y-hidden overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none">
+                {hasCorruptedFiles && (
+                  <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                  <span className="icon icon-warning-sign text-4xl text-ui-300" />
+                  <p>
+                    Corrupted clip files, we could not load them.
+                  </p>
+                </div>
+                )}
                 {isLoading ? (
                   <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0">
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
@@ -1009,6 +1044,15 @@ export default function HighlightEditor() {
             <div>
               <h3 className="text-sm">Global states:</h3>
               <div className="form-group pl-4 mt-2">
+              <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="state"
+                    id="state-loading"
+                    onChange={() => setIsLoading(!isLoading)}
+                  />
+                  <label htmlFor="state-loading">Loading state</label>
+                </div>
                 <div className="form-xs form-toggle">
                   <input
                     type="checkbox"
@@ -1032,11 +1076,12 @@ export default function HighlightEditor() {
                   <input
                     type="checkbox"
                     name="state"
-                    id="state-loading"
-                    onChange={() => setIsLoading(!isLoading)}
+                    id="state-corruptedfiles"
+                    onChange={() => setHasCorruptedFiles(!hasCorruptedFiles)}
                   />
-                  <label htmlFor="state-loading">Loading state</label>
+                  <label htmlFor="state-corruptedfiles">Corrupted file state</label>
                 </div>
+                
               </div>
             </div>
           </section>
