@@ -58,14 +58,18 @@ const Track = ({
       <div className="item-body pl-1">
         <div
           className={`item-title text-sm truncate ${
-            isPlaying && isPlayingID === id && id !== selectedTrackID ? "!text-ui-100" : "text-ui-300"
+            isPlaying && isPlayingID === id && id !== selectedTrackID
+              ? "!text-ui-100"
+              : "text-ui-300"
           } ${id === selectedTrackID ? "!text-main" : ""}`}
         >
           {name}
         </div>
         <div
           className={`item-description text-xs truncate ${
-            isPlaying && isPlayingID === id && id !== selectedTrackID ? "!text-ui-100" : "text-ui-400"
+            isPlaying && isPlayingID === id && id !== selectedTrackID
+              ? "!text-ui-100"
+              : "text-ui-400"
           } ${id === selectedTrackID ? "!text-main" : ""}`}
         >
           {artist}
@@ -83,7 +87,14 @@ const Track = ({
         </i>
       )}
       <div className="item-actions">
-        <div className="button button-tertiary button-sm rounded-full">
+        <img
+          src="https://res.cloudinary.com/gloot/image/upload/v1697790771/Stryda/icons/svg/bars-anim.svg"
+          alt=""
+          className={`h-4 w-4 transition-opacity ${
+            isPlaying && isPlayingID === id ? "opacity-100" : "opacity-0"
+          }`}
+        />
+        {/* <div className="button button-tertiary button-sm rounded-full">
           <span
             className={`icon ${
               isPlaying && isPlayingID === id
@@ -91,7 +102,7 @@ const Track = ({
                 : "icon-triangle-right"
             }`}
           />
-        </div>
+        </div> */}
       </div>
     </button>
   );
@@ -569,8 +580,21 @@ export default function HighlightEditor() {
   const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
   const [activeId, setActiveId] = useState(null);
   const mainVideoRef = useRef(0);
-  const currentVideoIndex = useRef(0);
+  const currentVideoIndex = useRef(1);
   const [hasError, setHasError] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    if (clips) {
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 4000);
+      const firstSelectedClip = initialClips.find(
+        (clip) => clip.isSelected === true
+      );
+      mainVideoRef.current.src = firstSelectedClip.url + ".mp4";
+    }
+  }, []);
 
   useEffect(() => {
     // console.log("Clips updated:", clips);
@@ -731,6 +755,17 @@ export default function HighlightEditor() {
                   </div>
                 </div>
                 <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
+                  {isLoading && (
+                    <div className="absolute inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-700">
+                      <div role="loading" className="loader loader-sm">
+                        <span className="sr-only">Loading...</span>
+                      </div>
+                      <p>
+                        Loading clips, this might take a few minutes.<br />Grab a
+                        glass of water and stay hydrated while you wait.
+                      </p>
+                    </div>
+                  )}
                   <video
                     //controls
                     ref={mainVideoRef}
@@ -756,20 +791,93 @@ export default function HighlightEditor() {
                     </li>
                   </ul>
                   <div className="relative flex-1">
-                    <Playlist />
+                    {isLoading ? (
+                      <ul className="is-loading">
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                        <li className="item">
+                          <div className="item-body">
+                            <div className="item-title">Loading</div>
+                          </div>
+                        </li>
+                      </ul>
+                    ) : (
+                      <Playlist />
+                    )}
                   </div>
                 </div>
                 <div className="p-2 text-center space-y-2 border-t border-ui-700 rounded-b bg-gradient-to-t from-ui-700 to-ui-800">
                   <button
                     type="button"
                     className="button button-primary w-full"
-                    disabled={selectedClipsLength === 0}
+                    disabled={selectedClipsLength === 0 || isLoading}
                   >
                     <span>Create highlight</span>
                   </button>
-                  <span className="text-xs leading-none">
+                  <span
+                    className={`text-xs leading-none ${
+                      isLoading ? "opacity-0" : ""
+                    }`}
+                  >
                     Estimated time to render:{" "}
-                    <b className="text-ui-100">{formatDuration(selectedClipsDuration * (selectedClipsLength * 22))}</b>
+                    <b className="text-ui-100">
+                      {formatDuration(
+                        selectedClipsDuration * (selectedClipsLength * 22)
+                      )}
+                    </b>
                   </span>
                 </div>
               </div>
@@ -823,21 +931,52 @@ export default function HighlightEditor() {
                 </button>
               </div>
               <div className="relative flex justify-start z-0 overflow-y-hidden overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none">
-                <DndContext
-                  sensors={sensors}
-                  modifiers={[restrictToHorizontalAxis]}
-                  collisionDetection={closestCenter}
-                  onDragEnd={handleDragEnd}
-                >
-                  <SortableContext
-                    items={clips}
-                    strategy={horizontalListSortingStrategy}
+                {isLoading ? (
+                  <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0">
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                    <li className="h-40 w-44 rounded-2 surface is-loading" />
+                  </ul>
+                ) : (
+                  <DndContext
+                    sensors={sensors}
+                    modifiers={[restrictToHorizontalAxis]}
+                    collisionDetection={closestCenter}
+                    onDragEnd={handleDragEnd}
                   >
-                    <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto">
-                      {clips?.map((item, itemIndex) => (
+                    <SortableContext
+                      items={clips}
+                      strategy={horizontalListSortingStrategy}
+                    >
+                      <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto">
+                        {clips?.map((item, itemIndex) => (
+                          <Clip
+                            key={item.id}
+                            item={item}
+                            onLoad={handleLoad}
+                            onSelect={handleSelect}
+                            isActive={clipPlayingID === item.id && isPlaying}
+                            clipPlayingPercent={clipPlayingPercent}
+                            showOnlySelected={showOnlySelected}
+                            hasError={hasError}
+                            selectedClipsLength={selectedClipsLength}
+                          />
+                        ))}
+                      </ul>
+                    </SortableContext>
+                    <DragOverlay
+                      dropAnimation={{
+                        duration: 0,
+                        easing: "cubic-bezier(0.18, 0.67, 0.6, 1.22)",
+                      }}
+                    >
+                      {activeId ? (
                         <Clip
-                          key={item.id}
-                          item={item}
+                          key={activeId}
+                          item={clips.findIndex((clip) => clip.id === activeId)}
                           onLoad={handleLoad}
                           onSelect={handleSelect}
                           isActive={clipPlayingID === item.id && isPlaying}
@@ -846,30 +985,10 @@ export default function HighlightEditor() {
                           hasError={hasError}
                           selectedClipsLength={selectedClipsLength}
                         />
-                      ))}
-                    </ul>
-                  </SortableContext>
-                  <DragOverlay
-                    dropAnimation={{
-                      duration: 0,
-                      easing: "cubic-bezier(0.18, 0.67, 0.6, 1.22)",
-                    }}
-                  >
-                    {activeId ? (
-                      <Clip
-                        key={activeId}
-                        item={clips.findIndex((clip) => clip.id === activeId)}
-                        onLoad={handleLoad}
-                        onSelect={handleSelect}
-                        isActive={clipPlayingID === item.id && isPlaying}
-                        clipPlayingPercent={clipPlayingPercent}
-                        showOnlySelected={showOnlySelected}
-                        hasError={hasError}
-                        selectedClipsLength={selectedClipsLength}
-                      />
-                    ) : null}
-                  </DragOverlay>
-                </DndContext>
+                      ) : null}
+                    </DragOverlay>
+                  </DndContext>
+                )}
               </div>
             </div>
           </section>
@@ -893,21 +1012,30 @@ export default function HighlightEditor() {
                 <div className="form-xs form-toggle">
                   <input
                     type="checkbox"
-                    name="feed"
-                    id="feed-premium"
+                    name="state"
+                    id="state-premium"
                     checked={prototype.isPremium}
                     onChange={() => prototype.togglePremium()}
                   />
-                  <label htmlFor="feed-premium">Premium state</label>
+                  <label htmlFor="state-premium">Premium state</label>
                 </div>
                 <div className="form-xs form-toggle">
                   <input
                     type="checkbox"
-                    name="feed"
-                    id="feed-error"
+                    name="state"
+                    id="state-error"
                     onChange={() => setHasError(!hasError)}
                   />
-                  <label htmlFor="feed-error">Error state</label>
+                  <label htmlFor="state-error">Error state</label>
+                </div>
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="state"
+                    id="state-loading"
+                    onChange={() => setIsLoading(!isLoading)}
+                  />
+                  <label htmlFor="state-loading">Loading state</label>
                 </div>
               </div>
             </div>
