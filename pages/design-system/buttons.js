@@ -61,7 +61,7 @@ const ButtonStretch = ({ children, ...props }) => {
   return (
     <button
       type="button"
-      className={`button button-stretch ${props.variant} ${props.unstretch} ${
+      className={`button ${props.responsive ? props.responsive : "button-stretch"} ${props.variant} ${
         isActive ? "is-active" : ""
       }`}
       onClick={() => setIsActive(!isActive)}
@@ -2060,7 +2060,7 @@ const DSpage = () => {
                   <div className="flex gap-4 justify-start">
                     <ButtonStretch
                       variant="button-secondary"
-                      unstretch="lg:button-unstretch"
+                      responsive="button-unstretch md:button-stretch"
                       isActive={true}
                     />
                   </div>
@@ -2072,7 +2072,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/b8cvks63/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/71kLaneo/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
               ></iframe>
             </div>
           </div>

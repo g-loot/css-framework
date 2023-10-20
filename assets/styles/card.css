@@ -1118,132 +1118,109 @@
   }
 }
 
-/* card-ladder */
 
-.card-ladder {
-  @apply
-  grid
-  grid-cols-3
-  items-stretch
-  ;
-  &:not([class*="h-"]) {
-    @apply 
-    min-h-[15rem]
+
+@layer components {
+  .card-ladder {
+    @apply
+    grid
+    grid-cols-3
+    items-stretch
     ;
-  }
-
-  .card-image {
-    @apply 
-    relative
-    col-span-3
-    md:col-span-1
-    flex
-    flex-col
-    items-start
-    justify-between
-    h-full
-    aspect-video
-    md:aspect-auto
-    ;
-
-    > .card-image-content {
-      @apply
-      relative
-      z-10
-      flex
-      flex-col
-      h-full
-      items-start
-      justify-between
-      p-4
+    &:not([class*="h-"]) {
+      @apply 
+      min-h-[15rem]
       ;
     }
 
-    > .card-image-bg {
-      @apply
-      absolute
-      z-0
-      right-0
-      inset-y-0
-      w-full
+    .card-image {
+      @apply 
+      relative
+      col-span-3
+      md:col-span-1
+      flex
+      flex-col
+      items-start
+      justify-between
+      h-full
+      aspect-video
+      md:aspect-auto
       ;
-      &::before,
-      &::after {
+
+      > .card-image-content {
         @apply
-        content-[""]
-        absolute
+        relative
         z-10
-        inset-y-0
-        w-1/2
+        flex
+        flex-col
+        h-full
+        items-start
+        justify-between
+        p-4
         ;
       }
-      &::before {
-        @apply
-        left-0
-        bg-gradient-to-r
-        from-ui-800/95
-        via-ui-800/70
-        to-ui-800/0
-        ;
-      }
-      &::after {
-        @apply
-        right-0
-        bg-gradient-to-r
-        from-ui-800/0
-        to-ui-800
-        ;
-      }
-      > img {
+
+      > .card-image-bg {
         @apply
         absolute
         z-0
-        object-right
-        object-cover
-        xl:object-cover
-        inset-0
+        right-0
+        inset-y-0
         w-full
-        h-full
         ;
+        &::before,
+        &::after {
+          @apply
+          content-[""]
+          absolute
+          z-10
+          inset-y-0
+          w-1/2
+          ;
+        }
+        &::before {
+          @apply
+          left-0
+          bg-gradient-to-r
+          from-ui-800/95
+          via-ui-800/70
+          to-ui-800/0
+          ;
+        }
+        &::after {
+          @apply
+          right-0
+          bg-gradient-to-r
+          from-ui-800/0
+          to-ui-800
+          ;
+        }
+        > img {
+          @apply
+          absolute
+          z-0
+          object-right
+          object-cover
+          xl:object-cover
+          inset-0
+          w-full
+          h-full
+          ;
+        }
       }
     }
-  }
 
-  .card-content {
-    @apply
-    relative
-    col-span-3
-    md:col-span-2
-    flex
-    flex-col
-    md:flex-row
-    p-4
-    ;
-
-    &:not([class*="items-"]) {
+    .card-content {
       @apply
-      items-stretch
-      ;
-    }
-    &:not([class*="justify-"]) {
-      @apply
-      justify-between
-      ;
-    }
-
-    > .card-body,
-    > .card-meta {
-      @apply
+      relative
+      col-span-3
+      md:col-span-2
       flex
-      gap-4
-      ;
-    }
-
-    > .card-body {
-      @apply
       flex-col
-      items-start
+      md:flex-row
+      p-4
       ;
+
       &:not([class*="items-"]) {
         @apply
         items-stretch
@@ -1254,286 +1231,305 @@
         justify-between
         ;
       }
-    }
 
-    > .card-meta {
-      @apply
-      grid
-      grid-flow-row
-      auto-rows-auto
-      justify-center
-      md:justify-end
-      mt-4
-      pt-4
-      border-t
-      border-ui-700
-      md:mt-0
-      md:pt-0
-      ;
-      &:not([class*="items-"]) {
-        @apply
-        items-start
-        md:items-end
-        ;
-      }
-      &:not([class*="justify-"]) {
-        @apply
-        justify-center
-        md:justify-between
-        ;
-      }
-      > *:first-child:last-child {
-        @apply
-        row-span-2
-        ;
-      }
-    }
-  }
-  &:not(.card-secondary) {
-    .card-content {
+      > .card-body,
       > .card-meta {
         @apply
-        md:border-t-0
+        flex
+        gap-4
         ;
       }
-    }
-  }
-}
 
-/* card ladder secondary */
-
-.card-ladder.card-secondary {
-  &::after {
-    @apply 
-    content-['']
-    absolute
-    z-50
-    inset-0
-    rounded
-    pointer-events-none
-    border
-    border-ui-700
-    ;
-  }
-  & {
-    @apply 
-    flex-none
-    w-full
-    min-w-xs
-    max-w-[calc(100vw-4rem)]
-    transition-[color,background,transform]
-    duration-200
-    ease-[cubic-bezier(.8,0,.3,1)]
-    transform-gpu
-    leading-tight
-    focus-visible:outline-none
-    active:outline-none
-    ;
-    &:active::after {
-      @apply
-      outline
-      outline-1
-      -outline-offset-1
-      outline-ui-400
-      ;
-    }
-    > .card-image,
-    > .card-content {
-      @apply 
-      relative
-      z-10
-      ;
-    }
-    > .card-content {
-      @apply flex-col
-      md:flex-col
-      md:col-span-3
-      bg-ui-800
-      overflow-hidden;
       > .card-body {
         @apply
-        gap-2
-        ;
-        :where(h2, h3, h4, h5) {
-          @apply
-          text-lg
-          block
-          truncate
-          w-[calc(99%)]
-          ;
-        }
-      }
-      > .card-meta {
-        @apply 
-        mt-4
-        flex
-        justify-between
-        items-center
+        flex-col
+        items-start
         ;
         &:not([class*="items-"]) {
-          @apply 
-          md:items-stretch
+          @apply
+          items-stretch
           ;
         }
         &:not([class*="justify-"]) {
-          @apply 
+          @apply
+          justify-between
+          ;
+        }
+      }
+
+      > .card-meta {
+        @apply
+        grid
+        grid-flow-row
+        auto-rows-auto
+        justify-center
+        md:justify-end
+        mt-4
+        pt-4
+        border-t
+        border-ui-700
+        md:mt-0
+        md:pt-0
+        ;
+        &:not([class*="items-"]) {
+          @apply
+          items-start
+          md:items-end
+          ;
+        }
+        &:not([class*="justify-"]) {
+          @apply
+          justify-center
           md:justify-between
           ;
         }
-        &:last-child {
-          @apply 
-          pt-4
-          border-t
-          border-ui-700
-          ;
-        }
-      }
-    }
-    > .card-image {
-      @apply
-      w-full
-      aspect-cover
-      overflow-hidden
-      ;
-      > .card-image-content {
-        @apply 
-        w-full
-        flex-row
-        items-start
-        justify-between
-        p-2
-        ;
-      }
-    }
-    > .card-image-bg {
-      @apply 
-      absolute
-      z-0
-      right-0
-      inset-y-0
-      w-full
-      rounded
-      rounded-b-none
-      overflow-hidden
-      aspect-cover
-      ;
-      > img {
-        @apply 
-        aspect-auto
-        absolute
-        inset-0
-        object-cover
-        object-center
-        transition-all
-        duration-500
-        ease-[cubic-bezier(.2,0,.2,1)]
-        ;
-      }
-    }
-    .card-status {
-      @apply 
-      text-blue-300
-      ;
-    }
-  }
-
-  & {
-    @apply 
-    grid-cols-1
-    md:max-w-[397px]
-    ;
-    > .card-image {
-      @apply 
-      md:col-span-3
-      aspect-cover
-      ;
-    }
-    > .card-content {
-      @apply 
-      rounded-b
-      ;
-    }
-  }
-
-  &.card-premium {
-    .card-image {
-      > .card-image-content {
-        @apply
-        border-b-4
-        border-b-premium-500
-        ;
-      }
-    }
-    > .card-content {
-      > .card-body {
-        :where(h2, h3, h4, h5) {
+        > *:first-child:last-child {
           @apply
-          w-[calc(99%-1.5rem)]
+          row-span-2
+          ;
+        }
+      }
+    }
+    &:not(.card-secondary) {
+      .card-content {
+        > .card-meta {
+          @apply
+          md:border-t-0
           ;
         }
       }
     }
   }
-
-  &.interactive {
-    &:hover {
-      @apply
-      opacity-100
-      ;
-      .card-image-bg img {
-        @apply
-        brightness-150
-        scale-105
-        ;
-      }
-    }
-  }
-
-  &.card-fluid {
-    @apply
-    min-w-[0]
-    max-w-[none]
-    md:!max-w-[none]
-    ;
-    > .card-image {
-      @apply
-      flex-auto
-      ;
-    }
-  }
-
-  &.card-sm {
-    .card-content {
-      @apply
-      bg-ui-700
-      ;
-      .card-meta {
-        @apply
-        border-ui-600
-        ;
-      }
-      :where(h2, h3, h4, h5) {
-        @apply
-        text-base
-        normal-case
-        ;
-      }
-      [class*=border-ui-700] {
-        @apply
-        border-ui-600
-        ;
-      }
-    }
+  .card-ladder.card-secondary {
     &::after {
       @apply 
-      border-ui-600
+      content-['']
+      absolute
+      z-50
+      inset-0
+      rounded
+      pointer-events-none
+      border
+      border-ui-700
       ;
     }
-  }
-}
+    & {
+      @apply 
+      flex-none
+      w-full
+      min-w-xs
+      max-w-[calc(100vw-4rem)]
+      transition-[color,background,transform]
+      duration-200
+      ease-[cubic-bezier(.8,0,.3,1)]
+      transform-gpu
+      leading-tight
+      focus-visible:outline-none
+      active:outline-none
+      ;
+      &:active::after {
+        @apply
+        outline
+        outline-1
+        -outline-offset-1
+        outline-ui-400
+        ;
+      }
+      > .card-image,
+      > .card-content {
+        @apply 
+        relative
+        z-10
+        ;
+      }
+      > .card-content {
+        @apply flex-col
+        md:flex-col
+        md:col-span-3
+        bg-ui-800
+        overflow-hidden;
+        > .card-body {
+          @apply
+          gap-2
+          ;
+          :where(h2, h3, h4, h5) {
+            @apply
+            text-lg
+            block
+            truncate
+            w-[calc(99%)]
+            ;
+          }
+        }
+        > .card-meta {
+          @apply 
+          mt-4
+          flex
+          justify-between
+          items-center
+          ;
+          &:not([class*="items-"]) {
+            @apply 
+            md:items-stretch
+            ;
+          }
+          &:not([class*="justify-"]) {
+            @apply 
+            md:justify-between
+            ;
+          }
+          &:last-child {
+            @apply 
+            pt-4
+            border-t
+            border-ui-700
+            ;
+          }
+        }
+      }
+      > .card-image {
+        @apply
+        w-full
+        aspect-cover
+        overflow-hidden
+        ;
+        > .card-image-content {
+          @apply 
+          w-full
+          flex-row
+          items-start
+          justify-between
+          p-2
+          ;
+        }
+      }
+      > .card-image-bg {
+        @apply 
+        absolute
+        z-0
+        right-0
+        inset-y-0
+        w-full
+        rounded
+        rounded-b-none
+        overflow-hidden
+        aspect-cover
+        ;
+        > img {
+          @apply 
+          aspect-auto
+          absolute
+          inset-0
+          object-cover
+          object-center
+          transition-all
+          duration-500
+          ease-[cubic-bezier(.2,0,.2,1)]
+          ;
+        }
+      }
+      .card-status {
+        @apply 
+        text-blue-300
+        ;
+      }
+    }
 
-@define-mixin card-ladder-horizontal {
-  & {
+    & {
+      @apply 
+      grid-cols-1
+      md:max-w-[397px]
+      ;
+      > .card-image {
+        @apply 
+        md:col-span-3
+        aspect-cover
+        ;
+      }
+      > .card-content {
+        @apply 
+        rounded-b
+        ;
+      }
+    }
+
+    &.card-premium {
+      .card-image {
+        > .card-image-content {
+          @apply
+          border-b-4
+          border-b-premium-500
+          ;
+        }
+      }
+      > .card-content {
+        > .card-body {
+          :where(h2, h3, h4, h5) {
+            @apply
+            w-[calc(99%-1.5rem)]
+            ;
+          }
+        }
+      }
+    }
+
+    &.interactive {
+      &:hover {
+        @apply
+        opacity-100
+        ;
+        .card-image-bg img {
+          @apply
+          brightness-150
+          scale-105
+          ;
+        }
+      }
+    }
+
+    &.card-fluid {
+      @apply
+      min-w-[0]
+      max-w-[none]
+      md:!max-w-[none]
+      ;
+      > .card-image {
+        @apply
+        flex-auto
+        ;
+      }
+    }
+
+    &.card-sm {
+      .card-content {
+        @apply
+        bg-ui-700
+        ;
+        .card-meta {
+          @apply
+          border-ui-600
+          ;
+        }
+        :where(h2, h3, h4, h5) {
+          @apply
+          text-base
+          normal-case
+          ;
+        }
+        [class*=border-ui-700] {
+          @apply
+          border-ui-600
+          ;
+        }
+      }
+      &::after {
+        @apply 
+        border-ui-600
+        ;
+      }
+    }
+  }
+  .card-ladder-horizontal {
     @apply 
     flex
     flex-row
@@ -1571,42 +1567,6 @@
         left-auto
         ;
       }
-    }
-  }
-}
-.card-ladder {
-  &.card-horizontal {
-    @mixin card-ladder-horizontal;
-  }
-}
-
-/* responsive card ladder secondary stacked  */
-
-@screen sm {
-  .card-ladder.card-secondary {
-    &.sm\:card-horizontal {
-      @mixin card-ladder-horizontal;
-    }
-  }
-}
-@screen md {
-  .card-ladder.card-secondary {
-    &.md\:card-horizontal {
-      @mixin card-ladder-horizontal;
-    }
-  }
-}
-@screen lg {
-  .card-ladder.card-secondary {
-    &.lg\:card-horizontal {
-      @mixin card-ladder-horizontal;
-    }
-  }
-}
-@screen xl {
-  .card-ladder.card-secondary {
-    &.xl\:card-horizontal {
-      @mixin card-ladder-horizontal;
     }
   }
 }

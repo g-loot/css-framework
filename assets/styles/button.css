@@ -4,133 +4,130 @@
 /* BUTTON */
 /*----------------------------*/
 
-
-@layer components {
-  .btn-blue {
-    @apply bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded;
-  }
-}
-
-.button-blue {
-  @apply
-  btn-blue
-  ;
-}
-
 button {
   text-align: inherit;
 }
 
-.button {
-  @apply
-  leading-none
-  border-0
-  inline-flex
-  justify-center
-  items-center
-  text-center
-  cursor-pointer
-  px-3
-  py-2.5
-  transition-[color,background,transform]
-  duration-200
-  ease-in-out
-  outline
-  outline-offset-2
-  outline-1
-  outline-interaction-500/0
-  focus-visible:outline
-  focus-visible:outline-offset-2
-  focus-visible:outline-1
-  text-ui-800
-  select-none
-  bg-[length:500%_auto]
-  font-body
-  uppercase
-  transform-gpu
-  shrink-0
-  rounded-full
-  ;
-  outline-radius: 100%;
-
-  &:not([disabled]),
-  &:not(.is-disabled) {
+@layer components {
+  .button {
     @apply
-    active:outline
-    active:outline-offset-2
-    active:outline-1
-    ;
-  }
-
-  .icon {
-    @apply
-    font-icon
-    ;
-  }
-
-  &:not(.button-secondary):not(.button-tertiary):not(.button-ghost):not(.button-error):not(.button-success):not(.button-premium),
-  &.button-primary,
-  &.button-claim {
-    @apply
-    bg-interaction-500
+    leading-none
+    border-0
+    inline-flex
+    justify-center
+    items-center
+    text-center
+    cursor-pointer
+    px-3
+    py-2.5
+    transition-[color,background,transform]
+    duration-200
+    ease-in-out
+    outline
+    outline-offset-2
+    outline-1
     outline-interaction-500/0
-    focus-visible:outline-interaction-500
+    focus-visible:outline
+    focus-visible:outline-offset-2
+    focus-visible:outline-1
+    text-ui-800
+    select-none
+    bg-[length:500%_auto]
+    font-body
+    uppercase
+    transform-gpu
+    shrink-0
+    rounded-full
     ;
-    
-    &:not([disabled]),
-    &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply 
-        bg-interaction-300
-        ;
-      }
-    }
+    outline-radius: 100%;
+  
     &:not([disabled]),
     &:not(.is-disabled) {
       @apply
-      active:outline-interaction-300
+      active:outline
+      active:outline-offset-2
+      active:outline-1
+      ;
+    }
+  
+    .icon {
+      @apply
+      font-icon
+      ;
+    }
+  
+    &:not(.button-secondary):not(.button-tertiary):not(.button-ghost):not(.button-error):not(.button-success):not(.button-premium),
+    &.button-primary,
+    &.button-claim {
+      @apply
+      bg-interaction-500
+      outline-interaction-500/0
+      focus-visible:outline-interaction-500
+      ;
+      
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply 
+          bg-interaction-300
+          ;
+        }
+      }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        @apply
+        active:outline-interaction-300
+        ;
+      }
+    }
+  
+    &:not(.switch):not(.button-stretch):not(.button-currency) {
+      @apply
+      gap-2
+      ;
+      > * {
+        &:first-child {
+          @apply
+          ml-0.5
+          ;
+        }
+        &:last-child {
+          @apply
+          mr-0.5
+          ;
+        }
+        &:first-child:last-child {
+          @apply
+          mx-0
+          ;
+        }
+        &:not([class*='icon']) {
+          @apply
+          mb-0
+          ;
+        }
+      }
+    }
+    
+    &[class*='rounded-full'],
+    &.button-play {
+      @apply
+      px-2.5
       ;
     }
   }
+}
 
-  &:not(.switch):not(.button-stretch):not(.button-currency) {
-    @apply
-    gap-2
-    ;
-    > * {
-      &:first-child {
-        @apply
-        ml-0.5
-        ;
-      }
-      &:last-child {
-        @apply
-        mr-0.5
-        ;
-      }
-      &:first-child:last-child {
-        @apply
-        mx-0
-        ;
-      }
-      &:not([class*='icon']) {
-        @apply
-        mb-0
-        ;
-      }
-    }
-  }
-  
-  /* Variants */
-
-  &.button-primary,
-  &.button-claim {
+/* Variants */
+@layer components {
+  .button-primary,
+  .button-claim {
     @apply 
     bg-interaction-500
     ;
   }
-  &.button-secondary {
+  .button-secondary {
     @apply 
     bg-ui-600
     text-ui-200
@@ -156,7 +153,6 @@ button {
         ;
       }
     }
-
     &.button-currency {
       > div:nth-of-type(2) {
         @apply
@@ -165,7 +161,7 @@ button {
       }
     }
   }
-  &.button-tertiary {
+  .button-tertiary {
     @apply 
     bg-ui-600
     text-ui-200
@@ -190,8 +186,7 @@ button {
       }
     }
   }
-
-  &.button-ghost {
+  .button-ghost {
     @apply 
     bg-ui-800/0
     text-ui-200
@@ -224,8 +219,7 @@ button {
       ;
     }
   }
- 
-  &.button-error {
+  .button-error {
     @apply 
     bg-error-500
     ;
@@ -246,7 +240,7 @@ button {
       }
     }
   }
-  &.button-success {
+  .button-success {
     @apply 
     bg-success-500
     ;
@@ -267,7 +261,7 @@ button {
       }
     }
   }
-  &.button-premium {
+  .button-premium {
     @apply 
     bg-premium-500
     ;
@@ -288,107 +282,43 @@ button {
       }
     }
   }
-  /*
-  &.button-premium {
-    @apply 
-    bg-gradient-to-r
-    from-premium-500
-    via-premium-500
-    to-premium-300
-    shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),0)]
-    ;
-
-    > * {
+  .button-play {
       @apply
-      drop-shadow-[0_-1px_0_rgba(var(--color-premium-300)/50%)]
+      rounded-full
+      gap-3
       ;
-    }
-
-    &:not([disabled]),
-    &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
+      
+      .icon {
         @apply
-        shadow-[inset_0_0_0_1px_rgba(var(--color-premium-300),50%)]
+        transition-transform
+        duration-200
+        ease-in-out
+        scale-150
+        ml-0
         ;
-      }
-    }
-  }
-  */
-  /*
-  &.button-claim {
-    @apply 
-    bg-gradient-to-r
-    from-purple-700
-    via-info-500
-    to-info-500
-    text-mono-100
-    bg-[length:200%_auto]
-    shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),0)]
-    ;
-
-    > * {
-      @apply
-      shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
-      ;
-    }
-
-    &:not([disabled]),
-    &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply
-        shadow-[inset_0_0_0_1px_rgba(var(--color-info-300),50%)]
-      }
-    }
-  }
-  */
-  &[class*='rounded-full'],
-  &.button-play {
-    @apply
-    px-2.5
-    ;
-  }
-  &.button-play {
-    @apply
-    rounded-full
-    gap-3
-    ;
-    
-    .icon {
-      @apply
-      transition-transform
-      duration-200
-      ease-in-out
-      scale-150
-      ml-0
-      ;
-
-      ~ *:last-child {
-        @apply
-        mr-1
-        ;
-      }
-    }
-
-    &:not([disabled]),
-    &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
-        .icon {
+        ~ *:last-child {
           @apply
-          scale-100
+          mr-1
           ;
         }
       }
-    }
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          .icon {
+            @apply
+            scale-100
+            ;
+          }
+        }
+      }
   }
 }
 
 /* Sizes */
-
-@define-mixin button-lg {
-  & {
+@layer components {
+  .button-lg {
     @apply
     py-3
     px-5
@@ -406,22 +336,7 @@ button {
       ;
     }
   }
-}
-@define-mixin button-md {
-  & {
-    @apply
-    py-2.5
-    ;
-    &[class*='rounded-full'],
-    &.button-play {
-      @apply
-      px-2.5
-      ;
-    }
-  }
-}
-@define-mixin button-sm {
-  & {
+  .button-sm {
     @apply
     py-2
     text-sm
@@ -438,9 +353,7 @@ button {
       ;
     }
   }
-}
-@define-mixin button-xs {
-  & {
+  .button-xs {
     @apply
     py-1.5
     text-xs
@@ -456,20 +369,6 @@ button {
       px-1.5
       ;
     }
-  }
-}
-.button {
-  &.button-lg {
-    @mixin button-lg;
-  }
-  &.button-md {
-    @mixin button-md;
-  }
-  &.button-sm {
-    @mixin button-sm;
-  }
-  &.button-xs {
-    @mixin button-xs;
   }
 }
 
@@ -1139,74 +1038,6 @@ button {
   }
 }
 
-
-/* responsive sizes */
-
-@screen sm {
-	.button {
-    &.sm\:button-lg {
-      @mixin button-lg;
-    }
-    &.sm\:button-md {
-      @mixin button-md;
-    }
-    &.sm\:button-sm {
-      @mixin button-sm;
-    }
-    &.sm\:button-xs {
-      @mixin button-xs;
-    }
-  }
-}
-@screen md {
-	.button {
-    &.md\:button-lg {
-      @mixin button-lg;
-    }
-    &.md\:button-md {
-      @mixin button-md;
-    }
-    &.md\:button-sm {
-      @mixin button-sm;
-    }
-    &.md\:button-xs {
-      @mixin button-xs;
-    }
-  }
-}
-@screen lg {
-	.button {
-    &.lg\:button-lg {
-      @mixin button-lg;
-    }
-    &.lg\:button-md {
-      @mixin button-md;
-    }
-    &.lg\:button-sm {
-      @mixin button-sm;
-    }
-    &.lg\:button-xs {
-      @mixin button-xs;
-    }
-  }
-}
-@screen xl {
-	.button {
-    &.xl\:button-lg {
-      @mixin button-lg;
-    }
-    &.xl\:button-md {
-      @mixin button-md;
-    }
-    &.xl\:button-sm {
-      @mixin button-sm;
-    }
-    &.xl\:button-xs {
-      @mixin button-xs;
-    }
-  }
-}
-
 /* Button loader */
 
 .button {
@@ -1286,71 +1117,104 @@ button {
 
 /* Button stretch */
 
-/* Button stretch functionality */
-
-.button-stretch {
-  @apply
-  !gap-0
-  py-2
-  ;
-  > span {
-    &:not(.icon) {
-      @apply
-      !m-0
-      overflow-hidden
-      whitespace-nowrap
-      normal-case
-      leading-[1.25]
-      items-center
-      justify-center
-      !grid
-      !grid-cols-[0fr]
-      !transition-[grid-template-columns,opacity,width]
-      !ease-[cubic-bezier(0.6,0,0.4,1)]
-      !duration-500
-      ;
-      > * {
+@layer components {
+  .button-stretch,
+  .button-unstretch {
+    @apply
+    !gap-0
+    py-2
+    ;
+    > span {
+      &:not(.icon) {
         @apply
-        !px-0
-        !transition
+        !m-0
+        overflow-hidden
+        whitespace-nowrap
+        normal-case
+        leading-[1.25]
+        items-center
+        justify-center
+        !grid
+        !grid-cols-[0fr]
+        !transition-[grid-template-columns,opacity,width]
         !ease-[cubic-bezier(0.6,0,0.4,1)]
         !duration-500
-        delay-300
-        !overflow-hidden
-        !flex
-        !opacity-0
-        before:content-['']
-        after:content-['']
         ;
-      }
-      &:first-of-type {
         > * {
           @apply
-          before:w-1
-          after:w-2
+          !px-0
+          !transition
+          !ease-[cubic-bezier(0.6,0,0.4,1)]
+          !duration-500
+          delay-300
+          !overflow-hidden
+          !flex
+          !opacity-0
+          before:content-['']
+          after:content-['']
           ;
         }
+        &:first-of-type {
+          > * {
+            @apply
+            before:w-1
+            after:w-2
+            ;
+          }
+        }
+        &:not(:first-of-type) {
+          > * {
+            @apply
+            before:w-2
+            after:w-1
+            ;
+          }
+        }
       }
-      &:not(:first-of-type) {
-        > * {
+    }
+    &.is-active {
+      > span {
+        &:not(.icon) {
           @apply
-          before:w-2
-          after:w-1
+          !grid-cols-[1fr]
           ;
+          > * {
+            @apply
+            !opacity-100
+            ;
+          }
         }
       }
     }
   }
-  &.is-active {
-    > span {
-      &:not(.icon) {
-        @apply
-        !grid-cols-[1fr]
-        ;
-        > * {
+  .button-stretch {
+    &.is-active {
+      > span {
+        &:not(.icon) {
           @apply
-          !opacity-100
+          !grid-cols-[1fr]
           ;
+          > * {
+            @apply
+            !opacity-100
+            ;
+          }
+        }
+      }
+    }
+  }
+  .button-unstretch {
+    &.is-active {
+      > span {
+        &:not(.icon) {
+          @apply
+          !grid-cols-[0fr]
+          ;
+          > * {
+            @apply
+            !opacity-0
+            ;
+          }
         }
       }
     }
@@ -1358,10 +1222,14 @@ button {
 }
 
 .button {
-  &.button-stretch {
+  &.button-stretch,
+  &.button-unstretch {
     @apply
+    !gap-0
     px-2.5
     ;
+  }
+  &.button-stretch {
     > span {
       &:not(.icon) {
         > * {
@@ -1380,58 +1248,6 @@ button {
             ;
           }
         }
-      }
-    }
-  }
-}
-
-@define-mixin button-unstretch {
-  & {
-    > span {
-      &:not(.icon) {
-        @apply
-        !grid-cols-[0fr]
-        ;
-      }
-    }
-  }
-}
-
-.button-stretch,
-.button-stretch.is-active {
-  &.button-unstretch {
-    @mixin button-unstretch;
-  }
-}
-
-/* responsive sizes */
-
-.button-stretch,
-.button-stretch.is-active {
-  @media (max-width: theme('screens.sm')) {
-    &.sm\:button-unstretch {
-      @mixin button-unstretch;
-    }
-  }
-  @media (max-width: theme('screens.md')) {
-    &.md\:button-unstretch {
-      @mixin button-unstretch;
-    }
-  }
-  @media (max-width: theme('screens.lg')) {
-    &.lg\:button-unstretch {
-      @mixin button-unstretch;
-    }
-  }
-  @media (max-width: theme('screens.xl')) {
-    &.xl\:button-unstretch {
-      @mixin button-unstretch;
-    }
-  }
-  @media (max-width: theme('screens.2xl')) {
-    & {
-      &.2xl\:button-unstretch {
-        @mixin button-unstretch;
       }
     }
   }

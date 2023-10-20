@@ -649,7 +649,7 @@ const DSpage = () => {
                   above 768px (md).
                 </div>
                 <div className="flex-1">
-                  <ul className="tabs tabs-vertical sm:tabs-horizontal w-full">
+                  <ul className="tabs tabs-vertical md:tabs-horizontal w-full">
                     {tabItems.map((item, itemIndex) => (
                       <li key={itemIndex}>
                         <button

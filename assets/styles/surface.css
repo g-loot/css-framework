@@ -2,9 +2,11 @@
 /* SURFACE */
 /*----------------------------*/
 
-@define-mixin surface-ui-900 {
-  & {
+
+@layer components {
+  .surface-ui-900 {
     @apply
+    relative
     bg-ui-900
     border
     border-ui-800
@@ -15,10 +17,10 @@
       ;
     }
   }
-}
-@define-mixin surface-ui-800 {
-  & {
+  .surface-ui-800,
+  .surface {
     @apply
+    relative
     bg-ui-800
     border
     border-ui-700
@@ -29,10 +31,9 @@
       ;
     }
   }
-}
-@define-mixin surface-ui-700 {
-  & {
+  .surface-ui-700 {
     @apply
+    relative
     bg-ui-700
     border
     border-ui-600
@@ -43,10 +44,9 @@
       ;
     }
   }
-}
-@define-mixin surface-ui-600 {
-  & {
+  .surface-ui-600 {
     @apply
+    relative
     bg-ui-600
     border
     border-ui-500
@@ -57,10 +57,9 @@
       ;
     }
   }
-}
-@define-mixin surface-ui-500 {
-  & {
+  .surface-ui-500 {
     @apply
+    relative
     bg-ui-500
     border
     border-ui-400/20
@@ -71,19 +70,17 @@
       ;
     }
   }
-}
-@define-mixin surface-dimmed {
-  & {
+  .surface-dimmed {
     @apply
+    relative
     bg-ui-850
     border
     border-ui-700/50
     ;
   }
-}
-@define-mixin surface-premium {
-  & {
+  .surface-premium {
     @apply
+    relative
     border
     border-premium-700/25
     bg-ui-800
@@ -94,10 +91,9 @@
       ;
     }
   }
-}
-@define-mixin surface-main {
-  & {
+  .surface-main {
     @apply
+    relative
     border
     border-main
     bg-ui-800
@@ -110,12 +106,6 @@
   }
 }
 
-.surface {
-  @apply
-  relative
-  ;
-  @mixin surface-ui-800;
-}
 
 .surface {
   &.surface-highlight,
@@ -250,145 +240,5 @@
     duration-100
     hover:border-ui-500
     ;
-  }
-}
-
-/* colors */
-.surface-dimmed {
-  @mixin surface-dimmed;
-}
-.surface-ui-900 {
-  @mixin surface-ui-900;
-}
-.surface-ui-800 {
-  @mixin surface-ui-800;
-}
-.surface-ui-700 {
-  @mixin surface-ui-700;
-}
-.surface-ui-600 {
-  @mixin surface-ui-600;
-}
-.surface-ui-500 {
-  @mixin surface-ui-500;
-}
-.surface-premium {
-  @mixin surface-ui-500;
-}
-.surface-premium {
-  @mixin surface-premium;
-}
-.surface-main {
-  @mixin surface-main;
-}
-
-/* responsive surfaces */
-
-@screen sm {
-  .sm\:surface-ui-900 {
-    @mixin surface-ui-900;
-  }
-	.sm\:surface,
-	.sm\:surface-ui-800 {
-    @mixin surface-ui-800;
-  }
-  .sm\:surface-ui-700 {
-    @mixin surface-ui-700;
-  }
-  .sm\:surface-ui-600 {
-    @mixin surface-ui-600;
-  }
-  .sm\:surface-ui-500 {
-    @mixin surface-ui-500;
-  }
-  .sm\:surface-dimmed {
-    @mixin surface-dimmed;
-  }
-  .sm\:surface-premium {
-    @mixin surface-premium;
-  }
-  .sm\:surface-main {
-    @mixin surface-main;
-  }
-}
-@screen md {
-	.md\:surface-ui-900 {
-    @mixin surface-ui-900;
-  }
-	.md\:surface,
-	.md\:surface-ui-800 {
-    @mixin surface-ui-800;
-  }
-  .md\:surface-ui-700 {
-    @mixin surface-ui-700;
-  }
-  .md\:surface-ui-600 {
-    @mixin surface-ui-600;
-  }
-  .md\:surface-ui-500 {
-    @mixin surface-ui-500;
-  }
-  .md\:surface-dimmed {
-    @mixin surface-dimmed;
-  }
-  .md\:surface-premium {
-    @mixin surface-premium;
-  }
-  .md\:surface-main {
-    @mixin surface-main;
-  }
-}
-@screen lg {
-	.lg\:surface-ui-900 {
-    @mixin surface-ui-900;
-  }
-	.lg\:surface,
-	.lg\:surface-ui-800 {
-    @mixin surface-ui-800;
-  }
-  .lg\:surface-ui-700 {
-    @mixin surface-ui-700;
-  }
-  .lg\:surface-ui-600 {
-    @mixin surface-ui-600;
-  }
-  .lg\:surface-ui-500 {
-    @mixin surface-ui-500;
-  }
-  .lg\:surface-dimmed {
-    @mixin surface-dimmed;
-  }
-  .lg\:surface-premium {
-    @mixin surface-premium;
-  }
-  .lg\:surface-main {
-    @mixin surface-main;
-  }
-}
-@screen xl {
-	.xl\:surface-ui-900 {
-    @mixin surface-ui-900;
-  }
-	.xl\:surface,
-	.xl\:surface-ui-800 {
-    @mixin surface-ui-800;
-  }
-  .xl\:surface-ui-700 {
-    @mixin surface-ui-700;
-  }
-  .xl\:surface-ui-600 {
-    @mixin surface-ui-600;
-  }
-  .xl\:surface-ui-500 {
-    @mixin surface-ui-500;
-  }
-  .xl\:surface-dimmed {
-    @mixin surface-dimmed;
-  }
-  .xl\:surface-premium {
-    @mixin surface-premium;
-  }
-  .xl\:surface-main {
-    @mixin surface-main;
   }
 }

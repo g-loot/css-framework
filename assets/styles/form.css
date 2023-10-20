@@ -969,7 +969,7 @@ label.button {
       + label {
         &::after {
           @apply
-          translate-x-2.5
+          translate-x-2
           ;
         }
       }

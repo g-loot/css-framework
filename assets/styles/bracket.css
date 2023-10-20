@@ -113,11 +113,9 @@
       @apply
       flex-1
       block
-      font-headings
-      italic
-      text-lg
       leading-none
       text-ui-300
+      font-normal
       ;
     }
     &.is-active {
@@ -130,6 +128,7 @@
     i {
       @apply
       not-italic
+      font-bold
       h-[30px]
       w-[30px]
       leading-[30px]
@@ -138,7 +137,6 @@
       from-ui-900
       to-ui-800
       text-center
-      font-headings
       text-lg
     }
   }
@@ -167,6 +165,7 @@
   .bracket-info {
     @apply
     h-6
+    whitespace-nowrap
     ;
   }
   .bracket-meta {
@@ -269,7 +268,6 @@
     leading-none
     flex-none
     text-center
-    font-headings
     text-lg
     bg-ui-800/50
     backdrop-blur-sm

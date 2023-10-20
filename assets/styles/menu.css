@@ -2,272 +2,270 @@
 /* MENU */
 /*----------------------------*/
 
-.menu {
-  @apply
-  m-0
-  p-0
-  list-none
-  transform-gpu
-  ;
 
-  &.menu-rounded {
+@layer components {
+  .menu {
+    @apply
+    m-0
+    p-0
+    list-none
+    transform-gpu
+    ;
+  
+    &.menu-rounded {
+      :where(a, button, div) {
+        @apply
+        rounded
+        overflow-hidden
+        ;
+      }
+    }
+  
+    :where(li) {
+      @apply
+      transition-all
+      duration-200
+      ease-in-out
+      w-full
+      ;
+    }
+  
     :where(a, button, div) {
       @apply
-      rounded
-      overflow-hidden
-      ;
-    }
-  }
-
-  :where(li) {
-    @apply
-    transition-all
-    duration-200
-    ease-in-out
-    w-full
-    ;
-  }
-
-  :where(a, button, div) {
-    @apply
-    relative
-    inline-flex
-    w-full
-    items-center
-    space-x-2
-    /* text-ui-300 */
-    cursor-pointer
-    transition-all
-    duration-200
-    ease-[cubic-bezier(.7,0,.3,1)]
-    outline-none
-    focus-visible:outline-none
-    ;
-
-    &:focus-visible {
-      &::before {
-        @apply
-        outline
-        outline-1
-        outline-main
-        ;
-      }
-    }
-
-    &:not([class*="p-"]) {
-      @apply
-      px-2
-      py-2
-      ;
-    }
-    
-    > * {
-      @apply
       relative
-      z-20
-      select-none
-      transition
-      ease-linear
-      duration-75
-      flex
+      inline-flex
+      w-full
       items-center
-      gap-1
-      ;
-
-      &:not([class*='icon']) {
-        /*
-        @apply 
-        block
-        ;
-        */
-      }
-      &.icon {
-        @apply
-        text-base
-        ;
-      }
-    }
-    &::before {
-      @apply 
-      content-['']
-      absolute
-      z-20
-      inset-0.5
-      rounded
-      pointer-events-none
-      ;
-    }
-
-    &::after {
-      @apply 
-      absolute
-      z-10
-      content-['']
-      inset-0
-      bg-ui-700
+      space-x-2
+      /* text-ui-300 */
+      cursor-pointer
       transition-all
       duration-200
       ease-[cubic-bezier(.7,0,.3,1)]
-      opacity-0
-      scale-y-0
-      translate-y-2
+      outline-none
+      focus-visible:outline-none
       ;
-    }
-
-    &:hover,
-    &:focus-visible,
-    &.is-active {
-      &,
-      > * {
+  
+      &:focus-visible {
+        &::before {
+          @apply
+          outline
+          outline-1
+          outline-main
+          ;
+        }
+      }
+  
+      &:not([class*="p-"]) {
         @apply
-        z-20
+        px-2
+        py-2
         ;
       }
       
-      &::after {
+      > * {
         @apply
-        opacity-100
-        scale-y-100
-        translate-y-0
+        relative
+        z-20
+        select-none
+        transition
+        ease-linear
         duration-75
+        flex
+        items-center
+        gap-1
+        ;
+  
+        &:not([class*='icon']) {
+          /*
+          @apply 
+          block
+          ;
+          */
+        }
+        &.icon {
+          @apply
+          text-base
+          ;
+        }
+      }
+      &::before {
+        @apply 
+        content-['']
+        absolute
+        z-20
+        inset-0.5
+        rounded
+        pointer-events-none
         ;
       }
-    }
-
-    &:hover,
-    &:focus-visible {
-      &,
-      > * {
-        @apply
-        text-mono-100
+  
+      &::after {
+        @apply 
+        absolute
+        z-10
+        content-['']
+        inset-0
+        bg-ui-700
+        transition-all
+        duration-200
+        ease-[cubic-bezier(.7,0,.3,1)]
+        opacity-0
+        scale-y-0
+        translate-y-2
         ;
       }
-    }
-
-    &.is-active {
-      &,
-      > * {
-        @apply
-        text-main
-        ;
-      }
-    }
-
-    &:active {
+  
       &:hover,
-      &:focus {
+      &:focus-visible,
+      &.is-active {
         &,
+        > * {
+          @apply
+          z-20
+          ;
+        }
+        
         &::after {
           @apply
-          bg-ui-700/25
+          opacity-100
+          scale-y-100
+          translate-y-0
+          duration-75
+          ;
+        }
+      }
+  
+      &:hover,
+      &:focus-visible {
+        &,
+        > * {
+          @apply
+          text-mono-100
+          ;
+        }
+      }
+  
+      &.is-active {
+        &,
+        > * {
+          @apply
+          text-main
+          ;
+        }
+      }
+  
+      &:active {
+        &:hover,
+        &:focus {
+          &,
+          &::after {
+            @apply
+            bg-ui-700/25
+            ;
+          }
+        }
+      }
+    }
+  
+    :where(li).is-disabled {
+      &,
+      a,
+      button {
+        @apply
+        pointer-events-none
+        ;
+        &,
+        & * {
+          @apply
+          text-ui-300
+          opacity-50
+          ;
+        }
+      }
+    }
+  
+    &.menu-secondary {
+      :where(a, button, div) {
+        @apply
+          text-sm
+          ;
+        &.is-active {
+          @apply
+          font-bold
+          ;
+        }
+      }
+    }
+  
+    > li {
+      ul {
+        @apply
+        flex
+        flex-col
+        items-stretch
+        ;
+      }
+      > ul {
+        @apply
+        absolute
+        hidden
+        left-full
+        rounded-lg
+        bg-ui-800
+        border
+        border-ui-700
+        overflow-hidden
+        top-0
+        ;
+        li {
+          @apply
+          w-full
+          whitespace-nowrap
+          ;
+        }
+      }
+      &:hover {
+        > ul {
+          @apply
+          flex
+          ;
+        }
+      }
+    }
+  
+    li.separator {
+      @apply
+      block
+      h-px
+      w-full
+      my-2
+      select-none
+      opacity-100
+      border-0
+      ;
+      &:not([class*='bg-']) {
+        @apply
+        bg-ui-500
+        ;
+      }
+    }
+  }
+  
+  .menu:not([class*=horizontal]) {
+    :where(a, button, div) {
+      &:hover,
+      &:focus-visible,
+      &.is-active {
+        > *:not(.icon) {
+          @apply 
+          translate-x-1
           ;
         }
       }
     }
   }
-
-  :where(li).is-disabled {
-    &,
-    a,
-    button {
-      @apply
-      pointer-events-none
-      ;
-      &,
-      & * {
-        @apply
-        text-ui-300
-        opacity-50
-        ;
-      }
-    }
-  }
-
-  &.menu-secondary {
-    :where(a, button, div) {
-      @apply
-        text-sm
-        ;
-      &.is-active {
-        @apply
-        font-bold
-        ;
-      }
-    }
-  }
-
-  > li {
-    ul {
-      @apply
-      flex
-      flex-col
-      items-stretch
-      ;
-    }
-    > ul {
-      @apply
-      absolute
-      hidden
-      left-full
-      rounded-lg
-      bg-ui-800
-      border
-      border-ui-700
-      overflow-hidden
-      top-0
-      ;
-      li {
-        @apply
-        w-full
-        whitespace-nowrap
-        ;
-      }
-    }
-    &:hover {
-      > ul {
-        @apply
-        flex
-        ;
-      }
-    }
-  }
-
-  li.separator {
-    @apply
-    block
-    h-px
-    w-full
-    my-2
-    select-none
-    opacity-100
-    border-0
-    ;
-    &:not([class*='bg-']) {
-      @apply
-      bg-ui-500
-      ;
-    }
-  }
-}
-
-.menu:not([class*=horizontal]) {
-  :where(a, button, div) {
-    &:hover,
-    &:focus-visible,
-    &.is-active {
-      > *:not(.icon) {
-        @apply 
-        translate-x-1
-        ;
-      }
-    }
-  }
-}
-
-/* horizontal */
-
-@define-mixin menu-horizontal {
-  & {
+  .menu-horizontal {
     @apply
     inline-flex
     flex-row
@@ -292,38 +290,6 @@
         left-[initial]
         ;
       }
-    }
-  }
-}
-
-.menu.menu-horizontal {
-  @mixin menu-horizontal;
-}
-@screen sm {
-  .menu {
-    &.sm\:menu-horizontal {
-      @mixin menu-horizontal;
-    }
-  }
-}
-@screen md {
-  .menu {
-    &.md\:menu-horizontal {
-      @mixin menu-horizontal;
-    }
-  }
-}
-@screen lg {
-  .menu {
-    &.lg\:menu-horizontal {
-      @mixin menu-horizontal;
-    }
-  }
-}
-@screen xl {
-  .menu {
-    &.xl\:menu-horizontal {
-      @mixin menu-horizontal;
     }
   }
 }

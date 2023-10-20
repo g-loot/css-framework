@@ -2,8 +2,9 @@
 /* TABS */
 /*----------------------------*/
 
-@define-mixin tabs {
-  & {
+@layer components {
+  .tabs,
+  .tabs-horizontal {
     @apply
     w-auto
     flex
@@ -245,10 +246,133 @@
       ;
     }
   }
-}
+  .tabs-stretch {
+    > li {
+      @apply
+      flex-1
+      ;
+      > :where(a, button, .button) {
+        @apply
+        w-full
+        ;
+      }
+    }
+  }
+  .tabs-vertical {
+    @apply
+    w-full
+    inline-flex
+    flex-col
+    items-stretch
+    divide-y
+    divide-ui-300/10
+    shadow-[0_0_0_1px_rgba(var(--color-ui-300)/10%)]
+    ;
 
-.tabs {
-  @mixin tabs;
+    > li {
+      @apply
+      flex-col
+      justify-start
+      ;
+      > ul {
+        @apply
+        hidden
+        relative
+        scale-100
+        top-auto
+        rounded-none
+        border-none
+        bg-ui-800
+        shadow-none
+        opacity-100
+        ;
+        > li {
+          :where(a, button, .button) {
+            @apply
+            text-sm
+            pl-8
+            ;
+          }
+        }
+      }
+    }
+
+    :where(a, button, .button) {
+      @apply
+      w-full
+      text-left
+      justify-between
+      py-3.5
+      ;
+      .icon-arrow-sm-down {
+        @apply
+        transition-transform
+        duration-100
+        -rotate-90
+        ;
+      }
+      &::before {
+        @apply 
+        absolute
+        z-10
+        content-['']
+        inset-0
+        bg-ui-300
+        transition-all
+        duration-200
+        ease-[cubic-bezier(.7,0,.3,1)]
+        opacity-0
+        scale-y-0
+        translate-y-2
+        ;
+      }
+      &::after {
+        @apply
+        h-full
+        w-1
+        inset-y-0
+        inset-x-auto
+        scale-x-100
+        scale-y-0
+        left-0
+        ;
+      }
+
+      &:hover,
+      &:focus-visible,
+      &.is-active,
+      &:active {
+
+        &::before {
+          @apply
+          opacity-5
+          scale-y-100
+          translate-y-0
+          duration-75
+          ;
+        }
+
+        &::after {
+          @apply
+          scale-y-100
+          ;
+        }
+      }
+
+      &.is-active {
+        + ul {
+          @apply
+          block
+          ;
+        }
+        .icon-arrow-sm-down {
+          @apply
+          rotate-0
+          ;
+        }
+      }
+    }
+  }
 }
 
 .tabs:not(.tabs-rank):not(.tabs-tertiary) {
@@ -837,7 +961,6 @@
 
 .tab,
 .tabs > li {
-
   &.is-shining {
     @apply
     relative
@@ -872,231 +995,12 @@
   }
 }
 
-/* tab stretch */
-
-@define-mixin tabs-stretch {
-  & {
-    > li {
-      @apply
-      flex-1
-      ;
-      > :where(a, button, .button) {
-        @apply
-        w-full
-        ;
-      }
-    }
-  }
-}
-
-.tabs.tabs-stretch {
-  @mixin tabs-stretch;
-}
-
-/* responsive card tabs stretch  */
-
-@screen sm {
-  .tabs {
-    &.sm\:tabs-stretch {
-        @mixin tabs-stretch;
-    }
-  }
-}
-
-@screen md {
-  .tabs {
-    &.md\:tabs-stretch {
-      @mixin tabs-stretch;
-    }
-  }
-}
-@screen lg {
-  .tabs {
-    &.lg\:tabs-stretch {
-      @mixin tabs-stretch;
-    }
-  }
-}
-@screen xl {
-  .tabs {
-    &.xl\:tabs-stretch {
-      @mixin tabs-stretch;
-    }
-  }
-}
-
-/* tab vertical */
-
-@define-mixin tabs-vertical {
-  & {
-    @apply
-    w-full
-    inline-flex
-    flex-col
-    items-stretch
-    divide-y
-    divide-ui-300/10
-    shadow-[0_0_0_1px_rgba(var(--color-ui-300)/10%)]
-    ;
-
-    > li {
-      @apply
-      flex-col
-      justify-start
-      ;
-      > ul {
-        @apply
-        hidden
-        relative
-        scale-100
-        top-auto
-        rounded-none
-        border-none
-        bg-ui-800
-        shadow-none
-        opacity-100
-        ;
-        > li {
-          :where(a, button, .button) {
-            @apply
-            text-sm
-            pl-8
-            ;
-          }
-        }
-      }
-    }
-
-    :where(a, button, .button) {
-      @apply
-      w-full
-      text-left
-      justify-between
-      py-3.5
-      ;
-      .icon-arrow-sm-down {
-        @apply
-        transition-transform
-        duration-100
-        -rotate-90
-        ;
-      }
-      &::before {
-        @apply 
-        absolute
-        z-10
-        content-['']
-        inset-0
-        bg-ui-300
-        transition-all
-        duration-200
-        ease-[cubic-bezier(.7,0,.3,1)]
-        opacity-0
-        scale-y-0
-        translate-y-2
-        ;
-      }
-      &::after {
-        @apply
-        h-full
-        w-1
-        inset-y-0
-        inset-x-auto
-        scale-x-100
-        scale-y-0
-        left-0
-        ;
-      }
-
-      &:hover,
-      &:focus-visible,
-      &.is-active,
-      &:active {
-
-        &::before {
-          @apply
-          opacity-5
-          scale-y-100
-          translate-y-0
-          duration-75
-          ;
-        }
-
-        &::after {
-          @apply
-          scale-y-100
-          ;
-        }
-      }
-
-      &.is-active {
-        + ul {
-          @apply
-          block
-          ;
-        }
-        .icon-arrow-sm-down {
-          @apply
-          rotate-0
-          ;
-        }
-      }
-    }
-  }
-}
-
-.tabs.tabs-vertical {
-  @mixin tabs-vertical;
-}
-
-/* responsive card tabs horizontal  */
-
-@screen sm {
-  .tabs {
-    &.sm\:tabs-horizontal {
-      @mixin tabs;
-    }
-    &.sm\:tabs-vertical {
-      @mixin tabs-vertical;
-    }
-  }
-}
-@screen md {
-  .tabs {
-    &.md\:tabs-horizontal {
-      @mixin tabs;
-    }
-    &.md\:tabs-vertical {
-      @mixin tabs-vertical;
-    }
-  }
-}
-@screen lg {
-  .tabs {
-    &.lg\:tabs-horizontal {
-      @mixin tabs;
-    }
-    &.lg\:tabs-vertical {
-      @mixin tabs-vertical;
-    }
-  }
-}
-@screen xl {
-  .tabs {
-    &.xl\:tabs-horizontal {
-      @mixin tabs;
-    }
-    &.xl\:tabs-vertical {
-      @mixin tabs-vertical;
-    }
-  }
-}
-
 /* tabs & button stretch */
 
 .tabs > li > :where(a, button, .button), 
 .tab.button {
-  &.button-stretch {
+  &.button-stretch,
+  &.button-unstretch {
     @apply
     py-0
     ;

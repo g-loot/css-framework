@@ -1328,6 +1328,61 @@ const DSpage = () => {
           </div>
         </div>
       </div>
+
+      {/* Reduced motion */}
+      <div className="mb-12" id="reduced-motion">
+        <h2 className="h3 mb-3">Reduced motion</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <p className="text-ui-300 mb-6">
+                  You can cancel all repeating animations within a specific element by adding the
+                  <code
+                    className="interactive text-xs"
+                    onClick={() => {
+                      uiContext.openToastr({
+                        size: "small",
+                        text: "class name copied to your clipboard",
+                        color: "green",
+                        autoDelete: true,
+                        autoDeleteDelay: 2500,
+                      });
+                      navigator.clipboard.writeText("reduced-motion");
+                    }}
+                  >
+                    .reduced-motion
+                  </code>
+                  .<br />
+                  class name to it.
+                </p>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                    In this example, the shining button is not animating.
+                  </div>
+                  <div className="flex-1">
+                    <div className="grid gap-4 place-content-center h-24 reduced-motion rounded surface-ui-700">
+                      <button type="button" className="button is-shining">
+                        <span>I can&#39;t shine</span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/mjyspcrk/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </>
   );
 };

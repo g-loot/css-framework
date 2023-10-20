@@ -14,7 +14,7 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
-                  <a className="button button-ghost text-xl">
+                  <a className="button button-ghost rounded-full">
                     <span>Stryda</span>
                   </a>
                 </div>
@@ -39,10 +39,10 @@ const DSpage = () => {
             <div className="flex-1 flex justify-center items-center">
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
-                  <a className="button button-ghost text-xl">
+                  <a className="button button-ghost rounded-full">
                     <span>Stryda</span>
                   </a>
-                  <a className="button button-ghost text-xl">
+                  <a className="button button-ghost rounded-full">
                     <span className="icon icon-dots" />
                   </a>
                 </div>
@@ -68,17 +68,17 @@ const DSpage = () => {
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
                   <div className="flex-none">
-                    <a className="button button-ghost text-xl">
+                    <a className="button button-ghost rounded-full">
                       <span className="icon icon-menu-8" />
                     </a>
                   </div>
                   <div className="flex-1">
-                    <a className="button button-ghost text-xl">
+                    <a className="button button-ghost rounded-full">
                       <span>Stryda</span>
                     </a>
                   </div>
                   <div className="flex-none">
-                    <a className="button button-ghost text-xl">
+                    <a className="button button-ghost rounded-full">
                       <span className="icon icon-dots" />
                     </a>
                   </div>
@@ -105,7 +105,7 @@ const DSpage = () => {
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
                   <div className="flex-1">
-                    <a className="button button-ghost text-xl">
+                    <a className="button button-ghost rounded-full">
                       <span>Stryda</span>
                     </a>
                   </div>
@@ -168,7 +168,7 @@ const DSpage = () => {
               <div className="navbar bg-ui-900/95 rounded-lg shadow-lg">
                 <div className="navbar-content container">
                   <div className="flex-1">
-                    <a className="button button-ghost text-xl">
+                    <a className="button button-ghost rounded-full">
                       <span>Stryda</span>
                     </a>
                   </div>

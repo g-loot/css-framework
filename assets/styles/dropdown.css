@@ -88,8 +88,8 @@
 
 /* positioning */
 
-@define-mixin dropdown-end {
-  & {
+@layer components {
+  .dropdown-end {
     .dropdown-content {
       @apply
       absolute
@@ -107,9 +107,7 @@
       }
     }
   }
-}
-@define-mixin dropdown-center {
-  & {
+  .dropdown-center {
     .dropdown-content {
       @apply
       absolute
@@ -118,9 +116,7 @@
       ;
     }
   }
-}
-@define-mixin dropdown-top {
-  & {
+  .dropdown-top {
     .dropdown-content {
       @apply
       absolute
@@ -130,9 +126,7 @@
       ;
     }
   }
-}
-@define-mixin dropdown-right {
-  & {
+  .dropdown-right {
     .dropdown-content {
       @apply
       absolute
@@ -143,9 +137,7 @@
       ;
     }
   }
-}
-@define-mixin dropdown-left {
-  & {
+  .dropdown-left {
     .dropdown-content {
       @apply
       absolute
@@ -156,9 +148,7 @@
       ;
     }
   }
-}
-@define-mixin dropdown-mobile {
-  & {
+  .dropdown-mobile {
     .dropdown-content {
       @apply
       fixed
@@ -168,27 +158,6 @@
       w-[calc(100dvw_-_2rem)]
       ;
     }
-  }
-}
-
-.dropdown-end {
-  @mixin dropdown-end;
-}
-.dropdown-center {
-  @mixin dropdown-center;
-}
-.dropdown-top {
-  @mixin dropdown-top;
-}
-.dropdown-right {
-  @mixin dropdown-right;
-}
-.dropdown-left {
-  @mixin dropdown-left;
-}
-@screen sm {
-  .dropdown-mobile {
-    @mixin dropdown-mobile;
   }
 }
 
@@ -228,96 +197,5 @@
     opacity-100
     outline-none
     ;
-  }
-}
-
-/* responsive positioning */
-
-@screen sm {
-	.dropdown {
-    &.sm\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.sm\:dropdown-center {
-      @mixin dropdown-center;
-    }
-    &.sm\:dropdown-top {
-      @mixin dropdown-top;
-    }
-    &.sm\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.sm\:dropdown-left {
-      @mixin dropdown-left;
-    }
-    &.sm\:dropdown-right {
-      @mixin dropdown-right;
-    }
-  }
-}
-@screen md {
-	.dropdown {
-    &.md\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.md\:dropdown-center {
-      @mixin dropdown-center;
-    }
-    &.md\:dropdown-top {
-      @mixin dropdown-top;
-    }
-    &.md\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.md\:dropdown-left {
-      @mixin dropdown-left;
-    }
-    &.md\:dropdown-right {
-      @mixin dropdown-right;
-    }
-  }
-}
-@screen lg {
-	.dropdown {
-    &.lg\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.lg\:dropdown-center {
-      @mixin dropdown-center;
-    }
-    &.lg\:dropdown-top {
-      @mixin dropdown-top;
-    }
-    &.lg\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.lg\:dropdown-left {
-      @mixin dropdown-left;
-    }
-    &.lg\:dropdown-right {
-      @mixin dropdown-right;
-    }
-  }
-}
-@screen xl {
-	.dropdown {
-    &.xl\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.xl\:dropdown-center {
-      @mixin dropdown-center;
-    }
-    &.xl\:dropdown-top {
-      @mixin dropdown-top;
-    }
-    &.xl\:dropdown-end {
-      @mixin dropdown-end;
-    }
-    &.xl\:dropdown-left {
-      @mixin dropdown-left;
-    }
-    &.xl\:dropdown-right {
-      @mixin dropdown-right;
-    }
   }
 }

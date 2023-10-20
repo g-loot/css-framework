@@ -2,285 +2,287 @@
 /* AVATAR */
 /*----------------------------*/
 
-.avatar {
-  --inner-padding-one: 0.5rem;
-  --inner-padding-two: 0.5rem/2;
-  @apply
-  inline-flex
-  items-center
-  justify-center
-  relative
-  h-24
-  w-24
-  aspect-square
-  ;
-
-  > img {
+@layer components {
+  .avatar {
+    --inner-padding-one: 0.5rem;
+    --inner-padding-two: 0.5rem/2;
     @apply
-    absolute
-    z-20
-    scale-125
-    select-none
-    ;
-  }
-
-  > div {
-    @apply
-    absolute
-    z-10
-    inset-0
-    bg-gradient-to-b
-    from-ui-100
-    via-ui-300
-    to-ui-100
-    overflow-hidden
-    transform-gpu
-    ;
-
-    > * {
-      @apply
-      absolute
-      z-0
-      object-cover
-      bg-ui-800
-      flex
-      items-center
-      justify-center
-      text-ui-400
-      text-4xl
-      ;
-    }
-    
-    &.icon {
-      @apply
-      text-ui-300/50
-      text-center
-      flex
-      items-center
-      justify-center
-      text-4xl
-      ;
-      &::before {
-        @apply
-        absolute
-        ;
-      }
-    }
-  }
-
-  &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
-    > div {
-      @apply
-      rounded-[calc(var(--inner-padding-one)*2)]
-      ;
-      > * {
-        @apply
-        rounded-[calc((var(--inner-padding-one)*2)-calc(var(--inner-padding-two)))]
-        ;
-      }
-    }
-    > div,
-    > div > * {
-      mask-image: none;
-    }
-  }
-  > div {
-    > * {
-      @apply
-      inset-[calc(var(--inner-padding-one)/2)]
-      w-[calc(100%-var(--inner-padding-one))]
-      h-[calc(100%-var(--inner-padding-one))]
-      ;
-      ;
-    }
-  }
-  > b,
-  > strong {
-    @apply
-    absolute
-    z-30
-    bg-ui-500
-    border
-    border-ui-400
-    text-center
-    leading-none
-    -bottom-2
-    py-0.5
-    px-1.5
-    rounded-full
-    text-base
-    h-auto
-    w-auto
     inline-flex
     items-center
-    gap-1
-    ;
-    &::after {
-      @apply
-      w-2
-      h-2
-      ;
-    }
-  }
-
-  /* rank */
-
-  &.avatar-gold > div {
-    @apply
-    from-gold-300
-    via-gold-700
-    to-gold-300
-    ;
-  }
-  &.avatar-silver > div {
-    @apply
-    from-silver-300
-    via-silver-700
-    to-silver-300
-    ;
-  }
-  &.avatar-bronze > div {
-    @apply
-    from-bronze-300
-    via-bronze-700
-    to-bronze-300
-    ;
-  }
-  &.avatar-premium > div {
-    @apply
-    from-premium-300
-    via-premium-700
-    to-premium-300
-    ;
-  }
-
-  /* rank */
-
-  > i {
-    @apply
-    absolute
-    z-20
-    rounded-full
-    border-4
-    border-ui-800
-    bottom-0.5
-    right-0.5
-    h-7
-    w-7
-    bg-success-500
+    justify-center
+    relative
+    h-24
+    w-24
+    aspect-square
     ;
 
-    &.disabled {
+    > img {
       @apply
-      bg-silver-500
+      absolute
+      z-20
+      scale-125
+      select-none
       ;
     }
-    &.error {
-      @apply
-      bg-error-500
-      ;
-    }
-    &.attention {
-      @apply
-      bg-attention-500
-      ;
-    }
-    &.info {
-      @apply
-      bg-info-500
-      ;
-    }
-  }
 
-  &.avatar-md {
-    > i {
-      @apply
-      bottom-[0.1rem]
-      right-[0.1rem]
-      h-[1.5rem]
-      w-[1.5rem]
-      ;
-    }
-  }
-  &.avatar-sm {
-    > i {
-      @apply
-      bottom-[0.05rem]
-      right-[0.05rem]
-      h-[1.25rem]
-      w-[1.25rem]
-      ;
-    }
-  }
-  &.avatar-xs {
-    > i {
-      @apply
-      bottom-[0rem]
-      right-[0rem]
-      h-[1rem]
-      w-[1rem]
-      ;
-    }
-  }
-  &.avatar-tiny {
-    > i {
-      @apply
-      -bottom-[0.1rem]
-      -right-[0.1rem]
-      h-[1rem]
-      w-[1rem]
-      ;
-    }
-  }
-
-  /* simple */
-
-  &.avatar-simple {
     > div {
       @apply
-      from-ui-800/0
-      via-ui-800/0
-      to-ui-800/0
+      absolute
+      z-10
+      inset-0
+      bg-gradient-to-b
+      from-ui-100
+      via-ui-300
+      to-ui-100
+      overflow-hidden
+      transform-gpu
       ;
+
       > * {
         @apply
-        inset-0
-        w-full
-        h-full
+        absolute
+        z-0
+        object-cover
+        bg-ui-800
+        flex
+        items-center
+        justify-center
+        text-ui-400
+        text-4xl
+        ;
+      }
+      
+      &.icon {
+        @apply
+        text-ui-300/50
+        text-center
+        flex
+        items-center
+        justify-center
+        text-4xl
+        ;
+        &::before {
+          @apply
+          absolute
+          ;
+        }
+      }
+    }
+
+    &:not(.avatar-circle):not(.avatar-squircle):not(.avatar-diamond):not(.avatar-hexagon) {
+      > div {
+        @apply
+        rounded-[calc(var(--inner-padding-one)*2)]
+        ;
+        > * {
+          @apply
+          rounded-[calc((var(--inner-padding-one)*2)-calc(var(--inner-padding-two)))]
+          ;
+        }
+      }
+      > div,
+      > div > * {
+        mask-image: none;
+      }
+    }
+    > div {
+      > * {
+        @apply
+        inset-[calc(var(--inner-padding-one)/2)]
+        w-[calc(100%-var(--inner-padding-one))]
+        h-[calc(100%-var(--inner-padding-one))]
+        ;
         ;
       }
     }
+    > b,
+    > strong {
+      @apply
+      absolute
+      z-30
+      bg-ui-500
+      border
+      border-ui-400
+      text-center
+      leading-none
+      -bottom-2
+      py-0.5
+      px-1.5
+      rounded-full
+      text-base
+      h-auto
+      w-auto
+      inline-flex
+      items-center
+      gap-1
+      ;
+      &::after {
+        @apply
+        w-2
+        h-2
+        ;
+      }
+    }
+
+    /* rank */
+
+    &.avatar-gold > div {
+      @apply
+      from-gold-300
+      via-gold-700
+      to-gold-300
+      ;
+    }
+    &.avatar-silver > div {
+      @apply
+      from-silver-300
+      via-silver-700
+      to-silver-300
+      ;
+    }
+    &.avatar-bronze > div {
+      @apply
+      from-bronze-300
+      via-bronze-700
+      to-bronze-300
+      ;
+    }
+    &.avatar-premium > div {
+      @apply
+      from-premium-300
+      via-premium-700
+      to-premium-300
+      ;
+    }
+
+    /* rank */
+
     > i {
       @apply
-      translate-x-[0.15rem]
-      translate-y-[0.15rem]
+      absolute
+      z-20
+      rounded-full
+      border-4
+      border-ui-800
+      bottom-0.5
+      right-0.5
+      h-7
+      w-7
+      bg-success-500
       ;
-    }
 
-    &[class*=rounded]{
-      > div,
-      > div * {
+      &.disabled {
         @apply
-        rounded-none
+        bg-silver-500
+        ;
+      }
+      &.error {
+        @apply
+        bg-error-500
+        ;
+      }
+      &.attention {
+        @apply
+        bg-attention-500
+        ;
+      }
+      &.info {
+        @apply
+        bg-info-500
         ;
       }
     }
-  }
+
+    &.avatar-md {
+      > i {
+        @apply
+        bottom-[0.1rem]
+        right-[0.1rem]
+        h-[1.5rem]
+        w-[1.5rem]
+        ;
+      }
+    }
+    &.avatar-sm {
+      > i {
+        @apply
+        bottom-[0.05rem]
+        right-[0.05rem]
+        h-[1.25rem]
+        w-[1.25rem]
+        ;
+      }
+    }
+    &.avatar-xs {
+      > i {
+        @apply
+        bottom-[0rem]
+        right-[0rem]
+        h-[1rem]
+        w-[1rem]
+        ;
+      }
+    }
+    &.avatar-tiny {
+      > i {
+        @apply
+        -bottom-[0.1rem]
+        -right-[0.1rem]
+        h-[1rem]
+        w-[1rem]
+        ;
+      }
+    }
+
+    /* simple */
+
+    &.avatar-simple {
+      > div {
+        @apply
+        from-ui-800/0
+        via-ui-800/0
+        to-ui-800/0
+        ;
+        > * {
+          @apply
+          inset-0
+          w-full
+          h-full
+          ;
+        }
+      }
+      > i {
+        @apply
+        translate-x-[0.15rem]
+        translate-y-[0.15rem]
+        ;
+      }
+
+      &[class*=rounded]{
+        > div,
+        > div * {
+          @apply
+          rounded-none
+          ;
+        }
+      }
+    }
 
 
-  /* radar */
+    /* radar */
 
-  > i {
-    &.radar {
-      @apply
-      z-0
-      inset-0
-      border-0
-      w-full
-      h-full
-      transform-gpu
-      animate-[avatar-radar_2s_cubic-bezier(0.5,0,0.5,1)_infinite]
-      ;
+    > i {
+      &.radar {
+        @apply
+        z-0
+        inset-0
+        border-0
+        w-full
+        h-full
+        transform-gpu
+        animate-[avatar-radar_2s_cubic-bezier(0.5,0,0.5,1)_infinite]
+        ;
+      }
     }
   }
 }
@@ -445,8 +447,8 @@
 
 /* sizes */
 
-@define-mixin avatar-2xl {
-  & {
+@layer components {
+  .avatar-2xl {
     --inner-padding-one: 12px;
     --inner-padding-two: 12px/2;
     @apply
@@ -475,9 +477,7 @@
       }
     }
   }
-}
-@define-mixin avatar-xl {
-  & {
+  .avatar-xl {
     --inner-padding-one: 10px;
     --inner-padding-two: 10px/2;
     @apply
@@ -506,9 +506,7 @@
       }
     }
   }
-}
-@define-mixin avatar-lg {
-  & {
+  .avatar-lg {
     --inner-padding-one: 8px;
     --inner-padding-two: 8px/2;
     @apply
@@ -537,9 +535,7 @@
       }
     }
   }
-}
-@define-mixin avatar-md {
-  & {
+  .avatar-md {
     --inner-padding-one: 6px;
     --inner-padding-two: 6px/2;
     @apply
@@ -568,9 +564,7 @@
       }
     }
   }
-}
-@define-mixin avatar-sm {
-  & {
+  .avatar-sm {
     --inner-padding-one: 4px;
     --inner-padding-two: 4px/2;
     @apply
@@ -599,9 +593,7 @@
       }
     }
   }
-}
-@define-mixin avatar-xs {
-  & {
+  .avatar-xs {
     --inner-padding-one: 4px;
     --inner-padding-two: 4px/2;
     @apply
@@ -633,9 +625,7 @@
       }
     }
   }
-}
-@define-mixin avatar-tiny {
-  & {
+  .avatar-tiny {
     --inner-padding-one: 2px;
     --inner-padding-two: 2px/2;
     @apply
@@ -665,133 +655,6 @@
         h-1.5
         ;
       }
-    }
-  }
-}
-
-.avatar {
-  &.avatar-2xl {
-    @mixin avatar-2xl;
-  }
-  &.avatar-xl {
-    @mixin avatar-xl;
-  }
-  &.avatar-lg {
-    @mixin avatar-lg;
-  }
-  &.avatar-md {
-    @mixin avatar-md;
-  }
-  &.avatar-sm {
-    @mixin avatar-sm;
-  }
-  &.avatar-xs {
-    @mixin avatar-xs;
-  }
-  &.avatar-tiny {
-    @mixin avatar-tiny;
-  }
-}
-
-/* responsive sizes */
-
-@screen sm {
-	.avatar {
-    &.sm\:avatar-2xl {
-      @mixin avatar-2xl;
-    }
-    &.sm\:avatar-xl {
-      @mixin avatar-xl;
-    }
-    &.sm\:avatar-lg {
-      @mixin avatar-lg;
-    }
-    &.sm\:avatar-md {
-      @mixin avatar-md;
-    }
-    &.sm\:avatar-sm {
-      @mixin avatar-sm;
-    }
-    &.sm\:avatar-xs {
-      @mixin avatar-xs;
-    }
-    &.sm\:avatar-tiny {
-      @mixin avatar-tiny;
-    }
-  }
-}
-@screen md {
-	.avatar {
-    &.md\:avatar-2xl {
-      @mixin avatar-2xl;
-    }
-    &.md\:avatar-xl {
-      @mixin avatar-xl;
-    }
-    &.md\:avatar-lg {
-      @mixin avatar-lg;
-    }
-    &.md\:avatar-md {
-      @mixin avatar-md;
-    }
-    &.md\:avatar-sm {
-      @mixin avatar-sm;
-    }
-    &.md\:avatar-xs {
-      @mixin avatar-xs;
-    }
-    &.md\:avatar-tiny {
-      @mixin avatar-tiny;
-    }
-  }
-}
-@screen lg {
-	.avatar {
-    &.lg\:avatar-2xl {
-      @mixin avatar-2xl;
-    }
-    &.lg\:avatar-xl {
-      @mixin avatar-xl;
-    }
-    &.lg\:avatar-lg {
-      @mixin avatar-lg;
-    }
-    &.lg\:avatar-md {
-      @mixin avatar-md;
-    }
-    &.lg\:avatar-sm {
-      @mixin avatar-sm;
-    }
-    &.lg\:avatar-xs {
-      @mixin avatar-xs;
-    }
-    &.lg\:avatar-tiny {
-      @mixin avatar-tiny;
-    }
-  }
-}
-@screen xl {
-	.avatar {
-    &.xl\:avatar-2xl {
-      @mixin avatar-2xl;
-    }
-    &.xl\:avatar-xl {
-      @mixin avatar-xl;
-    }
-    &.xl\:avatar-lg {
-      @mixin avatar-lg;
-    }
-    &.xl\:avatar-md {
-      @mixin avatar-md;
-    }
-    &.xl\:avatar-sm {
-      @mixin avatar-sm;
-    }
-    &.xl\:avatar-xs {
-      @mixin avatar-xs;
-    }
-    &.xl\:avatar-tiny {
-      @mixin avatar-tiny;
     }
   }
 }

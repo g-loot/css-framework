@@ -488,3 +488,23 @@
     ;
   }
 }
+
+
+/* reduced motion */ 
+
+.reduced-motion {
+  .is-shining::before,
+  .is-shining::after,
+  .tooltip-attention::before,
+  .card-mission.card-secondary.is-highlighted .card-bg::before,
+  .infobanner.is-active > .infobanner-front,
+  .infobanner.is-active > .infobanner-back > *,
+  .battlepass-step.is-current .battlepass-content::before,
+  .animate-bounce,
+  .battlepass-next,
+  .battlepass-previous {
+    @apply
+    !animate-none
+    ;
+  }
+}
