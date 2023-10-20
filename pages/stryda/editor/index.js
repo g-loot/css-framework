@@ -522,7 +522,7 @@ const Clip = ({
           </i>
         )}
         {selectedClipsLength >= maxClips && !isSelected && (
-          <div className="absolute z-30 inset-2 grid place-content-center transition-all overflow-hidden text-ui-100 text-sm leading-tight text-center p-2 rounded bg-ui-700/90 backdrop-blur-sm animate-scale-in">
+          <div className="absolute z-30 inset-2 grid place-content-center transition-all overflow-hidden text-ui-100 text-sm leading-tight text-center p-2 rounded bg-ui-600/90 backdrop-blur-sm animate-scale-in">
             <span>
               You have reached the {maxClips} clips limit. Increase the limit
               with{" "}
@@ -532,27 +532,27 @@ const Clip = ({
             </span>
           </div>
         )}
-       
+
         {!hasError && (
           <>
-          {/* <img
+            {/* <img
             className={`${
               !isSelected ? "opacity-50 grayscale mix-blend-lighten" : ""
             }`}
             src={`${item.url}.jpg`}
             alt=""
           /> */}
-           <video
-          autoPlay={false}
-          controls={false}
-          playsInline
-          muted
-          width="100%"
-          height="auto"
-          className="relative z-0 w-full pointer-events-none"
-          id={`video_${item.id}`}
-          src={`${item.url}.mp4`}
-        />
+            <video
+              autoPlay={false}
+              controls={false}
+              playsInline
+              muted
+              width="100%"
+              height="auto"
+              className="relative z-0 w-full pointer-events-none"
+              id={`video_${item.id}`}
+              src={`${item.url}.mp4`}
+            />
           </>
         )}
         {hasError && (
@@ -763,7 +763,7 @@ export default function HighlightEditor() {
                 </div>
                 <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
                   {isLoading && (
-                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
                       <div role="loading" className="loader loader-sm">
                         <span className="sr-only">Loading...</span>
                       </div>
@@ -775,7 +775,7 @@ export default function HighlightEditor() {
                     </div>
                   )}
                   {hasError && (
-                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                    <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
                       <span className="icon icon-warning-sign text-4xl text-ui-300" />
                       <p>
                         Video does not load.
@@ -810,7 +810,7 @@ export default function HighlightEditor() {
                   </ul>
                   <div className="relative flex-1">
                     {hasError && (
-                      <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                      <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
                         <span className="icon icon-warning-sign text-4xl text-ui-300" />
                         <p>
                           Could not load music.
@@ -917,10 +917,40 @@ export default function HighlightEditor() {
             </div>
             <div className="surface rounded">
               <div className="border-b border-ui-700 flex items-center gap-2 justify-between h-11 px-2 bg-gradient-to-b from-ui-700 to-ui-800">
-                <div className="flex items-center gap-2 w-24">
+              <button
+                  type="button"
+                  className="button button-sm button-secondary w-56"
+                  onClick={handlePlayPauseAllVideos}
+                  disabled={
+                    selectedClipsLength === 0 ||
+                    isLoading ||
+                    hasError ||
+                    hasCorruptedFiles
+                  }
+                >
+                  {isPlaying && playAllHasStarted ? (
+                    <>
+                      <span className="icon icon-btn-pause" />
+                      <span>Pause selected clips</span>
+                    </>
+                  ) : (
+                    <>
+                      <span className="icon icon-btn-play" />
+                      <span>Play selected clips</span>
+                    </>
+                  )}
+                </button>
+                <div className="flex items-center gap-2 w-40">
                   <span className="icon icon-film" />
                   <span className="text-sm">
-                    {selectedClipsLength} / {clips.length}
+                    {hasCorruptedFiles ? (
+                      <>0 / {clips.length} clip selected</>
+                    ) : (
+                      <>
+                        {selectedClipsLength} / {clips.length} clip
+                        {selectedClipsLength > 1 && <>s</>} selected
+                      </>
+                    )}
                   </span>
                 </div>
                 <div className="form-toggle form-sm text-sm">
@@ -945,37 +975,16 @@ export default function HighlightEditor() {
                     </b>
                   </span>
                 </div>
-                <button
-                  type="button"
-                  className="button button-sm button-secondary w-56"
-                  onClick={handlePlayPauseAllVideos}
-                  disabled={
-                    selectedClipsLength === 0 ||
-                    isLoading ||
-                    hasError ||
-                    hasCorruptedFiles
-                  }
-                >
-                  {isPlaying && playAllHasStarted ? (
-                    <>
-                      <span className="icon icon-btn-pause" />
-                      <span>Pause selected clips</span>
-                    </>
-                  ) : (
-                    <>
-                      <span className="icon icon-btn-play" />
-                      <span>Play selected clips</span>
-                    </>
-                  )}
-                </button>
               </div>
               <div
                 className={`relative flex justify-start z-0 overflow-y-hidden scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none ${
-                  hasCorruptedFiles ? "" : "overflow-x-auto"
+                  hasCorruptedFiles || hasError
+                    ? "overflow-x-hidden"
+                    : "overflow-x-auto"
                 }`}
               >
                 {hasCorruptedFiles && (
-                  <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
+                  <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
                     <span className="icon icon-warning-sign text-4xl text-ui-300" />
                     <p>Corrupted clip files, we could not load them.</p>
                   </div>
@@ -1002,7 +1011,7 @@ export default function HighlightEditor() {
                       items={clips}
                       strategy={horizontalListSortingStrategy}
                     >
-                      <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto">
+                      <ul className={`inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto ${hasCorruptedFiles ? "w-0 overflow-hidden" : "w-full"}`}>
                         {clips?.map((item, itemIndex) => (
                           <Clip
                             key={item.id}
