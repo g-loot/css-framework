@@ -887,7 +887,12 @@ export default function HighlightEditor() {
                   <button
                     type="button"
                     className="button button-primary w-full"
-                    disabled={selectedClipsLength === 0 || isLoading || hasError || hasCorruptedFiles}
+                    disabled={
+                      selectedClipsLength === 0 ||
+                      isLoading ||
+                      hasError ||
+                      hasCorruptedFiles
+                    }
                   >
                     <span>Create highlight</span>
                   </button>
@@ -940,7 +945,12 @@ export default function HighlightEditor() {
                   type="button"
                   className="button button-sm button-secondary w-56"
                   onClick={handlePlayPauseAllVideos}
-                  disabled={selectedClipsLength === 0 || isLoading || hasError || hasCorruptedFiles}
+                  disabled={
+                    selectedClipsLength === 0 ||
+                    isLoading ||
+                    hasError ||
+                    hasCorruptedFiles
+                  }
                 >
                   {isPlaying && playAllHasStarted ? (
                     <>
@@ -955,14 +965,16 @@ export default function HighlightEditor() {
                   )}
                 </button>
               </div>
-              <div className="relative flex justify-start z-0 overflow-y-hidden overflow-x-auto scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none">
+              <div
+                className={`relative flex justify-start z-0 overflow-y-hidden scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none ${
+                  hasCorruptedFiles ? "" : "overflow-x-auto"
+                }`}
+              >
                 {hasCorruptedFiles && (
                   <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-800">
-                  <span className="icon icon-warning-sign text-4xl text-ui-300" />
-                  <p>
-                    Corrupted clip files, we could not load them.
-                  </p>
-                </div>
+                    <span className="icon icon-warning-sign text-4xl text-ui-300" />
+                    <p>Corrupted clip files, we could not load them.</p>
+                  </div>
                 )}
                 {isLoading ? (
                   <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0">
@@ -1044,7 +1056,7 @@ export default function HighlightEditor() {
             <div>
               <h3 className="text-sm">Global states:</h3>
               <div className="form-group pl-4 mt-2">
-              <div className="form-xs form-toggle">
+                <div className="form-xs form-toggle">
                   <input
                     type="checkbox"
                     name="state"
@@ -1079,9 +1091,10 @@ export default function HighlightEditor() {
                     id="state-corruptedfiles"
                     onChange={() => setHasCorruptedFiles(!hasCorruptedFiles)}
                   />
-                  <label htmlFor="state-corruptedfiles">Corrupted file state</label>
+                  <label htmlFor="state-corruptedfiles">
+                    Corrupted file state
+                  </label>
                 </div>
-                
               </div>
             </div>
           </section>
