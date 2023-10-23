@@ -144,13 +144,34 @@ export default function BattlepassPage() {
                 </div>
               </div>
               <Battlepass id={selectedBattlepassID} />
-              <img
-                src={
-                  getBattlepassByID(selectedBattlepassID).meta?.backgroundImage
-                }
-                alt=""
-                className="absolute w-full h-full inset-0 pointer-events-none object-cover object-bottom animate-fade-in select-none"
-              />
+              <div className="absolute z-0 w-full h-full inset-0 pointer-events-none select-none">
+                <i className="absolute z-10 h-full w-1/4 inset-y-0 -left-px bg-gradient-to-l from-ui-850/0 via-ui-850/40 to-ui-850" />
+                <i className="absolute z-10 h-full w-1/4 inset-y-0 -right-px bg-gradient-to-r from-ui-850/0 via-ui-850/40 to-ui-850" />
+                <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-850/0 via-ui-850/40 to-ui-850" />
+                {getBattlepassByID(selectedBattlepassID).meta?.backgroundVideo ? (
+                  <video
+                  className="absolute z-0 w-full h-full inset-0 object-cover"
+                  autoPlay
+                  playsInline
+                  muted
+                  loop
+                  preload="true"
+                  poster={getBattlepassByID(selectedBattlepassID).meta?.backgroundImage}
+                >
+                  <source src={getBattlepassByID(selectedBattlepassID).meta?.backgroundVideo} />
+                </video>
+                ) : (
+                  <img
+                  src={
+                    getBattlepassByID(selectedBattlepassID).meta
+                      ?.backgroundImage
+                  }
+                  alt=""
+                  className="absolute z-0 w-full h-full inset-0 object-cover"
+                />
+                )}
+                
+              </div>
             </section>
 
             {/* for demo purposes only */}
