@@ -917,7 +917,7 @@ export default function HighlightEditor() {
             </div>
             <div className="surface rounded">
               <div className="border-b border-ui-700 flex items-center gap-2 justify-between h-11 px-2 bg-gradient-to-b from-ui-700 to-ui-800">
-              <button
+                <button
                   type="button"
                   className="button button-sm button-secondary w-56"
                   onClick={handlePlayPauseAllVideos}
@@ -977,11 +977,7 @@ export default function HighlightEditor() {
                 </div>
               </div>
               <div
-                className={`relative flex justify-start z-0 overflow-y-hidden scrollbar-desktop scroll-smooth py-2 pl-2 bg-ui-850 select-none ${
-                  hasCorruptedFiles || hasError
-                    ? "overflow-x-hidden"
-                    : "overflow-x-auto"
-                }`}
+                className={`relative flex justify-start z-0 overflow-hidden bg-ui-850 select-none`}
               >
                 {hasCorruptedFiles && (
                   <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
@@ -990,7 +986,7 @@ export default function HighlightEditor() {
                   </div>
                 )}
                 {isLoading ? (
-                  <ul className="w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0">
+                  <ul className="p-2 w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 overflow-hidden px-2 xl:px-0">
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
@@ -1011,7 +1007,15 @@ export default function HighlightEditor() {
                       items={clips}
                       strategy={horizontalListSortingStrategy}
                     >
-                      <ul className={`inline-flex gap-2 items-stretch justify-start child:shrink-0 px-2 xl:px-0 perspective mx-auto ${hasCorruptedFiles ? "w-0 overflow-hidden" : "w-full"}`}>
+                      <ul
+                        style={{
+                          height: "100%",
+                          overflow: "auto",
+                        }}
+                        className={`p-2 inline-flex gap-2 items-stretch justify-start child:shrink-0 first:ml-2 px-2 xl:px-0 perspective mx-auto ${
+                          hasCorruptedFiles ? "w-0 overflow-hidden" : "w-full"
+                        }`}
+                      >
                         {clips?.map((item, itemIndex) => (
                           <Clip
                             key={item.id}
