@@ -24,6 +24,7 @@ import {
 import { restrictToHorizontalAxis } from "@dnd-kit/modifiers";
 import { CSS } from "@dnd-kit/utilities";
 import Link from "next/link";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
 const Track = ({
   trackData,
@@ -736,7 +737,7 @@ export default function HighlightEditor() {
           <section className="hidden lg:flex flex-col gap-4 my-4 max-w-xl mx-auto">
             <div className="flex flex-col md:flex-row md:items-stretch gap-4">
               <div className="surface rounded flex-1">
-                <div className="border-b border-ui-700 p-1 pl-3 pr-4 flex items-center justify-between text-sm h-11 bg-gradient-to-b from-ui-700 to-ui-800">
+                <div className="border-b border-ui-700 p-1 pl-1.5 pr-4 flex items-center justify-between text-sm h-11 bg-gradient-to-b from-ui-700 to-ui-800">
                   <div className="flex items-center gap-1">
                     <GameIcon id={1} />
                     <span>Today at 10:30am</span>
@@ -782,6 +783,37 @@ export default function HighlightEditor() {
                         <br />
                         Try to reload the app.
                       </p>
+                    </div>
+                  )}
+                  {!prototype.isPremium && (
+                    <div className="absolute z-40 top-0 inset-x-0 bg-ui-700/90 backdrop-blur-sm px-4 py-3 flex items-center gap-4 justify-around animate-fade-in">
+                      <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                        <PremiumLogo
+                          src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
+                          width="auto"
+                          height="auto"
+                          className="w-36 interactive"
+                        />
+                      </Link>
+                      <p className="text-sm leading-tight">
+                        Enable highlight editing and a lot more features by
+                        becoming{" "}
+                        <Link
+                          href={`/stryda/premium${prototype.getURLparams()}`}
+                        >
+                          <span className="link link-premium">Premium</span>
+                        </Link>
+                        .
+                      </p>
+                      <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                        <button
+                          type="button"
+                          className="button button-premium is-shining"
+                        >
+                          <span>Get Premium</span>
+                          <span className="icon icon-crown" />
+                        </button>
+                      </Link>
                     </div>
                   )}
                   <video
@@ -986,7 +1018,11 @@ export default function HighlightEditor() {
                   </div>
                 )}
                 {isLoading ? (
-                  <ul className="p-2 w-full inline-flex gap-2 items-stretch justify-start child:shrink-0 overflow-hidden px-2 xl:px-0">
+                  <ul
+                    className={`p-2 inline-flex gap-2 items-stretch justify-start child:shrink-0 first:ml-2 last:mr-2 px-2 xl:px-0 perspective mx-auto ${
+                      hasCorruptedFiles ? "w-0 overflow-hidden" : "w-full"
+                    }`}
+                  >
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
                     <li className="h-40 w-44 rounded-2 surface is-loading" />
@@ -1012,7 +1048,7 @@ export default function HighlightEditor() {
                           height: "100%",
                           overflow: "auto",
                         }}
-                        className={`p-2 inline-flex gap-2 items-stretch justify-start child:shrink-0 first:ml-2 px-2 xl:px-0 perspective mx-auto ${
+                        className={`p-2 inline-flex gap-2 items-stretch justify-start child:shrink-0 first:ml-2 last:mr-2 px-2 xl:px-0 perspective mx-auto ${
                           hasCorruptedFiles ? "w-0 overflow-hidden" : "w-full"
                         }`}
                       >
