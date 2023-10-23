@@ -680,6 +680,7 @@ label.button {
 
   /* focus */
 
+
   &:not([disabled]),
   &:not(.is-disabled) {
     label {
@@ -700,6 +701,13 @@ label.button {
         ;
       }
     }
+  }
+
+  > input:disabled + label,
+  .is-disabled > label {
+    @apply
+    cursor-not-allowed
+    ;
   }
 }
 

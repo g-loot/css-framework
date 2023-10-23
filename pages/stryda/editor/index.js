@@ -395,6 +395,14 @@ const Clip = ({
   const [maxClips, setMaxClips] = useState(10);
 
   useEffect(() => {
+    if (prototype.isPremium) {
+      setMaxClips(20);
+    } else {
+      setMaxClips(3);
+    }
+  }, [prototype]);
+
+  useEffect(() => {
     if (!hasError) {
       setIsSelected(item.isSelected);
     }
@@ -410,33 +418,19 @@ const Clip = ({
     setVideo(document.getElementById(`video_${item.id}`));
   }, [item.id]);
 
-  useEffect(() => {
-    if (prototype.isPremium) {
-      setMaxClips(20);
-    } else {
-      setMaxClips(3);
-    }
-  }, [prototype]);
-
   const handleSelection = () => {
     onSelect(item.id);
     setIsSelected(!isSelected);
   };
 
   function handleVideoPlay() {
-    if (!isSelected && selectedClipsLength >= maxClips) {
-    } else {
-      setIsPlaying(true);
+    setIsPlaying(true);
       onLoad(item.id, true);
-    }
   }
 
   function handleVideoPause() {
-    if (!isSelected && selectedClipsLength >= maxClips) {
-    } else {
-      setIsPlaying(false);
+    setIsPlaying(false);
       onLoad(item.id, false);
-    }
   }
 
   function formatDuration(duration) {
@@ -499,7 +493,7 @@ const Clip = ({
         type="button"
         onMouseOver={handleVideoPlay}
         onMouseOut={handleVideoPause}
-        disabled={hasError || selectedClipsLength >= maxClips}
+        disabled={hasError}
         onClick={isPlaying ? handleVideoPause : handleVideoPlay}
         className={`w-full aspect-video bg-ui-850 relative grid place-content-center`}
       >
@@ -590,6 +584,15 @@ export default function HighlightEditor() {
   const [hasError, setHasError] = useState(false);
   const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
+  const [maxClips, setMaxClips] = useState(10);
+
+  useEffect(() => {
+    if (prototype.isPremium) {
+      setMaxClips(20);
+    } else {
+      setMaxClips(3);
+    }
+  }, [prototype]);
 
   useEffect(() => {
     if (clips) {
@@ -974,16 +977,52 @@ export default function HighlightEditor() {
                 </button>
                 <div className="flex items-center gap-2 w-40">
                   <span className="icon icon-film" />
-                  <span className="text-sm">
-                    {hasCorruptedFiles ? (
-                      <>0 / {clips.length} clip selected</>
-                    ) : (
-                      <>
-                        {selectedClipsLength} / {clips.length} clip
-                        {selectedClipsLength > 1 && <>s</>} selected
-                      </>
-                    )}
-                  </span>
+                  {!prototype.isPremium ? (
+                    <Tooltip
+                      placement="top"
+                      tooltip={
+                        <>
+                          {selectedClipsLength === maxClips && (
+                            <span>
+                              You have reached the {maxClips} clips limit.
+                            </span>
+                          )}
+                          <span>
+                            Increase the limit with{" "}
+                            <Link
+                              href={`/prototype/premium${prototype.getURLparams()}`}
+                            >
+                              <a className="link link-premium">Premium</a>
+                            </Link>
+                          </span>
+                        </>
+                      }
+                    >
+                      <span className="text-sm">
+                        {hasCorruptedFiles ? (
+                          <>0 / {clips.length} clip selected</>
+                        ) : (
+                          <>
+                            {selectedClipsLength} /{" "}
+                            {prototype.isPremium ? clips.length : <>3</>} clip
+                            {selectedClipsLength > 1 && <>s</>} selected
+                          </>
+                        )}
+                      </span>
+                    </Tooltip>
+                  ) : (
+                    <span className="text-sm">
+                      {hasCorruptedFiles ? (
+                        <>0 / {clips.length} clip selected</>
+                      ) : (
+                        <>
+                          {selectedClipsLength} /{" "}
+                          {prototype.isPremium ? clips.length : <>3</>} clip
+                          {selectedClipsLength > 1 && <>s</>} selected
+                        </>
+                      )}
+                    </span>
+                  )}
                 </div>
                 <div className="form-toggle form-sm text-sm">
                   <input
