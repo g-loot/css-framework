@@ -34,84 +34,151 @@ const Track = ({
   playPauseTrack,
   selectedTrackID,
   selectTrack,
+  isWithButton,
 }) => {
   const { id, artist, name, duration } = trackData;
   return (
-    <button
-      type="button"
-      onClick={() => selectTrack(trackData)}
-      onMouseEnter={() => playPauseTrack(trackData)}
-      onMouseLeave={() => playPauseTrack(trackData)}
-      className="item item-interactive"
-    >
-      <div className="relative z-10 item-image pl-0">
-        <div className="form-radio">
-          <input
-            type="radio"
-            name="trackSelection"
-            id={`trackSelection_${id}`}
-            readOnly
-            checked={id === selectedTrackID}
-          />
-          <label htmlFor={`trackSelection_${id}`} />
-        </div>
-      </div>
-      <div className="relative z-10 item-body pl-1">
-        <div
-          className={`item-title text-sm truncate ${
-            isPlaying && isPlayingID === id && id !== selectedTrackID
-              ? "!text-ui-100"
-              : "text-ui-300"
-          } ${id === selectedTrackID ? "!text-main" : ""}`}
+    <>
+      {isWithButton ? (
+        <li className="item py-0">
+          <div className="item-image pl-0">
+            <div className="form-radio">
+              <input
+                type="radio"
+                name="trackSelection"
+                id={`trackSelection_${id}`}
+                defaultChecked={id === 1}
+              />
+              <label htmlFor={`trackSelection_${id}`} />
+            </div>
+          </div>
+          <div className="flex-1 flex gap-2 items-center relative p-2 pl-1 [&>div]:relative [&>div]:z-10 overflow-hidden">
+            <div className="item-body">
+            <div
+              className={`item-title text-sm truncate ${
+                isPlaying && isPlayingID === id && id !== selectedTrackID
+                  ? "!text-ui-100"
+                  : "text-ui-300"
+              } ${id === selectedTrackID ? "!text-main" : ""}`}
+            >
+              {name}
+            </div>
+            <div
+              className={`item-description text-xs truncate ${
+                isPlaying && isPlayingID === id && id !== selectedTrackID
+                  ? "!text-ui-100"
+                  : "text-ui-400"
+              } ${id === selectedTrackID ? "!text-main" : ""}`}
+            >
+              {artist}
+            </div>
+          </div>
+          <div className="relative z-10 item-actions">
+            <div className="text-xs text-ui-300 text-right">{duration}</div>
+          </div>
+            {isPlaying && isPlayingID === id && progress > 0 && (
+              <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
+                <i
+                  className="absolute inset-0 bg-mono-100/20"
+                  style={{ width: `${progress}%` }}
+                />
+              </i>
+            )}
+          </div>
+
+          <div className="item-actions">
+            <button
+              onClick={() => playPauseTrack(trackData)}
+              className="button button-tertiary button-sm rounded-full"
+            >
+              <span
+                className={`icon ${
+                  isPlaying && isPlayingID === id
+                    ? "icon-button-pause"
+                    : "icon-triangle-right"
+                }`}
+              />
+            </button>
+          </div>
+        </li>
+      ) : (
+        <button
+          type="button"
+          onClick={() => selectTrack(trackData)}
+          onMouseEnter={() => playPauseTrack(trackData)}
+          onMouseLeave={() => playPauseTrack(trackData)}
+          className="item item-interactive"
         >
-          {name}
-        </div>
-        <div
-          className={`item-description text-xs truncate ${
-            isPlaying && isPlayingID === id && id !== selectedTrackID
-              ? "!text-ui-100"
-              : "text-ui-400"
-          } ${id === selectedTrackID ? "!text-main" : ""}`}
-        >
-          {artist}
-        </div>
-      </div>
-      <div className="relative z-10 item-actions">
-        <div className="text-xs text-ui-300 text-right">{duration}</div>
-      </div>
-      <div className="relative z-10 item-actions overflow-hidden">
-        <img
-          src="https://res.cloudinary.com/gloot/image/upload/v1697790771/Stryda/icons/svg/bars-anim.svg"
-          alt=""
-          className={`h-4 w-4 transition ease-out ${
-            isPlaying && isPlayingID === id
-              ? "opacity-100 translate-x-0"
-              : "opacity-0 translate-x-8"
-          }`}
-        />
-        {/* <div className="button button-tertiary button-sm rounded-full">
-          <span
-            className={`icon ${
-              isPlaying && isPlayingID === id
-                ? "icon-button-pause"
-                : "icon-triangle-right"
-            }`}
-          />
-        </div> */}
-      </div>
-      {isPlaying && isPlayingID === id && progress > 0 && (
-        <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
-          <i
-            className="absolute inset-0 bg-mono-100/20"
-            style={{ width: `${progress}%` }}
-          />
-        </i>
+          <div className="relative z-10 item-image pl-0">
+            <div className="form-radio">
+              <input
+                type="radio"
+                name="trackSelection"
+                id={`trackSelection_${id}`}
+                readOnly
+                checked={id === selectedTrackID}
+              />
+              <label htmlFor={`trackSelection_${id}`} />
+            </div>
+          </div>
+          <div className="relative z-10 item-body pl-1">
+            <div
+              className={`item-title text-sm truncate ${
+                isPlaying && isPlayingID === id && id !== selectedTrackID
+                  ? "!text-ui-100"
+                  : "text-ui-300"
+              } ${id === selectedTrackID ? "!text-main" : ""}`}
+            >
+              {name}
+            </div>
+            <div
+              className={`item-description text-xs truncate ${
+                isPlaying && isPlayingID === id && id !== selectedTrackID
+                  ? "!text-ui-100"
+                  : "text-ui-400"
+              } ${id === selectedTrackID ? "!text-main" : ""}`}
+            >
+              {artist}
+            </div>
+          </div>
+          <div className="relative z-10 item-actions">
+            <div className="text-xs text-ui-300 text-right">{duration}</div>
+          </div>
+          <div className="relative z-10 item-actions overflow-hidden">
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/v1697790771/Stryda/icons/svg/bars-anim.svg"
+              alt=""
+              className={`h-4 w-4 transition ease-out ${
+                isPlaying && isPlayingID === id
+                  ? "opacity-100 translate-x-0"
+                  : "opacity-0 translate-x-8"
+              }`}
+            />
+            {/* <div className="button button-tertiary button-sm rounded-full">
+              <span
+                className={`icon ${
+                  isPlaying && isPlayingID === id
+                    ? "icon-button-pause"
+                    : "icon-triangle-right"
+                }`}
+              />
+            </div> */}
+          </div>
+          {isPlaying && isPlayingID === id && progress > 0 && (
+            <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
+              <i
+                className="absolute inset-0 bg-mono-100/20"
+                style={{ width: `${progress}%` }}
+              />
+            </i>
+          )}
+        </button>
       )}
-    </button>
+    </>
   );
 };
 
-const Playlist = () => {
+const Playlist = (props) => {
   const initialTracks = [
     {
       id: 1,
@@ -261,6 +328,7 @@ const Playlist = () => {
             selectedTrackID={selectedTrackID}
             playPauseTrack={playPauseTrack}
             selectTrack={selectTrack}
+            isWithButton={props.isWithButton}
           />
         ))}
       </div>
@@ -425,12 +493,16 @@ const Clip = ({
 
   function handleVideoPlay() {
     setIsPlaying(true);
-      onLoad(item.id, true);
+    onLoad(item.id, true);
+  }
+
+  function handleVideoHover() {
+    onLoad(item.id, isPlaying);
   }
 
   function handleVideoPause() {
     setIsPlaying(false);
-      onLoad(item.id, false);
+    onLoad(item.id, false);
   }
 
   function formatDuration(duration) {
@@ -477,22 +549,40 @@ const Clip = ({
           <span className="icon icon-clock" />
           <span>{formatDuration(item.duration)}</span>
         </div>
-        <div className="form-checkbox form-sm">
-          <input
-            type="checkbox"
-            name={`item_${item.id}`}
-            id={`item_${item.id}`}
-            checked={isSelected}
-            disabled={!isSelected && selectedClipsLength >= maxClips}
-            onChange={handleSelection}
-          />
-          <label htmlFor={`item_${item.id}`} />
+        <div className="w-4 flex justify-center items-center">
+          {!isSelected && selectedClipsLength >= maxClips ? (
+            <Tooltip
+              tooltip={
+                <span>
+                  You have reached the {maxClips} clips limit. Increase the
+                  limit with{" "}
+                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                    <a className="link link-premium">Premium</a>
+                  </Link>
+                </span>
+              }
+            >
+              <span className="icon icon-crown text-lg text-premium-300" />
+            </Tooltip>
+          ) : (
+            <div className="form-checkbox form-sm">
+              <input
+                type="checkbox"
+                name={`item_${item.id}`}
+                id={`item_${item.id}`}
+                checked={isSelected}
+                disabled={!isSelected && selectedClipsLength >= maxClips}
+                onChange={handleSelection}
+              />
+              <label htmlFor={`item_${item.id}`} />
+            </div>
+          )}
         </div>
       </div>
       <button
         type="button"
-        onMouseOver={handleVideoPlay}
-        onMouseOut={handleVideoPause}
+        //onMouseOver={handleVideoHover}
+        //onMouseOut={handleVideoHover}
         disabled={hasError}
         onClick={isPlaying ? handleVideoPause : handleVideoPlay}
         className={`w-full aspect-video bg-ui-850 relative grid place-content-center`}
@@ -516,18 +606,6 @@ const Clip = ({
             />
           </i>
         )}
-        {selectedClipsLength >= maxClips && !isSelected && (
-          <div className="absolute z-30 inset-2 grid place-content-center transition-all overflow-hidden text-ui-100 text-sm leading-tight text-center p-2 rounded bg-ui-600/90 backdrop-blur-sm animate-scale-in">
-            <span>
-              You have reached the {maxClips} clips limit. Increase the limit
-              with{" "}
-              <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                <a className="link link-premium">Premium</a>
-              </Link>
-            </span>
-          </div>
-        )}
-
         {!hasError && (
           <>
             {/* <img
@@ -585,6 +663,7 @@ export default function HighlightEditor() {
   const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [maxClips, setMaxClips] = useState(10);
+  const [isWithButton, setIsWithButton] = useState(false);
 
   useEffect(() => {
     if (prototype.isPremium) {
@@ -602,6 +681,7 @@ export default function HighlightEditor() {
       const firstSelectedClip = initialClips.find(
         (clip) => clip.isSelected === true
       );
+      setClipPlayingID(firstSelectedClip.id);
       mainVideoRef.current.src = firstSelectedClip.url + ".mp4";
     }
   }, []);
@@ -613,18 +693,30 @@ export default function HighlightEditor() {
   }, [clips]);
 
   const handleLoad = (itemID, plays) => {
-    // console.log("handleLoad", itemID, plays);
-    setPlayAllHasStarted(false);
-    currentVideoIndex.current = itemID;
-    const currentClip = clips.find(
-      (clip) => clip.id === currentVideoIndex.current
+    console.log(
+      "handleLoad",
+      itemID,
+      clipPlayingID,
+      currentVideoIndex.current,
+      plays
     );
-    mainVideoRef.current.src = currentClip.url + ".mp4";
-    setClipPlayingID(currentClip.id);
+    setPlayAllHasStarted(false);
     if (plays) {
+      console.log(plays);
       setIsPlaying(true);
+      mainVideoRef.current.play();
     } else {
+      console.log(plays);
       setIsPlaying(false);
+      mainVideoRef.current.pause();
+    }
+    if (itemID !== clipPlayingID) {
+      currentVideoIndex.current = itemID;
+      const currentClip = clips.find(
+        (clip) => clip.id === currentVideoIndex.current
+      );
+      mainVideoRef.current.src = currentClip.url + ".mp4";
+      setClipPlayingID(currentClip.id);
     }
   };
 
@@ -709,10 +801,6 @@ export default function HighlightEditor() {
     })
   );
 
-  function handleDragStart(event) {
-    setActiveId(event.active.id);
-  }
-
   function handleDragEnd(event) {
     const { active, over } = event;
 
@@ -788,8 +876,8 @@ export default function HighlightEditor() {
                       </p>
                     </div>
                   )}
-                  {!prototype.isPremium && (
-                    <div className="absolute z-40 top-0 inset-x-0 bg-ui-700/90 backdrop-blur-sm px-4 py-3 flex items-center gap-4 justify-around animate-fade-in">
+                  {!prototype.isPremium && selectedClipsLength >= maxClips && (
+                    <div className="absolute z-40 top-0 inset-x-0 bg-ui-850/95 px-4 py-3 flex items-center gap-4 justify-around animate-fade-in">
                       <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                         <PremiumLogo
                           src="https://res.cloudinary.com/gloot/image/upload/v1684315905/Stryda/logos/stryda-premium-logo-main-white.svg"
@@ -799,14 +887,13 @@ export default function HighlightEditor() {
                         />
                       </Link>
                       <p className="text-sm leading-tight">
-                        Enable highlight editing and a lot more features by
-                        becoming{" "}
+                        Add more clips to your highlight and get a lot more
+                        features by becoming{" "}
                         <Link
                           href={`/stryda/premium${prototype.getURLparams()}`}
                         >
                           <span className="link link-premium">Premium</span>
                         </Link>
-                        .
                       </p>
                       <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                         <button
@@ -838,7 +925,10 @@ export default function HighlightEditor() {
                 <div className="flex-1 relative flex flex-col">
                   <ul className="tabs tabs-secondary border-b border-ui-700 bg-gradient-to-b from-ui-700 to-ui-800">
                     <li>
-                      <a className="is-active">
+                      <a
+                        className="is-active"
+                        onClick={() => setIsWithButton(!isWithButton)}
+                      >
                         <span>Music</span>
                       </a>
                     </li>
@@ -918,7 +1008,7 @@ export default function HighlightEditor() {
                         </li>
                       </ul>
                     ) : (
-                      <Playlist />
+                      <Playlist isWithButton={isWithButton} />
                     )}
                   </div>
                 </div>
@@ -1037,7 +1127,7 @@ export default function HighlightEditor() {
                     <i className="form-icon" /> Show selected clips only
                   </label>
                 </div>
-                <div className="flex items-center justify-center gap-2 w-40">
+                {/* <div className="flex items-center justify-center gap-2 w-40">
                   <span className="icon icon-clock" />
                   <span className="text-sm">
                     Total duration:{" "}
@@ -1045,7 +1135,7 @@ export default function HighlightEditor() {
                       {formatDuration(selectedClipsDuration)}
                     </b>
                   </span>
-                </div>
+                </div> */}
               </div>
               <div
                 className={`relative flex justify-start z-0 overflow-hidden bg-ui-850 select-none`}
@@ -1097,7 +1187,7 @@ export default function HighlightEditor() {
                             item={item}
                             onLoad={handleLoad}
                             onSelect={handleSelect}
-                            isActive={clipPlayingID === item.id && isPlaying}
+                            isActive={clipPlayingID === item.id}
                             clipPlayingPercent={clipPlayingPercent}
                             showOnlySelected={showOnlySelected}
                             hasError={hasError}

@@ -127,7 +127,7 @@ export const StatsValorantDemoGeneral = [
   },
   {
     id: 21,
-    agent: 22,
+    agent: 21,
     rank: 8,
     topweapon: 18,
   },
