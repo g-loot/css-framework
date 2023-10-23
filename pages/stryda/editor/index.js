@@ -351,6 +351,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-01",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/01.png",
   },
   {
     id: 2,
@@ -358,6 +360,8 @@ const initialClips = [
     isAIFavored: false,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-02",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/02.png",
   },
   {
     id: 3,
@@ -365,6 +369,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-03",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/03.png",
   },
   {
     id: 4,
@@ -372,6 +378,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-04",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/04.png",
   },
   {
     id: 5,
@@ -379,6 +387,8 @@ const initialClips = [
     isAIFavored: false,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-05",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/05.png",
   },
   {
     id: 6,
@@ -386,6 +396,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-06",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/06.png",
   },
   {
     id: 7,
@@ -393,6 +405,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-07",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/07.png",
   },
   {
     id: 8,
@@ -400,6 +414,8 @@ const initialClips = [
     isAIFavored: false,
     duration: 11,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-08",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/08.png",
   },
   {
     id: 9,
@@ -407,6 +423,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-09",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/09.png",
   },
   {
     id: 10,
@@ -414,6 +432,8 @@ const initialClips = [
     isAIFavored: false,
     duration: 8,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-10",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/10.png",
   },
   {
     id: 11,
@@ -421,6 +441,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 4,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-11",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/11.png",
   },
   {
     id: 12,
@@ -428,6 +450,8 @@ const initialClips = [
     isAIFavored: true,
     duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-12",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/12.png",
   },
   {
     id: 13,
@@ -435,18 +459,58 @@ const initialClips = [
     isAIFavored: true,
     duration: 10,
     url: "https://res.cloudinary.com/gloot/video/upload/v1697464202/Stryda/demo/game%20footage/raze-split-13",
+    spriteUrl:
+      "https://res.cloudinary.com/gloot/image/upload/v1698070980/Stryda/demo/sprites/13.png",
   },
 ];
+
+function SpriteScrubber({ spriteUrl, totalFrames, isPlaying }) {
+  const [selectedFrame, setSelectedFrame] = useState(0);
+  const spriteRef = useRef(null);
+
+  const handleMouseMove = (e) => {
+    if (isPlaying) return;
+
+    const rect = spriteRef.current.getBoundingClientRect();
+    const x = e.clientX - rect.left;
+    const widthPerFrame = rect.width / totalFrames;
+    let currentFrame = Math.floor(x / widthPerFrame);
+    currentFrame = Math.max(0, Math.min(currentFrame, totalFrames - 1));
+
+    setSelectedFrame(currentFrame);
+  };
+
+  const handleMouseLeave = () => {
+    setSelectedFrame(0);
+  };
+
+  return (
+    <div
+      className="w-[170px] h-[96px] overflow-hidden relative cursor-pointer"
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      ref={spriteRef}
+    >
+      <div
+        className="w-full h-full bg-cover"
+        style={{
+          backgroundImage: `url(${spriteUrl})`,
+          backgroundPositionX: selectedFrame ? -selectedFrame * 100 + "%" : 0,
+        }}
+      />
+    </div>
+  );
+}
 
 const Clip = ({
   item,
   showOnlySelected,
   isActive,
-  clipPlayingPercent,
   onLoad,
   onSelect,
   hasError,
   selectedClipsLength,
+  anotherVideoStarted,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: item.id });
@@ -458,7 +522,6 @@ const Clip = ({
 
   const prototype = usePrototypeData();
   const [isSelected, setIsSelected] = useState(item.isSelected);
-  const [video, setVideo] = useState(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [maxClips, setMaxClips] = useState(10);
 
@@ -482,14 +545,16 @@ const Clip = ({
     }
   }, [isSelected]);
 
-  useEffect(() => {
-    setVideo(document.getElementById(`video_${item.id}`));
-  }, [item.id]);
-
   const handleSelection = () => {
     onSelect(item.id);
     setIsSelected(!isSelected);
   };
+
+  useEffect(() => {
+    if (anotherVideoStarted !== item.id) {
+      setIsPlaying(false);
+    }
+  }, [anotherVideoStarted]);
 
   function handleVideoPlay() {
     setIsPlaying(true);
@@ -581,8 +646,6 @@ const Clip = ({
       </div>
       <button
         type="button"
-        //onMouseOver={handleVideoHover}
-        //onMouseOut={handleVideoHover}
         disabled={hasError}
         onClick={isPlaying ? handleVideoPause : handleVideoPlay}
         className={`w-full aspect-video bg-ui-850 relative grid place-content-center`}
@@ -592,20 +655,22 @@ const Clip = ({
             isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
           }`}
         >
-          {isPlaying ? (
-            <span className="icon icon-btn-pause text-mono-100 text-5xl" />
-          ) : (
-            <span className="icon icon-btn-play text-mono-100 text-5xl" />
-          )}
+          <span className="icon icon-btn-pause text-mono-100 text-5xl" />
         </div>
-        {isActive && clipPlayingPercent && (
-          <i className="absolute z-10 inset-0 pointer-events-none">
-            <i
-              className="absolute inset-0 bg-ui-900/75 transition-all"
-              style={{ width: `${clipPlayingPercent}%` }}
-            />
-          </i>
-        )}
+        <i
+          className={`absolute z-10 inset-0 pointer-events-none ${
+            isActive ? "opacity-1" : "opacity-0"
+          }`}
+        >
+          <i
+            className={`absolute inset-0 bg-ui-900/75 ease-linear transition-all ${
+              isActive ? "w-full" : "w-0"
+            }`}
+            style={{
+              transitionDuration: isActive ? `${item.duration}s` : "0s",
+            }}
+          />
+        </i>
         {!hasError && (
           <>
             {/* <img
@@ -615,22 +680,16 @@ const Clip = ({
             src={`${item.url}.jpg`}
             alt=""
           /> */}
-            <video
-              autoPlay={false}
-              controls={false}
-              playsInline
-              muted
-              width="100%"
-              height="auto"
-              className="relative z-0 w-full pointer-events-none"
-              id={`video_${item.id}`}
-              src={`${item.url}.mp4`}
-            />
           </>
         )}
         {hasError && (
           <span className="icon icon-warning-sign text-3xl text-ui-300" />
         )}
+        <SpriteScrubber
+          spriteUrl={item.spriteUrl}
+          totalFrames={item.duration * 4}
+          isPlaying={isPlaying}
+        />
       </button>
       <button
         type="button"
@@ -655,14 +714,14 @@ export default function HighlightEditor() {
   const [selectedClipsDuration, setSelectedClipsDuration] = useState();
   const [playAllHasStarted, setPlayAllHasStarted] = useState(false);
   const [showOnlySelected, setShowOnlySelected] = useState(false);
-  const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
   const [activeId, setActiveId] = useState(null);
-  const mainVideoRef = useRef(0);
+  const mainVideoRef = useRef();
   const currentVideoIndex = useRef(1);
   const [hasError, setHasError] = useState(false);
   const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [maxClips, setMaxClips] = useState(10);
+  const [anotherVideoStarted, setAnotherVideoStarted] = useState(null);
   const [isWithButton, setIsWithButton] = useState(false);
 
   useEffect(() => {
@@ -701,6 +760,7 @@ export default function HighlightEditor() {
       plays
     );
     setPlayAllHasStarted(false);
+    setAnotherVideoStarted(itemID);
     if (plays) {
       console.log(plays);
       setIsPlaying(true);
@@ -780,17 +840,6 @@ export default function HighlightEditor() {
   const handleMainVideoEnded = () => {
     if (isPlaying && playAllHasStarted) {
       playNextVideo();
-    }
-  };
-
-  const handleVideoTimeUpdate = () => {
-    const video = mainVideoRef.current;
-    if (video) {
-      const currentTime = video.currentTime;
-      const duration = video.duration;
-      const widthPercentage = (currentTime / duration) * 100;
-      //console.log(widthPercentage, duration, currentTime);
-      setClipPlayingPercent(widthPercentage);
     }
   };
 
@@ -916,7 +965,6 @@ export default function HighlightEditor() {
                     className="w-full"
                     onLoadedMetadata={handleMainVideoLoaded}
                     onEnded={handleMainVideoEnded}
-                    onTimeUpdate={handleVideoTimeUpdate}
                     // src={selectedClip.url}
                   />
                 </div>
@@ -1187,11 +1235,11 @@ export default function HighlightEditor() {
                             item={item}
                             onLoad={handleLoad}
                             onSelect={handleSelect}
-                            isActive={clipPlayingID === item.id}
-                            clipPlayingPercent={clipPlayingPercent}
+                            isActive={clipPlayingID === item.id && isPlaying}
                             showOnlySelected={showOnlySelected}
                             hasError={hasError}
                             selectedClipsLength={selectedClipsLength}
+                            anotherVideoStarted={anotherVideoStarted}
                           />
                         ))}
                       </ul>
@@ -1209,10 +1257,10 @@ export default function HighlightEditor() {
                           onLoad={handleLoad}
                           onSelect={handleSelect}
                           isActive={clipPlayingID === item.id && isPlaying}
-                          clipPlayingPercent={clipPlayingPercent}
                           showOnlySelected={showOnlySelected}
                           hasError={hasError}
                           selectedClipsLength={selectedClipsLength}
+                          anotherVideoStarted={anotherVideoStarted}
                         />
                       ) : null}
                     </DragOverlay>
