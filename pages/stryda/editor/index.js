@@ -54,28 +54,28 @@ const Track = ({
           </div>
           <div className="flex-1 flex gap-2 items-center relative p-2 pl-1 [&>div]:relative [&>div]:z-10 overflow-hidden">
             <div className="item-body">
-            <div
-              className={`item-title text-sm truncate ${
-                isPlaying && isPlayingID === id && id !== selectedTrackID
-                  ? "!text-ui-100"
-                  : "text-ui-300"
-              } ${id === selectedTrackID ? "!text-main" : ""}`}
-            >
-              {name}
+              <div
+                className={`item-title text-sm truncate ${
+                  isPlaying && isPlayingID === id && id !== selectedTrackID
+                    ? "!text-ui-100"
+                    : "text-ui-300"
+                } ${id === selectedTrackID ? "!text-main" : ""}`}
+              >
+                {name}
+              </div>
+              <div
+                className={`item-description text-xs truncate ${
+                  isPlaying && isPlayingID === id && id !== selectedTrackID
+                    ? "!text-ui-100"
+                    : "text-ui-400"
+                } ${id === selectedTrackID ? "!text-main" : ""}`}
+              >
+                {artist}
+              </div>
             </div>
-            <div
-              className={`item-description text-xs truncate ${
-                isPlaying && isPlayingID === id && id !== selectedTrackID
-                  ? "!text-ui-100"
-                  : "text-ui-400"
-              } ${id === selectedTrackID ? "!text-main" : ""}`}
-            >
-              {artist}
+            <div className="relative z-10 item-actions">
+              <div className="text-xs text-ui-300 text-right">{duration}</div>
             </div>
-          </div>
-          <div className="relative z-10 item-actions">
-            <div className="text-xs text-ui-300 text-right">{duration}</div>
-          </div>
             {isPlaying && isPlayingID === id && progress > 0 && (
               <i className="absolute z-0 inset-0 pointer-events-none bg-ui-200/5 animate-scale-in-x-left">
                 <i
@@ -486,7 +486,7 @@ function SpriteScrubber({ spriteUrl, totalFrames, isPlaying }) {
 
   return (
     <div
-      className="w-[170px] h-[96px] overflow-hidden relative cursor-pointer"
+      className="absolute inset-0 overflow-hidden cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={spriteRef}
@@ -506,6 +506,7 @@ const Clip = ({
   item,
   showOnlySelected,
   isActive,
+  clipPlayingPercent,
   onLoad,
   onSelect,
   hasError,
@@ -559,10 +560,6 @@ const Clip = ({
   function handleVideoPlay() {
     setIsPlaying(true);
     onLoad(item.id, true);
-  }
-
-  function handleVideoHover() {
-    onLoad(item.id, isPlaying);
   }
 
   function handleVideoPause() {
@@ -655,9 +652,21 @@ const Clip = ({
             isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
           }`}
         >
-          <span className="icon icon-btn-pause text-mono-100 text-5xl" />
+          {isPlaying ? (
+            <span className="icon icon-btn-pause text-mono-100 text-5xl" />
+          ) : (
+            <span className="icon icon-btn-play text-mono-100 text-5xl" />
+          )}
         </div>
-        <i
+        {isActive && clipPlayingPercent && (
+          <i className="absolute z-10 inset-0 pointer-events-none">
+            <i
+              className="absolute inset-0 bg-ui-900/75"
+              style={{ width: `${clipPlayingPercent}%` }}
+            />
+          </i>
+        )}
+        {/* <i
           className={`absolute z-10 inset-0 pointer-events-none ${
             isActive ? "opacity-1" : "opacity-0"
           }`}
@@ -670,26 +679,16 @@ const Clip = ({
               transitionDuration: isActive ? `${item.duration}s` : "0s",
             }}
           />
-        </i>
-        {!hasError && (
-          <>
-            {/* <img
-            className={`${
-              !isSelected ? "opacity-50 grayscale mix-blend-lighten" : ""
-            }`}
-            src={`${item.url}.jpg`}
-            alt=""
-          /> */}
-          </>
-        )}
-        {hasError && (
+        </i> */}
+        {hasError ? (
           <span className="icon icon-warning-sign text-3xl text-ui-300" />
+        ) : (
+          <SpriteScrubber
+            spriteUrl={item.spriteUrl}
+            totalFrames={item.duration * 4}
+            isPlaying={isPlaying}
+          />
         )}
-        <SpriteScrubber
-          spriteUrl={item.spriteUrl}
-          totalFrames={item.duration * 4}
-          isPlaying={isPlaying}
-        />
       </button>
       <button
         type="button"
@@ -714,6 +713,7 @@ export default function HighlightEditor() {
   const [selectedClipsDuration, setSelectedClipsDuration] = useState();
   const [playAllHasStarted, setPlayAllHasStarted] = useState(false);
   const [showOnlySelected, setShowOnlySelected] = useState(false);
+  const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
   const [activeId, setActiveId] = useState(null);
   const mainVideoRef = useRef();
   const currentVideoIndex = useRef(1);
@@ -752,13 +752,6 @@ export default function HighlightEditor() {
   }, [clips]);
 
   const handleLoad = (itemID, plays) => {
-    console.log(
-      "handleLoad",
-      itemID,
-      clipPlayingID,
-      currentVideoIndex.current,
-      plays
-    );
     setPlayAllHasStarted(false);
     setAnotherVideoStarted(itemID);
     if (plays) {
@@ -840,6 +833,16 @@ export default function HighlightEditor() {
   const handleMainVideoEnded = () => {
     if (isPlaying && playAllHasStarted) {
       playNextVideo();
+    }
+  };
+
+  const handleVideoTimeUpdate = () => {
+    const video = mainVideoRef.current;
+    if (video) {
+      const currentTime = video.currentTime;
+      const duration = video.duration;
+      const widthPercentage = (currentTime / duration) * 100;
+      setClipPlayingPercent(widthPercentage);
     }
   };
 
@@ -965,6 +968,7 @@ export default function HighlightEditor() {
                     className="w-full"
                     onLoadedMetadata={handleMainVideoLoaded}
                     onEnded={handleMainVideoEnded}
+                    onTimeUpdate={handleVideoTimeUpdate}
                     // src={selectedClip.url}
                   />
                 </div>
@@ -1235,7 +1239,8 @@ export default function HighlightEditor() {
                             item={item}
                             onLoad={handleLoad}
                             onSelect={handleSelect}
-                            isActive={clipPlayingID === item.id && isPlaying}
+                            isActive={clipPlayingID === item.id}
+                            clipPlayingPercent={clipPlayingPercent}
                             showOnlySelected={showOnlySelected}
                             hasError={hasError}
                             selectedClipsLength={selectedClipsLength}
@@ -1256,7 +1261,8 @@ export default function HighlightEditor() {
                           item={clips.findIndex((clip) => clip.id === activeId)}
                           onLoad={handleLoad}
                           onSelect={handleSelect}
-                          isActive={clipPlayingID === item.id && isPlaying}
+                          isActive={clipPlayingID === item.id}
+                          clipPlayingPercent={clipPlayingPercent}
                           showOnlySelected={showOnlySelected}
                           hasError={hasError}
                           selectedClipsLength={selectedClipsLength}
