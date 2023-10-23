@@ -127,7 +127,13 @@ export const StatsValorantDemoGeneral = [
   },
   {
     id: 21,
-    agent: 21,
+    agent: 22,
+    rank: 8,
+    topweapon: 18,
+  },
+  {
+    id: 22,
+    agent: 22,
     rank: 8,
     topweapon: 18,
   },
@@ -136,7 +142,7 @@ export const StatsValorantDemoGeneral = [
 export const StatsValorantDemoFavoriteAgents = [
   {
     id: 3,
-    agent: 21,
+    agent: 22,
     timePlayed: "25H",
     matches: 59,
     win: 73.2,

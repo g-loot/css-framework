@@ -157,7 +157,20 @@ export default function BattlepassPage() {
 
               <div className="absolute w-full h-full opacity-25 inset-0 pointer-events-none select-none">
                 <i className="absolute z-10 h-36 inset-x-0 -bottom-px bg-gradient-to-b from-ui-900/0 via-ui-900/40 to-ui-900" />
-                <img
+                {getBattlepassByID(selectedBattlepassID).meta?.backgroundVideo ? (
+                  <video
+                  className="absolute w-full h-full inset-0 object-cover"
+                  autoPlay
+                  playsInline
+                  muted
+                  loop
+                  preload="true"
+                  poster={getBattlepassByID(selectedBattlepassID).meta?.backgroundImage}
+                >
+                  <source src={getBattlepassByID(selectedBattlepassID).meta?.backgroundVideo} />
+                </video>
+                ) : (
+                  <img
                   src={
                     getBattlepassByID(selectedBattlepassID).meta
                       ?.backgroundImage
@@ -165,6 +178,8 @@ export default function BattlepassPage() {
                   alt=""
                   className="absolute w-full h-full inset-0 object-cover"
                 />
+                )}
+                
               </div>
 
               {/* for demo purposes only */}

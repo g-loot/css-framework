@@ -485,6 +485,19 @@ export const StatsValorantAgents = [
     backgroundPath: getImageUrl('valorant-stats-hero-deadlock.jpg'),
     bodyPath: getImageUrl('valorant-stats-body-deadlock.webp'),
   },
+  {
+    id: 22,
+    name: 'iso',
+    role: {
+      id: 1,
+      name: 'duelist',
+      color: '#18990B',
+      picturePath: getImageUrl('role-duelist.webp'),
+    },
+    picturePath: getImageUrl('agent-avatar-iso.webp'),
+    backgroundPath: getImageUrl('valorant-stats-hero-iso.webp'),
+    bodyPath: getImageUrl('valorant-stats-body-iso.webp'),
+  },
 ];
 
 export const StatsValorantWeapons = [

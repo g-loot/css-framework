@@ -748,10 +748,13 @@ export default function Battlepass(props) {
                 )}
                 {activeStep <= maxSteps && (
                   <li className="battlepass-next">
-                    <button type="button" onClick={() => {
+                    <button
+                      type="button"
+                      onClick={() => {
                         setOriginStep(maxSteps);
                         setActiveStep(maxSteps + 1);
-                      }}>
+                      }}
+                    >
                       <span className="icon icon-present" />
                     </button>
                   </li>
@@ -997,11 +1000,25 @@ export default function Battlepass(props) {
               </div>
             </div>
           </div>
-          <img
-            src={selectedBattlepass.meta?.backgroundImage}
-            alt=""
+          {selectedBattlepass.meta?.backgroundVideo ? (
+            <video
             className="absolute z-0 w-full h-full inset-0 bg-blend-luminosity pointer-events-none object-cover object-center rounded-b"
-          />
+            autoPlay
+            playsInline
+            muted
+            loop
+            preload="true"
+            poster={selectedBattlepass.meta?.backgroundImage}
+          >
+            <source src={selectedBattlepass.meta?.backgroundVideo} />
+          </video>
+          ) : (
+            <img
+              src={selectedBattlepass.meta?.backgroundImage}
+              alt=""
+              className="absolute z-0 w-full h-full inset-0 bg-blend-luminosity pointer-events-none object-cover object-center rounded-b"
+            />
+          )}
         </>
       )}
     </>

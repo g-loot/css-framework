@@ -8,6 +8,7 @@ export const DataBattlepass = [
       description: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward. Battlepass and XP reset each week so you will always have something new to work towards.",
       logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-generic.svg",
       backgroundImage: "https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg",
+      backgroundVideo: "https://res.cloudinary.com/gloot/video/upload/v1698058922/Stryda/battlepass/Dragon_BG_v2.webm",
     },
     steps: [
       {

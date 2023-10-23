@@ -26,7 +26,7 @@ export default function StatsValorant() {
   const [selectedGeneralStat, setSelectedGeneralStat] = useState(0);
   const [selectedStat, setSelectedStat] = useState(null);
   const { game_slug } = router.query;
-  const variant = query.variant ? query.variant : 21;
+  const variant = query.variant ? query.variant : 22;
   const [loading, setLoading] = useState(true);
   const [maxMap, setMaxMap] = useState(3);
   const empty = query.empty === "true" ? true : false;
