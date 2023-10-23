@@ -506,7 +506,6 @@ const Clip = ({
   item,
   showOnlySelected,
   isActive,
-  clipPlayingPercent,
   onLoad,
   onSelect,
   hasError,
@@ -658,28 +657,16 @@ const Clip = ({
             <span className="icon icon-btn-play text-mono-100 text-5xl" />
           )}
         </div>
-        {isActive && clipPlayingPercent && (
-          <i className="absolute z-10 inset-0 pointer-events-none">
-            <i
-              className="absolute inset-0 bg-ui-900/75"
-              style={{ width: `${clipPlayingPercent}%` }}
-            />
-          </i>
-        )}
-        {/* <i
-          className={`absolute z-10 inset-0 pointer-events-none ${
-            isActive ? "opacity-1" : "opacity-0"
+        <i
+          className={`absolute z-10 inset-0 bg-ui-900/75 ${
+            isActive ? "animate-scale-in-x-left" : "opacity-0 scale-x-0"
           }`}
-        >
-          <i
-            className={`absolute inset-0 bg-ui-900/75 ease-linear transition-all ${
-              isActive ? "w-full" : "w-0"
-            }`}
-            style={{
-              transitionDuration: isActive ? `${item.duration}s` : "0s",
-            }}
-          />
-        </i> */}
+          style={{
+            animationDuration: isActive ? `${item.duration}s` : "0s",
+            animationPlayState: isPlaying ? "running" : "paused",
+            animationTimingFunction: "linear",
+          }}
+        />
         {hasError ? (
           <span className="icon icon-warning-sign text-3xl text-ui-300" />
         ) : (
@@ -713,7 +700,6 @@ export default function HighlightEditor() {
   const [selectedClipsDuration, setSelectedClipsDuration] = useState();
   const [playAllHasStarted, setPlayAllHasStarted] = useState(false);
   const [showOnlySelected, setShowOnlySelected] = useState(false);
-  const [clipPlayingPercent, setClipPlayingPercent] = useState(false);
   const [activeId, setActiveId] = useState(null);
   const mainVideoRef = useRef();
   const currentVideoIndex = useRef(1);
@@ -746,7 +732,6 @@ export default function HighlightEditor() {
   }, []);
 
   useEffect(() => {
-    // console.log("Clips updated:", clips);
     setSelectedClipsLength(getSelectedClipsLength);
     setSelectedClipsDuration(getSelectedClipsDuration);
   }, [clips]);
@@ -755,11 +740,9 @@ export default function HighlightEditor() {
     setPlayAllHasStarted(false);
     setAnotherVideoStarted(itemID);
     if (plays) {
-      console.log(plays);
       setIsPlaying(true);
       mainVideoRef.current.play();
     } else {
-      console.log(plays);
       setIsPlaying(false);
       mainVideoRef.current.pause();
     }
@@ -834,15 +817,8 @@ export default function HighlightEditor() {
     if (isPlaying && playAllHasStarted) {
       playNextVideo();
     }
-  };
-
-  const handleVideoTimeUpdate = () => {
-    const video = mainVideoRef.current;
-    if (video) {
-      const currentTime = video.currentTime;
-      const duration = video.duration;
-      const widthPercentage = (currentTime / duration) * 100;
-      setClipPlayingPercent(widthPercentage);
+    if(!playAllHasStarted) {
+      setIsPlaying(false);
     }
   };
 
@@ -968,7 +944,6 @@ export default function HighlightEditor() {
                     className="w-full"
                     onLoadedMetadata={handleMainVideoLoaded}
                     onEnded={handleMainVideoEnded}
-                    onTimeUpdate={handleVideoTimeUpdate}
                     // src={selectedClip.url}
                   />
                 </div>
@@ -1240,7 +1215,6 @@ export default function HighlightEditor() {
                             onLoad={handleLoad}
                             onSelect={handleSelect}
                             isActive={clipPlayingID === item.id}
-                            clipPlayingPercent={clipPlayingPercent}
                             showOnlySelected={showOnlySelected}
                             hasError={hasError}
                             selectedClipsLength={selectedClipsLength}
@@ -1262,7 +1236,6 @@ export default function HighlightEditor() {
                           onLoad={handleLoad}
                           onSelect={handleSelect}
                           isActive={clipPlayingID === item.id}
-                          clipPlayingPercent={clipPlayingPercent}
                           showOnlySelected={showOnlySelected}
                           hasError={hasError}
                           selectedClipsLength={selectedClipsLength}
