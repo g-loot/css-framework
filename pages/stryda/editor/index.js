@@ -745,7 +745,7 @@ export default function HighlightEditor() {
   const currentVideoIndex = useRef(1);
   const [hasError, setHasError] = useState(false);
   const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [maxClips, setMaxClips] = useState(10);
   const [isWithButton, setIsWithButton] = useState(true);
 
@@ -759,9 +759,9 @@ export default function HighlightEditor() {
 
   useEffect(() => {
     if (clips) {
-      // setTimeout(() => {
-      //   setIsLoading(false);
-      // }, 4000);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 4000);
       const firstSelectedClip = initialClips.find(
         (clip) => clip.isSelected === true
       );
