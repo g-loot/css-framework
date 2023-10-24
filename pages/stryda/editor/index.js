@@ -486,7 +486,7 @@ function SpriteScrubber({ spriteUrl, totalFrames, isPlaying }) {
 
   return (
     <div
-      className="absolute inset-0 overflow-hidden cursor-pointer"
+      className="w-[170px] h-[96px] overflow-hidden relative cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       ref={spriteRef}
