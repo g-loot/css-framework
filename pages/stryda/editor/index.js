@@ -35,14 +35,19 @@ const Track = ({
   selectedTrackID,
   selectTrack,
   isWithButton,
+  needsPremium,
 }) => {
   const { id, artist, name, duration } = trackData;
   return (
     <>
       {isWithButton ? (
         <li className="item py-0">
-          <div className="item-image pl-0">
-            <div className="form-radio">
+          <div className="item-image pl-0 relative">
+            <div
+              className={`form-radio ${
+                needsPremium ? "pointer-events-none opacity-0" : ""
+              }`}
+            >
               <input
                 type="radio"
                 name="trackSelection"
@@ -51,8 +56,27 @@ const Track = ({
               />
               <label htmlFor={`trackSelection_${id}`} />
             </div>
+            {needsPremium && (
+              <div className="grid place-items-center absolute inset-0 w-full h-full">
+                <Tooltip
+                  tooltip={
+                    <span>
+                      Select this song with{" "}
+                      <Link href={`/prototype/premium`}>
+                        <a className="link link-premium">Premium</a>
+                      </Link>
+                    </span>
+                  }
+                >
+                  <span className="icon icon-crown text-lg text-premium-300" />
+                </Tooltip>
+              </div>
+            )}
           </div>
-          <div className="flex-1 flex gap-2 items-center relative p-2 pl-1 [&>div]:relative [&>div]:z-10 overflow-hidden">
+          <button
+            onClick={() => playPauseTrack(trackData)}
+            className="flex-1 flex gap-2 items-center relative p-2 pl-1 [&>div]:relative [&>div]:z-10 overflow-hidden cursor-pointer"
+          >
             <div className="item-body">
               <div
                 className={`item-title text-sm truncate ${
@@ -84,12 +108,12 @@ const Track = ({
                 />
               </i>
             )}
-          </div>
+          </button>
 
           <div className="item-actions">
             <button
-              onClick={() => playPauseTrack(trackData)}
               className="button button-tertiary button-sm rounded-full"
+              onClick={() => playPauseTrack(trackData)}
             >
               <span
                 className={`icon ${
@@ -207,6 +231,7 @@ const Playlist = (props) => {
       artist: "Balls of Steel",
       duration: "3:09",
       url: "ES_Balls_of_Steel_-_Rymdklang_Soundtracks.mp3",
+      needsPremium: true,
     },
     {
       id: 5,
@@ -214,6 +239,7 @@ const Playlist = (props) => {
       artist: "Bambi Haze",
       duration: "3:16",
       url: "ES_Bam_Bam_-_Bambi_Haze.mp3",
+      needsPremium: true,
     },
     {
       id: 6,
@@ -228,6 +254,7 @@ const Playlist = (props) => {
       artist: "Nbhd Nick",
       duration: "2:45",
       url: "ES_Beast_Mode_-_Nbhd_Nick.mp3",
+      needsPremium: true,
     },
     {
       id: 8,
@@ -242,6 +269,7 @@ const Playlist = (props) => {
       artist: "Bonkers Beat Club",
       duration: "3:43",
       url: "ES_Bird_Flex_-_Bonkers_Beat_Club.mp3",
+      needsPremium: true,
     },
     {
       id: 10,
@@ -256,6 +284,7 @@ const Playlist = (props) => {
       artist: "Bonkers Beat Club",
       duration: "4:01",
       url: "ES_Bop_Bop_Bop_-_Bonkers_Beat_Club.mp3",
+      needsPremium: true,
     },
     {
       id: 12,
@@ -329,6 +358,7 @@ const Playlist = (props) => {
             playPauseTrack={playPauseTrack}
             selectTrack={selectTrack}
             isWithButton={props.isWithButton}
+            needsPremium={track.needsPremium}
           />
         ))}
       </div>
@@ -480,15 +510,10 @@ function SpriteScrubber({ spriteUrl, totalFrames, isPlaying }) {
     setSelectedFrame(currentFrame);
   };
 
-  const handleMouseLeave = () => {
-    setSelectedFrame(0);
-  };
-
   return (
     <div
       className="w-[170px] h-[96px] overflow-hidden relative cursor-pointer"
       onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
       ref={spriteRef}
     >
       <div
@@ -510,7 +535,8 @@ const Clip = ({
   onSelect,
   hasError,
   selectedClipsLength,
-  anotherVideoStarted,
+  isPlaying,
+  mainVideoEnded,
 }) => {
   const { attributes, listeners, setNodeRef, transform, transition } =
     useSortable({ id: item.id });
@@ -522,7 +548,6 @@ const Clip = ({
 
   const prototype = usePrototypeData();
   const [isSelected, setIsSelected] = useState(item.isSelected);
-  const [isPlaying, setIsPlaying] = useState(false);
   const [maxClips, setMaxClips] = useState(10);
 
   useEffect(() => {
@@ -550,19 +575,18 @@ const Clip = ({
     setIsSelected(!isSelected);
   };
 
-  useEffect(() => {
-    if (anotherVideoStarted !== item.id) {
-      setIsPlaying(false);
-    }
-  }, [anotherVideoStarted]);
-
   function handleVideoPlay() {
-    setIsPlaying(true);
     onLoad(item.id, true);
   }
 
+  useEffect(() => {
+    console.log("reset", mainVideoEnded);
+    if (mainVideoEnded && isActive) {
+      resetAnimation();
+    }
+  }, [mainVideoEnded]);
+
   function handleVideoPause() {
-    setIsPlaying(false);
     onLoad(item.id, false);
   }
 
@@ -571,6 +595,17 @@ const Clip = ({
     const seconds = Math.round(duration % 60);
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   }
+
+  const [animationOn, setAnimationOn] = useState(true);
+
+  function resetAnimation() {
+    setAnimationOn(false);
+    setTimeout(() => {
+      setAnimationOn(true);
+    }, 100);
+  }
+
+  const isClipPlaying = isActive && isPlaying;
 
   return (
     <li
@@ -643,15 +678,17 @@ const Clip = ({
       <button
         type="button"
         disabled={hasError}
-        onClick={isPlaying ? handleVideoPause : handleVideoPlay}
+        onClick={isClipPlaying ? handleVideoPause : handleVideoPlay}
         className={`w-full aspect-video bg-ui-850 relative grid place-content-center`}
       >
         <div
-          className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden pointer-events-none ${
-            isActive ? "opacity-100 translate-y-0" : "opacity-0 translate-y-1"
+          className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden ${
+            isActive
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 translate-y-1 pointer-events-none"
           }`}
         >
-          {isPlaying ? (
+          {isClipPlaying ? (
             <span className="icon icon-btn-pause text-mono-100 text-5xl" />
           ) : (
             <span className="icon icon-btn-play text-mono-100 text-5xl" />
@@ -659,12 +696,15 @@ const Clip = ({
         </div>
         <i
           className={`absolute z-10 inset-0 bg-ui-900/75 ${
-            isActive ? "animate-scale-in-x-left" : "opacity-0 scale-x-0"
+            isActive && animationOn
+              ? "animate-scale-in-x-left"
+              : "opacity-0 scale-x-0 pointer-events-none"
           }`}
           style={{
             animationDuration: isActive ? `${item.duration}s` : "0s",
-            animationPlayState: isPlaying ? "running" : "paused",
+            animationPlayState: isClipPlaying ? "running" : "paused",
             animationTimingFunction: "linear",
+            animationFillMode: "forwards",
           }}
         />
         {hasError ? (
@@ -673,7 +713,7 @@ const Clip = ({
           <SpriteScrubber
             spriteUrl={item.spriteUrl}
             totalFrames={item.duration * 4}
-            isPlaying={isPlaying}
+            isPlaying={isClipPlaying}
           />
         )}
       </button>
@@ -705,10 +745,9 @@ export default function HighlightEditor() {
   const currentVideoIndex = useRef(1);
   const [hasError, setHasError] = useState(false);
   const [hasCorruptedFiles, setHasCorruptedFiles] = useState(false);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [maxClips, setMaxClips] = useState(10);
-  const [anotherVideoStarted, setAnotherVideoStarted] = useState(null);
-  const [isWithButton, setIsWithButton] = useState(false);
+  const [isWithButton, setIsWithButton] = useState(true);
 
   useEffect(() => {
     if (prototype.isPremium) {
@@ -720,9 +759,9 @@ export default function HighlightEditor() {
 
   useEffect(() => {
     if (clips) {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 4000);
+      // setTimeout(() => {
+      //   setIsLoading(false);
+      // }, 4000);
       const firstSelectedClip = initialClips.find(
         (clip) => clip.isSelected === true
       );
@@ -738,7 +777,6 @@ export default function HighlightEditor() {
 
   const handleLoad = (itemID, plays) => {
     setPlayAllHasStarted(false);
-    setAnotherVideoStarted(itemID);
     if (plays) {
       setIsPlaying(true);
       mainVideoRef.current.play();
@@ -813,14 +851,24 @@ export default function HighlightEditor() {
     }
   };
 
+  const [mainVideoEnded, setMainVideoEnded] = useState(false);
+
   const handleMainVideoEnded = () => {
+    setMainVideoEnded(true);
+
     if (isPlaying && playAllHasStarted) {
       playNextVideo();
     }
-    if(!playAllHasStarted) {
+    if (!playAllHasStarted) {
       setIsPlaying(false);
     }
   };
+
+  useEffect(() => {
+    if (mainVideoEnded) {
+      setMainVideoEnded(false);
+    }
+  }, [mainVideoEnded]);
 
   const sensors = useSensors(
     useSensor(PointerSensor),
@@ -847,6 +895,50 @@ export default function HighlightEditor() {
     const minutes = Math.floor(duration / 60);
     const seconds = Math.round(duration % 60);
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
+  }
+
+  const [showMainPlayerPauseButton, setShowMainPlayerPauseButton] =
+    useState(false);
+
+  const timeout = useRef(null);
+
+  const handleShowMainPlayerPauseOnHover = () => {
+    clearTimeout(timeout.current);
+    timeout.current = setTimeout(() => {
+      if (isPlaying) {
+        setShowMainPlayerPauseButton(false);
+      }
+    }, 1000);
+  };
+
+  useEffect(() => {
+    handleShowMainPlayerPauseOnHover();
+  }, [isPlaying]);
+
+  function handleOnMouseMoveMainVideo() {
+    setShowMainPlayerPauseButton(true);
+
+    if (isPlaying) {
+      handleShowMainPlayerPauseOnHover();
+    }
+  }
+
+  function handleOnMouseLeaveMainVideo() {
+    setShowMainPlayerPauseButton(false);
+  }
+
+  function handleOnClickMainVideo() {
+    toggleMainVideo();
+  }
+
+  function toggleMainVideo() {
+    if (isPlaying) {
+      setIsPlaying(false);
+      mainVideoRef.current.pause();
+    } else {
+      setIsPlaying(true);
+      mainVideoRef.current.play();
+    }
   }
 
   return (
@@ -881,7 +973,12 @@ export default function HighlightEditor() {
                     </div>
                   </div>
                 </div>
-                <div className="relative aspect-video bg-ui-850 rounded-b overflow-hidden">
+                <div
+                  onMouseMove={handleOnMouseMoveMainVideo}
+                  onMouseLeave={handleOnMouseLeaveMainVideo}
+                  onClick={handleOnClickMainVideo}
+                  className="relative aspect-video bg-ui-850 rounded-b overflow-hidden cursor-pointer"
+                >
                   {isLoading && (
                     <div className="absolute z-40 inset-0 grid place-content-center gap-4 text-sm text-center bg-ui-850">
                       <div role="loading" className="loader loader-sm">
@@ -934,6 +1031,19 @@ export default function HighlightEditor() {
                       </Link>
                     </div>
                   )}
+                  <div
+                    className={`absolute z-20 inset-0 grid place-content-center transition-all overflow-hidden pointer-events-none ${
+                      showMainPlayerPauseButton
+                        ? "opacity-100 translate-y-0"
+                        : "opacity-0 translate-y-1"
+                    }`}
+                  >
+                    {isPlaying ? (
+                      <span className="icon icon-btn-pause text-mono-100 text-5xl" />
+                    ) : (
+                      <span className="icon icon-btn-play text-mono-100 text-5xl" />
+                    )}
+                  </div>
                   <video
                     //controls
                     ref={mainVideoRef}
@@ -1218,7 +1328,8 @@ export default function HighlightEditor() {
                             showOnlySelected={showOnlySelected}
                             hasError={hasError}
                             selectedClipsLength={selectedClipsLength}
-                            anotherVideoStarted={anotherVideoStarted}
+                            isPlaying={isPlaying}
+                            mainVideoEnded={mainVideoEnded}
                           />
                         ))}
                       </ul>
@@ -1239,7 +1350,8 @@ export default function HighlightEditor() {
                           showOnlySelected={showOnlySelected}
                           hasError={hasError}
                           selectedClipsLength={selectedClipsLength}
-                          anotherVideoStarted={anotherVideoStarted}
+                          isPlaying={isPlaying}
+                          mainVideoEnded={mainVideoEnded}
                         />
                       ) : null}
                     </DragOverlay>
