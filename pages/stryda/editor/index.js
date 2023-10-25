@@ -320,6 +320,19 @@ const Playlist = (props) => {
     setSelectedTrackID(track.id);
   };
 
+  useEffect(() => {
+    if (isPlaying) {
+      props.onTrackIsPlaying();
+    }
+  }, [isPlaying]);
+
+  useEffect(() => {
+    if (props.mainVideoIsPlaying) {
+      setIsPlaying(false);
+      audioRef.current.pause();
+    }
+  }, [props.mainVideoIsPlaying]);
+
   const playPauseTrack = (track) => {
     if (playingTrack.name === track.name) {
       if (isPlaying) {
@@ -927,6 +940,13 @@ export default function HighlightEditor() {
     toggleMainVideo();
   }
 
+  function handleOnTrackIsPlaying() {
+    if (isPlaying) {
+      setIsPlaying(false);
+      mainVideoRef.current.pause();
+    }
+  }
+
   function toggleMainVideo() {
     if (isPlaying) {
       setIsPlaying(false);
@@ -1141,7 +1161,11 @@ export default function HighlightEditor() {
                         </li>
                       </ul>
                     ) : (
-                      <Playlist isWithButton={isWithButton} />
+                      <Playlist
+                        isWithButton={isWithButton}
+                        onTrackIsPlaying={handleOnTrackIsPlaying}
+                        mainVideoIsPlaying={isPlaying}
+                      />
                     )}
                   </div>
                 </div>
