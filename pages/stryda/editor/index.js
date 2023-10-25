@@ -35,7 +35,7 @@ const Track = ({
   selectedTrackID,
   selectTrack,
   isWithButton,
-  needsPremium,
+  isFree,
 }) => {
   const { id, artist, name, duration } = trackData;
   return (
@@ -45,7 +45,7 @@ const Track = ({
           <div className="item-image pl-0 relative">
             <div
               className={`form-radio ${
-                needsPremium ? "pointer-events-none opacity-0" : ""
+                !isFree ? "pointer-events-none opacity-0" : ""
               }`}
             >
               <input
@@ -56,7 +56,7 @@ const Track = ({
               />
               <label htmlFor={`trackSelection_${id}`} />
             </div>
-            {needsPremium && (
+            {!isFree && (
               <div className="grid place-items-center absolute inset-0 w-full h-full">
                 <Tooltip
                   tooltip={
@@ -210,6 +210,7 @@ const Playlist = (props) => {
       artist: "Splasher!",
       duration: "3:45",
       url: "ES_Ace-High_-_Splasher.mp3",
+      isFree: true,
     },
     {
       id: 2,
@@ -231,7 +232,6 @@ const Playlist = (props) => {
       artist: "Balls of Steel",
       duration: "3:09",
       url: "ES_Balls_of_Steel_-_Rymdklang_Soundtracks.mp3",
-      needsPremium: true,
     },
     {
       id: 5,
@@ -239,7 +239,6 @@ const Playlist = (props) => {
       artist: "Bambi Haze",
       duration: "3:16",
       url: "ES_Bam_Bam_-_Bambi_Haze.mp3",
-      needsPremium: true,
     },
     {
       id: 6,
@@ -254,7 +253,6 @@ const Playlist = (props) => {
       artist: "Nbhd Nick",
       duration: "2:45",
       url: "ES_Beast_Mode_-_Nbhd_Nick.mp3",
-      needsPremium: true,
     },
     {
       id: 8,
@@ -269,7 +267,6 @@ const Playlist = (props) => {
       artist: "Bonkers Beat Club",
       duration: "3:43",
       url: "ES_Bird_Flex_-_Bonkers_Beat_Club.mp3",
-      needsPremium: true,
     },
     {
       id: 10,
@@ -284,7 +281,6 @@ const Playlist = (props) => {
       artist: "Bonkers Beat Club",
       duration: "4:01",
       url: "ES_Bop_Bop_Bop_-_Bonkers_Beat_Club.mp3",
-      needsPremium: true,
     },
     {
       id: 12,
@@ -358,7 +354,7 @@ const Playlist = (props) => {
             playPauseTrack={playPauseTrack}
             selectTrack={selectTrack}
             isWithButton={props.isWithButton}
-            needsPremium={track.needsPremium}
+            isFree={track.isFree}
           />
         ))}
       </div>
