@@ -559,6 +559,8 @@ const Clip = ({
   const [isSelected, setIsSelected] = useState(item.isSelected);
   const [maxClips, setMaxClips] = useState(10);
 
+  const clipVideoRef = useRef();
+
   useEffect(() => {
     if (prototype.isPremium) {
       setMaxClips(20);
@@ -615,6 +617,14 @@ const Clip = ({
   }
 
   const isClipPlaying = isActive && isPlaying;
+
+  useEffect(() => {
+    if (isClipPlaying) {
+      clipVideoRef.current.play();
+    } else {
+      clipVideoRef.current.pause();
+    }
+  }, [isClipPlaying]);
 
   return (
     <li
@@ -721,10 +731,17 @@ const Clip = ({
         {hasError ? (
           <span className="icon icon-warning-sign text-3xl text-ui-300" />
         ) : (
-          <SpriteScrubber
-            spriteUrl={item.spriteUrl}
-            totalFrames={item.duration * 4}
-            isPlaying={isClipPlaying}
+          <video
+            ref={clipVideoRef}
+            autoPlay={false}
+            controls={false}
+            playsInline
+            muted
+            width="100%"
+            height="auto"
+            className="relative z-0 w-full pointer-events-none"
+            id={`video_${item.id}`}
+            src={`${item.url}.mp4`}
           />
         )}
       </button>
