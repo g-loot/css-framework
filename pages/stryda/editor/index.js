@@ -659,10 +659,12 @@ const Clip = ({
             <Tooltip
               tooltip={
                 <span>
-                  You have reached the {maxClips} clips limit. Increase the
-                  limit with{" "}
                   <Link href={`/prototype/premium${prototype.getURLparams()}`}>
-                    <a className="link link-premium">Premium</a>
+                    <a className="cursor-pointer">
+                      You have reached the 3 clips limit. CLICK here to increase
+                      limit with{" "}
+                      <span className="link link-premium">Premium</span>
+                    </a>
                   </Link>
                 </span>
               }
