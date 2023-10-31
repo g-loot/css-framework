@@ -19,7 +19,7 @@ const WalletItems = [
     get: "From the <b>Battle Pass</b> and <b>Ladders</b>.",
     color: "text-currency-1-500",
     button: "visitshop",
-    buttonLabel: "Visit shot",
+    buttonLabel: "Visit shop",
   },
   {
     id: 2,

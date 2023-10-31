@@ -3,7 +3,8 @@
 /*----------------------------*/
 
 @layer components {
-  .tooltip {
+  .tooltip,
+  [data-tooltip] {
     @apply
     relative
     cursor-pointer
@@ -26,7 +27,6 @@
       duration-200
       ease-in-out
       absolute
-      backdrop-blur-sm
       transform-gpu
       z-10
       opacity-0
@@ -89,7 +89,11 @@
       }
     }
   }
-  .tooltip-top {
+}
+
+@layer components {
+  .tooltip.tooltip-top,
+  [data-tooltip].tooltip-top {
     &::after {
       @apply
       right-auto
@@ -99,7 +103,7 @@
       translate-y-0.5
       ;
     }
-    &:hover {
+    &:not(.tooltip-attention):hover {
       &::after {
         @apply
         -translate-y-0.5
@@ -107,7 +111,8 @@
       }
     }
   }
-  .tooltip-right {
+  .tooltip.tooltip-right,
+  [data-tooltip].tooltip-right {
     &::after {
       @apply
       top-auto
@@ -117,7 +122,7 @@
       translate-y-[50%]
       ;
     }
-    &:hover {
+    &:not(.tooltip-attention):hover {
       &::after {
         @apply
         translate-x-1
@@ -126,7 +131,8 @@
       }
     }
   }
-  .tooltip-bottom {
+  .tooltip.tooltip-bottom,
+  [data-tooltip].tooltip-bottom {
     &::after {
       @apply
       bottom-auto
@@ -134,7 +140,7 @@
       -translate-y-1
       ;
     }
-    &:hover {
+    &:not(.tooltip-attention):hover {
       &::after {
         @apply
         translate-y-1
@@ -142,7 +148,8 @@
       }
     }
   }
-  .tooltip-left {
+  .tooltip.tooltip-left,
+  [data-tooltip].tooltip-left {
     &::after {
       @apply
       top-auto
@@ -153,7 +160,7 @@
       translate-y-[50%]
       ;
     }
-    &:hover {
+    &:not(.tooltip-attention):hover {
       &::after {
         @apply
         -translate-x-1
@@ -234,7 +241,7 @@
 
 /* tooltip attention */
 @layer components {
-  .tooltip-attention {
+  .tooltip.tooltip-attention {
     @apply
     outline
     -outline-offset-1
@@ -262,7 +269,6 @@
     &::after {
       @apply
       opacity-100
-      bg-ui-600/75
       animate-fade-in
       text-main
       ;
@@ -368,7 +374,8 @@
 
 
 .tooltip,
-.tooltip-attention {
+.tooltip-attention,
+[data-tooltip] {
   &[data-tooltip=""] {
     @apply
     !cursor-default
@@ -386,7 +393,6 @@
   @apply
   bg-ui-600/95
   rounded
-  backdrop-blur-sm
   transform-gpu
   p-2
   leading-none

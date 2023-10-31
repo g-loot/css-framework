@@ -221,7 +221,7 @@
 }
 
 .icon-logo-twitter::before {
-  content: "\ec2e"; /* \ea24 */
+  content: "\ec47"; /* \ea24 */
 }
 
 .icon-logo-paypal::before {
@@ -2241,7 +2241,7 @@
 }
 
 .icon-logo-x::before {
-  content: "\ec2e";
+  content: "\ec47";
 }
 
 .icon-swap-vertical::before {

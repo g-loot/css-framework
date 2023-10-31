@@ -76,22 +76,9 @@ export const dataFeedItems = [
     id: 2,
     type: "ladders",
     ladders: [
-    
       {
         game: "valorant",
         id: 5,
-      },
-      {
-        game: "leagueoflegends",
-        id: 0,
-      },
-      {
-        game: "valorant",
-        id: 0,
-      },
-      {
-        game: "pubg",
-        id: 2,
       },
     ]
   },
@@ -344,5 +331,28 @@ export const dataFeedItems = [
       likes: [],
       comments: [],
     },
+  },
+  {
+    id: 12,
+    type: "ladders",
+    ladders: [
+    
+      {
+        game: "valorant",
+        id: 5,
+      },
+      {
+        game: "leagueoflegends",
+        id: 0,
+      },
+      {
+        game: "valorant",
+        id: 0,
+      },
+      {
+        game: "pubg",
+        id: 2,
+      },
+    ]
   },
 ];

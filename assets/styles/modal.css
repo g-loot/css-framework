@@ -80,7 +80,7 @@
   mx-auto
   ;
 
-  &:not(.modal-stacked) {
+  &:not(.modal-stacked, .modal-center) {
     @apply
     lg:flex-row
     ;

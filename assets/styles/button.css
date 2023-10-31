@@ -16,7 +16,6 @@ button {
     inline-flex
     justify-center
     items-center
-    text-center
     cursor-pointer
     px-3
     py-2.5
@@ -30,7 +29,9 @@ button {
     focus-visible:outline
     focus-visible:outline-offset-2
     focus-visible:outline-1
+    text-center
     text-ui-800
+    text-base
     select-none
     bg-[length:500%_auto]
     font-body
@@ -38,7 +39,6 @@ button {
     transform-gpu
     shrink-0
     rounded-full
-    text-base
     ;
     outline-radius: 100%;
   
@@ -337,6 +337,24 @@ button {
       ;
     }
   }
+  .button-md {
+    @apply
+    px-3
+    py-2.5
+    text-base
+    ;
+    &[data-feedback]::before {
+      @apply
+      text-base
+      ;
+    }
+    &[class*='rounded-full'],
+    &.button-play {
+      @apply
+      px-2.5
+      ;
+    }
+  }
   .button-sm {
     @apply
     py-2
@@ -631,6 +649,11 @@ button {
       via-disabled-500/50
       to-disabled-500/50
       ;
+      > span {
+        @apply
+        text-disabled-300
+        ;
+      }
     }
   }
 

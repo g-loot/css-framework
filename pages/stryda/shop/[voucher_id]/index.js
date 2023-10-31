@@ -16,6 +16,7 @@ export default function Home() {
   const prototype = usePrototypeData();
   const [selectedVoucher, setSelectedVoucher] = useState(null);
   const [selectedSection, setSelectedSection] = useState(1);
+  const [stateError, setStateError] = useState("normal");
   const hasAds = query.ads === "true" ? true : false;
   const { voucher_id } = router.query;
   const modalPurchaseConfirmation =
@@ -51,6 +52,7 @@ export default function Home() {
         voucher={selectedVoucher}
         section={section}
         giftcard={giftcard}
+        state={stateError}
       />
     );
   }
@@ -60,6 +62,7 @@ export default function Home() {
         voucher={selectedVoucher}
         section={section}
         giftcard={giftcard}
+        state={stateError}
       />
     );
   }
@@ -224,66 +227,44 @@ export default function Home() {
                                   </div>
                                 </div>
                                 <div className="border-t border-ui-700 pt-4">
-                                  {giftcard.price && (
-                                    <>
-                                      {prototype.getUserProfile().wallet
-                                        .coins >= giftcard.price && (
-                                        <button
-                                          type="button"
-                                          className="button button-primary button-currency button-coin w-full"
-                                          onClick={() =>
-                                            openModalPurchaseConfirmation(
-                                              selectedVoucher.id,
-                                              section.id,
-                                              giftcard.id
-                                            )
-                                          }
-                                        >
-                                          <div>
-                                            <span>Purchase</span>
-                                          </div>
-                                          <div>
-                                            <span className="icon icon-coin" />
-                                            <span>
-                                              {numberWithSpaces(giftcard.price)}
-                                            </span>
-                                          </div>
-                                        </button>
-                                      )}
-                                      {prototype.getUserProfile().wallet.coins <
-                                        giftcard.price && (
-                                        <div
-                                          className="tooltip"
-                                          data-tooltip="Not enough funds"
-                                        >
-                                          <button
-                                            type="button"
-                                            className="button button-primary button-currency button-coin w-full is-disabled"
-                                          >
-                                            <div>
-                                              <span>Purchase</span>
-                                            </div>
-                                            <div>
-                                              <span className="icon icon-coin" />
-                                              <span>
-                                                {numberWithSpaces(
-                                                  giftcard.price
-                                                )}
-                                              </span>
-                                            </div>
-                                          </button>
-                                        </div>
-                                      )}
-                                    </>
-                                  )}
-                                  {!giftcard.price && (
+                                  <div
+                                    className="tooltip"
+                                    data-tooltip={`${
+                                      stateError === "notenoughfunds"
+                                        ? "You don't have enough funds. Get more through Ladders and Battle Pass."
+                                        : ""
+                                    }${
+                                      stateError === "outofstock"
+                                        ? "Out of stock."
+                                        : ""
+                                    }`}
+                                    onClick={() =>
+                                      openModalPurchaseConfirmation(
+                                        selectedVoucher.id,
+                                        section.id,
+                                        giftcard.id
+                                      )
+                                    }
+                                  >
                                     <button
                                       type="button"
-                                      className="button button-primary is-disabled w-full"
+                                      className={`button button-primary button-currency button-coin w-full ${
+                                        stateError !== "normal"
+                                          ? "is-disabled"
+                                          : ""
+                                      }`}
                                     >
-                                      <span>Out of stock</span>
+                                      <div>
+                                        <span>Purchase</span>
+                                      </div>
+                                      <div>
+                                        <span className="icon icon-coin" />
+                                        <span>
+                                          {numberWithSpaces(giftcard.price)}
+                                        </span>
+                                      </div>
                                     </button>
-                                  )}
+                                  </div>
                                 </div>
                               </li>
                             </>
@@ -295,6 +276,57 @@ export default function Home() {
                 )}
               </>
             ))}
+            {/* for demo purposes only */}
+            {prototype.showDemo && (
+              <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+                <div className="absolute top-1 right-1">
+                  <button
+                    type="button"
+                    className="button button-sm button-secondary button-close"
+                    onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                  >
+                    <span className="icon icon-e-remove" />
+                  </button>
+                </div>
+                <div>
+                  <h3 className="text-sm">States:</h3>
+                  <div className="form-group pl-4 mt-2">
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="error"
+                        id="error-normal"
+                        defaultChecked={stateError === "normal"}
+                        onChange={() => setStateError("normal")}
+                      />
+                      <label htmlFor="error-normal">Normal</label>
+                    </div>
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="error"
+                        id="error-outofstock"
+                        defaultChecked={stateError === "outofstock"}
+                        onChange={() => setStateError("outofstock")}
+                      />
+                      <label htmlFor="error-outofstock">Out of stock</label>
+                    </div>
+                    <div className="form-xs form-radio">
+                      <input
+                        type="radio"
+                        name="error"
+                        id="error-notenoughfunds"
+                        defaultChecked={stateError === "notenoughfunds"}
+                        onChange={() => setStateError("notenoughfunds")}
+                      />
+                      <label htmlFor="error-notenoughfunds">
+                        Not enough funds
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            )}
           </>
         )}
       </Structure>

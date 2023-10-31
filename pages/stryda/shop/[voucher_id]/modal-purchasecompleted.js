@@ -69,7 +69,7 @@ export default function ModalPurchaseCompleted(props) {
       {dataVouchers && (
         <>
           <div className="relative z-10 max-w-sm w-full">
-            <div className="modal w-full">
+            <div className="modal w-full modal-center">
               <div className="modal-content">
                 <div className="modal-body text-center">
                   <h2 className="modal-title !pr-0">Purchase successful</h2>

@@ -79,7 +79,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip"
+                      className="chip chip-primary"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
@@ -92,7 +92,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip tooltip-right"
+                      className="chip chip-primary tooltip-right"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
@@ -105,7 +105,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip tooltip-left"
+                      className="chip chip-primary tooltip-left"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
@@ -118,7 +118,7 @@ const DSpage = () => {
                   </div>
                   <div className="flex-1">
                     <div
-                      className="chip chip-primary tooltip tooltip-bottom"
+                      className="chip chip-primary tooltip-bottom"
                       data-tooltip="Lorem ipsum dolor sit amet"
                     >
                       <span>Tooltip</span>
