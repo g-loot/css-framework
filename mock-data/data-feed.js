@@ -6,8 +6,7 @@ export const dataFeedItems = [
     social: {
       views: [2, 5, 6, 8, 9, 10, 11, 12, 13],
       likes: [7, 2],
-      comments: [
-      ],
+      comments: [],
     },
   },
   {
@@ -50,7 +49,8 @@ export const dataFeedItems = [
     type: "post",
     title: "Calling all Valorant players",
     text: "Introducing: Big Clan Battle for League of Legends! Compete with your fellow clan members in a month-long, clan-only Ladder. In Big Clan Battle, every clan can submit 20 individual results to decide their total Ladder score and take home the biggest prize pool yet!",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1694459768/Stryda/demo/nordic-clash-ad.webp",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1694459768/Stryda/demo/nordic-clash-ad.webp",
     url: "/stryda/clanevents/valorant/0",
     buttonLabel: "Learn more",
     social: {
@@ -73,15 +73,26 @@ export const dataFeedItems = [
     },
   },
   {
+    id: 12,
+    type: "ladders",
+    ladders: [
+      {
+        game: "leagueoflegends",
+        id: 1,
+      },
+    ],
+  },
+  {
     id: 2,
     type: "ladders",
     ladders: [
       {
         game: "valorant",
-        id: 5,
+        id: 2,
       },
-    ]
+    ],
   },
+
   /*
   {
     id: 2,
@@ -117,11 +128,13 @@ export const dataFeedItems = [
     type: "advertising",
     author: {
       name: "HyperX",
-      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694459773/Stryda/demo/hyperX-logo.jpg",
+      avatar:
+        "https://res.cloudinary.com/gloot/image/upload/v1694459773/Stryda/demo/hyperX-logo.jpg",
     },
     title: "Cloud III Wireless",
     text: "Cloud III Wireless brings you 120 hours of uninterrupted comfy gaming 😊",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/hyperX-ad-1.jpg",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/hyperX-ad-1.jpg",
     url: "https://hyperx.com/",
     social: {
       views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
@@ -174,11 +187,13 @@ export const dataFeedItems = [
     type: "advertising",
     author: {
       name: "Razer",
-      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/razer-logo.jpg",
+      avatar:
+        "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/razer-logo.jpg",
     },
     title: "Razer Cobra Pro",
     text: "Tap into a new level of wireless performance with the Razer Cobra Pro. Powered by Razer HyperSpeed Wireless, pair it with the Razer Mouse Dock Pro to unlock a true 4000 Hz polling rate for next-gen responsiveness.",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/razer-ad-1.jpg",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/razer-ad-1.jpg",
     url: "https://razer.com/",
     social: {
       views: [12, 13, 11, 5, 6, 8, 9, 10, 2, 3],
@@ -207,8 +222,8 @@ export const dataFeedItems = [
     achievementLevel: 4,
     text: "[x] just mastered an achievement!",
     social: {
-      views: [1,2,3,4,5,6,7,8,9,10],
-      likes: [1,2],
+      views: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+      likes: [1, 2],
       comments: [
         {
           author: 5,
@@ -241,7 +256,7 @@ export const dataFeedItems = [
     type: "match",
     itemID: 6,
     social: {
-      views: [1,4,5,6],
+      views: [1, 4, 5, 6],
       likes: [],
       comments: [
         {
@@ -258,11 +273,13 @@ export const dataFeedItems = [
     type: "advertising",
     author: {
       name: "Logitech",
-      avatar: "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/logitech-logo.jpg",
+      avatar:
+        "https://res.cloudinary.com/gloot/image/upload/v1694461288/Stryda/demo/logitech-logo.jpg",
     },
     title: "PROX Superlight 2",
     text: "Let's hear it. Which would you add to your setup 🖤 💗 🤍",
-    image: "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/logitech-ad-1.jpg",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1694459771/Stryda/demo/logitech-ad-1.jpg",
     url: "https://www.logitechg.com/sv-se/products/gaming-mice/pro-x-superlight-wireless-mouse.html",
     social: {
       views: [5, 6, 7, 11, 2, 3, 3, 10],
@@ -336,7 +353,6 @@ export const dataFeedItems = [
     id: 12,
     type: "ladders",
     ladders: [
-    
       {
         game: "valorant",
         id: 5,
@@ -353,6 +369,6 @@ export const dataFeedItems = [
         game: "pubg",
         id: 2,
       },
-    ]
+    ],
   },
 ];

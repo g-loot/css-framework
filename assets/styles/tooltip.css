@@ -378,7 +378,7 @@
 [data-tooltip] {
   &[data-tooltip=""] {
     @apply
-    !cursor-default
+    cursor-default
     ;
     &::after {
       @apply

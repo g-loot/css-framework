@@ -314,7 +314,7 @@ ul, ol {
     &:not(:where([class~=not-format] *)) {
       @apply
       text-ui-200
-      my-7
+      !my-7
       leading-loose
       ;
     }
@@ -382,18 +382,16 @@ ul, ol {
       ;
 
       > li {
-        &:not(:last-of-type) {
+        @apply
+        my-4
+        pl-2
+        ;
+        :where(strong, b) {
           @apply
-          my-4
-          pl-2
+          text-ui-100
           ;
-          :where(strong, b) {
-            @apply
-            text-ui-100
-            ;
-          }
-        } 
-      }
+        }
+    }
     }
   }
   :where(ul) {

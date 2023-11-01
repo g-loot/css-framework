@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { useRouter } from "next/router";
@@ -9,13 +9,13 @@ import Structure from "@/pages/stryda/components/Structure";
 import Loader from "@/pages/stryda/components/Loader";
 import Feed from "@/pages/stryda/components/Feed";
 import { VariablesContext } from "@/contexts/variables";
-import ModalBuyTokens from "../wallet/modal-buytokens";
 import WidgetCompetitions from "../components/WidgetCompetitions";
 import WidgetBattlepass from "../components/WidgetBattlepass";
 import WidgetMissions from "../components/WidgetMissions";
 import WidgetFollowings from "../components/WidgetFollowings";
 import WidgetAdPremium from "../components/WidgetAdPremium";
 import WidgetAdShop from "../components/WidgetAdShop";
+import ModalUpdateClient from "../modal-updateclient";
 
 export default function Home() {
   const router = useRouter();
@@ -32,10 +32,18 @@ export default function Home() {
   const [stateFollowings, setStateFollowings] = useState("normal");
   const [stateFeedAd, setStateFeedAd] = useState("normal");
   const [hasError, setHasError] = useState(false);
+  const modalUpdateClient =
+    query.modalupdater === "true" ? true : false;
 
-  function openModalBuyTokens() {
-    uiContext.openModal(<ModalBuyTokens />);
+  function openModalUpdateClient() {
+    uiContext.openModal(<ModalUpdateClient />);
   }
+
+  useEffect(() => {
+    if (modalUpdateClient) {
+      openModalUpdateClient();
+    }
+  }, [modalUpdateClient]);
 
   return (
     <>
@@ -361,6 +369,18 @@ export default function Home() {
                     />
                     <label htmlFor="ad-noauthor">Without author</label>
                   </div>
+                </div>
+              </div>
+              <div>
+                <h3 className="text-sm">Modals:</h3>
+                <div className="space-y-2 mt-2">
+                  <button
+                    type="button"
+                    className="button button-sm button-ghost"
+                    onClick={openModalUpdateClient}
+                  >
+                    <span>Open Client Updater Modal</span>
+                  </button>
                 </div>
               </div>
             </section>

@@ -32,7 +32,14 @@ export default function FeedItemPost(props) {
               </div>
             </div>
           </div>
-          <div className="px-4 pb-4 text-base">
+          <Link href={item.url}>
+            <img
+              src={item.image}
+              alt={item.title}
+              className="w-full h-auto aspect-video object-center object-cover border-y border-ui-700"
+            />
+          </Link>
+          <div className="p-4 text-base">
             <h4 className="text-lg md:text-xl font-bold text-ui-100">
               {item.title}
             </h4>
@@ -48,13 +55,7 @@ export default function FeedItemPost(props) {
               </Link>
             )}
           </div>
-          <Link href={item.url}>
-            <img
-              src={item.image}
-              alt={item.title}
-              className="w-full h-auto aspect-video object-center object-cover border-y border-ui-700"
-            />
-          </Link>
+         
           <FeedItemComments item={item} isExpanded={false} />
         </button>
       )}

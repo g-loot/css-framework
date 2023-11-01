@@ -415,7 +415,7 @@
     border-ui-600
     rounded
     aspect-square
-    cursor-pointer
+    !cursor-pointer
     relative
     outline
     -outline-offset-2
