@@ -23,6 +23,11 @@ h6,
   leading-[1.1]
   normal-case
   ;
+  &:is(:empty) {
+    @apply
+    hidden
+    ;
+  }
 }
 
 h1,
@@ -39,7 +44,12 @@ h1,
     font-body
     font-normal
     ;
-  } 
+  }
+  &:is(:empty) {
+    @apply
+    hidden
+    ;
+  }
 }
 
 h2,
@@ -157,6 +167,12 @@ ul, ol {
     list-outside
     ;
 
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
+
     > li {
       @apply
       relative
@@ -246,6 +262,21 @@ ul, ol {
         }
       }
     }
+  }
+  &[class*="border"] {
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
+  }
+}
+
+p {
+  &:is(:empty) {
+    @apply
+    hidden
+    ;
   }
 }
 

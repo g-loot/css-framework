@@ -1,8 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import { UiContext } from "@/contexts/ui";
 
 const DSpage = () => {
+  const uiContext = useContext(UiContext);
   const [StartAnim1, setStartAnim1] = useState(false);
   const [StartAnim2, setStartAnim2] = useState(false);
   const [StartAnim3, setStartAnim3] = useState(false);
@@ -1353,9 +1355,7 @@ const DSpage = () => {
                     }}
                   >
                     .reduced-motion
-                  </code>
-                  .<br />
-                  class name to it.
+                  </code> class name to it.
                 </p>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
@@ -1378,6 +1378,77 @@ const DSpage = () => {
                   src="//jsfiddle.net/augustin_hiebel/mjyspcrk/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
                 ></iframe>
               </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+       {/* Responsive reduced motion */}
+       <div className="mb-12" id="responsive-reduced-motion">
+        <h2 className="h3 mb-3">Responsive reduced motion</h2>
+
+        <div className="surface rounded-lg p-4">
+          <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+            <div className="flex-1 space-y-4">
+              <p className="text-ui-300 mb-6">
+                You can control the motion based on the screen size
+                using the following class name:{" "}
+                <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("sm:reduced-motion");
+                  }}
+                >
+                  .&#123;xx&#x7D;:reduced-motion
+                </code>{" "}or <code
+                  className="interactive text-xs"
+                  onClick={() => {
+                    uiContext.openToastr({
+                      size: "small",
+                      text: "class name copied to your clipboard",
+                      color: "green",
+                      autoDelete: true,
+                      autoDeleteDelay: 2500,
+                    });
+                    navigator.clipboard.writeText("sm:normal-motion");
+                  }}
+                >
+                  .&#123;xx&#x7D;:normal-motion
+                </code>
+                .<br />
+                &#123;xx&#x7D; can be <code className="text-xs">xs</code>,{" "}
+                <code className="text-xs">sm</code>,{" "}
+                <code className="text-xs">md</code>,{" "}
+                <code className="text-xs">lg</code>,{" "}
+                <code className="text-xs">xl</code>.
+              </p>
+              <div className="w-full flex gap-4 items-center">
+                <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
+                  In this example, the shining button is not animated below 768px (md)
+                </div>
+                <div className="flex-1">
+                <div className="grid gap-4 place-content-center h-24 reduced-motion md:normal-motion rounded surface-ui-700">
+                      <button type="button" className="button is-shining">
+                        <span>I can&#39;t shine</span>
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div className="flex-1">
+              <iframe
+                className="rounded"
+                width="100%"
+                height="300"
+                src="//jsfiddle.net/augustin_hiebel/05arth14/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+              ></iframe>
             </div>
           </div>
         </div>

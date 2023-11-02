@@ -16,6 +16,12 @@
     aspect-square
     ;
 
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
+
     > img {
       @apply
       absolute
@@ -327,6 +333,11 @@
   flex
   items-center
   ;
+  &:is(:empty) {
+    @apply
+    hidden
+    ;
+  }
   > * {
     @apply
     relative

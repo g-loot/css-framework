@@ -55,7 +55,7 @@ export default function Demo() {
   return (
     <>
       <Head>
-        <title>Demo — Stryda v2</title>
+        <title>Demo — Stryda v3</title>
         <meta name="description" content="Stryda Prototype" />
         <link
           rel="icon"

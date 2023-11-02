@@ -491,20 +491,47 @@
 
 
 /* reduced motion */ 
-
-.reduced-motion {
-  .is-shining::before,
-  .is-shining::after,
-  .tooltip-attention::before,
-  .card-mission.card-secondary.is-highlighted .card-bg::before,
-  .infobanner.is-active > .infobanner-front,
-  .infobanner.is-active > .infobanner-back > *,
-  .battlepass-step.is-current .battlepass-content::before,
-  .animate-bounce,
-  .battlepass-next,
-  .battlepass-previous {
-    @apply
-    !animate-none
-    ;
+@layer components {
+  .reduced-motion {
+    .is-shining::before,
+    .is-shining::after,
+    .tooltip-attention::before,
+    .card-mission.card-secondary.is-highlighted .card-bg::before,
+    .infobanner.is-active > .infobanner-front,
+    .infobanner.is-active > .infobanner-back > *,
+    .battlepass-step.is-current .battlepass-content::before,
+    .animate-bounce,
+    .animate-heartbeat,
+    .animate-drop-in,
+    .animate-bounce-right,
+    .animate-bounce-left,
+    .animate-bounce-bottom,
+    .animate-floating,
+    .animate-text-attention,
+    .battlepass-next,
+    .battlepass-previous {
+      animation-play-state: paused !important;
+    }
+  }
+  .normal-motion {
+    .is-shining::before,
+    .is-shining::after,
+    .tooltip-attention::before,
+    .card-mission.card-secondary.is-highlighted .card-bg::before,
+    .infobanner.is-active > .infobanner-front,
+    .infobanner.is-active > .infobanner-back > *,
+    .battlepass-step.is-current .battlepass-content::before,
+    .animate-bounce,
+    .animate-heartbeat,
+    .animate-drop-in,
+    .animate-bounce-right,
+    .animate-bounce-left,
+    .animate-bounce-bottom,
+    .animate-floating,
+    .animate-text-attention,
+    .battlepass-next,
+    .battlepass-previous {
+      animation-play-state: running !important;
+    }
   }
 }

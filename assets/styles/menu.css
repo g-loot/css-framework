@@ -11,6 +11,12 @@
     list-none
     transform-gpu
     ;
+
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
   
     &.menu-rounded {
       :where(a, button, div) {

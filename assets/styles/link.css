@@ -69,8 +69,46 @@
   ;
 }
 
-/* hover highlight */
+/* hover inside */
 
+.hoverinside\:opacity-100 {
+  &:hover {
+    .hoverinside {
+      @apply
+      opacity-100
+      ;
+    }
+  }
+}
+.hoverinside\:translate-x-0 {
+  &:hover {
+    .hoverinside {
+      @apply
+      translate-x-0
+      ;
+    }
+  }
+}
+.hoverinside\:translate-y-0 {
+  &:hover {
+    .hoverinside {
+      @apply
+      translate-y-0
+      ;
+    }
+  }
+}
+.hoverinside\:scale-100 {
+  &:hover {
+    .hoverinside {
+      @apply
+      scale-100
+      ;
+    }
+  }
+}
+
+/* hover highlight */
 
 .hoverhighlight {
   > * {

@@ -90,6 +90,12 @@
       rounded-b
       ;
     }
+
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
   }
 
   .card-body {
@@ -119,6 +125,12 @@
     flex-wrap
     items-start
     gap-2;
+
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
   }
 
   &.card-cover {
@@ -1147,6 +1159,12 @@
       md:aspect-auto
       ;
 
+      &:is(:empty) {
+        @apply
+        hidden
+        ;
+      }
+
       > .card-image-content {
         @apply
         relative
@@ -1221,6 +1239,12 @@
       p-4
       ;
 
+      &:is(:empty) {
+        @apply
+        hidden
+        ;
+      }
+
       &:not([class*="items-"]) {
         @apply
         items-stretch
@@ -1238,6 +1262,11 @@
         flex
         gap-4
         ;
+        &:is(:empty) {
+          @apply
+          hidden
+          ;
+        }
       }
 
       > .card-body {
@@ -1271,6 +1300,13 @@
         md:mt-0
         md:pt-0
         ;
+
+        &:is(:empty) {
+          @apply
+          hidden
+          ;
+        }
+
         &:not([class*="items-"]) {
           @apply
           items-start
@@ -1368,6 +1404,16 @@
           justify-between
           items-center
           ;
+          &:is(:empty) {
+            @apply
+            hidden
+            ;
+          }
+          &:has(.avatar-group):has(.avatar-group:empty) {
+            @apply
+            hidden
+            ;
+          }
           &:not([class*="items-"]) {
             @apply 
             md:items-stretch
@@ -1529,7 +1575,7 @@
       }
     }
   }
-  .card-ladder-horizontal {
+  .card-ladder.card-horizontal {
     @apply 
     flex
     flex-row

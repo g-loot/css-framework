@@ -703,7 +703,7 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Tabs & button stretch</h2>
 
         <div className="surface rounded-lg p-4">
-          <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+          <div className="flex gap-4 flex-col">
             <div className="flex-1 space-y-4">
               <p className="text-ui-300 mb-6">
                 You can combine tabs with the <Link href="/design-system/buttons#button-stretch"><a className="link link-main">button stretch component</a></Link>.
@@ -743,7 +743,7 @@ const DSpage = () => {
         <h2 className="h3 mb-3">Tabs colored (game picker)</h2>
 
         <div className="surface rounded-lg p-4">
-          <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+          <div className="flex gap-4 flex-col">
             <div className="flex-1 space-y-4">
               <div className="relative overflow-hidden">
                 <ul className="tabs tabs-colored">

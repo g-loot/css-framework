@@ -41,7 +41,13 @@ button {
     rounded-full
     ;
     outline-radius: 100%;
-  
+
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
+    
     &:not([disabled]),
     &:not(.is-disabled) {
       @apply

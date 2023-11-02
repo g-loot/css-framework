@@ -146,21 +146,23 @@
     justify-center
     overflow-hidden
     ;
-
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
     > span {
       @apply
       bg-cover
       bg-center
       ;
     }
-
     > img {
       @apply
       relative
       z-30
       ;
     }
-
     &::before {
       @apply
       absolute
@@ -179,7 +181,6 @@
       blur-xl
       ;
     }
-
     > span {
       @apply
       absolute
@@ -197,16 +198,18 @@
     flex-col
     items-stretch
     max-w-[100%]
-    /* text-center */
     ;
-
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
     &:not([class*="p-"]) {
       @apply
       p-4
       lg:p-6
       ;
     }
-
     .modal-body {
       @apply
       flex-1
@@ -215,7 +218,6 @@
       items-stretch
       justify-center
       ;
-
       .modal-title {
         @apply
         pr-8
@@ -226,8 +228,6 @@
           ;
         }
       }
-
-
       p {
         &:not([class*="my-"]):not([class*="mt-"]):not(:first-child) {
           @apply
@@ -270,6 +270,11 @@
   mt-4
   lg:mt-6
   ;
+  &:is(:empty) {
+    @apply
+    hidden
+    ;
+  }
 }
 
 .modal {

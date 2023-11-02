@@ -54,6 +54,7 @@ export default function FeedItemLadders(props) {
                   {item.ladders.map((item, itemIndex) => (
                     <CardLadder
                       key={itemIndex}
+                      ladder={prototype.getLadderByID(item.game, item.id)}
                       game_slug={item.game_slug}
                       isHorizontal={false}
                       isClan={false}

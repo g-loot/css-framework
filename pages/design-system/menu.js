@@ -279,16 +279,6 @@ const DSpage = () => {
                       <span>Ladders</span>
                     </button>
                   </li>
-                  <li>
-                    <button>
-                      <span>Tournaments</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <span>Stats</span>
-                    </button>
-                  </li>
                 </ul>
               </div>
               <div className="flex-1">
@@ -333,16 +323,6 @@ const DSpage = () => {
                   <li>
                     <button>
                       <span>Ladders</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <span>Tournaments</span>
-                    </button>
-                  </li>
-                  <li>
-                    <button>
-                      <span>Stats</span>
                     </button>
                   </li>
                 </ul>
