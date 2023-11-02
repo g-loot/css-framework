@@ -2,6 +2,8 @@ import React, { useState, useContext } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 import { UiContext } from "@/contexts/ui";
+import Link from "next/link";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -152,9 +154,8 @@ const DSpage = () => {
       <h1 className="mb-2">Animation</h1>
 
       {/* Heartbeat */}
-      <div className="mb-12" id="heartbeat">
-        <h2 className="h3 mb-3">Heartbeat</h2>
-
+      <div className="mb-12">
+        <Anchor title="Heartbeat" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -177,8 +178,8 @@ const DSpage = () => {
       </div>
 
       {/* Floating */}
-      <div className="mb-12" id="floating">
-        <h2 className="h3 mb-3">Floating</h2>
+      <div className="mb-12">
+        <Anchor title="Floating" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -202,9 +203,8 @@ const DSpage = () => {
       </div>
 
       {/* Bounce */}
-      <div className="mb-12" id="bounce">
-        <h2 className="h3 mb-3">Bounce</h2>
-
+      <div className="mb-12">
+        <Anchor title="Bounce" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -227,9 +227,8 @@ const DSpage = () => {
       </div>
 
       {/* Bounce bottom */}
-      <div className="mb-12" id="bounce-bottom">
-        <h2 className="h3 mb-3">Bounce bottom</h2>
-
+      <div className="mb-12">
+        <Anchor title="Bounce bottom" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -252,9 +251,8 @@ const DSpage = () => {
       </div>
 
       {/* Bounce right */}
-      <div className="mb-12" id="bounce-right">
-        <h2 className="h3 mb-3">Bounce right</h2>
-
+      <div className="mb-12">
+        <Anchor title="Bounce right" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -277,9 +275,8 @@ const DSpage = () => {
       </div>
 
       {/* Bounce left */}
-      <div className="mb-12" id="bounce-left">
-        <h2 className="h3 mb-3">Bounce left</h2>
-
+      <div className="mb-12">
+        <Anchor title="Bounce left" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -302,9 +299,8 @@ const DSpage = () => {
       </div>
 
       {/* Pulse */}
-      <div className="mb-12" id="pulse">
-        <h2 className="h3 mb-3">Pulse</h2>
-
+      <div className="mb-12">
+        <Anchor title="Pulse" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -327,15 +323,19 @@ const DSpage = () => {
       </div>
 
       {/* Rotate */}
-      <div className="mb-12" id="rotate">
-        <h2 className="h3 mb-3">Rotate</h2>
-
+      <div className="mb-12">
+        <Anchor title="Rotate" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4 text-center flex items-center justify-center">
                 <div className="animate-rotate">
-                  <img src="https://res.cloudinary.com/gloot/image/upload/v1672652127/Stryda/logos/mission-category-2.svg" alt="" width="42" height="42" />
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672652127/Stryda/logos/mission-category-2.svg"
+                    alt=""
+                    width="42"
+                    height="42"
+                  />
                 </div>
               </div>
               <div className="flex-1">
@@ -352,9 +352,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide in bottom */}
-      <div className="mb-12" id="slide-in-bottom">
-        <h2 className="h3 mb-3">Slide in bottom</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide in bottom" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -387,9 +386,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide in top */}
-      <div className="mb-12" id="slide-in-top">
-        <h2 className="h3 mb-3">Slide in top</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide in top" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -422,9 +420,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide in right */}
-      <div className="mb-12" id="slide-in-right">
-        <h2 className="h3 mb-3">Slide in right</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide in right" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -457,9 +454,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide in left */}
-      <div className="mb-12" id="slide-in-left">
-        <h2 className="h3 mb-3">Slide in left</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide in left" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -492,9 +488,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide out bottom */}
-      <div className="mb-12" id="slide-out-bottom">
-        <h2 className="h3 mb-3">Slide out bottom</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide out bottom" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -527,9 +522,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide out top */}
-      <div className="mb-12" id="slide-out-top">
-        <h2 className="h3 mb-3">Slide out top</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide out top" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -562,9 +556,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide out right */}
-      <div className="mb-12" id="slide-out-right">
-        <h2 className="h3 mb-3">Slide out right</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide out right" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -597,9 +590,8 @@ const DSpage = () => {
       </div>
 
       {/* Slide out left */}
-      <div className="mb-12" id="slide-out-left">
-        <h2 className="h3 mb-3">Slide out left</h2>
-
+      <div className="mb-12">
+        <Anchor title="Slide out left" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -632,9 +624,8 @@ const DSpage = () => {
       </div>
 
       {/* Fade in */}
-      <div className="mb-12" id="fade-in">
-        <h2 className="h3 mb-3">Fade in</h2>
-
+      <div className="mb-12">
+        <Anchor title="Fade in" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -667,9 +658,8 @@ const DSpage = () => {
       </div>
 
       {/* Fade out */}
-      <div className="mb-12" id="fade-out">
-        <h2 className="h3 mb-3">Fade out</h2>
-
+      <div className="mb-12">
+        <Anchor title="Fade out" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -702,9 +692,8 @@ const DSpage = () => {
       </div>
 
       {/* Scale in */}
-      <div className="mb-12" id="scale-in">
-        <h2 className="h3 mb-3">Scale in</h2>
-
+      <div className="mb-12">
+        <Anchor title="Scale in" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -737,9 +726,8 @@ const DSpage = () => {
       </div>
 
       {/* Scale out */}
-      <div className="mb-12" id="scale-out">
-        <h2 className="h3 mb-3">Scale out</h2>
-
+      <div className="mb-12">
+        <Anchor title="Scale out" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -772,9 +760,8 @@ const DSpage = () => {
       </div>
 
       {/* Scale in horizontal */}
-      <div className="mb-12" id="scale-in-horizontal">
-        <h2 className="h3 mb-3">Scale in horizontal</h2>
-
+      <div className="mb-12">
+        <Anchor title="Scale in horizontal" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -783,15 +770,13 @@ const DSpage = () => {
                   className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
                     StartAnim15 === true ? "animate-scale-in-x-right" : ""
                   }`}
-                >
-                </div>
+                ></div>
                 <code>.animate-scale-in-x-right</code>
                 <div
                   className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
                     StartAnim15 === true ? "animate-scale-in-x-left" : ""
                   }`}
-                >
-                </div>
+                ></div>
                 <code>.animate-scale-in-x-left</code>
                 <div className="text-center mt-5">
                   <button
@@ -816,9 +801,8 @@ const DSpage = () => {
       </div>
 
       {/* Scale out horizontal */}
-      <div className="mb-12" id="scale-out-horizontal">
-        <h2 className="h3 mb-3">Scale out horizontal</h2>
-
+      <div className="mb-12">
+        <Anchor title="Scale out horizontal" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -827,15 +811,13 @@ const DSpage = () => {
                   className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
                     StartAnim16 === true ? "animate-scale-out-x-right" : ""
                   }`}
-                >
-                </div>
+                ></div>
                 <code>.animate-scale-out-x-right</code>
                 <div
                   className={`w-24 h-24 bg-ui-400 mx-auto flex items-center justify-center ${
                     StartAnim16 === true ? "animate-scale-out-x-left" : ""
                   }`}
-                >
-                </div>
+                ></div>
                 <code>.animate-scale-out-x-left</code>
                 <div className="text-center mt-5">
                   <button
@@ -860,9 +842,8 @@ const DSpage = () => {
       </div>
 
       {/* Drop in */}
-      <div className="mb-12" id="drop-in">
-        <h2 className="h3 mb-3">Drop in</h2>
-
+      <div className="mb-12">
+        <Anchor title="Drop in" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -894,11 +875,9 @@ const DSpage = () => {
         </div>
       </div>
 
-
       {/* Fire in */}
-      <div className="mb-12" id="fire-in">
-        <h2 className="h3 mb-3">Fire in</h2>
-
+      <div className="mb-12">
+        <Anchor title="Fire in" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -931,9 +910,8 @@ const DSpage = () => {
       </div>
 
       {/* Fire out */}
-      <div className="mb-12" id="fire-out">
-        <h2 className="h3 mb-3">Fire out</h2>
-
+      <div className="mb-12">
+        <Anchor title="Fire out" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -966,9 +944,8 @@ const DSpage = () => {
       </div>
 
       {/* Shake */}
-      <div className="mb-12" id="shake">
-        <h2 className="h3 mb-3">Shake</h2>
-
+      <div className="mb-12">
+        <Anchor title="Shake" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1001,9 +978,8 @@ const DSpage = () => {
       </div>
 
       {/* Flip */}
-      <div className="mb-12" id="flip">
-        <h2 className="h3 mb-3">Flip</h2>
-
+      <div className="mb-12">
+        <Anchor title="Flip" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1045,9 +1021,8 @@ const DSpage = () => {
       </div>
 
       {/* Flip vertical */}
-      <div className="mb-12" id="flip-vertical">
-        <h2 className="h3 mb-3">Flip vertical</h2>
-
+      <div className="mb-12">
+        <Anchor title="Flip vertical" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1089,9 +1064,8 @@ const DSpage = () => {
       </div>
 
       {/* Revealer */}
-      <div className="mb-12" id="revealer">
-        <h2 className="h3 mb-3">Revealer</h2>
-
+      <div className="mb-12">
+        <Anchor title="Revealer" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1128,9 +1102,8 @@ const DSpage = () => {
       </div>
 
       {/* Info banner */}
-      <div className="mb-12" id="infobanner">
-        <h2 className="h3 mb-3">Info banner</h2>
-
+      <div className="mb-12">
+        <Anchor title="Info banner" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1171,9 +1144,8 @@ const DSpage = () => {
       </div>
 
       {/* Cash in */}
-      <div className="mb-12" id="cashin">
-        <h2 className="h3 mb-3">Cash in</h2>
-
+      <div className="mb-12">
+        <Anchor title="Cash in" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1181,15 +1153,15 @@ const DSpage = () => {
                 <div className="relative">
                   <div className="flex items-center justify-center gap-2 text-currency-1-500">
                     <span className="icon text-4xl icon-coin" />
-                    <span className="text-2xl font-bold">
-                      15 000
-                    </span>
+                    <span className="text-2xl font-bold">15 000</span>
                   </div>
-                  <div className={`flex items-center justify-center gap-2 text-currency-1-500 cash-in ${StartAnim19 ? "is-active" : ""}`}>
+                  <div
+                    className={`flex items-center justify-center gap-2 text-currency-1-500 cash-in ${
+                      StartAnim19 ? "is-active" : ""
+                    }`}
+                  >
                     <span className="icon text-4xl icon-coin" />
-                    <span className="text-2xl font-bold">
-                      15 000
-                    </span>
+                    <span className="text-2xl font-bold">15 000</span>
                   </div>
                 </div>
                 <button
@@ -1213,9 +1185,8 @@ const DSpage = () => {
       </div>
 
       {/* With delay */}
-      <div className="mb-12" id="with-delay">
-        <h2 className="h3 mb-3">With delay</h2>
-
+      <div className="mb-12">
+        <Anchor title="With delay" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1275,9 +1246,8 @@ const DSpage = () => {
       </div>
 
       {/* With delay (class names) */}
-      <div className="mb-12" id="with-delay-classnames">
-        <h2 className="h3 mb-3">With delay (class names)</h2>
-
+      <div className="mb-12">
+        <Anchor title="With delay (class names)" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1332,15 +1302,15 @@ const DSpage = () => {
       </div>
 
       {/* Reduced motion */}
-      <div className="mb-12" id="reduced-motion">
-        <h2 className="h3 mb-3">Reduced motion</h2>
-
+      <div className="mb-12">
+        <Anchor title="Reduced motion" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <p className="text-ui-300 mb-6">
-                  You can cancel all repeating animations within a specific element by adding the
+                  You can cancel all repeating animations within a specific
+                  element by adding the
                   <code
                     className="interactive text-xs"
                     onClick={() => {
@@ -1355,7 +1325,8 @@ const DSpage = () => {
                     }}
                   >
                     .reduced-motion
-                  </code> class name to it.
+                  </code>{" "}
+                  class name to it.
                 </p>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
@@ -1383,16 +1354,15 @@ const DSpage = () => {
         </div>
       </div>
 
-       {/* Responsive reduced motion */}
-       <div className="mb-12" id="responsive-reduced-motion">
-        <h2 className="h3 mb-3">Responsive reduced motion</h2>
-
+      {/* Responsive reduced motion */}
+      <div className="mb-12">
+        <Anchor title="Responsive reduced motion" />
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
             <div className="flex-1 space-y-4">
               <p className="text-ui-300 mb-6">
-                You can control the motion based on the screen size
-                using the following class name:{" "}
+                You can control the motion based on the screen size using the
+                following class name:{" "}
                 <code
                   className="interactive text-xs"
                   onClick={() => {
@@ -1407,7 +1377,9 @@ const DSpage = () => {
                   }}
                 >
                   .&#123;xx&#x7D;:reduced-motion
-                </code>{" "}or <code
+                </code>{" "}
+                or{" "}
+                <code
                   className="interactive text-xs"
                   onClick={() => {
                     uiContext.openToastr({
@@ -1431,14 +1403,15 @@ const DSpage = () => {
               </p>
               <div className="w-full flex gap-4 items-center">
                 <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
-                  In this example, the shining button is not animated below 768px (md)
+                  In this example, the shining button is not animated below
+                  768px (md)
                 </div>
                 <div className="flex-1">
-                <div className="grid gap-4 place-content-center h-24 reduced-motion md:normal-motion rounded surface-ui-700">
-                      <button type="button" className="button is-shining">
-                        <span>I can&#39;t shine</span>
-                      </button>
-                    </div>
+                  <div className="grid gap-4 place-content-center h-24 reduced-motion md:normal-motion rounded surface-ui-700">
+                    <button type="button" className="button is-shining">
+                      <span>I can&#39;t shine</span>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -1453,7 +1426,6 @@ const DSpage = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
