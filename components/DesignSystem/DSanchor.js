@@ -12,6 +12,7 @@ function stringToAnchor(str) {
 export default function Anchor(props) {
   const uiContext = useContext(UiContext);
   const title = props.title || "";
+  const small = props.small;
   const anchor = stringToAnchor(title);
 
   const handleCopy = () => {
@@ -36,7 +37,15 @@ export default function Anchor(props) {
     <div className="flex items-center gap-4 group mb-3" id={anchor}>
       <Link href={`#${anchor}`}>
         <button type="button" className="interactive" onClick={handleCopy}>
-          <h2 className="h3">{title}</h2>
+          <h2 className="h3">
+            {title}
+            {small && (
+              <>
+                {" "}
+                <small className="text-ui-300">javascript</small>
+              </>
+            )}
+          </h2>
         </button>
       </Link>
       <Link href={`#${anchor}`}>

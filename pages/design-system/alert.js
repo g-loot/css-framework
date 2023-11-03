@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
@@ -7,8 +8,8 @@ const DSpage = () => {
       <h1 className="mb-2">Alert</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -35,8 +36,8 @@ const DSpage = () => {
       </div>
 
       {/* With close */}
-      <div className="mb-12" id="with-close">
-        <h2 className="h3 mb-3">With close</h2>
+      <div className="mb-12">
+        <Anchor title="With close" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -51,7 +52,7 @@ const DSpage = () => {
                     <button
                       type="button"
                       className="button button-sm button-ghost button-close"
-                      data-dismiss="alert" 
+                      data-dismiss="alert"
                       aria-label="Close"
                     >
                       <span className="icon icon-e-remove" />
@@ -73,8 +74,8 @@ const DSpage = () => {
       </div>
 
       {/* With buttons */}
-      <div className="mb-12" id="with-buttons">
-        <h2 className="h3 mb-3">With buttons</h2>
+      <div className="mb-12">
+        <Anchor title="With buttons" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -115,8 +116,8 @@ const DSpage = () => {
       </div>
 
       {/* Small */}
-      <div className="mb-12" id="small">
-        <h2 className="h3 mb-3">Small</h2>
+      <div className="mb-12">
+        <Anchor title="Small" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -157,8 +158,8 @@ const DSpage = () => {
       </div>
 
       {/* Colors */}
-      <div className="mb-12" id="colors">
-        <h2 className="h3 mb-3">Colors</h2>
+      <div className="mb-12">
+        <Anchor title="Colors" />
 
         <div className="surface rounded-lg p-4">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
@@ -251,9 +252,12 @@ const DSpage = () => {
       </div>
 
       {/* With SVG */}
-      <div className="mb-12" id="with-svg">
-        <h2 className="h3 mb-2">With SVG</h2>
-        <p className="text-ui-300 mb-4">Remove any <code>fill</code> to have the SVG colored automatically depending on the alert color.</p>
+      <div className="mb-12">
+        <Anchor title="With SVG" />
+        <p className="text-ui-300 mb-4">
+          Remove any <code>fill</code> to have the SVG colored automatically
+          depending on the alert color.
+        </p>
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -272,8 +276,7 @@ const DSpage = () => {
                     <div>
                       <div className="uppercase">Important:</div>
                       <p className="max-w-[80ch]">
-                        You need to
-                        connect your Steam account to Stryda.
+                        You need to connect your Steam account to Stryda.
                       </p>
                     </div>
                   </div>
@@ -301,21 +304,28 @@ const DSpage = () => {
       </div>
 
       {/* With image */}
-      <div className="mb-12" id="with-image">
-        <h2 className="h3 mb-2">With image</h2>
-        <p className="text-ui-300 mb-4">Note that unlike the SVG, the color of the image won&#39;t change depending on the alert color.</p>
+      <div className="mb-12">
+        <Anchor title="With image" />
+        <p className="text-ui-300 mb-4">
+          Note that unlike the SVG, the color of the image won&#39;t change
+          depending on the alert color.
+        </p>
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <div className="alert" role="alert" aria-live="assertive">
                   <div>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1660723695/Marketing/2022_prototype/Logo/logo-steam.svg" alt="Riot Games" width="120" height="auto"  />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1660723695/Marketing/2022_prototype/Logo/logo-steam.svg"
+                      alt="Riot Games"
+                      width="120"
+                      height="auto"
+                    />
                     <div>
-                    <div className="uppercase">Important:</div>
+                      <div className="uppercase">Important:</div>
                       <p className="max-w-[80ch]">
-                        You need to
-                        connect your Steam account to Stryda.
+                        You need to connect your Steam account to Stryda.
                       </p>
                     </div>
                   </div>

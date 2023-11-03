@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [isActive, setActive] = useState(false);
@@ -15,23 +16,22 @@ const DSpage = () => {
     if (ref.current && !ref.current.contains(e.target)) {
       setActive(false);
     }
-  }
+  };
 
   useEffect(() => {
-    document.addEventListener('click', handleClickOutside, true)
+    document.addEventListener("click", handleClickOutside, true);
     return () => {
-      document.removeEventListener('click', handleClickOutside, true)
-    }
-  })
+      document.removeEventListener("click", handleClickOutside, true);
+    };
+  });
 
-  
   return (
     <>
       <h1 className="mb-2">Dropdown</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -74,8 +74,8 @@ const DSpage = () => {
       </div>
 
       {/* Align to end */}
-      <div className="mb-12" id="align-end">
-        <h2 className="h3 mb-3">Align to end</h2>
+      <div className="mb-12">
+        <Anchor title="Align to end" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -118,8 +118,8 @@ const DSpage = () => {
       </div>
 
       {/* Horizontally centered */}
-      <div className="mb-12" id="horizontally-centered">
-        <h2 className="h3 mb-3">Horizontally centered</h2>
+      <div className="mb-12">
+        <Anchor title="Horizontally centered" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -162,8 +162,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown top */}
-      <div className="mb-12" id="dropdown-top">
-        <h2 className="h3 mb-3">Dropdown top</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown top" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -206,8 +206,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown top / align to end */}
-      <div className="mb-12" id="dropdown-top-align-end">
-        <h2 className="h3 mb-3">Dropdown top / align to end</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown top / align to end" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -250,8 +250,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown top / horizontally centered */}
-      <div className="mb-12" id="dropdown-top-horizontally-centered">
-        <h2 className="h3 mb-3">Dropdown top / horizontally centered</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown top / horizontally centered" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -294,8 +294,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown left */}
-      <div className="mb-12" id="dropdown-left">
-        <h2 className="h3 mb-3">Dropdown left</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown left" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -338,8 +338,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown left / align to end */}
-      <div className="mb-12" id="dropdown-left-align-end">
-        <h2 className="h3 mb-3">Dropdown left / align to end</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown left / align to end" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -382,8 +382,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown right */}
-      <div className="mb-12" id="dropdown-right">
-        <h2 className="h3 mb-3">Dropdown right</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown right" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -426,8 +426,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown right / align to end */}
-      <div className="mb-12" id="dropdown-right-align-end">
-        <h2 className="h3 mb-3">Dropdown right / align to end</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown right / align to end" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -470,16 +470,22 @@ const DSpage = () => {
       </div>
 
       {/* Open (forced) */}
-      <div className="mb-12" id="open-force">
-        <h2 className="h3 mb-3">
-          Open (forced){" "}
-          <small className="text-ui-300">javascript</small>
-        </h2>
+      <div className="mb-12">
+        <Anchor title="Open (forced)" small="javascript" />
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
-              <div ref={ref} className={`dropdown ${isActive ? "dropdown-open" : "dropdown-closed"}`}>
-                <label tabIndex="1" className="button button-primary" onClick={dropdownActive}>
+              <div
+                ref={ref}
+                className={`dropdown ${
+                  isActive ? "dropdown-open" : "dropdown-closed"
+                }`}
+              >
+                <label
+                  tabIndex="1"
+                  className="button button-primary"
+                  onClick={dropdownActive}
+                >
                   <span>Click me</span>
                   <span className="icon icon-arrow-sm-down" />
                 </label>
@@ -517,8 +523,8 @@ const DSpage = () => {
       </div>
 
       {/* On hover */}
-      <div className="mb-12" id="on-hover">
-        <h2 className="h3 mb-3">On hover</h2>
+      <div className="mb-12">
+        <Anchor title="On hover" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -562,8 +568,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropdown in navbar */}
-      <div className="mb-12" id="in-navbar">
-        <h2 className="h3 mb-3">Dropdown in navbar</h2>
+      <div className="mb-12">
+        <Anchor title="Dropdown in navbar" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -622,11 +628,7 @@ const DSpage = () => {
                         </a>
                       </li>
                       <li>
-                        <a
-                          tabIndex="1"
-                          href="#"
-                          rel="noopener noreferrer"
-                        >
+                        <a tabIndex="1" href="#" rel="noopener noreferrer">
                           <span className="icon icon-cloud-data-download" />
                           <span>Download tracker</span>
                         </a>
@@ -656,16 +658,16 @@ const DSpage = () => {
       </div>
 
       {/* Responsive positioning */}
-      <div className="mb-12" id="responsive-positioning">
-        <h2 className="h3 mb-3">Responsive positioning</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive positioning" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <p className="text-ui-300 mb-6">
-                  You can change the position of the dropdown based on the screen
-                  size using the following class name:
+                  You can change the position of the dropdown based on the
+                  screen size using the following class name:
                   <code
                     className="interactive text-xs"
                     onClick={() => {
@@ -691,7 +693,8 @@ const DSpage = () => {
                 </p>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
-                    In this example, the tooltip will be displayed aligned on end by default, but will be centered above 1024px (lg).
+                    In this example, the tooltip will be displayed aligned on
+                    end by default, but will be centered above 1024px (lg).
                   </div>
                   <div className="dropdown dropdown-end lg:dropdown-center">
                     <label tabIndex="1" className="button button-primary">
@@ -734,15 +737,17 @@ const DSpage = () => {
       </div>
 
       {/* Mobile positioning */}
-      <div className="mb-12" id="mobile-positioning">
-        <h2 className="h3 mb-3">Mobile positioning</h2>
+      <div className="mb-12">
+        <Anchor title="Mobile positioning" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
                 <p className="text-ui-300 mb-6">
-                  You sometimes need dropdown content to &quot;detach&quot; from their container in order to make their content take the full width of the screen. Do to so, simply add the
+                  You sometimes need dropdown content to &quot;detach&quot; from
+                  their container in order to make their content take the full
+                  width of the screen. Do to so, simply add the
                   <code
                     className="interactive text-xs"
                     onClick={() => {
@@ -757,11 +762,14 @@ const DSpage = () => {
                     }}
                   >
                     .dropdown-mobile
-                  </code> class name. Please note that this only works under the sm threshold (640px).
+                  </code>{" "}
+                  class name. Please note that this only works under the sm
+                  threshold (640px).
                 </p>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/2 text-ui-400 text-right text-sm leading-tight">
-                    In this example, the tooltip will be take the full width under 640px (sm).
+                    In this example, the tooltip will be take the full width
+                    under 640px (sm).
                   </div>
                   <div className="dropdown dropdown-end dropdown-responsive">
                     <label tabIndex="1" className="button button-primary">

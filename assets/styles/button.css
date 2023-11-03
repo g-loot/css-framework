@@ -1173,7 +1173,7 @@ button {
         > * {
           @apply
           !px-0
-          !transition
+          !transition-[transform,opacity]
           !ease-[cubic-bezier(0.6,0,0.4,1)]
           !duration-500
           delay-300

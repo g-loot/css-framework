@@ -4,6 +4,7 @@ import Button from "@/components/Button/Button";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 import Link from "next/link";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const ButtonLoader = ({ children, ...props }) => {
   const [loadingProgress, setLoadingProgress] = useState(0);
@@ -227,8 +228,8 @@ const DSpage = () => {
       <h1 className="mb-2">Buttons</h1>
 
       {/* variant */}
-      <div className="mb-12" id="variants">
-        <h2 className="h3 mb-3">Variants</h2>
+      <div className="mb-12">
+        <Anchor title="Variants" />
 
         {/* variant: primary */}
         <div className="surface rounded-lg p-4">
@@ -761,8 +762,8 @@ const DSpage = () => {
       </div>
 
       {/* currency */}
-      <div className="mb-12" id="currency">
-        <h2 className="h3 mb-3">Currency</h2>
+      <div className="mb-12">
+        <Anchor title="Currency" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -924,9 +925,8 @@ const DSpage = () => {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12" id="sizes">
-        <h2 className="h3 mb-3">Sizes</h2>
-
+      <div className="mb-12">
+        <Anchor title="Sizes" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1069,8 +1069,8 @@ const DSpage = () => {
       </div>
 
       {/* close */}
-      <div className="mb-12" id="close">
-        <h2 className="h3 mb-3">Close</h2>
+      <div className="mb-12">
+        <Anchor title="Close" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -1161,8 +1161,8 @@ const DSpage = () => {
       </div>
 
       {/* status */}
-      <div className="mb-12" id="status">
-        <h2 className="h3 mb-3">Status</h2>
+      <div className="mb-12">
+        <Anchor title="Status" />
 
         {/* status: loading */}
         <div className="surface rounded-lg p-4">
@@ -1483,8 +1483,8 @@ const DSpage = () => {
       </div>
 
       {/* feedback */}
-      <div className="mb-12" id="feedback">
-        <h2 className="h3 mb-3">Feedback</h2>
+      <div className="mb-12">
+        <Anchor title="Feedback" />
 
         <div className="surface rounded-lg p-4">
           <div
@@ -1778,8 +1778,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive sizes */}
-      <div className="mb-12" id="responsive-sizes">
-        <h2 className="h3 mb-3">Responsive sizes</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive sizes" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1836,8 +1836,8 @@ const DSpage = () => {
       </div>
 
       {/* Button loader */}
-      <div className="mb-12" id="button-loader">
-        <h2 className="h3 mb-3">Button loader</h2>
+      <div className="mb-12">
+        <Anchor title="Button loader" />
 
         <div className="surface rounded-lg p-4">
           <p className="mb-5">
@@ -1925,8 +1925,8 @@ const DSpage = () => {
       </div>
 
       {/* Button stretch */}
-      <div className="mb-12" id="button-stretch">
-        <h2 className="h3 mb-3">Button stretch</h2>
+      <div className="mb-12">
+        <Anchor title="Button stretch" />
         <div className="surface rounded-lg p-4">
           <p className="mb-5">
             Follow this structure to create a stretchable button. Use the
@@ -2008,8 +2008,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive button unstretch */}
-      <div className="mb-12" id="responsive-button-unstretch">
-        <h2 className="h3 mb-3">Responsive button unstretch</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive button unstretch" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-center">

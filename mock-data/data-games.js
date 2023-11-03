@@ -7,8 +7,8 @@ export const dataGames = [
     isFavorite: true,
     hasAPI: true,
     hasReward: false,
-    name: "Valorant",
-    shortName: "Valorant",
+    name: "VALORANT",
+    shortName: "VALORANT",
     slug: "valorant",
     type: "FPS hero shooter",
     assets: {
@@ -6124,7 +6124,7 @@ export const dataGames = [
     isFavorite: true,
     hasReward: true,
     name: "PUBG: BATTLEGROUNDS",
-    shortName: "PUBG: BATTLEGROUNDS",
+    shortName: "PUBG",
     slug: "pubg",
     type: "Squad FPP",
     assets: {
@@ -7215,8 +7215,8 @@ export const dataGames = [
     needsSteam: false,
     needsRiot: false,
     isFavorite: false,
-    name: "Dota 2",
-    shortName: "Dota 2",
+    name: "DOTA 2",
+    shortName: "DOTA 2",
     slug: "dota2",
     type: "MOBA",
     assets: {

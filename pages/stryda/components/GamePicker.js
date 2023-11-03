@@ -30,7 +30,7 @@ export default function GamePicker(props) {
                     )}-symbol`}
                   />
                   <span>
-                    <span>{item.name}</span>
+                    <span>{item.shortName}</span>
                   </span>
                 </button>
               </li>

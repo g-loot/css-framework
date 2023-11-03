@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
@@ -7,8 +8,8 @@ const DSpage = () => {
       <h1 className="mb-2">Surfaces</h1>
 
       {/* Normal */}
-      <div className="mb-10" id="normal">
-        <h2 className="h3 mb-3">Normal</h2>
+      <div className="mb-10">
+      <Anchor title="Normal" />
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 surface rounded-lg aspect-square"></div>
           <div className="flex-1">
@@ -23,8 +24,8 @@ const DSpage = () => {
       </div>
 
       {/* Dimmed */}
-      <div className="mb-10" id="dimmed">
-        <h2 className="h3 mb-3">Dimmed</h2>
+      <div className="mb-10">
+      <Anchor title="Dimmed" />
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 surface-dimmed rounded-lg aspect-square"></div>
           <div className="flex-1">
@@ -39,8 +40,8 @@ const DSpage = () => {
       </div>
 
       {/* Colors */}
-      <div className="mb-10" id="colors">
-        <h2 className="h3 mb-3">Colors</h2>
+      <div className="mb-10">
+        <Anchor title="Colors" />
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-4">
             <div className="surface-ui-900 rounded-lg aspect-square"></div>
@@ -60,8 +61,8 @@ const DSpage = () => {
       </div>
 
       {/* Highlight */}
-      <div className="mb-10" id="highlight">
-        <h2 className="h3 mb-3">Highlight</h2>
+      <div className="mb-10">
+        <Anchor title="Highlight" />
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 space-y-4">
             <div className="surface surface-highlight-main rounded-lg h-24" />
@@ -80,8 +81,8 @@ const DSpage = () => {
       </div>
 
       {/* Halo surface */}
-      <div className="mb-10" id="halo-surface">
-        <h2 className="h3 mb-3">Halo surface</h2>
+      <div className="mb-10">
+        <Anchor title="Halo surface" />
         <div className="flex flex-col lg:flex-row gap-4">
           <div className="flex-1 grid grid-cols-2 grid-rows-2 gap-4">
             <div className="surface surface-halo rounded-lg aspect-square"></div>
@@ -101,9 +102,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive surfaces */}
-      <div className="mb-12" id="responsive-surfaces">
-        <h2 className="h3 mb-3">Responsive surfaces</h2>
-
+      <div className="mb-12">
+        <Anchor title="Responsive surfaces" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -124,7 +124,7 @@ const DSpage = () => {
                       navigator.clipboard.writeText("sm:surface");
                     }}
                   >
-                    .&#123;xx&#x7D;:surface;
+                    .&#123;xx&#x7D;:surface
                   </code>
                   .<br />
                   &#123;xx&#x7D; can be <code className="text-xs">

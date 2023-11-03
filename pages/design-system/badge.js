@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
@@ -7,9 +8,8 @@ const DSpage = () => {
       <h1 className="mb-2">Badge</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
-
+      <div className="mb-12">
+        <Anchor title="Structure" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -35,9 +35,8 @@ const DSpage = () => {
       </div>
 
       {/* Badges everywhere */}
-      <div className="mb-12" id="badges-everywhere">
-        <h2 className="h3 mb-3">Badges everywhere</h2>
-
+      <div className="mb-12">
+        <Anchor title="Badges everywhere" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -67,9 +66,8 @@ const DSpage = () => {
       </div>
 
       {/* Colors */}
-      <div className="mb-12" id="colors">
-        <h2 className="h3 mb-3">Colors</h2>
-
+      <div className="mb-12">
+        <Anchor title="Colors" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -102,10 +100,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* As single elements */}
-      <div className="mb-12" id="as-single-elements">
-        <h2 className="h3 mb-3">As single elements</h2>
-
+      {/* As single element */}
+      <div className="mb-12">
+        <Anchor title="As single element" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">

@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -9,10 +10,9 @@ const DSpage = () => {
     <>
       <h1 className="mb-2">Avatars</h1>
 
-      {/* Shapes */}
-      <div className="mb-12" id="shapes">
-        <h2 className="h3 mb-3">Shapes</h2>
-
+      {/* Structure */}
+      <div className="mb-12">
+        <Anchor title="Structure" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -42,9 +42,8 @@ const DSpage = () => {
       </div>
 
       {/* Shapes */}
-      <div className="mb-12" id="shapes">
-        <h2 className="h3 mb-3">Shapes</h2>
-
+      <div className="mb-12">
+        <Anchor title="Shapes" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -112,9 +111,8 @@ const DSpage = () => {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12" id="sizes">
-        <h2 className="h3 mb-3">Sizes</h2>
-
+      <div className="mb-12">
+        <Anchor title="Sizes" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -270,9 +268,8 @@ const DSpage = () => {
       </div>
 
       {/* Border color */}
-      <div className="mb-12" id="border-color">
-        <h2 className="h3 mb-3">Border color</h2>
-
+      <div className="mb-12">
+        <Anchor title="Border color" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -390,9 +387,8 @@ const DSpage = () => {
       </div>
 
       {/* Status */}
-      <div className="mb-12" id="status">
-        <h2 className="h3 mb-3">Status</h2>
-
+      <div className="mb-12">
+        <Anchor title="Status" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -541,9 +537,8 @@ const DSpage = () => {
       </div>
 
       {/* Simple */}
-      <div className="mb-12" id="simple">
-        <h2 className="h3 mb-3">Simple</h2>
-
+      <div className="mb-12">
+        <Anchor title="Simple" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -582,9 +577,8 @@ const DSpage = () => {
       </div>
 
       {/* Loading */}
-      <div className="mb-12" id="loading">
-        <h2 className="h3 mb-3">Loading</h2>
-
+      <div className="mb-12">
+        <Anchor title="Loading" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -635,9 +629,8 @@ const DSpage = () => {
       </div>
 
       {/* With icon */}
-      <div className="mb-12" id="with-icon">
-        <h2 className="h3 mb-3">With icon</h2>
-
+      <div className="mb-12">
+        <Anchor title="With icon" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -691,9 +684,8 @@ const DSpage = () => {
       </div>
 
       {/* With placeholder */}
-      <div className="mb-12" id="with-placeholder">
-        <h2 className="h3 mb-3">With placeholder</h2>
-
+      <div className="mb-12">
+        <Anchor title="With placeholder" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -747,49 +739,83 @@ const DSpage = () => {
       </div>
 
       {/* With avatar frame */}
-      <div className="mb-12" id="with-avatar-frame">
-        <h2 className="h3 mb-3">With avatar frame</h2>
-
+      <div className="mb-12">
+        <Anchor title="With avatar frame" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-                  
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle avatar-xl">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Valorant.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Sweden.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Sweden.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674660549/Stryda/shop/avatarframes/Golden_Tron.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674660549/Stryda/shop/avatarframes/Golden_Tron.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Flower_Love.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Rainbow.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Rainbow.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                 </div>
@@ -808,58 +834,86 @@ const DSpage = () => {
       </div>
 
       {/* With level */}
-      <div className="mb-12" id="with-level">
-        <h2 className="h3 mb-3">With level</h2>
-
+      <div className="mb-12">
+        <Anchor title="With level" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
               <div className="flex-1 space-y-4">
-                  
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle avatar-2xl">
                     <b>300</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xl">
                     <b>300</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674213692/Stryda/shop/avatarframes/Valorant.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle">
                     <b>279</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-md">
                     <b>255</b>
-                    <img src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1674724598/Stryda/shop/avatarframes/Glitch.svg"
+                      alt=""
+                    />
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-sm">
                     <b>155</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-xs">
                     <b>55</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                   <div className="avatar avatar-circle avatar-tiny">
                     <b>5</b>
                     <div>
-                      <img src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png" alt="avatar" />
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
                     </div>
                   </div>
                 </div>
@@ -878,13 +932,12 @@ const DSpage = () => {
       </div>
 
       {/* With level and activity status */}
-      <div className="mb-12" id="with-level-and-activity-status">
-        <h2 className="h3 mb-3">With level and activity status</h2>
-
+      <div className="mb-12">
+        <Anchor title="With level and activity status" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
-            <div className="flex-1 space-y-4">
+              <div className="flex-1 space-y-4">
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Normal{" "}
@@ -901,7 +954,7 @@ const DSpage = () => {
                         </div>
                       </div>
                       <div className="avatar avatar-circle avatar-sm">
-                      <b>35</b>
+                        <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
@@ -916,13 +969,13 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar is-online avatar-circle">
-                      <b>35</b>
+                        <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-online avatar-circle avatar-sm">
-                      <b>35</b>
+                        <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
@@ -937,13 +990,13 @@ const DSpage = () => {
                   <div className="flex-1">
                     <div className="flex flex-wrap gap-4 justify-start items-center">
                       <div className="avatar is-offline avatar-circle">
-                      <b>35</b>
+                        <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
                       </div>
                       <div className="avatar is-offline avatar-circle avatar-sm">
-                      <b>35</b>
+                        <b>35</b>
                         <div>
                           <img src="https://res.cloudinary.com/gloot/image/upload/v1655292255/Marketing/2022_prototype/DummyContent/avatars/avatar_user_7.jpg" />
                         </div>
@@ -951,7 +1004,6 @@ const DSpage = () => {
                     </div>
                   </div>
                 </div>
-               
               </div>
               <div className="flex-1">
                 <iframe
@@ -967,9 +1019,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive sizes */}
-      <div className="mb-12" id="responsive-sizes">
-        <h2 className="h3 mb-3">Responsive sizes</h2>
-
+      <div className="mb-12">
+        <Anchor title="Responsive sizes" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1031,9 +1082,8 @@ const DSpage = () => {
       </div>
 
       {/* Avatar group */}
-      <div className="mb-12" id="avatar-group">
-        <h2 className="h3 mb-3">Avatar group</h2>
-
+      <div className="mb-12">
+        <Anchor title="Avatar group" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
@@ -1141,9 +1191,8 @@ const DSpage = () => {
       </div>
 
       {/* Avatar group with counter */}
-      <div className="mb-12" id="avatar-group-with-counter">
-        <h2 className="h3 mb-3">Avatar group with counter</h2>
-
+      <div className="mb-12">
+        <Anchor title="Avatar group with counter" />
         <div className="surface rounded-lg p-4">
           <div className="">
             <div className="flex gap-4 flex-col lg:flex-row lg:items-center">

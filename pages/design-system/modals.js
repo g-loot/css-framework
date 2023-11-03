@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import Modal1 from "./modals/modal-example-1";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -14,8 +15,8 @@ const DSpage = () => {
       <h1 className="mb-2">Modal</h1>
 
       {/* Example */}
-      <div className="mb-12" id="example">
-        <h2 className="h3 mb-3">Example</h2>
+      <div className="mb-12">
+        <Anchor title="Example" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -35,8 +36,8 @@ const DSpage = () => {
       </div>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -85,8 +86,8 @@ const DSpage = () => {
       </div>
 
       {/* Inverted */}
-      <div className="mb-12" id="inverted">
-        <h2 className="h3 mb-3">Inverted</h2>
+      <div className="mb-12">
+        <Anchor title="Inverted" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -138,8 +139,8 @@ const DSpage = () => {
       </div>
 
       {/* Stacked */}
-      <div className="mb-12" id="stacked">
-        <h2 className="h3 mb-3">Stacked</h2>
+      <div className="mb-12">
+        <Anchor title="Stacked" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -191,8 +192,8 @@ const DSpage = () => {
       </div>
 
       {/* With inner image */}
-      <div className="mb-12" id="with-inner-image">
-        <h2 className="h3 mb-3">With inner image</h2>
+      <div className="mb-12">
+        <Anchor title="With inner image" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -245,8 +246,8 @@ const DSpage = () => {
       </div>
 
       {/* Centered */}
-      <div className="mb-12" id="centered">
-        <h2 className="h3 mb-3">Centered</h2>
+      <div className="mb-12">
+        <Anchor title="Centered" />
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-3">
@@ -290,13 +291,14 @@ const DSpage = () => {
       </div>
 
       {/* Flexibility */}
-      <div className="mb-12" id="flexibility">
-        <h2 className="h3 mb-3">Flexibility</h2>
+      <div className="mb-12">
+        <Anchor title="Flexibility" />
         <p className="text-ui-300 mb-6">
           The modals have been designed to cater for various usages, you can
           pass extra class names such as <code>.surface-transparent</code> (to
           hide the modal surface) or <code>.max-w-xx</code> (to make the modal
-          thiner), choose wether or not to have an image or actions or even padding.
+          thiner), choose wether or not to have an image or actions or even
+          padding.
         </p>
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -358,9 +360,7 @@ const DSpage = () => {
                         alt=""
                       />
                       <div className="flex gap-2 items-baseline justify-center">
-                        <div className="text-4xl text-currency-1-500">
-                          5
-                        </div>
+                        <div className="text-4xl text-currency-1-500">5</div>
                         <div className="uppercase text-lg text-currency-1-500">
                           Coins
                         </div>
@@ -375,9 +375,7 @@ const DSpage = () => {
                         alt=""
                       />
                       <div className="flex gap-2 items-baseline justify-center">
-                        <div className="text-4xl text-currency-2-500">
-                          1
-                        </div>
+                        <div className="text-4xl text-currency-2-500">1</div>
                         <div className="uppercase text-lg text-currency-2-500">
                           Token
                         </div>

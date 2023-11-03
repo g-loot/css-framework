@@ -112,7 +112,7 @@ export default function TopbarHighlights() {
           const newProgress = prevProgress + 1;
           return newProgress <= 100 ? newProgress : 100;
         });
-      }, 300);
+      }, 30);
     } else {
       clearInterval(interval);
     }
@@ -205,9 +205,9 @@ export default function TopbarHighlights() {
           <div className="hidden md:block">
             <button
               type="button"
-              className={`button button-loader button-unstretch xl:button-stretch button-secondary ${
+              className={`button button-loader button-unstretch xl:button-stretch ${
                 buttonState > 0 ? "is-active" : ""
-              }`}
+              } ${buttonState === 0 ? "button-ghost" : ""} ${buttonState === 1 ? "button-secondary" : ""} ${buttonState === 2 ? "button-success" : ""}`}
               onClick={dropdownActive}
             >
               <div
@@ -230,8 +230,8 @@ export default function TopbarHighlights() {
               <span>
                 <span className="text-sm">
                   {buttonState === 0 && ""}
-                  {buttonState > 0 && "New highlights recorded"}
-                  {/* {buttonState === 2 && "Highlights ready"} */}
+                  {buttonState === 1 && "New highlights recorded"}
+                  {buttonState === 2 && "Highlights ready"}
                 </span>
               </span>
               <span className="icon icon-video" />

@@ -47,7 +47,14 @@
   leading-tight
   ;
 
-  > div {
+  /* > div {
+    @apply
+    flex-1
+    ;
+  } */
+
+  > div:has(.toast-title),
+  > div:has(.toast-text) {
     @apply
     flex-1
     ;
