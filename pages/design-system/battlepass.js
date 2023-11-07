@@ -9,6 +9,7 @@ import { getLayout } from "@/components/DesignSystem/DSLayout";
 import { DataBattlepass } from "@/mock-data/data-battlepass";
 import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
 import Battlepass from "@/components/BattlePass/BattlePass";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [currentStep, setcurrentStep] = useState(1);
