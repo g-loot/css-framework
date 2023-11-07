@@ -12,11 +12,7 @@ import Battlepass from "@/components/BattlePass/BattlePass";
 
 const DSpage = () => {
   const [currentStep, setcurrentStep] = useState(1);
-  const [activeStep, setactiveStep] = useState(1);
-  const [randomNum2, setRandomNum2] = useState(3);
-  const maxNum = 10;
   const uiContext = useContext(UiContext);
-  const variablesContext = useContext(VariablesContext);
 
   useEffect(() => {
     setcurrentStep(getBattlepassByID(0).currentStep);
@@ -28,45 +24,14 @@ const DSpage = () => {
       return battlepasses.id === parseInt(id);
     });
   };
-  const getBattlepassRewardByID = (id) => {
-    return DataBattlepassRewards.find((reward) => {
-      return reward.id === parseInt(id);
-    });
-  };
-
-  function handleProgress(item) {
-    if (item.id < currentStep) {
-      return 100;
-    } else if (item.id === currentStep) {
-      return getBattlepassByID(0).currentProgress;
-    } else {
-      return 0;
-    }
-  }
-
-  function handleActive(step) {
-    setactiveStep(step);
-  }
-
-  function clickHandlerNum1(varTarget, max) {
-    if (varTarget === max) {
-      setactiveStep((varTarget = 1));
-    } else {
-      setactiveStep(varTarget + 1);
-    }
-  }
-
-  function openModalClaimLadderRewards() {
-    uiContext.openModal(<ModalClaimLadderRewards></ModalClaimLadderRewards>);
-  }
 
   return (
     <>
       <h1 className="mb-2">Battlepass</h1>
 
       {/* full */}
-      <div className="mb-12" id="full">
-        <h2 className="h3 mb-3">Full</h2>
+      <div className="mb-12">
+        <Anchor title="Full" />
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -86,8 +51,8 @@ const DSpage = () => {
       </div>
 
       {/* medium */}
-      <div className="mb-12" id="medium">
-        <h2 className="h3 mb-3">Medium</h2>
+      <div className="mb-12">
+        <Anchor title="Medium" />
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -107,8 +72,8 @@ const DSpage = () => {
       </div>
 
       {/* with current */}
-      <div className="mb-12" id="with-current-product">
-        <h2 className="h3 mb-3">With current product</h2>
+      <div className="mb-12">
+        <Anchor title="With current product" />
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">

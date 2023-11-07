@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Carousel from "@/components/Carousel/Carousel";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const slides = [
@@ -110,12 +111,12 @@ const DSpage = () => {
       <h1 className="mb-2">Carousel</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
+      <div className="mb-12">
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
               <div className="flex-1 space-y-4">
-                <h2 className="h3 mb-3">Structure</h2>
+                <Anchor title="Structure" />
                 <section className="surface sm:rounded-lg overflow-hidden mb-8">
                   <Carousel />
                 </section>
@@ -198,12 +199,12 @@ const DSpage = () => {
       </div>
 
       {/* Small */}
-      <div className="mb-12" id="small">
+      <div className="mb-12">
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
               <div className="flex-1 space-y-4">
-                <h2 className="h3 mb-3">Small</h2>
+                <Anchor title="Small" />
                 <section className="surface sm:rounded-lg overflow-hidden mb-8">
                   <Carousel size="carousel-sm" />
                 </section>
@@ -222,12 +223,12 @@ const DSpage = () => {
       </div>
 
       {/* With buttons */}
-      <div className="mb-12" id="with-buttons">
+      <div className="mb-12">
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
               <div className="flex-1 space-y-4">
-                <h2 className="h3 mb-3">With buttons</h2>
+                <Anchor title="With buttons" />
                 <section className="surface sm:rounded-lg overflow-hidden mb-8">
                   <Carousel isWithButtons={true} />
                 </section>
@@ -310,15 +311,12 @@ const DSpage = () => {
       </div>
 
       {/* Carousel step (onboarding) */}
-      <div className="mb-12" id="step">
+      <div className="mb-12">
         <div className="pt-4">
           <div className="">
             <div className="flex gap-4 flex-col">
               <div className="flex-1 space-y-4">
-                <h2 className="h3 mb-3">
-                  Carousel step{" "}
-                  <small className="text-ui-300">onboarding</small>
-                </h2>
+                <Anchor title="Carousel step" />
 
                 <div className="surface rounded-xl overflow-hidden carousel carousel-step">
                   <div className="carousel-slides">
