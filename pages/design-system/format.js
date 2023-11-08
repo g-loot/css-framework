@@ -1,13 +1,33 @@
-import React from "react";
-import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
+import React, { useContext } from "react";
+import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 
 const DSpage = () => {
+  const uiContext = useContext(UiContext);
   return (
     <>
-      <h1 className="mb-2">Format</h1>
+      <h1 className="mb-8">Format</h1>
 
       {/* Structure */}
+      <p>
+        Add the{" "}
+        <code
+          className="interactive text-xs"
+          onClick={() => {
+            uiContext.openToastr({
+              size: "small",
+              text: "attribute copied to your clipboard",
+              color: "green",
+              autoDelete: true,
+              autoDeleteDelay: 2500,
+            });
+            navigator.clipboard.writeText("format");
+          }}
+        >
+          .format
+        </code>{" "}
+        class name to automatically style its inner typographic elements such as quotes, paragraphs, lists, headings, etc.
+      </p>
       <div className="mb-12" id="format">
         {/* simple list */}
         <div className="surface rounded-lg p-4">

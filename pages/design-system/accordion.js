@@ -1,15 +1,16 @@
 import Accordion from "@/components/Accordion/Accordion";
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Accordion</h1>
+      <h1 className="mb-8">Accordion</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -30,9 +31,7 @@ const DSpage = () => {
                           </div>
                         </div>
                         <div className="item-body">
-                          <div className="item-title text-xl">
-                            Valorant
-                          </div>
+                          <div className="item-title text-xl">Valorant</div>
                         </div>
                         <div className="item-actions">
                           <div>
@@ -193,8 +192,8 @@ const DSpage = () => {
       </div>
 
       {/* With highlighted header */}
-      <div className="mb-12" id="with-highlighted-header">
-        <h2 className="h3 mb-3">With highlighted header</h2>
+      <div className="mb-12">
+        <Anchor title="With highlighted header" />
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">

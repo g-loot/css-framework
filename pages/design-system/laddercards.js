@@ -3,23 +3,7 @@ import React, { useContext } from "react";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 import { UiContext } from "@/contexts/ui";
-
-function calculateTimeLeft() {
-  const year = new Date().getFullYear();
-  const date = new Date().getTime();
-  const difference = +new Date(`${year}-10-1`) - date;
-  let timeLeft = {};
-
-  if (difference > 0) {
-    timeLeft = {
-      days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-      hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      minutes: Math.floor((difference / 1000 / 60) % 60),
-      seconds: Math.floor((difference / 1000) % 60),
-    };
-  }
-  return timeLeft;
-}
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const THREE_DAYS_IN_MS = 3 * 24 * 60 * 60 * 1000;
 const NOW_IN_MS = new Date().getTime();
@@ -29,17 +13,19 @@ const DSpage = () => {
   const uiContext = useContext(UiContext);
   return (
     <>
-      <h1 className="mb-2">Ladder cards</h1>
+      <h1 className="mb-8">Ladder cards</h1>
 
+      {/*
+      Primary cards (deprecated)
       <div className="mb-3 flex gap-2 items-baseline">
         <h2 className="h3">Primary cards</h2>
         <button className="chip chip-xs chip-secondary pointer-events-none uppercase">
           <span>default</span>
         </button>
       </div>
-      {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h4 mb-3">Structure</h2>
+
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -135,9 +121,8 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* With additional content */}
-      <div className="mb-12" id="with-additional-content">
-        <h2 className="h4 mb-3">With additional content</h2>
+      <div className="mb-12">
+        <Anchor title="With additional content" />
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -257,11 +242,6 @@ const DSpage = () => {
         </div>
       </div>
 
-      <div className="mb-3 flex gap-2 items-baseline">
-        <h2 className="h3">Status</h2>
-      </div>
-
-      {/* Loading */}
       <div className="mb-12" id="loading">
         <h2 className="h3 mb-3">Loading</h2>
 
@@ -377,15 +357,11 @@ const DSpage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
-      <div className="mb-3 flex gap-2 items-baseline">
-        <h2 className="h3">Secondary cards</h2>
-      </div>
-
-      {/* Secondary structure */}
-      <div className="mb-12" id="secondary-strycture">
-        <h2 className="h4 mb-3">Structure</h2>
+      {/* structure */}
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -405,9 +381,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
                           <img
@@ -482,14 +456,14 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Secondary Active */}
-      <div className="mb-12" id="secondary-active">
-        <h2 className="h4 mb-3">Active</h2>
+      {/* Active */}
+      <div className="mb-12">
+        <Anchor title="Active" />
 
         <div className="">
           <p className="text-ui-300 mb-6">
-            You can add make a secondary <b>active</b> card by adding the following
-            class name:
+            You can add make a secondary <b>active</b> card by adding the
+            following class name:
             <code
               className="interactive text-xs"
               onClick={() => {
@@ -505,7 +479,9 @@ const DSpage = () => {
             >
               .is-active
             </code>
-            .<br />Active cards have a glow around them and their card status text color and animation is affected.
+            .<br />
+            Active cards have a glow around them and their card status text
+            color and animation is affected.
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
@@ -524,9 +500,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
                           <img
@@ -609,14 +583,14 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Secondary inactive */}
-      <div className="mb-12" id="secondary-inactive">
-        <h2 className="h4 mb-3">Inactive</h2>
+      {/* inactive */}
+      <div className="mb-12">
+        <Anchor title="Inactive" />
 
         <div className="">
           <p className="text-ui-300 mb-6">
-            You can add make a secondary <b>inactive</b> card by adding the following
-            class name:
+            You can add make a secondary <b>inactive</b> card by adding the
+            following class name:
             <code
               className="interactive text-xs"
               onClick={() => {
@@ -632,7 +606,9 @@ const DSpage = () => {
             >
               .is-inactive
             </code>
-            .<br />Inactive cards have dimmed down image and their card status text color is affected.
+            .<br />
+            Inactive cards have dimmed down image and their card status text
+            color is affected.
           </p>
           <div className="flex flex-col gap-4">
             <div className="flex-1 flex flex-wrap gap-4">
@@ -651,9 +627,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
                           <img
@@ -724,9 +698,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Secondary with overlay */}
-      <div className="mb-12" id="secondary-with-overlay">
-        <h2 className="h4 mb-3">With overlay</h2>
+      {/* with overlay */}
+      <div className="mb-12">
+        <Anchor title="With overlay" />
 
         <div className="">
           <div className="flex flex-col gap-4">
@@ -734,9 +708,7 @@ const DSpage = () => {
               <div className="card-ladder card-secondary">
                 <div className="card-overlay">
                   <div>
-                    <div className="text-2xl text-ui-100">
-                      You won a prize!
-                    </div>
+                    <div className="text-2xl text-ui-100">You won a prize!</div>
                     <button
                       type="button"
                       className="button button-claim is-shining"
@@ -764,9 +736,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="text-sm text-ui-300">
                           This competition has ended
@@ -837,9 +807,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* Secondary horizontal */}
-      <div className="mb-12" id="secondary-horizontal">
-        <h2 className="h4 mb-3">Horizontal</h2>
+      {/* horizontal */}
+      <div className="mb-12">
+        <Anchor title="Horizontal" />
 
         <div className="">
           <p className="text-ui-300 mb-6">
@@ -879,9 +849,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
                           <img
@@ -957,8 +925,8 @@ const DSpage = () => {
       </div>
 
       {/* Secondary responsive horizontal */}
-      <div className="mb-12" id="secondary-responsive-horizontal">
-        <h2 className="h4 mb-3">Responsive horizontal</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive horizontal" />
 
         <div className="">
           <p className="text-ui-300 mb-6">
@@ -1003,9 +971,7 @@ const DSpage = () => {
                 <div className="card-content">
                   <div className="card-body">
                     <div>
-                      <h2 className="h4 mb-2">
-                        Competitive Ladder
-                      </h2>
+                      <h2 className="h4 mb-2">Competitive Ladder</h2>
                       <div className="flex gap-4 items-center">
                         <div className="flex items-center whitespace-nowrap gap-2">
                           <img

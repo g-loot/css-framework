@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -13,7 +14,7 @@ const DSpage = () => {
 
       <div className="surface rounded-lg p-4">
         <div className="border-b border-ui-700 pb-12 mb-12">
-          <h2 className="h3 mb-10">Fonts</h2>
+          <Anchor title="Fonts" />
           <div className="flex flex-col xl:flex-row xl:items-center xl:justify-between space-y-4 xl:space-y-0">
             <div className="flex-1 flex justify-center gap-4 items-stretch">
               <div className="h-36 w-36 rounded-xl bg-ui-600 border border-ui-500 flex gap-2 items-center justify-center">
@@ -23,9 +24,7 @@ const DSpage = () => {
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="uppercase text-ui-100">
-                  Rama Gothic
-                </div>
+                <div className="uppercase text-ui-100">Rama Gothic</div>
                 <div className="font-headings text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
                   <br />
@@ -70,9 +69,7 @@ const DSpage = () => {
                 </span>
               </div>
               <div className="w-60 flex flex-col items-between justify-around">
-                <div className="font-body uppercase text-ui-100">
-                  Barlow
-                </div>
+                <div className="font-body uppercase text-ui-100">Barlow</div>
                 <div className="text-xs md:text-sm font-body text-ui-300 mt-4">
                   <span className="uppercase">abcdefghijklmnopqrstuvwxyz</span>
                   <br />
@@ -113,7 +110,7 @@ const DSpage = () => {
         </div>
 
         <div className="">
-          <h2 className="h3 mb-10">Hierarchy</h2>
+          <Anchor title="Hierarchy" />
 
           <div>
             {/* h1 */}
@@ -145,9 +142,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-5xl"
-                          );
+                          navigator.clipboard.writeText("text-5xl");
                         }}
                       >
                         text-5xl
@@ -217,9 +212,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-4xl"
-                          );
+                          navigator.clipboard.writeText("text-4xl");
                         }}
                       >
                         text-4xl
@@ -289,9 +282,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-3xl"
-                          );
+                          navigator.clipboard.writeText("text-3xl");
                         }}
                       >
                         text-3xl
@@ -361,9 +352,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-3xl"
-                          );
+                          navigator.clipboard.writeText("text-3xl");
                         }}
                       >
                         text-3xl
@@ -433,9 +422,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-2xl"
-                          );
+                          navigator.clipboard.writeText("text-2xl");
                         }}
                       >
                         text-2xl
@@ -507,9 +494,7 @@ const DSpage = () => {
                             autoDelete: true,
                             autoDeleteDelay: 2500,
                           });
-                          navigator.clipboard.writeText(
-                            "text-2xl uppercase"
-                          );
+                          navigator.clipboard.writeText("text-2xl uppercase");
                         }}
                       >
                         text-xl uppercase

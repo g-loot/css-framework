@@ -3,6 +3,7 @@ import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const tabItems = [
   {
@@ -28,37 +29,29 @@ const tabItems = [
 ];
 
 const tabIconsItems = [
-  { id: 3,
+  {
+    id: 3,
     label: "Apex Legends",
     icon: "icon-game-apexlegends-symbol",
     color: "apexlegends",
   },
-  {  id: 4,
-    label: "CS:GO",
-    icon: "icon-game-csgo-symbol",
-    color: "csgo",
-  },
-  { id: 5,
-    label: "Dota 2",
-    icon: "icon-game-dota2-symbol",
-    color: "dota2",
-  },
-  { id: 2,
-    label: "PUBG",
-    icon: "icon-game-pubg-symbol",
-    color: "pubg",
-  },
-  { id: 7,
+  { id: 4, label: "CS:GO", icon: "icon-game-csgo-symbol", color: "csgo" },
+  { id: 5, label: "Dota 2", icon: "icon-game-dota2-symbol", color: "dota2" },
+  { id: 2, label: "PUBG", icon: "icon-game-pubg-symbol", color: "pubg" },
+  {
+    id: 7,
     label: "Rocket League",
     icon: "icon-game-rocketleague-symbol",
     color: "rocketleague",
   },
-  { id: 1,
+  {
+    id: 1,
     label: "Valorant",
     icon: "icon-game-valorant-symbol",
     color: "valorant",
   },
-  { id: 6,
+  {
+    id: 6,
     label: "League of Legends",
     icon: "icon-game-leagueoflegends-symbol",
     color: "leagueoflegends",
@@ -73,11 +66,11 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Tabs</h1>
+      <h1 className="mb-8">Tabs</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -122,8 +115,8 @@ const DSpage = () => {
       </div>
 
       {/* Secondary */}
-      <div className="mb-12" id="secondary">
-        <h2 className="h3 mb-3">Secondary</h2>
+      <div className="mb-12">
+        <Anchor title="Secondary" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -168,8 +161,8 @@ const DSpage = () => {
       </div>
 
       {/* Tertiary */}
-      <div className="mb-12" id="tertiary">
-        <h2 className="h3 mb-3">Tertiary</h2>
+      <div className="mb-12">
+        <Anchor title="Tertiary" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -214,8 +207,8 @@ const DSpage = () => {
       </div>
 
       {/* with badges */}
-      <div className="mb-12" id="with-badges">
-        <h2 className="h3 mb-3">With badges</h2>
+      <div className="mb-12">
+        <Anchor title="With badges" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -260,8 +253,8 @@ const DSpage = () => {
       </div>
 
       {/* with claim */}
-      <div className="mb-12" id="with-claim">
-        <h2 className="h3 mb-3">With claim</h2>
+      <div className="mb-12">
+        <Anchor title="With claim" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -345,8 +338,8 @@ const DSpage = () => {
       </div>
 
       {/* with submenu */}
-      <div className="mb-12" id="with-submenu">
-        <h2 className="h3 mb-3">With submenu</h2>
+      <div className="mb-12">
+        <Anchor title="With submenu" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -403,8 +396,8 @@ const DSpage = () => {
       </div>
 
       {/* Rank tab */}
-      <div className="mb-12" id="rank-tab">
-        <h2 className="h3 mb-3">Rank tab</h2>
+      <div className="mb-12">
+        <Anchor title="Rank tab" />
 
         <div className="rounded-lg text-center">
           <ul className="tabs tabs-rank">
@@ -478,8 +471,8 @@ const DSpage = () => {
       </div>
 
       {/* Tab button */}
-      <div className="mb-12" id="tab-button">
-        <h2 className="h3 mb-3">Tab button</h2>
+      <div className="mb-12">
+        <Anchor title="Tab button" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -506,8 +499,8 @@ const DSpage = () => {
       </div>
 
       {/* Tab stretch */}
-      <div className="mb-12" id="tab-stretch">
-        <h2 className="h3 mb-3">Tab stretch</h2>
+      <div className="mb-12">
+        <Anchor title="Tab stretch" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -540,8 +533,8 @@ const DSpage = () => {
       </div>
 
       {/* Tab vertical */}
-      <div className="mb-12" id="tab-vertical">
-        <h2 className="h3 mb-3">Tab vertical</h2>
+      <div className="mb-12">
+        <Anchor title="Tab vertical" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -596,8 +589,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive orientation */}
-      <div className="mb-12" id="responsive-orientation">
-        <h2 className="h3 mb-3">Responsive orientation</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive orientation" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
@@ -699,14 +692,18 @@ const DSpage = () => {
       </div>
 
       {/* Tabs & button stretch */}
-      <div className="mb-12" id="tabs-button-stretch">
-        <h2 className="h3 mb-3">Tabs & button stretch</h2>
+      <div className="mb-12">
+        <Anchor title="Tabs & button stretch" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col">
             <div className="flex-1 space-y-4">
               <p className="text-ui-300 mb-6">
-                You can combine tabs with the <Link href="/design-system/buttons#button-stretch"><a className="link link-main">button stretch component</a></Link>.
+                You can combine tabs with the{" "}
+                <Link href="/design-system/buttons#button-stretch">
+                  <a className="link link-main">button stretch component</a>
+                </Link>
+                .
               </p>
               <ul className="tabs ">
                 {tabIconsItems.map((item, itemIndex) => (
@@ -739,8 +736,8 @@ const DSpage = () => {
       </div>
 
       {/* Tabs colored */}
-      <div className="mb-12" id="tabs-colored">
-        <h2 className="h3 mb-3">Tabs colored (game picker)</h2>
+      <div className="mb-12">
+        <Anchor title="Tabs colored (game picker)" />
 
         <div className="surface rounded-lg p-4">
           <div className="flex gap-4 flex-col">
@@ -753,7 +750,7 @@ const DSpage = () => {
                         className={`button-stretch  ${
                           item.id === activeTabItemGame ? "is-active" : ""
                         }`}
-                        style={{ "--color" : `var(--color-game-${item.color})`}}
+                        style={{ "--color": `var(--color-game-${item.color})` }}
                         onClick={() => setActiveTabItemGame(item.id)}
                       >
                         <span className={`icon text-xl ${item.icon}`} />

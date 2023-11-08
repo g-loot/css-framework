@@ -33,7 +33,7 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Reward ladder</h1>
+      <h1 className="mb-8">Reward ladder</h1>
 
       {/* Reward ladder */}
       <div className="mb-12" id="reward-ladder">

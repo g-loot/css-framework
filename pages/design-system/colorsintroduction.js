@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import DScolors from "../api/designsystem/colors.json";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 function isMultipleOfThree(number) {
   if (number % 3 == 0) {
@@ -22,8 +23,8 @@ const DSpage = () => {
       <h1 className="mb-6">
         Colors <small className="text-ui-300">introduction</small>
       </h1>
-      <div className="format mb-8" id="using-colors">
-        <h2 id="using-colors">Using colors</h2>
+      <Anchor title="Using colors" />
+      <div className="format mb-10">
         <p>
           You can control the colors of any element using the generic tailwind
           class names:
@@ -116,8 +117,8 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="gradients">
-        <h2 id="gradients">Gradients</h2>
+      <Anchor title="Gradients" />
+      <div className="format mb-10">
         <p>
           To create a gradient background, first indicate the direction of the
           gradient using one of the following class names:
@@ -523,11 +524,12 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="text-gradient">
-        <h2 id="text-gradient">Text gradient</h2>
+      <Anchor title="Text gradient" />
+      <div className="format mb-10">
         <p>
           You can apply gradient to text elements by adding the background class
-          names explained above and that following class name. Note that you cannot add strokes or shadows to text gradients.
+          names explained above and that following class name. Note that you
+          cannot add strokes or shadows to text gradients.
         </p>
         <div className="surface rounded-lg overflow-x-auto">
           <table className="table w-full">

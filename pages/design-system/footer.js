@@ -16,7 +16,7 @@ const DSpage = () => {
   }
   return (
     <>
-      <h1 className="mb-2">Footer</h1>
+      <h1 className="mb-8">Footer</h1>
 
       {/* Footer */}
       <div className="mb-12" id="footer">

@@ -34,7 +34,7 @@ export default function Anchor(props) {
   };
 
   return (
-    <div className="flex items-center gap-4 group mb-3" id={anchor}>
+    <div className="flex items-center gap-2 group mb-3" id={anchor}>
       <Link href={`#${anchor}`}>
         <button type="button" className="interactive" onClick={handleCopy}>
           <h2 className="h3">
@@ -42,7 +42,7 @@ export default function Anchor(props) {
             {small && (
               <>
                 {" "}
-                <small className="text-ui-300">javascript</small>
+                <small className="text-ui-300">{small}</small>
               </>
             )}
           </h2>
@@ -51,7 +51,7 @@ export default function Anchor(props) {
       <Link href={`#${anchor}`}>
         <button
           type="button"
-          className="button button-secondary rounded-full opacity-0 group-hover:opacity-100"
+          className="button button-sm button-secondary rounded-full opacity-0 group-hover:opacity-100"
           onClick={handleCopy}
         >
           <span className="icon icon-url" />

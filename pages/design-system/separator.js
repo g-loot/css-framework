@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Separator</h1>
+      <h1 className="mb-8">Separator</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <hr className="separator my-8" />
@@ -25,8 +26,8 @@ const DSpage = () => {
       </div>
 
       {/* Gradient */}
-      <div className="mb-12" id="gradient">
-        <h2 className="h3 mb-3">Gradient</h2>
+      <div className="mb-12">
+        <Anchor title="Gradient" />
 
         <div className="surface rounded-lg p-4">
           <hr className="separator-gradient my-8" />
@@ -43,8 +44,8 @@ const DSpage = () => {
       </div>
 
       {/* Or */}
-      <div className="mb-12" id="or">
-        <h2 className="h3 mb-3">Or</h2>
+      <div className="mb-12">
+        <Anchor title="Or" />
 
         <div className="surface rounded-lg p-4 space-y-8">
           <div className="text-ui-400 text-center text-sm leading-tight">

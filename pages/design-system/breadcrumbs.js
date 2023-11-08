@@ -2,15 +2,17 @@ import React, { useState } from "react";
 
 import Footer from "@/components/Footer/Footer";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Breadcrumbs</h1>
+      <h1 className="mb-8">Breadcrumbs</h1>
 
       {/* Structure */}
-      <div className="mb-10" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-10">
+        <Anchor title="Structure" />
+
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -55,8 +57,9 @@ const DSpage = () => {
       </div>
 
       {/* With animation */}
-      <div className="mb-10" id="with-animation">
-        <h2 className="h3 mb-3">With animation</h2>
+      <div className="mb-10">
+        <Anchor title="With animation" />
+
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">

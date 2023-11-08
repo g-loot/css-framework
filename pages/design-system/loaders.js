@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Loaders</h1>
+      <h1 className="mb-8">Loaders</h1>
 
       {/* Spinner */}
-      <div className="mb-12" id="spinner">
-        <h2 className="h3 mb-3">Spinner</h2>
+      <div className="mb-12">
+        <Anchor title="Spinner" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -19,7 +20,9 @@ const DSpage = () => {
                     Extra large
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader loader-xl"><span className="sr-only">Loading...</span></div>
+                    <div role="status" className="loader loader-xl">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
@@ -27,7 +30,9 @@ const DSpage = () => {
                     Large
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader loader-lg"><span className="sr-only">Loading...</span></div>
+                    <div role="status" className="loader loader-lg">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
@@ -38,7 +43,9 @@ const DSpage = () => {
                     </button>
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader"><span className="sr-only">Loading...</span></div>
+                    <div role="status" className="loader">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
@@ -46,7 +53,9 @@ const DSpage = () => {
                     Small
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader loader-sm"><span className="sr-only">Loading...</span></div>
+                    <div role="status" className="loader loader-sm">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
                 </div>
                 <div className="w-full flex gap-4 items-center">
@@ -54,7 +63,9 @@ const DSpage = () => {
                     Extra small
                   </div>
                   <div className="flex-1 flex flex-wrap gap-2">
-                    <div role="status" className="loader loader-xs"><span className="sr-only">Loading...</span></div>
+                    <div role="status" className="loader loader-xs">
+                      <span className="sr-only">Loading...</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -72,8 +83,8 @@ const DSpage = () => {
       </div>
 
       {/* Stryda loader */}
-      <div className="mb-12" id="gloot-loader">
-        <h2 className="h3 mb-3">Stryda loader</h2>
+      <div className="mb-12">
+        <Anchor title="Stryda loader" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -86,14 +97,14 @@ const DSpage = () => {
                   <div className="flex-1 flex flex-wrap gap-2">
                     <div role="status" className="loader-stryda loader-xl">
                       <div>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
                       </div>
                       <span className="sr-only">Loading...</span>
                     </div>
@@ -106,14 +117,14 @@ const DSpage = () => {
                   <div className="flex-1 flex flex-wrap gap-2">
                     <div role="status" className="loader-stryda loader-lg">
                       <div>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
                       </div>
                       <span className="sr-only">Loading...</span>
                     </div>
@@ -129,14 +140,14 @@ const DSpage = () => {
                   <div className="flex-1 flex flex-wrap gap-2">
                     <div role="status" className="loader-stryda">
                       <div>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
                       </div>
                       <span className="sr-only">Loading...</span>
                     </div>
@@ -149,14 +160,14 @@ const DSpage = () => {
                   <div className="flex-1 flex flex-wrap gap-2">
                     <div role="status" className="loader-stryda loader-sm">
                       <div>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
                       </div>
                       <span className="sr-only">Loading...</span>
                     </div>
@@ -169,14 +180,14 @@ const DSpage = () => {
                   <div className="flex-1 flex flex-wrap gap-2">
                     <div role="status" className="loader-stryda loader-xs">
                       <div>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
-                        <i/>
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
+                        <i />
                       </div>
                       <span className="sr-only">Loading...</span>
                     </div>
@@ -197,8 +208,8 @@ const DSpage = () => {
       </div>
 
       {/* Message */}
-      <div className="mb-12" id="message">
-        <h2 className="h3 mb-3">Message</h2>
+      <div className="mb-12">
+        <Anchor title="Message" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -222,8 +233,8 @@ const DSpage = () => {
       </div>
 
       {/* Cards */}
-      <div className="mb-12" id="cards">
-        <h2 className="mb-3">Cards</h2>
+      <div className="mb-12">
+        <Anchor title="Cards" />
 
         {/* Mission card */}
         <div className="surface rounded-lg p-4">
@@ -335,8 +346,8 @@ const DSpage = () => {
       </div>
 
       {/* Lists */}
-      <div className="mb-12" id="list">
-        <h2 className="mb-3">Lists</h2>
+      <div className="mb-12">
+        <Anchor title="Lists" />
 
         {/* Lists */}
         <div className="surface rounded-lg p-4">

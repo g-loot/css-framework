@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
@@ -7,8 +8,8 @@ const DSpage = () => {
       <h1 className="mb-2">Empty states</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-xs mx-auto">
@@ -36,14 +37,16 @@ const DSpage = () => {
       </div>
 
       {/* Without button */}
-      <div className="mb-12" id="without-button">
-        <h2 className="h3 mb-3">Without button</h2>
+      <div className="mb-12">
+        <Anchor title="Without button" />
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-sm mx-auto">
             <span className="icon icon-video text-6xl text-ui-500" />
             <div className="mt-2 mb-6">
-              <p className="text-sm text-ui-400">You have no recorded matches</p>
+              <p className="text-sm text-ui-400">
+                You have no recorded matches
+              </p>
               <p className="text-lg text-ui-300">
                 Make sure Stryda is up and running when you play.
               </p>
@@ -62,8 +65,8 @@ const DSpage = () => {
       </div>
 
       {/* With skip button */}
-      <div className="mb-12" id="with-skip-button">
-        <h2 className="h3 mb-3">With skip button</h2>
+      <div className="mb-12">
+        <Anchor title="With skip button" />
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-xs mx-auto">
@@ -101,8 +104,8 @@ const DSpage = () => {
       </div>
 
       {/* With input */}
-      <div className="mb-12" id="with-input">
-        <h2 className="h3 mb-3">With input</h2>
+      <div className="mb-12">
+        <Anchor title="With input" />
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-xs mx-auto">
@@ -135,8 +138,8 @@ const DSpage = () => {
       </div>
 
       {/* With image */}
-      <div className="mb-12" id="with-image">
-        <h2 className="h3 mb-3">With image</h2>
+      <div className="mb-12">
+        <Anchor title="With image" />
 
         <div className="surface rounded-lg px-4 py-8 text-center">
           <div className="max-w-xs mx-auto">

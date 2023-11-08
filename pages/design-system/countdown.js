@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import Countdown from "@/components/Countdown/Countdown";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 function calculateTimeLeft() {
   const year = new Date().getFullYear();
@@ -31,7 +32,6 @@ const DSpage = () => {
 
   useEffect(() => {
     const id = setInterval(() => {
-      console.log(calculateTimeLeft());
       setTimeLeft(calculateTimeLeft());
     }, 1000);
 
@@ -42,11 +42,11 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Countdown</h1>
+      <h1 className="mb-8">Countdown</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -68,8 +68,8 @@ const DSpage = () => {
       </div>
 
       {/* Typography */}
-      <div className="mb-12" id="typography">
-        <h2 className="h3 mb-3">Typography</h2>
+      <div className="mb-12">
+        <Anchor title="Typography" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -91,8 +91,8 @@ const DSpage = () => {
       </div>
 
       {/* Clock countdown */}
-      <div className="mb-12" id="clock-countdown">
-        <h2 className="h3 mb-3">Clock countdown</h2>
+      <div className="mb-12">
+        <Anchor title="Clock countdown" />
 
         <div className="surface rounded-lg p-4">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
@@ -130,9 +130,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 text-xl">
-                  hours
-                </small>
+                <small className="text-ui-300 text-xl">hours</small>
                 <Countdown
                   hasDays={false}
                   hasHours={false}
@@ -141,9 +139,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 text-xl">
-                  minutes
-                </small>
+                <small className="text-ui-300 text-xl">minutes</small>
 
                 <Countdown
                   hasDays={false}
@@ -153,9 +149,7 @@ const DSpage = () => {
                   className="text-5xl font-headings"
                   targetDate={dateTimeAfterThreeDays}
                 />
-                <small className="text-ui-300 text-xl">
-                  seconds
-                </small>
+                <small className="text-ui-300 text-xl">seconds</small>
               </div>
               <div className="flex-1">
                 <iframe

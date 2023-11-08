@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Content card</h1>
+      <h1 className="mb-8">Content card</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -51,8 +52,8 @@ const DSpage = () => {
       </div>
 
       {/* With chips */}
-      <div className="mb-12" id="with-chips">
-        <h2 className="h3 mb-3">With chips</h2>
+      <div className="mb-12">
+        <Anchor title="With chips" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -104,8 +105,8 @@ const DSpage = () => {
       </div>
 
       {/* With cover image */}
-      <div className="mb-12" id="with-cover-image">
-        <h2 className="h3 mb-3">With cover image</h2>
+      <div className="mb-12">
+        <Anchor title="With cover image" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -146,8 +147,8 @@ const DSpage = () => {
       </div>
 
       {/* With no image */}
-      <div className="mb-12" id="with-no-image">
-        <h2 className="h3 mb-3">With no image</h2>
+      <div className="mb-12">
+        <Anchor title="With no image" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -180,8 +181,8 @@ const DSpage = () => {
       </div>
 
       {/* With custom color */}
-      <div className="mb-12" id="with-custom-color">
-        <h2 className="h3 mb-3">With custom color</h2>
+      <div className="mb-12">
+        <Anchor title="With custom color" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">

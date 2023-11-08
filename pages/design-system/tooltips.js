@@ -3,16 +3,17 @@ import React, { useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
   return (
     <>
-      <h1 className="mb-2">Tooltips</h1>
+      <h1 className="mb-8">Tooltips</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         {/* Small: structure */}
         <div className="surface rounded-lg p-4">
@@ -63,8 +64,8 @@ const DSpage = () => {
       </div>
 
       {/* Position */}
-      <div className="mb-12" id="position">
-        <h2 className="h3 mb-3">Position</h2>
+      <div className="mb-12">
+        <Anchor title="Position" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -140,8 +141,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive positioning */}
-      <div className="mb-12" id="responsive-positioning">
-        <h2 className="h3 mb-3">Responsive positioning</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive positioning" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -204,8 +205,8 @@ const DSpage = () => {
       </div>
 
       {/* Onboarding tooltip template */}
-      <div className="mb-12" id="onboarding-tooltip-template">
-        <h2 className="h3 mb-3">Onboarding tooltip template</h2>
+      <div className="mb-12">
+        <Anchor title="Onboarding tooltip template" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -262,8 +263,8 @@ const DSpage = () => {
       </div>
 
       {/* Attention tooltip */}
-      <div className="mb-12" id="attention-tooltip">
-        <h2 className="h3 mb-3">Attention tooltip</h2>
+      <div className="mb-12">
+        <Anchor title="Attention tooltip" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -278,11 +279,14 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="flex-1">
-                    <div
+                      <div
                         className="tooltip tooltip-attention tooltip-top"
                         data-tooltip="Lorem ipsum dolor sit amet"
                       >
-                        <button type="button" className="button button-main button-sm">
+                        <button
+                          type="button"
+                          className="button button-main button-sm"
+                        >
                           <span>Button label</span>
                         </button>
                       </div>
@@ -297,7 +301,10 @@ const DSpage = () => {
                         className="tooltip tooltip-attention tooltip-right"
                         data-tooltip="Lorem ipsum dolor sit amet"
                       >
-                        <button type="button" className="button button-main button-sm">
+                        <button
+                          type="button"
+                          className="button button-main button-sm"
+                        >
                           <span>Button label</span>
                         </button>
                       </div>
@@ -308,11 +315,14 @@ const DSpage = () => {
                       left
                     </div>
                     <div className="flex-1">
-                    <div
+                      <div
                         className="tooltip tooltip-attention tooltip-left"
                         data-tooltip="Lorem ipsum dolor sit amet"
                       >
-                        <button type="button" className="button button-main button-sm">
+                        <button
+                          type="button"
+                          className="button button-main button-sm"
+                        >
                           <span>Button label</span>
                         </button>
                       </div>
@@ -323,11 +333,14 @@ const DSpage = () => {
                       Bottom
                     </div>
                     <div className="flex-1">
-                    <div
+                      <div
                         className="tooltip tooltip-attention tooltip-bottom"
                         data-tooltip="Lorem ipsum dolor sit amet"
                       >
-                        <button type="button" className="button button-main button-sm">
+                        <button
+                          type="button"
+                          className="button button-main button-sm"
+                        >
                           <span>Button label</span>
                         </button>
                       </div>
@@ -349,8 +362,8 @@ const DSpage = () => {
       </div>
 
       {/* Attention responsive positioning */}
-      <div className="mb-12" id="attention-responsive-positioning">
-        <h2 className="h3 mb-3">Attention responsive positioning</h2>
+      <div className="mb-12">
+        <Anchor title="Attention responsive positioning" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -393,7 +406,10 @@ const DSpage = () => {
                         className="tooltip tooltip-attention tooltip-bottom lg:tooltip-right"
                         data-tooltip="Lorem ipsum dolor sit amet"
                       >
-                        <button type="button" className="button button-main button-sm">
+                        <button
+                          type="button"
+                          className="button button-main button-sm"
+                        >
                           <span>Button label</span>
                         </button>
                       </div>

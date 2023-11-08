@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Links</h1>
+      <h1 className="mb-8">Links</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -30,8 +31,8 @@ const DSpage = () => {
       </div>
 
       {/* Main color */}
-      <div className="mb-12" id="main-color">
-        <h2 className="h3 mb-3">Main color</h2>
+      <div className="mb-12">
+        <Anchor title="Main color" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -53,8 +54,8 @@ const DSpage = () => {
       </div>
 
       {/* Premium color */}
-      <div className="mb-12" id="premium-color">
-        <h2 className="h3 mb-3">Premium color</h2>
+      <div className="mb-12">
+        <Anchor title="Premium color" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -76,8 +77,8 @@ const DSpage = () => {
       </div>
 
       {/* Underline on hover */}
-      <div className="mb-12" id="hover-underline">
-        <h2 className="h3 mb-3">Underline on hover</h2>
+      <div className="mb-12">
+        <Anchor title="Underline on hover" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -99,8 +100,8 @@ const DSpage = () => {
       </div>
 
       {/* Interactive element */}
-      <div className="mb-12" id="interactive-element">
-        <h2 className="h3 mb-3">Interactive element</h2>
+      <div className="mb-12">
+        <Anchor title="Interactive element" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -125,8 +126,8 @@ const DSpage = () => {
       </div>
 
       {/* Hover highlight */}
-      <div className="mb-12" id="hover-highlight">
-        <h2 className="h3 mb-3">Hover highlight</h2>
+      <div className="mb-12">
+        <Anchor title="Hover highlight" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

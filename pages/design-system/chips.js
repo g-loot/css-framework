@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
@@ -7,8 +8,8 @@ const DSpage = () => {
       <h1 className="mb-2">Chips</h1>
 
       {/* default */}
-      <div className="mb-12" id="default">
-        <h2 className="h3 mb-3">Default</h2>
+      <div className="mb-12">
+        <Anchor title="Default" />
 
         {/* default: primary */}
         <div className="surface rounded-lg p-4">
@@ -151,7 +152,10 @@ const DSpage = () => {
                     Inverted
                   </div>
                   <div className="flex-1">
-                    <button type="button" className="chip chip-premium chip-inverted">
+                    <button
+                      type="button"
+                      className="chip chip-premium chip-inverted"
+                    >
                       <span>Label</span>
                       <span className="icon icon-circle-caret-right" />
                     </button>
@@ -181,7 +185,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <button type="button" className="chip chip-xp">
                       <span>Label</span>
-                    <span className="icon icon-xp-symbol"></span>
+                      <span className="icon icon-xp-symbol"></span>
                     </button>
                   </div>
                 </div>
@@ -190,9 +194,12 @@ const DSpage = () => {
                     Inverted
                   </div>
                   <div className="flex-1">
-                    <button type="button" className="chip chip-xp chip-inverted">
+                    <button
+                      type="button"
+                      className="chip chip-xp chip-inverted"
+                    >
                       <span>Label</span>
-                    <span className="icon icon-xp-symbol"></span>
+                      <span className="icon icon-xp-symbol"></span>
                     </button>
                   </div>
                 </div>
@@ -220,7 +227,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <button type="button" className="chip chip-token">
                       <span>Label</span>
-                    <span className="icon icon-token"></span>
+                      <span className="icon icon-token"></span>
                     </button>
                   </div>
                 </div>
@@ -229,9 +236,12 @@ const DSpage = () => {
                     Inverted
                   </div>
                   <div className="flex-1">
-                    <button type="button" className="chip chip-token chip-inverted">
+                    <button
+                      type="button"
+                      className="chip chip-token chip-inverted"
+                    >
                       <span>Label</span>
-                    <span className="icon icon-token"></span>
+                      <span className="icon icon-token"></span>
                     </button>
                   </div>
                 </div>
@@ -259,7 +269,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <button type="button" className="chip chip-ticket">
                       <span>Label</span>
-                    <span className="icon icon-ticket"></span>
+                      <span className="icon icon-ticket"></span>
                     </button>
                   </div>
                 </div>
@@ -268,9 +278,12 @@ const DSpage = () => {
                     Inverted
                   </div>
                   <div className="flex-1">
-                    <button type="button" className="chip chip-ticket chip-inverted">
+                    <button
+                      type="button"
+                      className="chip chip-ticket chip-inverted"
+                    >
                       <span>Label</span>
-                    <span className="icon icon-ticket"></span>
+                      <span className="icon icon-ticket"></span>
                     </button>
                   </div>
                 </div>
@@ -298,7 +311,7 @@ const DSpage = () => {
                   <div className="flex-1">
                     <button type="button" className="chip chip-ghost">
                       <span>Label</span>
-                    <span className="icon icon-ticket"></span>
+                      <span className="icon icon-ticket"></span>
                     </button>
                   </div>
                 </div>
@@ -307,9 +320,12 @@ const DSpage = () => {
                     Inverted
                   </div>
                   <div className="flex-1">
-                    <button type="button" className="chip chip-ghost chip-inverted">
+                    <button
+                      type="button"
+                      className="chip chip-ghost chip-inverted"
+                    >
                       <span>Label</span>
-                    <span className="icon icon-ticket"></span>
+                      <span className="icon icon-ticket"></span>
                     </button>
                   </div>
                 </div>
@@ -328,8 +344,8 @@ const DSpage = () => {
       </div>
 
       {/* With close button */}
-      <div className="mb-12" id="with-close-button">
-        <h2 className="mb-3">With close button</h2>
+      <div className="mb-12">
+        <Anchor title="With close button" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -376,8 +392,8 @@ const DSpage = () => {
       </div>
 
       {/* With avatar */}
-      <div className="mb-12" id="with-avatar">
-        <h2 className="mb-3">With avatar</h2>
+      <div className="mb-12">
+        <Anchor title="With avatar" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -444,8 +460,8 @@ const DSpage = () => {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12" id="sizes">
-        <h2 className="mb-3">Sizes</h2>
+      <div className="mb-12">
+        <Anchor title="Sizes" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -550,8 +566,8 @@ const DSpage = () => {
       </div>
 
       {/* Roundness */}
-      <div className="mb-12" id="roundness">
-        <h2 className="mb-3">Roundness</h2>
+      <div className="mb-12">
+        <Anchor title="Roundness" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -588,8 +604,8 @@ const DSpage = () => {
       </div>
 
       {/* Sliced */}
-      <div className="mb-12" id="sliced">
-        <h2 className="mb-3">Sliced</h2>
+      <div className="mb-12">
+        <Anchor title="Sliced" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -650,8 +666,8 @@ const DSpage = () => {
       </div>
 
       {/* Reward */}
-      <div className="mb-12" id="reward">
-        <h2 className="mb-3">Reward</h2>
+      <div className="mb-12">
+        <Anchor title="Reward" />
 
         {/* Reward: XP */}
         <div className="surface rounded-lg p-4">
@@ -768,7 +784,10 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Inverted
                   </div>
-                  <button type="button" className="chip chip-ticket chip-inverted">
+                  <button
+                    type="button"
+                    className="chip chip-ticket chip-inverted"
+                  >
                     <span className="icon icon-ticket" />
                     <span>1</span>
                   </button>
@@ -809,7 +828,10 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Inverted
                   </div>
-                  <button type="button" className="chip chip-premium chip-inverted">
+                  <button
+                    type="button"
+                    className="chip chip-premium chip-inverted"
+                  >
                     <span className="icon icon-ticket" />
                     <span>1</span>
                   </button>
@@ -861,28 +883,40 @@ const DSpage = () => {
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
                     Small
                   </div>
-                  <button type="button" className="chip chip-ticket chip-inverted chip-sm">
+                  <button
+                    type="button"
+                    className="chip chip-ticket chip-inverted chip-sm"
+                  >
                     <span>2</span>
                     <span className="icon icon-ticket" />
                   </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <button type="button" className="chip chip-xp chip-inverted chip-sm">
+                  <button
+                    type="button"
+                    className="chip chip-xp chip-inverted chip-sm"
+                  >
                     <span>500</span>
                     <span className="icon icon-xp-symbol" />
                   </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <button type="button" className="chip chip-token chip-inverted chip-sm">
+                  <button
+                    type="button"
+                    className="chip chip-token chip-inverted chip-sm"
+                  >
                     <span>500</span>
                     <span className="icon icon-token" />
                   </button>
                 </div>
                 <div className="w-full flex gap-4 items-center">
                   <div className="w-1/4 text-ui-400 text-right text-sm leading-tight"></div>
-                  <button type="button" className="chip chip-xp chip-ghost chip-sm">
+                  <button
+                    type="button"
+                    className="chip chip-xp chip-ghost chip-sm"
+                  >
                     <span>+100 premium</span>
                     <span className="icon icon-xp-symbol" />
                   </button>
@@ -902,8 +936,8 @@ const DSpage = () => {
       </div>
 
       {/* status */}
-      <div className="mb-12" id="status">
-        <h2 className="mb-3">Status</h2>
+      <div className="mb-12">
+        <Anchor title="Status" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -1135,24 +1169,15 @@ const DSpage = () => {
                     Default (with badge)
                   </div>
                   <div className="flex-1 flex items-center gap-2">
-                    <button
-                      type="button"
-                      className="chip chip-status"
-                    >
+                    <button type="button" className="chip chip-status">
                       <span className="badge" />
                       <span>Offline</span>
                     </button>
-                    <button
-                      type="button"
-                      className="chip chip-sm chip-status"
-                    >
+                    <button type="button" className="chip chip-sm chip-status">
                       <span className="badge" />
                       <span>Offline</span>
                     </button>
-                    <button
-                      type="button"
-                      className="chip chip-xs chip-status"
-                    >
+                    <button type="button" className="chip chip-xs chip-status">
                       <span className="badge" />
                       <span>Offline</span>
                     </button>

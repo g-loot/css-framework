@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import Chat from "@/components/Chat/Chat";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const conversationSingleOthers = [
   {
@@ -65,8 +66,7 @@ const conversationSingleEvent = [
       {
         id: 1,
         type: "text",
-        content:
-          "Welcome Martin to the Clan!",
+        content: "Welcome Martin to the Clan!",
       },
     ],
   },
@@ -78,11 +78,8 @@ const DSpage = () => {
       <h1 className="mb-2">Chat</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <div className="flex items-center justify-between">
-          <h2 className="h3 mb-3">Structure</h2>
-
-        </div>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg">
           <Chat />
@@ -98,8 +95,8 @@ const DSpage = () => {
       </div>
 
       {/* Variant */}
-      <div className="mb-12" id="variant">
-        <h2 className="h3 mb-3">Variant: secondary</h2>
+      <div className="mb-12">
+        <Anchor title="Variant" />
 
         <div className="surface rounded-lg">
           <Chat variant="secondary" />
@@ -107,8 +104,8 @@ const DSpage = () => {
       </div>
 
       {/* Chat group (others) */}
-      <div className="mb-12" id="chat-group-others">
-        <h2 className="h3 mb-3">Chat group (others)</h2>
+      <div className="mb-12">
+        <Anchor title="Chat group (others)" />
 
         <div className="surface rounded-lg">
           <Chat
@@ -129,8 +126,8 @@ const DSpage = () => {
       </div>
 
       {/* Chat group (self) */}
-      <div className="mb-12" id="chat-group-self">
-        <h2 className="h3 mb-3">Chat group (self)</h2>
+      <div className="mb-12">
+        <Anchor title="Chat group (self)" />
 
         <div className="surface rounded-lg">
           <Chat
@@ -149,10 +146,10 @@ const DSpage = () => {
           ></iframe>
         </div>
       </div>
-      
+
       {/* Chat message (event) */}
-      <div className="mb-12" id="chat-message-event">
-        <h2 className="h3 mb-3">Chat message (event)</h2>
+      <div className="mb-12">
+        <Anchor title="Chat message (event)" />
 
         <div className="surface rounded-lg">
           <Chat
@@ -172,10 +169,9 @@ const DSpage = () => {
         </div>
       </div>
 
-
       {/* Status writting */}
-      <div className="mb-12" id="status-writting">
-        <h2 className="h3 mb-3">Status writting</h2>
+      <div className="mb-12">
+        <Anchor title="Status writting" />
 
         <div className="surface rounded-lg">
           <div className="chat-group ">
@@ -216,8 +212,8 @@ const DSpage = () => {
       </div>
 
       {/* Chat reactions */}
-      <div className="mb-12" id="chat-reactions">
-        <h2 className="h3 mb-3">Chat reactions</h2>
+      <div className="mb-12">
+        <Anchor title="Chat reactions" />
 
         <div className="surface rounded-lg p-4 flex items-center justify-center">
           <div className="chat-reactions">
@@ -248,10 +244,9 @@ const DSpage = () => {
         </div>
       </div>
 
-
       {/* Chat footer */}
-      <div className="mb-12" id="chat-footer">
-        <h2 className="h3 mb-3">Chat footer</h2>
+      <div className="mb-12">
+        <Anchor title="Chat footer" />
 
         <div className="surface rounded-lg">
           <form className="chat-footer flex items-end">

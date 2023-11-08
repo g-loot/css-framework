@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [randomNum0, setRandomNum0] = useState(1);
@@ -55,11 +56,11 @@ const DSpage = () => {
   }
   return (
     <>
-      <h1 className="mb-2">Steps</h1>
+      <h1 className="mb-8">Steps</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -115,8 +116,8 @@ const DSpage = () => {
       </div>
 
       {/* Size */}
-      <div className="mb-12" id="size">
-        <h2 className="h3 mb-3">Size</h2>
+      <div className="mb-12">
+        <Anchor title="Size" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -172,8 +173,8 @@ const DSpage = () => {
       </div>
 
       {/* Variants */}
-      <div className="mb-12" id="variants">
-        <h2 className="h3 mb-3">Variants</h2>
+      <div className="mb-12">
+        <Anchor title="Variants" />
 
         <div className="surface rounded-lg p-4">
           <div className="mb-4">
@@ -440,8 +441,8 @@ const DSpage = () => {
       </div>
 
       {/* Label position */}
-      <div className="mb-12" id="label-position">
-        <h2 className="h3 mb-3">Label position</h2>
+      <div className="mb-12">
+        <Anchor title="Label position" />
 
         <div className="surface rounded-lg p-4">
           <div className="mb-0">
@@ -494,8 +495,8 @@ const DSpage = () => {
       </div>
 
       {/* Vertical */}
-      <div className="mb-12" id="vertical">
-        <h2 className="h3 mb-3">Vertical</h2>
+      <div className="mb-12">
+        <Anchor title="Vertical" />
 
         <div className="surface rounded-lg p-4">
           <div className="mb-0">

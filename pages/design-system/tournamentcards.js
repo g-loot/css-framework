@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Tournament cards</h1>
+      <h1 className="mb-8">Tournament cards</h1>
 
       {/* Showdown */}
-      <div className="mb-12" id="showdown">
-        <h2 className="h3 mb-3">Showdown</h2>
+      <div className="mb-12">
+        <Anchor title="Showdown" small="deprecated" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -80,8 +81,8 @@ const DSpage = () => {
       </div>
 
       {/* Skirmish */}
-      <div className="mb-12" id="skirmish">
-        <h2 className="h3 mb-3">Skirmish</h2>
+      <div className="mb-12">
+        <Anchor title="Skirmish" small="deprecated" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -151,8 +152,8 @@ const DSpage = () => {
       </div>
 
       {/* Open */}
-      <div className="mb-12" id="open">
-        <h2 className="h3 mb-3">Open</h2>
+      <div className="mb-12">
+        <Anchor title="Open" small="deprecated" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -222,8 +223,8 @@ const DSpage = () => {
       </div>
 
       {/* Loading */}
-      <div className="mb-12" id="status-loading">
-        <h2 className="h3 mb-3">Loading</h2>
+      <div className="mb-12">
+        <Anchor title="Loading" small="deprecated" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">

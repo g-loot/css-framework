@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 function RandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -25,11 +26,11 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Stepper</h1>
+      <h1 className="mb-8">Stepper</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -67,8 +68,8 @@ const DSpage = () => {
       </div>
 
       {/* Typography */}
-      <div className="mb-12" id="typography">
-        <h2 className="h3 mb-3">Typography</h2>
+      <div className="mb-12">
+        <Anchor title="Typography" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

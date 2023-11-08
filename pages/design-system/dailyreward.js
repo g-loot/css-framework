@@ -6,6 +6,7 @@ import ModalContainer from "@/components/Modal/ModalContainer";
 import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DailyRewards = [
   {
@@ -82,8 +83,8 @@ const DSpage = () => {
       <h1 className="mb-2">Daily Reward</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -140,8 +141,8 @@ const DSpage = () => {
       </div>
 
       {/* With claim */}
-      <div className="mb-12" id="with-claim">
-        <h2 className="h3 mb-3">With claim</h2>
+      <div className="mb-12">
+        <Anchor title="With claim" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">

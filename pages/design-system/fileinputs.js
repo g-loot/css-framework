@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">File inputs</h1>
+      <h1 className="mb-8">File inputs</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -37,8 +38,8 @@ const DSpage = () => {
       </div>
 
       {/* With helper text */}
-      <div className="mb-12" id="with-helper-text">
-        <h2 className="h3 mb-3">With helper text</h2>
+      <div className="mb-12">
+        <Anchor title="With helper text" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -78,8 +79,8 @@ const DSpage = () => {
       </div>
 
       {/* Multiple files */}
-      <div className="mb-12" id="multiple-files">
-        <h2 className="h3 mb-3">Multiple files</h2>
+      <div className="mb-12">
+        <Anchor title="Multiple files" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -115,8 +116,8 @@ const DSpage = () => {
       </div>
 
       {/* Dropzone */}
-      <div className="mb-12" id="dropzone">
-        <h2 className="h3 mb-3">Dropzone</h2>
+      <div className="mb-12">
+        <Anchor title="Dropzone" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -152,8 +153,8 @@ const DSpage = () => {
       </div>
 
       {/* Button */}
-      <div className="mb-12" id="Button">
-        <h2 className="h3 mb-3">Button</h2>
+      <div className="mb-12">
+        <Anchor title="Button" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -188,8 +189,8 @@ const DSpage = () => {
       </div>
 
       {/* Fake folder input */}
-      <div className="mb-12" id="fake-folder-input">
-        <h2 className="h3 mb-3">Fake folder input</h2>
+      <div className="mb-12">
+        <Anchor title="Fake folder input" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

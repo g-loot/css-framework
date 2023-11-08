@@ -1,16 +1,17 @@
 import React, { useState } from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [isActive, setIsActive] = useState(false);
 
   return (
     <>
-      <h1 className="mb-2">Drawer</h1>
+      <h1 className="mb-8">Drawer</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12" >
+        <Anchor title="Structure" />
 
         <div className="">
           <div className="">
@@ -66,8 +67,8 @@ const DSpage = () => {
       </div>
 
       {/* Visible on desktop, hidden on mobile */}
-      <div className="mb-12" id="visible-desktop">
-        <h2 className="h3 mb-3">Visible on desktop, hidden on mobile</h2>
+      <div className="mb-12">
+        <Anchor title="Visible on desktop, hidden on mobile" />
 
         <div className="">
           <div className="">
@@ -125,8 +126,8 @@ const DSpage = () => {
       </div>
 
       {/* Drawer right */}
-      <div className="mb-12" id="right">
-        <h2 className="h3 mb-3">Drawer right</h2>
+      <div className="mb-12">
+        <Anchor title="Drawer right" />
 
         <div className="">
           <div className="">
@@ -182,10 +183,8 @@ const DSpage = () => {
       </div>
 
       {/* Forced javascript */}
-      <div className="mb-12" id="forced-javascript">
-        <h2 className="h3 mb-3">
-          Forced <small className="text-ui-300">javascript</small>
-        </h2>
+      <div className="mb-12">
+        <Anchor title="Structure" small="javascript" />
 
         <div className="">
           <div className="">

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const minValue = 0;
@@ -22,11 +23,11 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Text inputs</h1>
+      <h1 className="mb-8">Text inputs</h1>
 
       {/* structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         {/* structure: primary */}
         <div className="surface rounded-lg p-4">
@@ -95,11 +96,8 @@ const DSpage = () => {
       </div>
 
       {/* With textarea */}
-      <div className="mb-12" id="with-textarea">
-        <h2 className="h3 mb-3">
-          With textarea{" "}
-          <small className="text-ui-200 font-normal">auto-expandable</small>
-        </h2>
+      <div className="mb-12">
+        <Anchor title="With textarea" small="auto-expandable" />
 
         {/* structure: primary */}
         <div className="surface rounded-lg p-4">
@@ -155,11 +153,8 @@ const DSpage = () => {
       </div>
 
       {/* Validation <small className="text-ui-200 font-normal">with attribute</small> */}
-      <div className="mb-12" id="validation">
-        <h2 className="h3 mb-3">
-          Validation{" "}
-          <small className="text-ui-200 font-normal">with attribute</small>
-        </h2>
+      <div className="mb-12">
+        <Anchor title="Validation" small="with attribute" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -222,10 +217,8 @@ const DSpage = () => {
       </div>
 
       {/* Validation <small className="text-ui-200 font-normal">with tag</small> */}
-      <div className="mb-12" id="validation-with-tag">
-        <h2 className="h3 mb-3">
-          Validation <small className="text-ui-200 font-normal">with tag</small>
-        </h2>
+      <div className="mb-12">
+        <Anchor title="Validation" small="with tag" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -289,8 +282,8 @@ const DSpage = () => {
       </div>
 
       {/* With icon */}
-      <div className="mb-12" id="with-icon">
-        <h2 className="h3 mb-3">With icon</h2>
+      <div className="mb-12">
+        <Anchor title="With icon" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -348,9 +341,9 @@ const DSpage = () => {
         </div>
       </div>
 
-      {/* With loader */}
-      <div className="mb-12" id="with-loader">
-        <h2 className="h3 mb-3">Status</h2>
+      {/* Loading */}
+      <div className="mb-12">
+        <Anchor title="Loading" />
 
         <div className="surface rounded-lg p-4">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
@@ -434,8 +427,8 @@ const DSpage = () => {
       </div>
 
       {/* With button */}
-      <div className="mb-12" id="with-button">
-        <h2 className="h3 mb-3">With button</h2>
+      <div className="mb-12">
+        <Anchor title="With button" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -499,8 +492,8 @@ const DSpage = () => {
       </div>
 
       {/* Variant */}
-      <div className="mb-12" id="variant">
-        <h2 className="h3 mb-3">Variant</h2>
+      <div className="mb-12">
+        <Anchor title="Variant" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -546,8 +539,8 @@ const DSpage = () => {
       </div>
 
       {/* Input date */}
-      <div className="mb-12" id="input-date">
-        <h2 className="h3 mb-3">Input date</h2>
+      <div className="mb-12">
+        <Anchor title="Input date" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -600,8 +593,8 @@ const DSpage = () => {
       </div>
 
       {/* Input number */}
-      <div className="mb-12" id="input-number">
-        <h2 className="h3 mb-3">Input number</h2>
+      <div className="mb-12">
+        <Anchor title="Input number" />
 
         <div className="surface rounded-lg p-4">
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">

@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Radio, checkbox, toggle</h1>
+      <h1 className="mb-8">Radio, checkbox, toggle</h1>
 
       {/* Radio */}
-      <div className="mb-12" id="radio">
-        <h2 className="h3 mb-3">Radio</h2>
+      <div className="mb-12">
+        <Anchor title="Radio" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -48,8 +49,8 @@ const DSpage = () => {
       </div>
 
       {/* Toggle */}
-      <div className="mb-12" id="toggle">
-        <h2 className="h3 mb-3">Toggle</h2>
+      <div className="mb-12">
+        <Anchor title="Toggle" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -96,8 +97,8 @@ const DSpage = () => {
       </div>
 
       {/* Checkbox */}
-      <div className="mb-12" id="checkbox">
-        <h2 className="h3 mb-3">Checkbox</h2>
+      <div className="mb-12">
+        <Anchor title="Checkbox" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -140,8 +141,8 @@ const DSpage = () => {
       </div>
 
       {/* Validation */}
-      <div className="mb-12" id="validation">
-        <h2 className="h3 mb-3">Validation</h2>
+      <div className="mb-12">
+        <Anchor title="Validation" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -209,8 +210,8 @@ const DSpage = () => {
       </div>
 
       {/* Disabled */}
-      <div className="mb-12" id="disabled">
-        <h2 className="h3 mb-3">Disabled</h2>
+      <div className="mb-12">
+        <Anchor title="Disabled" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -272,8 +273,8 @@ const DSpage = () => {
       </div>
 
       {/* Align to end */}
-      <div className="mb-12" id="align-end">
-        <h2 className="h3 mb-3">Align to end</h2>
+      <div className="mb-12">
+        <Anchor title="Align to end" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -324,8 +325,8 @@ const DSpage = () => {
       </div>
 
       {/* As list */}
-      <div className="mb-12" id="as-list">
-        <h2 className="h3 mb-3">As list</h2>
+      <div className="mb-12">
+        <Anchor title="As list" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -376,8 +377,8 @@ const DSpage = () => {
       </div>
 
       {/* Single element */}
-      <div className="mb-12" id="as-list">
-        <h2 className="h3 mb-3">Single element</h2>
+      <div className="mb-12">
+        <Anchor title="Single element" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -420,8 +421,8 @@ const DSpage = () => {
       </div>
 
       {/* With image */}
-      <div className="mb-12" id="with-image">
-        <h2 className="h3 mb-3">With image</h2>
+      <div className="mb-12">
+        <Anchor title="With image" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -518,8 +519,8 @@ const DSpage = () => {
       </div>
 
       {/* Sizes */}
-      <div className="mb-12" id="sizes">
-        <h2 className="h3 mb-3">Sizes</h2>
+      <div className="mb-12">
+        <Anchor title="Sizes" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

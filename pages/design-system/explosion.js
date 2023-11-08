@@ -13,6 +13,7 @@ import LottieExplosion7 from "@/assets/animations/explosion_stryda_7.json";
 import LottieExplosion8 from "@/assets/animations/explosion_stryda_8.json";
 import LottieExplosion9 from "@/assets/animations/explosion_stryda_9.json";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [StartAnim1, setStartAnim1] = useState(false);
@@ -108,7 +109,7 @@ const DSpage = () => {
   return (
     <>
       <div className="flex justify-between items-baseline">
-        <h1 className="mb-2">Explosion</h1>
+        <h1 className="mb-8">Explosion</h1>
         <a
           href="https://res.cloudinary.com/gloot/raw/upload/v1675254905/Stryda/animations/explosions.zip"
           target="_blank"
@@ -121,8 +122,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #1 */}
-      <div className="mb-12" id="explosion-1">
-        <h2 className="h3 mb-3">Explosion #1</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #1" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -163,8 +164,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #2 */}
-      <div className="mb-12" id="explosion-2">
-        <h2 className="h3 mb-3">Explosion #2</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #2" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -205,8 +206,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #3 */}
-      <div className="mb-12" id="explosion-3">
-        <h2 className="h3 mb-3">Explosion #3</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #3" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -247,8 +248,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #4 */}
-      <div className="mb-12" id="explosion-4">
-        <h2 className="h3 mb-3">Explosion #4</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #4" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -289,8 +290,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #5 */}
-      <div className="mb-12" id="explosion-5">
-        <h2 className="h3 mb-3">Explosion #5</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #5" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -331,8 +332,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #6 */}
-      <div className="mb-12" id="explosion-6">
-        <h2 className="h3 mb-3">Explosion #6</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #6" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -373,8 +374,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #7 */}
-      <div className="mb-12" id="explosion-7">
-        <h2 className="h3 mb-3">Explosion #7</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #7" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -415,8 +416,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #8 */}
-      <div className="mb-12" id="explosion-8">
-        <h2 className="h3 mb-3">Explosion #8</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #8" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -457,8 +458,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #9 */}
-      <div className="mb-12" id="explosion-9">
-        <h2 className="h3 mb-3">Explosion #9</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #9" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -499,8 +500,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #10 */}
-      <div className="mb-12" id="explosion-10">
-        <h2 className="h3 mb-3">Explosion #10</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #10" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -541,8 +542,8 @@ const DSpage = () => {
       </div>
 
       {/* Explosion #11 */}
-      <div className="mb-12" id="explosion-11">
-        <h2 className="h3 mb-3">Explosion #11</h2>
+      <div className="mb-12">
+        <Anchor title="Explosion #11" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

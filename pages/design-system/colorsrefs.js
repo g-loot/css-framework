@@ -3,6 +3,7 @@ import React, { useContext } from "react";
 import DScolors from "../api/designsystem/colors.json";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 function isMultipleOfThree(number) {
   if (number % 3 == 0) {
@@ -25,7 +26,7 @@ const DSpage = () => {
       {DScolors.colors.map((item, indexItem) => (
         <div className="mb-8" key={item}>
           <div className="">
-            <h3 className="text-3xl mb-2">{item.title}</h3>
+            <Anchor title={item.title} />
             <div className={`grid grid-cols-3 gap-4 xl:grid-cols-5`}>
               {item.colors.map((item2, indexItem2) => (
                 <>
@@ -64,10 +65,12 @@ const DSpage = () => {
                                   autoDelete: true,
                                   autoDeleteDelay: 2500,
                                 });
-                                navigator.clipboard.writeText(item2.value.replace('bg-',''));
+                                navigator.clipboard.writeText(
+                                  item2.value.replace("bg-", "")
+                                );
                               }}
                             >
-                              {item2.value.replace('bg-','')}
+                              {item2.value.replace("bg-", "")}
                             </a>
                           </span>
                         </div>

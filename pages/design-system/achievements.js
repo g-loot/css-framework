@@ -7,6 +7,7 @@ import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalAchievementReceived from "../prototype/modal-achievementreceived";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const prototype = usePrototypeData();
@@ -36,11 +37,12 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Achievements</h1>
+      <h1 className="mb-8">Achievements</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
+
         <div className="pt-4 surface sm:rounded-lg p-4 flex flex-wrap items-center justify-center gap-8 mb-4">
           <div className="w-32 h-32 achievement">
             <i />
@@ -93,8 +95,9 @@ const DSpage = () => {
       </div>
 
       {/* Modal */}
-      <div className="mb-12" id="modal">
-        <h2 className="h3 mb-3">Modal</h2>
+      <div className="mb-12">
+        <Anchor title="Modal" />
+
 
         <div className="mb-10">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -117,9 +120,10 @@ const DSpage = () => {
       </div>
 
       {/* Achievements List */}
-      <div className="mb-12" id="achievements-list">
+      <div className="mb-12">
         <div className="flex justify-between mb-2">
-          <h2 className="h3 mb-3">Achievements list</h2>
+          <Anchor title="Achievements list" />
+
           <div className="form-group form-select flex items-center gap-2">
             <label htmlFor="colour" className="m-0">
               Level:

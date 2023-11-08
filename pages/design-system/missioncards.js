@@ -4,6 +4,7 @@ import Tooltip from "@/components/Tooltip/Tooltip";
 import Lottie from "lottie-react";
 import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import GameIcon from "@/components/GameIcon/GameIcon";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [StartAnim1, setStartAnim1] = useState(false);
@@ -12,11 +13,11 @@ const DSpage = () => {
   }
   return (
     <>
-      <h1 className="mb-2">Mission cards</h1>
+      <h1 className="mb-8">Mission cards</h1>
 
       {/* Structure */}
       <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+        <Anchor title="Structure" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -116,8 +117,8 @@ const DSpage = () => {
       </div>
 
       {/* Premium locked */}
-      <div className="mb-12" id="premium-locked">
-        <h2 className="h3 mb-3">Premium locked</h2>
+      <div className="mb-12">
+        <Anchor title="Premium locked" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -169,8 +170,8 @@ const DSpage = () => {
       </div>
 
       {/* Premium unlocked */}
-      <div className="mb-12" id="premium-unlocked">
-        <h2 className="h3 mb-3">Premium unlocked</h2>
+      <div className="mb-12">
+        <Anchor title="Premium unlocked" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -222,8 +223,8 @@ const DSpage = () => {
       </div>
 
       {/* Premium interactive */}
-      <div className="mb-12" id="premium-interactive">
-        <h2 className="h3 mb-3">Premium interactive</h2>
+      <div className="mb-12">
+        <Anchor title="Premium interactive" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -268,8 +269,8 @@ const DSpage = () => {
       </div>
 
       {/* Secondary */}
-      <div className="mb-12" id="secondary">
-        <h2 className="h3 mb-3">Secondary</h2>
+      <div className="mb-12">
+        <Anchor title="Secondary" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">
@@ -433,8 +434,8 @@ const DSpage = () => {
       </div>
 
       {/* Loading */}
-      <div className="mb-12" id="status-loading">
-        <h2 className="h3 mb-3">Loading</h2>
+      <div className="mb-12">
+        <Anchor title="Loading" />
 
         <div className="">
           <div className="flex flex-col lg:flex-row gap-4">

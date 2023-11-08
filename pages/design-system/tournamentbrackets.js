@@ -1,5 +1,6 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const bracketsRounds = [
@@ -160,11 +161,11 @@ const DSpage = () => {
   ];
   return (
     <>
-      <h1 className="mb-2">Tournament brackets</h1>
+      <h1 className="mb-8">Tournament brackets</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
 
         <div className="pt-4">
           <div className="">
@@ -242,8 +243,8 @@ const DSpage = () => {
       </div>
 
       {/* Responsive */}
-      <div className="mb-12" id="responsive">
-        <h2 className="h3 mb-3">Responsive brackets</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive brackets" />
 
         <div className="pt-4">
           <div className="">

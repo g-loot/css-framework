@@ -5,7 +5,7 @@ import { getLayout } from "@/components/DesignSystem/DSLayout";
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Ladder info</h1>
+      <h1 className="mb-8">Ladder info</h1>
 
       {/* Ladder info 3 */}
       <div className="mb-12" id="ladder-info-3">

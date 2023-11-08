@@ -7,6 +7,7 @@ import ModalContainer from "@/components/Modal/ModalContainer";
 import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [randomNum1, setRandomNum1] = useState(1);
@@ -35,11 +36,11 @@ const DSpage = () => {
 
   return (
     <>
-      <h1 className="mb-2">Header</h1>
+      <h1 className="mb-8">Header</h1>
 
       {/* Structure */}
-      <div className="mb-12" id="structure">
-        <h2 className="h3 mb-3">Structure</h2>
+      <div className="mb-12">
+        <Anchor title="Structure" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -91,11 +92,9 @@ const DSpage = () => {
                   <div className="header-meta ">
                     <div className="w-full flex flex-col justify-center items-center gap-2 xl:pl-0 py-4">
                       <div className="flex items-end gap-4 leading-tight">
-                        <div className="text-xl xl:text-4xl text-main">
-                          2/3
-                        </div>
+                        <div className="text-main">2/3</div>
                         <div className="xl:mb-2">
-                          <div className="text-xl text-ui-200 uppercase">
+                          <div className="text-ui-200 uppercase">
                             Daily missions completed
                           </div>
                         </div>
@@ -150,8 +149,8 @@ const DSpage = () => {
       </div>
 
       {/* With top meta */}
-      <div className="mb-12" id="with-top-meta">
-        <h2 className="h3 mb-3">With top meta</h2>
+      <div className="mb-12">
+        <Anchor title="With top meta" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -189,9 +188,9 @@ const DSpage = () => {
                     <div className="header-body">
                       <h2 className="h3 mb-2">Ladders</h2>
                       <p className="text-ui-300 max-w-[45ch] mb-4">
-                        Use your stats to climb the ladders and win
-                        prizes. No waiting, no dedicated servers. Play on your
-                        own schedule!
+                        Use your stats to climb the ladders and win prizes. No
+                        waiting, no dedicated servers. Play on your own
+                        schedule!
                       </p>
                       <div className="flex flex-col md:flex-row gap-2">
                         <button
@@ -214,9 +213,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-meta justify-start pr-0">
                     <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                      <span className="text-ui-100 uppercase">
-                        Time Left:
-                      </span>
+                      <span className="text-ui-100 uppercase">Time Left:</span>
                       <span className="icon icon-clock text-main" />
                       <Countdown
                         additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
@@ -250,8 +247,8 @@ const DSpage = () => {
       </div>
 
       {/* With extra elements */}
-      <div className="mb-12" id="with-extra-elements">
-        <h2 className="h3 mb-3">With extra elements</h2>
+      <div className="mb-12">
+        <Anchor title="With extra elements" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -300,9 +297,7 @@ const DSpage = () => {
                   </div>
                   <div className="header-meta justify-start pr-0">
                     <div className="p-2 bg-gradient-to-r from-ui-900/0 to-ui-900/50 flex gap-1 items-center justify-center xl:justify-end whitespace-nowrap">
-                      <span className="text-ui-100 uppercase">
-                        Time Left:
-                      </span>
+                      <span className="text-ui-100 uppercase">Time Left:</span>
                       <span className="icon icon-clock text-main" />
                       <Countdown
                         additionalClassNames="flex items-baseline gap-0.5 uppercase text-main"
@@ -336,8 +331,8 @@ const DSpage = () => {
       </div>
 
       {/* Simple */}
-      <div className="mb-12" id="simple">
-        <h2 className="h3 mb-3">Simple</h2>
+      <div className="mb-12">
+        <Anchor title="Simple" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -402,8 +397,8 @@ const DSpage = () => {
       </div>
 
       {/* Profile */}
-      <div className="mb-12" id="profile">
-        <h2 className="h3 mb-3">Profile</h2>
+      <div className="mb-12">
+        <Anchor title="Profile" />
         <div className="">
           <div className="">
             <div className="flex gap-4 flex-col">
@@ -474,9 +469,7 @@ const DSpage = () => {
                     <div className="flex justify-center gap-4 py-4">
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl mb-0.5">
-                            10000
-                          </div>
+                          <div className="text-4xl mb-0.5">10000</div>
                           <div className="text-xs text-ui-300 uppercase">
                             Total
                             <br />
@@ -486,9 +479,7 @@ const DSpage = () => {
                       </div>
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl mb-0.5">
-                            143
-                          </div>
+                          <div className="text-4xl mb-0.5">143</div>
                           <div className="text-xs text-ui-300 uppercase">
                             Played
                             <br />
@@ -498,9 +489,7 @@ const DSpage = () => {
                       </div>
                       <div className="rounded-full leading-tight bg-gradient-to-b from-ui-900/75 to-ui-900/10 backdrop-blur p-1 flex items-center justify-center w-36 h-36 text-center">
                         <div>
-                          <div className="text-4xl mb-0.5">
-                            12
-                          </div>
+                          <div className="text-4xl mb-0.5">12</div>
                           <div className="text-xs text-ui-300 uppercase">
                             Played
                             <br />

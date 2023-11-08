@@ -1,14 +1,15 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Menu</h1>
+      <h1 className="mb-8">Menu</h1>
 
       {/* primary */}
-      <div className="mb-12" id="primary">
-        <h2 className="h3 mb-3">Primary</h2>
+      <div className="mb-12">
+        <Anchor title="Primary" />
 
         <div className="">
           <div className="">
@@ -51,8 +52,8 @@ const DSpage = () => {
       </div>
 
       {/* secondary */}
-      <div className="mb-12" id="secondary">
-        <h2 className="h3 mb-3">Secondary</h2>
+      <div className="mb-12">
+        <Anchor title="Secondary" />
 
         <div className="">
           <div className="">
@@ -95,8 +96,8 @@ const DSpage = () => {
       </div>
 
       {/* with icons */}
-      <div className="mb-12" id="with-icons">
-        <h2 className="h3 mb-3">With icons</h2>
+      <div className="mb-12">
+        <Anchor title="With icons" />
 
         <div className="">
           <div className="">
@@ -143,8 +144,8 @@ const DSpage = () => {
       </div>
 
       {/* with separators */}
-      <div className="mb-12" id="with-separator">
-        <h2 className="h3 mb-3">With separators</h2>
+      <div className="mb-12">
+        <Anchor title="With separators" />
 
         <div className="">
           <div className="">
@@ -198,8 +199,8 @@ const DSpage = () => {
       </div>
 
       {/* Rounded */}
-      <div className="mb-12" id="rounded">
-        <h2 className="h3 mb-3">Rounded</h2>
+      <div className="mb-12">
+        <Anchor title="Rounded" />
 
         <div className="">
           <div className="">
@@ -251,8 +252,8 @@ const DSpage = () => {
         </div>
       </div>
       {/* Horizontal */}
-      <div className="mb-12" id="horizontal">
-        <h2 className="h3 mb-3">Horizontal</h2>
+      <div className="mb-12">
+        <Anchor title="Horizontal" />
 
         <div className="">
           <div className="">
@@ -294,8 +295,8 @@ const DSpage = () => {
         </div>
       </div>
       {/* Responsive (vertical by default, horizontal on large screen) */}
-      <div className="mb-12" id="responsive">
-        <h2 className="h3 mb-3">Responsive</h2>
+      <div className="mb-12">
+        <Anchor title="Responsive" />
         <p className="text-ui-300 mb-3">
           Vertical by default, horizontal on large screen
         </p>
@@ -340,8 +341,8 @@ const DSpage = () => {
         </div>
       </div>
       {/* Vertical with submenu */}
-      <div className="mb-12" id="vertical-submenu">
-        <h2 className="h3 mb-3">Vertical with submenu</h2>
+      <div className="mb-12">
+        <Anchor title="Vertical with submenu" />
 
         <div className="">
           <div className="">
@@ -397,8 +398,8 @@ const DSpage = () => {
       </div>
 
       {/* Horizontal with submenu */}
-      <div className="mb-12" id="horizontal-submenu">
-        <h2 className="h3 mb-3">Horizontal with submenu</h2>
+      <div className="mb-12">
+        <Anchor title="Horizontal with submenu" />
 
         <div className="">
           <div className="">
@@ -456,8 +457,8 @@ const DSpage = () => {
       </div>
 
       {/* Loading */}
-      <div className="mb-12" id="loading">
-        <h2 className="h3 mb-3">Loading</h2>
+      <div className="mb-12">
+        <Anchor title="Loading" />
 
         <div className="">
           <div className="">

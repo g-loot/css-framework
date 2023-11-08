@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 function RandomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -56,9 +57,7 @@ const ProgressContainerStep = () => {
   const maxSteps = 5;
   const [stepActive, setStepActive] = useState(0);
   const [speed, setSpeed] = useState(5);
-  const speedValues = [
-   1,5,10,20,30
-  ];
+  const speedValues = [1, 5, 10, 20, 30];
 
   const handleClick = () => {
     if (stepActive < maxSteps) {
@@ -77,7 +76,11 @@ const ProgressContainerStep = () => {
         <div
           className="progresscontainer progresscontainer-step"
           onClick={() => setLoadingProgress(0)}
-          style={{ "--active": stepActive, "--max": maxSteps, "--duration": `${speed}s` }}
+          style={{
+            "--active": stepActive,
+            "--max": maxSteps,
+            "--duration": `${speed}s`,
+          }}
         >
           <div>
             <div>Preparing video for AI</div>
@@ -97,20 +100,17 @@ const ProgressContainerStep = () => {
       </div>
       <div className="flex items-center justify-center gap-2">
         <div className="form-group form-select flex items-center gap-2">
-            <label htmlFor="speed" className="m-0">
-              Speed (in second):
-            </label>
-            <select id="speed" onChange={(e) => handleSpeed(e)}>
-              {speedValues.map((value, key) => (
-                <option
-                  key={key}
-                  value={value}
-                >
-                  {value}
-                </option>
-              ))}
-            </select>
-          </div>
+          <label htmlFor="speed" className="m-0">
+            Speed (in second):
+          </label>
+          <select id="speed" onChange={(e) => handleSpeed(e)}>
+            {speedValues.map((value, key) => (
+              <option key={key} value={value}>
+                {value}
+              </option>
+            ))}
+          </select>
+        </div>
         <button
           type="button"
           className="button button-sm button-primary"
@@ -140,11 +140,11 @@ const DSpage = () => {
   }, []);
   return (
     <>
-      <h1 className="mb-2">Progress bar</h1>
+      <h1 className="mb-8">Progress bar</h1>
 
       {/* Linear */}
-      <div className="mb-12" id="linear">
-        <h2 className="h3 mb-3">Linear</h2>
+      <div className="mb-12">
+        <Anchor title="Linear" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -188,8 +188,8 @@ const DSpage = () => {
       </div>
 
       {/* Radial */}
-      <div className="mb-12" id="radial">
-        <h2 className="h3 mb-3">Radial</h2>
+      <div className="mb-12">
+        <Anchor title="Radial" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -271,8 +271,8 @@ const DSpage = () => {
       </div>
 
       {/* Size */}
-      <div className="mb-12" id="size">
-        <h2 className="h3 mb-3">Size</h2>
+      <div className="mb-12">
+        <Anchor title="Size" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -339,8 +339,8 @@ const DSpage = () => {
       </div>
 
       {/* Secondary */}
-      <div className="mb-12" id="secondary">
-        <h2 className="h3 mb-3">Secondary</h2>
+      <div className="mb-12">
+        <Anchor title="Secondary" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -368,8 +368,8 @@ const DSpage = () => {
       </div>
 
       {/* With tick */}
-      <div className="mb-12" id="with-tick">
-        <h2 className="h3 mb-3">With tick</h2>
+      <div className="mb-12">
+        <Anchor title="With tick" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -395,8 +395,8 @@ const DSpage = () => {
       </div>
 
       {/* Progress container */}
-      <div className="mb-12" id="progress-container">
-        <h2 className="h3 mb-3">Progress container</h2>
+      <div className="mb-12">
+        <Anchor title="Progress container" />
 
         <div className="surface rounded-lg p-4">
           <div className="">
@@ -420,8 +420,8 @@ const DSpage = () => {
       </div>
 
       {/* Progress step container */}
-      <div className="mb-12" id="progress-container-step">
-        <h2 className="h3 mb-3">Progress step container</h2>
+      <div className="mb-12">
+        <Anchor title="Progress step container" />
 
         <div className="surface rounded-lg p-4">
           <div className="">

@@ -3,6 +3,7 @@ import React, { useContext, useState } from "react";
 import DSicons from "../api/designsystem/icons.json";
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const [filter, setFilter] = useState("");
@@ -32,9 +33,7 @@ const DSpage = () => {
 
       {DSicons.categories.map((category, categoryIndex) => (
         <div key={categoryIndex}>
-          <h2 className={`h4 mb-3 mx-2 md:mx-0 ${filter ? "hidden" : ""}`}>
-            {category.name}
-          </h2>
+          {!filter && <Anchor title={category.name} />}
           <div className="flex flex-wrap justify-stretch gap-2">
             {category.icons
               .filter((item) => {

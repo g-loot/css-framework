@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   const uiContext = useContext(UiContext);
@@ -10,9 +11,13 @@ const DSpage = () => {
       <h1 className="mb-6">
         Typography <small className="text-ui-300">introduction</small>
       </h1>
-      <div className="format mb-8" id="font-family">
-        <h2 id="using-icons">Font family</h2>
-        <p>The default font is Barlow while all headings are using Rama Gothic. You can specify which font to use on any element using the following class names:</p>
+      <Anchor title="Font family" />
+      <div className="format mb-10">
+        <p>
+          The default font is Barlow while all headings are using Rama Gothic.
+          You can specify which font to use on any element using the following
+          class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -68,9 +73,11 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="font-weight">
-        <h2 id="using-icons">Font weight</h2>
-        <p>You can specify the weight of a text with the following class names:</p>
+      <Anchor title="Font weight" />
+      <div className="format mb-10">
+        <p>
+          You can specify the weight of a text with the following class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -126,9 +133,11 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="font-style">
-        <h2 id="using-icons">Font style</h2>
-        <p>You can specify the style of a text with the following class names:</p>
+      <Anchor title="Font style" />
+      <div className="format mb-10">
+        <p>
+          You can specify the style of a text with the following class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -184,9 +193,11 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="font-size">
-        <h2 id="using-icons">Font size</h2>
-        <p>You can specify the size of a text with the following class names:</p>
+      <Anchor title="Font size" />
+      <div className="format mb-10">
+        <p>
+          You can specify the size of a text with the following class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -502,14 +513,16 @@ const DSpage = () => {
                   set the size to <b>8rem (128px)</b>
                 </td>
               </tr>
-        
             </tbody>
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="line-height">
-        <h2 id="using-icons">Line height</h2>
-        <p>You can specify the line height of a text with the following class names:</p>
+      <Anchor title="Line height" />
+      <div className="format mb-10">
+        <p>
+          You can specify the line height of a text with the following class
+          names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -661,9 +674,12 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="letter-spacing">
-        <h2 id="using-icons">Letter spacing</h2>
-        <p>You can specify the tracking (letter spacing) of a text with the following class names:</p>
+      <Anchor title="Letter spacing" />
+      <div className="format mb-10">
+        <p>
+          You can specify the tracking (letter spacing) of a text with the
+          following class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -815,9 +831,11 @@ const DSpage = () => {
           </table>
         </div>
       </div>
-      <div className="format mb-8" id="text-align">
-        <h2 id="using-icons">Text align</h2>
-        <p>You can specify the alignment of text with the following class names:</p>
+      <Anchor title="Text align" />
+      <div className="format mb-10">
+        <p>
+          You can specify the alignment of text with the following class names:
+        </p>
         <div className="surface rounded-lg overflow-x-auto mb-10">
           <table className="table w-full">
             <tbody>
@@ -965,7 +983,6 @@ const DSpage = () => {
                   set the text align to <b>end</b>
                 </td>
               </tr>
-              
             </tbody>
           </table>
         </div>

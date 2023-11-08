@@ -1,23 +1,39 @@
-import Link from 'next/link'
-import SiteLayout from '../../components/SiteLayout'
-import { getLayout } from '../../components/DesignSystem/DSLayout'
+import { getLayout } from "../../components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => (
   <div>
+    <div
+      className="max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700"
+      style={{
+        backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668757/Stryda/framework/cover-designsystem.jpg)`,
+      }}
+    ></div>
+    <div className="max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6">
+      <h1 className="mb-8">Stryda CSS framework</h1>
 
-    <div className='max-w-md mx-auto aspect-landscape bg-cover bg-center rounded-lg mb-12 border border-ui-700' style={{ backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1672668757/Stryda/framework/cover-designsystem.jpg)`}}></div>
-    <div className='max-w-sm mx-auto space-y-4 text-ui-100 leading-none mb-6'>
-      <h1 className='leading-none h2'>
-        Stryda CSS Framework <small className='text-ui-300'>introduction</small>
-      </h1>
+      <Anchor title="Introduction" />
     </div>
-    
-    <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
+
+    <div className="max-w-sm mx-auto space-y-4 text-ui-200">
       <p>
-        The Stryda CSS Framework is a centralized front-end design system that allows any developer to quickly build pages that are in line with the Stryda brand and its user interface system.
+        The Stryda CSS Framework is a centralized front-end design system that
+        allows any developer to quickly build pages that are in line with the
+        Stryda brand and its user interface system.
       </p>
       <p>
-        Based on the utility-first framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the Stryda CSS Framework provides pre-defined components listed on this website as well as highly composable, low-level utility classes to build complex user interfaces with speed in mind.
+        Based on the utility-first framework{" "}
+        <a
+          className="link link-main"
+          href="https://tailwindcss.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          Tailwind CSS
+        </a>
+        , the Stryda CSS Framework provides pre-defined components listed on
+        this website as well as highly composable, low-level utility classes to
+        build complex user interfaces with speed in mind.
       </p>
     </div>
 
@@ -47,54 +63,64 @@ const DSpage = () => (
       </p>
     </div>
     */}
-    <div className='max-w-sm mx-auto space-y-4 text-ui-200'>
-      
-      <h3 className='h3 my-6'>
-        Benefits
-      </h3>
-      <p className='border-b border-ui-700 pb-5'>
-        <strong className='text-xl text-main'>
-          Smart design
-        </strong>
+    <div className="max-w-sm mx-auto space-y-4 text-ui-200 mt-6">
+      <Anchor title="Benefits" />
+      <p className="border-b border-ui-700 pb-5">
+        <strong className="text-xl text-main">Smart design</strong>
         <br />
         <span>
-          By separating the style from the content, we are able to design in a smarter way, combining styling across components (example: we are able to streamline the loading state of the tournament &amp; mission cards). It makes it also easier to have a semantic structure (div &gt; figure, header, section, ul, etc.).
+          By separating the style from the content, we are able to design in a
+          smarter way, combining styling across components (example: we are able
+          to streamline the loading state of the tournament &amp; mission
+          cards). It makes it also easier to have a semantic structure (div &gt;
+          figure, header, section, ul, etc.).
         </span>
       </p>
-      <p className='border-b border-ui-700 pb-5'>
-        <strong className='text-xl text-main'>
-          One place of truth
-        </strong>
+      <p className="border-b border-ui-700 pb-5">
+        <strong className="text-xl text-main">One place of truth</strong>
         <br />
         <span>
-          Since the styling is defined outside of the React components, the appearance and feeling of any element can be explored and tested freely. It also makes the Stryda CSS Framework the one place of truth between UX/UI and devs.
+          Since the styling is defined outside of the React components, the
+          appearance and feeling of any element can be explored and tested
+          freely. It also makes the Stryda CSS Framework the one place of truth
+          between UX/UI and devs.
         </span>
       </p>
-      <p className='border-b border-ui-700 pb-5'>
-        <strong className='text-xl text-main'>
-          Technology agnostic
-        </strong>
+      <p className="border-b border-ui-700 pb-5">
+        <strong className="text-xl text-main">Technology agnostic</strong>
         <br />
         <span>
-          As it is independent from the front-end technology (ReactJS), the Stryda CSS Framework is instantly compatible with any other front-end language (VueJS, SvelteJS PHP, plain HTML, emails, etc.) making the building of ad-hoc tools and interfaces a piece of cake.
+          As it is independent from the front-end technology (ReactJS), the
+          Stryda CSS Framework is instantly compatible with any other front-end
+          language (VueJS, SvelteJS PHP, plain HTML, emails, etc.) making the
+          building of ad-hoc tools and interfaces a piece of cake.
         </span>
       </p>
-      <p className='border-b border-ui-700 pb-5'>
-        <strong className='text-xl text-main'>
-          Flexible and quick
-        </strong>
+      <p className="border-b border-ui-700 pb-5">
+        <strong className="text-xl text-main">Flexible and quick</strong>
         <br />
         <span>
-          Because it is based on the CSS Framework <a className='link link-main' href='https://tailwindcss.com/' target='_blank' rel='noreferrer'>Tailwind CSS</a>, the whole product can use its numerous utility-first class names to build layouts and one-offs with ease and speed while still remaining consistent with the Stryda brand.
+          Because it is based on the CSS Framework{" "}
+          <a
+            className="link link-main"
+            href="https://tailwindcss.com/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Tailwind CSS
+          </a>
+          , the whole product can use its numerous utility-first class names to
+          build layouts and one-offs with ease and speed while still remaining
+          consistent with the Stryda brand.
         </span>
       </p>
-      <p className='pb-5'>
-        <strong className='text-xl text-main'>
-          Faster render
-        </strong>
+      <p className="pb-5">
+        <strong className="text-xl text-main">Faster render</strong>
         <br />
         <span>
-          While loading large external style sheets can negatively impact performance metrics, simple CSS is faster for browsers to render than styling that is generated using code like styled-components.
+          While loading large external style sheets can negatively impact
+          performance metrics, simple CSS is faster for browsers to render than
+          styling that is generated using code like styled-components.
         </span>
       </p>
       {/*
@@ -125,12 +151,10 @@ const DSpage = () => (
         </a>
       </div>
       */}
-      
     </div>
-
   </div>
-)
+);
 
-DSpage.getLayout = getLayout
+DSpage.getLayout = getLayout;
 
-export default DSpage
+export default DSpage;

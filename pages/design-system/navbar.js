@@ -1,14 +1,16 @@
 import React from "react";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
+import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
   return (
     <>
-      <h1 className="mb-2">Navbar</h1>
+      <h1 className="mb-8">Navbar</h1>
 
       {/* With title */}
-      <div className="mb-12" id="navbar-with-title">
-        <h2 className="h3 mb-3">With title</h2>
+      <div className="mb-12">
+        <Anchor title="With title" />
+
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -32,8 +34,9 @@ const DSpage = () => {
         </div>
       </div>
       {/* With title and button */}
-      <div className="mb-12" id="navbar-with-title-button">
-        <h2 className="h3 mb-3">With title and button</h2>
+      <div className="mb-12">
+        <Anchor title="With title and button" />
+
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -60,8 +63,9 @@ const DSpage = () => {
         </div>
       </div>
       {/* With buttons at start and end */}
-      <div className="mb-12" id="navbar-with-icons-start-end">
-        <h2 className="h3 mb-3">With buttons at start and end</h2>
+      <div className="mb-12">
+        <Anchor title="With buttons at start and end" />
+
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -97,8 +101,9 @@ const DSpage = () => {
         </div>
       </div>
       {/* With menu */}
-      <div className="mb-12" id="navbar-with-menu">
-        <h2 className="h3 mb-3">With menu</h2>
+      <div className="mb-12">
+        <Anchor title="With menu" />
+
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
@@ -160,8 +165,9 @@ const DSpage = () => {
         </div>
       </div>
       {/* With search input and dropdown */}
-      <div className="mb-12" id="navbar-with-search-dropdown">
-        <h2 className="h3 mb-3">With search input and dropdown</h2>
+      <div className="mb-12">
+        <Anchor title="With search input and dropdown" />
+
         <div className="surface rounded-lg p-4">
           <div className="flex flex-col lg:flex-row gap-4">
             <div className="flex-1 flex justify-center items-center">
