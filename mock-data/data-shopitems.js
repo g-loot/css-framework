@@ -658,6 +658,27 @@ export const dataShopitems = [
         image:
           "https://res.cloudinary.com/gloot/image/upload/v1693488293/Stryda/shop/avatarframes/shop_avatarframe_casinoblack.svg",
       },
+      {
+        id: 177,
+        name: "APNG Test #1",
+        price: 550026,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1699538556/Stryda/shop/avatarframes/Bitmap%20format/a_911e48f3a695c7f6c267843ab6a96f2f.png",
+      },
+      {
+        id: 178,
+        name: "APNG Test #2",
+        price: 550026,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1699538793/Stryda/shop/avatarframes/Bitmap%20format/a_1dbc603c181999b9815cb426dfec71a6.png",
+      },
+      {
+        id: 179,
+        name: "APNG Test #3",
+        price: 550026,
+        image:
+          "https://res.cloudinary.com/gloot/image/upload/v1699538842/Stryda/shop/avatarframes/Bitmap%20format/animated.png",
+      },
     ],
   },
   {
