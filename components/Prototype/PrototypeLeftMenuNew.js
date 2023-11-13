@@ -317,7 +317,7 @@ export default function PrototypeLeftMenuNew(props) {
                 <span>Get tokens</span>
               </button>
             </div>
-            <div className="px-2 pb-2">
+            {/* <div className="px-2 pb-2">
               <div className="w-full rounded bg-ui-500 overflow-hidden relative border border-ui-500 interative group flex flex-col">
                 <Link href="/prototype/valorant/clanevents/0">
                   <button
@@ -370,7 +370,7 @@ export default function PrototypeLeftMenuNew(props) {
                   className="absolute z-0 w-full h-full object-cover transition-transform duration-1000 ease origin-center scale-105 group-hover:scale-110"
                 />
               </div>
-            </div>
+            </div> */}
           </div>
         )}
 

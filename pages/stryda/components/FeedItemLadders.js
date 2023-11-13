@@ -123,6 +123,7 @@ export default function FeedItemLadders(props) {
                         ).cover
                       }
                       alt=""
+                      className="w-full"
                     />
                   </div>
                   <div className="p-4 text-base relative">

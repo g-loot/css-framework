@@ -6,11 +6,10 @@
 
 @font-face {
   font-family: 'icons';
-  src: url('https://res.cloudinary.com/gloot/raw/upload/v1697529871/Stryda/icons/v108/icons.woff2') format('woff2'), 
-  url('https://res.cloudinary.com/gloot/raw/upload/v1697529871/Stryda/icons/v108/icons.woff') format('woff');
+  src: url('https://res.cloudinary.com/gloot/raw/upload/v1699878574/Stryda/icons/v111/icons.woff2') format('woff2'), 
+  url('https://res.cloudinary.com/gloot/raw/upload/v1699878574/Stryda/icons/v111/icons.woff') format('woff');
   font-weight: normal;
   font-style: normal;
-  
 }
 
 .icon {
@@ -2434,4 +2433,12 @@
 
 .icon-clapperboard::before {
   content: "\ec5f";
+}
+
+.icon-game-fortnite::before {
+  content: "\ec60";
+}
+
+.icon-game-fortnite-symbol::before {
+  content: "\ec61";
 }

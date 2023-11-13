@@ -1,30 +1,9 @@
 import React, { useContext, useState, useEffect } from "react";
-
-import ModalClaimLadderRewards from "../prototype/home/modal-claim-dailyrewards";
-import ModalContainer from "@/components/Modal/ModalContainer";
-import { UiContext } from "@/contexts/ui";
-import { VariablesContext } from "@/contexts/variables";
 import { getLayout } from "@/components/DesignSystem/DSLayout";
-
-import { DataBattlepass } from "@/mock-data/data-battlepass";
-import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
 import Battlepass from "@/components/BattlePass/BattlePass";
 import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {
-  const [currentStep, setcurrentStep] = useState(1);
-  const uiContext = useContext(UiContext);
-
-  useEffect(() => {
-    setcurrentStep(getBattlepassByID(0).currentStep);
-    setactiveStep(getBattlepassByID(0).currentStep);
-  }, []);
-
-  const getBattlepassByID = (id) => {
-    return DataBattlepass.find((battlepasses) => {
-      return battlepasses.id === parseInt(id);
-    });
-  };
 
   return (
     <>

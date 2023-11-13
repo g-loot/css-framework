@@ -7073,17 +7073,17 @@ export const dataGames = [
     needsSteam: false,
     needsRiot: false,
     isFavorite: false,
-    name: "CS:GO",
-    shortName: "CS:GO",
-    slug: "csgo",
-    type: "FPS",
+    name: "Fortnite",
+    shortName: "Fortnite",
+    slug: "fortnite",
+    type: "Battle Royale",
     assets: {
       cover:
-        "https://res.cloudinary.com/gloot/image/upload/v1644676999/Marketing/202109_gloot2/Game_cover_CSGO.jpg",
+        "https://res.cloudinary.com/gloot/image/upload/v1699879198/GNOG%20assets/Games/fortnite/cover.webp",
       heroV2:
-        "https://res.cloudinary.com/gloot/image/upload/v1697190198/Stryda/illustrations/stryda_v2_pagebg_csgo.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1699880343/Stryda/illustrations/stryda_v2_pagebg_fortnite.webp",
       heroMission:
-        "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-1.webp",
+        "https://res.cloudinary.com/gloot/image/upload/v1699880496/Stryda/illustrations/banner-fornite-1.webp",
       heroLadder:
         "https://res.cloudinary.com/gloot/image/upload/v1660720108/Marketing/2022_prototype/DummyContent/banners/banner-csgo-2.webp",
       heroTournament:
@@ -7101,7 +7101,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/agents-fortnite-1.webp",
       },
       {
         name: "Get 22 kills",
@@ -7114,7 +7114,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/agents-fortnite-2.webp",
       },
       {
         name: "Get 22 kills",
@@ -7127,7 +7127,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/agents-fortnite-3.webp",
       },
       {
         name: "Get 22 kills",
@@ -7140,7 +7140,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/agents-fortnite-4.webp",
       },
       {
         name: "Get 22 kills",
@@ -7153,7 +7153,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/agents-fortnite-5.webp",
       },
       {
         name: "Get 22 kills",
@@ -7166,7 +7166,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/party-fortnite-1.webp",
       },
       {
         name: "Get 22 kills",
@@ -7179,7 +7179,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_1.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/party-fortnite-2.webp",
       },
       {
         name: "Get 22 kills",
@@ -7192,7 +7192,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/party-fortnite-3.webp",
       },
       {
         name: "Get 22 kills",
@@ -7205,7 +7205,7 @@ export const dataGames = [
         isVisible: false,
         hasClaimed: false,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1657634601/Marketing/2022_prototype/DummyContent/missions/mission-csgo_2.webp",
+          "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/party-fortnite-4.webp",
       },
     ],
   },

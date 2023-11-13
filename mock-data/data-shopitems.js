@@ -677,7 +677,7 @@ export const dataShopitems = [
         name: "APNG Test #3",
         price: 550026,
         image:
-          "https://res.cloudinary.com/gloot/image/upload/v1699538842/Stryda/shop/avatarframes/Bitmap%20format/animated.png",
+          "https://res.cloudinary.com/gloot/image/upload/v1699540076/Stryda/shop/avatarframes/Bitmap%20format/Glitch_Frame.png",
       },
     ],
   },

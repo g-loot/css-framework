@@ -99,6 +99,10 @@
           "name": "game-dota2-symbol"
         },
         {
+          "tags": "game,fortnite,battle royale",
+          "name": "game-fortnite-symbol"
+        },
+        {
           "tags": "game,league,legends",
           "name": "game-leagueoflegends-symbol"
         },
@@ -125,6 +129,10 @@
         {
           "tags": "game,symbol,icon,logo,dota2",
           "name": "game-dota2"
+        },
+        {
+          "tags": "game,symbol,icon,logo,fortnite",
+          "name": "game-fortnite"
         },
         {
           "tags": "game,symbol,icon,logo,league,legends",

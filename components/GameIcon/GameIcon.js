@@ -11,41 +11,40 @@ export default function GameIcon(props) {
   const game = props.game || 1;
 
   return (
-    <div className={`p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/90 flex items-center justify-center ${className}`}>
+    <div
+      className={`p-1 border border-ui-700 rounded bg-gradient-to-b from-ui-900 to-ui-900/90 flex items-center justify-center ${className}`}
+    >
       <span
         className={`icon ${size} ${
-          prototype.getGameByID(game).slug ===
-          "apexlegends"
+          prototype.getGameByID(game).slug === "apexlegends"
             ? "icon-game-apexlegends-symbol text-game-apexlegends"
             : ""
         } ${
-          prototype.getGameByID(game).slug ===
-          "csgo"
+          prototype.getGameByID(game).slug === "csgo"
             ? "icon-game-csgo-symbol text-game-csgo"
             : ""
         }  ${
-          prototype.getGameByID(game).slug ===
-          "dota2"
+          prototype.getGameByID(game).slug === "dota2"
             ? "icon-game-dota2-symbol text-game-dota2"
             : ""
-        }  ${
-          prototype.getGameByID(game).slug ===
-          "leagueoflegends"
+        } ${
+          prototype.getGameByID(game).slug === "fortnite"
+            ? "icon-game-fortnite-symbol text-game-fortnite"
+            : ""
+        } ${
+          prototype.getGameByID(game).slug === "leagueoflegends"
             ? "icon-game-leagueoflegends-symbol text-game-leagueoflegends"
             : ""
         }  ${
-          prototype.getGameByID(game).slug ===
-          "rocketleague"
+          prototype.getGameByID(game).slug === "rocketleague"
             ? "icon-game-rocketleague-symbol text-game-rocketleague"
             : ""
         } ${
-          prototype.getGameByID(game).slug ===
-          "pubg"
+          prototype.getGameByID(game).slug === "pubg"
             ? "icon-game-pubg-symbol text-game-pubg"
             : ""
         }  ${
-          prototype.getGameByID(game).slug ===
-          "valorant"
+          prototype.getGameByID(game).slug === "valorant"
             ? "icon-game-valorant-symbol text-game-valorant"
             : ""
         }`}

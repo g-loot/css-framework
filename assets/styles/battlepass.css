@@ -424,7 +424,7 @@
     focus-visible:outline
     focus-visible:outline-offset-2
     focus-visible:outline-1
-    transition-[box-shadow]
+    transition-none
     duration-100
     ease-in-out
     ;
@@ -447,7 +447,7 @@
         px-2
         py-1
         leading-none
-        rounded-b
+        rounded-b-[2px]
         whitespace-normal
         ;
       }
@@ -455,7 +455,7 @@
     .battlepass-body {
       @apply
       overflow-hidden
-      rounded
+      rounded-[2px]
       absolute
       inset-0
       flex
@@ -518,11 +518,12 @@
       &::before {
         @apply
         absolute
-        top-0
-        right-0
+        -top-px
+        -right-px
         z-50
         font-icon
-        content-['\ea12']
+        content-['\eb1f']
+        text-xl
         w-[42px]
         h-[42px]
         pr-1
@@ -530,6 +531,7 @@
         leading-6
         bg-ui-600
         text-ui-200
+        tracking-[-1px]
         ;
         clip-path: polygon(0 0, 100% 0, 100% 100%);
         ;
@@ -557,38 +559,69 @@
       transition-[box-shadow]
       duration-100
       ease-in-out
+      bg-gradient-to-b
+      from-mono-100/40
+      via-mono-100/0
       ;
       clip-path: polygon(0 0, calc(100% - 1.25rem) 0, 100% 100%, 0 100%);
     }
     .battlepass-content {
       @apply
       rounded-tl-none
+      border-premium-500
       ;
     }
     .battlepass-decoration::before {
       @apply
-      text-premium-500
+      text-ui-900
+      bg-premium-500
       ;
     }
     &::before {
       @apply
-      bg-ui-600
-      text-premium-500
+      bg-premium-500
+      text-ui-900
       ;
     }
     &:hover {
       &::before {
         @apply
-        bg-ui-400
-        text-ui-900
+        bg-premium-300
+        ;
+      }
+      .battlepass-content {
+        @apply
+        border-premium-300
+        ;
+      }
+      .battlepass-decoration::before {
+        @apply
+        bg-premium-300
         ;
       }
     }
-    &:active::before {
-      @apply
-      bg-ui-600
-      ;
+    &:active {
+      &::before {
+        @apply
+        bg-premium-700
+        ;
+      }
+      .battlepass-content {
+        @apply
+        border-premium-700
+        ;
+      }
+      .battlepass-decoration::before {
+        @apply
+        bg-premium-700
+        ;
+      }
     }
+    /* .progressbar > div {
+      @apply
+      bg-premium-500
+      ;
+    } */
   }
 
   &.is-current {
@@ -614,6 +647,15 @@
           text-main
           ;
         } 
+      }
+    }
+    &.is-premium {
+      .battlepass-content {
+        &::before {
+          @apply
+          shadow-[inset_0_0_2rem_0_rgb(var(--color-premium-500)/50%)]
+          ;
+        }
       }
     }
   }
@@ -654,6 +696,7 @@
       .battlepass-content {
         @apply
         border-interaction-700
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-700))]
         ;
         .battlepass-decoration {
           &::before {
@@ -664,47 +707,45 @@
         }
       }
     }
-    &.is-premium {
-      &::before {
-        @apply
-        bg-interaction-500
-        text-ui-900
-        ;
-      }
-      &:hover::before {
-        @apply
-        bg-interaction-300
-        ;
-      }
-      &:active::before {
-        @apply
-        bg-interaction-700
-        ;
-      }
-    }
   }
 
   &.is-active.is-premium {
+    &::before {
+      @apply
+      bg-premium-300
+      ;
+    }
     .battlepass-content {
       @apply
-      border-premium-500
-      shadow-[0_0_0_2px_rgb(var(--color-premium-500))]
+      border-premium-300
+      shadow-[0_0_0_2px_rgb(var(--color-premium-300))]
       rounded-tl-none
       ;
       .battlepass-decoration {
         @apply
-        text-premium-500
+        text-premium-300
         ;
         &::before {
           @apply
-          bg-premium-500
+          bg-premium-300
           text-ui-900
           ;
         }
       }
-      &:hover {
+    }
+    &:hover {
+      @apply
+      border-premium-300
+      ;
+      &::before {
+        @apply
+        bg-premium-300
+        ;
+      }
+      .battlepass-content {
         @apply
         border-premium-300
+        shadow-[0_0_0_2px_rgb(var(--color-premium-300))]
         ;
         .battlepass-decoration {
           &::before {
@@ -714,9 +755,20 @@
           }
         }
       }
-      &:active {
+    }
+    &:active {
+      @apply
+      border-premium-700
+      ;
+      &::before {
+        @apply
+        bg-premium-700
+        ;
+      }
+      .battlepass-content {
         @apply
         border-premium-700
+        shadow-[0_0_0_2px_rgb(var(--color-premium-700))]
         ;
         .battlepass-decoration {
           &::before {
@@ -726,21 +778,6 @@
           }
         }
       }
-    }
-    &::before {
-      @apply
-      bg-premium-500
-      ;
-    }
-    &:hover::before {
-      @apply
-      bg-premium-300
-      ;
-    }
-    &:active::before {
-      @apply
-      bg-premium-700
-      ;
     }
   }
 

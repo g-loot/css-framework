@@ -1,6 +1,6 @@
 ![Stryda CSS Framework](https://res.cloudinary.com/gloot/image/upload/v1673531083/Stryda/logos/stryda-logo-dark-png.png)
 
-A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **Stryda products**.
+👉 A **CSS Framework** built on [Tailwind CSS](https://www.npmjs.com/package/tailwindcss) to bring consistency and speed to **Stryda products**.
 
 ------
 

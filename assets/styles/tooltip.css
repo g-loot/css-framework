@@ -91,6 +91,13 @@
   }
 }
 
+[data-popper-reference-hidden],
+[data-popper-placement] {
+  @apply
+  z-[70]
+  ;
+}
+
 @layer components {
   .tooltip.tooltip-top,
   [data-tooltip].tooltip-top {

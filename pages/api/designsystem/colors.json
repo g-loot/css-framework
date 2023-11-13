@@ -505,7 +505,14 @@
           "value": "bg-game-dota2",
           "number": "500",
           "data": "game.dota2",
-          "hex": "#EF3E35"
+          "hex": "#7A1FA1"
+        },
+        {
+          "name": "Fortnite",
+          "value": "bg-game-fortnite",
+          "number": "500",
+          "data": "game.fortnite",
+          "hex": "#5FCEEA"
         },
         {
           "name": "League of Legends",

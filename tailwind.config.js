@@ -134,6 +134,7 @@ module.exports = {
           pubg: withOpacityValue("--color-game-pubg"),
           rocketleague: withOpacityValue("--color-game-rocketleague"),
           valorant: withOpacityValue("--color-game-valorant"),
+          fortnite: withOpacityValue("--color-game-fortnite"),
         },
         mono: {
           100: withOpacityValue("--color-mono-100"),

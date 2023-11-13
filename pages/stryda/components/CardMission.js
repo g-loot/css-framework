@@ -118,7 +118,17 @@ export default function CardMission(props) {
                             prototype.getGameBySlug(gameSlug).slug === "dota2"
                               ? "icon-game-dota2-symbol"
                               : ""
-                          }  ${
+                          } ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "fortnite"
+                              ? "icon-game-fortnite-symbol"
+                              : ""
+                          } ${
+                            prototype.getGameBySlug(gameSlug).slug ===
+                            "fortnite"
+                              ? "icon-game-fortnite-symbol"
+                              : ""
+                          } ${
                             prototype.getGameBySlug(gameSlug).slug ===
                             "leagueoflegends"
                               ? "icon-game-leagueoflegends-symbol"
@@ -185,7 +195,7 @@ export default function CardMission(props) {
               <div className="card-bg">
                 <span
                   style={{
-                    backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/v1677499396/Stryda/demo/mission-back-${gameSlug}.jpg)`,
+                    backgroundImage: `url(https://res.cloudinary.com/gloot/image/upload/Stryda/demo/mission-back-${gameSlug}.jpg)`,
                   }}
                 />
               </div>
