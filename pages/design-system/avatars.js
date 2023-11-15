@@ -748,6 +748,18 @@ const DSpage = () => {
                 <div className="flex flex-wrap gap-4 justify-start items-center">
                   <div className="avatar avatar-circle avatar-xl">
                     <img
+                      src="https://res.cloudinary.com/gloot/image/upload/v1699538793/Stryda/shop/avatarframes/Bitmap%20format/a_1dbc603c181999b9815cb426dfec71a6.png"
+                      alt=""
+                    />
+                    <div>
+                      <img
+                        src="https://res.cloudinary.com/gloot/image/upload/v1654063975/Marketing/2022_prototype/DummyContent/teams/teamlogo_CrocEsports.png"
+                        alt="avatar"
+                      />
+                    </div>
+                  </div>
+                  <div className="avatar avatar-circle avatar-xl">
+                    <img
                       src="https://res.cloudinary.com/gloot/image/upload/v1674724614/Stryda/shop/avatarframes/Valorant.svg"
                       alt=""
                     />

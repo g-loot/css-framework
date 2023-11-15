@@ -732,154 +732,6 @@ export default function StatsValorant() {
                   </Accordion>
                 </div>
               </section>
-              <section className="mb-4">
-                <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
-                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
-                  <table
-                    className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
-                      loading ? "is-loading" : ""
-                    }`}
-                  >
-                    <thead>
-                      <tr className="text-ui-400">
-                        <th className="text-left">Agent</th>
-                        <th>Time played</th>
-                        <th>Matches</th>
-                        <th>Win %</th>
-                        <th>K/D</th>
-                        <th>ADR</th>
-                        <th>ACS</th>
-                        <th>HS%</th>
-                      </tr>
-                    </thead>
-                    <tbody className="child:overflow-hidden leading-tight">
-                      {StatsValorantDemoFavoriteAgents.slice(0, maxMap).map(
-                        (item, itemIndex) => (
-                          <tr key={itemIndex}>
-                            <td className="p-0">
-                              <div className="flex items-center gap-4 text-left w-24">
-                                <img
-                                  className="w-16 h-16 rounded-l"
-                                  src={getAgentByID(item.agent).picturePath}
-                                  alt=""
-                                  width="auto"
-                                  height="auto"
-                                />
-                                <div>
-                                  <div className="text-ui-100 capitalize">
-                                    {getAgentByID(item.agent).name}
-                                  </div>
-                                  <div className="font-normal text-ui-300 capitalize">
-                                    {getAgentByID(item.agent).role.name}
-                                  </div>
-                                </div>
-                              </div>
-                            </td>
-                            <td>{item.timePlayed}</td>
-                            <td>{item.matches}</td>
-                            <td>{item.win}%</td>
-                            <td>{item.kd}</td>
-                            <td>{item.adr}</td>
-                            <td>{item.acs}</td>
-                            <td>{item.hs}%</td>
-                          </tr>
-                        )
-                      )}
-                    </tbody>
-                  </table>
-
-                  {!isPremium && (
-                    <LoadMoreContainer
-                      className="button-sm button-tertiary"
-                      label="View more agents"
-                    >
-                      <div className="relative mb-2 -mt-2">
-                        <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/50 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
-                          <p className="text-ui-300 mb-2">
-                            Get Premium to see the full overview of your stats.
-                          </p>
-                          <Link href="/prototype/premium">
-                            <button
-                              type="button"
-                              className="button button-sm button-tertiary"
-                            >
-                              <span className="icon icon-crown text-premium-500" />
-                              <span className="text-premium-500">
-                                Get Premium
-                              </span>
-                            </button>
-                          </Link>
-                        </div>
-                        <div className="h-32 overflow-hidden blur-sm">
-                          <table
-                            className={`table table-rounded rounded-lg w-full text-center min-w-lg blur-sm ${
-                              loading ? "is-loading" : ""
-                            }`}
-                          >
-                            <tbody className="child:overflow-hidden leading-tight">
-                              <tr>
-                                <td className="p-0">
-                                  <div className="flex items-center gap-4 text-left w-24">
-                                    <img
-                                      className="w-16 h-16 rounded-l"
-                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
-                                      alt=""
-                                      width="auto"
-                                      height="auto"
-                                    />
-                                    <div>
-                                      <div className="text-ui-100 capitalize">
-                                        Get Premium
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                              </tr>
-                              <tr>
-                                <td className="p-0">
-                                  <div className="flex items-center gap-4 text-left w-24">
-                                    <img
-                                      className="w-16 h-16 rounded-l"
-                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
-                                      alt=""
-                                      width="auto"
-                                      height="auto"
-                                    />
-                                    <div>
-                                      <div className="text-ui-100 capitalize">
-                                        Get Premium
-                                      </div>
-                                    </div>
-                                  </div>
-                                </td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                                <td>--</td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                      </div>
-                    </LoadMoreContainer>
-                  )}
-                  {isPremium && (
-                    <div className="text-center">
-                      <LoadMore className="button-sm button-tertiary" />
-                    </div>
-                  )}
-                </div>
-              </section>
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Last 20 matches</h2>
                 <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop leading-tight pb-4">
@@ -1480,6 +1332,155 @@ export default function StatsValorant() {
                   )}
                 </div>
               </section>
+              <section className="mb-8">
+                <h2 className="h5 mx-4 md:mx-0">Most played agents</h2>
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">
+                  <table
+                    className={`table table-rounded rounded-lg w-full text-center min-w-lg ${
+                      loading ? "is-loading" : ""
+                    }`}
+                  >
+                    <thead>
+                      <tr className="text-ui-400">
+                        <th className="text-left">Agent</th>
+                        <th>Time played</th>
+                        <th>Matches</th>
+                        <th>Win %</th>
+                        <th>K/D</th>
+                        <th>ADR</th>
+                        <th>ACS</th>
+                        <th>HS%</th>
+                      </tr>
+                    </thead>
+                    <tbody className="child:overflow-hidden leading-tight">
+                      {StatsValorantDemoFavoriteAgents.slice(0, maxMap).map(
+                        (item, itemIndex) => (
+                          <tr key={itemIndex}>
+                            <td className="p-0">
+                              <div className="flex items-center gap-4 text-left w-24">
+                                <img
+                                  className="w-16 h-16 rounded-l"
+                                  src={getAgentByID(item.agent).picturePath}
+                                  alt=""
+                                  width="auto"
+                                  height="auto"
+                                />
+                                <div>
+                                  <div className="text-ui-100 capitalize">
+                                    {getAgentByID(item.agent).name}
+                                  </div>
+                                  <div className="font-normal text-ui-300 capitalize">
+                                    {getAgentByID(item.agent).role.name}
+                                  </div>
+                                </div>
+                              </div>
+                            </td>
+                            <td>{item.timePlayed}</td>
+                            <td>{item.matches}</td>
+                            <td>{item.win}%</td>
+                            <td>{item.kd}</td>
+                            <td>{item.adr}</td>
+                            <td>{item.acs}</td>
+                            <td>{item.hs}%</td>
+                          </tr>
+                        )
+                      )}
+                    </tbody>
+                  </table>
+
+                  {!isPremium && (
+                    <LoadMoreContainer
+                      className="button-sm button-tertiary"
+                      label="View more agents"
+                    >
+                      <div className="relative mb-2 -mt-2">
+                        <div className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/50 to-ui-900 backdrop-blur-sm flex flex-col items-center justify-center">
+                          <p className="text-ui-300 mb-2">
+                            Get Premium to see the full overview of your stats.
+                          </p>
+                          <Link href="/prototype/premium">
+                            <button
+                              type="button"
+                              className="button button-sm button-tertiary"
+                            >
+                              <span className="icon icon-crown text-premium-500" />
+                              <span className="text-premium-500">
+                                Get Premium
+                              </span>
+                            </button>
+                          </Link>
+                        </div>
+                        <div className="h-32 overflow-hidden blur-sm">
+                          <table
+                            className={`table table-rounded rounded-lg w-full text-center min-w-lg blur-sm ${
+                              loading ? "is-loading" : ""
+                            }`}
+                          >
+                            <tbody className="child:overflow-hidden leading-tight">
+                              <tr>
+                                <td className="p-0">
+                                  <div className="flex items-center gap-4 text-left w-24">
+                                    <img
+                                      className="w-16 h-16 rounded-l"
+                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-astra.webp"
+                                      alt=""
+                                      width="auto"
+                                      height="auto"
+                                    />
+                                    <div>
+                                      <div className="text-ui-100 capitalize">
+                                        Get Premium
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                              </tr>
+                              <tr>
+                                <td className="p-0">
+                                  <div className="flex items-center gap-4 text-left w-24">
+                                    <img
+                                      className="w-16 h-16 rounded-l"
+                                      src="https://res.cloudinary.com/gloot/image/upload/v1671535680/Stryda/stats/valorant/agent-avatar-yoru.webp"
+                                      alt=""
+                                      width="auto"
+                                      height="auto"
+                                    />
+                                    <div>
+                                      <div className="text-ui-100 capitalize">
+                                        Get Premium
+                                      </div>
+                                    </div>
+                                  </div>
+                                </td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                                <td>--</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </LoadMoreContainer>
+                  )}
+                  {isPremium && (
+                    <div className="text-center">
+                      <LoadMore className="button-sm button-tertiary" />
+                    </div>
+                  )}
+                </div>
+              </section>
+
               <section className="mb-8">
                 <h2 className="h5 mx-4 md:mx-0">Weapons</h2>
                 <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop pb-4 px-2 md:px-0">

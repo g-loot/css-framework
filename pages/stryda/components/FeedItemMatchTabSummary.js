@@ -55,7 +55,7 @@ export default function FeedItemMatchTabSummary(props) {
       {item && match && (
         <>
           <div
-            className="aspect-video bg-ui-850 relative interactive-secondary flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none"
+            className={`aspect-video bg-ui-850 relative flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none ${detailedView ? '' : 'interactive-secondary'}`}
             onClick={() => !detailedView && openFeedItemDetailsMatch("summary")}
           >
             <div
@@ -99,6 +99,13 @@ export default function FeedItemMatchTabSummary(props) {
                   </li>
                 ))}
             </ul>
+            {detailedView && (
+             <Link href={`/stryda/valorant/stats${prototype.getURLparams()}`}>
+              <button type="button" className="relative z-40 button button-primary">
+                <span>View match stats</span>
+              </button>
+              </Link>
+            )}
             <img
               src={getAgentByID(match.meta.agent).bodyPath}
               className="absolute z-30 inset-y-0 -left-8 sm:left-0 h-full w-2/3 object-contain object-right-bottom drop-shadow-[.75rem_0_0_rgba(22,24,37,0.5)] animate-slide-in-left"

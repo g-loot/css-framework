@@ -2,13 +2,19 @@ import React, { Fragment, useContext, useState, useEffect } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import Link from "next/link";
-import Battlepass from "@/components/BattlePass/BattlePass";
+import { DataBattlepass } from "@/mock-data/data-battlepass";
 import Countdown from "@/components/Countdown/Countdown";
 
 export default function WidgetBattlepass(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const state = props.state || "normal";
+
+  const getBattlepassByID = (id) => {
+    return DataBattlepass.find((battlepasses) => {
+      return battlepasses.id === parseInt(id);
+    });
+  };
 
   return (
     <>
@@ -45,7 +51,7 @@ export default function WidgetBattlepass(props) {
           ) : (
             <div className="p-3 bg-ui-850 relative rounded-b flex gap-5 items-center justify-center">
               {/* <Battlepass id={0} size="battlepass-sm" /> */}
-              <div className="relative z-10 flex-1 flex flex-col -mt-1.5">
+              <div className="relative z-20 flex-1 flex flex-col -mt-1.5">
                 <div className="flex gap-2 items-baseline justify-between leading-none text-sm uppercase">
                   <div className="flex gap-1 items-center justify-start">
                     <span className="text-main">350</span>
@@ -62,15 +68,16 @@ export default function WidgetBattlepass(props) {
                   <div />
                 </div>
               </div>
-              <div className="flex-none">
+              <div className="relative z-20">
                 <img
                   className="w-16 h-16 rounded"
                   src="https://res.cloudinary.com/gloot/image/upload/v1688632300/Stryda/shop/avatarframes/previewimages/battlepass-avatarframe-sapphire.png"
                   alt=""
                 />
               </div>
+              <i className="absolute z-10 inset-0 bg-ui-800/75 rounded-b" />
               <img
-                src="https://res.cloudinary.com/gloot/image/upload/f_auto/v1684756295/Stryda/demo/battlepass_bg_generic.jpg"
+                src={getBattlepassByID(0).meta.backgroundImage}
                 alt=""
                 className="absolute z-0 w-full h-full inset-0 mix-blend-lighten pointer-events-none object-cover object-center rounded-b"
               />

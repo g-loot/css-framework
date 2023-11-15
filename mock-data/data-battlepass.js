@@ -6,9 +6,9 @@ export const DataBattlepass = [
     meta: {
       name: "Battlepass",
       description: "The Battlepass is how you turn your XP into useful stuff like Coins or Tokens. Each time you reach a milestone in the Battlepass, you unlock another reward. Battlepass and XP reset each week so you will always have something new to work towards.",
-      logo: "https://res.cloudinary.com/gloot/image/upload/v1685004676/Stryda/illustrations/battlepass/battlepass-logo-generic.svg",
-      backgroundImage: "https://res.cloudinary.com/gloot/video/upload/v1698058922/Stryda/battlepass/Dragon_BG_v2.jpg",
-      backgroundVideo: "https://res.cloudinary.com/gloot/video/upload/v1698058922/Stryda/battlepass/Dragon_BG_v2.webm",
+      logo: "https://res.cloudinary.com/gloot/image/upload/v1699623928/Stryda/battlepass/Arcade/BP_Arcade_logo.svg",
+      backgroundImage: "https://res.cloudinary.com/gloot/image/upload/v1699621702/Stryda/battlepass/Arcade/Battlepass_Arcade_Still_1.webp",
+      backgroundVideo: "https://www.datocms-assets.com/92583/1699885087-battlepass_arcade_1.webm",
     },
     steps: [
       {
