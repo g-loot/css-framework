@@ -55,7 +55,9 @@ export default function FeedItemMatchTabSummary(props) {
       {item && match && (
         <>
           <div
-            className={`aspect-video bg-ui-850 relative flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none ${detailedView ? '' : 'interactive-secondary'}`}
+            className={`aspect-video bg-ui-850 relative flex flex-col items-end justify-around p-6 gap-6 text-right leading-none overflow-hidden select-none ${
+              detailedView ? "" : "interactive-secondary"
+            }`}
             onClick={() => !detailedView && openFeedItemDetailsMatch("summary")}
           >
             <div
@@ -100,10 +102,14 @@ export default function FeedItemMatchTabSummary(props) {
                 ))}
             </ul>
             {detailedView && (
-             <Link href={`/stryda/valorant/stats${prototype.getURLparams()}`}>
-              <button type="button" className="relative z-40 button button-primary">
-                <span>View match stats</span>
-              </button>
+              <Link href={`/stryda/valorant/stats${prototype.getURLparams()}`}>
+                <button
+                  type="button"
+                  className="relative z-40 button button-primary"
+                  onClick={uiContext.closeModal()}
+                >
+                  <span>View match stats</span>
+                </button>
               </Link>
             )}
             <img
