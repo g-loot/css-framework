@@ -106,6 +106,19 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="mb-4 sm:rounded overflow-hidden aspect-landscape lg:aspect-banner relative surface">
+          <img
+            src="https://res.cloudinary.com/gloot/image/upload/v1700486364/Stryda/marketing/campaigns/2023%20Black%20Friday/Black_Friday_2023_above.webp"
+            alt=""
+            className="absolute z-10 w-full h-full object-cover"
+          />
+          <img
+            src="https://res.cloudinary.com/gloot/image/upload/v1700486005/Stryda/marketing/campaigns/2023%20Black%20Friday/Black_Friday_2023_bg.webp"
+            alt=""
+            className="absolute z-0 w-full h-full object-cover"
+          />
+        </section>
+
         <section className="mb-4 lg:mb-8">
           <ul className="grid lg:grid-cols-2 justify-items-center gap-4 mt-3">
             {loading ? (
@@ -142,9 +155,7 @@ export default function Home() {
                           />
                         </div>
                         <div className="border-t border-ui-700 p-4 flex items-center justify-between leading-none">
-                          <div className="text-lg md:text-xl">
-                            {item.name}
-                          </div>
+                          <div className="text-lg md:text-xl">{item.name}</div>
                           {!item.isOwned ? (
                             <>
                               {item.price && (

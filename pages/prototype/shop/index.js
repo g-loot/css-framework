@@ -38,6 +38,20 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <Link href="/prototype/shop/avatar-frame">
+          <section className="mb-4 sm:rounded overflow-hidden aspect-landscape lg:aspect-banner relative surface interactive">
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/v1700486364/Stryda/marketing/campaigns/2023%20Black%20Friday/Black_Friday_2023_above.webp"
+              alt=""
+              className="absolute z-10 w-full h-full object-cover"
+            />
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/v1700486005/Stryda/marketing/campaigns/2023%20Black%20Friday/Black_Friday_2023_bg.webp"
+              alt=""
+              className="absolute z-0 w-full h-full object-cover"
+            />
+          </section>
+        </Link>
         {/*
         <section className="px-4 md:px-0 mb-8 grid md:grid-cols-2 items-stretch gap-8 md:gap-4">
           <div className="flex flex-col">
@@ -166,7 +180,9 @@ export default function Home() {
                 </button>
               </div>
             </li>
-            <Link href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}>
+            <Link
+              href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+            >
               <li
                 className="interactive surface rounded w-full sm:w-2/3 md:w-full p-4 flex flex-col items-stretch text-center animate-slide-in-bottom animate-delay"
                 style={{ "--delay": `calc( 1 * 0.05s)` }}
@@ -241,7 +257,9 @@ export default function Home() {
             {prototype.vouchers.map((voucher, voucherIndex) => (
               <>
                 <Link
-                  href={`/prototype/shop/${voucher.id}${prototype.getURLparams()}`}
+                  href={`/prototype/shop/${
+                    voucher.id
+                  }${prototype.getURLparams()}`}
                 >
                   <li
                     key={voucher.id}
