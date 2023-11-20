@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useState, useEffect } from "react";
 
 import Link from "next/link";
 import { UiContext } from "@/contexts/ui";
@@ -7,7 +7,7 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
-const TokensLItems = [
+const TokensItems = [
   {
     tokenNumber: 400,
     amount: "4.49 €",
@@ -33,7 +33,6 @@ const TokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-large.png",
     special: "bestvalue",
   },
-  /*
   {
     tokenNumber: 800,
     amount: "4.45 €",
@@ -43,9 +42,41 @@ const TokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-token-medium.png",
     special: "premiumoffer",
   },
-  */
 ];
-const PowerTokensLItems = [
+const TokensBlackFridayItems = [
+  {
+    tokenNumber: 400,
+    amount: "4.49 €",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_400.webp",
+    special: null,
+  },
+  {
+    tokenNumber: 600,
+    amount: "4.99 €",
+    save: "26%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_600_Black_Friday.webp",
+    special: "specialoffer",
+  },
+  {
+    tokenNumber: 800,
+    amount: "7.99 €",
+    save: "11%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_800.webp",
+    special: "",
+  },
+  {
+    tokenNumber: 2000,
+    amount: "18.49 €",
+    save: "17%",
+    image:
+      "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_2000.webp",
+    special: "",
+  },
+];
+const PowerTokensItems = [
   {
     tokenNumber: 45,
     amount: "2.79 €",
@@ -67,17 +98,15 @@ const PowerTokensLItems = [
       "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-large.png",
     special: "bestvalue",
   },
-  /*
-  {
-    tokenNumber: 105,
-    amount: "2.2 €",
-    previousAmount: "6.495 €",
-    save: "50%",
-    image:
-      "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-medium.png",
-    special: "premiumoffer",
-  },
-  */
+  // {
+  //   tokenNumber: 105,
+  //   amount: "2.2 €",
+  //   previousAmount: "6.495 €",
+  //   save: "50%",
+  //   image:
+  //     "https://res.cloudinary.com/gloot/image/upload/v1672159789/Stryda/currencies/Reward-centered-powertoken-medium.png",
+  //   special: "premiumoffer",
+  // },
 ];
 
 /*
@@ -92,10 +121,20 @@ export default function ModalBuyTokens(props) {
   const prototype = usePrototypeData();
   const variablesContext = useContext(VariablesContext);
   const [submitting, setSubmitting] = useState(false);
+  const [isBlackFriday, setIsBlackFriday] = useState(false);
+  const [selectedList, setSelectedList] = useState(TokensItems);
   const [selectedGamesCount, setSelectedGamesCount] = useState(
     prototype.games.filter((g) => g.isFavorite).length
   );
   const [disabled, setDisable] = useState(false);
+
+  useEffect(() => {
+    if (isBlackFriday) {
+      setSelectedList(TokensItems);
+    } else {
+      setSelectedList(TokensBlackFridayItems);
+    }
+  }, [isBlackFriday]);
 
   const handlechange = (event) => {
     if (event.target.checked) {
@@ -134,6 +173,8 @@ export default function ModalBuyTokens(props) {
         } ${
           item.special === "mostpopular" ? "border border-ui-700 bg-main" : ""
         } ${
+          item.special === "specialoffer" ? "border border-ui-700 bg-main" : ""
+        } ${
           item.special === "premiumoffer"
             ? "border border-ui-700 bg-premium-500"
             : ""
@@ -147,6 +188,9 @@ export default function ModalBuyTokens(props) {
           {item.special === "mostpopular" && (
             <span className="text-ui-800">Most popular</span>
           )}
+          {item.special === "specialoffer" && (
+            <span className="text-ui-800">Limited offer</span>
+          )}
           {item.special === "premiumoffer" && (
             <span className="text-ui-800">Premium offer</span>
           )}
@@ -155,7 +199,7 @@ export default function ModalBuyTokens(props) {
         <div className="bg-ui-800 rounded-lg px-3 pb-3 flex-1 flex flex-col">
           <div className="flex-1">
             <img
-              className="w-auto h-36 mx-auto -mb-4"
+              className="w-auto h-48 aspect-square mx-auto mb-4"
               src={item.image}
               width="auto"
               height="auto"
@@ -175,10 +219,16 @@ export default function ModalBuyTokens(props) {
                 </div>
               </>
             )}
+
             {!item.previousAmount && (
               <>
                 <div className="flex gap-2 my-1 text-center justify-center">
-                  <span className="text-ui-200">{item.amount}</span>
+                  <span className="text-ui-200 text-lg">{item.amount}</span>
+                  {item.save && (
+                    <div className="chip chip-sliced chip-xs bg-main">
+                      <span className="ml-0 mr-0">Save {item.save}</span>
+                    </div>
+                  )}
                 </div>
               </>
             )}
@@ -186,7 +236,7 @@ export default function ModalBuyTokens(props) {
 
           <div className="border-t border-ui-700 mt-4 pt-4">
             <button
-              className={`button button-secondary button-currency button-coin w-full ${
+              className={`button button-primary button-currency button-coin w-full ${
                 submitting ? "is-loading" : ""
               }`}
               onClick={closeModalWithDelay}
@@ -224,13 +274,13 @@ export default function ModalBuyTokens(props) {
                   width="210"
                   height="auto"
                 />
-                <div className="leading-tight py-2 text-center md:text-left mt-4 md:mt-0">
+                <div className="flex-1 leading-tight py-2 text-center md:text-left mt-4 md:mt-0">
                   Premium subscribers get up to 300 extra tokens every time they
                   make a token bundle purchase
                 </div>
                 <div />
                 <div className="py-4">
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="button button-premium whitespace-nowrap">
                       <span>Subscribe now</span>
                     </a>
@@ -246,9 +296,9 @@ export default function ModalBuyTokens(props) {
                     Ladders.
                   </p>
                 </div>
-                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex -mx-4 xl:mx-0">
                   <div className="flex flex-row gap-4 items-stretch justify-center mx-auto mb-8 xl:w-full">
-                    {TokensLItems.map((item, itemIndex) => (
+                    {selectedList.map((item, itemIndex) => (
                       <>{Bundle(item, itemIndex)}</>
                     ))}
                   </div>
@@ -260,9 +310,9 @@ export default function ModalBuyTokens(props) {
                     Ladders, where the winner takes it all.
                   </p>
                 </div>
-                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex">
+                <div className="overflow-y-hidden overflow-x-auto scrollbar-desktop flex -mx-4 xl:mx-0">
                   <div className="flex flex-row gap-4 items-stretch justify-center mx-auto mb-8 xl:w-full">
-                    {PowerTokensLItems.map((item, itemIndex) => (
+                    {PowerTokensItems.map((item, itemIndex) => (
                       <>{Bundle(item, itemIndex)}</>
                     ))}
                   </div>
@@ -272,6 +322,35 @@ export default function ModalBuyTokens(props) {
           </div>
         </div>
       </div>
+
+      {/* for demo purposes only */}
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="feed-empty"
+                defaultChecked={isBlackFriday}
+                onChange={() => {
+                  setIsBlackFriday(!isBlackFriday);
+                }}
+              />
+              <label htmlFor="feed-empty">Black Friday</label>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

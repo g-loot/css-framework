@@ -62,7 +62,7 @@ const TokensBlackFridayItems = [
   {
     tokenNumber: 800,
     amount: "7.99 €",
-    // save: "11%",
+    save: "11%",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_800.webp",
     special: "",
@@ -70,7 +70,7 @@ const TokensBlackFridayItems = [
   {
     tokenNumber: 2000,
     amount: "18.49 €",
-    // save: "17%",
+    save: "17%",
     image:
       "https://res.cloudinary.com/gloot/image/upload/v1700227913/Stryda/currencies/Currencies_Token_2000.webp",
     special: "",

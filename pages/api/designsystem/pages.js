@@ -418,6 +418,11 @@ export const DSpages = [
         tags: "achievements, badges",
         url: "achievements",
       },
+      {
+        label: "Currencies",
+        tags: "currencies, coins, tokens, bundle, BI, monetization, monetisation, money, rewards",
+        url: "currencies",
+      },
     ],
   },
 ];
