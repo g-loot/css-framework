@@ -50,7 +50,7 @@ export default function Home() {
       <Structure title="Home" fullWidth={true}>
         <Loader
           loader={
-            <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
+            <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
               <div className="flex-none w-80 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 overflow-x-hidden">
                 <div className="max-w-[620px] 2xl:max-w-lg mx-auto space-y-4">
@@ -64,7 +64,7 @@ export default function Home() {
             </section>
           }
         >
-          <section className="min-h-screen w-full flex flex-col sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
+          <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
             <div className="flex-none w-80 space-y-4 hidden md:block">
               <WidgetUser hasActions={false} state={stateUser} />
               {stateUser === "mvp" ? (

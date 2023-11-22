@@ -105,7 +105,7 @@ const PrototypePage = () => {
             <div className="w-full max-w-md mx-auto px-10 drop-shadow-[0_2px_0_rgba(0,0,0,0.2)] grid grid-cols-1 md:grid-cols-3 text-center p-4 gap-4 leading-none relative mb-4">
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(10 * 0.05s)",
                   }}
@@ -123,7 +123,7 @@ const PrototypePage = () => {
               </div>
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(12 * 0.05s)",
                   }}
@@ -141,7 +141,7 @@ const PrototypePage = () => {
               </div>
               <div>
                 <div
-                  className="text-ui-100 uppercase font-headings uppercase font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
+                  className="text-ui-100 uppercase font-headings font-bold text-5xl xl:text-6xl blockreveal animate-paused animate-delay"
                   style={{
                     "--delay": "calc(14 * 0.05s)",
                   }}
