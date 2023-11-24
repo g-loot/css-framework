@@ -72,7 +72,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="270"
-                src="//jsfiddle.net/augustin_hiebel/91zL0uka/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/91zL0uka/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -125,7 +125,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="270"
-                src="//jsfiddle.net/augustin_hiebel/e1nj5ghb/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/e1nj5ghb/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -167,7 +167,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="270"
-                src="//jsfiddle.net/augustin_hiebel/63xhuvek/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/63xhuvek/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -219,7 +219,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="270"
-                src="//jsfiddle.net/augustin_hiebel/5uex1n24/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/5uex1n24/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -262,7 +262,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/3hdy0f2p/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/3hdy0f2p/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
                 ></iframe>
               </div>
             </div>
@@ -298,7 +298,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/eoqus5cv/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/eoqus5cv/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
                 ></iframe>
               </div>
             </div>
@@ -334,7 +334,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/Lxs438th/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/Lxs438th/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
                 ></iframe>
               </div>
             </div>
@@ -370,7 +370,7 @@ const DSpage = () => {
                   className="rounded"
                   width="100%"
                   height="300"
-                  src="//jsfiddle.net/augustin_hiebel/buah47ok/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                  src="//jsfiddle.net/augustin_hiebel/buah47ok/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
                 ></iframe>
               </div>
             </div>

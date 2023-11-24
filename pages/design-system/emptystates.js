@@ -31,7 +31,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -59,7 +59,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/a614r7Ly/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -98,7 +98,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/1j4ak6o3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/1j4ak6o3/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -132,7 +132,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/dtsabyvx/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/dtsabyvx/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -164,7 +164,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/8jf0xzat/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/8jf0xzat/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>

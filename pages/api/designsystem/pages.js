@@ -155,11 +155,6 @@ export const DSpages = [
         url: "tables",
       },
       {
-        label: "Tournament brackets",
-        tags: "content,tournament,brackets,showdown,tournament brackets",
-        url: "tournamentbrackets",
-      },
-      {
         label: "Empty states",
         tags: "content,empty,states,empty states",
         url: "emptystates",
@@ -198,16 +193,6 @@ export const DSpages = [
         label: "Header",
         tags: "ui,header,introduction,banner,hero,content",
         url: "header",
-      },
-      {
-        label: "Daily reward",
-        tags: "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight,daily rewards",
-        url: "dailyreward",
-      },
-      {
-        label: "Battle Pass",
-        tags: "content,reward,battle pass,battlepass,battle,pass,progression,leaderboard,claim,tokens,coins,prize,delight,reward ladder",
-        url: "battlepass",
       },
     ],
   },
@@ -339,24 +324,29 @@ export const DSpages = [
     icon: "",
     pages: [
       {
-        label: "Mission cards",
+        label: "Mission",
         tags: "listing,card,mission,objective,content,games,mission cards",
         url: "missioncards",
       },
       {
-        label: "Tournament cards",
+        label: "Tournament",
         tags: "listing,card,tournament,competition,showdown,open,skirmish,objective,content,games,tournament cards",
         url: "tournamentcards",
       },
       {
-        label: "Content cards",
+        label: "Content",
         tags: "content,listing,card,display,content cards",
         url: "contentcards",
       },
       {
-        label: "Ladder cards",
+        label: "Ladder",
         tags: "ladder,listing,card,display,leaderboard,solo,clan,ladder cards",
         url: "laddercards",
+      },
+      {
+        label: "Recap",
+        tags: "recap,video,manager,video manager,card, recap cards",
+        url: "recapcard",
       },
     ],
   },
@@ -417,6 +407,21 @@ export const DSpages = [
         label: "Achievements",
         tags: "achievements, badges",
         url: "achievements",
+      },
+      {
+        label: "Daily reward",
+        tags: "content,reward,ladder,progression,leaderboard,claim,tokens,coins,prize,delight,daily rewards",
+        url: "dailyreward",
+      },
+      {
+        label: "Battle Pass",
+        tags: "content,reward,battle pass,battlepass,battle,pass,progression,leaderboard,claim,tokens,coins,prize,delight,reward ladder",
+        url: "battlepass",
+      },
+      {
+        label: "Tournament brackets",
+        tags: "content,tournament,brackets,showdown,tournament brackets",
+        url: "tournamentbrackets",
       },
       {
         label: "Currencies",

@@ -58,7 +58,6 @@ export default function TopbarHighlightsListItem({
   };
 
   const handleChangeTab = (tab) => {
-    console.log("handleChangeTab", tab);
     onTab(tab);
   };
 
@@ -161,16 +160,6 @@ export default function TopbarHighlightsListItem({
                 </div>
               </div>
             )}
-          {/*
-          <Tooltip
-                placement="top"
-                  tooltip={<div className="max-w-xs text-center"><span className="text-attention-500">The files of this highlight might get replaced by newer matches. Get the highlight video from this match now by clicking &quot;Automate with AI&quot;.</span></div>}                >
-                  <button type="button" className="text-ui-300 text-0">
-                    <span className="icon text-sm icon-warning-sign text-attention-500" />
-                  </button>
-                </Tooltip>
-          */}
-
           <div
             className={`flex-1 flex justify-between items-stretch border-r border-ui-400/20 relative overflow-hidden h-28 text-xs text-ui-100 leading-none ${
               isAlreadyProcessed ? "child:opacity-30 [&>img]:opacity-5" : ""

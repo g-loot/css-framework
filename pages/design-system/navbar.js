@@ -27,7 +27,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/ofseLxwn/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/ofseLxwn/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -56,7 +56,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/s5yzfknL/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/s5yzfknL/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -94,7 +94,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/pqf26h4v/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/pqf26h4v/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -158,7 +158,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/k1w4negm/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/k1w4negm/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -240,7 +240,7 @@ const DSpage = () => {
                 className="rounded"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/a5g2ntuv/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/a5g2ntuv/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>

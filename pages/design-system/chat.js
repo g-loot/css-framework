@@ -89,7 +89,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/4q6jn89g/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/4q6jn89g/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -120,7 +120,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/9bwjd47f/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/9bwjd47f/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -142,7 +142,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/3oa8Lces/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/3oa8Lces/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -164,7 +164,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/ksdygrox/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/ksdygrox/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -206,7 +206,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="200"
-            src="//jsfiddle.net/augustin_hiebel/87n65jcf/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/87n65jcf/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -239,7 +239,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="250"
-            src="//jsfiddle.net/augustin_hiebel/rveL6xt8/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/rveL6xt8/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>
@@ -314,7 +314,7 @@ const DSpage = () => {
             className="rounded"
             width="100%"
             height="300"
-            src="//jsfiddle.net/augustin_hiebel/jr2nv5a3/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+            src="//jsfiddle.net/augustin_hiebel/jr2nv5a3/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
           ></iframe>
         </div>
       </div>

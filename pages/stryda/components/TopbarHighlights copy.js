@@ -8,10 +8,6 @@ import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 const feedItems = [
   {
-    id: 0,
-    isCompleted: false,
-  },
-  {
     id: 12,
     isCompleted: false,
   },

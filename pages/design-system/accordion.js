@@ -184,7 +184,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/qejv3rwu/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/qejv3rwu/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>
@@ -329,7 +329,7 @@ const DSpage = () => {
                 className="rounded-lg"
                 width="100%"
                 height="300"
-                src="//jsfiddle.net/augustin_hiebel/pc0w3eda/embedded/html/dark/?bodyColor=333366&menuColor=1F1F42&fontColor=FFFFFF&accentColor=13F094"
+                src="//jsfiddle.net/augustin_hiebel/pc0w3eda/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
               ></iframe>
             </div>
           </div>

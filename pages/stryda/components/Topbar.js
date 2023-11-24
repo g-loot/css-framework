@@ -349,7 +349,7 @@ export default function Topbar() {
                 <div className="z-0 dropdown dropdown-end">
                   <div
                     tabIndex="1"
-                    className="flex items-center rounded-full interactive pl-1"
+                    className="flex items-center rounded-full interactive"
                   >
                     <div className="avatar avatar-circle avatar-xs">
                       {prototype.getUserByID(1).shopItems.avatarFrame && (

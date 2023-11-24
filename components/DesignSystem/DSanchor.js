@@ -14,6 +14,7 @@ export default function Anchor(props) {
   const title = props.title || "";
   const small = props.small;
   const anchor = stringToAnchor(title);
+  const level = props.level || 2;
 
   const handleCopy = () => {
     let currentURL = window.location.href;
@@ -34,18 +35,36 @@ export default function Anchor(props) {
   };
 
   return (
-    <div className="flex items-center gap-2 group mb-3" id={anchor}>
+    <div
+      className={`flex items-center gap-2 group ${level === 2 ? "mb-3" : ""} ${
+        level === 3 ? "mb-2" : ""
+      }`}
+      id={anchor}
+    >
       <Link href={`#${anchor}`}>
         <button type="button" className="interactive" onClick={handleCopy}>
-          <h2 className="h3">
-            {title}
-            {small && (
-              <>
-                {" "}
-                <small className="text-ui-300">{small}</small>
-              </>
-            )}
-          </h2>
+          {level === 2 && (
+            <h2 className="h3">
+              {title}
+              {small && (
+                <>
+                  {" "}
+                  <small className="text-ui-300">{small}</small>
+                </>
+              )}
+            </h2>
+          )}
+          {level === 3 && (
+            <h3 className="h5">
+              {title}
+              {small && (
+                <>
+                  {" "}
+                  <small className="text-ui-300">{small}</small>
+                </>
+              )}
+            </h3>
+          )}
         </button>
       </Link>
       <Link href={`#${anchor}`}>

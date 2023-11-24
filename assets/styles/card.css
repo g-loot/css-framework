@@ -953,6 +953,270 @@
   }
 }
 
+/* card recap */
+
+.card-recap {
+  @apply
+  surface-ui-500
+  rounded
+  grid
+  grid-cols-[1fr_auto]
+  items-stretch
+  animate-delay
+  overflow-hidden
+  ;
+
+  > .card-action {
+    grid-column-start: 1;
+    grid-column-end: 3;
+
+    &:is(:empty) {
+      @apply
+      hidden
+      ;
+    }
+  }
+
+  > .card-overlay {
+    @apply
+    absolute
+    z-40
+    inset-0
+    text-center
+    flex
+    flex-col
+    items-center
+    justify-center
+    p-2
+    backdrop-blur-sm
+    bg-ui-600/95
+    ;
+  }
+
+  > .card-image {
+    @apply
+    relative
+    z-0
+    flex-1
+    grid
+    /* grid-cols-2
+    grid-rows-2 */
+    border-r
+    border-ui-400/20
+    overflow-hidden
+    text-xs
+    text-ui-100
+    leading-none
+    grid-cols-2
+    select-none
+    ;
+
+    > div:not(.card-overlay) {
+      @apply
+      relative
+      z-20
+      p-1.5
+      flex
+      flex-col
+      ;
+      &:nth-child(odd) {
+        @apply
+        items-start
+        ;
+      }
+      &:nth-child(even) {
+        @apply
+        items-end
+        text-right
+        ;
+      }
+      &:nth-child(n+3) {
+        @apply
+        justify-end
+        ;
+      }
+    }
+
+    > .card-overlay {
+      @apply
+      absolute
+      z-40
+      inset-0
+      text-center
+      flex
+      flex-col
+      items-center
+      justify-center
+      p-2
+      rounded-none
+      bg-ui-900/0
+      border-none
+      backdrop-blur-0
+      shadow-none
+      ;
+    }
+
+    > .card-game {
+      > .icon {
+        @apply
+        p-1
+        text-base
+        border
+        border-ui-700
+        rounded
+        bg-gradient-to-b
+        from-ui-900
+        to-ui-900/90
+        inline-flex
+        items-center
+        justify-center
+        ;
+      }
+    }
+
+    > .card-date {
+      @apply
+      text-ui-200
+      ;
+    }
+
+    > .card-user {
+      > span {
+        @apply
+        block
+        uppercase
+        font-bold
+        text-base
+        truncate
+        w-full
+        mt-1
+        ;
+      }
+    }
+
+    > .card-meta {
+      > img {
+        @apply
+        h-6
+        w-6
+        mb-1
+        ;
+      }
+      > span {
+        @apply
+        block
+        capitalize
+        ;
+        &:nth-of-type(1) {
+          @apply
+          text-ui-200
+          ;
+        }
+        &:nth-of-type(2) {
+          @apply
+          font-bold
+          ;
+        }
+      }
+    }
+
+
+    &::after {
+      @apply
+      content-['']
+      absolute
+      z-10
+      inset-0
+      bg-gradient-to-b
+      from-ui-800/20
+      via-ui-800/20
+      to-ui-800/60
+      ;
+    }
+
+    > img {
+      @apply
+      absolute
+      z-0
+      inset-0
+      h-full
+      w-full
+      object-cover
+      opacity-50
+      ;
+    }
+  }
+
+  > .card-content {
+    @apply
+    relative
+    z-10
+    w-44
+    flex
+    flex-col
+    items-center
+    justify-center
+    gap-1.5
+    leading-none
+    rounded-r
+    p-2
+    bg-gradient-to-r
+    from-ui-600
+    to-ui-500
+    text-center
+    ;
+
+    > * {
+      &:is(:empty) {
+        @apply
+        hidden
+        ;
+      }
+    }
+
+    h5 {
+      @apply
+      text-sm
+      text-ui-100
+      font-bold
+      ;
+    }
+
+    p, ul, ol {
+      @apply
+      text-sm
+      text-ui-200
+      ;
+    }
+  }
+
+  /* states */
+
+  &.is-inactive {
+    > .card-image {
+      @apply
+      child:opacity-30
+      [&>img]:opacity-5
+      ;
+    }
+  }
+  &:has(.progresscontainer) {
+    > .card-image {
+      @apply
+      child:opacity-30
+      [&>img]:opacity-5
+      ;
+    }
+  }
+  &:has(.button-success) {
+    .card-content h5 {
+      @apply
+      text-success-500
+      ;
+    }
+  }
+}
+
 @media not all and (min-resolution:.001dpcm) { 
   @media {
     .card-bg {
