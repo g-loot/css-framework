@@ -616,7 +616,7 @@ const DSpage = () => {
               actionContent={
                 <button
                   type="button"
-                  className="group surface flex items-center p-6 gap-4 interactive rounded-b"
+                  className="group surface flex items-center px-6 py-3 gap-4 interactive rounded-b"
                 >
                   <PremiumLogo
                     src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"

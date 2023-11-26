@@ -48,7 +48,9 @@
       }
       > span {
         @apply
-        block
+        flex
+        items-center
+        gap-2
         relative
         z-10
         ;

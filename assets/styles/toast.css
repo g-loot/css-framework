@@ -63,8 +63,8 @@
   .toast-title {
     @apply
     font-bold
-    uppercase
     mb-0.5
+    leading-tight
     ;
   }
   
@@ -72,6 +72,23 @@
     &:not(:last-child) {
       @apply
       mb-2
+      ;
+    }
+    @apply
+    text-sm
+    ;
+
+    ul, ol {
+      @apply
+      list-inside
+      pl-4
+      space-y-2
+      ;
+    }
+
+    ul {
+      @apply
+      list-disc
       ;
     }
   }

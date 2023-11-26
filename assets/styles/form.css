@@ -33,9 +33,16 @@
 }
 .form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button):not([class*=m-]):not([class*=mb-]) {
   @apply
-  block
+  flex
+  gap-1.5
+  items-center
   mb-1
   ;
+  > .icon {
+    @apply
+    text-lg
+    ;
+  }
 }
 
 .is-disabled {
@@ -114,7 +121,6 @@ select:-webkit-autofill:focus {
     ;
   }
 
-
   > :where(input[type=text], input[type=number], input[type=email], input[type=password], input[type=date], input[type=datetime-local], input[type=file], textarea, .input-text, .form-select > select) {
     &:not([class*="rounded-"]) {
       @apply
@@ -141,7 +147,6 @@ input.input-secondary {
   border-ui-400/20
   ;
 }
-
 
 /*----------------------------*/
 /* SELECT INPUTS */
@@ -1101,6 +1106,18 @@ label.button {
     }
   }
 
+  > .button {
+    &.button-ghost {
+      + input,
+      + textarea {
+        @apply
+        rounded-r
+        border-r
+        ;
+      }
+    }
+  }
+
   > .button.button-primary {
     &:first-child {
       @apply
@@ -1334,7 +1351,6 @@ input.input-number,
       }
     }
   }
-  
   &[data-error] {
     &::after,
     .form-info {
@@ -1519,9 +1535,7 @@ input.input-number,
     }
   }
 
-
   /* loading */
-
   &.is-loading {
     @apply
     relative
