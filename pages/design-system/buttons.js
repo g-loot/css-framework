@@ -585,6 +585,64 @@ const DSpage = () => {
             </div>
           </div>
 
+          {/* variant:attention */}
+          <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
+            <h3 className="h4 mb-6 lg:mb-10">Attention</h3>
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text only
+                  </div>
+                  <div className="flex-1">
+                    <Button label="Button Label" variant="attention"></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon + text
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="attention"
+                      icon="icon-heart"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Text + icon
+                  </div>
+                  <div className="flex-1">
+                    <Button
+                      label="Button Label"
+                      variant="attention"
+                      icon="icon-heart"
+                      iconDirection="right"
+                    ></Button>
+                  </div>
+                </div>
+                <div className="w-full flex gap-4 items-center">
+                  <div className="w-1/4 text-ui-400 text-right text-sm leading-tight">
+                    Icon only
+                  </div>
+                  <div className="flex-1">
+                    <Button variant="warning" icon="icon-heart"></Button>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/wj6bdfxy/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+
           {/* variant:sucess */}
           <div className="border-b border-ui-700 pb-6 mb-6 lg:pb-12 lg:mb-12">
             <h3 className="h4 mb-6 lg:mb-10">Success</h3>

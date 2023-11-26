@@ -173,6 +173,81 @@ button {
         ;
       }
     }
+    &.button-error {
+      @apply
+      text-error-500
+      shadow-[inset_0_0_0_1px_rgb(var(--color-error-500))]
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-ui-600
+          text-error-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-error-300))]
+          ;
+        }
+        &:focus-visible,
+        &:active {
+          @apply
+          text-error-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-error-300))]
+          outline-ui-400
+          ;
+        }
+      }
+    }
+    &.button-attention {
+      @apply
+      text-attention-500
+      shadow-[inset_0_0_0_1px_rgb(var(--color-attention-500))]
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-ui-600
+          text-attention-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-attention-300))]
+          ;
+        }
+        &:focus-visible,
+        &:active {
+          @apply
+          text-attention-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-attention-300))]
+          outline-ui-400
+          ;
+        }
+      }
+    }
+    &.button-success {
+      @apply
+      text-success-500
+      shadow-[inset_0_0_0_1px_rgb(var(--color-success-500))]
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-ui-600
+          text-success-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
+          ;
+        }
+        &:focus-visible,
+        &:active {
+          @apply
+          text-success-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
+          outline-ui-400
+          ;
+        }
+      }
+    }
   }
   .button-tertiary {
     @apply 
@@ -233,18 +308,22 @@ button {
     }
   }
   .button-error {
-    @apply 
-    bg-error-500
-    ;
-
+    &:not(.button-secondary) {
+      @apply 
+      bg-error-500
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-error-300
+          ;
+        }
+      }
+    }
     &:not([disabled]),
     &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
-        @apply
-        bg-error-300
-        ;
-      }
       &:focus-visible,
       &:active {
         @apply
@@ -253,19 +332,48 @@ button {
       }
     }
   }
-  .button-success {
-    @apply 
-    bg-success-500
-    ;
-
+  .button-attention {
+    &:not(.button-secondary) {
+      @apply 
+      bg-attention-500
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-attention-300
+          ;
+        }
+      }
+    }
     &:not([disabled]),
     &:not(.is-disabled) {
-      &:hover,
-      &:focus-visible {
+      &:focus-visible,
+      &:active {
         @apply
-        bg-success-300
+        outline-attention-300
         ;
       }
+    }
+  }
+  .button-success {
+    &:not(.button-secondary) {
+      @apply 
+      bg-success-500
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-success-300
+          ;
+        }
+      }
+    }
+    &:not([disabled]),
+    &:not(.is-disabled) {
       &:focus-visible,
       &:active {
         @apply
@@ -296,36 +404,36 @@ button {
     }
   }
   .button-play {
+    @apply
+    rounded-full
+    gap-3
+    ;
+    
+    .icon {
       @apply
-      rounded-full
-      gap-3
+      transition-transform
+      duration-200
+      ease-in-out
+      scale-150
+      ml-0
       ;
-      
-      .icon {
+      ~ *:last-child {
         @apply
-        transition-transform
-        duration-200
-        ease-in-out
-        scale-150
-        ml-0
+        mr-1
         ;
-        ~ *:last-child {
+      }
+    }
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      &:hover,
+      &:focus-visible {
+        .icon {
           @apply
-          mr-1
+          scale-100
           ;
         }
       }
-      &:not([disabled]),
-      &:not(.is-disabled) {
-        &:hover,
-        &:focus-visible {
-          .icon {
-            @apply
-            scale-100
-            ;
-          }
-        }
-      }
+    }
   }
 }
 

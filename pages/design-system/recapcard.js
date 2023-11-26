@@ -145,6 +145,14 @@ const DSpage = () => {
 
       <div className="mb-8">
         <Anchor title="Status: error" />
+        <div className="mb-2">
+        <ButtonStretchy variant="button-error">
+            <span className="text-sm">
+              <span>Something went wrong</span>
+            </span>
+            <span className="icon icon-warning-sign" />
+          </ButtonStretchy>
+        </div>
         <Anchor title="Processing failed" level={3} />
         <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
           <div className="flex-1 sm:w-[420px]">
@@ -470,7 +478,7 @@ const DSpage = () => {
       <div className="mb-8">
         <Anchor title="Status: finished" />
         <div className="mb-2">
-          <ButtonStretchy>
+          <ButtonStretchy variant="button-success">
             <span className="text-sm">
               <span>Recordings ready</span>
             </span>
@@ -587,7 +595,7 @@ const DSpage = () => {
       <div className="mb-8">
         <Anchor title="Status: not premium" />
         <div className="mb-2">
-          <ButtonStretchy>
+          <ButtonStretchy variant="button-success">
             <span className="text-sm">
               <span>New matches found</span>
             </span>
