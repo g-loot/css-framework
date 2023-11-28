@@ -1339,6 +1339,7 @@ input {
       bg-ui-500/75
       text-ui-200
       text-sm
+      px-2
       min-w-[42px]
       ;
       &:first-child {

@@ -102,8 +102,8 @@ export default function Home() {
       <Structure title="Home" fullWidth={true}>
         <Loader
           loader={
-            <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-              <div className="flex-none w-80 space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+            <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
+              <div className="flex-none w-[300px] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               <div className="flex-1 overflow-x-hidden">
                 <div className="max-w-[620px] 2xl:max-w-lg mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
@@ -112,12 +112,12 @@ export default function Home() {
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                 </div>
               </div>
-              <div className="flex-none w-80 hidden xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-[300px] hidden 2xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
-          <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-14 py-8">
-            <div className="flex-none w-80 space-y-4 hidden md:block">
+          <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
+            <div className="flex-none w-[300px] space-y-4 hidden md:block">
               <div className="sticky space-y-4 top-16 text-center">
                 <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
                   <span>Ad</span>
@@ -319,7 +319,7 @@ export default function Home() {
                 </a>
               </section>
             </div>
-            <div className="flex-none w-80 space-y-4 hidden xl:block">
+            <div className="flex-none w-[300px] space-y-4 hidden 2xl:block">
               <div className="sticky space-y-4 top-16 text-center">
                 <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
                   <span>Ad</span>
