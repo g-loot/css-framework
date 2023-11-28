@@ -13,6 +13,9 @@ import ModalAvatarEdit from "../[user_id]/modal-avataredit";
 import ModalBannerEdit from "../[user_id]/modal-banneredit";
 import TabSettingsProfileInformation from "./tab-profileinformation";
 import TabSettingsGameAccounts from "./tab-gameaccounts";
+import TabSettingsAccountManagement from "./tab-accountmanagement";
+import TabSettingsAppSettings from "./tab-appsettings";
+import TabSettingsSubscription from "./tab-subscription";
 
 const TabsItems = [
   {
@@ -27,6 +30,24 @@ const TabsItems = [
     component: TabSettingsGameAccounts,
     icon: "icon-link",
   },
+  {
+    label: "Account management",
+    url: "account-management",
+    component: TabSettingsAccountManagement,
+    icon: "icon-pen-23",
+  },
+  {
+    label: "App settings",
+    url: "app-settings",
+    component: TabSettingsAppSettings,
+    icon: "icon-cogwheel",
+  },
+  {
+    label: "Subscription & payment",
+    url: "subscription",
+    component: TabSettingsSubscription,
+    icon: "icon-card-edit",
+  },
 ];
 
 export default function Home() {
@@ -35,6 +56,7 @@ export default function Home() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
+  const [submitting, setSubmitting] = useState(false);
   const hasAvatarFrame = query.avatarframe || false;
   const hasProfileBanner = query.profilebanner || false;
 
@@ -51,15 +73,6 @@ export default function Home() {
       setIsValorantConnected(true);
     }
   }, []);
-
-  function addToastWithDelay(toast) {
-    setSubmitting(true);
-
-    setTimeout(() => {
-      uiContext.openToastr(toast);
-      setSubmitting(false);
-    }, 1000);
-  }
 
   function openModalAvatarEdit() {
     if (hasAvatarFrame) {
@@ -85,14 +98,30 @@ export default function Home() {
     }
   }
 
+  function handleSave() {
+    setSubmitting(true);
+
+    setTimeout(() => {
+      uiContext.openToastr({
+        size: "medium",
+        text: `Settings saved successfully.`,
+        color: "green",
+        autoDelete: true,
+        autoDeleteDelay: 2500,
+      });
+      uiContext.closeModal();
+      setSubmitting(false);
+    }, 3000);
+  }
+
   return (
     <>
       <Structure title="Profile settings">
         <Ad width="1005" height="124" />
 
-        <div className="fixed z-50 inset-0 flex items-center justify-center text-center pointer-events-none">
+        {/* <div className="fixed z-50 inset-0 flex items-center justify-center text-center pointer-events-none">
           <h2 className="h1 -rotate-45">Work in progress</h2>
-        </div>
+        </div> */}
 
         {selectedUser && (
           <>
@@ -127,6 +156,9 @@ export default function Home() {
                     className="button button-tertiary rounded-full absolute z-20 top-2 right-2"
                   >
                     <span className="icon icon-camera" />
+                    <span className="hidden lg:block">
+                      Change profile banner
+                    </span>
                   </button>
                 )}
                 {hasProfileBanner ? (
@@ -187,7 +219,7 @@ export default function Home() {
                   </nav>
                 </div>
               </div>
-              <div className="relative flex-1 surface halo-t sm:rounded-lg p-4 sm:p-8">
+              <div className="relative flex-1 surface-dimmed sm:rounded-lg p-4 sm:p-8">
                 {TabsItems.map((item, itemIndex) => {
                   if (item.url === selectedTab) {
                     return React.createElement(item.component, {
@@ -195,6 +227,25 @@ export default function Home() {
                     });
                   }
                 })}
+                <div className="max-w-md mx-auto">
+                  <hr className="my-8 bg-ui-600" />
+                  <div className="w-full max-w-sm mx-auto flex justify-center gap-4">
+                    <button
+                      type="button"
+                      className={`button flex-1 button-primary ${
+                        submitting ? "is-loading" : ""
+                      }`}
+                      onClick={handleSave}
+                    >
+                      <span>Save changes</span>
+                    </button>
+                    <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
+                      <button type="button" className="button flex-1 button-secondary">
+                        <span>Cancel</span>
+                      </button>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </section>
           </>

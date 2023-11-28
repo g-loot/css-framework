@@ -21,13 +21,16 @@
 .form-group > label:not(.form-radio):not(.form-checkbox):not(.form-toggle):not(.button),
 .label {
   @apply
-  text-sm
-  font-bold
   leading-tight
   ;
   &:not([class*="text-ui"]) {
     @apply
     text-ui-200
+    ;
+  }
+  &:not([class*="text-base"]):not([class*="text-lg"]) {
+    @apply
+    text-sm
     ;
   }
 }
@@ -317,11 +320,10 @@ label.button {
       transition-all
       duration-200
       ease-[cubic-bezier(.7,0,.3,1)]
-      hover:bg-ui-700
+      hover:bg-ui-700/50
       ;
     }
   }
-
 
   /* generic */
 
@@ -682,9 +684,102 @@ label.button {
     }
   }
 
+  /* full width */
+
+  &.form-full {
+    @apply
+    w-full
+    transition-all
+    duration-200
+    ease-[cubic-bezier(.7,0,.3,1)]
+    hover:bg-ui-700/50
+    ;
+    .form-indicator {
+      @apply
+      text-right
+      flex-1
+      ;
+    }
+    label {
+      @apply
+      pr-14
+      pl-0
+      w-full
+      flex
+      gap-4
+      items-center
+      /* justify-between */
+      ;
+      &::before {
+        @apply
+        left-auto
+        ;
+      }
+      &::after {
+        @apply
+        left-auto
+        ;
+      }
+    }
+    &.form-radio,
+    &.form-checkbox {
+      label {
+        &::before {
+          @apply
+          right-3
+          ;
+        }
+        &::after {
+          @apply
+          right-4
+          ;
+        }
+      }
+    }
+    &.form-toggle {
+      label {
+        &::before {
+          @apply
+          right-1
+          ;
+        }
+        &::after {
+          @apply
+          right-2
+          ;
+        }
+      }
+      input:not(:checked){
+        + label {
+          &::after {
+            @apply
+            -translate-x-4
+            ;
+          }
+        }
+      }
+  
+      input:checked {
+        + label {
+          &::after {
+            @apply
+            translate-x-0
+            ;
+          }
+        }
+      }
+    }
+    &:not([disabled]),
+    &:not(.is-disabled) {
+      label {
+        @apply
+        hover:text-ui-100
+        ;
+      }
+    }
+  }
 
   /* focus */
-
 
   &:not([disabled]),
   &:not(.is-disabled) {
@@ -713,6 +808,99 @@ label.button {
     @apply
     cursor-not-allowed
     ;
+  }
+}
+
+/* form indicator */
+.form-indicator {
+  @apply
+  relative
+  ;
+  &::after,
+  &::before {
+    @apply
+    block
+    transition-all
+    ;
+  }
+  &::before {
+    @apply
+    text-main
+    absolute
+    right-0
+    ;
+  }
+  &:not([data-on]) {
+    &::before {
+      @apply
+      content-['On']
+      ;
+    }
+  }
+  &:not([data-off]) {
+    &::after {
+      @apply
+      content-['Off']
+      ;
+    }
+  }
+  &[data-on] {
+    &::before {
+      @apply
+      content-[attr(data-on)]
+      ;
+    }
+  }
+  &[data-off] {
+    &::after {
+      @apply
+      content-[attr(data-off)]
+      ;
+    }
+  }
+}
+input {
+  &:not(:checked) {
+    ~ * {
+      &,
+      * {
+        &.form-indicator {
+          &::before {
+            @apply
+            translate-y-2
+            opacity-0
+            ;
+          }
+          &::after {
+            @apply
+            translate-y-0
+            opacity-100
+            ;
+          }
+        }
+      }
+    }
+  }
+  &:checked {
+    ~ * {
+      &,
+      * {
+        &.form-indicator {
+          &::before {
+            @apply
+            translate-y-0
+            opacity-100
+            ;
+          }
+          &::after {
+            @apply
+            -translate-y-2
+            opacity-0
+            ;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -1103,6 +1291,11 @@ label.button {
       relative 
       z-0
       ;
+      &:last-child {
+        @apply
+        rounded-r
+        ;
+      }
     }
   }
 
@@ -1138,14 +1331,15 @@ label.button {
     &:not(.icon) {
       @apply
       inline-flex
+      justify-center
       items-center
       self-stretch
-      px-3
       border
       border-ui-500
       bg-ui-500/75
       text-ui-200
       text-sm
+      min-w-[42px]
       ;
       &:first-child {
         @apply

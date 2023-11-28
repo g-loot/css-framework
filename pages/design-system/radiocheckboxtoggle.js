@@ -324,6 +324,84 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* Full width */}
+      <div className="mb-12">
+        <Anchor title="Full width" />
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-toggle form-full">
+                      <input type="checkbox" name="radioFullWidthOn" id="radioFullWidthOn" />
+                      <label htmlFor="radioFullWidthOn">
+                        <span>Desktop notification</span>
+                      </label>
+                    </div>
+                    <div className="form-toggle form-full">
+                      <input type="checkbox" name="radioFullWidthOff" id="radioFullWidthOff" />
+                      <label htmlFor="radioFullWidthOff">
+                        <span>Run Stryda on statup</span>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/4gxvp8r2/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* With indicator */}
+      <div className="mb-12">
+        <Anchor title="With indicator" />
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4">
+                <div className="w-full flex gap-4 items-center">
+                  <div className="flex-1 space-y-4">
+                    <div className="form-toggle form-full">
+                      <input type="checkbox" name="withIndicator" id="withIndicator" />
+                      <label htmlFor="withIndicator">
+                        <span>Desktop notification</span>
+                        <span className="form-indicator" />
+                      </label>
+                    </div>
+                    <div className="form-toggle form-full">
+                      <input type="checkbox" name="withIndicatorCustom" id="withIndicatorCustom" />
+                      <label htmlFor="withIndicatorCustom">
+                        <span>Run Stryda on statup</span>
+                        <span className="form-indicator" data-on="Run Stryda on statup"  data-off="Do not Stryda on statup" />
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/v2gnp3ws/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* As list */}
       <div className="mb-12">
         <Anchor title="As list" />

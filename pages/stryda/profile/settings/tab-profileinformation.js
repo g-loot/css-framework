@@ -12,7 +12,6 @@ export default function TabSettingsProfileInformation() {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
-  const [submitting, setSubmitting] = useState(false);
   const [isValorantConnected, setIsValorantConnected] = useState(false);
   const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
     useState(false);
@@ -20,19 +19,10 @@ export default function TabSettingsProfileInformation() {
   const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
   const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
 
-  function addToastWithDelay(toast) {
-    setSubmitting(true);
-
-    setTimeout(() => {
-      uiContext.openToastr(toast);
-      setSubmitting(false);
-    }, 1000);
-  }
-
   return (
     <>
       {selectedUser && (
-        <div className="max-w-lg mx-auto">
+        <div className="max-w-md mx-auto">
           <h2 className="mb-8">Profile information</h2>
           <p className="mb-12">
             Profile information Information you have put here is public on your
@@ -64,7 +54,7 @@ export default function TabSettingsProfileInformation() {
               />
             </div>
           </div>
-          <div className="grid xl:grid-cols-2 gap-x-16 gap-y-8 mb-8">
+          <div className="grid xl:grid-cols-2 gap-x-16 gap-y-4 mb-8">
             <div className="form-group">
               <label htmlFor="social-discord">Discord</label>
               <div className="input-group">
@@ -96,30 +86,6 @@ export default function TabSettingsProfileInformation() {
                 <input type="text" name="social-twitter" id="social-twitter" />
               </div>
             </div>
-          </div>
-          <hr className="my-8" />
-          <div className="flex justify-end gap-4">
-            <button
-              type="button"
-              className={`button button-primary ${
-                submitting ? "is-loading" : ""
-              }`}
-              onClick={addToastWithDelay.bind(this, {
-                title: "Success",
-                icon: "f-check",
-                color: "green",
-                text: "Settings saved successfully.",
-                autoDelete: true,
-                autoDeleteDelay: 5000,
-              })}
-            >
-              <span>Save changes</span>
-            </button>
-            <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
-              <button type="button" className="button button-secondary">
-                <span>Cancel</span>
-              </button>
-            </Link>
           </div>
         </div>
       )}
