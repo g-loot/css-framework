@@ -190,7 +190,7 @@ export default function Home() {
               </div>
             </section>
             <section className="relative flex flex-col lg:flex-row lg:items-stretch gap-8 my-8">
-              <div className="w-full lg:w-56 lg:mb-8">
+              <div className="w-full lg:w-[260px] lg:mb-8">
                 <div className="lg:sticky top-16">
                   <nav className="flex justify-start items-center px-4 sm:p-px overflow-auto scrollbar-hidden border-b border-ui-700 lg:border-none">
                     <ul className="tabs lg:tabs-vertical">

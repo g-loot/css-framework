@@ -3,6 +3,7 @@ import { getLayout } from "@/components/DesignSystem/DSLayout";
 import Anchor from "@/components/DesignSystem/DSanchor";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
+import RecapPreview from "../stryda/components/RecapPreview";
 
 const RecapItem = ({ imageOverlay, rigthContent, actionContent }) => {
   return (
@@ -146,7 +147,7 @@ const DSpage = () => {
       <div className="mb-8">
         <Anchor title="Status: error" />
         <div className="mb-2">
-        <ButtonStretchy variant="button-error">
+          <ButtonStretchy variant="button-error">
             <span className="text-sm">
               <span>Something went wrong</span>
             </span>
@@ -633,8 +634,9 @@ const DSpage = () => {
                     className="mx-auto"
                   />
                   <p className="flex-1 text-sm leading-tight">
-                    Get recaps of <b className="text-ui-100">your best moments</b> in your favorite games -
-                    automatically!
+                    Get recaps of{" "}
+                    <b className="text-ui-100">your best moments</b> in your
+                    favorite games - automatically!
                   </p>
                   <span className="icon icon-ctrl-right text-premium-500 group-hover:translate-x-1 group-hover:text-ui-100 transition-all ease-in-out duration-150" />
                 </button>
@@ -649,6 +651,14 @@ const DSpage = () => {
               src="//jsfiddle.net/augustin_hiebel/2rfyLagu/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
             ></iframe>
           </div>
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <Anchor title="Modals" />
+        <Anchor title="Recap preview" level={3} />
+        <div>
+          <RecapPreview />
         </div>
       </div>
     </>

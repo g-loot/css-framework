@@ -463,6 +463,19 @@ const DSpage = () => {
                       </div>
                     </div>
                     <div className="form-group">
+                      <label htmlFor="send-message">Send message</label>
+                      <div className="input-group">
+                        <button type="button" className="button button-tertiary">
+                          <span>Send message</span>
+                        </button>
+                        <input
+                          type="password"
+                          name="send-message"
+                          id="send-message"
+                        />
+                      </div>
+                    </div>
+                    <div className="form-group">
                       <label htmlFor="send-email">Send email</label>
                       <div className="input-group">
                         <button type="button" className="button button-primary">

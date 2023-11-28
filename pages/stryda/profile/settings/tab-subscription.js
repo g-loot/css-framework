@@ -77,7 +77,7 @@ export default function TabSettingsSubscription() {
             <p className="text-sm text-ui-300">
               Your credit/debit card will be billed the same amount every three
               months. Once you cancel your subscription, you will have access to
-              the course for 90 days after your last payment.
+              Stryda Premium for 90 days after your last payment.
             </p>
           </div>
           <hr className="my-8" />

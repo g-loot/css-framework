@@ -52,7 +52,19 @@ export default function TopbarSidebar() {
               </button>
             </Link>
           </li>
-          <li className="border-t border-ui-500 pointer-events-none">
+          <li className="border-t border-ui-500">
+            <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
+              <button
+                type="button"
+                className={`p-3 ${
+                  router.pathname.includes("ladders") ? "is-active" : ""
+                }`}
+              >
+                <span>Ladders</span>
+              </button>
+            </Link>
+          </li>
+          {/* <li className="border-t border-ui-500 pointer-events-none">
             <div className="px-3 pt-3">
               <span className="text-ui-400">Competitions</span>
             </div>
@@ -80,7 +92,7 @@ export default function TopbarSidebar() {
                 <span className="pl-4">Clan Events</span>
               </button>
             </Link>
-          </li>
+          </li> */}
           <li className="border-t border-ui-500">
             <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
               <button

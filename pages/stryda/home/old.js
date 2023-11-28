@@ -112,7 +112,7 @@ export default function Home() {
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                 </div>
               </div>
-              <div className="flex-none w-[300px] hidden 2xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              <div className="flex-none w-[300px] hidden 3xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
             </section>
           }
         >
@@ -120,71 +120,23 @@ export default function Home() {
             <div className="flex-none w-[300px] space-y-4 hidden md:block">
               <div className="sticky space-y-4 top-16 text-center">
                 <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
-                  <span>Ad</span>
+                  <span>
+                    Ad
+                    <br />
+                    Max width: 300px
+                  </span>
                 </div>
-                <a href="#" className="link link-main text-sm">
-                  Remove ads
-                </a>
+                <Link href={`/stryda/premium`}>
+                  <span className="link link-main text-sm">Remove ads</span>
+                </Link>
               </div>
             </div>
             <div className="flex-1">
               <section className="surface sm:rounded-lg overflow-hidden mb-8">
                 <Carousel size="carousel-sm" />
               </section>
-
-              {/*
-
-        <section
-          className="mb-8"
-        >
-          <div className="flex flex-col sm:flex-row flex-wrap items-baseline sm:justify-between gap-2 mb-4 mx-4 sm:mx-0">
-            <h3 className="h6">Your latest tracked match</h3>
-            <span className="text-sm text-ui-300">
-              Match ended November 6 at 3:00am
-            </span>
-          </div>
-          <div className="surface surface-dimmed sm:rounded-lg flex flex-col xl:flex-row xl:justify-between leading-none xl:gap-8">
-            <div className="flex flex-row items-center justify-center xl:justify-start gap-8 p-2">
-              <div className="flex gap-2 items-center">
-                <div className="rounded bg-gradient-to-b from-ui-900/75 to-ui-900/25 p-2 flex items-center justify-center border border-ui-700">
-                  <span className="icon text-3xl icon-game-pubg-symbol text-game-pubg" />
-                </div>
-                <h6>PUBG: BATTLEGROUNDS</h6>
-              </div>
-              <div className="h6 uppercase text-main">Victory</div>
-            </div>
-            <div className="flex flex-col sm:flex-row flex-1 items-center gap-2 p-3 border-t border-ui-700 xl:border-none">
-              <div className="flex flex-1 items-stretch justify-center sm:justify-start gap-2 text-sm text-ui-300 whitespace-nowrap">
-                <span className="bg-ui-900/50 rounded p-2">11 kills</span>
-                <span className="bg-ui-900/50 rounded p-2">14 assists</span>
-                <span className="bg-ui-900/50 rounded p-2">5 deaths</span>
-                <span className="bg-ui-900/50 rounded p-2">4 headshots</span>
-              </div>
-              <button
-                className={`button button-sm button-secondary ${
-                  submitting ? "is-loading" : ""
-                }`}
-                onClick={addToastWithDelay.bind(this, {
-                  icon: "f-check",
-                  color: "green",
-                  text: "Your stats have been updated.",
-                  autoDelete: true,
-                  autoDeleteDelay: 2500,
-                })}
-              >
-                <span className="icon icon-16 icon-refresh-02" />
-                <span>Update my stats</span>
-              </button>
-            </div>
-          </div>
-        </section>
-
-        */}
-
               <ComponentRewardLadder />
-
               <h2 className="h3 mb-4 mx-4 sm:mx-0">Ladders</h2>
-
               <section className="mb-8">
                 <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
                   <h3 className="h6">Solo</h3>
@@ -319,14 +271,18 @@ export default function Home() {
                 </a>
               </section>
             </div>
-            <div className="flex-none w-[300px] space-y-4 hidden 2xl:block">
+            <div className="flex-none w-[300px] space-y-4 hidden 3xl:block">
               <div className="sticky space-y-4 top-16 text-center">
                 <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
-                  <span>Ad</span>
+                  <span>
+                    Ad
+                    <br />
+                    Max width: 300px
+                  </span>
                 </div>
-                <a href="#" className="link link-main text-sm">
-                  Remove ads
-                </a>
+                <Link href={`/stryda/premium`}>
+                  <span className="link link-main text-sm">Remove ads</span>
+                </Link>
               </div>
             </div>
           </section>

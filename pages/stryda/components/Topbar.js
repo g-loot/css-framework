@@ -159,6 +159,18 @@ export default function Topbar() {
                     <button
                       type="button"
                       className={
+                        router.pathname.includes("ladders") ? "is-active" : ""
+                      }
+                    >
+                      <span>Ladders</span>
+                    </button>
+                  </Link>
+                </li>
+                {/* <li>
+                  <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
+                    <button
+                      type="button"
+                      className={
                         router.pathname.includes("ladders") ||
                         router.pathname.includes("clanevents")
                           ? "is-active"
@@ -199,7 +211,7 @@ export default function Topbar() {
                       </Link>
                     </li>
                   </ul>
-                </li>
+                </li> */}
                 <li>
                   <Link href={`/stryda/battlepass${prototype.getURLparams()}`}>
                     <button

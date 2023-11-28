@@ -139,6 +139,18 @@ export default function Missions() {
                       </div>
                     </li>
                   </ul>
+                  {!prototype.isPremium && (
+                    <div className="space-y-4 text-center">
+                      <div className="surface w-full aspect-square rounded flex items-center justify-center">
+                        <span>Ad<br />Max width: 260px</span>
+                      </div>
+                      <Link href={`/stryda/premium`}>
+                        <span className="link link-main text-sm">
+                          Remove ads
+                        </span>
+                      </Link>
+                    </div>
+                  )}
                   <div className="surface-ui-700 rounded text-left overflow-hidden">
                     <button
                       type="button"
@@ -157,11 +169,11 @@ export default function Missions() {
                       ></iframe>
                     </button>
                     <h4 className="text-base px-4 my-2">How Missions work</h4>
-                    <p className="text-sm text-ui-300 px-4 mb-4">
+                    {/* <p className="text-sm text-ui-300 px-4 mb-4">
                       Play Stryda Missions in Valorant, gather XP, and earn
                       Mission Rewards. You can complete the Daily Missions in
                       any game.
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </>
