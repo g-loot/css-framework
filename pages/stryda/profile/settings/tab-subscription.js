@@ -41,7 +41,7 @@ export default function TabSettingsSubscription() {
                   <span>Active</span>
                 </div>
               </div>
-              <div className="flex flex-col md:flex-row items-end justify-between gap-4">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
                 <div className="space-y-2 flex-2">
                   <h4>Quarterly</h4>
                   <div>
@@ -83,11 +83,11 @@ export default function TabSettingsSubscription() {
           <hr className="my-8" />
           <div className="mb-12">
             <h3 className="mb-4">Payment details</h3>
-            <div className="mb-4 surface-ui-700 rounded p-4 space-y-2">
-              <div className="flex flex-col md:flex-row items-end justify-between gap-4">
-                <div className="space-y-2 flex-2 surface-ui-600 rounded p-2 flex flex-col gap-2 items-center justify-center aspect-video text-ui-300">
-                 <span className="icon icon-card-favorite text-2xl" />
-                 <span>Credit card</span>
+            <div className="surface-ui-700 rounded p-4 space-y-2">
+              <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                <div className="space-y-2 flex-2 surface-ui-600 rounded p-2 flex flex-col gap-1 items-center justify-center aspect-landscape text-ui-300">
+                  <span className="icon icon-card-favorite text-3xl" />
+                  <span>Credit card</span>
                 </div>
                 <div className="space-y-2 flex-1">
                   <button

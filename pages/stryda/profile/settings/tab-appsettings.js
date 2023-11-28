@@ -97,7 +97,7 @@ export default function TabSettingsAppSettings() {
                 />
                 <label htmlFor="desktop-notification">
                   <span>Desktop notification</span>
-                  <span className="form-indicator" />
+                  <span className="form-indicator hidden md:block" />
                 </label>
               </div>
               <p className="text-sm text-ui-300">
@@ -116,7 +116,7 @@ export default function TabSettingsAppSettings() {
                 />
                 <label htmlFor="run-startup">
                   <span>Run Stryda on startup</span>
-                  <span className="form-indicator" />
+                  <span className="form-indicator hidden md:block" />
                 </label>
               </div>
               <p className="text-sm text-ui-300">
@@ -137,7 +137,7 @@ export default function TabSettingsAppSettings() {
                 />
                 <label htmlFor="recap-recorder">
                   <span>Stryda Recap video recorder</span>
-                  <span className="form-indicator" />
+                  <span className="form-indicator hidden md:block" />
                 </label>
               </div>
               <p className="text-sm text-ui-300">
@@ -157,7 +157,7 @@ export default function TabSettingsAppSettings() {
                 />
                 <label htmlFor="automatic-recap">
                   <span>Automatically turn matches into recap videos</span>
-                  <span className="form-indicator" />
+                  <span className="form-indicator hidden md:block" />
                 </label>
               </div>
               <p className="text-sm text-ui-300">
@@ -268,7 +268,7 @@ export default function TabSettingsAppSettings() {
                     </span>
                     <span>VALORANT</span>
                     <span
-                      className="form-indicator"
+                      className="form-indicator hidden md:block"
                       data-on="Recordings are on"
                       data-off="Recordings are off"
                     />
@@ -287,7 +287,7 @@ export default function TabSettingsAppSettings() {
                     </span>
                     <span>League of Legends</span>
                     <span
-                      className="form-indicator"
+                      className="form-indicator hidden md:block"
                       data-on="Recordings are on"
                       data-off="Recordings are off"
                     />
@@ -306,7 +306,7 @@ export default function TabSettingsAppSettings() {
                     </span>
                     <span>PUBG: Battlegrounds</span>
                     <span
-                      className="form-indicator"
+                      className="form-indicator hidden md:block"
                       data-on="Recordings are on"
                       data-off="Recordings are off"
                     />
