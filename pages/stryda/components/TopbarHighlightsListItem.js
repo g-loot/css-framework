@@ -60,7 +60,6 @@ export default function TopbarHighlightsListItem({
   const handleChangeTab = (tab) => {
     onTab(tab);
   };
-
   const getMatchByID = (id) => {
     return dataMatches.find((match) => {
       return match.id === parseInt(id);
@@ -69,11 +68,6 @@ export default function TopbarHighlightsListItem({
   const getAgentByID = (id) => {
     return StatsValorantAgents.find((agent) => {
       return agent.id === parseInt(id);
-    });
-  };
-  const getValorantRankByID = (id) => {
-    return StatsValorantRanks.find((rank) => {
-      return rank.id === parseInt(id);
     });
   };
   const getMapByID = (id) => {
@@ -124,7 +118,165 @@ export default function TopbarHighlightsListItem({
   return (
     <>
       {item && selectedMatch && (
-        <li
+        <>
+          <li className="card-recap">
+            <div className="card-image">
+              <div className="card-game">
+                <span className="icon icon-game-valorant-symbol text-game-valorant" />
+              </div>
+              <div className="card-date">
+                {selectedMatch.meta.dateTimeEnded}
+              </div>
+              <div className="card-user">
+                <div className="avatar avatar-simple avatar-xs">
+                  <div>
+                    <img
+                      src={getAgentByID(selectedMatch.meta.agent).picturePath}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <span>{getAgentByID(selectedMatch.meta.agent).name}</span>
+              </div>
+              <div className="card-meta">
+                <img src={getGamemodeImage(selectedMatch.meta.mode)} alt="" />
+                <span>{selectedMatch.meta.mode}</span>
+                <span>{getMapByID(selectedMatch.meta.map).name}</span>
+              </div>
+              <img
+                src={getMapByID(selectedMatch.meta.map).picturePath}
+                alt=""
+              />
+              <div className="card-overlay"></div>
+            </div>
+            <div className="card-content">
+
+
+
+
+
+
+
+
+
+            {/* {id === processingID && processingStatus === "processing" && (
+              <div
+                className="progresscontainer"
+                style={{ "--percent": processingPercent }}
+              >
+                <div>
+                  <div className="text-2xl font-bold">{processingPercent}%</div>
+                  <div className="text-xs uppercase my-1">{processingCopy}</div>
+                  <span className="text-xs whitespace-normal px-2">
+                    Do not close Stryda during this process
+                  </span>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold">{processingPercent}%</div>
+                  <div className="text-xs uppercase my-1">{processingCopy}</div>
+                  <span className="text-xs whitespace-normal px-2">
+                    Do not close Stryda during this process
+                  </span>
+                </div>
+              </div>
+            )}
+            {!isReady &&
+              (!isProcessed || !isAlreadyProcessed) &&
+              (id === 12 || id === 15) && (
+                <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                  <div className="infobanner is-active w-full">
+                    <div className="infobanner-front">
+                      <span className="text-center">
+                        Preparing video for AI
+                      </span>
+                    </div>
+                    <div className="infobanner-back justify-center">
+                      <span className="text-center">Please wait...</span>
+                    </div>
+                  </div>
+                </div>
+              )}
+            {isReady && (!isProcessed || !isAlreadyProcessed) && id === 15 && (
+              <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                <div className="text-sm text-ui-100 mb-1">
+                  Not enough content
+                </div>
+                <p className="text-xs">
+                  The AI needs at least 3 moments in order to create the
+                  highlight.
+                </p>
+              </div>
+            )}
+            {itemIndex === 2 && (
+              <div className="absolute z-20 inset-0 bg-ui-500 flex flex-col items-center justify-center text-center whitespace-normal text-sm p-2">
+                <div className="text-sm text-ui-100 mb-1">
+                  Recording removed
+                </div>
+                <p className="text-xs">
+                  Recording of this match have been deleted to make room for new
+                  matches. Manage allocated space in the{" "}
+                  <button
+                    type="button"
+                    className="link"
+                    onClick={() => handleChangeTab("settings")}
+                  >
+                    Highlight settings
+                  </button>{" "}
+                  tab.
+                </p>
+              </div>
+            )}
+            {isProcessed || isAlreadyProcessed ? (
+              <>
+                <button
+                  type="button"
+                  className={`button button-sm ${
+                    isProcessed
+                      ? "button-success is-shining"
+                      : "button-secondary"
+                  }`}
+                  onClick={() => openFeedItemDetailsMatch("highlight")}
+                >
+                  {isProcessed && (
+                    <span className="icon icon-circle-caret-right animate-bounce-right" />
+                  )}
+                  <span>View highlight</span>
+                </button>
+              </>
+            ) : (
+              <>
+                <div
+                  className={`text-xs text-center ${
+                    processingStatus === "processing" ? "text-ui-400" : ""
+                  }`}
+                >
+                  Create highlight reel
+                </div>
+                <button
+                  type="button"
+                  disabled={processingStatus === "processing"}
+                  className="button button-sm button-primary"
+                  onClick={() => handleAutomate()}
+                >
+                  <span>Automate with AI</span>
+                </button>
+                <Link href={`/stryda/editor${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    disabled={processingStatus === "processing"}
+                    className="button button-sm button-secondary"
+                  >
+                    <span>Customize</span>
+                  </button>
+                </Link>
+              </>
+            )} */}
+
+
+
+            </div>
+          </li>
+          {/* <li
           className={`surface-ui-500 rounded flex items-stretch animate-delay overflow-hidden ${
             isProcessed ? "animate-scale-in" : "animate-slide-in-right"
           }`}
@@ -322,7 +474,8 @@ export default function TopbarHighlightsListItem({
               </>
             )}
           </div>
-        </li>
+        </li> */}
+        </>
       )}
     </>
   );

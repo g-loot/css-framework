@@ -8,6 +8,36 @@ import Link from "next/link";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import ButtonFeedback from "@/components/Button/ButtonFeedback";
 
+const GameToggle = ({ item }) => {
+  const [isOn, setIsOn] = useState(item.isOn);
+  return (
+    <div className="form-toggle form-full">
+      <input
+        defaultChecked={isOn}
+        type="checkbox"
+        name={`recordings-${item.slug}`}
+        id={`recordings-${item.slug}`}
+        onChange={(event) => setIsOn(event.target.checked)}
+      />
+      <label htmlFor={`recordings-${item.slug}`}>
+        <span className="rounded bg-ui-900 flex items-center justify-center p-1">
+          <span
+            className={`icon icon-game-${item.slug}-symbol text-game-${item.slug} text-xl ${
+              isOn ? "" : "opacity-40 grayscale"
+            }`}
+          />
+        </span>
+        <span>{item.name}</span>
+        <span
+          className="form-indicator hidden md:block"
+          data-on="Recordings are on"
+          data-off="Recordings are off"
+        />
+      </label>
+    </div>
+  );
+};
+
 export default function TabSettingsAppSettings() {
   const router = useRouter();
   const { query } = useRouter();
@@ -22,6 +52,29 @@ export default function TabSettingsAppSettings() {
   const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
   const [inputValue, setInputValue] = useState(30);
 
+  const gameItems = [
+    {
+      name: "VALORANT",
+      slug: "valorant",
+      isOn: true,
+    },
+    {
+      name: "League of Legends",
+      slug: "leagueoflegends",
+      isOn: true,
+    },
+    {
+      name: "Fortnite",
+      slug: "fortnite",
+      isOn: false,
+    },
+    {
+      name: "PUBG: BATTLEGROUNDS",
+      slug: "pubg",
+      isOn: false,
+    },
+  ];
+
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
   };
@@ -32,101 +85,6 @@ export default function TabSettingsAppSettings() {
         <div className="max-w-md mx-auto">
           <h2 className="mb-8">App settings</h2>
           <div className="space-y-8 mb-12">
-            <h3>General</h3>
-            <div className="form-group">
-              <label htmlFor="client-version">Client version</label>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="client-version"
-                  id="client-version"
-                  value="0.0.71"
-                  readOnly
-                  disabled
-                />
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    <span className="text-sm">
-                      Click to copy Client version
-                    </span>
-                  }
-                >
-                  <ButtonFeedback
-                    value="0.0.71"
-                    variant="button-ghost rounded-full"
-                    icon="icon-document-copy"
-                    message="Client version copied to your clipboard"
-                  />
-                </Tooltip>
-              </div>
-            </div>
-            <div className="form-group">
-              <label htmlFor="client-id">Client ID</label>
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="client-id"
-                  id="client-id"
-                  value="4728301928412"
-                  readOnly
-                  disabled
-                />
-                <Tooltip
-                  placement="top"
-                  tooltip={
-                    <span className="text-sm">Click to copy Client ID</span>
-                  }
-                >
-                  <ButtonFeedback
-                    value="4728301928412"
-                    variant="button-ghost rounded-full"
-                    icon="icon-document-copy"
-                    message="Client ID copied to your clipboard"
-                  />
-                </Tooltip>
-              </div>
-            </div>
-            <div className="space-y-1">
-              <div className="form-toggle form-full">
-                <input
-                  defaultChecked
-                  type="checkbox"
-                  name="desktop-notification"
-                  id="desktop-notification"
-                />
-                <label htmlFor="desktop-notification">
-                  <span>Desktop notification</span>
-                  <span className="form-indicator hidden md:block" />
-                </label>
-              </div>
-              <p className="text-sm text-ui-300">
-                Stryda can send notifications in Windows to notify you on
-                important updates on the platform so you can stay up-to-date in
-                your latest competitions and more.
-              </p>
-            </div>
-            <div className="space-y-1">
-              <div className="form-toggle form-full">
-                <input
-                  defaultChecked
-                  type="checkbox"
-                  name="run-startup"
-                  id="run-startup"
-                />
-                <label htmlFor="run-startup">
-                  <span>Run Stryda on startup</span>
-                  <span className="form-indicator hidden md:block" />
-                </label>
-              </div>
-              <p className="text-sm text-ui-300">
-                Start Stryda when starting my computer.
-              </p>
-            </div>
-          </div>
-          <hr className="my-8" />
-          <div className="space-y-8 mb-12">
-            <h3>Stryda Recap video recorder</h3>
             <div className="space-y-1">
               <div className="form-toggle form-full">
                 <input
@@ -136,7 +94,7 @@ export default function TabSettingsAppSettings() {
                   id="recap-recorder"
                 />
                 <label htmlFor="recap-recorder">
-                  <span>Stryda Recap video recorder</span>
+                  <span>Recap</span>
                   <span className="form-indicator hidden md:block" />
                 </label>
               </div>
@@ -187,7 +145,7 @@ export default function TabSettingsAppSettings() {
             </div>
             <div className="form-group">
               <label className="text-base" for="range">
-                Allocated space
+                Allocated space for your match recordings
               </label>
               <ul className="space-y-1 mt-2 mb-3 list-outside list-disc pl-4 text-sm text-ui-300">
                 <li>
@@ -255,63 +213,102 @@ export default function TabSettingsAppSettings() {
                     </button>
                   </Link>
                 </div>
-                <div className="form-toggle form-full">
-                  <input
-                    defaultChecked
-                    type="checkbox"
-                    name="recordings-valorant"
-                    id="recordings-valorant"
-                  />
-                  <label htmlFor="recordings-valorant">
-                    <span className="rounded bg-ui-900 flex items-center justify-center p-1">
-                      <span className="icon icon-game-valorant-symbol text-game-valorant text-xl" />
+                {gameItems.map((item, itemIndex) => (
+                  <GameToggle key={itemIndex} item={item} />
+                ))}
+              </div>
+            </div>
+          </div>
+          <hr className="my-8" />
+          <div className="space-y-8 mb-12">
+            <div className="space-y-1">
+              <div className="form-toggle form-full">
+                <input
+                  defaultChecked
+                  type="checkbox"
+                  name="desktop-notification"
+                  id="desktop-notification"
+                />
+                <label htmlFor="desktop-notification">
+                  <span>Desktop notification</span>
+                  <span className="form-indicator hidden md:block" />
+                </label>
+              </div>
+              <p className="text-sm text-ui-300">
+                Stryda can send notifications in Windows to notify you on
+                important updates on the platform so you can stay up-to-date in
+                your latest competitions and more.
+              </p>
+            </div>
+            <div className="space-y-1">
+              <div className="form-toggle form-full">
+                <input
+                  defaultChecked
+                  type="checkbox"
+                  name="run-startup"
+                  id="run-startup"
+                />
+                <label htmlFor="run-startup">
+                  <span>Run Stryda on startup</span>
+                  <span className="form-indicator hidden md:block" />
+                </label>
+              </div>
+              <p className="text-sm text-ui-300">
+                Start Stryda when starting my computer.
+              </p>
+            </div>
+            <div className="form-group">
+              <label htmlFor="client-version">Client version</label>
+              <div className="input-group">
+                <input
+                  type="text"
+                  name="client-version"
+                  id="client-version"
+                  value="0.0.71"
+                  readOnly
+                  disabled
+                />
+                <Tooltip
+                  placement="top"
+                  tooltip={
+                    <span className="text-sm">
+                      Click to copy Client version
                     </span>
-                    <span>VALORANT</span>
-                    <span
-                      className="form-indicator hidden md:block"
-                      data-on="Recordings are on"
-                      data-off="Recordings are off"
-                    />
-                  </label>
-                </div>
-                <div className="form-toggle form-full">
-                  <input
-                    defaultChecked
-                    type="checkbox"
-                    name="recordings-leagueoflegends"
-                    id="recordings-leagueoflegends"
+                  }
+                >
+                  <ButtonFeedback
+                    value="0.0.71"
+                    variant="button-ghost rounded-full"
+                    icon="icon-document-copy"
+                    message="Client version copied to your clipboard"
                   />
-                  <label htmlFor="recordings-leagueoflegends">
-                    <span className="rounded bg-ui-900 flex items-center justify-center p-1">
-                      <span className="icon icon-game-leagueoflegends-symbol text-game-leagueoflegends text-xl" />
-                    </span>
-                    <span>League of Legends</span>
-                    <span
-                      className="form-indicator hidden md:block"
-                      data-on="Recordings are on"
-                      data-off="Recordings are off"
-                    />
-                  </label>
-                </div>
-                <div className="form-toggle form-full">
-                  <input
-                    defaultChecked
-                    type="checkbox"
-                    name="recordings-pubg"
-                    id="recordings-pubg"
+                </Tooltip>
+              </div>
+            </div>
+            <div className="form-group">
+              <label htmlFor="client-id">Client ID</label>
+              <div className="input-group">
+                <input
+                  type="text"
+                  name="client-id"
+                  id="client-id"
+                  value="4728301928412"
+                  readOnly
+                  disabled
+                />
+                <Tooltip
+                  placement="top"
+                  tooltip={
+                    <span className="text-sm">Click to copy Client ID</span>
+                  }
+                >
+                  <ButtonFeedback
+                    value="4728301928412"
+                    variant="button-ghost rounded-full"
+                    icon="icon-document-copy"
+                    message="Client ID copied to your clipboard"
                   />
-                  <label htmlFor="recordings-pubg">
-                    <span className="rounded bg-ui-900 flex items-center justify-center p-1">
-                      <span className="icon icon-game-pubg-symbol text-game-pubg text-xl" />
-                    </span>
-                    <span>PUBG: Battlegrounds</span>
-                    <span
-                      className="form-indicator hidden md:block"
-                      data-on="Recordings are on"
-                      data-off="Recordings are off"
-                    />
-                  </label>
-                </div>
+                </Tooltip>
               </div>
             </div>
           </div>

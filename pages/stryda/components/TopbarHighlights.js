@@ -185,7 +185,9 @@ export default function TopbarHighlights() {
               type="button"
               className={`button button-loader button-unstretch xl:button-stretch ${
                 buttonState > 0 ? "is-active" : ""
-              } ${buttonState === 0 ? "button-ghost" : ""} ${buttonState === 1 ? "button-secondary" : ""} ${buttonState === 2 ? "button-success" : ""}`}
+              } ${buttonState === 0 ? "button-ghost" : ""} ${
+                buttonState === 1 ? "button-secondary" : ""
+              } ${buttonState === 2 ? "button-success" : ""}`}
               onClick={dropdownActive}
             >
               <div
@@ -276,23 +278,29 @@ export default function TopbarHighlights() {
                   </ul>
                   <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
                     {isActive && activeTab === "list" && (
-                      <ul className="p-2 space-y-2">
-                        {feedItems.map((item, itemIndex) => (
-                          <TopbarHighlightsListItem
-                            key={itemIndex}
-                            itemIndex={itemIndex}
-                            id={item.id}
-                            item={prototype.getFeedItemByID(item.id)}
-                            onLoad={handleLoad}
-                            onTab={handleTab}
-                            isAlreadyProcessed={item.isCompleted}
-                            processingID={processingID}
-                            processingStatus={processingStatus}
-                            processingCopy={processingCopy}
-                            processingPercent={processingPercent}
-                          />
-                        ))}
-                      </ul>
+                      <>
+                        {prototype.isPremium ? (
+                          <ul className="p-2 space-y-2">
+                            {feedItems.map((item, itemIndex) => (
+                              <TopbarHighlightsListItem
+                                key={itemIndex}
+                                itemIndex={itemIndex}
+                                id={item.id}
+                                item={prototype.getFeedItemByID(item.id)}
+                                onLoad={handleLoad}
+                                onTab={handleTab}
+                                isAlreadyProcessed={item.isCompleted}
+                                processingID={processingID}
+                                processingStatus={processingStatus}
+                                processingCopy={processingCopy}
+                                processingPercent={processingPercent}
+                              />
+                            ))}
+                          </ul>
+                        ) : (
+                          <ul className="p-2 space-y-2"></ul>
+                        )}
+                      </>
                     )}
                     {isActive && activeTab === "settings" && (
                       <TopbarHighlightsSettings />

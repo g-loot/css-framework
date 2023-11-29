@@ -3,8 +3,6 @@ import React, { useEffect, useState, useContext } from "react";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
-import Link from "next/link";
 import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function TabSettingsGameAccounts() {
@@ -13,8 +11,13 @@ export default function TabSettingsGameAccounts() {
   const prototype = usePrototypeData();
   const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
+  const [isPUBGConnected, setIsPUBGConnected] = useState(false);
+  const [isAlreadyPUBGConnected, setIsAlreadyPUBGConnected] = useState(false);
   const [isValorantConnected, setIsValorantConnected] = useState(false);
   const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
+    useState(false);
+  const [isFortniteConnected, setIsFortniteConnected] = useState(false);
+  const [isAlreadyFortniteConnected, setIsAlreadyFortniteConnected] =
     useState(false);
   const [isLoLConnected, setIsLoLConnected] = useState(false);
   const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
@@ -32,7 +35,7 @@ export default function TabSettingsGameAccounts() {
           <h2 className="mb-8">Game accounts</h2>
           <div className="flex flex-col xl:flex-row items-stretch xl:items-start gap-8">
             <div className="flex-1 order-2 xl:order-1 space-y-8">
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="game-steam">
                   <span className="icon icon-steam" />
                   <span className="flex-1">Steam</span>
@@ -50,7 +53,8 @@ export default function TabSettingsGameAccounts() {
                 <p className="text-sm text-ui-300">
                   This site is not associated with Valve Corp.
                 </p>
-              </div>
+              </div> */}
+
               <div className="form-group">
                 <label htmlFor="game-valorant">
                   <span className="icon icon-game-valorant-symbol text-game-valorant" />
@@ -135,7 +139,11 @@ export default function TabSettingsGameAccounts() {
                         >
                           <span>Connect account</span>
                         </button>
-                        <input type="text" name="game-steam" id="game-steam" />
+                        <input
+                          type="text"
+                          name="game-valorant"
+                          id="game-valorant"
+                        />
                       </div>
                       <p className="text-ui-300 text-sm mt-2 leading-tight">
                         By connecting my VALORANT account I acknowledge making
@@ -260,28 +268,229 @@ export default function TabSettingsGameAccounts() {
                   )}
                 </div>
               </div>
-            </div>
-            <div className="w-full xl:w-72 order-1 xl:order-2 space-y-4">
-              <div className="flex items-start gap-4 p-4 surface-ui-500 rounded">
-                <span className="icon icon-20 icon-link" />
+              <div className="form-group">
+                <label htmlFor="game-fortnite">
+                  <span className="icon icon-game-fortnite-symbol text-game-fortnite" />
+                  <span className="flex-1">Fortnite</span>
+                  {isFortniteConnected && (
+                    <div className="chip chip-xs chip-status chip-success animate-slide-in-bottom">
+                      <span className="icon icon-check" />
+                      <span>Connected</span>
+                    </div>
+                  )}
+                </label>
                 <div>
-                  <h5 className="text-lg mb-2">Connect game accounts</h5>
-                  <ul className="list-outside ml-2 pl-1 space-y-1 list-disc text-sm">
-                    <li>
-                      Needed to play Missions and Ladders on Stryda in API games
-                    </li>
-                    <li>Get stats from your games</li>
-                    <li>To record in-game play with the Stryda recorder.</li>
-                  </ul>
+                  {isFortniteConnected ? (
+                    <>
+                      {isAlreadyFortniteConnected ? (
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-attention-500">
+                            <span className="icon text-xl icon-warning-sign" />
+                            <p className="text-sm leading-tight">
+                              This Fortnite account is already connected to a
+                              Stryda account. Click the following button to
+                              generate a recovery e-mail for that address.
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsFortniteConnected(!isFortniteConnected);
+                              setIsAlreadyFortniteConnected(
+                                !isAlreadyFortniteConnected
+                              );
+                            }}
+                            className="button button-primary w-full"
+                          >
+                            <span>Send recovery email</span>
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          className="input-group"
+                          onClick={() =>
+                            setIsAlreadyFortniteConnected(
+                              !isAlreadyFortniteConnected
+                            )
+                          }
+                        >
+                          <input
+                            type="text"
+                            name="game-fortnite"
+                            id="game-fortnite"
+                            readOnly
+                            disabled
+                            value={`${selectedUser.socials.riotValorantNickname}#${selectedUser.socials.riotValorantHashtag}`}
+                          />
+                          <span>
+                            <Tooltip
+                              tooltip={
+                                <>
+                                  If you have updated your Fortnite account
+                                  recently, it can take up to 15 minutes to see
+                                  the changes.
+                                </>
+                              }
+                            >
+                              <button className="button button-sm button-ghost rounded-full">
+                                <span className="icon icon-c-info" />
+                              </button>
+                            </Tooltip>
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <div className="input-group">
+                        <button
+                          type="button"
+                          className="button button-ghost"
+                          onClick={() =>
+                            setIsFortniteConnected(!isFortniteConnected)
+                          }
+                        >
+                          <span>Connect account</span>
+                        </button>
+                        <input
+                          type="text"
+                          name="game-fortnite"
+                          id="game-fortnite"
+                        />
+                      </div>
+                      <p className="text-ui-300 text-sm mt-2 leading-tight">
+                        By connecting my Fornite account I acknowledge making my
+                        profile public to all users.
+                      </p>
+                    </>
+                  )}
                 </div>
               </div>
-              <div className="flex items-center gap-4 p-4 surface-ui-500 rounded">
-                <span className="icon icon-20 icon-refresh-02" />
+              <div className="form-group">
+                <label htmlFor="game-pubg">
+                  <span className="icon icon-game-pubg-symbol text-game-pubg" />
+                  <span className="flex-1">PUBG: BATTLEGROUNDS</span>
+                  {isPUBGConnected && (
+                    <div className="chip chip-xs chip-status chip-success animate-slide-in-bottom">
+                      <span className="icon icon-check" />
+                      <span>Connected</span>
+                    </div>
+                  )}
+                </label>
                 <div>
-                  <p className="text-sm">
-                    Contact <a href="#" className="link">Stryda support</a> if you need to update your accounts.
-                  </p>
+                  {isPUBGConnected ? (
+                    <>
+                      {isAlreadyPUBGConnected ? (
+                        <div className="space-y-3">
+                          <div className="flex items-center gap-3 text-attention-500">
+                            <span className="icon text-xl icon-warning-sign" />
+                            <p className="text-sm leading-tight">
+                              This PUBG: BATTLEGROUNDS account is already
+                              connected to a Stryda account. Click the following
+                              button to generate a recovery e-mail for that
+                              address.
+                            </p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setIsPUBGConnected(!isPUBGConnected);
+                              setIsAlreadyPUBGConnected(
+                                !isAlreadyPUBGConnected
+                              );
+                            }}
+                            className="button button-primary w-full"
+                          >
+                            <span>Send recovery email</span>
+                          </button>
+                        </div>
+                      ) : (
+                        <div
+                          className="input-group"
+                          onClick={() =>
+                            setIsAlreadyPUBGConnected(!isAlreadyPUBGConnected)
+                          }
+                        >
+                          <input
+                            type="text"
+                            name="game-pubg"
+                            id="game-pubg"
+                            readOnly
+                            disabled
+                            value={`${selectedUser.socials.riotValorantNickname}#${selectedUser.socials.riotValorantHashtag}`}
+                          />
+                          <span>
+                            <Tooltip
+                              tooltip={
+                                <>
+                                  If you have updated your PUBG: BATTLEGROUNDS
+                                  account recently, it can take up to 15 minutes
+                                  to see the changes.
+                                </>
+                              }
+                            >
+                              <button className="button button-sm button-ghost rounded-full">
+                                <span className="icon icon-c-info" />
+                              </button>
+                            </Tooltip>
+                          </span>
+                        </div>
+                      )}
+                    </>
+                  ) : (
+                    <>
+                      <div className="input-group">
+                        <button
+                          type="button"
+                          className="button button-ghost"
+                          onClick={() => setIsPUBGConnected(!isPUBGConnected)}
+                        >
+                          <span>Connect account</span>
+                        </button>
+                        <input type="text" name="game-pubg" id="game-pubg" />
+                      </div>
+                      <p className="text-ui-300 text-sm mt-2 leading-tight">
+                        By connecting my PUBG: BATTLEGROUNDS account I
+                        acknowledge making my profile public to all users.
+                      </p>
+                    </>
+                  )}
                 </div>
+              </div>
+            </div>
+            <div className="w-full xl:w-72 order-1 xl:order-2 space-y-4">
+              {!isValorantConnected &&
+                !isLoLConnected &&
+                !isFortniteConnected &&
+                !isPUBGConnected && (
+                  <div className="flex flex-col items-center gap-4 p-4 surface-ui-500 rounded">
+                    <span className="icon text-3xl icon-c-info" />
+                    <div>
+                      <h5 className="text-base mb-2">
+                        To get the most out of Stryda, we recommend to connect
+                        your game account(s).
+                      </h5>
+                      <p className="text-sm mb-2">For each game added:</p>
+                      <ul className="list-outside ml-2 pl-1 space-y-1 list-disc text-sm">
+                        <li>Get stats from all your matches.</li>
+                        <li>
+                          Get Recap videos of your best moments after each
+                          match.
+                        </li>
+                        <li>
+                          Unlock Stryda Ladders and Missions to progress in the
+                          Battle Pass and earn rewards.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                )}
+              <div className="flex flex-col items-center gap-4 p-4 surface-ui-500 rounded">
+                <span className="icon text-3xl icon-c-question" />
+                <h5 className="text-base">Need to update accounts?</h5>
+                <button type="button" className="button button-secondary">
+                  <span>Contact support</span>
+                </button>
               </div>
             </div>
           </div>

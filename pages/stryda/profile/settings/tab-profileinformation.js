@@ -1,39 +1,20 @@
-import React, { useEffect, useState, useContext } from "react";
+import React, { useState, useContext } from "react";
 
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
-import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
-import Link from "next/link";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function TabSettingsProfileInformation() {
-  const router = useRouter();
-  const { query } = useRouter();
   const prototype = usePrototypeData();
-  const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(prototype.getUserByID(1));
-  const [isValorantConnected, setIsValorantConnected] = useState(false);
-  const [isAlreadyValorantConnected, setIsAlreadyValorantConnected] =
-    useState(false);
-  const [isLoLConnected, setIsLoLConnected] = useState(false);
-  const [isLoLRegionSelected, setIsLoLRegionSelected] = useState(false);
-  const [isAlreadyLoLConnected, setIsAlreadyLoLConnected] = useState(false);
+  const [isDiscordConnected, setIsDiscordConnected] = useState(false);
 
   return (
     <>
       {selectedUser && (
         <div className="max-w-md mx-auto">
           <h2 className="mb-8">Profile information</h2>
-          <p className="mb-12">
-            Profile information Information you have put here is public on your
-            profile. This is a social platform so adding more information about
-            yourself will make it easier for people to connect with you. Read
-            more in our{" "}
-            <a href="#" className="link">
-              Terms and Conditions
-            </a>{" "}
-            to find out more about how Stryda handles your information.
-          </p>
           <div className="grid xl:grid-cols-2 gap-x-16 gap-y-8 mb-12">
             <div className="form-group">
               <label htmlFor="account-username">Username</label>
@@ -45,25 +26,68 @@ export default function TabSettingsProfileInformation() {
               />
             </div>
             <div className="form-group">
-              <label htmlFor="account-email">Email</label>
-              <input
-                type="email"
-                name="account-email"
-                id="account-email"
-                value={selectedUser.email}
-              />
+              <label htmlFor="account-country">Country</label>
+              <div className="input-group">
+                <input
+                  type="text"
+                  name="account-country"
+                  id="account-country"
+                  readOnly
+                  disabled
+                  value="Trinidad and Tobago"
+                />
+                <span>
+                  <Tooltip
+                    tooltip={<>Contact support to change your country.</>}
+                  >
+                    <button className="button button-sm button-ghost rounded-full">
+                      <span className="icon icon-c-info" />
+                    </button>
+                  </Tooltip>
+                </span>
+              </div>
             </div>
           </div>
           <div className="grid xl:grid-cols-2 gap-x-16 gap-y-4 mb-8">
             <div className="form-group">
               <label htmlFor="social-discord">Discord</label>
-              <div className="input-group">
-                <span className="icon icon-discord" />
-                <button className="button button-ghost">
-                  <span>Connect account</span>
-                </button>
-                <input type="text" name="social-discord" id="social-discord" />
-              </div>
+              {isDiscordConnected ? (
+                <div className="input-group">
+                  <span className="icon icon-discord" />
+                  <button
+                    type="button"
+                    className="button button-ghost"
+                    onClick={() => setIsDiscordConnected(!isDiscordConnected)}
+                  >
+                    <span class="icon icon-e-remove" />
+                  </button>
+                  <input
+                    type="text"
+                    name="social-discord"
+                    id="social-discord"
+                    readOnly
+                    disabled
+                    value={selectedUser.nickname}
+                  />
+                </div>
+              ) : (
+                <div className="input-group">
+                  <span className="icon icon-discord" />
+                  <button
+                    type="button"
+                    className="button button-ghost"
+                    onClick={() => setIsDiscordConnected(!isDiscordConnected)}
+                  >
+                    <span>Connect account</span>
+                  </button>
+                  <input
+                    type="text"
+                    name="social-discord"
+                    id="social-discord"
+                    readOnly
+                  />
+                </div>
+              )}
             </div>
             <div className="form-group">
               <label htmlFor="social-tiktok">TikTok</label>
@@ -87,6 +111,16 @@ export default function TabSettingsProfileInformation() {
               </div>
             </div>
           </div>
+          <p className="mb-12 text-sm">
+            Profile information Information you have put here is public on your
+            profile. This is a social platform so adding more information about
+            yourself will make it easier for people to connect with you. Read
+            more in our{" "}
+            <a href="#" className="link">
+              Terms and Conditions
+            </a>{" "}
+            to find out more about how Stryda handles your information.
+          </p>
         </div>
       )}
     </>

@@ -9,8 +9,8 @@ import TextareaExpandable from "@/components/Textarea/TextareaExpandable";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import Link from "next/link";
 import Avatar from "@/components/Avatar/Avatar";
-import ModalAvatarEdit from "./[user_id]/modal-avataredit";
-import ModalBannerEdit from "./[user_id]/modal-banneredit";
+import ModalAvatarEdit from "../[user_id]/modal-avataredit";
+import ModalBannerEdit from "../[user_id]/modal-banneredit";
 
 export default function Home() {
   const router = useRouter();
