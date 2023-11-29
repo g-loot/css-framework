@@ -181,8 +181,11 @@ export default function Ladders() {
                   {!prototype.isPremium && (
                     <div className="space-y-4 text-center mb-4">
                       <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
-                        <span>Ad</span>
-                        <span className="text-sm">Max width: 260px</span>
+                        {/* Replace the following div by the display ad */}
+                        <div>
+                          <div>Ad</div>
+                          <div className="text-sm">Max width: 260px</div>
+                        </div>
                       </div>
                       <Link href={`/stryda/premium`}>
                         <span className="link link-main text-sm">

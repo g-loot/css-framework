@@ -1,8 +1,10 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { usePrototypeData } from "@/contexts/prototype";
 
 export default function TabLaddersRules() {
   const { query } = useRouter();
+  const prototype = usePrototypeData();
   const hasAds = query.ads === "true" ? true : false;
   return (
     <>

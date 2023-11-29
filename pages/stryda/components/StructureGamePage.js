@@ -32,6 +32,7 @@ export default function StructureGamePage({ children, side, ...props }) {
       {!prototype.isPremium && (
         <div className="relative z-30 text-center mt-4 -mb-20">
           <div className="bg-ui-800/75 border border-ui-700 h-[300px] w-full rounded flex flex-col items-center justify-center">
+            {/* Replace the following div by the display ad */}
             <div>
               <div>Ad</div>
               <div className="text-sm">Max width: 1005px</div>

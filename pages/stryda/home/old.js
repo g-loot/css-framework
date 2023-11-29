@@ -125,8 +125,11 @@ export default function Home() {
               <div className="flex-none w-[300px] space-y-4 hidden md:block">
                 <div className="sticky space-y-4 top-16 text-center">
                   <div className="bg-ui-800/75 border border-ui-700 w-full aspect-[1/2] rounded flex flex-col items-center justify-center">
-                    <span>Ad</span>
-                    <span className="text-sm">Max width: 260px</span>
+                    {/* Replace the following div by the display ad */}
+                    <div>
+                      <div>Ad</div>
+                      <div className="text-sm">Max width: 260px</div>
+                    </div>
                   </div>
                   <Link href={`/stryda/premium`}>
                     <span className="link link-main text-sm">Remove ads</span>
@@ -278,8 +281,11 @@ export default function Home() {
               <div className="flex-none w-[300px] space-y-4 hidden 3xl:block">
                 <div className="sticky space-y-4 top-16 text-center">
                   <div className="bg-ui-800/75 border border-ui-700 w-full aspect-[1/2] rounded flex flex-col items-center justify-center">
-                    <span>Ad</span>
-                    <span className="text-sm">Max width: 260px</span>
+                    {/* Replace the following div by the display ad */}
+                    <div>
+                      <div>Ad</div>
+                      <div className="text-sm">Max width: 260px</div>
+                    </div>
                   </div>
                   <Link href={`/stryda/premium`}>
                     <span className="link link-main text-sm">Remove ads</span>
