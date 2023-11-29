@@ -13,8 +13,6 @@ export default function TabLaddersOngoing() {
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const isEmpty = query.empty === "true" ? true : false;
 
-
-
   return (
     <>
       {selectedGame && (
@@ -23,7 +21,9 @@ export default function TabLaddersOngoing() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Solo</h2>
             </div>
-            {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
+            {isEmpty ||
+            selectedGame.ladders?.length === 0 ||
+            !selectedGame.ladders ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
@@ -58,7 +58,9 @@ export default function TabLaddersOngoing() {
             <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
               <h2 className="h5">Clan</h2>
             </div>
-            {isEmpty || selectedGame.ladders?.length === 0 || !selectedGame.ladders ? (
+            {isEmpty ||
+            selectedGame.ladders?.length === 0 ||
+            !selectedGame.ladders ? (
               <>
                 <div className="mt-2 surface sm:rounded px-4 py-8 text-center">
                   <div className="max-w-xs mx-auto">
@@ -154,6 +156,33 @@ export default function TabLaddersOngoing() {
               </div>
             </div>
           </section>
+
+          {/* for demo purposes only */}
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="state-premium"
+                    defaultChecked={prototype.isPremium}
+                    onClick={() => prototype.togglePremium()}
+                  />
+                  <label htmlFor="state-premium">Premium State</label>
+                </div>
+              </div>
+            </section>
+          )}
         </>
       )}
     </>

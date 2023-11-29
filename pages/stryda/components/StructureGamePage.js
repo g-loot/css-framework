@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { usePrototypeData } from "@/contexts/prototype";
 import GamePicker from "../components/GamePicker";
 import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
+import Link from "next/link";
 
 export default function StructureGamePage({ children, side, ...props }) {
   const prototype = usePrototypeData();
@@ -28,6 +29,20 @@ export default function StructureGamePage({ children, side, ...props }) {
 
   return (
     <>
+      {!prototype.isPremium && (
+        <div className="relative z-30 text-center mt-4 -mb-20">
+          <div className="bg-ui-800/75 border border-ui-700 h-[300px] w-full rounded flex flex-col items-center justify-center">
+            <div>
+              <div>Ad</div>
+              <div className="text-sm">Max width: 1005px</div>
+              <div className="text-sm">Max height: 300px</div>
+            </div>
+          </div>
+          <Link href={`/stryda/premium`}>
+            <span className="link link-main text-sm">Remove ads</span>
+          </Link>
+        </div>
+      )}
       <div className="relative z-20 flex flex-col md:flex-row md:items-end md:justify-between md:gap-4 md:mb-8">
         <div className="order-2 md:order-1 flex items-center justify-between px-4 md:px-0 mb-6 mt-8 md:mb-2 md:mt-24">
           <h1 className="text-7xl">{title}</h1>
@@ -40,7 +55,10 @@ export default function StructureGamePage({ children, side, ...props }) {
         <GamePicker />
       </div>
       {selectedGame && !loading && (
-        <div className="absolute z-0 top-0 inset-x-0 animate-slide-in-bottom mix-blend-lighten select-none" style={{ animationDuration: "2s"}}>
+        <div
+          className="absolute z-0 top-0 inset-x-0 animate-slide-in-bottom mix-blend-lighten select-none"
+          style={{ animationDuration: "2s" }}
+        >
           <i className="absolute z-10 inset-0 bg-ui-900/20" />
           <i className="absolute z-10 inset-0 bg-gradient-to-b from-ui-900/0 via-ui-900/80 to-ui-900" />
           <img

@@ -316,10 +316,10 @@ export default function TabMissionsLeaderboard(props) {
                             </button>
                           </Tooltip>
                                   */}
-                            <div className="chip chip-xp chip-sm">
-                              <span>{missionsNo * 75}</span>
-                              <span className="icon icon-xp-symbol"></span>
-                            </div>
+                          <div className="chip chip-xp chip-sm">
+                            <span>{missionsNo * 75}</span>
+                            <span className="icon icon-xp-symbol"></span>
+                          </div>
                         </div>
                       </li>
                     );
@@ -383,6 +383,33 @@ export default function TabMissionsLeaderboard(props) {
           </div>
         </div>
       </section>
+
+      {/* for demo purposes only */}
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="state-premium"
+                defaultChecked={prototype.isPremium}
+                onClick={() => prototype.togglePremium()}
+              />
+              <label htmlFor="state-premium">Premium State</label>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

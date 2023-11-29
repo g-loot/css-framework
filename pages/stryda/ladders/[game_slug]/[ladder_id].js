@@ -8,7 +8,7 @@ import TabLaddersClanLeaderboard from "./tab-clanleaderboards";
 import TabLaddersHowItWorks from "../tab-howitworks";
 import TabLaddersRewards from "./tab-rewards";
 import TabLaddersSoloLeaderboards from "./tab-sololeaderboards";
-import TabLaddersRules from "../tab-glootrules";
+import TabLaddersRules from "../tab-rules";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";

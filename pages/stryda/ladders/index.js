@@ -13,7 +13,7 @@ import TabLaddersOngoing from "./tab-laddersongoing";
 import TabLaddersUpcoming from "./tab-laddersupcoming";
 import TabLaddersCompleted from "./tab-ladderscompleted";
 import TabLaddersHowItWorks from "./tab-howitworks";
-import TabLaddersRules from "./tab-glootrules";
+import TabLaddersRules from "./tab-rules";
 import Loader from "@/pages/stryda/components/Loader";
 import StructureGamePage from "../components/StructureGamePage";
 import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
@@ -178,6 +178,19 @@ export default function Ladders() {
                       )}
                     </li>
                   </ul>
+                  {!prototype.isPremium && (
+                    <div className="space-y-4 text-center mb-4">
+                      <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
+                        <span>Ad</span>
+                        <span className="text-sm">Max width: 260px</span>
+                      </div>
+                      <Link href={`/stryda/premium`}>
+                        <span className="link link-main text-sm">
+                          Remove ads
+                        </span>
+                      </Link>
+                    </div>
+                  )}
                   <div className="surface-ui-700 rounded text-left overflow-hidden">
                     <button
                       type="button"
@@ -195,11 +208,11 @@ export default function Ladders() {
                         allowFullScreen
                       ></iframe>
                     </button>
-                    <h4 className="text-base px-4 my-2">How Ladders work</h4>
-                    <p className="text-sm text-ui-300 px-4 mb-4">
+                    <h4 className="text-base px-4 mb-2">How Ladders work</h4>
+                    {/* <p className="text-sm text-ui-300 px-4 mb-4">
                       Use your stats to climb the ladders and win prizes. No
                       waiting, no dedicated servers. Play on your own schedule!
-                    </p>
+                    </p> */}
                   </div>
                 </div>
               </>

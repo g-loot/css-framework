@@ -32,8 +32,6 @@ export default function TabMissionsMissions() {
     }, 1000);
   }
 
-
-
   return (
     <>
       {selectedGame && (
@@ -45,7 +43,7 @@ export default function TabMissionsMissions() {
               </div>
               <ButtonStatsUpdate />
             </div> */}
-          
+
             {/* {selectedGame.needsSteam && (
               <>
                 <div className="px-4 sm:px-0">
@@ -113,7 +111,9 @@ export default function TabMissionsMissions() {
                       key={missionIndex}
                       mission={mission}
                       index={missionIndex}
-                      gameSlug={prototype.getGameByID(prototype.defaultGameID).slug}
+                      gameSlug={
+                        prototype.getGameByID(prototype.defaultGameID).slug
+                      }
                     />
                   ))}
                 </div>
@@ -143,7 +143,8 @@ export default function TabMissionsMissions() {
                 <div className="max-w-xs mx-auto">
                   <span className="icon icon-missions text-6xl text-ui-500" />
                   <p className="mt-2 text-ui-300">
-                    Participate in the Battlepass and complete missions. They will be listed here.
+                    Participate in the Battlepass and complete missions. They
+                    will be listed here.
                   </p>
                 </div>
               </div>
@@ -215,6 +216,33 @@ export default function TabMissionsMissions() {
               </div>
             </div>
           </section>
+
+          {/* for demo purposes only */}
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="state-premium"
+                    defaultChecked={prototype.isPremium}
+                    onClick={() => prototype.togglePremium()}
+                  />
+                  <label htmlFor="state-premium">Premium State</label>
+                </div>
+              </div>
+            </section>
+          )}
         </>
       )}
     </>

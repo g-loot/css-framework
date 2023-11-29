@@ -103,35 +103,38 @@ export default function Home() {
         <Loader
           loader={
             <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
-              <div className="flex-none w-[300px] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              {!prototype.isPremium && (
+                <div className="flex-none w-[300px] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              )}
               <div className="flex-1 overflow-x-hidden">
-                <div className="max-w-[620px] 2xl:max-w-lg mx-auto space-y-4">
+                <div className="max-w-2xl mx-auto space-y-4">
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                   <div className="flex-1 rounded surface is-loading aspect-video" />
                 </div>
               </div>
-              <div className="flex-none w-[300px] hidden 3xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              {!prototype.isPremium && (
+                <div className="flex-none w-[300px] hidden 3xl:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
+              )}
             </section>
           }
         >
           <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
-            <div className="flex-none w-[300px] space-y-4 hidden md:block">
-              <div className="sticky space-y-4 top-16 text-center">
-                <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
-                  <span>
-                    Ad
-                    <br />
-                    Max width: 300px
-                  </span>
+            {!prototype.isPremium && (
+              <div className="flex-none w-[300px] space-y-4 hidden md:block">
+                <div className="sticky space-y-4 top-16 text-center">
+                  <div className="bg-ui-800/75 border border-ui-700 w-full aspect-[1/2] rounded flex flex-col items-center justify-center">
+                    <span>Ad</span>
+                    <span className="text-sm">Max width: 260px</span>
+                  </div>
+                  <Link href={`/stryda/premium`}>
+                    <span className="link link-main text-sm">Remove ads</span>
+                  </Link>
                 </div>
-                <Link href={`/stryda/premium`}>
-                  <span className="link link-main text-sm">Remove ads</span>
-                </Link>
               </div>
-            </div>
-            <div className="flex-1">
+            )}
+            <div className="flex-1 max-w-2xl mx-auto">
               <section className="surface sm:rounded-lg overflow-hidden mb-8">
                 <Carousel size="carousel-sm" />
               </section>
@@ -271,20 +274,19 @@ export default function Home() {
                 </a>
               </section>
             </div>
-            <div className="flex-none w-[300px] space-y-4 hidden 3xl:block">
-              <div className="sticky space-y-4 top-16 text-center">
-                <div className="surface w-full aspect-[1/2] rounded flex items-center justify-center">
-                  <span>
-                    Ad
-                    <br />
-                    Max width: 300px
-                  </span>
+            {!prototype.isPremium && (
+              <div className="flex-none w-[300px] space-y-4 hidden 3xl:block">
+                <div className="sticky space-y-4 top-16 text-center">
+                  <div className="bg-ui-800/75 border border-ui-700 w-full aspect-[1/2] rounded flex flex-col items-center justify-center">
+                    <span>Ad</span>
+                    <span className="text-sm">Max width: 260px</span>
+                  </div>
+                  <Link href={`/stryda/premium`}>
+                    <span className="link link-main text-sm">Remove ads</span>
+                  </Link>
                 </div>
-                <Link href={`/stryda/premium`}>
-                  <span className="link link-main text-sm">Remove ads</span>
-                </Link>
               </div>
-            </div>
+            )}
           </section>
           {/* for demo purposes only */}
           {prototype.showDemo && (

@@ -12,22 +12,22 @@ export default function TabLaddersRules() {
       >
         <div className="max-w-lg mx-auto gap-8 flex flex-col md:flex-row items-center px-4 sm:px-0">
           <div className="flex-1">
-          <img
-            className="rounded-lg"
-            src="https://res.cloudinary.com/gloot/image/upload/v1676324982/Stryda/illustrations/picture_gamer_4.jpg"
-            width="100%"
-            height="auto"
-            alt=""
-          />
+            <img
+              className="rounded-lg"
+              src="https://res.cloudinary.com/gloot/image/upload/v1676324982/Stryda/illustrations/picture_gamer_4.jpg"
+              width="100%"
+              height="auto"
+              alt=""
+            />
           </div>
           <div className="flex-1">
             <h2 className="text-3xl leading-none mb-4">Stryda rules</h2>
             <p className="text-ui-300 leading-relaxed">
               Stryda wants esports to be safe and fun for everyone, so we take
               player protection very seriously and investigate any suspicious
-              activity. Make sure you read the rules before your first Ladder, so
-              you know what you can and cannot do while playing on Stryda! Here
-              are some of our most important rules:
+              activity. Make sure you read the rules before your first Ladder,
+              so you know what you can and cannot do while playing on Stryda!
+              Here are some of our most important rules:
             </p>
           </div>
         </div>
@@ -65,7 +65,8 @@ export default function TabLaddersRules() {
             <h3 className="text-2xl my-4 leading-tight">One Stryda account</h3>
             <p className="text-ui-300">
               You may only have one Stryda account. Do not create additional
-              Stryda accounts for any reason. Your Stryda account should be in a rank that matches your skill level.
+              Stryda accounts for any reason. Your Stryda account should be in a
+              rank that matches your skill level.
             </p>
           </div>
           <div className="flex-1">
@@ -78,10 +79,27 @@ export default function TabLaddersRules() {
             />
             <h3 className="text-2xl my-4 leading-tight">No cheating</h3>
             <p className="text-ui-300">
-              You should follow the ladder rules and our <a className="link" target="_blank" rel="noreferrer" href="https://stryda.gg/terms-conditions">terms and conditions</a> that you have agreed upon when creating your account. <a className="link" target="_blank" rel="noreferrer" href="https://help.stryda.gg">Click here</a> to read more about what we are considering abusing.
-              Cheating and abusing of any kind is a bannable offense. We take
-              reports of cheating very seriously and investigate them
-              thoroughly.
+              You should follow the ladder rules and our{" "}
+              <a
+                className="link"
+                target="_blank"
+                rel="noreferrer"
+                href="https://stryda.gg/terms-conditions"
+              >
+                terms and conditions
+              </a>{" "}
+              that you have agreed upon when creating your account.{" "}
+              <a
+                className="link"
+                target="_blank"
+                rel="noreferrer"
+                href="https://help.stryda.gg"
+              >
+                Click here
+              </a>{" "}
+              to read more about what we are considering abusing. Cheating and
+              abusing of any kind is a bannable offense. We take reports of
+              cheating very seriously and investigate them thoroughly.
             </p>
           </div>
         </div>
@@ -152,6 +170,33 @@ export default function TabLaddersRules() {
           </div>
         </div>
       </section>
+
+      {/* for demo purposes only */}
+      {prototype.showDemo && (
+        <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+          <div className="absolute top-1 right-1">
+            <button
+              type="button"
+              className="button button-sm button-secondary button-close"
+              onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+            >
+              <span className="icon icon-e-remove" />
+            </button>
+          </div>
+          <div className="form-group pl-4">
+            <div className="form-xs form-toggle">
+              <input
+                type="checkbox"
+                name="feed"
+                id="state-premium"
+                defaultChecked={prototype.isPremium}
+                onClick={() => prototype.togglePremium()}
+              />
+              <label htmlFor="state-premium">Premium State</label>
+            </div>
+          </div>
+        </section>
+      )}
     </>
   );
 }

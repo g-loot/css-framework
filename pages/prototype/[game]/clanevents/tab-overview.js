@@ -114,23 +114,19 @@ export default function TabClanEventLeaderboardOverview() {
                     {selectedGame.clanLeaderboards
                       .filter((g) => g.status === "ongoing")
                       .map((item, itemIndex) => (
-                        <ClanEventCard key={itemIndex} game={game} item={item} />
+                        <ClanEventCard
+                          key={itemIndex}
+                          game={game}
+                          item={item}
+                        />
                       ))}
                   </>
                 )}
               </>
             )}
           </section>
-          {/* for demo purposes only */}
-          <section className="text-sm text-ui-100/0 hover:text-ui-100 flex flex-col items-stretch">
-            <a onClick={() => variablesContext.clanEventEnroll()}>
-              Toggle enrolled{" "}
-              {variablesContext.clanLeaderboardEnrolled ? "ON" : "OFF"}
-            </a>
-            <a onClick={() => setIsEmpty(!isEmpty)}>
-              Toggle empty state {isEmpty ? "ON" : "OFF"}
-            </a>
-          </section>
+
+          
         </>
       )}
     </>

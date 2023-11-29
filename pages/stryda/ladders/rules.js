@@ -3,7 +3,7 @@ import React, { useContext, useEffect, useState } from "react";
 import Ad from "@/components/Ad/Ad";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
 import Structure from "@/pages/stryda/components/Structure";
-import TabLaddersRules from "./tab-glootrules";
+import TabLaddersRules from "./tab-rules";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
