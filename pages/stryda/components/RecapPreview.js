@@ -128,7 +128,6 @@ export default function RecapPreview(props) {
                   </Tooltip>
                   <button
                     type="button"
-                    disabled
                     className="button button-tertiary w-full"
                   >
                     <span>Delete recording</span>
