@@ -55,7 +55,7 @@ export default function WidgetCompetitions(props) {
       <div className="surface rounded">
         <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
           <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
-            <h2 className="text-base text-ui-100 interactive">Competitions</h2>
+            <h2 className="text-base text-ui-100 interactive">Ladders</h2>
           </Link>
           {/*
                   <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
@@ -100,7 +100,7 @@ export default function WidgetCompetitions(props) {
         {state === "empty" && (
           <>
             <div className="bg-ui-850 p-4">
-              <h3 className="text-base">Ladders & Clan Events</h3>
+              <h3 className="text-base">Ladders</h3>
               <button
                 type="button"
                 className="rounded-4 overflow-hidden mt-3 mb-2 surface interactive"

@@ -29,16 +29,16 @@ export default function RecordingDeletedConfirmation(props) {
                 <button
                   type="button"
                   onClick={() => uiContext.closeModal()}
-                  className="button w-32 button-error"
+                  className="button w-32 button-primary"
                 >
-                  <span>Delete</span>
+                  <span>Cancel</span>
                 </button>
                 <button
                   type="button"
                   onClick={() => uiContext.closeModal()}
                   className="button w-32 button-secondary"
                 >
-                  <span>Cancel</span>
+                  <span>Delete</span>
                 </button>
               </div>
             </div>

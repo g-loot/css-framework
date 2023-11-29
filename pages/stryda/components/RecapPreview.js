@@ -126,11 +126,13 @@ export default function RecapPreview(props) {
                       <span>Edit in recap editor</span>
                     </button>
                   </Tooltip>
-                  <div>
-                    <a href="#" className="link link-error text-sm">
-                      Delete recording
-                    </a>
-                  </div>
+                  <button
+                    type="button"
+                    disabled
+                    className="button button-tertiary w-full"
+                  >
+                    <span>Delete recording</span>
+                  </button>
                 </div>
               </div>
             </div>

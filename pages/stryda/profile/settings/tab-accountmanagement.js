@@ -54,8 +54,6 @@ export default function TabSettingsAccountManagement() {
                 name="account-email"
                 id="account-email"
                 value={selectedUser.email}
-                readOnly
-                disabled
               />
             </div>
             <div className="form-group">

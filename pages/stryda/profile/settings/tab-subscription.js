@@ -32,7 +32,7 @@ export default function TabSettingsSubscription() {
         <div className="max-w-md mx-auto">
           <h2 className="mb-8">Subscription &amp; payment</h2>
           <div className="mb-12">
-            <h3 className="mb-4">Subscription</h3>
+            <h3 className="mb-4">Subscription details</h3>
             <div className="mb-4 surface-ui-700 rounded p-4 space-y-2">
               <div className="flex items-start justify-between gap-2">
                 <div>Your current Premium Plan</div>
