@@ -76,6 +76,31 @@ const DSpage = () => {
         </div>
       </div>
 
+      {/* States color */}
+      <div className="mb-12">
+        <Anchor title="States color" />
+
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 space-y-4 text-center flex flex-col">
+                <a className="link link-error">Yes, I am a link</a>
+                <a className="link link-success">Yes, I am a link</a>
+                <a className="link link-attention">Yes, I am a link</a>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/xefLjy0m/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Underline on hover */}
       <div className="mb-12">
         <Anchor title="Underline on hover" />

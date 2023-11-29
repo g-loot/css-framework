@@ -240,7 +240,7 @@ export default function AuthLogin() {
               <div className="flex items-center gap-4">
                 <button
                   type="button"
-                  className="chip chip-secondary w-full min-h-[42px]"
+                  className="chip chip-secondary w-full"
                   onClick={() =>
                     setLocationDropdownShown(!locationDropdownShown)
                   }

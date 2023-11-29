@@ -4,6 +4,8 @@ import Anchor from "@/components/DesignSystem/DSanchor";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import RecapPreview from "../stryda/components/RecapPreview";
+import RecapPublished from "../stryda/components/RecapPublished";
+import RecordingDeletedConfirmation from "../stryda/components/RecordingDeletedConfirmation";
 
 const RecapItem = ({ imageOverlay, rigthContent, actionContent }) => {
   return (
@@ -657,8 +659,16 @@ const DSpage = () => {
       <div className="mb-8">
         <Anchor title="Modals" />
         <Anchor title="Recap preview" level={3} />
-        <div>
+        <div className="mb-4">
           <RecapPreview />
+        </div>
+        <Anchor title="Recap published" level={3} />
+        <div className="mb-4 max-w-md">
+          <RecapPublished />
+        </div>
+        <Anchor title="Delete recording confirmation" level={3} />
+        <div className="mb-4 max-w-md">
+          <RecordingDeletedConfirmation />
         </div>
       </div>
     </>

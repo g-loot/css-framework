@@ -465,7 +465,7 @@ const DSpage = () => {
                     <div className="form-group">
                       <label htmlFor="send-message">Send message</label>
                       <div className="input-group">
-                        <button type="button" className="button button-tertiary">
+                        <button type="button" className="button button-ghost">
                           <span>Send message</span>
                         </button>
                         <input

@@ -109,7 +109,8 @@ select:-webkit-autofill:focus {
     focus-visible:outline-1
     focus-visible:outline-ui-300
     focus-visible:z-20
-    p-2
+    px-2
+    py-1.5
     ;
   }
 
@@ -1349,8 +1350,8 @@ input {
       bg-ui-500/75
       text-ui-200
       text-sm
-      px-2
-      min-w-[42px]
+      px-2.5
+      min-w-[38px]
       ;
       &:first-child {
         @apply
@@ -1415,9 +1416,14 @@ input {
     &:not(.button-primary) {
       @apply
       absolute
-      right-1
+      right-0
       p-2.5
-      ;      
+      ;
+      &.button-sm {
+        @apply
+        right-0.5
+        ;
+      }
     }
 
     /* &.button-sm {
@@ -1760,8 +1766,8 @@ input.input-number,
       opacity-100
       rounded-full
       mx-auto
-      bottom-2.5
-      right-2.5
+      bottom-1.5
+      right-1.5
       animate-[input-loader-rotate_1s_linear_infinite]
       ;
     }

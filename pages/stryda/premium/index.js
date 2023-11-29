@@ -30,14 +30,11 @@ export default function Premium() {
 
   const premiumTableItems = [
     {
-      name: "View all stats",
-    },
-    {
       name: "Free gift card",
       tooltip: "Get an instant giftcard with your subscription purchase.",
     },
     {
-      name: "Extra tokens for Token purchases",
+      name: "Additional Tokens for Token purchases",
     },
     {
       name: "25% XP Boost",
@@ -47,16 +44,22 @@ export default function Premium() {
     },
     {
       name: "Battle Pass speed boost",
+      tooltip: "Get Battle Pass rewards faster.",
     },
     {
-      name: "Battle Pass premium rewards",
+      name: "Battle Pass Premium rewards",
+      tooltip: "Unlock exclusive rewards on your Battle Pass.",
     },
     {
       name: "Premium Ladders access",
+      tooltip: "Compete in exclusive Ladders for Premium users.",
     },
     {
       name: "Mission discards",
       tooltip: "Reroll your Missions.",
+    },
+    {
+      name: "Full overview of your stats",
     },
   ];
 
@@ -67,7 +70,7 @@ export default function Premium() {
         "https://res.cloudinary.com/gloot/image/upload/v1700657413/Stryda/illustrations/Premium_paragraph_logo_battle_pass.svg",
       subtitle: "Get more rewards with the Stryda Battle Pass!",
       description:
-        "Every Battle Pass will bring you extra Premium rewards such as avatar frames, background images, tokens or coins. Each extra token and coin you will get you closer to a gift card in one of your favorite games. Check the shop for gift cards.",
+        "Every Battle Pass will bring you extra Premium rewards such as avatar frames, profile banners, Tokens or coins. Each extra Token and coin you will get you closer to a gift card. Head over to the shop for gift cards.",
       image:
         "https://res.cloudinary.com/gloot/image/upload/v1700657886/Stryda/illustrations/Premium_marketing_perks_battle_pass.webp",
     },
@@ -77,7 +80,7 @@ export default function Premium() {
         "https://res.cloudinary.com/gloot/image/upload/v1700657413/Stryda/illustrations/Premium_paragraph_logo_xp_boost.svg",
       subtitle: "Get a 25% XP boost on our platform",
       description:
-        "With an increased XP you will complete the Battle Pass quicker. XP boost can be gained through missions and Ladder matches.",
+        "With an increased XP you will complete the Battle Pass and unlock rewards quicker. XP boost can be gained through Missions and Ladder matches.",
       image:
         "https://res.cloudinary.com/gloot/image/upload/v1700651120/Stryda/illustrations/Premium_marketing_perks_xp_boost.webp",
     },
@@ -87,7 +90,7 @@ export default function Premium() {
         "https://res.cloudinary.com/gloot/image/upload/v1700657413/Stryda/illustrations/Premium_paragraph_logo_skins.svg",
       subtitle: "Buy skins with Stryda gift cards",
       description:
-        "You can buy gifts from the shop with Stryda coins, which can be gained thought the Battle Pass and Ladders. The gift cards will help you unlock new skins in your favorite games. We have a variation of gift cards that can be used on Steam, Amazon, Riot or PUBG. ",
+        "Buy gift cards from the shop with Stryda coins, which you earn through the Battle Pass and Ladders. The gift cards will help you unlock new skins in your favorite games. We have a variation of gift cards that can be used on Steam, Amazon, Riot or PUBG. ",
       image:
         "https://res.cloudinary.com/gloot/image/upload/v1700651120/Stryda/illustrations/Premium_marketing_perks_skins.webp",
     },
@@ -163,7 +166,7 @@ export default function Premium() {
                 <ul className="child:flex child:items-stretch child:border-b child:border-ui-500 text-sm leading-tight">
                   <li className="border-none child:pb-3 child:pt-2">
                     <div className="flex-1">Features</div>
-                    <div className="w-24 text-center">Freemium</div>
+                    <div className="w-24 text-center hidden sm:block">Freemium</div>
                     <div className="w-24 text-center text-premium-500 border-x border-t border-ui-500 bg-ui-600 rounded-t">
                       Premium
                     </div>
@@ -187,7 +190,7 @@ export default function Premium() {
                           </Tooltip>
                         )}
                       </div>
-                      <div className="w-24 text-center flex items-center justify-center">
+                      <div className="w-24 text-center hidden sm:flex items-center justify-center">
                         <span className="icon icon-e-remove" />
                       </div>
                       <div className="w-24 text-center flex items-center justify-center text-premium-500 border-x border-ui-500 bg-ui-600 py-2">

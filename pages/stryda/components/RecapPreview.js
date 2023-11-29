@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
-import FeedItemComments from "./FeedItemComments";
 import FeedItemMatchTabHighlight from "./FeedItemMatchTabHighlight";
 import FeedItemMatchTabSummary from "./FeedItemMatchTabSummary";
 import FeedItemMatchTabActivity from "./FeedItemMatchTabActivity";
-import FeedItemMatchBase from "./FeedItemMatchBase";
 import { dataFeedItems } from "@/mock-data/data-feed";
 import { dataMatches } from "@/mock-data/data-matches";
+import Tooltip from "@/components/Tooltip/Tooltip";
 
 export default function RecapPreview(props) {
   const item = props.item || dataFeedItems[0];
@@ -97,11 +96,41 @@ export default function RecapPreview(props) {
                   )}
                 </div>
               )}
-              <div className="w-full lg:w-60 order-1 lg:order-2 lg:border-l lg:border-t lg:border-ui-700 p-2 bg-ui-850">
-                <h2 className="h5">Publish recap post</h2>
-                <div className="form-group">
-                  <label htmlFor="recap-comment">Comment</label>
-                  <textarea name="recap-comment" id="recap-comment" class="max-h-[200px] resize-none" rows="6"></textarea>
+              <div className="w-full lg:w-72 order-1 lg:order-2 lg:border-l lg:border-t lg:border-ui-700 p-4 bg-ui-850 lg:flex lg:flex-col justify-between">
+                <div className="space-y-2 mb-2">
+                  <h2 className="h5">Publish recap post</h2>
+                  <div className="form-group">
+                    <label htmlFor="recap-comment">Comment</label>
+                    <textarea
+                      name="recap-comment"
+                      id="recap-comment"
+                      class="max-h-[200px] resize-none"
+                      rows="6"
+                      placeholder="e.g. I did a sweet 20 bomb!"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="button"
+                    className="button button-primary w-full"
+                  >
+                    <span>Save &amp; publish recap</span>
+                  </button>
+                </div>
+                <div className="flex flex-col items-stretch gap-2 text-center">
+                  <Tooltip tooltip={<>Coming soon!</>} placement="top">
+                    <button
+                      type="button"
+                      disabled
+                      className="button button-tertiary w-full"
+                    >
+                      <span>Edit in recap editor</span>
+                    </button>
+                  </Tooltip>
+                  <div>
+                    <a href="#" className="link link-error text-sm">
+                      Delete recording
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>

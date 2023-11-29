@@ -38,6 +38,30 @@
     visited:text-premium-700
     ;
   }
+
+  &.link-error {
+    @apply
+    text-error-500
+    hover:text-error-300
+    visited:text-error-700
+    ;
+  }
+
+  &.link-attention {
+    @apply
+    text-attention-500
+    hover:text-attention-300
+    visited:text-attention-700
+    ;
+  }
+
+  &.link-success {
+    @apply
+    text-success-500
+    hover:text-success-300
+    visited:text-success-700
+    ;
+  }
   
   &.link-hover {
     @apply

@@ -54,7 +54,7 @@ export default function ModalShareActivity(props) {
                     >
                       <span className="icon text-4xl icon-tiktok text-mono-100" />
                     </button>
-                    <div className="mt-2 truncate">Tik-Tok</div>
+                    <div className="mt-2 truncate">TikTok</div>
                   </div>
                   {/* <div>
                     <button

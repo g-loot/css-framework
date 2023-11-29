@@ -66,7 +66,7 @@ export default function TabSettingsProfileInformation() {
               </div>
             </div>
             <div className="form-group">
-              <label htmlFor="social-tiktok">Tik-Tok</label>
+              <label htmlFor="social-tiktok">TikTok</label>
               <div className="input-group">
                 <span className="icon icon-tiktok" />
                 <input type="text" name="social-tiktok" id="social-tiktok" />
