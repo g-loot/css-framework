@@ -150,7 +150,7 @@ export default function Clan() {
                     </p>
                   </div>
                   <div className="mt-4 flex gap-4 items-center">
-                    <Link href="/prototype/clans/search">
+                    <Link href="/stryda/search?tab=clans">
                       <button
                         type="button"
                         className="button button-sm button-primary"

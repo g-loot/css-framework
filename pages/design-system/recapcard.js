@@ -221,7 +221,6 @@ const DSpage = () => {
                       sure you have at least x GB available on your computer.
                     </div>
                   }
-                  placement="right"
                 >
                   <div className="rounded-full p-3 bg-ui-800/75 backdrop-blur-sm">
                     <span className="icon text-xl icon-warning-sign text-error-500" />
@@ -247,6 +246,40 @@ const DSpage = () => {
                       <span className="icon icon-trash" />
                     </button>
                   </div>
+                </>
+              }
+            />
+          </div>
+          <div className="flex-1">
+            <iframe
+              className="rounded"
+              width="100%"
+              height="200"
+              src="//jsfiddle.net/augustin_hiebel/a62kot7j/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+            ></iframe>
+          </div>
+        </div>
+        <Anchor title="Recording corrupted" level={3} />
+        <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
+          <div className="flex-1 sm:w-[420px]">
+            <RecapItem
+              state="ready"
+              imageOverlay={
+                <div className="rounded-full p-3 bg-ui-800/75 backdrop-blur-sm">
+                  <span className="icon text-xl icon-warning-sign text-error-500" />
+                </div>
+              }
+              rigthContent={
+                <>
+                  <div className="flex-1 flex items-center justify-center">
+                    <p>Could not create a recording from your match</p>
+                  </div>
+                  <button
+                    type="button"
+                    className="w-full button button-sm button-secondary"
+                  >
+                    <span>Remove</span>
+                  </button>
                 </>
               }
             />

@@ -15,6 +15,8 @@ import ModalHighlightViewer from "../modal-highlightviewer";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 import Tooltip from "@/components/Tooltip/Tooltip";
 import Link from "next/link";
+import CardRecap from "./CardRecap";
+import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 
 export default function TopbarHighlightsListItem({
   item,
@@ -102,6 +104,69 @@ export default function TopbarHighlightsListItem({
     return baseUrl + gamemode + endUrl;
   };
 
+  const handleRightContent = () => {
+    if (!prototype.isPremium && itemIndex === 0) {
+      return (
+        <>
+          <h5>Check it out Stryda Recap videos!</h5>
+          <p>This is an example of a recap video</p>
+        </>
+      );
+    }
+    if (!prototype.isPremium && itemIndex > 0) {
+      return (
+        <>
+          <div className="flex-1 flex items-center justify-center">
+            <h5>Recording ready</h5>
+          </div>
+          <Tooltip tooltip="Get Premium to create a recap of this match">
+            <button
+              type="button"
+              disabled
+              className="flex-1 button button-sm button-secondary"
+            >
+              <span>Create recap</span>
+            </button>
+          </Tooltip>
+        </>
+      );
+    }
+  };
+  const handleActionContent = () => {
+    if (!prototype.isPremium && itemIndex === 0) {
+      return (
+        <button
+          type="button"
+          className="group surface flex items-center px-6 py-3 gap-4 interactive rounded-b"
+        >
+          <PremiumLogo
+            src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+            width="145"
+            height="auto"
+            className="mx-auto"
+          />
+          <p className="flex-1 text-sm leading-tight">
+            Get recaps of <b className="text-ui-100">your best moments</b> in
+            your favorite games - automatically!
+          </p>
+          <span className="icon icon-ctrl-right text-premium-500 group-hover:translate-x-1 group-hover:text-ui-100 transition-all ease-in-out duration-150" />
+        </button>
+      );
+    }
+  };
+  const handleImageOverlay = () => {
+    if (!prototype.isPremium && itemIndex === 0) {
+      return (
+        <button
+          type="button"
+          class="button button-primary button-lg rounded-full"
+        >
+          <span class="icon icon-triangle-right" />
+        </button>
+      );
+    }
+  };
+
   function openModalHighlightViewer(match) {
     uiContext.openModal(<ModalHighlightViewer item={match} />);
   }
@@ -119,7 +184,15 @@ export default function TopbarHighlightsListItem({
     <>
       {item && selectedMatch && (
         <>
-          <li className="card-recap">
+          <CardRecap
+            item={item}
+            match={selectedMatch}
+            isInactive={!prototype.isPremium && itemIndex > 0}
+            actionContent={handleActionContent()}
+            imageOverlay={handleImageOverlay()}
+            rigthContent={handleRightContent()}
+          />
+          <li className="card-recap !hidden">
             <div className="card-image">
               <div className="card-game">
                 <span className="icon icon-game-valorant-symbol text-game-valorant" />
@@ -150,16 +223,7 @@ export default function TopbarHighlightsListItem({
               <div className="card-overlay"></div>
             </div>
             <div className="card-content">
-
-
-
-
-
-
-
-
-
-            {/* {id === processingID && processingStatus === "processing" && (
+              {/* {id === processingID && processingStatus === "processing" && (
               <div
                 className="progresscontainer"
                 style={{ "--percent": processingPercent }}
@@ -271,9 +335,6 @@ export default function TopbarHighlightsListItem({
                 </Link>
               </>
             )} */}
-
-
-
             </div>
           </li>
           {/* <li

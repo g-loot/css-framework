@@ -11,7 +11,7 @@ import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import ModalRemoveFriend from "./modal-remove-friend";
 import ModalAvatarEdit from "./modal-avataredit";
-import TabProfileOverview from "./tab-overview";
+import TabProfileFeed from "./tab-feed";
 import TabProfileHighlights from "./tab-highlights";
 import TabProfileActivity from "./tab-activity";
 import TabProfileAchievements from "./tab-achievements";
@@ -114,7 +114,7 @@ export default function Profile() {
   const { user_id } = router.query;
   const { query } = useRouter();
   const { tab } = router.query;
-  const defaultTab = "overview";
+  const defaultTab = "feed";
   const selectedTab = tab ? tab : defaultTab;
   const modalAchievement = query.modalachievement === "true" ? true : false;
   const modalLeveLUp = query.modallevelup === "true" ? true : false;
@@ -163,20 +163,21 @@ export default function Profile() {
 
   const TabsItems = [
     {
-      label: "Overview",
-      url: "overview",
-      component: TabProfileOverview,
+      label: "Feed",
+      url: "feed",
+      component: TabProfileFeed,
     },
     {
-      label: "Highlights",
-      url: "highlights",
+      label: "Recaps",
+      url: "recaps",
       component: TabProfileHighlights,
+      number: 9,
     },
-    {
-      label: "Activity",
-      url: "activity",
-      component: TabProfileActivity,
-    },
+    // {
+    //   label: "Activity",
+    //   url: "activity",
+    //   component: TabProfileActivity,
+    // },
     {
       label: `Achievements`, // (${achievementLength})`,
       url: "achievements",
@@ -395,8 +396,8 @@ export default function Profile() {
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
                 <div className="flex-1 overflow-hidden">
-                  <nav className="mt-4 pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0">
-                    <ul className="tabs tabs-tertiary">
+                  <nav className="pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 border-b border-ui-700">
+                    <ul className="tabs">
                       {TabsItems.map((item, itemIndex) => (
                         <li key={item}>
                           <Link

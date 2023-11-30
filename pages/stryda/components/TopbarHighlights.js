@@ -77,7 +77,7 @@ export default function TopbarHighlights() {
   const handleClickSettings = () => {
     window.location.href = `/stryda/profile/settings?tab=app-settings`;
     setActive(false);
-  }
+  };
 
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
@@ -287,37 +287,27 @@ export default function TopbarHighlights() {
                       Latest match recordings
                     </h5>
                   </div>
-                  <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
-                    {isActive && activeTab === "list" && (
-                      <>
-                        {prototype.isPremium ? (
-                          <ul className="p-2 space-y-2">
-                            {feedItems.map((item, itemIndex) => (
-                              <TopbarHighlightsListItem
-                                key={itemIndex}
-                                itemIndex={itemIndex}
-                                id={item.id}
-                                item={prototype.getFeedItemByID(item.id)}
-                                onLoad={handleLoad}
-                                onTab={handleTab}
-                                isAlreadyProcessed={item.isCompleted}
-                                processingID={processingID}
-                                processingStatus={processingStatus}
-                                processingCopy={processingCopy}
-                                processingPercent={processingPercent}
-                              />
-                            ))}
-                          </ul>
-                        ) : (
-                          <ul className="p-2 space-y-2">
-                            <CardRecap />
-                          </ul>
-                        )}
-                      </>
-                    )}
-                    {isActive && activeTab === "settings" && (
+                  <div className="max-h-[calc(100dvh-143px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
+                    <ul className="p-2 space-y-2">
+                      {feedItems.map((item, itemIndex) => (
+                        <TopbarHighlightsListItem
+                          key={itemIndex}
+                          itemIndex={itemIndex}
+                          id={item.id}
+                          item={prototype.getFeedItemByID(item.id)}
+                          onLoad={handleLoad}
+                          onTab={handleTab}
+                          isAlreadyProcessed={item.isCompleted}
+                          processingID={processingID}
+                          processingStatus={processingStatus}
+                          processingCopy={processingCopy}
+                          processingPercent={processingPercent}
+                        />
+                      ))}
+                    </ul>
+                    {/* {isActive && activeTab === "settings" && (
                       <TopbarHighlightsSettings />
-                    )}
+                    )} */}
                   </div>
                   <div className="pb-3 pl-3 pt-1 pr-1 space-y-1 bg-ui-800 border-t border-ui-500">
                     <div className="flex items-center justify-between">

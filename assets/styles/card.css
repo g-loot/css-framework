@@ -1198,14 +1198,7 @@
 
   /* states */
 
-  &.is-inactive {
-    > .card-image {
-      @apply
-      child:opacity-30
-      [&>img]:opacity-5
-      ;
-    }
-  }
+  &.is-inactive,
   &:has(.progresscontainer) {
     > .card-image {
       @apply
