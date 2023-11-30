@@ -1011,6 +1011,12 @@
     select-none
     ;
 
+    &:last-child {
+      @apply
+      border-r-0
+      ;
+    }
+
     > div:not(.card-overlay) {
       @apply
       relative

@@ -13,12 +13,34 @@ export default function RecordingDeletedConfirmation(props) {
   return (
     <>
       {item && match && (
-        <div className="modal modal-center max-w-md">
+        <div className="modal modal-center max-w-sm">
           <div className="modal-content">
             <div className="modal-body">
               <h2 className="modal-title">Delete recording</h2>
-              <div className="mt-3 mb-2 rounded surface-ui-600 overflow-hidden">
-                <FeedItemMatchTabSummary match={match} item={item} />
+              <div className="my-3 card-recap w-72 mx-auto">
+                <div className="card-image">
+                  <div className="card-game">
+                    <span className="icon icon-game-valorant-symbol text-game-valorant" />
+                  </div>
+                  <div className="card-date">4 min. ago</div>
+                  <div className="card-user">
+                    <div className="avatar avatar-simple avatar-xs">
+                      <div>
+                        <img src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/agent-avatar-cypher.webp" alt="" />
+                      </div>
+                    </div>
+                    <span>Cypher</span>
+                  </div>
+                  <div className="card-meta">
+                    <img src="https://res.cloudinary.com/gloot/image/upload/v1695129417/Stryda/stats/valorant/Game_Mode_Competitive.webp" alt="" />
+                    <span>Competitive</span>
+                    <span>Haven</span>
+                  </div>
+                  <img
+                    src="https://res.cloudinary.com/gloot/image/upload/Stryda/stats/valorant/map-piazza.jpg"
+                    alt=""
+                  />
+                </div>
               </div>
               <p>
                 Once you delete the match recording all video files connected to

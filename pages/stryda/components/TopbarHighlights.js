@@ -74,6 +74,11 @@ export default function TopbarHighlights() {
     }
   };
 
+  const handleClickSettings = () => {
+    window.location.href = `/stryda/profile/settings?tab=app-settings`;
+    setActive(false);
+  }
+
   useEffect(() => {
     document.addEventListener("click", handleClickOutside, true);
     return () => {
@@ -257,7 +262,7 @@ export default function TopbarHighlights() {
               )}
               {!isEmpty && (
                 <>
-                  <ul className="tabs tabs-stretch text-sm border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600">
+                  {/* <ul className="tabs tabs-stretch text-sm border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600">
                     <li>
                       <button
                         type="button"
@@ -276,7 +281,12 @@ export default function TopbarHighlights() {
                         <span>Highlights settings</span>
                       </button>
                     </li>
-                  </ul>
+                  </ul> */}
+                  <div className="border-b border-ui-500 bg-gradient-to-b from-ui-500/25 to-ui-600 p-2">
+                    <h5 className="text-base font-bold">
+                      Latest match recordings
+                    </h5>
+                  </div>
                   <div className="max-h-[calc(100dvh-92px-1rem)] bg-ui-700 overflow-x-hidden overflow-y-auto scrollbar-desktop">
                     {isActive && activeTab === "list" && (
                       <>
@@ -300,9 +310,7 @@ export default function TopbarHighlights() {
                           </ul>
                         ) : (
                           <ul className="p-2 space-y-2">
-
                             <CardRecap />
-                            
                           </ul>
                         )}
                       </>
@@ -310,6 +318,31 @@ export default function TopbarHighlights() {
                     {isActive && activeTab === "settings" && (
                       <TopbarHighlightsSettings />
                     )}
+                  </div>
+                  <div className="pb-3 pl-3 pt-1 pr-1 space-y-1 bg-ui-800 border-t border-ui-500">
+                    <div className="flex items-center justify-between">
+                      <div className="text-sm">
+                        <span>My Stryda storage</span>{" "}
+                        <span className="text-ui-300">
+                          (33GB of 50GB available)
+                        </span>
+                      </div>
+                      <button
+                        type="button"
+                        class="button rounded-full button-ghost"
+                        onClick={() => handleClickSettings()}
+                      >
+                        <span class="icon icon-cogwheel" />
+                      </button>
+                    </div>
+                    <div className="pr-2">
+                      <div
+                        className="progressbar progressbar-tick"
+                        style={{ "--percent": 76 }}
+                      >
+                        <div />
+                      </div>
+                    </div>
                   </div>
                 </>
               )}

@@ -663,11 +663,11 @@ const DSpage = () => {
           <RecapPreview />
         </div>
         <Anchor title="Recap published" level={3} />
-        <div className="mb-4 max-w-md">
+        <div className="mb-4 max-w-sm">
           <RecapPublished />
         </div>
         <Anchor title="Delete recording confirmation" level={3} />
-        <div className="mb-4 max-w-md">
+        <div className="mb-4 max-w-sm">
           <RecordingDeletedConfirmation />
         </div>
       </div>

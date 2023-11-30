@@ -33,7 +33,7 @@ export default function RecapPreview(props) {
       <div className="modal">
         <div className="modal-content p-0">
           <div className="modal-body">
-            <h2 className="modal-title text-center p-4">Recap preview</h2>
+            <h2 className="modal-title text-center p-4">Adding recap to match post</h2>
             <div className="flex flex-col lg:flex-row lg:items-stretch lg:rounded-bl overflow-hidden">
               {item && match && (
                 <div className="flex-1 order-2 lg:order-1 video text-0">
@@ -100,10 +100,10 @@ export default function RecapPreview(props) {
                 <div className="space-y-2 mb-2">
                   <h2 className="h5">Publish recap post</h2>
                   <div className="form-group">
-                    <label htmlFor="recap-comment">Comment</label>
+                    <label htmlFor="recap-text">How did that game go?</label>
                     <textarea
-                      name="recap-comment"
-                      id="recap-comment"
+                      name="recap-text"
+                      id="recap-text"
                       class="max-h-[200px] resize-none"
                       rows="6"
                       placeholder="e.g. I did a sweet 20 bomb!"

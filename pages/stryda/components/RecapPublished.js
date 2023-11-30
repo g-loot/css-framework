@@ -23,7 +23,7 @@ export default function RecapPublished() {
 
   return (
     <>
-      <div className="modal modal-center max-w-md">
+      <div className="modal modal-center max-w-sm">
         <div className="modal-content">
           <div className="modal-body">
             <h2 className="modal-title">Recap published!</h2>
@@ -39,14 +39,14 @@ export default function RecapPublished() {
             />
             <div className="w-full max-w-sm mx-auto">
               <p>Want to share it outside Stryda? No problem!</p>
-              <div className="form-group mt-2 mb-3">
+              <div className="form-group mt-3 mb-4">
                 <div className="input-group">
                   <button
                     type="button"
                     onClick={copyUrlToClipboard}
-                    className="button button-primary"
+                    className="button button-ghost"
                   >
-                    <span>Copy</span>
+                    <span>Copy link</span>
                   </button>
                   <input
                     ref={urlRef}
@@ -61,7 +61,7 @@ export default function RecapPublished() {
                 className="button button-secondary w-full max-w-xs"
               >
                 <span className="icon icon-data-download" />
-                <span>Save as...</span>
+                <span>Download</span>
               </button>
               {/* <div className="flex items-center justify-center gap-2 ">
                 <button
@@ -86,7 +86,7 @@ export default function RecapPublished() {
                 className="button button-primary w-full max-w-xs"
                 onClick={() => uiContext.closeModal()}
               >
-                <span>Okay</span>
+                <span>Go to feed</span>
               </button>
             </div>
           </div>
