@@ -35,26 +35,6 @@ export default function TabSettingsGameAccounts() {
           <h2 className="mb-8">Game accounts</h2>
           <div className="flex flex-col xl:flex-row items-stretch xl:items-start gap-8">
             <div className="flex-1 order-2 xl:order-1 space-y-8">
-              {/* <div className="form-group">
-                <label htmlFor="game-steam">
-                  <span className="icon icon-steam" />
-                  <span className="flex-1">Steam</span>
-                  <div className="chip chip-xs chip-status chip-success animate-slide-in-bottom">
-                    <span className="icon icon-check" />
-                    <span>Connected</span>
-                  </div>
-                </label>
-                <div className="input-group">
-                  <button className="button button-ghost">
-                    <span>Connect account</span>
-                  </button>
-                  <input type="text" name="game-steam" id="game-steam" />
-                </div>
-                <p className="text-sm text-ui-300">
-                  This site is not associated with Valve Corp.
-                </p>
-              </div> */}
-
               <div className="form-group">
                 <label htmlFor="game-valorant">
                   <span className="icon icon-game-valorant-symbol text-game-valorant" />
@@ -145,10 +125,6 @@ export default function TabSettingsGameAccounts() {
                           id="game-valorant"
                         />
                       </div>
-                      <p className="text-ui-300 text-sm mt-2 leading-tight">
-                        By connecting my VALORANT account I acknowledge making
-                        my profile public to all users.
-                      </p>
                     </>
                   )}
                 </div>
@@ -260,10 +236,6 @@ export default function TabSettingsGameAccounts() {
                         <span className="icon icon-game-leagueoflegends-symbol" />
                         <span>Connect my account</span>
                       </button>
-                      <p className="text-ui-300 text-sm mt-2 leading-tight">
-                        By connecting my League of Legends account I acknowledge
-                        making my profile public to all users.
-                      </p>
                     </>
                   )}
                 </div>
@@ -358,10 +330,6 @@ export default function TabSettingsGameAccounts() {
                           id="game-fortnite"
                         />
                       </div>
-                      <p className="text-ui-300 text-sm mt-2 leading-tight">
-                        By connecting my Fornite account I acknowledge making my
-                        profile public to all users.
-                      </p>
                     </>
                   )}
                 </div>
@@ -449,14 +417,13 @@ export default function TabSettingsGameAccounts() {
                         </button>
                         <input type="text" name="game-pubg" id="game-pubg" />
                       </div>
-                      <p className="text-ui-300 text-sm mt-2 leading-tight">
-                        By connecting my PUBG: BATTLEGROUNDS account I
-                        acknowledge making my profile public to all users.
-                      </p>
                     </>
                   )}
                 </div>
               </div>
+              <p className="mb-12 text-sm">
+              By connecting my game accounts I acknowledge making those profiles public to all users.
+              </p>
             </div>
             <div className="w-full xl:w-72 order-1 xl:order-2 space-y-4">
               {!isValorantConnected &&
@@ -466,13 +433,10 @@ export default function TabSettingsGameAccounts() {
                   <div className="flex flex-col items-center gap-4 p-4 surface-ui-500 rounded">
                     <span className="icon text-3xl icon-c-info" />
                     <div>
-                      <h5 className="text-base mb-2">
-                        To get the most out of Stryda, we recommend to connect
-                        your game account(s).
+                      <h5 className="text-sm mb-2">
+                        Connecting a game allows you to:
                       </h5>
-                      <p className="text-sm mb-2">For each game added:</p>
                       <ul className="list-outside ml-2 pl-1 space-y-1 list-disc text-sm">
-                        <li>Get stats from all your matches.</li>
                         <li>
                           Get Recap videos of your best moments after each
                           match.
@@ -481,6 +445,7 @@ export default function TabSettingsGameAccounts() {
                           Unlock Stryda Ladders and Missions to progress in the
                           Battle Pass and earn rewards.
                         </li>
+                        <li>Get stats from all your matches.</li>
                       </ul>
                     </div>
                   </div>

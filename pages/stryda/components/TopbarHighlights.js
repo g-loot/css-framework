@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import TopbarHighlightsSettings from "./TopbarHighlightsSettings";
 import TopbarHighlightsListItem from "./TopbarHighlightsListItem";
 import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
+import CardRecap from "./CardRecap";
 
 const feedItems = [
   {
@@ -298,7 +299,11 @@ export default function TopbarHighlights() {
                             ))}
                           </ul>
                         ) : (
-                          <ul className="p-2 space-y-2"></ul>
+                          <ul className="p-2 space-y-2">
+
+                            <CardRecap />
+                            
+                          </ul>
                         )}
                       </>
                     )}

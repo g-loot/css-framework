@@ -56,7 +56,14 @@ export default function RecapPublished() {
                   />
                 </div>
               </div>
-              <div className="flex items-center justify-center gap-2">
+              <button
+                type="button"
+                className="button button-secondary w-full max-w-xs"
+              >
+                <span className="icon icon-data-download" />
+                <span>Save as...</span>
+              </button>
+              {/* <div className="flex items-center justify-center gap-2 ">
                 <button
                   type="button"
                   className="button button-secondary flex-1"
@@ -69,14 +76,14 @@ export default function RecapPublished() {
                   className="button button-secondary flex-1"
                 >
                   <span className="icon icon-data-download" />
-                  <span>Download</span>
+                  <span>Save as...</span>
                 </button>
-              </div>
+              </div> */}
             </div>
             <div className="modal-action">
               <button
                 type="button"
-                className="button button-primary min-w-xs"
+                className="button button-primary w-full max-w-xs"
                 onClick={() => uiContext.closeModal()}
               >
                 <span>Okay</span>

@@ -112,7 +112,7 @@ export default function TabSettingsProfileInformation() {
             </div>
           </div>
           <p className="mb-12 text-sm">
-            Profile information Information you have put here is public on your
+            Information you have put here is public on your
             profile. This is a social platform so adding more information about
             yourself will make it easier for people to connect with you. Read
             more in our{" "}
