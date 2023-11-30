@@ -712,22 +712,22 @@
   &.is-active.is-premium {
     &::before {
       @apply
-      bg-premium-300
+      bg-interaction-500
       ;
     }
     .battlepass-content {
       @apply
-      border-premium-300
-      shadow-[0_0_0_2px_rgb(var(--color-premium-300))]
+      border-interaction-500
+      shadow-[0_0_0_2px_rgb(var(--color-interaction-500))]
       rounded-tl-none
       ;
       .battlepass-decoration {
         @apply
-        text-premium-300
+        text-interaction-500
         ;
         &::before {
           @apply
-          bg-premium-300
+          bg-interaction-500
           text-ui-900
           ;
         }
@@ -735,22 +735,22 @@
     }
     &:hover {
       @apply
-      border-premium-300
+      border-interaction-300
       ;
       &::before {
         @apply
-        bg-premium-300
+        bg-interaction-300
         ;
       }
       .battlepass-content {
         @apply
-        border-premium-300
-        shadow-[0_0_0_2px_rgb(var(--color-premium-300))]
+        border-interaction-300
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-300))]
         ;
         .battlepass-decoration {
           &::before {
             @apply
-            bg-premium-300
+            bg-interaction-300
             ;
           }
         }
@@ -758,22 +758,22 @@
     }
     &:active {
       @apply
-      border-premium-700
+      border-interaction-700
       ;
       &::before {
         @apply
-        bg-premium-700
+        bg-interaction-700
         ;
       }
       .battlepass-content {
         @apply
-        border-premium-700
-        shadow-[0_0_0_2px_rgb(var(--color-premium-700))]
+        border-interaction-700
+        shadow-[0_0_0_2px_rgb(var(--color-interaction-700))]
         ;
         .battlepass-decoration {
           &::before {
             @apply
-            bg-premium-700
+            bg-interaction-700
             ;
           }
         }

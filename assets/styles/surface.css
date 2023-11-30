@@ -11,11 +11,6 @@
     border
     border-ui-800
     ;
-    .progressbar {
-      @apply
-      bg-ui-700
-      ;
-    }
   }
   .surface-ui-800,
   .surface {
@@ -25,11 +20,6 @@
     border
     border-ui-700
     ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
   }
   .surface-ui-700 {
     @apply
@@ -38,11 +28,6 @@
     border
     border-ui-600
     ;
-    .progressbar {
-      @apply
-      bg-ui-500
-      ;
-    }
   }
   .surface-ui-600 {
     @apply
@@ -51,11 +36,6 @@
     border
     border-ui-500
     ;
-    .progressbar {
-      @apply
-      bg-ui-400
-      ;
-    }
   }
   .surface-ui-500 {
     @apply
@@ -64,11 +44,6 @@
     border
     border-ui-400/20
     ;
-    .progressbar {
-      @apply
-      bg-ui-300
-      ;
-    }
   }
   .surface-dimmed {
     @apply
@@ -85,11 +60,6 @@
     border-premium-700/25
     bg-ui-800
     ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
   }
   .surface-main {
     @apply
@@ -98,11 +68,6 @@
     border-main
     bg-ui-800
     ;
-    .progressbar {
-      @apply
-      bg-ui-600
-      ;
-    }
   }
 }
 
