@@ -7,15 +7,20 @@ import Link from "next/link";
 import { usePrototypeData } from "@/contexts/prototype";
 import { UiContext } from "@/contexts/ui";
 
-export default function CardRecap({ item, match, imageOverlay, rigthContent, actionContent }) {
+export default function CardRecap({ itemID, matchID, imageOverlay, rigthContent, actionContent }) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
-  // const item = item || dataFeedItems[0];
-  // const match = match || dataMatches[0];
+  const [selectedItem, setSelectedItem] = useState();
+  const item = itemID || 0;
+  const match = matchID || 0;
+
+  useEffect(() => {
+    setSelectedItem(item)
+  }, [itemID]);
 
   return (
     <>
-      {clan && (
+      {selectedItem && (
         <li className="card-recap">
         <div className="card-image">
           <div className="card-game">
