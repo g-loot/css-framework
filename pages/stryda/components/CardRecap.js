@@ -9,6 +9,7 @@ import { UiContext } from "@/contexts/ui";
 import { StatsValorantAgents } from "@/mock-data/data-stats-valorant";
 import { StatsValorantRanks } from "@/mock-data/data-stats-valorant";
 import { StatsValorantMaps } from "@/mock-data/data-stats-valorant";
+import ModalFeedItemViewer from "../modal-feeditemdetailsviewer";
 
 export default function CardRecap(props) {
   const uiContext = useContext(UiContext);
