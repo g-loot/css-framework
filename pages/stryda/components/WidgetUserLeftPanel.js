@@ -34,11 +34,11 @@ export default function WidgetUserLeftPanel(props) {
       {selectedUser && (
         <>
           <div className="surface rounded p-4 space-y-4">
-            {selectedUser.bio && !isEmpty && (
+            {/* {selectedUser.bio && !isEmpty && (
               <p className="text-ui-300 mt-1 text-left pb-4 border-b border-ui-700">
                 <ReadMore content={selectedUser.bio} max={150} />
               </p>
-            )}
+            )} */}
             <div className="flex gap-1">
               <a
                 href="#"
@@ -187,7 +187,7 @@ export default function WidgetUserLeftPanel(props) {
                 </ul>
               )}
           </div>
-          <div className="surface rounded">
+          {/* <div className="surface rounded">
             <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
               <h2 className="h6 text-ui-100">Level {selectedUser.level}</h2>
               <Tooltip
@@ -241,7 +241,7 @@ export default function WidgetUserLeftPanel(props) {
                 </li>
               ))}
             </ul>
-          </div>
+          </div> */}
           <div
             className="sticky space-y-4 top-16"
           >
@@ -267,9 +267,22 @@ export default function WidgetUserLeftPanel(props) {
                 </Link>
               </div>
             </div>
-            <div className="rounded bg-ui-600 aspect-square grid place-content-center text-center text-2xl text-ui-400">
-              <span>AD</span>
-            </div>
+            {!prototype.isPremium && (
+                    <div className="space-y-4 text-center mb-4">
+                      <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
+                        {/* Replace the following div by the display ad */}
+                        <div>
+                          <div>Ad</div>
+                          <div className="text-sm">Max width: 320px</div>
+                        </div>
+                      </div>
+                      <Link href={`/stryda/premium`}>
+                        <span className="link link-main text-sm">
+                          Remove ads
+                        </span>
+                      </Link>
+                    </div>
+                  )}
           </div>
         </>
       )}

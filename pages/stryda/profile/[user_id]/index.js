@@ -182,6 +182,7 @@ export default function Profile() {
       label: `Achievements`, // (${achievementLength})`,
       url: "achievements",
       component: TabProfileAchievements,
+      number: achievementLength,
     },
     {
       label: "Stats",
@@ -396,7 +397,7 @@ export default function Profile() {
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
                 <div className="flex-1 overflow-hidden">
-                  <nav className="pb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 border-b border-ui-700">
+                  <nav className="mb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 border-b border-ui-700">
                     <ul className="tabs">
                       {TabsItems.map((item, itemIndex) => (
                         <li key={item}>

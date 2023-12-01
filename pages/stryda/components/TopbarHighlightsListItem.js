@@ -184,14 +184,27 @@ export default function TopbarHighlightsListItem({
     <>
       {item && selectedMatch && (
         <>
-          <CardRecap
-            item={item}
-            match={selectedMatch}
-            isInactive={!prototype.isPremium && itemIndex > 0}
-            actionContent={handleActionContent()}
-            imageOverlay={handleImageOverlay()}
-            rigthContent={handleRightContent()}
-          />
+          {!prototype.isPremium && itemIndex < 3 && (
+            <CardRecap
+              item={item}
+              match={selectedMatch}
+              isInactive={!prototype.isPremium && itemIndex > 0}
+              actionContent={handleActionContent()}
+              imageOverlay={handleImageOverlay()}
+              rigthContent={handleRightContent()}
+            />
+          )}
+          {prototype.isPremium && (
+            <CardRecap
+              item={item}
+              match={selectedMatch}
+              isInactive={!prototype.isPremium && itemIndex > 0}
+              actionContent={handleActionContent()}
+              imageOverlay={handleImageOverlay()}
+              rigthContent={handleRightContent()}
+            />
+          )}
+
           <li className="card-recap !hidden">
             <div className="card-image">
               <div className="card-game">

@@ -100,10 +100,9 @@ export default function WidgetCompetitions(props) {
         {state === "empty" && (
           <>
             <div className="bg-ui-850 p-4">
-              <h3 className="text-base">Ladders</h3>
               <button
                 type="button"
-                className="rounded-4 overflow-hidden mt-3 mb-2 surface interactive"
+                className="rounded-4 overflow-hidden surface interactive"
                 onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
               >
                 <iframe
@@ -118,11 +117,19 @@ export default function WidgetCompetitions(props) {
                 ></iframe>
               </button>
 
-              <p className="text-sm">
-                Have some fun and climb the leaderboards. Enter a competition
+              <p className="text-sm my-4">
+                Have some fun and climb the leaderboards. Enter a Ladder
                 with a Clan or fight solo. Your choice!
               </p>
-              <div className="flex items-center gap-2 mt-4">
+              <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
+                  <button
+                    type="button"
+                    className="flex-1 button button-sm button-primary"
+                  >
+                    <span>Explore Ladders</span>
+                  </button>
+                </Link>
+              {/* <div className="flex items-center gap-2 mt-4">
                 <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                   <button
                     type="button"
@@ -139,7 +146,7 @@ export default function WidgetCompetitions(props) {
                     <span>Find Clan Events</span>
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </div>
           </>
         )}

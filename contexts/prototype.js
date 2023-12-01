@@ -149,6 +149,17 @@ export const PrototypeProvider = ({ children }) => {
       return feedItem.id === parseInt(id);
     })
   }
+  const getUserFeedItems = (id) => {
+    return feedItems
+  .filter(item => item.type === "match")
+  .map(item => ({
+    ...item,
+    match: dataMatches.find(match => match.id === item.itemID)
+  }))
+  .filter(item => item.match && item.match.user === parseInt(id)); 
+  }
+
+  
   const getUserMatches = (id) => {
     return matches.filter((match) => {
       return match.user === parseInt(id);
@@ -236,6 +247,7 @@ export const PrototypeProvider = ({ children }) => {
         getCurrentClanLeaderboard,
         getMatchByID,
         getFeedItemByID,
+        getUserFeedItems,
         getUserMatches,
         setIsPremium,
         setShowDemo,
