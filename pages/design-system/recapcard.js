@@ -114,7 +114,7 @@ const DSpage = () => {
                 <Tooltip
                   tooltip={
                     <div className="w-60">
-                      The recap creation has been paused.
+                      The Recap creation has been paused.
                     </div>
                   }
                   placement="right"
@@ -128,7 +128,7 @@ const DSpage = () => {
                 <>
                   <h5>Recap paused</h5>
                   <p>
-                    Finish your in-game match to continue rendering your recap
+                    Finish your in-game match to continue rendering your Recap
                     video.
                   </p>
                 </>
@@ -230,7 +230,7 @@ const DSpage = () => {
               rigthContent={
                 <>
                   <div className="flex-1 flex items-center justify-center">
-                    <p>Creating your recap video failed</p>
+                    <p>Creating your Recap video failed</p>
                   </div>
                   <div className="w-full flex gap-2 items-center">
                     <button
@@ -303,7 +303,7 @@ const DSpage = () => {
                   <h5>Not enough moments</h5>
                   <p>
                     Stryda needs at least 3 moments from the match in order to
-                    create a recap video.
+                    create a Recap video.
                   </p>
                 </>
               }
@@ -483,7 +483,7 @@ const DSpage = () => {
                   <div className="space-y-1.5">
                     <div className="text-xs font-bold">Step 3 of 3</div>
                     <div className="text-2xl font-bold">75%</div>
-                    <div className="text-base">Creating recap</div>
+                    <div className="text-base">Creating Recap</div>
                     <span className="text-xs whitespace-normal px-2">
                       Do not close Stryda
                     </span>
@@ -491,7 +491,7 @@ const DSpage = () => {
                   <div className="space-y-1.5">
                     <div className="text-xs font-bold">Step 3 of 3</div>
                     <div className="text-2xl font-bold">75%</div>
-                    <div className="text-base">Creating recap</div>
+                    <div className="text-base">Creating Recap</div>
                     <span className="text-xs whitespace-normal px-2">
                       Do not close Stryda
                     </span>
@@ -516,7 +516,7 @@ const DSpage = () => {
         <div className="mb-2">
           <ButtonStretchy variant="button-success">
             <span className="text-sm">
-              <span>Recordings ready</span>
+              <span>Recaps ready</span>
             </span>
             <span className="icon icon-video" data-badge="4" />
           </ButtonStretchy>
@@ -529,14 +529,14 @@ const DSpage = () => {
               rigthContent={
                 <>
                   <div className="flex-1 flex items-center justify-center">
-                    <h5>This match is ready to be recapped!</h5>
+                    <h5>This match is ready to be Recapped!</h5>
                   </div>
                   <div className="w-full flex gap-2 items-center">
                     <button
                       type="button"
                       className="flex-1 button button-sm button-primary"
                     >
-                      <span>Create recap</span>
+                      <span>Create Recap</span>
                     </button>
                     <button
                       type="button"
@@ -592,7 +592,7 @@ const DSpage = () => {
                             </li>
                             <li>
                               <button>
-                                <span>Publish recap</span>
+                                <span>Publish Recap</span>
                               </button>
                             </li>
                           </ul>
@@ -654,7 +654,7 @@ const DSpage = () => {
               rigthContent={
                 <>
                   <h5>Check it out Stryda Recap videos!</h5>
-                  <p>This is an example of a recap video</p>
+                  <p>This is an example of a Recap video</p>
                 </>
               }
               actionContent={
@@ -669,7 +669,7 @@ const DSpage = () => {
                     className="mx-auto"
                   />
                   <p className="flex-1 text-sm leading-tight">
-                    Get recaps of{" "}
+                    Get Recaps of{" "}
                     <b className="text-ui-100">your best moments</b> in your
                     favorite games - automatically!
                   </p>

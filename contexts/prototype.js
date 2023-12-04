@@ -34,6 +34,8 @@ export const PrototypeProvider = ({ children }) => {
   const [isPremium, setIsPremium] = useState(false);
   const [showDemo, setShowDemo] = useState(false);
   const [isClient, setIsClient] = useState(false);
+  const loggedout = query.loggedout === "true" ? true : false;
+  const [isLoggedOut, setIsLoggedOut] = useState(false);
 
   useEffect(() => {
     const savedValue = localStorage.getItem('defaultGameID');
@@ -44,6 +46,10 @@ export const PrototypeProvider = ({ children }) => {
       localStorage.setItem('defaultGameID', 1);
     }
   }, []);
+
+  useEffect(() => {
+    setIsLoggedOut(loggedout)
+  }, [loggedout]);
   
   const getGameByID = (id) => {
     return games.find(game => {
@@ -225,6 +231,7 @@ export const PrototypeProvider = ({ children }) => {
         isPremium,
         showDemo,
         isClient,
+        isLoggedOut,
         getGameByID,
         getGameBySlug,
         getUserByID,
@@ -252,6 +259,7 @@ export const PrototypeProvider = ({ children }) => {
         setIsPremium,
         setShowDemo,
         setIsClient,
+        setIsLoggedOut,
       }}
     >
       {children}

@@ -17,7 +17,8 @@ export default function TabProfileAchievements() {
   const [selectedUser, setSelectedUser] = useState(null);
   const [favoriteItem, setFavoriteItem] = useState(2);
   const { user_id } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {

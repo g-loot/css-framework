@@ -64,7 +64,8 @@ export default function TabProfileActivity() {
   const prototype = usePrototypeData();
   const [selectedUser, setSelectedUser] = useState(null);
   const { user_id } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const { game } = router.query;
 
   useEffect(() => {

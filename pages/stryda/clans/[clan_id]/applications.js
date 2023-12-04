@@ -52,7 +52,8 @@ export default function Applications() {
   const prototype = usePrototypeData();
   const { query } = useRouter();
   const [selectedClan, setSelectedClan] = useState(null);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   const { clan_id } = router.query;
 

@@ -20,7 +20,8 @@ export default function TabMissionsMissions() {
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const hasAds = query.ads === "true" ? true : false;
   const isPremium = prototype.isPremium;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [submitting, setSubmitting] = useState(false);
 
   function addToastWithDelay(toast) {

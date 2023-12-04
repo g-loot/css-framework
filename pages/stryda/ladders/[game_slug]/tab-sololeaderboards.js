@@ -135,7 +135,8 @@ export default function TabLaddersSoloLeaderboards() {
   const { game_slug } = router.query;
   const { ladder_id } = router.query;
   const hasClaim = query.hasclaim === "true" ? true : false;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const isPremium = prototype.isPremium;
   const freeEntry = query.freeentry === "true" ? true : false;
   const uiContext = useContext(UiContext);

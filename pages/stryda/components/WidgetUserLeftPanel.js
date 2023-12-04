@@ -19,7 +19,8 @@ export default function WidgetUserLeftPanel(props) {
   const prototype = usePrototypeData();
   const user_id = props.id || 1;
   const [selectedUser, setSelectedUser] = useState(null);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
@@ -242,47 +243,47 @@ export default function WidgetUserLeftPanel(props) {
               ))}
             </ul>
           </div> */}
-          <div
-            className="sticky space-y-4 top-16"
-          >
-            <div className="surface rounded px-4 py-6 text-center">
-              <PremiumLogo
-                src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                width="180"
-                height="auto"
-                className="mx-auto"
-              />
-              <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
-                Increase your amount of XP you can earn each day with a{" "}
-                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                  <a className="link text-premium-500">Premium subscription</a>
-                </Link>
-                .
-              </p>
-              <div className="mx-auto mt-2">
-                <Link href={`/stryda/premium${prototype.getURLparams()}`}>
-                  <a className="button button-premium is-shining">
-                    <span>Get Premium</span>
-                  </a>
-                </Link>
-              </div>
-            </div>
+          <div className="sticky space-y-4 top-16">
             {!prototype.isPremium && (
-                    <div className="space-y-4 text-center mb-4">
-                      <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
-                        {/* Replace the following div by the display ad */}
-                        <div>
-                          <div>Ad</div>
-                          <div className="text-sm">Max width: 320px</div>
-                        </div>
-                      </div>
-                      <Link href={`/stryda/premium`}>
-                        <span className="link link-main text-sm">
-                          Remove ads
-                        </span>
-                      </Link>
+              <>
+                <div className="surface rounded px-4 py-6 text-center">
+                  <PremiumLogo
+                    src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+                    width="180"
+                    height="auto"
+                    className="mx-auto"
+                  />
+                  <p className="px-4 text-ui-300 mx-auto mt-4 mb-5">
+                    Increase your amount of XP you can earn each day with a{" "}
+                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                      <a className="link text-premium-500">
+                        Premium subscription
+                      </a>
+                    </Link>
+                    .
+                  </p>
+                  <div className="mx-auto mt-2">
+                    <Link href={`/stryda/premium${prototype.getURLparams()}`}>
+                      <a className="button button-premium is-shining">
+                        <span>Get Premium</span>
+                      </a>
+                    </Link>
+                  </div>
+                </div>
+                <div className="space-y-4 text-center mb-4">
+                  <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
+                    {/* Replace the following div by the display ad */}
+                    <div>
+                      <div>Ad</div>
+                      <div className="text-sm">Max width: 320px</div>
                     </div>
-                  )}
+                  </div>
+                  <Link href={`/stryda/premium`}>
+                    <span className="link link-main text-sm">Remove ads</span>
+                  </Link>
+                </div>
+              </>
+            )}
           </div>
         </>
       )}

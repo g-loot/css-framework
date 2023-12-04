@@ -17,6 +17,10 @@ export default function Video(props) {
   const id = RandomNumber(1000, 100000);
   const [video, setVideo] = useState(null);
 
+  function randomNumberInRange(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
   useEffect(() => {
     setVideo(document.getElementById(`video_${id}`));
   }, [id]);
@@ -51,7 +55,12 @@ export default function Video(props) {
   }
 
   function openFeedItemDetailsMatch(target) {
-    uiContext.openModal(<ModalFeedItemViewer item={item} selectedTab={target ? target : "default"} />);
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={item}
+        selectedTab={target ? target : "default"}
+      />
+    );
   }
 
   const getAgentByID = (id) => {
@@ -118,7 +127,31 @@ export default function Video(props) {
             </div>
           </div>
           {hasMeta && (
-            <div className="flex gap-2 items-start mt-2">
+            <>
+              <div className="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between mt-2 text-ui-300">
+                <span className="text-xs">{item.meta.dateTimeEnded}</span>
+                <ul className="flex items-center gap-3">
+                  <li className="flex gap-1.5 items-center pointer">
+                    <span className="icon icon-view text-ui-300" />
+                    <span className="text-xs whitespace-nowrap">
+                      {randomNumberInRange(5, 3000)}
+                    </span>
+                  </li>
+                  <li className="flex gap-1.5 items-center pointer">
+                    <span className="icon icon-favorite text-ui-300" />
+                    <span className="text-xs whitespace-nowrap">
+                      {randomNumberInRange(5, 3000)}
+                    </span>
+                  </li>
+                  <li className="flex gap-1.5 items-center pointer">
+                    <span className="icon icon-comment text-ui-300" />
+                    <span className="text-xs whitespace-nowrap">
+                      {randomNumberInRange(0, 6)}
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              {/* <div className="flex gap-2 items-start mt-2">
               {item.meta?.agent && (
                 <div className="avatar avatar-xs avatar-diamond ml-1">
                   <div>
@@ -158,7 +191,8 @@ export default function Video(props) {
                   <span>{item.meta.dateTimeEnded}</span>
                 </div>
               </div>
-            </div>
+            </div> */}
+            </>
           )}
         </button>
       )}

@@ -7208,6 +7208,26 @@ export const dataGames = [
           "https://res.cloudinary.com/gloot/image/upload/v1699882372/Stryda/demo/party-fortnite-4.webp",
       },
     ],
+    demo: {
+      mainStats: [
+        {
+          label: "Win %",
+          value: "22.42%",
+        },
+        {
+          label: "Wins",
+          value: "523",
+        },
+        {
+          label: "K/D",
+          value: "5.55",
+        },
+        {
+          label: "Kills",
+          value: "1,423",
+        },
+      ],
+    },
   },
   {
     id: 5,

@@ -55,7 +55,8 @@ export default function TabClanApplications() {
   const prototype = usePrototypeData();
   const [selectedClan, setSelectedClan] = useState(null);
   const { clan_id } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [filter, setFilter] = useState("");
   const modalClanInvite = query.modalclaninvite === "true" ? true : false;
 

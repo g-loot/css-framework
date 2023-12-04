@@ -33,7 +33,8 @@ export default function TopbarHighlights() {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const { query } = useRouter();
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [activeTab, setActiveTab] = useState("list");
   const [itemsToProcess, setItemsToProcess] = useState(
     feedItems.filter((i) => !i.isCompleted).length

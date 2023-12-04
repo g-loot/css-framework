@@ -118,17 +118,17 @@ export default function WidgetCompetitions(props) {
               </button>
 
               <p className="text-sm my-4">
-                Have some fun and climb the leaderboards. Enter a Ladder
-                with a Clan or fight solo. Your choice!
+                Have some fun and climb the leaderboards. Enter a Ladder with a
+                Clan or fight solo. Your choice!
               </p>
               <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
-                  <button
-                    type="button"
-                    className="flex-1 button button-sm button-primary"
-                  >
-                    <span>Explore Ladders</span>
-                  </button>
-                </Link>
+                <button
+                  type="button"
+                  className="flex-1 button button-sm button-primary"
+                >
+                  <span>Explore Ladders</span>
+                </button>
+              </Link>
               {/* <div className="flex items-center gap-2 mt-4">
                 <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                   <button

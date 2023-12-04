@@ -236,6 +236,22 @@ export default function Profile() {
           {selectedUser && (
             <>
               <div className="relative z-0">
+                {selectedUser.isYou && (
+                  <div className="absolute z-20 w-full max-w-xs rounded border border-ui-200/5 bg-ui-800/95 p-2 right-0 bottom-4 leading-none">
+                    <div className="flex items-center justify-center gap-1 text-center mb-2">
+                      <span className="text-sm text-ui-100 mr-1">Level:</span>
+                      <span className="icon icon-star text-main" />
+                      <span className="text-lg text-main font-bold">32</span>
+                    </div>
+                    <div className="progressbar progressbar-tick" style={{ "--percent": 45 }}>
+                      <div />
+                    </div>
+                    <div className="flex items-center justify-between gap-1 text-sm mt-1.5">
+                      <span className="text-main font-bold">15 200 XP</span>
+                      <span className="text-ui-300">300 XP until next level</span>
+                    </div>
+                  </div>
+                )}
                 <div className="aspect-banner md:-mx-8 relative z-10 shadow-2xl">
                   {selectedUser.shopItems?.profileBanner ? (
                     <>
@@ -329,7 +345,7 @@ export default function Profile() {
                     className="aspect-video rounded-sm max-w-[1.5rem]"
                   />
                 </div>
-                <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
+                {/* <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight my-4 text-center">
                   <li>
                     <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
                       <button type="button" className="interactive px-2">
@@ -343,6 +359,71 @@ export default function Profile() {
                       <button type="button" className="interactive px-2">
                         <div className="text-lg text-ui-100">165</div>
                         <div className="text-sm text-ui-300">following</div>
+                      </button>
+                    </Link>
+                  </li>
+                </ul> */}
+                <ul className="flex justify-around items-stretch divide-x-1 divide-ui-700 leading-tight text-center my-4 gap-x-2">
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=followers${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Followers</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers === 0 ? (
+                            <>--</>
+                          ) : (
+                            selectedUser.stats.followers
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=followings${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Highlights</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers === 0 ? (
+                            <>--</>
+                          ) : (
+                            selectedUser.stats.highlightViews
+                          )}
+                        </div>
+                      </button>
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href={`/stryda/profile/${
+                        selectedUser.id
+                      }?tab=achievements${prototype.getURLparams("&")}`}
+                    >
+                      <button
+                        type="button"
+                        className="interactive leading-tight"
+                      >
+                        <div className="text-sm text-ui-300">Achievements</div>
+                        <div className="text-lg text-ui-100">
+                          {selectedUser.stats.followers === 0 ? (
+                            <>--</>
+                          ) : (
+                            Math.round(selectedUser.stats.followers / 2)
+                          )}
+                        </div>
                       </button>
                     </Link>
                   </li>
@@ -396,8 +477,8 @@ export default function Profile() {
                   </div>
                   <WidgetUserLeftPanel id={user_id} />
                 </div>
-                <div className="flex-1 overflow-hidden">
-                  <nav className="mb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 border-b border-ui-700">
+                <div className="flex-1">
+                  <nav className="sticky z-40 mb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 bg-ui-900/95 border-b border-ui-700 top-12">
                     <ul className="tabs">
                       {TabsItems.map((item, itemIndex) => (
                         <li key={item}>
@@ -415,7 +496,12 @@ export default function Profile() {
                               <span>
                                 {item.label}
                                 {item.number && (
-                                  <>{" "}<span className="text-sm">({item.number})</span></>
+                                  <>
+                                    {" "}
+                                    <span className="text-sm">
+                                      ({item.number})
+                                    </span>
+                                  </>
                                 )}
                               </span>
                             </button>

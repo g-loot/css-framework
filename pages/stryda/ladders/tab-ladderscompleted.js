@@ -15,7 +15,8 @@ export default function TabLaddersCompleted() {
   const { query } = useRouter();
   const prototype = usePrototypeData();
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   return (
     <>

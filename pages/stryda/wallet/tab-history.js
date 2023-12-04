@@ -33,7 +33,8 @@ const TransactionHistory = [
 
 export default function TabWalletHistory() {
   const { query } = useRouter();
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   return (
     <>

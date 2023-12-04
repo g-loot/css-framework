@@ -36,6 +36,19 @@ export default function Structure({
         {children}
       </div>
       {!hiddenUI && <Footer />}
+      {prototype.isLoggedOut && (
+        <div className="fixed z-50 bottom-0 inset-x-0 p-8 border-t border-ui-600 bg-ui-700 text-center">
+          <div className="flex items-center w-full max-w-sm gap-4 mx-auto">
+            <button type="button" className="button flex-1 button-primary">
+              <span>Log in</span>
+            </button>
+            <button type="button" className="button flex-1 button-primary">
+              <span>Download</span>
+              <span className="icon icon-windows-symbol" />
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

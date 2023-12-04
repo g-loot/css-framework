@@ -6,7 +6,8 @@ import { dataMatches } from "@/mock-data/data-matches";
 
 export default function TopbarHighlightsSettings() {
   const { query } = useRouter();
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const [inputValue, setInputValue] = useState(30);
   const uiContext = useContext(UiContext);
   const [submitting, setSubmitting] = useState(false);

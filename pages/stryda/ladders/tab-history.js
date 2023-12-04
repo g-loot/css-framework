@@ -13,7 +13,8 @@ export default function TabLaddersHistory() {
   const prototype = usePrototypeData();
   const selectedGame = prototype.getGameByID(prototype.defaultGameID);
   const hasAds = query.ads === "true" ? true : false;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   return (
     <>

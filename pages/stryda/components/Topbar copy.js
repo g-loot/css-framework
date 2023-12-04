@@ -24,7 +24,8 @@ export default function Topbar() {
   const uiContext = useContext(UiContext);
   const variablesContext = useContext(VariablesContext);
   const hasAds = query.ads === "true" ? true : false;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const modalDownloadStarted =
     query.modaldownloadstarted === "true" ? true : false;
   const isPremium = prototype.isPremium;

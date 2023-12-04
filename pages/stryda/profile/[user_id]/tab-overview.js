@@ -19,7 +19,8 @@ export default function TabProfileOverview() {
   const uiContext = useContext(UiContext);
   const [selectedUser, setSelectedUser] = useState(null);
   const { user_id } = router.query;
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
   const modalAchievement = query.modalachievement === "true" ? true : false;
   const [loading, setLoading] = useState(true);
 

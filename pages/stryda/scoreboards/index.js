@@ -22,7 +22,8 @@ export default function Scoreboards() {
   const { game } = router.query;
   const variant = query.variant ? query.variant : 20;
   const [loading, setLoading] = useState(true);
-  const isEmpty = query.empty === "true" ? true : false;
+  const empty = query.empty === "true" ? true : false;
+  const [isEmpty, setIsEmpty] = useState(empty);
 
   const { tab } = router.query;
   const defaultTab = "all";
