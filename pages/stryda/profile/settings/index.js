@@ -147,7 +147,7 @@ export default function Home() {
                   >
                     <span className="icon icon-circle-08" />
                     <span className="hidden lg:block">
-                      Change avatar
+                      Edit avatar
                     </span>
                   </button>
                     <button
@@ -157,7 +157,7 @@ export default function Home() {
                   >
                     <span className="icon icon-image" />
                     <span className="hidden lg:block">
-                      Change profile banner
+                      Edit profile banner
                     </span>
                   </button>
                   </div>
