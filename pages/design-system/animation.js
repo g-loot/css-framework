@@ -26,6 +26,7 @@ const DSpage = () => {
   const [StartAnim17, setStartAnim17] = useState(false);
   const [StartAnim18, setStartAnim18] = useState(false);
   const [StartAnim19, setStartAnim19] = useState(false);
+  const [StartAnim20, setStartAnim20] = useState(false);
 
   function handleStartAnim1() {
     setStartAnim1(true);
@@ -146,6 +147,13 @@ const DSpage = () => {
     const timer = setTimeout(() => {
       setStartAnim19(false);
     }, 1600);
+    return () => clearTimeout(timer);
+  }
+  function handleStartAnim20() {
+    setStartAnim20(true);
+    const timer = setTimeout(() => {
+      setStartAnim20(false);
+    }, 2000);
     return () => clearTimeout(timer);
   }
 
@@ -1094,6 +1102,40 @@ const DSpage = () => {
                   width="100%"
                   height="300"
                   src="//jsfiddle.net/augustin_hiebel/bjcpt17y/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Block reveal */}
+      <div className="mb-12">
+        <Anchor title="Block reveal" />
+        <div className="surface rounded-lg p-4">
+          <div className="">
+            <div className="flex gap-4 flex-col lg:flex-row lg:items-center">
+              <div className="flex-1 flex flex-col items-center gap-4">
+                <span
+                  className={`h1 text-mono-100  animate-paused animate-delay ${
+                    StartAnim20 === true ? "animate-running blockreveal" : "opacity-0"
+                  }`}
+                >
+                  <span>Battle Pass</span>
+                </span>
+                <button
+                  className="button button-tertiary mx-auto"
+                  onClick={handleStartAnim20.bind(this)}
+                >
+                  <span>Play animation</span>
+                </button>
+              </div>
+              <div className="flex-1">
+                <iframe
+                  className="rounded"
+                  width="100%"
+                  height="300"
+                  src="//jsfiddle.net/augustin_hiebel/zwe7v4d8/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
                 ></iframe>
               </div>
             </div>
