@@ -366,7 +366,7 @@ export default function ReferAFriend() {
                           >
                             <div className="item-body">
                               <Link
-                                href={`/prototype/profile/${
+                                href={`/stryda/profile/${
                                   item.user
                                 }${prototype.getURLparams()}`}
                               >

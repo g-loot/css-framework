@@ -5,7 +5,7 @@ import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import { UiContext } from "@/contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "@/contexts/prototype";
-import ModalLadderResults from "@/pages/prototype/[game]/ladders/modal-ladderresults";
+import ModalLadderResults from "@/pages/stryda/ladders/modal-ladderresults";
 import Link from "next/link";
 import Tooltip from "../Tooltip/Tooltip";
 import Avatar from "../Avatar/Avatar";

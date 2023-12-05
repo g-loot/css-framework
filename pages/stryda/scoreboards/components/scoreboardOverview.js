@@ -30,7 +30,7 @@ export default function ScoreboardOverview(props) {
     <>
       {item && (
         <Link
-          href={`/prototype/valorant/scoreboards?tab=${
+          href={`/stryda/valorant/scoreboards?tab=${
             item.slug
           }${prototype.getURLparams("&")}`}
         >
@@ -81,7 +81,7 @@ export default function ScoreboardOverview(props) {
                 ))}
               </ul>
               <Link
-                href={`/prototype/valorant/scoreboards?tab=${
+                href={`/stryda/valorant/scoreboards?tab=${
                   item.slug
                 }${prototype.getURLparams("&")}`}
               >
@@ -101,7 +101,7 @@ export default function ScoreboardOverview(props) {
                   </div>
                   <div className="item-image">
                     <Link
-                      href={`/prototype/profile/${1}${prototype.getURLparams()}`}
+                      href={`/stryda/profile/${1}${prototype.getURLparams()}`}
                     >
                       <Avatar
                         id={1}
@@ -113,7 +113,7 @@ export default function ScoreboardOverview(props) {
                   </div>
                   <div className="item-body">
                     <Link
-                      href={`/prototype/profile/${1}${prototype.getURLparams()}`}
+                      href={`/stryda/profile/${1}${prototype.getURLparams()}`}
                     >
                       <div className="item-title interactive truncate ">
                         <span
@@ -209,7 +209,7 @@ export default function ScoreboardOverview(props) {
                   </div>
                   <div className="item-image">
                     <Link
-                      href={`/prototype/profile/${player}${prototype.getURLparams()}`}
+                      href={`/stryda/profile/${player}${prototype.getURLparams()}`}
                     >
                       <Avatar
                         id={player}
@@ -221,7 +221,7 @@ export default function ScoreboardOverview(props) {
                   </div>
                   <div className="item-body">
                     <Link
-                      href={`/prototype/profile/${player}${prototype.getURLparams()}`}
+                      href={`/stryda/profile/${player}${prototype.getURLparams()}`}
                     >
                       <div className="item-title interactive truncate">
                         <span
@@ -273,7 +273,7 @@ export default function ScoreboardOverview(props) {
             </ul>
             <div className="p-2 text-center border-t border-ui-700">
               <Link
-                href={`/prototype/valorant/scoreboards?tab=${
+                href={`/stryda/valorant/scoreboards?tab=${
                   item.slug
                 }${prototype.getURLparams("&")}`}
               >

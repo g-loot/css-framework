@@ -109,7 +109,7 @@ export default function TabScoreboard(props) {
                       <p className="text-lg text-ui-300 mt-2 mb-6">
                         This filter is exclusive for Premium users.
                       </p>
-                      <Link href="/prototype/premium">
+                      <Link href="/stryda/premium">
                         <button type="button" className="button button-premium">
                           <span>Get Premium now</span>
                         </button>
@@ -190,7 +190,7 @@ export default function TabScoreboard(props) {
                         .friends.map((item, itemIndex) => (
                           <Link
                             key={itemIndex}
-                            href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                            href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                           >
                             <li className="interactive even:bg-ui-700 overflow-hidden">
                               <span className="w-9 text-center">
@@ -238,7 +238,7 @@ export default function TabScoreboard(props) {
                           </div>
                           <div className="item-image">
                             <Link
-                              href={`/prototype/profile/1${prototype.getURLparams()}`}
+                              href={`/stryda/profile/1${prototype.getURLparams()}`}
                             >
                               <Avatar
                                 id={1}
@@ -249,7 +249,7 @@ export default function TabScoreboard(props) {
                           </div>
                           <div className="item-body">
                             <Link
-                              href={`/prototype/profile/1${prototype.getURLparams()}`}
+                              href={`/stryda/profile/1${prototype.getURLparams()}`}
                             >
                               <div className="item-title interactive truncate">
                                 <span
@@ -379,7 +379,7 @@ export default function TabScoreboard(props) {
                             </div>
                             <div className="item-image">
                               <Link
-                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                                href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                               >
                                 <Avatar
                                   id={item}
@@ -390,7 +390,7 @@ export default function TabScoreboard(props) {
                             </div>
                             <div className="item-body">
                               <Link
-                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                                href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                               >
                                 <div className="item-title interactive truncate">
                                   <span

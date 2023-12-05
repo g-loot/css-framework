@@ -6,7 +6,7 @@ import React, {
   useCallback,
 } from "react";
 
-import ModalClaimBattlepassReward from "@/pages/prototype/home/modal-claim-battlepassrewards";
+import ModalClaimBattlepassReward from "@/pages/stryda/home/modal-claim-battlepassrewards";
 import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 import { DataBattlepass } from "@/mock-data/data-battlepass";

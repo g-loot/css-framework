@@ -88,7 +88,7 @@ export default function LadderHeader() {
                         </div>
                       }
                     >
-                      <Link href="/prototype/premium">
+                      <Link href="/stryda/premium">
                         <button
                           type="button"
                           className="button button-ghost rounded-full"

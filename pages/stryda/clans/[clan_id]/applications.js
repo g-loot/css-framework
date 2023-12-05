@@ -202,7 +202,7 @@ export default function Applications() {
                       Ladder more to promote your Clan.
                     </p>
                   </div>
-                  <Link href="/prototype/valorant/ladders">
+                  <Link href="/stryda/valorant/ladders">
                     <a className="button button-main">
                       <span>Browse Ladders</span>
                     </a>
@@ -255,7 +255,7 @@ export default function Applications() {
                           >
                             <td>
                               <Link
-                                href={`/prototype/profile/${item.user}${prototype.getURLparams()}
+                                href={`/stryda/profile/${item.user}${prototype.getURLparams()}
                           `}
                               >
                                 <button

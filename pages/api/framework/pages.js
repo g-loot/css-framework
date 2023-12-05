@@ -8,7 +8,7 @@ export const FrameworkPages = {
     {
       label: "Prototype",
       tags: "framework,about,css,gettingstarted,install,npm,package,reactjs,webpack,tailwindcss,nodejs,config",
-      url: "/prototype",
+      url: "/stryda",
     },
     {
       label: "Comp library",

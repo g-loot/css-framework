@@ -56,7 +56,7 @@ export default function Premium() {
                     <ol>
                       <li>
                         <Link
-                          href={`/prototype/patch-notes${prototype.getURLparams()}`}
+                          href={`/stryda/patch-notes${prototype.getURLparams()}`}
                         >
                           <a>
                             <span>Patch notes</span>

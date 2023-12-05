@@ -82,7 +82,7 @@ export default function TabProfileFollowing() {
                         </p>
                       </div>
                       <Link
-                        href={`/prototype/search${prototype.getURLparams()}`}
+                        href={`/stryda/search${prototype.getURLparams()}`}
                       >
                         <button type="button" className="button button-primary">
                           <span className="icon icon-a-add" />
@@ -166,7 +166,7 @@ export default function TabProfileFollowing() {
                   <section>
                     <div className="flex flex-col md:flex-row md:justify-between md:items-center px-4 sm:px-0 mb-0.5">
                       <Link
-                        href={`/prototype/search${prototype.getURLparams()}`}
+                        href={`/stryda/search${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -254,7 +254,7 @@ export default function TabProfileFollowing() {
                               profiles.
                             </p>
                           </div>
-                          <Link href="/prototype/search">
+                          <Link href="/stryda/search">
                             <a className="button button-main">
                               <span>Search players</span>
                             </a>

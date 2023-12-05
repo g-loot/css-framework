@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 
-import ModalClaimLadderRewards from "@/pages/prototype/home/modal-claim-ladderrewards";
+import ModalClaimLadderRewards from "@/pages/stryda/home/modal-claim-ladderrewards";
 import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 import { usePrototypeData } from "@/contexts/prototype";

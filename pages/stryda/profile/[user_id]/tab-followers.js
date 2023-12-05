@@ -82,7 +82,7 @@ export default function TabProfileFollowers() {
                             </p>
                           </div>
                           <Link
-                            href={`/prototype/search${prototype.getURLparams()}`}
+                            href={`/stryda/search${prototype.getURLparams()}`}
                           >
                             <button
                               type="button"
@@ -248,7 +248,7 @@ export default function TabProfileFollowers() {
                                   to the profiles.
                                 </p>
                               </div>
-                              <Link href="/prototype/search">
+                              <Link href="/stryda/search">
                                 <a className="button button-main">
                                   <span>Search players</span>
                                 </a>

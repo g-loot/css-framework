@@ -7,7 +7,7 @@ import GameIcon from "../GameIcon/GameIcon";
 import Link from "next/link";
 import AchievementFrame from "../Achievements/AchievementFrame";
 import AchievementIcon from "../Achievements/AchievementIcon";
-import ModalGiftTokens from "@/pages/prototype/clans/modal-gift-tokens";
+import ModalGiftTokens from "@/pages/stryda/clans/modal-gift-tokens";
 import ModalUnfollow from "@/pages/stryda/profile/modal-unfollow";
 import ButtonFeedback from "../Button/ButtonFeedback";
 import WidgetUser from "@/pages/stryda/components/WidgetUser";

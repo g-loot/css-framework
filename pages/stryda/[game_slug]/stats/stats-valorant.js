@@ -1145,7 +1145,7 @@ export default function StatsValorant() {
                           <p className="text-ui-300 mb-2">
                             Get Premium to see the full overview of your stats.
                           </p>
-                          <Link href="/prototype/premium">
+                          <Link href="/stryda/premium">
                             <button
                               type="button"
                               className="button button-sm button-tertiary"
@@ -1398,7 +1398,7 @@ export default function StatsValorant() {
                           <p className="text-ui-300 mb-2">
                             Get Premium to see the full overview of your stats.
                           </p>
-                          <Link href="/prototype/premium">
+                          <Link href="/stryda/premium">
                             <button
                               type="button"
                               className="button button-sm button-tertiary"
@@ -1642,7 +1642,7 @@ export default function StatsValorant() {
                           <p className="text-ui-300 mb-2">
                             Get Premium to see the full overview of your stats.
                           </p>
-                          <Link href="/prototype/premium">
+                          <Link href="/stryda/premium">
                             <button
                               type="button"
                               className="button button-sm button-tertiary"
@@ -1794,7 +1794,7 @@ export default function StatsValorant() {
                           <p className="text-ui-300 mb-2">
                             Get Premium to see the full overview of your stats.
                           </p>
-                          <Link href="/prototype/premium">
+                          <Link href="/stryda/premium">
                             <button
                               type="button"
                               className="button button-sm button-tertiary"

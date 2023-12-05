@@ -136,7 +136,7 @@ export default function ClanSearch() {
                     >
                       <td>
                         <Link
-                          href={`/prototype/clans/${clan.id}${prototype.getURLparams()}`}
+                          href={`/stryda/clans/${clan.id}${prototype.getURLparams()}`}
                         >
                           <div className="flex gap-3 items-center self-center cursor-pointer hover:opacity-50 transition-opacity duration-200">
                             <div className="avatar avatar-xs avatar-squircle">

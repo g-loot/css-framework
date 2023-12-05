@@ -11,11 +11,11 @@ const HowitworksTabs = [
     content: [
       {
         type: "p",
-        text: "Before entering a ladder make sure you have read and agree to our <a href='https://stryda.netlify.app/prototype/valorant/ladders?tab=how-it-works' class='link'>rules</a> and our <a href='https://stryda.gg/terms-conditions' class='link'>terms and conditions</a>.",
+        text: "Before entering a ladder make sure you have read and agree to our <a href='https://stryda.netlify.app/stryda/valorant/ladders?tab=how-it-works' class='link'>rules</a> and our <a href='https://stryda.gg/terms-conditions' class='link'>terms and conditions</a>.",
       },
       {
         type: "p",
-        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/prototype/profile/setting' class='link'>settings</a>.",
+        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/stryda/profile/setting' class='link'>settings</a>.",
       },
     ],
   },
@@ -106,7 +106,7 @@ const HowitworksTabs = [
       },
       {
         type: "p",
-        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/prototype/profile/setting' class='link'>settings</a>.",
+        text: "Make sure you connected your Stryda account with your RIOT ID in your <a href='https://stryda.netlify.app/stryda/profile/setting' class='link'>settings</a>.",
       },
       {
         type: "p",

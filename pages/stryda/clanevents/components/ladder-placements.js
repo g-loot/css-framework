@@ -321,7 +321,7 @@ export default function LadderPlacements() {
             )}
             {!isPremium && !freeEntry && (
               <div className="hidden lg:block">
-                <Link href="/prototype/premium">
+                <Link href="/stryda/premium">
                   <a className="link text-sm text-premium-500">
                     Get more XP with Premium
                   </a>

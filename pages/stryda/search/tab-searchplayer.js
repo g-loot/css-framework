@@ -355,7 +355,7 @@ export default function TabSearchPlayer() {
                   >
                     <td>
                       <Link
-                        href={`/prototype/profile/${
+                        href={`/stryda/profile/${
                           item.id
                         }${prototype.getURLparams()}`}
                       >

@@ -455,7 +455,7 @@ export default function Profile() {
                   )}
                   {!selectedUser.isYou && !selectedUser.isFollowing && (
                     <Link
-                      href={`/prototype/profile/${
+                      href={`/stryda/profile/${
                         selectedUser.id
                       }?tab=followers${prototype.getURLparams("&")}`}
                     >

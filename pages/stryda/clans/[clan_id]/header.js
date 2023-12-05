@@ -335,7 +335,7 @@ export default function ClanHeader(props) {
                       You have <b>3</b> pending applications
                     </div>
                     <div className="flex gap-2">
-                      <Link href="/prototype/clans/1/applications">
+                      <Link href="/stryda/clans/1/applications">
                         <a
                           type="button"
                           className="button button-sm button-primary flex-1"

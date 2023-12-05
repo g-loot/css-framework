@@ -305,7 +305,7 @@ export default function TabClanAbout() {
                       <h2 className="h6 text-ui-100">About</h2>
                       {selectedClan.isYou && (
                         <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                          href={`/stryda/profile/settings${prototype.getURLparams()}`}
                         >
                           <a className="link link-hover text-ui-300 text-sm leading-none">
                             Edit
@@ -375,7 +375,7 @@ export default function TabClanAbout() {
                             </div>
                             <div className="flex gap-2">
                               <Link
-                                href={`/prototype/clans/1?tab=applications${prototype.getURLparams(
+                                href={`/stryda/clans/1?tab=applications${prototype.getURLparams(
                                   "&"
                                 )}`}
                               >
@@ -590,7 +590,7 @@ export default function TabClanAbout() {
                           {getClanMembers().map((item, itemIndex) => (
                             <Link
                               key={itemIndex}
-                              href={`/prototype/profile/${
+                              href={`/stryda/profile/${
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >

@@ -1,6 +1,6 @@
 import Countdown from "../Countdown/Countdown";
 import Link from "next/link";
-import ModalClaimLadderRewards from "@/pages/prototype/home/modal-claim-dailyrewards";
+import ModalClaimLadderRewards from "@/pages/stryda/home/modal-claim-dailyrewards";
 import { UiContext } from "@/contexts/ui";
 import { useContext } from "react";
 import { usePrototypeData } from "@/contexts/prototype";

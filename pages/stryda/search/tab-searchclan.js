@@ -132,7 +132,7 @@ export default function TabSearchClan() {
                   >
                     <td>
                       <Link
-                        href={`/prototype/clans/${
+                        href={`/stryda/clans/${
                           clan.id
                         }${prototype.getURLparams()}`}
                       >

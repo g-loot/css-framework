@@ -62,7 +62,7 @@ const Track = ({
                   tooltip={
                     <span>
                       Select this song with{" "}
-                      <Link href={`/prototype/premium`}>
+                      <Link href={`/stryda/premium`}>
                         <a className="link link-premium">Premium</a>
                       </Link>
                     </span>
@@ -669,7 +669,7 @@ const Clip = ({
             <Tooltip
               tooltip={
                 <span>
-                  <Link href={`/prototype/premium${prototype.getURLparams()}`}>
+                  <Link href={`/stryda/premium${prototype.getURLparams()}`}>
                     <a className="cursor-pointer">
                       You have reached the 3 clips limit. CLICK here to increase
                       limit with{" "}
@@ -1256,7 +1256,7 @@ export default function HighlightEditor() {
                           <span>
                             Increase the limit with{" "}
                             <Link
-                              href={`/prototype/premium${prototype.getURLparams()}`}
+                              href={`/stryda/premium${prototype.getURLparams()}`}
                             >
                               <a className="link link-premium">Premium</a>
                             </Link>

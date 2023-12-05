@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import ModalClaimDailyRewards from "@/pages/prototype/home/modal-claim-dailyrewards";
+import ModalClaimDailyRewards from "@/pages/stryda/home/modal-claim-dailyrewards";
 import { UiContext } from "@/contexts/ui";
 import { VariablesContext } from "@/contexts/variables";
 

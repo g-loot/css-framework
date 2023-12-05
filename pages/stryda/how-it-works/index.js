@@ -88,7 +88,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "<a href='/prototype/premium' class='link link-main font-bold'>Learn more about Premium</a>",
+        text: "<a href='/stryda/premium' class='link link-main font-bold'>Learn more about Premium</a>",
       },
     ],
   },
@@ -136,7 +136,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "Visit the <a href='/prototype/shop' class='link link-main font-bold'>Stryda shop</a>.",
+        text: "Visit the <a href='/stryda/shop' class='link link-main font-bold'>Stryda shop</a>.",
       },
     ],
   },
@@ -163,7 +163,7 @@ const TabsItems = [
       },
       {
         type: "p",
-        text: "<a href='/prototype/clans' class='link link-main font-bold'>Ready to rock?</a>",
+        text: "<a href='/stryda/clans' class='link link-main font-bold'>Ready to rock?</a>",
       },
     ],
   },

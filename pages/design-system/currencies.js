@@ -6,7 +6,7 @@ import AchievementFrame from "@/components/Achievements/AchievementFrame";
 import AchievementIcon from "@/components/Achievements/AchievementIcon";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
-import ModalAchievementReceived from "../prototype/modal-achievementreceived";
+import ModalAchievementReceived from "../stryda/modal-achievementreceived";
 import Anchor from "@/components/DesignSystem/DSanchor";
 
 const DSpage = () => {

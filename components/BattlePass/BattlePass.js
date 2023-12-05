@@ -6,7 +6,7 @@ import React, {
   useCallback,
 } from "react";
 
-import ModalClaimBattlepassReward from "@/pages/prototype/home/modal-claim-battlepassrewards";
+import ModalClaimBattlepassReward from "@/pages/stryda/home/modal-claim-battlepassrewards";
 import { UiContext } from "@/contexts/ui";
 import { DataBattlepass } from "@/mock-data/data-battlepass";
 import { DataBattlepassRewards } from "@/mock-data/data-battlepass";
@@ -18,7 +18,7 @@ import Lottie from "lottie-react";
 import LottieExplosion from "@/assets/animations/explosion_stryda_1.json";
 import CarouselSingle, { CarouselItem } from "../Carousel/CarouselSingle";
 import PremiumLogo from "../PremiumLogo/PremiumLogo";
-import ModalBattlepassCompletedPremium from "@/pages/prototype/battlepass/modal-battlepass-completed-premium";
+import ModalBattlepassCompletedPremium from "@/pages/stryda/battlepass/modal-battlepass-completed-premium";
 
 export default function Battlepass(props) {
   const prototype = usePrototypeData();

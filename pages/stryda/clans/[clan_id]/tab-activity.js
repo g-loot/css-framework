@@ -54,7 +54,7 @@ export default function TabClanActivity() {
                         Join Ladders and start earning rewards
                       </p>
                     </div>
-                    <Link href="/prototype/valorant/ladders">
+                    <Link href="/stryda/valorant/ladders">
                       <a className="button button-main mt-6">
                         <span>Browse Ladders</span>
                       </a>

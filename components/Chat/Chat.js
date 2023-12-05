@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useRef, useState } from "react";
 
-import ModalReportMessage from "@/pages/prototype/clans-old/modal-report-message";
+import ModalReportMessage from "@/pages/stryda/clans/modal-report-message";
 import Tooltip from "../Tooltip/Tooltip";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";

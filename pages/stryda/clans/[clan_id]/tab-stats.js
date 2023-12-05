@@ -223,7 +223,7 @@ export default function TabClanStats() {
                             </div>
                             <div className="item-image">
                               <Link
-                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                                href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                               >
                                 <Avatar
                                   id={item}
@@ -234,7 +234,7 @@ export default function TabClanStats() {
                             </div>
                             <div className="item-body">
                               <Link
-                                href={`/prototype/profile/${item}${prototype.getURLparams()}`}
+                                href={`/stryda/profile/${item}${prototype.getURLparams()}`}
                               >
                                 <div className="item-title interactive truncate">
                                   <span

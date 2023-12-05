@@ -289,7 +289,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                   <>
                     {!isInAClan ? (
                       <Link
-                        href={`/prototype/clans${prototype.getURLparams()}`}
+                        href={`/stryda/clans${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -368,7 +368,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                         Events!
                       </p>
                       <Link
-                        href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                        href={`/stryda/profile/settings${prototype.getURLparams()}`}
                       >
                         <button
                           type="button"
@@ -504,7 +504,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                   </td>
                                 ) : (
                                   <td className="text-right">
-                                    <Link href="/prototype/clans/1?tab=members">
+                                    <Link href="/stryda/clans/1?tab=members">
                                       <a className="text-sm link">View all</a>
                                     </Link>
                                   </td>
@@ -526,7 +526,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                           hasTooltip={true}
                                         />
                                         <Link
-                                          href={`/prototype/profile/${
+                                          href={`/stryda/profile/${
                                             prototype.getUserByID(item.id).id
                                           }${prototype.getURLparams()}`}
                                         >
@@ -706,7 +706,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                             Join a Clan to participate to Clan Events!
                           </p>
                           <Link
-                            href={`/prototype/clans${prototype.getURLparams()}`}
+                            href={`/stryda/clans${prototype.getURLparams()}`}
                           >
                             <button
                               type="button"
@@ -995,7 +995,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                             <div className="item h-[56px]">
                                               <div className="item-body">
                                                 <Link
-                                                  href={`/prototype/clans/${
+                                                  href={`/stryda/clans/${
                                                     clan.clan
                                                   }${prototype.getURLparams()}`}
                                                 >
@@ -1119,7 +1119,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                                           <tr key={userIndex}>
                                                             <td>
                                                               <Link
-                                                                href={`/prototype/profile/${user}`}
+                                                                href={`/stryda/profile/${user}`}
                                                               >
                                                                 <span className="interactive">
                                                                   &#91;
@@ -1269,7 +1269,7 @@ export default function TabClanLeaderboardsLeaderboards() {
                                           <div className="mt-2 border-t border-ui-700 pl-2 pt-2 flex items-center justify-between">
                                             <div className="flex items-center gap-4">
                                               <Link
-                                                href={`/prototype/clans/${
+                                                href={`/stryda/clans/${
                                                   prototype.getClanByID(
                                                     clan.clan
                                                   )?.id

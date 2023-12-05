@@ -105,7 +105,7 @@ export default function Ladders() {
                     <li className="py-6">
                       {selectedGame.needsSteam && (
                         <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                          href={`/stryda/profile/settings${prototype.getURLparams()}`}
                         >
                           <button
                             type="button"
@@ -133,7 +133,7 @@ export default function Ladders() {
                             </button>
                           ) : (
                             <Link
-                              href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                              href={`/stryda/profile/settings${prototype.getURLparams()}`}
                             >
                               <button
                                 type="button"
@@ -150,7 +150,7 @@ export default function Ladders() {
                       )}
                       {!selectedGame.needsSteam && !selectedGame.needsRiot && (
                         <Link
-                          href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                          href={`/stryda/profile/settings${prototype.getURLparams()}`}
                         >
                           <button
                             type="button"

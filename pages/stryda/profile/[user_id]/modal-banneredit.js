@@ -28,7 +28,7 @@ export default function ModalBannerEdit(props) {
 
   function closeModalWithDelay(id) {
     setSubmitting(true);
-    window.location.href = `/prototype/profile/1?profilebanner=${selectedBanner}`;
+    window.location.href = `/stryda/profile/1?profilebanner=${selectedBanner}`;
     setTimeout(() => {
       setSubmitting(false);
       uiContext.closeModal();
@@ -106,7 +106,7 @@ export default function ModalBannerEdit(props) {
                   <p className="text-base leading-tight text-ui-300 mt-2 mb-4 max-w-[30ch] ">
                     Head to the{" "}
                     <Link
-                      href={`/prototype/shop/avatar-frame${prototype.getURLparams()}`}
+                      href={`/stryda/shop/avatar-frame${prototype.getURLparams()}`}
                     >
                       <a href="" className="link link-main">
                         shop

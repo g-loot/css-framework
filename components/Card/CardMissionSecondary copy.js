@@ -6,7 +6,7 @@ import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import { VariablesContext } from "@/contexts/variables";
 import Countdown from "../Countdown/Countdown";
-import ModalClaimMission from "@/pages/prototype/home/modal-claim-mission";
+import ModalClaimMission from "@/pages/stryda/home/modal-claim-mission";
 import { UiContext } from "@/contexts/ui";
 import XPBoostList from "../XPBoostList/XPBoostList";
 

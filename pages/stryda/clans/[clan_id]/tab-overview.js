@@ -75,7 +75,7 @@ export default function TabClanOverview() {
                         {selectedClan.ladders?.map((ladder, ladderIndex) => (
                           <Link
                             key={ladderIndex}
-                            href={`/prototype/${
+                            href={`/stryda/${
                               prototype.getGameBySlug(ladder.gameSlug).slug
                             }/ladders/${
                               ladder.id
@@ -173,7 +173,7 @@ export default function TabClanOverview() {
                         <li key={itemIndex} className="item">
                           <div className="item-image">
                             <Link
-                              href={`/prototype/profile/${
+                              href={`/stryda/profile/${
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >
@@ -182,7 +182,7 @@ export default function TabClanOverview() {
                           </div>
                           <div className="item-body">
                             <Link
-                              href={`/prototype/profile/${
+                              href={`/stryda/profile/${
                                 prototype.getUserByID(item.id).id
                               }${prototype.getURLparams()}`}
                             >
@@ -352,7 +352,7 @@ export default function TabClanOverview() {
                 <h2 className="h6 text-ui-100">About</h2>
                 {selectedClan.isYou && (
                   <Link
-                    href={`/prototype/profile/settings${prototype.getURLparams()}`}
+                    href={`/stryda/profile/settings${prototype.getURLparams()}`}
                   >
                     <a className="link link-hover text-ui-300 text-sm leading-none">
                       Edit
@@ -420,7 +420,7 @@ export default function TabClanOverview() {
                       </div>
                       <div className="flex gap-2">
                         <Link
-                          href={`/prototype/clans/1?tab=applications${prototype.getURLparams()}`}
+                          href={`/stryda/clans/1?tab=applications${prototype.getURLparams()}`}
                         >
                           <a
                             type="button"
@@ -603,7 +603,7 @@ export default function TabClanOverview() {
                     {getClanMembers().map((item, itemIndex) => (
                       <Link
                         key={itemIndex}
-                        href={`/prototype/profile/${
+                        href={`/stryda/profile/${
                           prototype.getUserByID(item.id).id
                         }${prototype.getURLparams()}`}
                       >

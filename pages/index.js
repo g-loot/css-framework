@@ -105,7 +105,9 @@ const Index = () => {
                 <div className="col-span-12 lg:col-span-12 flex flex-col">
                   <div className="flex-1 lg:border-l border-ui-500 lg:pl-8 mb-12">
                     <div>
-                      <div className="h4 text-ui-300 font-normal">Welcome to the</div>
+                      <div className="h4 text-ui-300 font-normal">
+                        Welcome to the
+                      </div>
                       <h1 className="mb-8 lg:text-8xl mt-2">
                         <div>Stryda design system</div>
                       </h1>
@@ -176,34 +178,48 @@ const Index = () => {
                           alt=""
                         />
                       </Link>
-                      <Link href="prototype/home">
+                      <a
+                        href="https://stryda-v2.netlify.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <div className="flex-1 flex flex-col items-start justify-start p-4 interactive-secondary">
-                          <div className="flex items-baseline gap-2 mb-3">
-                            <h2 className="h4">Prototype</h2>
+                          <div className="flex items-center gap-2 mb-3">
+                            <h2 className="h4">Stryda v2</h2><span className="icon icon-reply text-ui-100 text-lg -scale-x-100"/>{" "}
+                            <div className="chip chip-secondary chip-sm">
+                              <span>Deprecated</span>
+                            </div>
                           </div>
                           <div className="text-ui-300 leading-tight">
-                            A place for exploring and defining the design of our
-                            product.
+                            How Stryda was prior to the AI Recaps, the new nav and the feed.
                           </div>
                         </div>
-                      </Link>
+                      </a>
                       <div className="flex flex-col lg:flex-row gap-2 p-4 border-t border-ui-700">
-                        <Link href="prototype/home">
+                        <a
+                          href="https://stryda-v2.netlify.app/prototype/home"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <button
                             type="button"
                             className="button button-sm button-primary"
                           >
                             <span>View prototype</span>
                           </button>
-                        </Link>
-                        <Link href="prototype">
+                        </a>
+                        <a
+                          href="https://stryda-v2.netlify.app/prototype"
+                          target="_blank"
+                          rel="noreferrer"
+                        >
                           <button
                             type="button"
                             className="button button-sm button-secondary"
                           >
                             <span>Page listing</span>
                           </button>
-                        </Link>
+                        </a>
                       </div>
                     </li>
                     <li
@@ -225,7 +241,7 @@ const Index = () => {
                             <h2 className="h4">Stryda v3</h2>
                           </div>
                           <div className="text-ui-300 leading-tight">
-                            Feed, AI video highlights, social interactions...
+                            AI Recaps, new nav, feed...
                           </div>
                         </div>
                       </Link>

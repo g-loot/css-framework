@@ -14,9 +14,9 @@ import Link from "next/link";
 import ModalLadderHowitworksVideo from "../ladders/modal-howitworks-video";
 import ModalClaimDailyRewards from "./modal-claim-dailyrewards";
 import ModalClaimLadderRewards from "./modal-claim-dailyrewards";
-import HomeLaddersSolo from "@/pages/prototype/home/component-ladders-solo";
-import HomeLaddersClan from "@/pages/prototype/home/component-ladders-clan";
-import HomeLadderMissions from "@/pages/prototype/home/component-ladders-missions";
+import HomeLaddersSolo from "./component-ladders-solo";
+import HomeLaddersClan from "./component-ladders-clan";
+import HomeLadderMissions from "./component-ladders-missions";
 import ComponentRewardLadder from "../missions/component-rewardladder";
 
 export default function Home() {
@@ -147,7 +147,7 @@ export default function Home() {
                 <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
                   <h3 className="h6">Solo</h3>
                   {!hasNoLadders && (
-                    <Link href="/prototype/valorant/ladders/">
+                    <Link href="/stryda/valorant/ladders/">
                       <button
                         type="button"
                         className="link text-ui-300 text-sm"
@@ -163,7 +163,7 @@ export default function Home() {
                 <div className="flex gap-2 items-baseline justify-between mx-4 sm:mx-0">
                   <h3 className="h6">Clan</h3>
                   {hasNoClan ? (
-                    <Link href="/prototype/clans/">
+                    <Link href="/stryda/clans/">
                       <button
                         type="button"
                         className="link text-ui-300 text-sm"
@@ -172,7 +172,7 @@ export default function Home() {
                       </button>
                     </Link>
                   ) : (
-                    <Link href="/prototype/clans/1">
+                    <Link href="/stryda/clans/1">
                       <button
                         type="button"
                         className="link text-ui-300 text-sm"
@@ -217,7 +217,7 @@ export default function Home() {
                       matches, remove ads and much more.
                     </p>
                     <Link
-                      href={`/prototype/premium${prototype.getURLparams()}`}
+                      href={`/stryda/premium${prototype.getURLparams()}`}
                     >
                       <button type="button" className="button button-premium">
                         <span>Learn more</span>
@@ -243,7 +243,7 @@ export default function Home() {
                 {!isPremium && (
                   <p>
                     Get{" "}
-                    <Link href="/prototype/premium">
+                    <Link href="/stryda/premium">
                       <button type="button" className="text-premium-500 link">
                         Premium
                       </button>
