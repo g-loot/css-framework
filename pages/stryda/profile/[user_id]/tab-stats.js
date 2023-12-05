@@ -119,7 +119,7 @@ export default function TabProfileStats() {
                     </button>
                   </Link>
                 </div>
-                <ul className="relative z-10 p-4 flex flex-wrap justify-evenly items-center bg-ui-900/5 text-center gap-4 rounded">
+                <ul className="relative z-10 p-4 flex flex-wrap justify-evenly items-center bg-gradient-to-b from-ui-900/40 to-ui-900/20 text-center gap-4 rounded">
                   {prototype
                     .getGameByID(item)
                     .demo?.mainStats.map((item, itemIndex) => (
