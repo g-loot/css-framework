@@ -77,83 +77,23 @@ export default function TabProfileAchievements() {
         <>
           {isEmpty || selectedUser.achievements?.badges.length === 0 ? (
             <>
-              {selectedUser.isYou ? (
-                <section className="grid lg:grid-cols-2 gap-4">
-                  {prototype
-                    .getAchievementsectionByID(1)
-                    .items.map((item, itemIndex) => (
-                      <div
-                        key={itemIndex}
-                        className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${
-                          item.level === 0 ? "pointer-events-none" : ""
-                        } ${loading ? "is-loading" : ""}`}
-                        style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
-                      >
-                        <div className={`w-36 h-36 achievement`}>
-                          <i />
-                          <i />
-                          <div className={`achievement-level-0`}>
-                            <AchievementFrame
-                              url={`https://res.cloudinary.com/gloot/image/upload/v1678871888/Stryda/achievements/frames/achievement-frame-lvl0-animated.svg`}
-                            />
-                            <AchievementIcon
-                              url={`https://res.cloudinary.com/gloot/image/upload/v1678872380/Stryda/achievements/icons/achievement-icon-${
-                                prototype.getAchievementitemByID(1, item.item)
-                                  .icon
-                              }.svg`}
-                            />
-                          </div>
-                          {item.level > 0 && (
-                            <span className="text-sm uppercase">
-                              Level {item.level}
-                            </span>
-                          )}
-                        </div>
-                        <div className="flex-1">
-                          <h3 className="h5">
-                            {
-                              prototype.getAchievementitemByID(1, item.item)
-                                .name
-                            }
-                          </h3>
-                          <p className="text-ui-300 mt-2 mb-3">
-                            {
-                              prototype.getAchievementitemByID(1, item.item)
-                                .description
-                            }
-                          </p>
-                          <div className="flex items-center gap-4 leading-none font-bold">
-                            <div
-                              className="progressbar progressbar-secondary w-full"
-                              style={{
-                                "--percent": 0,
-                                "--progress": 0,
-                              }}
-                            >
-                              <div />
-                              <div />
-                            </div>
-                            <div className="flex-none mb-0.5">
-                              <span>0</span> / <span>100</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                </section>
-              ) : (
-                <div className="surface rounded-lg px-4 py-8 text-center">
-                  <div className="max-w-xs mx-auto">
-                    <span className="icon icon-medal text-6xl text-ui-500" />
-                    <div className="mt-2">
-                      <p className="text-lg text-ui-300">
-                        {selectedUser.nickname} hasn&#39;t unlocked any
-                        achievements.
-                      </p>
-                    </div>
+              <div className="px-4 py-24 text-center">
+                <div className="max-w-xs mx-auto">
+                  <span className="icon icon-medal text-6xl text-ui-500" />
+                  <div className="mt-2">
+                    <p className="text-ui-300">
+                      {selectedUser.isYou ? (
+                        <>You haven&#39;t unlocked any achievements yet.</>
+                      ) : (
+                        <>
+                          {selectedUser.nickname} hasn&#39;t unlocked any
+                          achievements.
+                        </>
+                      )}
+                    </p>
                   </div>
                 </div>
-              )}
+              </div>
             </>
           ) : (
             <section className="grid xl:grid-cols-2 gap-4">
@@ -162,9 +102,7 @@ export default function TabProfileAchievements() {
                   key={itemIndex}
                   className={`surface sm:rounded-lg p-2 pr-4 flex items-center gap-6 animate-slide-in-bottom animate-delay ${
                     item.level === 0 ? "pointer-events-none" : ""
-                  } ${
-                    loading ? "is-loading" : ""
-                  }`}
+                  } ${loading ? "is-loading" : ""}`}
                   style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
                 >
                   {item.level > 0 && selectedUser.isYou && (
@@ -248,6 +186,45 @@ export default function TabProfileAchievements() {
                   </div>
                 </div>
               ))}
+            </section>
+          )}
+
+          {/* for demo purposes only */}
+          {prototype.showDemo && (
+            <section className="fixed z-[9999] bottom-4 left-4 surface-ui-500 rounded shadow-md p-4 pr-16 text-sm text-ui-100 flex flex-col items-start">
+              <div className="absolute top-1 right-1">
+                <button
+                  type="button"
+                  className="button button-sm button-secondary button-close"
+                  onClick={() => prototype.setShowDemo(!prototype.showDemo)}
+                >
+                  <span className="icon icon-e-remove" />
+                </button>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="state-premium"
+                    defaultChecked={prototype.isPremium}
+                    onClick={() => prototype.togglePremium()}
+                  />
+                  <label htmlFor="state-premium">Premium State</label>
+                </div>
+              </div>
+              <div className="form-group pl-4">
+                <div className="form-xs form-toggle">
+                  <input
+                    type="checkbox"
+                    name="feed"
+                    id="state-empty"
+                    defaultChecked={isEmpty}
+                    onClick={() => setIsEmpty(!isEmpty)}
+                  />
+                  <label htmlFor="state-empty">Empty State</label>
+                </div>
+              </div>
             </section>
           )}
         </>

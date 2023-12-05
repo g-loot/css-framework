@@ -584,14 +584,14 @@ const DSpage = () => {
                     <div className="flex flex-col justify-between">
                       <Tooltip
                         tooltip={
-                          <ul class="menu menu-rounded w-44">
+                          <ul class="menu menu-rounded w-48">
                             <li>
-                              <button>
-                                <span>Open in Recap editor</span>
+                              <button type="button" className="is-disabled">
+                                <span>Open in Recap editor (new)</span>
                               </button>
                             </li>
                             <li>
-                              <button>
+                              <button type="button">
                                 <span>Publish Recap</span>
                               </button>
                             </li>
@@ -631,7 +631,7 @@ const DSpage = () => {
       <div className="mb-8">
         <Anchor title="Status: not premium" />
         <div className="mb-2">
-          <ButtonStretchy variant="button-success">
+          <ButtonStretchy variant="button-attention">
             <span className="text-sm">
               <span>New matches found</span>
             </span>

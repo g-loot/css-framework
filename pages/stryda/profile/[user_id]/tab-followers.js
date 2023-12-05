@@ -67,7 +67,7 @@ export default function TabProfileFollowers() {
             <>
               {isEmpty ? (
                 <>
-                  <div className="surface rounded-lg px-4 py-8 text-center mb-4">
+                  <div className="px-4 py-24 text-center">
                     <div className="max-w-xs mx-auto">
                       <span className="icon icon-multiple-11 text-6xl text-ui-500" />
                       {selectedUser.isYou ? (

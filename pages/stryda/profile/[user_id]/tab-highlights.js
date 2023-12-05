@@ -56,7 +56,7 @@ export default function TabProfileHighlights() {
               {prototype
                 .getUserMatches(selectedUser.id)
                 .filter((m) => m.meta?.media).length === 0 || isEmpty ? (
-                <div className="p-4 text-center">
+                <div className="px-4 py-24 text-center">
                   <div className="max-w-xs mx-auto">
                     <span className="icon icon-video text-6xl text-ui-500" />
                     <div className="mt-2">

@@ -237,7 +237,7 @@ export default function Profile() {
             <>
               <div className="relative z-0">
                 {selectedUser.isYou && (
-                  <div className="absolute z-20 w-full max-w-xs rounded border border-ui-200/5 bg-ui-800/95 p-2 right-0 bottom-4 leading-none">
+                  <div className="hidden md:block absolute z-20 w-full max-w-xs rounded border border-ui-200/5 bg-ui-800/95 p-2 right-0 bottom-4 leading-none">
                     <div className="flex items-center justify-center gap-1 text-center mb-2">
                       <span className="text-sm text-ui-100 mr-1">Level:</span>
                       <span className="icon icon-star text-main" />

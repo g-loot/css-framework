@@ -1201,10 +1201,16 @@
   &.is-inactive,
   &:has(.progresscontainer) {
     > .card-image {
-      @apply
-      child:opacity-30
-      [&>img]:opacity-5
-      ;
+      > * {
+        @apply
+        opacity-30
+        ;
+      }
+      > img {
+        @apply
+        opacity-5
+        ;
+      }
     }
   }
   &:has(.button-success) {
