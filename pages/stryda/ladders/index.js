@@ -19,7 +19,7 @@ import StructureGamePage from "../components/StructureGamePage";
 import ButtonStatsUpdate from "@/components/ButtonStatsUpdate/ButtonStatsUpdate";
 import Countdown from "@/components/Countdown/Countdown";
 import ModalVideoYoutubePlayer from "../modal-videoyoutubeplayer";
-import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
+import ModalConnectGameID from "../modal-connectgameID";
 
 const TabsItems = [
   {
@@ -66,8 +66,8 @@ export default function Ladders() {
     );
   }
 
-  function openModalConnectIDLeagueOfLegends() {
-    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  function openModalConnectGameID() {
+    uiContext.openModal(<ModalConnectGameID />);
   }
 
   useEffect(() => {
@@ -139,7 +139,7 @@ export default function Ladders() {
                             <button
                               type="button"
                               className="button button-secondary"
-                              onClick={openModalConnectIDLeagueOfLegends}
+                              onClick={openModalConnectGameID}
                             >
                               <span
                                 className={`icon icon-game-${selectedGame.slug}-symbol`}

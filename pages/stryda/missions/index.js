@@ -6,7 +6,7 @@ import TabMissionsHowItWorks from "./tab-howitworks";
 import TabMissionsMissions from "./tab-missions";
 import TabMissionsHistory from "./tab-history";
 import TabMissionsLeaderboard from "./tab-leaderboard";
-import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
+import ModalConnectGameID from "../modal-connectgameID";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
@@ -54,12 +54,12 @@ export default function Missions() {
 
   useEffect(() => {
     if (modalConnectIDLeagueOfLegends) {
-      openModalConnectIDLeagueOfLegends();
+      openModalConnectGameID();
     }
   }, [modalConnectIDLeagueOfLegends]);
 
-  function openModalConnectIDLeagueOfLegends() {
-    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  function openModalConnectGameID() {
+    uiContext.openModal(<ModalConnectGameID />);
   }
 
   useEffect(() => {

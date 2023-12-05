@@ -14,7 +14,7 @@ import { StatsLeagueOfLegendsDemoGeneral } from "@/mock-data/data-stats-demo-lea
 import { StatsLeagueOfLegendsDemoLatestMatches } from "@/mock-data/data-stats-demo-leagueoflegends";
 import LoadMore from "../../../../components/LoadMore/LoadMore";
 import LoadMoreContainer from "../../../../components/LoadMore/LoadMoreContainer";
-import ModalConnectIDLeagueOfLegends from "../../modal-connectIDleagueoflegends";
+import ModalConnectGameID from "../../modal-connectgameID";
 
 export default function StatsLeagueOfLegends() {
   const router = useRouter();
@@ -111,8 +111,8 @@ export default function StatsLeagueOfLegends() {
     setSelectedStat(getGeneralStatsByID(selectedGeneralStat));
   }, [selectedGeneralStat]);
 
-  function openModalConnectIDLeagueOfLegends() {
-    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  function openModalConnectGameID() {
+    uiContext.openModal(<ModalConnectGameID />);
   }
 
   return (
@@ -148,7 +148,7 @@ export default function StatsLeagueOfLegends() {
                           <button
                             type="button"
                             className="button button-primary"
-                            onClick={openModalConnectIDLeagueOfLegends}
+                            onClick={openModalConnectGameID}
                           >
                             <span
                               className={`icon icon-game-${selectedGame.slug}-symbol`}
@@ -207,7 +207,7 @@ export default function StatsLeagueOfLegends() {
                       <button
                         type="button"
                         className="button button-primary w-full"
-                        onClick={openModalConnectIDLeagueOfLegends}
+                        onClick={openModalConnectGameID}
                       >
                         <span className="icon icon-game-leagueoflegends-symbol" />
                         <span>Connect my account</span>

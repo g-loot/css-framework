@@ -4,6 +4,7 @@ import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
 import Tooltip from "@/components/Tooltip/Tooltip";
+import ModalConnectGameID from "../../modal-connectgameID";
 
 export default function TabSettingsGameAccounts() {
   const router = useRouter();
@@ -26,6 +27,10 @@ export default function TabSettingsGameAccounts() {
   function selectLoLRegion(e) {
     const selectLoLRegionTarget = e.target.value;
     setIsLoLRegionSelected(true);
+  }
+
+  function openModalConnectGameID(gameID) {
+    uiContext.openModal(<ModalConnectGameID gameID={gameID} />);
   }
 
   return (
@@ -111,9 +116,10 @@ export default function TabSettingsGameAccounts() {
                     <>
                       <button
                         type="button"
-                        onClick={() =>
-                          setIsValorantConnected(!isValorantConnected)
-                        }
+                        onClick={() => {
+                          setIsValorantConnected(!isValorantConnected);
+                          openModalConnectGameID(1);
+                        }}
                         className="button button-primary w-full"
                       >
                         <span className="icon icon-game-valorant-symbol" />
@@ -214,7 +220,10 @@ export default function TabSettingsGameAccounts() {
                     <>
                       <button
                         type="button"
-                        onClick={() => setIsLoLConnected(!isLoLConnected)}
+                        onClick={() => {
+                          setIsLoLConnected(!isLoLConnected);
+                          openModalConnectGameID(6);
+                        }}
                         className="button button-primary w-full"
                       >
                         <span className="icon icon-game-leagueoflegends-symbol" />
@@ -386,6 +395,7 @@ export default function TabSettingsGameAccounts() {
                               setIsAlreadyPUBGConnected(
                                 !isAlreadyPUBGConnected
                               );
+                              openModalConnectGameID(2);
                             }}
                             className="button button-primary w-full"
                           >
@@ -429,7 +439,10 @@ export default function TabSettingsGameAccounts() {
                     <>
                       <button
                         type="button"
-                        onClick={() => setIsPUBGConnected(!isPUBGConnected)}
+                        onClick={() => {
+                          setIsPUBGConnected(!isPUBGConnected);
+                          openModalConnectGameID(2);
+                        }}
                         className="button button-primary w-full"
                       >
                         <span className="icon icon-game-pubg-symbol" />

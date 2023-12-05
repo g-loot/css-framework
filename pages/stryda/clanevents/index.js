@@ -14,7 +14,7 @@ import TabClanLeaderboardsHowItWorks from "./[game_slug]/[leaderboard_id]/tab-ho
 import TabClanLeaderboardsHistory from "./[game_slug]/[leaderboard_id]/tab-history";
 import StructureGamePage from "../components/StructureGamePage";
 import ModalVideoYoutubePlayer from "../modal-videoyoutubeplayer";
-import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
+import ModalConnectGameID from "../modal-connectgameID";
 
 const TabsItems = [
   {
@@ -65,8 +65,8 @@ export default function Ladders() {
     uiContext.openModal(<ModalVideoYoutubePlayer url={url} />);
   }
 
-  function openModalConnectIDLeagueOfLegends() {
-    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  function openModalConnectGameID() {
+    uiContext.openModal(<ModalConnectGameID />);
   }
 
   return (
@@ -124,7 +124,7 @@ export default function Ladders() {
                             <button
                               type="button"
                               className="button button-secondary"
-                              onClick={openModalConnectIDLeagueOfLegends}
+                              onClick={openModalConnectGameID}
                             >
                               <span
                                 className={`icon icon-game-${selectedGame.slug}-symbol`}

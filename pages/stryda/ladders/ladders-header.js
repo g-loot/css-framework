@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 
 import Link from "next/link";
 import ModalLadderHowitworksVideo from "./modal-howitworks-video";
-import ModalConnectIDLeagueOfLegends from "../modal-connectIDleagueoflegends";
+import ModalConnectGameID from "../modal-connectgameID";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import { useRouter } from "next/router";
@@ -22,8 +22,8 @@ export default function LaddersHeader(props) {
     );
   }
 
-  function openModalConnectIDLeagueOfLegends() {
-    uiContext.openModal(<ModalConnectIDLeagueOfLegends />);
+  function openModalConnectGameID() {
+    uiContext.openModal(<ModalConnectGameID />);
   }
 
   
@@ -115,7 +115,7 @@ export default function LaddersHeader(props) {
                       <button
                         type="button"
                         className="button button-secondary"
-                        onClick={openModalConnectIDLeagueOfLegends}
+                        onClick={openModalConnectGameID}
                       >
                         <span
                           className={`icon icon-game-${selectedGame.slug}-symbol`}
