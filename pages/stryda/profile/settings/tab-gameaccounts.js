@@ -109,10 +109,20 @@ export default function TabSettingsGameAccounts() {
                     </>
                   ) : (
                     <>
-                      <div className="input-group">
+                      <button
+                        type="button"
+                        onClick={() =>
+                          setIsValorantConnected(!isValorantConnected)
+                        }
+                        className="button button-primary w-full"
+                      >
+                        <span className="icon icon-game-valorant-symbol" />
+                        <span>Connect my account</span>
+                      </button>
+                      {/* <div className="input-group">
                         <button
                           type="button"
-                          className="button button-secondary"
+                          className="button button-secondary button-sm"
                           onClick={() =>
                             setIsValorantConnected(!isValorantConnected)
                           }
@@ -125,7 +135,7 @@ export default function TabSettingsGameAccounts() {
                           name="game-valorant"
                           id="game-valorant"
                         />
-                      </div>
+                      </div> */}
                     </>
                   )}
                 </div>
@@ -202,7 +212,15 @@ export default function TabSettingsGameAccounts() {
                     </>
                   ) : (
                     <>
-                      <div className="form-group form-select mb-2">
+                      <button
+                        type="button"
+                        onClick={() => setIsLoLConnected(!isLoLConnected)}
+                        className="button button-primary w-full"
+                      >
+                        <span className="icon icon-game-leagueoflegends-symbol" />
+                        <span>Connect my account</span>
+                      </button>
+                      {/* <div className="form-group form-select mb-2">
                         <select
                           id="Leagueoflegends-region"
                           onChange={(e) => selectLoLRegion(e)}
@@ -236,7 +254,7 @@ export default function TabSettingsGameAccounts() {
                       >
                         <span className="icon icon-game-leagueoflegends-symbol" />
                         <span>Connect my account</span>
-                      </button>
+                      </button> */}
                     </>
                   )}
                 </div>
@@ -318,7 +336,7 @@ export default function TabSettingsGameAccounts() {
                       <div className="input-group">
                         <button
                           type="button"
-                          className="button button-secondary"
+                          className="button button-secondary button-sm"
                           onClick={() =>
                             setIsFortniteConnected(!isFortniteConnected)
                           }
@@ -409,22 +427,31 @@ export default function TabSettingsGameAccounts() {
                     </>
                   ) : (
                     <>
-                      <div className="input-group">
+                      <button
+                        type="button"
+                        onClick={() => setIsPUBGConnected(!isPUBGConnected)}
+                        className="button button-primary w-full"
+                      >
+                        <span className="icon icon-game-pubg-symbol" />
+                        <span>Connect my account</span>
+                      </button>
+                      {/* <div className="input-group">
                         <button
                           type="button"
-                          className="button button-secondary"
+                          className="button button-secondary button-sm"
                           onClick={() => setIsPUBGConnected(!isPUBGConnected)}
                         >
                           <span>Connect account</span>
                         </button>
                         <input type="text" name="game-pubg" id="game-pubg" />
-                      </div>
+                      </div> */}
                     </>
                   )}
                 </div>
               </div>
               <p className="mb-12 text-sm">
-              By connecting my game accounts I acknowledge making those profiles public to all users.
+                By connecting my game accounts I acknowledge making those
+                profiles public to all users.
               </p>
             </div>
             <div className="w-full xl:w-72 order-1 xl:order-2 space-y-4">
@@ -455,7 +482,10 @@ export default function TabSettingsGameAccounts() {
               <div className="flex flex-col items-center gap-4 p-4 surface-ui-500 rounded">
                 <span className="icon text-3xl icon-c-question" />
                 <h5 className="text-base">Need to update accounts?</h5>
-                <button type="button" className="button button-secondary">
+                <button
+                  type="button"
+                  className="button button-secondary button-sm"
+                >
                   <span>Contact support</span>
                 </button>
               </div>

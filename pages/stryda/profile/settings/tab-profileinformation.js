@@ -75,7 +75,7 @@ export default function TabSettingsProfileInformation() {
                   <span className="icon icon-discord" />
                   <button
                     type="button"
-                    className="button button-secondary"
+                    className="button button-secondary button-sm"
                     onClick={() => setIsDiscordConnected(!isDiscordConnected)}
                   >
                     <span>Connect account</span>
