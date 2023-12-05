@@ -42,12 +42,12 @@ const TabsItems = [
     component: TabSettingsAppSettings,
     icon: "icon-cogwheel",
   },
-  {
-    label: "Subscription & payment",
-    url: "subscription",
-    component: TabSettingsSubscription,
-    icon: "icon-card-edit",
-  },
+  // {
+  //   label: "Subscription & payment",
+  //   url: "subscription",
+  //   component: TabSettingsSubscription,
+  //   icon: "icon-card-edit",
+  // },
 ];
 
 export default function Home() {
@@ -128,38 +128,40 @@ export default function Home() {
             <section className="header header-secondary mt-8">
               <div className="header-bg">
                 {selectedUser.isYou ? (
-                  <div className="flex">
-                    <div className="relative">
-                      <Avatar
-                        size="avatar-2xl"
-                        id={selectedUser.id}
-                        hasTooltip={true}
-                        hasTooltipXP={true}
-                        tooltipPlacement={"bottom"}
-                      />
-                      <button
-                        onClick={openModalAvatarEdit}
-                        type="button"
-                        className="button button-tertiary rounded-full absolute z-20 bottom-0 right-0"
-                      >
-                        <span className="icon icon-pen-2" />
-                      </button>
-                    </div>
-                  </div>
+                  <Avatar
+                  size="avatar-2xl"
+                  id={selectedUser.id}
+                  hasTooltip={true}
+                  hasTooltipXP={true}
+                  tooltipPlacement={"bottom"}
+                />
                 ) : (
                   <Avatar size="avatar-2xl" id={selectedUser.id} />
                 )}
                 {selectedUser.isYou && (
-                  <button
+                  <div className="absolute z-10 bottom-2 right-2 flex flex-col items-stretch gap-2">
+                    <button
+                    onClick={openModalAvatarEdit}
+                    type="button"
+                    className="button button-tertiary rounded-full"
+                  >
+                    <span className="icon icon-circle-08" />
+                    <span className="hidden lg:block">
+                      Change avatar
+                    </span>
+                  </button>
+                    <button
                     onClick={openModalBannerEdit}
                     type="button"
-                    className="button button-tertiary rounded-full absolute z-20 top-2 right-2"
+                    className="button button-tertiary rounded-full"
                   >
-                    <span className="icon icon-camera" />
+                    <span className="icon icon-image" />
                     <span className="hidden lg:block">
                       Change profile banner
                     </span>
                   </button>
+                  </div>
+
                 )}
                 {hasProfileBanner ? (
                   <img src={profileBanner?.image} alt={profileBanner?.name} />

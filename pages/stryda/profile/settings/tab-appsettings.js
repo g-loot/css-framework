@@ -22,9 +22,9 @@ const GameToggle = ({ item }) => {
       <label htmlFor={`recordings-${item.slug}`}>
         <span className="rounded bg-ui-900 flex items-center justify-center p-1">
           <span
-            className={`icon icon-game-${item.slug}-symbol text-game-${item.slug} text-xl ${
-              isOn ? "" : "opacity-40 grayscale"
-            }`}
+            className={`icon icon-game-${item.slug}-symbol text-game-${
+              item.slug
+            } text-xl ${isOn ? "" : "opacity-40 grayscale"}`}
           />
         </span>
         <span>{item.name}</span>
@@ -155,6 +155,10 @@ export default function TabSettingsAppSettings() {
                 <li>
                   When the storage hits its maximum space, the oldest recording
                   gets removed.
+                </li>
+                <li>
+                  Your allocated space on your hard drive is shared between all
+                  users on this computer.
                 </li>
               </ul>
               <div className="flex items-start gap-6 leading-none">

@@ -59,7 +59,7 @@ export default function TabSettingsAccountManagement() {
             <div className="form-group">
               <label htmlFor="account-password">Password</label>
               <div className="input-group">
-                <button className="button button-ghost">
+                <button className="button button-secondary">
                   <span>Change password</span>
                 </button>
                 <input

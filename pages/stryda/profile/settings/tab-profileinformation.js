@@ -75,16 +75,16 @@ export default function TabSettingsProfileInformation() {
                   <span className="icon icon-discord" />
                   <button
                     type="button"
-                    className="button button-ghost"
+                    className="button button-secondary"
                     onClick={() => setIsDiscordConnected(!isDiscordConnected)}
                   >
                     <span>Connect account</span>
                   </button>
                   <input
+                    readOnly
                     type="text"
                     name="social-discord"
                     id="social-discord"
-                    readOnly
                   />
                 </div>
               )}
@@ -112,10 +112,9 @@ export default function TabSettingsProfileInformation() {
             </div>
           </div>
           <p className="mb-12 text-sm">
-            Information you have put here is public on your
-            profile. This is a social platform so adding more information about
-            yourself will make it easier for people to connect with you. Read
-            more in our{" "}
+            Information you have put here is public on your profile. This is a
+            social platform so adding more information about yourself will make
+            it easier for people to connect with you. Read more in our{" "}
             <a href="#" className="link">
               Terms and Conditions
             </a>{" "}

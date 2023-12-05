@@ -112,7 +112,7 @@ export default function TabSettingsGameAccounts() {
                       <div className="input-group">
                         <button
                           type="button"
-                          className="button button-ghost"
+                          className="button button-secondary"
                           onClick={() =>
                             setIsValorantConnected(!isValorantConnected)
                           }
@@ -120,6 +120,7 @@ export default function TabSettingsGameAccounts() {
                           <span>Connect account</span>
                         </button>
                         <input
+                          readOnly
                           type="text"
                           name="game-valorant"
                           id="game-valorant"
@@ -240,7 +241,7 @@ export default function TabSettingsGameAccounts() {
                   )}
                 </div>
               </div>
-              <div className="form-group">
+              {/* <div className="form-group">
                 <label htmlFor="game-fortnite">
                   <span className="icon icon-game-fortnite-symbol text-game-fortnite" />
                   <span className="flex-1">Fortnite</span>
@@ -317,7 +318,7 @@ export default function TabSettingsGameAccounts() {
                       <div className="input-group">
                         <button
                           type="button"
-                          className="button button-ghost"
+                          className="button button-secondary"
                           onClick={() =>
                             setIsFortniteConnected(!isFortniteConnected)
                           }
@@ -325,6 +326,7 @@ export default function TabSettingsGameAccounts() {
                           <span>Connect account</span>
                         </button>
                         <input
+                          readOnly
                           type="text"
                           name="game-fortnite"
                           id="game-fortnite"
@@ -333,7 +335,7 @@ export default function TabSettingsGameAccounts() {
                     </>
                   )}
                 </div>
-              </div>
+              </div> */}
               <div className="form-group">
                 <label htmlFor="game-pubg">
                   <span className="icon icon-game-pubg-symbol text-game-pubg" />
@@ -410,7 +412,7 @@ export default function TabSettingsGameAccounts() {
                       <div className="input-group">
                         <button
                           type="button"
-                          className="button button-ghost"
+                          className="button button-secondary"
                           onClick={() => setIsPUBGConnected(!isPUBGConnected)}
                         >
                           <span>Connect account</span>
