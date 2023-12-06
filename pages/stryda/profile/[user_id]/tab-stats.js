@@ -58,10 +58,6 @@ export default function TabProfileStats() {
 
   const modalAchievement = query.modalachievement === "true" ? true : false;
 
-  function RandomNumber(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-  }
-
   useEffect(() => {
     setSelectedUser(prototype.getUserByID(user_id));
   }, [user_id]);

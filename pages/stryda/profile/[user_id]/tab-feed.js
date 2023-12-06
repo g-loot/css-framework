@@ -98,7 +98,9 @@ export default function TabProfileFeed() {
                     </h2>
                   </Link>
                 </div>
-                {!selectedUser.ladders || selectedUser.ladders?.length === 0 || isEmpty ? (
+                {!selectedUser.ladders ||
+                selectedUser.ladders?.length === 0 ||
+                isEmpty ? (
                   <>
                     {selectedUser.isYou ? (
                       <div className="bg-ui-850 p-4">
@@ -243,14 +245,15 @@ export default function TabProfileFeed() {
                                   ).name
                                 }
                               </p>
-                              <p className="text-lg text-ui-100">
+                              <p className="text-ui-100">
                                 #
-                                {
+                                {/* {
                                   prototype.getLadderByID(
                                     ladder.gameSlug,
                                     ladder.id
                                   )?.soloLeaderboard?.stats?.placement
-                                }
+                                } */}
+                                {Math.floor(Math.random() * (201 - 2 + 1)) + 2}
                               </p>
                             </div>
                           </div>
