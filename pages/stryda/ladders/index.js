@@ -109,7 +109,7 @@ export default function Ladders() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span><span>{item.label}</span> {item.badge && item.badge === "badge" && (<i className="badge animate-bounce" />)}</span>
+                            <span><span>{item.label}</span> {item.badge && item.badge === "badge" && selectedGame.id === 1 && (<i className="badge animate-bounce" />)}</span>
                           </button>
                         </Link>
                       </li>

@@ -32,6 +32,9 @@ export default function GamePicker(props) {
                   <span>
                     <span>{item.shortName}</span>
                   </span>
+                  {item.id === 1 && (
+                      <span className="icon icon-present animate-bounce ml-1" />
+                    )}
                 </button>
               </li>
             ))}
