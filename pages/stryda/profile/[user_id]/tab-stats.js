@@ -106,18 +106,20 @@ export default function TabProfileStats() {
                 <div className="relative z-10 flex items-center gap-2 mb-2">
                   <GameIcon game={item} />
                   <h6 className="flex-1">{prototype.getGameByID(item).name}</h6>
-                  <Link
-                    href={`/stryda/${
-                      prototype.getGameByID(item).slug
-                    }/stats${prototype.getURLparams()}`}
-                  >
-                    <button
-                      type="button"
-                      className="button button-sm button-secondary"
+                  {item !== 2 && (
+                    <Link
+                      href={`/stryda/${
+                        prototype.getGameByID(item).slug
+                      }/stats${prototype.getURLparams()}`}
                     >
-                      <span>See all stats & Matches</span>
-                    </button>
-                  </Link>
+                      <button
+                        type="button"
+                        className="button button-sm button-secondary"
+                      >
+                        <span>See all stats & Matches</span>
+                      </button>
+                    </Link>
+                  )}
                 </div>
                 <ul className="relative z-10 p-4 flex flex-wrap justify-evenly items-center bg-gradient-to-b from-ui-900/40 to-ui-900/20 text-center gap-4 rounded">
                   {prototype

@@ -62,10 +62,10 @@ export default function TabProfileHighlights() {
                     <div className="mt-2">
                       <p className="text-ui-300">
                         {selectedUser.isYou ? (
-                          <>You haven&#39;t created any Recaps yet</>
+                          <>You haven&#39;t created any Recaps yet.</>
                         ) : (
                           <>
-                            {selectedUser.nickname} hasn&#39;t created any Recaps yet
+                            {selectedUser.nickname} hasn&#39;t created any Recaps yet.
                             yet
                           </>
                         )}

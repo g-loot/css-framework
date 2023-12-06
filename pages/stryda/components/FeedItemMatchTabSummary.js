@@ -61,7 +61,7 @@ export default function FeedItemMatchTabSummary(props) {
             onClick={() => !detailedView && openFeedItemDetailsMatch("summary")}
           >
             <div
-              className={`relative z-40
+              className={`relative z-20
                 ${match.stats.result === "victory" && "text-success-300"}
                 ${match.stats.result === "defeat" && "text-error-300"}
                 ${match.stats.result === "draw" && "text-ui-200"}
@@ -76,7 +76,7 @@ export default function FeedItemMatchTabSummary(props) {
                 {match.stats.score.team1} - {match.stats.score.team2}
               </div>
             </div>
-            <div className="relative z-40 text-base sm:text-xl md:text-2xl uppercase text-ui-100">
+            <div className="relative z-20 text-base sm:text-xl md:text-2xl uppercase text-ui-100">
               <div className="flex gap-1.5 items-center">
                 <img
                   src={getGamemodeImage(match.meta.mode)}
@@ -87,7 +87,7 @@ export default function FeedItemMatchTabSummary(props) {
               </div>
               <div>{getMapByID(match.meta.map).name}</div>
             </div>
-            <ul className="relative z-40 text-xl uppercase flex items-center justify-end text-left space-x-4 sm:space-x-6 md:space-x-8">
+            <ul className="relative z-20 text-xl uppercase flex items-center justify-end text-left space-x-4 sm:space-x-6 md:space-x-8">
               {match.stats.mainStats
                 .slice(0, 3)
                 .map((mainStat, mainStatIndex) => (
@@ -105,7 +105,7 @@ export default function FeedItemMatchTabSummary(props) {
               <Link href={`/stryda/valorant/stats${prototype.getURLparams()}`}>
                 <button
                   type="button"
-                  className="relative z-40 button button-primary"
+                  className="relative z-20 button button-primary"
                   onClick={uiContext.closeModal()}
                 >
                   <span>View match stats</span>

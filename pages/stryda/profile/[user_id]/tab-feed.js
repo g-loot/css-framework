@@ -42,14 +42,14 @@ export default function TabProfileFeed() {
               {prototype.getUserFeedItems(selectedUser.id).length === 0 ||
               isEmpty ? (
                 <>
-                  <div className="p-4 text-center">
+                  <div className="px-4 py-24 text-center">
                     <div className="max-w-xs mx-auto">
                       <span className="icon icon-sword text-6xl text-ui-500" />
                       {selectedUser.isYou ? (
                         <>
                           <div className="mt-2 mb-6">
                             <p className="text-sm text-ui-400">
-                              You have no recorded matches
+                              You have no recorded matches.
                             </p>
                             <p className="text-lg text-ui-300">
                               Make sure Stryda is up and running when you play
@@ -67,7 +67,7 @@ export default function TabProfileFeed() {
                         <div className="mt-2 mb-6">
                           <p className="text-lg text-ui-300">
                             {selectedUser.nickname} hasn&#39;t played any
-                            matches
+                            matches.
                           </p>
                         </div>
                       )}
@@ -98,7 +98,7 @@ export default function TabProfileFeed() {
                     </h2>
                   </Link>
                 </div>
-                {selectedUser.ladders.length === 0 || isEmpty ? (
+                {!selectedUser.ladders || selectedUser.ladders?.length === 0 || isEmpty ? (
                   <>
                     {selectedUser.isYou ? (
                       <div className="bg-ui-850 p-4">
@@ -140,7 +140,7 @@ export default function TabProfileFeed() {
                       <div className="text-center p-4">
                         <span className="icon icon-ladder text-6xl text-ui-500" />
                         <p className="mt-2 text-ui-300">
-                          {selectedClan.nickname} has not entered any Ladders
+                          {selectedUser.nickname} has not entered any Ladders.
                         </p>
                       </div>
                     )}

@@ -65,7 +65,7 @@ export const dataUsers = [
       powertokens: 105,
       tickets: 3,
     },
-    games: [1, 6, 4],
+    games: [1, 6, 4, 2],
     ladders: [
       {
         gameSlug: "valorant",

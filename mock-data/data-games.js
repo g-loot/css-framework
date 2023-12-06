@@ -6924,6 +6924,26 @@ export const dataGames = [
         },
       },
     ],
+    demo: {
+      mainStats: [
+        {
+          label: "Win ratio %",
+          value: "57.2",
+        },
+        {
+          label: "KDA",
+          value: "7.3 / 6.4 / 8.2",
+        },
+        {
+          label: "CS/min",
+          value: "104",
+        },
+        {
+          label: "Vision score",
+          value: "71%",
+        },
+      ],
+    },
   },
   {
     id: 3,
