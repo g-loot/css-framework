@@ -42,12 +42,13 @@ const TabsItems = [
     component: TabSettingsAppSettings,
     icon: "icon-cogwheel",
   },
-  // {
-  //   label: "Subscription & payment",
-  //   url: "subscription",
-  //   component: TabSettingsSubscription,
-  //   icon: "icon-card-edit",
-  // },
+  {
+    label: "Subscription & payment",
+    url: "subscription",
+    component: TabSettingsSubscription,
+    icon: "icon-card-edit",
+    isHidden: true,
+  },
 ];
 
 export default function Home() {
@@ -196,7 +197,7 @@ export default function Home() {
                 <div className="lg:sticky top-16">
                   <nav className="flex justify-start items-center px-4 sm:p-px overflow-auto scrollbar-hidden border-b border-ui-700 lg:border-none">
                     <ul className="tabs lg:tabs-vertical">
-                      {TabsItems.map((item, itemIndex) => (
+                      {TabsItems.filter((i) => !i.isHidden).map((item, itemIndex) => (
                         <li key={itemIndex}>
                           <Link
                             href={`/stryda/profile/settings?tab=${

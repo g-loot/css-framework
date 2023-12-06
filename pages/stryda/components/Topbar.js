@@ -190,6 +190,7 @@ export default function Topbar() {
                         }
                       >
                         <span>Ladders</span>
+                        <span className="icon icon-present animate-bounce" />
                       </button>
                     </Link>
                   </li>

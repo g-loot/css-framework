@@ -169,7 +169,11 @@ const Index = () => {
                       className="rounded surface overflow-hidden transform-gpu flex flex-col items-stretch w-full animate-slide-in-bottom animate-delay"
                       style={{ "--delay": "calc(2 * 0.05s)" }}
                     >
-                      <Link href="prototype/home">
+                      <a
+                        href="https://stryda-v2.netlify.app/"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
                         <img
                           className="flex-none object-cover object-center aspect-landscape interactive-secondary border-b border-ui-700"
                           src="https://res.cloudinary.com/gloot/image/upload/v1672668758/Stryda/framework/cover-prototype.jpg"
@@ -177,7 +181,7 @@ const Index = () => {
                           height="auto"
                           alt=""
                         />
-                      </Link>
+                      </a>
                       <a
                         href="https://stryda-v2.netlify.app/"
                         target="_blank"

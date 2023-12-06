@@ -99,130 +99,156 @@ export default function Premium() {
   return (
     <>
       <Structure title="Premium">
-        {isPremium ? (
-          <>
-            <section className="relative z-10">
-              <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
-                <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                  width="275"
-                  height="auto"
-                />
-                <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
-                  <h2 className="h1 max-w-[30ch] mx-auto text-5xl lg:text-7xl">
-                    Enjoy the full potential of Stryda gaming experience
-                  </h2>
+        <section
+          className={`max-w-2xl mx-auto flex flex-col lg:flex-row gap-8 mt-12 mb-24 ${
+            isPremium ? "items-center" : "items-stretch"
+          }`}
+        >
+          <div className="surface sm:rounded pr-4 py-6 pl-6 flex-1 flex flex-col justify-around">
+            <PremiumLogo
+              src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
+              width="240"
+              height="auto"
+              className="mx-auto"
+            />
+            <p className="text-center leading-tight mt-4 mb-8">
+              Make the best out of your gaming
+              <br />
+              with Stryda Premium
+            </p>
+            <ul className="child:flex child:items-stretch child:border-b child:border-ui-500 text-sm leading-tight">
+              <li className="border-none child:pb-3 child:pt-2">
+                <div className="flex-1">Features</div>
+                <div className="w-24 text-center hidden sm:block">Freemium</div>
+                <div className="w-24 text-center text-premium-500 border-x border-t border-ui-500 bg-ui-600 rounded-t">
+                  Premium
                 </div>
-              </div>
-            </section>
-
-            <section className="relative z-10 px-4 md:px-0 my-20 flex flex-col md:flex-row items-stretch gap-8 max-w-md mx-auto animate-slide-in-bottom">
-              <div className="flex-1 surface rounded flex flex-col items-stretch justify-start">
-                <h2 className="h5 text-center p-3 border-b border-ui-700">
-                  Subscription details
-                </h2>
-                <div className="p-4 flex-1 flex flex-col items-stretch">
-                  <div className="surface-ui-600 rounded p-4 text-center flex-1 flex flex-col items-center justify-center">
-                    <p>
-                      Premium:{" "}
-                      <span className="text-premium-500 font-bold">
-                        trial activated
-                      </span>
-                    </p>
-                    <p className="text-sm text-ui-300">
-                      Trial ends on May 19, 2023
-                    </p>
+              </li>
+              {premiumTableItems.map((item, itemIndex) => (
+                <li key={itemIndex} className="">
+                  <div className="flex-1 flex items-center gap-2">
+                    <span className="icon icon-crown text-premium-500 text-xl" />
+                    <span>{item.name}</span>
+                    {item.tooltip && (
+                      <Tooltip
+                        tooltip={
+                          <div className="max-w-xs text-sm text-center leading-tight">
+                            {item.tooltip}
+                          </div>
+                        }
+                      >
+                        <button className="text-ui-300 text-0">
+                          <span className="icon text-sm icon-c-info" />
+                        </button>
+                      </Tooltip>
+                    )}
                   </div>
-                </div>
-              </div>
-
-              <div className="flex-1 surface rounded flex flex-col items-stretch justify-start">
-                <h2 className="h5 text-center p-3 border-b border-ui-700">
-                  Payment method
-                </h2>
-                <div className="p-4 flex-1 flex flex-col items-stretch">
-                  <div className="surface-ui-600 rounded p-4 text-center flex-1 flex flex-col items-center justify-center">
-                    <p>Free trial</p>
+                  <div className="w-24 text-center hidden sm:flex items-center justify-center">
+                    <span className="icon icon-e-remove" />
                   </div>
-                </div>
-              </div>
-            </section>
-          </>
-        ) : (
-          <>
-            <section className="max-w-2xl mx-auto flex flex-col lg:flex-row items-stretch gap-8 mt-12 mb-24">
-              <div className="surface sm:rounded pr-4 py-6 pl-6 flex-1 flex flex-col justify-around">
-                <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                  width="240"
-                  height="auto"
-                  className="mx-auto"
-                />
-                <p className="text-center leading-tight mt-4 mb-8">
-                  Make the best out of your gaming
-                  <br />
-                  with Stryda Premium
-                </p>
-                <ul className="child:flex child:items-stretch child:border-b child:border-ui-500 text-sm leading-tight">
-                  <li className="border-none child:pb-3 child:pt-2">
-                    <div className="flex-1">Features</div>
-                    <div className="w-24 text-center hidden sm:block">Freemium</div>
-                    <div className="w-24 text-center text-premium-500 border-x border-t border-ui-500 bg-ui-600 rounded-t">
-                      Premium
+                  <div className="w-24 text-center flex items-center justify-center text-premium-500 border-x border-ui-500 bg-ui-600 py-2">
+                    <span className="icon icon-f-check" />
+                  </div>
+                </li>
+              ))}
+              <li className="border-none child:pb-3 child:pt-1">
+                <div className="flex-1" />
+                <div className="w-24 text-center" />
+                <div className="w-24 border-x border-b border-ui-500 bg-ui-600 rounded-b h-4" />
+              </li>
+            </ul>
+            <div className="text-center">
+              <button
+                type="button"
+                onClick={openModalBuyPremium}
+                className="button button-lg button-premium is-shining my-4 group"
+              >
+                <span>Get Premium</span>
+                <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
+              </button>
+              <p className="text-xs text-ui-300">
+                Cancel anytime.{" "}
+                <a className="underline cursor-pointer">Terms and conditions</a>{" "}
+                apply.
+              </p>
+            </div>
+          </div>
+          <div className="flex-1 xl:flex-2">
+            {isPremium ? (
+              <div className="flex flex-col items-stretch justify-center px-4 lg:px-0 gap-8 max-w-md mx-auto">
+                <div>
+                  <h3 className="mb-4">Subscription details</h3>
+                  <div className="mb-4 surface-ui-700 rounded p-4 space-y-2">
+                    <div className="flex items-start justify-between gap-2">
+                      <div>Your current Premium Plan</div>
+                      <div className="chip chip-xs chip-status chip-success animate-slide-in-bottom">
+                        <span className="icon icon-check" />
+                        <span>Active</span>
+                      </div>
                     </div>
-                  </li>
-                  {premiumTableItems.map((item, itemIndex) => (
-                    <li key={itemIndex} className="">
-                      <div className="flex-1 flex items-center gap-2">
-                        <span className="icon icon-crown text-premium-500 text-xl" />
-                        <span>{item.name}</span>
-                        {item.tooltip && (
-                          <Tooltip
-                            tooltip={
-                              <div className="max-w-xs text-sm text-center leading-tight">
-                                {item.tooltip}
-                              </div>
-                            }
-                          >
-                            <button className="text-ui-300 text-0">
-                              <span className="icon text-sm icon-c-info" />
-                            </button>
-                          </Tooltip>
-                        )}
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                      <div className="space-y-2 flex-2">
+                        <h4>Quarterly</h4>
+                        <div>
+                          <span className="text-lg text-ui-100">250 kr</span>{" "}
+                          <span className="text-sm text-ui-300">
+                            / every third month
+                          </span>
+                        </div>
+                        <ul className="text-sm space-y-1 pl-2 list-inside list-disc child:pl-2">
+                          <li>Payment occurs quarterly</li>
+                          <li>
+                            Renews automatically{" "}
+                            <b className="text-ui-100">November 06, 2023</b>
+                          </li>
+                        </ul>
                       </div>
-                      <div className="w-24 text-center hidden sm:flex items-center justify-center">
-                        <span className="icon icon-e-remove" />
+                      <div className="space-y-2 flex-1">
+                        <button
+                          type="button"
+                          className="w-full button button-secondary"
+                        >
+                          <span>Change plan</span>
+                        </button>
+                        <button
+                          type="button"
+                          className="w-full button button-sm button-ghost"
+                        >
+                          <span>cancel subscription</span>
+                        </button>
                       </div>
-                      <div className="w-24 text-center flex items-center justify-center text-premium-500 border-x border-ui-500 bg-ui-600 py-2">
-                        <span className="icon icon-f-check" />
-                      </div>
-                    </li>
-                  ))}
-                  <li className="border-none child:pb-3 child:pt-1">
-                    <div className="flex-1" />
-                    <div className="w-24 text-center" />
-                    <div className="w-24 border-x border-b border-ui-500 bg-ui-600 rounded-b h-4" />
-                  </li>
-                </ul>
-                <div className="text-center">
-                  <button
-                    type="button"
-                    onClick={openModalBuyPremium}
-                    className="button button-lg button-premium is-shining my-4 group"
-                  >
-                    <span>Get Premium</span>
-                    <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
-                  </button>
-                  <p className="text-xs text-ui-300">
-                    Cancel anytime.{" "}
-                    <a className="underline cursor-pointer">
-                      Terms and conditions
-                    </a>{" "}
-                    apply.
+                    </div>
+                  </div>
+                  <p className="text-sm text-ui-300">
+                    Your credit/debit card will be billed the same amount every
+                    three months. Once you cancel your subscription, you will
+                    have access to Stryda Premium for 90 days after your last
+                    payment.
                   </p>
                 </div>
+                <hr />
+                <div>
+                  <h3 className="mb-4">Payment details</h3>
+                  <div className="surface-ui-700 rounded p-4 space-y-2">
+                    <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
+                      <div className="space-y-2 flex-2 surface-ui-600 rounded p-2 flex flex-col gap-1 items-center justify-center aspect-landscape text-ui-300">
+                        <span className="icon icon-card-favorite text-3xl" />
+                        <span>Credit card</span>
+                      </div>
+                      <div className="space-y-2 flex-1">
+                        <button
+                          type="button"
+                          className="w-full button button-secondary"
+                        >
+                          <span>Change method</span>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <div className="flex-1 xl:flex-2">
+            ) : (
+              <>
                 <div className="flex flex-col sm:flex-row lg:flex-col xl:flex-row items-stretch justify-around text-center gap-4 mt-8 mb-4">
                   <div>
                     <div
@@ -284,97 +310,91 @@ export default function Premium() {
                   className="w-full h-auto animate-slide-in-bottom"
                   alt=""
                 />
-              </div>
-            </section>
-            {premiumParagraphItems.map((item, itemIndex) => (
-              <section
-                key={itemIndex}
-                className="max-w-2xl mx-auto flex flex-col md:flex-row items-center mb-24 animate-slide-in-bottom animate-paused px-4 md:px-0"
-              >
-                <div
-                  className={`relative z-20 flex-1 py-8 flex flex-col items-center md:items-start text-center md:text-left order-1 ${
-                    itemIndex % 2 === 0 ? "md:order-2" : ""
-                  }`}
-                >
-                  <div
-                    className="blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(4 * 0.05s)",
-                    }}
-                  >
-                    <img
-                      src={item.title}
-                      alt={item.name}
-                      className="w-auto h-20 mb-3"
-                    />
-                  </div>
-                  <p
-                    className="my-2 text-premium-500 text-xl blockreveal animate-paused animate-delay"
-                    style={{
-                      "--delay": "calc(8 * 0.05s)",
-                    }}
-                  >
-                    <span>{item.subtitle}</span>
-                  </p>
-                  <p className="my-2 text-ui-200 text-lg">{item.description}</p>
-                  <button
-                    type="button"
-                    onClick={openModalBuyPremium}
-                    className="button button-lg button-premium my-4 group"
-                  >
-                    <span>Get Premium</span>
-                    <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
-                  </button>
-                  <p className="text-xs text-ui-300">
-                    Cancel anytime.{" "}
-                    <a className="underline cursor-pointer">
-                      Terms and conditions
-                    </a>{" "}
-                    apply.
-                  </p>
-                </div>
-                <figure
-                  className={`flex-2 w-full relative z-10 order-2 animate-paused animate-delay ${
-                    itemIndex % 2 === 0 ? "md:order-1 md:pr-16 animate-slide-in-left" : "md:pl-16 animate-slide-in-right"
-                  }`}
-                    style={{
-                      "--delay": "calc(10 * 0.05s)",
-                    }}
-                >
-                  <img src={item.image} alt="" className="w-full h-auto" />
-                </figure>
-              </section>
-            ))}
-            {/* <section className="relative z-10">
-              <div className="flex flex-col lg:flex-row gap-10 items-center lg:items-start justify-center my-12">
-                <PremiumLogo
-                  src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"
-                  width="275"
-                  height="auto"
-                />
-                <div className="lg:border-l lg:border-ui-500 lg:pl-10 text-center lg:text-left">
-                  <h2 className="h1 max-w-[19ch] mx-auto lg:text-8xl">
-                    Make your GG more rewarding
-                  </h2>
-                  <button
-                    type="button"
-                    onClick={openModalBuyPremium}
-                    className="button button-lg button-premium is-shining my-4"
-                  >
-                    <span>View premium plans</span>
-                  </button>
-                  <p className="text-sm">
-                    Cancel anytime.{" "}
-                    <a className="underline cursor-pointer">
-                      Terms and conditions
-                    </a>{" "}
-                    apply.
-                  </p>
-                </div>
-              </div>
-            </section> */}
-          </>
+              </>
+            )}
+          </div>
+        </section>
+        {isPremium && (
+          <section className="text-center pb-12 space-y-4">
+            <p>
+              Need help? Read more in our{" "}
+              <a href="#" className="link link-main">
+                FAQ
+              </a>{" "}
+              or{" "}
+              <a href="#" className="link">
+                contact support
+              </a>
+              .
+            </p>
+            <a
+              href="#section-0"
+              className="button button-tertiary animate-bounce-bottom rounded-full"
+            >
+              <span className="icon icon-arrow-down" />
+            </a>
+          </section>
         )}
+        {premiumParagraphItems.map((item, itemIndex) => (
+          <section
+            key={itemIndex}
+            id={`section-${itemIndex}`}
+            className="max-w-2xl mx-auto flex flex-col md:flex-row items-center mb-24 animate-slide-in-bottom animate-paused px-4 md:px-0"
+          >
+            <div
+              className={`relative z-20 flex-1 py-8 flex flex-col items-center md:items-start text-center md:text-left order-1 ${
+                itemIndex % 2 === 0 ? "md:order-2" : ""
+              }`}
+            >
+              <div
+                className="blockreveal animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(4 * 0.05s)",
+                }}
+              >
+                <img
+                  src={item.title}
+                  alt={item.name}
+                  className="w-auto h-20 mb-3"
+                />
+              </div>
+              <p
+                className="my-2 text-premium-500 text-xl blockreveal animate-paused animate-delay"
+                style={{
+                  "--delay": "calc(8 * 0.05s)",
+                }}
+              >
+                <span>{item.subtitle}</span>
+              </p>
+              <p className="my-2 text-ui-200 text-lg">{item.description}</p>
+              <button
+                type="button"
+                onClick={openModalBuyPremium}
+                className="button button-lg button-premium my-4 group"
+              >
+                <span>Get Premium</span>
+                <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
+              </button>
+              <p className="text-xs text-ui-300">
+                Cancel anytime.{" "}
+                <a className="underline cursor-pointer">Terms and conditions</a>{" "}
+                apply.
+              </p>
+            </div>
+            <figure
+              className={`flex-2 w-full relative z-10 order-2 animate-paused animate-delay ${
+                itemIndex % 2 === 0
+                  ? "md:order-1 md:pr-16 animate-slide-in-left"
+                  : "md:pl-16 animate-slide-in-right"
+              }`}
+              style={{
+                "--delay": "calc(10 * 0.05s)",
+              }}
+            >
+              <img src={item.image} alt="" className="w-full h-auto" />
+            </figure>
+          </section>
+        ))}
 
         {/* for demo purposes only */}
         {prototype.showDemo && (
