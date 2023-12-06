@@ -7,6 +7,8 @@ import ModalAchievementReceived from "../../modal-achievementreceived";
 import ModalLevelUp from "../../modal-levelup";
 import Video from "@/pages/stryda/components/Video";
 import Link from "next/link";
+import { dataFeedItems } from "@/mock-data/data-feed";
+import ModalFeedItemViewer from "../../modal-feeditemdetailsviewer";
 
 export default function TabProfileHighlights() {
   const router = useRouter();
@@ -47,6 +49,16 @@ export default function TabProfileHighlights() {
     uiContext.openModal(<ModalLevelUp />);
   }
 
+  function openFeedItemDetailsMatch(target) {
+    const item = dataFeedItems[1];
+    uiContext.openModal(
+      <ModalFeedItemViewer
+        item={item}
+        selectedTab={target ? target : "default"}
+      />
+    );
+  }
+
   return (
     <>
       {selectedUser && (
@@ -65,8 +77,8 @@ export default function TabProfileHighlights() {
                           <>You haven&#39;t created any Recaps yet.</>
                         ) : (
                           <>
-                            {selectedUser.nickname} hasn&#39;t created any Recaps yet.
-                            yet
+                            {selectedUser.nickname} hasn&#39;t created any
+                            Recaps yet. yet
                           </>
                         )}
                       </p>
@@ -88,7 +100,24 @@ export default function TabProfileHighlights() {
                       </p>
                     </div>
                   )}
+
                   {prototype
+                    .getUserMatches(selectedUser.id)
+                    .filter((m) => m.meta?.media)
+                    .map((item, itemIndex) => (
+                      <button
+                        key={itemIndex}
+                        type="button"
+                        className={`w-full animate-slide-in-bottom animate-delay ${
+                          loading ? "is-loading" : ""
+                        }`}
+                        style={{ "--delay": "calc(" + itemIndex + " * 0.05s)" }}
+                        onClick={() => openFeedItemDetailsMatch("highlight")}
+                      >
+                        <Video item={item} hasMeta={true} />
+                      </button>
+                    ))}
+                  {/* {prototype
                     .getUserMatches(selectedUser.id)
                     .filter((m) => m.meta?.media)
                     .map((item, itemIndex) => (
@@ -101,7 +130,7 @@ export default function TabProfileHighlights() {
                       >
                         <Video item={item} hasMeta={true} />
                       </div>
-                    ))}
+                    ))} */}
                 </div>
               )}
             </div>

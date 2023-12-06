@@ -164,8 +164,15 @@ export const PrototypeProvider = ({ children }) => {
   }))
   .filter(item => item.match && item.match.user === parseInt(id)); 
   }
-
-  
+  const getUserFeedItemsWithHighlights = (id) => {
+    return feedItems
+  .filter(item => item.type === "match")
+  .map(item => ({
+    ...item,
+    match: dataMatches.find(match => match.id === item.itemID)
+  }))
+  .filter(item => item.match && item.match.user === parseInt(id) && item.meta?.media?.videoUrl); 
+  }
   const getUserMatches = (id) => {
     return matches.filter((match) => {
       return match.user === parseInt(id);
@@ -255,6 +262,7 @@ export const PrototypeProvider = ({ children }) => {
         getMatchByID,
         getFeedItemByID,
         getUserFeedItems,
+        getUserFeedItemsWithHighlights,
         getUserMatches,
         setIsPremium,
         setShowDemo,

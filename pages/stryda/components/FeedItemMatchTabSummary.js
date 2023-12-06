@@ -117,7 +117,6 @@ export default function FeedItemMatchTabSummary(props) {
               className="absolute z-30 inset-y-0 -left-8 sm:left-0 h-full w-2/3 object-contain object-right-bottom drop-shadow-[.75rem_0_0_rgba(22,24,37,0.5)] animate-slide-in-left"
               alt=""
             />
-            <span className="absolute z-20 inset-0 left-1/4 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
             <span
               className={`absolute z-10 inset-0 ${
                 match.stats.result === "victory" &&
@@ -132,6 +131,8 @@ export default function FeedItemMatchTabSummary(props) {
                 "shadow-[inset_0_0_3rem_0_rgb(var(--color-ui-500)/40%)]"
               }`}
             />
+                        <span className="absolute z-10 inset-0 left-1/4 bg-gradient-to-r from-ui-800/0 via-ui-800/60 to-ui-800/80" />
+
             <img
               className="absolute z-0 inset-0 h-full w-full object-cover opacity-50"
               src={getMapByID(match.meta.map).picturePath}

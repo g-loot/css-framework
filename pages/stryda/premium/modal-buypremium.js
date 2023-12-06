@@ -171,7 +171,7 @@ export default function ModalBuyPremium(props) {
                             </div>
                           </div>
                           <img
-                            src="https://res.cloudinary.com/gloot/image/upload/v1695642734/Stryda/illustrations/premium-giftcards.webp"
+                            src="https://res.cloudinary.com/gloot/image/upload/v1701856301/Stryda/illustrations/premium-giftcards.webp"
                             alt=""
                           />
                         </div>

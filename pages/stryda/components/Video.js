@@ -128,7 +128,7 @@ export default function Video(props) {
           </div>
           {hasMeta && (
             <>
-              <div className="flex flex-col sm:flex-row gap-2 sm:items-center sm:justify-between mt-2 text-ui-300">
+              <div className="flex flex-row gap-2 items-center justify-between mt-2 text-ui-300">
                 <span className="text-xs">{item.meta.dateTimeEnded}</span>
                 <ul className="flex items-center gap-3">
                   <li className="flex gap-1.5 items-center pointer">
