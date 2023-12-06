@@ -1048,7 +1048,7 @@ export const StatsValorantDemoMaps = [
   },
   {
     id: 0,
-    map: 11,
+    map: 13,
     winpercent: 45.4,
     wins: 67,
     losses: 32,

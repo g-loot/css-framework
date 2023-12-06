@@ -68,6 +68,11 @@ export const StatsValorantMaps = [
     name: 'sunset',
     picturePath: getImageUrl('map-sunset.jpg'),
   },
+  {
+    id: 13,
+    name: 'drift',
+    picturePath: getImageUrl('map-drift.webp'),
+  },
 ];
 
 export const StatsValorantRanks = [
