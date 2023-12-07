@@ -119,7 +119,7 @@ export default function Ladders() {
                               {item.badge &&
                                 item.badge === "gift" &&
                                 selectedGame.id === 1 && (
-                                  <span className="icon icon-present animate-bounce" />
+                                  <span className="icon icon-present animate-bounce !text-main" />
                                 )}
                             </span>
                           </button>

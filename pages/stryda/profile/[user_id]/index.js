@@ -22,6 +22,7 @@ import Loader from "@/pages/stryda/components/Loader";
 import WidgetUser from "@/pages/stryda/components/WidgetUser";
 import WidgetUserLeftPanel from "@/pages/stryda/components/WidgetUserLeftPanel";
 import Avatar from "../../../../components/Avatar/Avatar";
+import ModalBannerEdit from "./modal-banneredit";
 
 const achievementsList = [
   {
@@ -161,6 +162,18 @@ export default function Profile() {
     }
   }
 
+  function openModalBannerEdit() {
+    if (hasProfileBanner) {
+      uiContext.openModal(<ModalBannerEdit id={hasProfileBanner} />);
+    } else if (selectedUser.shopItems?.profileBanner) {
+      uiContext.openModal(
+        <ModalBannerEdit id={selectedUser.shopItems?.profileBanner} />
+      );
+    } else {
+      uiContext.openModal(<ModalBannerEdit id={1} />);
+    }
+  }
+
   const TabsItems = [
     {
       label: "Feed",
@@ -237,18 +250,38 @@ export default function Profile() {
             <>
               <div className="relative z-0">
                 {selectedUser.isYou && (
-                  <div className="hidden md:block absolute z-20 w-full max-w-xs rounded border border-ui-200/5 bg-ui-800/95 p-2 right-0 bottom-4 leading-none">
-                    <div className="flex items-center justify-center gap-1 text-center mb-2">
-                      <span className="text-sm text-ui-100 mr-1">Level:</span>
-                      <span className="icon icon-star text-main" />
-                      <span className="text-lg text-main font-bold">32</span>
-                    </div>
-                    <div className="progressbar progressbar-tick" style={{ "--percent": 45 }}>
-                      <div />
-                    </div>
-                    <div className="flex items-center justify-between gap-1 text-sm mt-1.5">
-                      <span className="text-main font-bold">15 200 XP</span>
-                      <span className="text-ui-300">300 XP until next level</span>
+                  <div className="absolute z-20 right-0 bottom-4 space-y-2 hidden md:block w-full max-w-xs">
+                    <button
+                      onClick={openModalAvatarEdit}
+                      type="button"
+                      className="w-full button button-tertiary rounded-full"
+                    >
+                      <span className="icon icon-circle-08" />
+                      <span className="hidden lg:block">Edit Avatar</span>
+                    </button>
+                    <button
+                      onClick={openModalBannerEdit}
+                      type="button"
+                      className="w-full button button-tertiary rounded-full"
+                    >
+                      <span className="icon icon-image" />
+                      <span className="hidden lg:block">
+                        Edit Player Banner
+                      </span>
+                    </button>
+                    <div className="rounded border border-ui-200/5 bg-ui-800/95 p-2 leading-none">
+                      <div className="flex items-center justify-center gap-1 text-center mb-2">
+                        <span className="text-sm text-ui-100 mr-1">Level:</span>
+                        <span className="icon icon-star text-main" />
+                        <span className="text-lg text-main font-bold">32</span>
+                      </div>
+                      <div className="progressbar progressbar-tick" style={{ "--percent": 45 }}>
+                        <div />
+                      </div>
+                      <div className="flex items-center justify-between gap-1 text-sm mt-1.5">
+                        <span className="text-main font-bold">15 200 XP</span>
+                        <span className="text-ui-300">300 XP until next level</span>
+                      </div>
                     </div>
                   </div>
                 )}

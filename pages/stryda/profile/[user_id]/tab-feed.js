@@ -44,12 +44,12 @@ export default function TabProfileFeed() {
                 <>
                   <div className="px-4 py-24 text-center">
                     <div className="max-w-xs mx-auto">
-                      <span className="icon icon-sword text-6xl text-ui-500" />
+                      <span className="icon icon-file-article text-6xl text-ui-500" />
                       {selectedUser.isYou ? (
                         <>
                           <div className="mt-2 mb-6">
                             <p className="text-sm text-ui-400">
-                              You have no recorded matches.
+                              You have no posts here yet.
                             </p>
                             <p className="text-lg text-ui-300">
                               Make sure Stryda is up and running when you play
@@ -66,8 +66,7 @@ export default function TabProfileFeed() {
                       ) : (
                         <div className="mt-2 mb-6">
                           <p className="text-lg text-ui-300">
-                            {selectedUser.nickname} hasn&#39;t played any
-                            matches.
+                            {selectedUser.nickname} no posts here yet.
                           </p>
                         </div>
                       )}

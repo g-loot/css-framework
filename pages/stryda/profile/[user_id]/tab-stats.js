@@ -19,11 +19,11 @@ const generalStats = [
     icon: "icon-ladder",
     value: "143",
   },
-  {
-    label: "Times in top 50",
-    icon: "icon-trophy",
-    value: "5",
-  },
+  // {
+  //   label: "Times in top 50",
+  //   icon: "icon-trophy",
+  //   value: "5",
+  // },
   {
     label: "Missions completed",
     icon: "icon-crosshair",
@@ -39,11 +39,11 @@ const generalStats = [
     icon: "icon-bullets",
     value: "2.4",
   },
-  {
-    label: "Best placement",
-    icon: "icon-podium",
-    value: "4",
-  },
+  // {
+  //   label: "Best placement",
+  //   icon: "icon-podium",
+  //   value: "4",
+  // },
 ];
 
 export default function TabProfileStats() {
@@ -112,7 +112,7 @@ export default function TabProfileStats() {
                         type="button"
                         className="button button-sm button-secondary"
                       >
-                        <span>See all stats & Matches</span>
+                        <span>See all stats</span>
                       </button>
                     </Link>
                   )}

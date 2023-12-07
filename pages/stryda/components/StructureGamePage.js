@@ -30,8 +30,8 @@ export default function StructureGamePage({ children, side, ...props }) {
   return (
     <>
       {!prototype.isPremium && (
-        <div className="relative z-30 text-center mt-4 -mb-20">
-          <div className="bg-ui-800/75 border border-ui-700 h-[300px] w-full rounded flex flex-col items-center justify-center">
+        <div className="relative z-30 text-center mt-4 mb-4 md:-mb-20">
+          <div className="bg-ui-800/75 border border-ui-700 h-[300px] w-full rounded flex flex-col items-center justify-center overflow-x-hidden">
             {/* Replace the following div by the display ad */}
             <div>
               <div>Ad</div>

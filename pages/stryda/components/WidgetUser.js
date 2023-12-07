@@ -238,9 +238,9 @@ export default function WidgetUser(props) {
                     </div>
                     <div className="leading-tight">
                       <div className="text-sm text-ui-300">
-                        Latest highlight
+                        Latest Recap
                       </div>
-                      <div className="text-xs">No highlights published yet</div>
+                      <div className="text-xs">No Recaps published yet</div>
                     </div>
                   </div>
                 ) : (
@@ -261,7 +261,7 @@ export default function WidgetUser(props) {
                           </div>
                           <div className="leading-tight">
                             <div className="text-sm text-ui-300">
-                              Latest highlight
+                              Latest Recap
                             </div>
                             <div className="text-lg text-ui-100">
                               {selectedUser.stats.highlightViews > 0 ? (

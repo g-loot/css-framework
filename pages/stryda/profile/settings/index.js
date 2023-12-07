@@ -130,39 +130,36 @@ export default function Home() {
               <div className="header-bg">
                 {selectedUser.isYou ? (
                   <Avatar
-                  size="avatar-2xl"
-                  id={selectedUser.id}
-                  hasTooltip={true}
-                  hasTooltipXP={true}
-                  tooltipPlacement={"bottom"}
-                />
+                    size="avatar-2xl"
+                    id={selectedUser.id}
+                    hasTooltip={true}
+                    hasTooltipXP={true}
+                    tooltipPlacement={"bottom"}
+                  />
                 ) : (
                   <Avatar size="avatar-2xl" id={selectedUser.id} />
                 )}
                 {selectedUser.isYou && (
                   <div className="absolute z-10 bottom-2 right-2 flex flex-col items-stretch gap-2">
                     <button
-                    onClick={openModalAvatarEdit}
-                    type="button"
-                    className="button button-tertiary rounded-full"
-                  >
-                    <span className="icon icon-circle-08" />
-                    <span className="hidden lg:block">
-                      Edit avatar
-                    </span>
-                  </button>
+                      onClick={openModalAvatarEdit}
+                      type="button"
+                      className="button button-tertiary rounded-full"
+                    >
+                      <span className="icon icon-circle-08" />
+                      <span className="hidden lg:block">Edit Avatar</span>
+                    </button>
                     <button
-                    onClick={openModalBannerEdit}
-                    type="button"
-                    className="button button-tertiary rounded-full"
-                  >
-                    <span className="icon icon-image" />
-                    <span className="hidden lg:block">
-                      Edit profile banner
-                    </span>
-                  </button>
+                      onClick={openModalBannerEdit}
+                      type="button"
+                      className="button button-tertiary rounded-full"
+                    >
+                      <span className="icon icon-image" />
+                      <span className="hidden lg:block">
+                        Edit Player Banner
+                      </span>
+                    </button>
                   </div>
-
                 )}
                 {hasProfileBanner ? (
                   <img src={profileBanner?.image} alt={profileBanner?.name} />
@@ -197,27 +194,29 @@ export default function Home() {
                 <div className="lg:sticky top-16">
                   <nav className="flex justify-start items-center px-4 sm:p-px overflow-auto scrollbar-hidden border-b border-ui-700 lg:border-none">
                     <ul className="tabs lg:tabs-vertical">
-                      {TabsItems.filter((i) => !i.isHidden).map((item, itemIndex) => (
-                        <li key={itemIndex}>
-                          <Link
-                            href={`/stryda/profile/settings?tab=${
-                              item.url
-                            }${prototype.getURLparams("&")}`}
-                          >
-                            <button
-                              type="button"
-                              className={`${
-                                selectedTab === item.url ? "is-active" : ""
-                              }`}
+                      {TabsItems.filter((i) => !i.isHidden).map(
+                        (item, itemIndex) => (
+                          <li key={itemIndex}>
+                            <Link
+                              href={`/stryda/profile/settings?tab=${
+                                item.url
+                              }${prototype.getURLparams("&")}`}
                             >
-                              <span>
-                                <span className={`icon ${item.icon}`} />
-                                <span>{item.label}</span>
-                              </span>
-                            </button>
-                          </Link>
-                        </li>
-                      ))}
+                              <button
+                                type="button"
+                                className={`${
+                                  selectedTab === item.url ? "is-active" : ""
+                                }`}
+                              >
+                                <span>
+                                  <span className={`icon ${item.icon}`} />
+                                  <span>{item.label}</span>
+                                </span>
+                              </button>
+                            </Link>
+                          </li>
+                        )
+                      )}
                     </ul>
                   </nav>
                 </div>
@@ -243,7 +242,10 @@ export default function Home() {
                       <span>Save changes</span>
                     </button>
                     <Link href={`/stryda/profile/1${prototype.getURLparams()}`}>
-                      <button type="button" className="button flex-1 button-secondary">
+                      <button
+                        type="button"
+                        className="button flex-1 button-secondary"
+                      >
                         <span>Cancel</span>
                       </button>
                     </Link>

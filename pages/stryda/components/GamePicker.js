@@ -35,7 +35,7 @@ export default function GamePicker(props) {
                     <span>{item.shortName}</span>
                   </span>
                   {item.id === 1 && router.pathname.includes("ladders") && (
-                      <span className="icon icon-present animate-bounce ml-1" />
+                      <span className="icon icon-present animate-bounce !text-main ml-1" />
                     )}
                 </button>
               </li>
