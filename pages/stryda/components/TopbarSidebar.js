@@ -62,7 +62,7 @@ export default function TopbarSidebar() {
               >
                 <span>
                   <span>Ladders</span>
-                  <span className="icon icon-present animate-bounce !text-main" />
+                  <span className="icon icon-present animate-bounce !text-main ml-1" />
                 </span>
               </button>
             </Link>

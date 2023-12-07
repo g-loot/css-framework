@@ -89,7 +89,7 @@ export default function TabProfileFeed() {
               )}
             </div>
             <div className="w-80 hidden lg:block space-y-4">
-              <div className="surface rounded">
+              {/* <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <Link href={`/stryda/ladders${prototype.getURLparams()}`}>
                     <h2 className="text-base text-ui-100 interactive">
@@ -246,12 +246,6 @@ export default function TabProfileFeed() {
                               </p>
                               <p className="text-ui-100">
                                 #
-                                {/* {
-                                  prototype.getLadderByID(
-                                    ladder.gameSlug,
-                                    ladder.id
-                                  )?.soloLeaderboard?.stats?.placement
-                                } */}
                                 {Math.floor(Math.random() * (201 - 2 + 1)) + 2}
                               </p>
                             </div>
@@ -261,7 +255,7 @@ export default function TabProfileFeed() {
                     </ul>
                   </div>
                 )}
-              </div>
+              </div> */}
             </div>
           </div>
 

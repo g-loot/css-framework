@@ -195,7 +195,7 @@ export default function ClanDetails() {
                 */}
               </>
             )}
-            <nav className="flex justify-center mt-4">
+            <nav className="sticky z-40 mt-4 flex justify-center overflow-x-auto scrollbar-hidden px-4 md:px-0 bg-ui-900/95 border-b border-ui-700 top-12">
               <ul className="tabs">
                 {getRelatedTabs().map((item, itemIndex) => (
                   <>

@@ -285,7 +285,7 @@ export default function Home() {
                 </div>
               </div>
               <div>
-                <h3 className="text-sm">Competitions:</h3>
+                <h3 className="text-sm">Ladders:</h3>
                 <div className="form-group pl-4 mt-2">
                   <div className="form-xs form-radio">
                     <input
