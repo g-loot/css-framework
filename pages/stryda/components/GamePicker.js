@@ -1,9 +1,11 @@
 import React, { useContext, useEffect } from "react";
+import { useRouter } from "next/router";
 import { UiContext } from "@/contexts/ui";
 import { usePrototypeData } from "@/contexts/prototype";
 import ModalFavoriteGames from "../modal-favoritegames";
 
 export default function GamePicker(props) {
+  const router = useRouter();
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
 
@@ -32,7 +34,7 @@ export default function GamePicker(props) {
                   <span>
                     <span>{item.shortName}</span>
                   </span>
-                  {item.id === 1 && (
+                  {item.id === 1 && router.pathname.includes("ladders") && (
                       <span className="icon icon-present animate-bounce ml-1" />
                     )}
                 </button>

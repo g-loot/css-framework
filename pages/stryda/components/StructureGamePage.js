@@ -57,7 +57,7 @@ export default function StructureGamePage({ children, side, ...props }) {
       </div>
       {selectedGame && !loading && (
         <div
-          className="absolute z-0 top-0 inset-x-0 animate-slide-in-bottom mix-blend-lighten select-none"
+          className="absolute z-0 top-0 inset-x-0 animate-slide-in-bottom mix-blend-lighten select-none pointer-events-none"
           style={{ animationDuration: "2s" }}
         >
           <i className="absolute z-10 inset-0 bg-ui-900/20" />

@@ -1079,7 +1079,8 @@
           text-[rgb(var(--color)/var(--tw-text-opacity))]
           border-[rgb(var(--color)/var(--tw-border-opacity))]
           ;
-          > span:not(.icon) {
+          > span:not(.icon),
+          > span.icon-present {
             @apply
             text-mono-100
             ;

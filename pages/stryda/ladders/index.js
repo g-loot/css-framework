@@ -36,7 +36,7 @@ const TabsItems = [
     label: "Completed",
     url: "completed",
     component: TabLaddersCompleted,
-    badge: "badge",
+    badge: "gift",
   },
   {
     label: "How it works",
@@ -109,7 +109,19 @@ export default function Ladders() {
                               selectedTab === item.url ? "is-active" : ""
                             }`}
                           >
-                            <span><span>{item.label}</span> {item.badge && item.badge === "badge" && selectedGame.id === 1 && (<i className="badge animate-bounce" />)}</span>
+                            <span>
+                              <span>{item.label}</span>{" "}
+                              {item.badge &&
+                                item.badge === "badge" &&
+                                selectedGame.id === 1 && (
+                                  <i className="badge animate-bounce" />
+                                )}{" "}
+                              {item.badge &&
+                                item.badge === "gift" &&
+                                selectedGame.id === 1 && (
+                                  <span className="icon icon-present animate-bounce" />
+                                )}
+                            </span>
                           </button>
                         </Link>
                       </li>
