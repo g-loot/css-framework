@@ -182,7 +182,7 @@ export default function Profile() {
     },
     {
       label: "Recaps",
-      url: "recaps",
+      url: "highlight",
       component: TabProfileHighlights,
       number: 9,
     },

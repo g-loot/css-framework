@@ -217,8 +217,8 @@ export default function TopbarHighlights() {
               <span>
                 <span className="text-sm">
                   {buttonState === 0 && ""}
-                  {buttonState === 1 && "New highlights recorded"}
-                  {buttonState === 2 && "Highlights ready"}
+                  {buttonState === 1 && "New matches recorded"}
+                  {buttonState === 2 && "Recaps ready"}
                 </span>
               </span>
               <span className="icon icon-video" />

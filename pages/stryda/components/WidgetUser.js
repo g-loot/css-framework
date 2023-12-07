@@ -311,7 +311,7 @@ export default function WidgetUser(props) {
                         type="button"
                         className="interactive leading-tight"
                       >
-                        <div className="text-sm text-ui-300">Highlights</div>
+                        <div className="text-sm text-ui-300">Recaps</div>
                         <div className="text-lg text-ui-100">
                           {selectedUser.stats.followers === 0 ||
                           state === "empty" ? (

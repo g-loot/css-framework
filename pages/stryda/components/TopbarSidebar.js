@@ -60,7 +60,10 @@ export default function TopbarSidebar() {
                   router.pathname.includes("ladders") ? "is-active" : ""
                 }`}
               >
-                <span>Ladders</span>
+                <span>
+                  <span>Ladders</span>
+                  <span className="icon icon-present animate-bounce !text-main" />
+                </span>
               </button>
             </Link>
           </li>

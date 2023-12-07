@@ -24,6 +24,8 @@ export default function FeedItemDetailsMatch(props) {
   const defaultTab = selectedTab != "default" ? selectedTab : (match.meta.media?.videoUrl ? "highlight" : "summary");
   const [activeTab, setActiveTab] = useState(defaultTab);
 
+  console.log(props.selectedTab, selectedTab, item, match);
+
   useEffect(() => {
     history.pushState(null, "", `${url}${item.id}`);
   }, []);
@@ -169,7 +171,7 @@ export default function FeedItemDetailsMatch(props) {
                         className={activeTab === "highlight" ? "is-active" : ""}
                         onClick={() => setActiveTab("highlight")}
                       >
-                        <span>Highlight</span>
+                        <span>Recap</span>
                       </button>
                     </li>
                   )}
