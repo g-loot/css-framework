@@ -112,7 +112,7 @@ export default function TabProfileStats() {
                         type="button"
                         className="button button-sm button-secondary"
                       >
-                        <span>See all stats</span>
+                        <span>All stats</span>
                       </button>
                     </Link>
                   )}
