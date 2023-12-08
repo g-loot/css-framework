@@ -89,6 +89,20 @@ export default function TabProfileFeed() {
               )}
             </div>
             <div className="w-80 hidden lg:block space-y-4">
+              {!prototype.isPremium && (
+                <div className="sticky top-12 space-y-4 text-center mb-4">
+                  <div className="bg-ui-800/75 border border-ui-700 w-full aspect-square rounded flex flex-col items-center justify-center">
+                    {/* Replace the following div by the display ad */}
+                    <div>
+                      <div>Ad</div>
+                      <div className="text-sm">Max width: 320px</div>
+                    </div>
+                  </div>
+                  <Link href={`/stryda/premium`}>
+                    <span className="link link-main text-sm">Remove ads</span>
+                  </Link>
+                </div>
+              )}
               {/* <div className="surface rounded">
                 <div className="flex items-baseline justify-between border-b border-b-ui-700 px-3 py-2">
                   <Link href={`/stryda/ladders${prototype.getURLparams()}`}>

@@ -100,6 +100,43 @@ const DSpage = () => {
           </div>
         </div>
       </div>
+      <Anchor title="Loading" />
+      <div className="format mb-10">
+        <p>
+          By adding the
+          <span className="tooltip" data-tooltip="Copy">
+            <code
+              className="interactive text-xs"
+              onClick={() => {
+                uiContext.openToastr({
+                  size: "small",
+                  text: "Class name copied to your clipboard",
+                  color: "green",
+                  autoDelete: true,
+                  autoDeleteDelay: 2500,
+                });
+                navigator.clipboard.writeText("is-loading");
+              }}
+            >
+              .is-loading
+            </code>
+          </span>{" "}
+          class name on an icon, you can turn it into a loading indicator.
+        </p>
+        <div className="flex gap-4 flex-col lg:flex-row lg:items-start">
+          <div className="flex-1 flex items-center justify-center">
+            <span className="icon icon-stryda-symbol is-loading" />
+          </div>
+          <div className="flex-1">
+            <iframe
+              className="rounded"
+              width="100%"
+              height="100"
+              src="//jsfiddle.net/augustin_hiebel/q5cprg4o/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+            ></iframe>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

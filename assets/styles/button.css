@@ -89,7 +89,7 @@ button {
       }
     }
   
-    &:not(.switch):not(.button-stretch):not(.button-currency) {
+    &:not(.switch):not(.button-stretch):not(.button-unstretch):not(.button-currency) {
       @apply
       gap-2
       ;
@@ -173,6 +173,36 @@ button {
         ;
       }
     }
+    &.button-success {
+      @apply
+      text-success-500
+      shadow-[inset_0_0_0_1px_rgb(var(--color-success-500))]
+      ;
+      &:not([disabled]),
+      &:not(.is-disabled) {
+        &:hover,
+        &:focus-visible {
+          @apply
+          bg-ui-600
+          text-success-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
+          ;
+        }
+        &:focus-visible,
+        &:active {
+          @apply
+          text-success-300
+          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
+          outline-ui-400
+          ;
+        }
+      }
+      .icon.is-loading::after {
+        @apply
+        border-l-success-500
+        ;
+      }
+    }
     &.button-error {
       @apply
       text-error-500
@@ -197,6 +227,11 @@ button {
           ;
         }
       }
+      .icon.is-loading::after {
+        @apply
+        border-l-error-500
+        ;
+      }
     }
     &.button-attention {
       @apply
@@ -218,31 +253,6 @@ button {
           @apply
           text-attention-300
           shadow-[inset_0_0_0_1px_rgb(var(--color-attention-300))]
-          outline-ui-400
-          ;
-        }
-      }
-    }
-    &.button-success {
-      @apply
-      text-success-500
-      shadow-[inset_0_0_0_1px_rgb(var(--color-success-500))]
-      ;
-      &:not([disabled]),
-      &:not(.is-disabled) {
-        &:hover,
-        &:focus-visible {
-          @apply
-          bg-ui-600
-          text-success-300
-          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
-          ;
-        }
-        &:focus-visible,
-        &:active {
-          @apply
-          text-success-300
-          shadow-[inset_0_0_0_1px_rgb(var(--color-success-300))]
           outline-ui-400
           ;
         }
@@ -355,6 +365,11 @@ button {
         outline-attention-300
         ;
       }
+    }
+    .icon.is-loading::after {
+      @apply
+      border-l-attention-500
+      ;
     }
   }
   .button-success {
@@ -1268,7 +1283,7 @@ button {
     @apply
     !gap-0
     py-2
-    px-[0.5625rem]
+    px-[0.625rem]
     ;
     &:not(.button-sm) {
       @apply

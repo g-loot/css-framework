@@ -106,6 +106,14 @@ const DSpage = () => {
 
       <div className="mb-8">
         <Anchor title="Status: paused" />
+        <div className="mb-2">
+          <ButtonStretchy variant="button-success">
+            <span className="text-sm">
+              <span>Recording a match</span>
+            </span>
+            <span className="icon icon-warning-sign is-loading" />
+          </ButtonStretchy>
+        </div>
         <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
           <div className="flex-1 sm:w-[420px]">
             <RecapItem
