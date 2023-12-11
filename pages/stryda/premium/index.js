@@ -100,7 +100,7 @@ export default function Premium() {
     <>
       <Structure title="Premium">
         <section
-          className={`max-w-2xl mx-auto flex flex-col lg:flex-row gap-8 mt-12 mb-24 ${
+          className={`max-w-2xl mx-auto flex flex-col lg:flex-row gap-8 mt-12 mb-20 ${
             isPremium ? "items-center" : "items-stretch"
           }`}
         >
@@ -157,28 +157,32 @@ export default function Premium() {
                 <div className="w-24 border-x border-b border-ui-500 bg-ui-600 rounded-b h-4" />
               </li>
             </ul>
-            <div className="text-center">
-              <button
-                type="button"
-                onClick={openModalBuyPremium}
-                className="button button-lg button-premium is-shining my-4 group"
-              >
-                <span>Get Premium</span>
-                <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
-              </button>
-              <p className="text-xs text-ui-300">
-                Cancel anytime.{" "}
-                <a className="underline cursor-pointer">Terms and conditions</a>{" "}
-                apply.
-              </p>
-            </div>
+            {!isPremium && (
+              <div className="text-center">
+                <button
+                  type="button"
+                  onClick={openModalBuyPremium}
+                  className="button button-lg button-premium is-shining my-4 group"
+                >
+                  <span>Get Premium</span>
+                  <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
+                </button>
+                <p className="text-xs text-ui-300">
+                  Cancel anytime.{" "}
+                  <a className="underline cursor-pointer">
+                    Terms and conditions
+                  </a>{" "}
+                  apply.
+                </p>
+              </div>
+            )}
           </div>
           <div className="flex-1 xl:flex-2">
             {isPremium ? (
-              <div className="flex flex-col items-stretch justify-center px-4 lg:px-0 gap-8 max-w-md mx-auto">
+              <div className="flex flex-col items-stretch justify-center px-4 lg:px-0 gap-5 max-w-md mx-auto">
                 <div>
                   <h3 className="mb-4">Subscription details</h3>
-                  <div className="mb-4 surface-ui-700 rounded p-4 space-y-2">
+                  <div className="mb-3 surface-ui-700 rounded p-4 space-y-2">
                     <div className="flex items-start justify-between gap-2">
                       <div>Your current Premium Plan</div>
                       <div className="chip chip-xs chip-status chip-success animate-slide-in-bottom">
@@ -367,19 +371,25 @@ export default function Premium() {
                 <span>{item.subtitle}</span>
               </p>
               <p className="my-2 text-ui-200 text-lg">{item.description}</p>
-              <button
-                type="button"
-                onClick={openModalBuyPremium}
-                className="button button-lg button-premium my-4 group"
-              >
-                <span>Get Premium</span>
-                <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
-              </button>
-              <p className="text-xs text-ui-300">
-                Cancel anytime.{" "}
-                <a className="underline cursor-pointer">Terms and conditions</a>{" "}
-                apply.
-              </p>
+              {!isPremium && (
+                <>
+                  <button
+                    type="button"
+                    onClick={openModalBuyPremium}
+                    className="button button-lg button-premium my-4 group"
+                  >
+                    <span>Get Premium</span>
+                    <span className="icon icon-arrow-right transition-all group-hover:translate-x-2" />
+                  </button>
+                  <p className="text-xs text-ui-300">
+                    Cancel anytime.{" "}
+                    <a className="underline cursor-pointer">
+                      Terms and conditions
+                    </a>{" "}
+                    apply.
+                  </p>
+                </>
+              )}
             </div>
             <figure
               className={`flex-2 w-full relative z-10 order-2 animate-paused animate-delay ${
