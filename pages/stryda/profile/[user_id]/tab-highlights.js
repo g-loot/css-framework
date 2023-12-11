@@ -9,6 +9,7 @@ import Video from "@/pages/stryda/components/Video";
 import Link from "next/link";
 import { dataFeedItems } from "@/mock-data/data-feed";
 import ModalFeedItemViewer from "../../modal-feeditemdetailsviewer";
+import ModalVideoYoutubePlayer from "../../modal-videoyoutubeplayer";
 
 export default function TabProfileHighlights() {
   const router = useRouter();
@@ -57,6 +58,10 @@ export default function TabProfileHighlights() {
         selectedTab={target ? target : "default"}
       />
     );
+  }
+
+  function openModalVideoYoutubePlayer(url) {
+    uiContext.openModal(<ModalVideoYoutubePlayer url={url} />);
   }
 
   return (
@@ -135,7 +140,7 @@ export default function TabProfileHighlights() {
               )}
             </div>
           ) : (
-            <div className="flex flex-col lg:flex-row lg:items-center gap-8 px-4 sm:px-0">
+            <div className="flex flex-col lg:flex-row lg:items-center gap-8 py-12 px-4 sm:px-0">
               <div className="flex-1 order-2 lg:order-1">
                 <h2 className="h3 mb-6">
                   Transform your matches into epic recap videos and share them
@@ -162,22 +167,65 @@ export default function TabProfileHighlights() {
                   and sound while playing your game to create video recaps.
                 </p>
               </div>
-              <button
-                type="button"
-                className="flex-1 order-1 lg:order-2 rounded-4 overflow-hidden surface interactive text-0"
-                onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
-              >
-                <iframe
-                  className="mx-auto aspect-video pointer-events-none"
-                  width="100%"
-                  height="auto"
-                  src="https://www.youtube.com/embed/Wso2JUKPP8o?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
-                  title="YouTube video player"
-                  frameBorder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </button>
+              <div className="relative flex-1 order-1 lg:order-2">
+                <div className="absolute z-20 left-10 lg:left-0 top-0">
+                  <div
+                    className="absolute -top-6 -left-12 animate-floating"
+                    style={{ animationDelay: "0.0s" }}
+                  >
+                    <span className="bg-ui-600/95 border border-ui-500/95 shadow-md flex gap-2 items-center justify-center px-3 py-1 text-xl rounded-full pointer-events-none -rotate-6">
+                      <span>❤️</span>
+                      <span className="text-lg text-ui-200">253</span>
+                    </span>
+                  </div>
+                  <div
+                    className="absolute -top-16 left-6 animate-floating"
+                    style={{ animationDelay: "0.3s" }}
+                  >
+                    <span className="bg-ui-600/95 border border-ui-500/95 shadow-md flex gap-2 items-center justify-center px-3 py-1 text-xl rounded-full pointer-events-none  -rotate-6 scale-95">
+                      <span>💬</span>
+                      <span className="text-lg text-ui-200">76</span>
+                    </span>
+                  </div>
+                  <div
+                    className="absolute -top-4 left-8 animate-floating"
+                    style={{ animationDelay: "0.6s" }}
+                  >
+                    <span className="bg-ui-600/95 border border-ui-500/95 shadow-md flex gap-2 items-center justify-center px-3 py-1 text-xl rounded-full pointer-events-none  -rotate-6  scale-75">
+                      <span>👀</span>
+                      <span className="text-lg text-ui-200">9.4k</span>
+                    </span>
+                  </div>
+                </div>
+
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1702284453/Stryda/illustrations/Recap_promo_character_1.webp"
+                  alt=""
+                  className="absolute z-20 h-[120%] -top-8 -right-16 object-contain pointer-events-none object-right-bottom animate-slide-in-right"
+                />
+                <img
+                  src="https://res.cloudinary.com/gloot/image/upload/v1702284453/Stryda/illustrations/Recap_promo_character_2.webp"
+                  alt=""
+                  className="absolute z-0 aspect-video w-2/3 -top-16 lg:-top-24 right-8 object-contain pointer-events-none object-top animate-slide-in-right"
+                />
+
+                <button
+                  type="button"
+                  className="relative z-10 w-full rounded-2 overflow-hidden surface surface-highlight aspect-video interactive text-0"
+                  onClick={() => openModalVideoYoutubePlayer("Wso2JUKPP8o")}
+                >
+                  <iframe
+                    className="w-full h-full pointer-events-none"
+                    width="100%"
+                    height="auto"
+                    src="https://www.youtube.com/embed/Wso2JUKPP8o?autoplay=0&rel=0&modestbranding=1&autohide=1&showinfo=0&controls=0"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </button>
+              </div>
             </div>
           )}
 
