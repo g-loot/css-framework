@@ -34,10 +34,11 @@ const feedItems = [
   },
 ];
 
-export default function TopbarHighlights() {
+export default function TopbarHighlights(props) {
   const uiContext = useContext(UiContext);
   const prototype = usePrototypeData();
   const { query } = useRouter();
+  const isStatic = props.isStatic || false;
   const empty = query.empty === "true" ? true : false;
   const [isEmpty, setIsEmpty] = useState(empty);
   const [activeTab, setActiveTab] = useState("list");
@@ -61,16 +62,18 @@ export default function TopbarHighlights() {
   const [hasNewHighlights, setHasNewHighlights] = useState(false);
   let interval;
 
-  const [isActive, setActive] = useState(false);
+  const [isActive, setActive] = useState(isStatic);
   const ref = useRef(null);
 
   const dropdownActive = (e) => {
     e.preventDefault();
-    setActive(!isActive);
+    if(!isStatic) {
+      setActive(!isActive);
+    }
   };
 
   const handleClickOutside = (e) => {
-    if (ref.current && !ref.current.contains(e.target)) {
+    if (!isStatic && ref.current && !ref.current.contains(e.target)) {
       setActive(false);
     }
   };

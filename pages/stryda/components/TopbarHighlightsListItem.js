@@ -137,7 +137,7 @@ export default function TopbarHighlightsListItem({
       return (
         <button
           type="button"
-          className="group surface flex items-center px-6 py-3 gap-4 interactive rounded-b"
+          className="group surface flex items-center px-6 py-3 gap-4 interactive rounded-t-none"
         >
           <PremiumLogo
             src="https://res.cloudinary.com/gloot/image/upload/v1672241197/Stryda/logos/stryda-premium-logo-main-white-animated.svg"

@@ -1172,7 +1172,7 @@
     text-center
     ;
 
-    > * {
+    > *:not(i):not(span) {
       &:is(:empty) {
         @apply
         hidden

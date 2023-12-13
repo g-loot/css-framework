@@ -583,6 +583,7 @@ const DSpage = () => {
               }
               rigthContent={
                 <>
+                  <i className="absolute z-10 top-[0.4rem] right-[0.4rem] badge bg-error-300" />
                   <div className="w-full flex-1 flex items-stretch justify-between">
                     <div className="flex-1 flex flex-col items-start justify-around text-left pl-1 leading-normal">
                       <h5>Recap created</h5>
@@ -632,7 +633,75 @@ const DSpage = () => {
               className="rounded"
               width="100%"
               height="200"
-              src="//jsfiddle.net/augustin_hiebel/gvoz8mne/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+              src="//jsfiddle.net/augustin_hiebel/Lybzg376/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
+            ></iframe>
+          </div>
+        </div>
+        <Anchor title="Recap rendered (viewed)" level={3} />
+        <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-8">
+          <div className="flex-1 sm:w-[420px]">
+            <RecapItem
+              state="ready"
+              imageOverlay={
+                <button
+                  type="button"
+                  class="button button-success button-lg rounded-full"
+                >
+                  <span class="icon icon-triangle-right" />
+                </button>
+              }
+              rigthContent={
+                <>
+                  <div className="w-full flex-1 flex items-stretch justify-between">
+                    <div className="flex-1 flex flex-col items-start justify-around text-left pl-1 leading-normal">
+                      <h5>Recap created</h5>
+                      <ul>
+                        <li>Length: 00:59:00</li>
+                        <li>Moments: 10</li>
+                      </ul>
+                    </div>
+                    <div className="flex flex-col justify-between">
+                      <Tooltip
+                        tooltip={
+                          <ul class="menu menu-rounded w-48">
+                            <li>
+                              <button type="button" className="is-disabled">
+                                <span>Open in Recap editor (new)</span>
+                              </button>
+                            </li>
+                            <li>
+                              <button type="button">
+                                <span>Publish Recap</span>
+                              </button>
+                            </li>
+                          </ul>
+                        }
+                      >
+                        <button
+                          type="button"
+                          className="button button-sm button-tertiary rounded-full"
+                        >
+                          <span className="icon icon-dots-vertical" />
+                        </button>
+                      </Tooltip>
+                      <button
+                        type="button"
+                        className="button button-sm button-tertiary rounded-full"
+                      >
+                        <span className="icon icon-trash" />
+                      </button>
+                    </div>
+                  </div>
+                </>
+              }
+            />
+          </div>
+          <div className="flex-1">
+            <iframe
+              className="rounded"
+              width="100%"
+              height="200"
+              src="//jsfiddle.net/augustin_hiebel/2sL70vaj/embedded/html/dark/?bodyColor=212333&menuColor=1C1D2C&fontColor=FFFFFF&accentColor=F3C351"
             ></iframe>
           </div>
         </div>
@@ -776,7 +845,9 @@ const DSpage = () => {
             <div className="aspect-video relative flex flex-col items-center justify-center text-center gap-4 bg-ui-800">
               <div className="relative z-10 p-4">
                 <h2 className="h5">
-                  Stryda is waiting for you to<br />start playing your game...
+                  Stryda is waiting for you to
+                  <br />
+                  start playing your game...
                 </h2>
                 <p className="leading-tight mt-3">
                   No recordings detected on this computer yet.
