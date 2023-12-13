@@ -6,6 +6,8 @@ import PremiumLogo from "@/components/PremiumLogo/PremiumLogo";
 import RecapPreview from "../stryda/components/RecapPreview";
 import RecapPublished from "../stryda/components/RecapPublished";
 import RecordingDeletedConfirmation from "../stryda/components/RecordingDeletedConfirmation";
+import GameIcon from "@/components/GameIcon/GameIcon";
+import Link from "next/link";
 
 const RecapItem = ({ imageOverlay, rigthContent, actionContent }) => {
   return (
@@ -710,6 +712,101 @@ const DSpage = () => {
         <Anchor title="Delete recording confirmation" level={3} />
         <div className="mb-4 max-w-sm">
           <RecordingDeletedConfirmation />
+        </div>
+      </div>
+
+      <div className="mb-8">
+        <Anchor title="Dropdown states" />
+        <Anchor title="Web" level={3} />
+        <div className="mb-4">
+          <div className="bg-ui-500 w-[calc(100vw-100px)] sm:w-[436px] overflow-hidden rounded-xl shadow-xl">
+            <img
+              src="https://res.cloudinary.com/gloot/image/upload/v1696837189/Stryda/illustrations/video_manager_empty_state.webp"
+              alt=""
+              className="aspect-video"
+            />
+            <div className="p-6 text-center border-t border-ui-400/20">
+              <h2 className="h5">Never miss an epic moment again</h2>
+              <p className="leading-tight mt-3 mb-4">
+                Transform your matches into epic highlight videos and share with
+                your friends.
+              </p>
+              <button type="button" className="button button-primary">
+                <span className="icon icon-windows-symbol" />
+                <span>Download Stryda</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <Anchor title="No games added" level={3} />
+        <div className="mb-4">
+          <div className="bg-ui-500 w-[calc(100vw-100px)] sm:w-[436px] overflow-hidden rounded-xl shadow-xl">
+            <div className="aspect-video relative flex flex-col items-center justify-center text-center gap-4 bg-ui-800">
+              <div className="relative z-10 p-4">
+                <h2 className="h5">Ops! No games are connected!</h2>
+                <p className="leading-tight mt-3">
+                  You need to connect a game account to enable Ladders, Missions
+                  and Recaps on Stryda.
+                </p>
+              </div>
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1696837189/Stryda/illustrations/video_manager_empty_state.webp"
+                alt=""
+                className="absolute z-0 w-full h-full object-cover opacity-5"
+              />
+            </div>
+            <div className="p-6 text-center border-t border-ui-400/20">
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-3">
+                <GameIcon game={1} />
+                <GameIcon game={6} />
+                <GameIcon game={3} />
+                <GameIcon game={4} />
+              </div>
+              <Link href="/stryda/profile/settings?tab=game-accounts">
+                <button type="button" className="button button-primary">
+                  <span>Manage game accounts</span>
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+        <Anchor title="No recordings detected" level={3} />
+        <div className="mb-4">
+          <div className="bg-ui-500 w-[calc(100vw-100px)] sm:w-[436px] overflow-hidden rounded-xl shadow-xl">
+            <div className="aspect-video relative flex flex-col items-center justify-center text-center gap-4 bg-ui-800">
+              <div className="relative z-10 p-4">
+                <h2 className="h5">
+                  Stryda is waiting for you to<br />start playing your game...
+                </h2>
+                <p className="leading-tight mt-3">
+                  No recordings detected on this computer yet.
+                </p>
+                <div className="flex flex-wrap items-center justify-center gap-2 mt-3">
+                  <Tooltip tooltip="VALORANT is connected">
+                    <GameIcon game={1} />
+                  </Tooltip>
+                </div>
+              </div>
+              <img
+                src="https://res.cloudinary.com/gloot/image/upload/v1696837189/Stryda/illustrations/video_manager_empty_state.webp"
+                alt=""
+                className="absolute z-0 w-full h-full object-cover opacity-5"
+              />
+            </div>
+            <div className="p-6 text-center border-t border-ui-400/20">
+              <p className="text-sm">
+                If encountering any issues, go to your{" "}
+                <Link href="/stryda/profile/settings?tab=game-accounts">
+                  <a className="link">settings</a>
+                </Link>{" "}
+                or{" "}
+                <a href="#" className="link">
+                  FAQ
+                </a>
+                .
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </>

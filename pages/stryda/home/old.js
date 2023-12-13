@@ -102,7 +102,7 @@ export default function Home() {
       <Structure title="Home" fullWidth={true}>
         <Loader
           loader={
-            <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
+            <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8 overflow-x-hidden">
               {!prototype.isPremium && (
                 <div className="flex-none w-[300px] space-y-4 hidden md:block rounded surface is-loading min-h-[calc(100vh-116px)]" />
               )}
@@ -120,7 +120,7 @@ export default function Home() {
             </section>
           }
         >
-          <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8">
+          <section className="min-h-screen w-full flex flex-col max-w-3xl mx-auto sm:px-4 md:flex-row md:justify-around gap-8 lg:gap-10 py-8 overflow-x-hidden">
             {!prototype.isPremium && (
               <div className="flex-none w-[300px] space-y-4 hidden md:block">
                 <div className="sticky space-y-4 top-16 text-center">
@@ -137,7 +137,7 @@ export default function Home() {
                 </div>
               </div>
             )}
-            <div className="flex-1 max-w-2xl mx-auto">
+            <div className="flex-1 max-w-2xl mx-auto w-full">
               <section className="surface sm:rounded-lg overflow-hidden mb-8">
                 <Carousel size="carousel-sm" />
               </section>

@@ -68,9 +68,8 @@ export default function TopbarWallet() {
 
         <div
           tabIndex="1"
-          className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-72 overflow-hidden rounded-xl shadow-xl"
+          className="dropdown-content bg-ui-500 w-[calc(100vw-100px)] sm:w-72 overflow-hidden rounded-xl shadow-xl p-1.5"
         >
-          <div className="p-1.5">
             <div className="p-1.5">
               <h3 className="text-base">Wallet overview</h3>
               <ul className="space-y-3 my-3 px-1.5">
@@ -82,7 +81,7 @@ export default function TopbarWallet() {
                     <div className="relative">
                       <div className="flex items-center gap-2">
                         <span className={`icon text-2xl ${item.icon}`} />
-                        <span className="flex-1 font-bold">{item.value}</span>
+                        <span className="flex-1 text-lg font-bold">{item.value}</span>
                       </div>
                       <div
                         className={`flex items-center gap-2 cash-in ${
@@ -109,14 +108,13 @@ export default function TopbarWallet() {
             </div>
             <div className="relative rounded overflow-hidden bg-gradient-to-b from-ui-600 to-ui-800 border border-ui-400/40 px-1.5 py-10 text-center">
               <div className="relative z-10">
-                <div className="">Need more Tokens?</div>
                 <Link href={`/stryda/shop${prototype.getURLparams()}`}>
                   <button
                     type="button"
                     className="button button-sm button-secondary"
                   >
                     <span className="icon icon-store" />
-                    <span>Visit the shop</span>
+                    <span>Buy Tokens</span>
                   </button>
                 </Link>
               </div>
@@ -125,7 +123,6 @@ export default function TopbarWallet() {
                 alt=""
                 className="absolute inset-0 w-full h-full object-cover object-center z-0 opacity-75"
               />
-            </div>
           </div>
         </div>
       </div>

@@ -66,7 +66,7 @@ export default function TabProfileFeed() {
                       ) : (
                         <div className="mt-2 mb-6">
                           <p className="text-lg text-ui-300">
-                            {selectedUser.nickname} no posts here yet.
+                            {selectedUser.nickname} has no posts here yet.
                           </p>
                         </div>
                       )}
