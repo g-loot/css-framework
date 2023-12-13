@@ -1849,7 +1849,7 @@
     flex
     flex-row
     md:max-w-[809px]
-    min-h-10
+    md:min-h-[146px]
     ;
     > .card-image {
       @apply 

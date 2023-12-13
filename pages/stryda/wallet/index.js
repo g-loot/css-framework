@@ -71,8 +71,8 @@ export default function Home() {
               <img src="https://res.cloudinary.com/gloot/image/upload/v1689683517/Stryda/illustrations/stryda_v2_pagebg_wallet.jpg" />
             </div>
           </section>
-          <nav>
-            <ul className="tabs tabs-tertiary">
+          <nav className="sticky z-40 mb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 bg-ui-900/95 border-b border-ui-700 top-12">
+            <ul className="tabs">
               {TabsItems.map((item, itemIndex) => (
                 <li key={item}>
                   <Link

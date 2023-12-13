@@ -141,8 +141,8 @@ export default function Home() {
               </div>
             )}
 
-            <nav>
-              <ul className="tabs tabs-tertiary">
+            <nav className="sticky z-40 mb-8 flex justify-start overflow-x-auto scrollbar-hidden px-4 md:px-0 bg-ui-900/95 border-b border-ui-700 top-12">
+              <ul className="tabs">
                 {selectedVoucher.sections?.map((section, sectionIndex) => (
                   <li key={sectionIndex}>
                     <button
